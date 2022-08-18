@@ -1,8 +1,4 @@
 <?php
-$dom = new DOMDocument('1.0', 'iso-8859-1');
-  
-// Enable validate on parse
-$dom->validateOnParse = true;
 session_start();
 if (isset($_SESSION["user_id"])) {
     
@@ -22,7 +18,7 @@ if (isset($_SESSION["user_id"])) {
 function changeFontSize($size) 
 {
     $id = ($user["id"]);
-    $link = mysqli_connect("localhost", "root", "AMcB0807", "cozytypes");
+    $link = mysqli_connect("localhost", "u885077784_alexmcbrier", "AMcB0807", "u885077784_cozytypes");
     if($link === false){
         die("ERROR: Could not connect. " 
                     . mysqli_connect_error());
@@ -40,7 +36,7 @@ function changeFontSize($size)
 function changeFontFamily($font) 
 {
     $id = ($user["id"]);
-    $link = mysqli_connect("localhost", "root", "AMcB0807", "cozytypes");
+    $link = mysqli_connect("localhost", "u885077784_alexmcbrier", "AMcB0807", "u885077784_cozytypes");
     if($link === false){
         die("ERROR: Could not connect. " 
                     . mysqli_connect_error());
