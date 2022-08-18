@@ -38,7 +38,7 @@ if ($_POST["password"] !== $_POST["confirm"])
 //create a password hash (encrypt)
 $password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
-$mysqli = require __DIR__ . "/database.php";
+$mysqli = require __DIR__ . "/config.php";
 
 $sql = "INSERT INTO user (username, email, password_hash) 
         VALUES (?, ?, ?)";
