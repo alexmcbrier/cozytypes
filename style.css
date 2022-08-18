@@ -1,0 +1,381 @@
+*{
+    font-family: masterFont;
+}
+@font-face {
+    font-family: masterFont;
+    src:url("./Fonts/LexendDeca.ttf"); /* Access to fonts on web  page */
+    }
+body {
+    background-color: #00021b;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-family: masterFont;                     /* Master font type for page */
+    line-height: 1.6rem;
+    overflow-x: hidden;
+    overflow-y: hidden;  
+}
+li{
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    user-select: none;
+    display: inline;
+    padding-right: 1rem;
+    
+}
+li a{
+    color: white;
+    font-size: 1rem;
+    vertical-align: middle;
+    text-decoration: none;
+}
+nav{
+  list-style-type: none;
+  margin: 0;
+  padding-top: 2.5rem;
+  overflow: hidden;
+  background: linear-gradient(to top,#00021b, 75%, #4413e5);
+  width: 100%;
+  position: fixed;
+  text-align: center;
+  height: 20rem;
+  user-select: none;
+}
+nav a{
+    transition: all .5s ease;
+}
+nav a:hover{
+    color: #7068ff;
+
+}
+.word
+{
+    display: inline-block;
+    padding: 0rem .3rem; /* line spacing */
+}
+.row {
+    user-select: none;
+    color: white;
+    /* background-color:#191919;                      Background color */
+    border:.3rem solid #4413e5;
+    font-size: 1rem;
+    border-radius: 1.5rem;
+    display:inline-block;
+    padding: 2rem 2.5rem;
+    margin-left: .5rem;
+    margin-top: 1.5rem;
+    transition: 1s;
+    line-height: 10px;
+    vertical-align: top;
+}
+.preferencesRow {
+    user-select: none;
+    color: white;
+    /* background-color:#191919;                      Background color */
+    border:.3rem solid #4413e5;
+    font-size: 1rem;
+    border-radius: 1.5rem;
+    display:inline-block;
+    padding: 2rem 2.5rem;
+    margin-left: .5rem;
+    transition: 1s;
+    line-height: 10px;
+    vertical-align: top;
+    text-decoration: none;
+}
+
+.rowContainer {
+    display: block;
+    margin-top: 1rem;
+    padding: 1.4rem 1rem;
+}
+#textInput {
+  font-size: 2rem;
+  border-radius: 1.5rem;
+  color: white; /* text input font color */
+  overflow: hidden;
+  font-family: masterFont;
+  resize: none; /* Neccesary so user cannot resize */
+  width: 15rem;
+  text-align: center;
+  width: 20%;
+  background-color: #00021b;
+  height: .75rem;
+}
+#textInput:focus { /*in focus */
+    background-color: #4413e5;
+    outline-width: 0;
+    transition: 2s;
+}
+#testText{
+  user-select: none;
+  width: 98%;
+  margin: auto;
+  resize: none;
+  font-size: 2rem;                     /* font size */
+  border-radius: .5rem;
+  display: block;
+  color: #3c4c79;                     /* font color */
+  text-align: left;
+  height: fit-content;
+  line-height: 3.5rem;
+}
+#testText::first-line {
+    color: white;
+}
+
+#typingArea {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+}
+.correct {
+    transition: all .5s ease; /* fade in word */
+    color: rgb(85, 125, 255);
+    
+}
+.incorrect {
+    color: #4413e5;
+    transition: all .55s ease; /* fade in word */
+    text-shadow: 1px 1px 2px #4413e5, 0 0 1em #4413e5, 0 0 0.2em #4413e5;
+}
+.extra {
+    color: #4413e5;
+    transition: all .55s ease; /* fade in word */
+    text-shadow: 1px 1px 2px #4413e5, 0 0 1em #4413e5, 0 0 0.2em #4413e5;
+}
+.current-word {
+
+    color: #ffffff;
+    display: inline-block;
+    padding: 0rem .3rem;
+    /* left to right animation 
+    transform:scale(110%);
+    transition: 300ms ease;
+    */
+}
+.incorrect-word {
+    color: #4413e5;
+    display: inline-block;
+    padding: 0px 10px;
+    text-decoration: underline; 
+}
+#listOfStats {
+    color: white;
+}
+#topContainer input{
+    display: flex;
+  flex-direction: row;
+    padding: 1rem 1rem 1rem 1rem;
+    font-family: masterFont;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    width: 40%;
+    border: none;
+    background: none;
+	border-bottom: 2px solid #D1D1D4;
+    outline: none;
+    color: white;
+}
+#kecapContainer
+{
+    position: relative;
+    bottom: 7rem;
+    right: 25rem;
+}
+#keycapBottom
+{      
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+}
+#keycapTop
+{
+    position: absolute;
+    bottom: -21rem;
+    left: 0;
+    width: 60%;
+    transition: 0.5s 1s;
+}
+@keyframes MoveUpDown {
+    0%, 100% {
+      bottom: -21rem;
+    }
+    50% {
+      bottom: -25rem;
+    }
+  }
+/*neccesary when automatically filling in email */
+input:-webkit-autofill{
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: white !important;
+}
+#username
+{
+    color: white
+}
+#loginContainer
+{
+    top:18rem;
+    width: 60rem; /* width of the container menu */
+    /* background-color: #0a0c29; I personally think this is tacky */
+    border-radius: 1.5rem;
+    margin-top: 10rem;
+    z-index: 1;
+    position:relative;
+}
+#logout
+{
+    color: white;
+}
+#invalid
+{
+    color: rgb(255, 255, 255);
+    font-size: 2.5rem;
+    margin-left: 17rem;
+    user-select: none;
+    margin-bottom: 5rem;
+    width: 40%;
+    line-height: 3rem;
+    text-align: left;
+}
+#preferenceHeader{
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    margin-left: 2rem;
+
+}
+#loginHeader
+{
+    color: rgb(255, 255, 255);
+    font-size: 2.5rem;
+    user-select: none;
+    margin-bottom: 5rem;
+    width: 40%;
+    line-height: 3rem;
+    text-align: left;
+    position: absolute;
+    bottom: 20rem;
+    left: -10;
+    animation: fadeIn 4s, slide 1.5s forwards ease;
+}
+@keyframes slide {
+    from {
+        margin-left: 0;
+      }
+      to {
+        margin-left: 16rem;
+      }
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+@keyframes blur{
+    from {
+        color: transparent;
+        text-shadow: 0 0 8px rgb(187, 187, 187);
+    }
+    to {
+        color: #3c4c79; 
+        text-shadow: none;
+    }
+}
+#loginButton 
+{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 1rem 1rem 1rem 1rem;
+    border-radius: 1.5rem;
+    font-family: masterFont;
+    
+    margin: 0 auto;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    width: 50%;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    background-size: 300% 100%;
+    margin-left: 15rem;
+    border-radius: 50px;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    background-image: linear-gradient(to right, rgba(68,19,229,1) , rgba(164,69,252,1));
+    box-shadow: 0 4px 15px 0 rgba(68,19,229,1);
+
+}
+#loginButton:hover {
+    background-position: 100% 0;
+}
+
+#loginButton:focus {
+    outline: none;
+}
+#accountCreate
+{
+  color: white;
+  display: inline-block;
+  margin-left: 17rem;
+  margin-top: 1rem;
+}
+#accountCreate a {
+    text-decoration: none;
+    color: rgb(100, 30, 225);
+    margin-left: .25rem;
+}
+#check{
+    color: white;
+    margin-right: 0rem;
+}
+#myCheck
+{
+    display: inline-block;
+    padding: 0;
+    accent-color: rgba(68,19,229,1);
+    margin-right: 7rem;
+    
+}
+#middleContainer{
+    display: inline-block;
+    margin-left: 18rem;
+}
+#passwordForget{
+    text-decoration: none;
+    color:rgb(100, 30, 225);
+}
+#signupContainer
+{
+    top:11.5rem;
+    width: 60rem; /* width of the container menu */
+    /* background-color: #0a0c29; I personally think this is tacky */
+    border-radius: 1.5rem;
+    margin-top: 10rem;
+    z-index: 1;
+    position:relative;
+}
+#time:hover
+{
+    width: 14rem;
+
+}
+#time
+{
+    transition: 1s ease;
+    width: 3rem;
+}
