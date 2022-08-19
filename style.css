@@ -379,3 +379,9 @@ input:-webkit-autofill{
     transition: 1s ease;
     width: 3rem;
 }
+.statsHeader
+{
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    margin-left: 2rem;
+}

@@ -4,12 +4,14 @@ const displayInput = document.getElementById('textInput') // Input Box
 const displayTimer = document.getElementById('time') // Time Display
 const displayWPM = document.getElementById('wpmDisplay') // wpm Display
 var timerVar = "not running" // Turns on when user begins typing...
-var sentenceLength = 50
+var sentenceLength = 50;
 var sentence = []
 var words = [] //word elements
 var currentWordNum = 0;
-var time = 120
-displayTimer.innerHTML = getTime(time) //sets the Time
+var time = 15;
+//var for after test is over
+var wpmFinal = 0;
+displayTimer.innerHTML = getTime(time) //sets the time (does not begin timer however)
 //Executes after each keystroke
 displayInput.addEventListener('input', keystroke)
 function keystroke()
@@ -143,13 +145,23 @@ function startTimer() {
         displayTimer.innerText = getTime(duration)
         displayWPM.innerText = wordsPerMinute(duration) + " WPM"
         if (duration <= 0) {
-          endTest()
+
+          wpmFinal = wordsPerMinute(duration)
+          accuracy = getAccuracy();
+          endTest(wpmFinal)
         }
       }, 1000)
       timerVar = "running"
 
     }
   })
+}
+function getAccuracy()
+{
+  const correct = displayText.querySelectorAll('.correct').length
+  const incorrect = displayText.querySelectorAll('.incorrect').length
+  const total = correct + incorrect;
+  return parseInt(correct / total * 100);
 }
 function restart() {
   displayTimer.innerText = getTime(time)
@@ -173,24 +185,8 @@ function wrongWord(words, charecters)
     charecters[i].classList.add("incorrect")
   }
 }
-function endTest() {
-  /*calculations*/
-  wpm = sentenceLength / 60
-  document.getElementById('wpm').innerHTML = wpm
-  displayTimer.remove();
-  stats.style.display = "block";
+function endTest(wpm) {
+  //this is where all the data is sent from javascript to php
+  window.location.href="index.php?finish=true&testTime=" + time + "&wpm=" + wpmFinal + "&accuracy=" + accuracy;
 }
-
-function changeFontSize() {
-  $.ajax({
-       type: "POST",
-       url: 'your_url/ajax.php',
-       data:{action:'call_this'},
-       success:function(html) {
-         alert(html);
-       }
-
-  });
-}
-let startTime
 newQuote();

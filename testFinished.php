@@ -1,30 +1,9 @@
 <?php
 session_start();
-
-if (isset($_SESSION["user_id"])) {
-    
-    $mysqli = require __DIR__ . "/config.php";
-    
-    $sql = "SELECT * FROM user
-            WHERE id = {$_SESSION["user_id"]}";
-            
-    $result = $mysqli->query($sql);
-    
-    $user = $result->fetch_assoc();
-    $font = htmlspecialchars($user["fontSize"]);
-    $id = htmlspecialchars($user["id"]);
-}
-
-//executes when typing test has concluded
-if (isset($_GET["finish"]))
-{
-    $_SESSION['wpm'] = $_GET["wpm"];
-    $_SESSION['accuracy'] = $_GET["accuracy"];
-    $_SESSION['testTime'] = $_GET["testTime"];
-    header("Location: testFinished.php");
-}
+$wpm = $_SESSION['wpm'];
+$accuracy = $_SESSION['accuracy'];
+$testTime = $_SESSION['testTime'];
 ?>
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -47,12 +26,13 @@ if (isset($_GET["finish"]))
             <li><a href="learn.php">learn</a></li>
     </nav>
         <div id="typingArea">
-            <div id="testText" style="font-size:<?php echo $font; ?>rem;"></div>
             <div class ="rowContainer">
-                <textarea class = "row" id="textInput" autofocus></textarea>
-                <div class = "row" id="wpmDisplay">0 WPM</div>
-                <div class = "row" id="time"></div>
-                <div class = "row" id="restartTest" onclick="restart()">redo</div>
+                <div class = "statsHeader" >wpm</div>
+                <div class = "row" ><?= $wpm ?> wpm</div>
+                <div class = "statsHeader" >accuracy</div>
+                <div class = "row" ><?= $accuracy ?>%</div>
+                <div class = "statsHeader" >Time</div>
+                <div class = "row" ><?= $testTime ?>s</div>
             </div>
         </div>
     </body>
