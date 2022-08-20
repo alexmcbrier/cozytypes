@@ -40,7 +40,7 @@ else //if not logged in but somehow managed to get to this page (Neccesary)
             <li><a href="learn.php">learn</a></li>
     </nav>
         <form id="profileTypingArea">
-                    <h1 id = "username" >Hello, <?= htmlspecialchars($user["username"]) ?></h1>
+                    <h1 id = "showUsername" >Hello, <?= htmlspecialchars($user["username"]) ?></h1>
                     <a id = "logoutButton" href="logout.php">logout</a>
         </form>
     </body>
