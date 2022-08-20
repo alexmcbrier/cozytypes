@@ -17,11 +17,13 @@ if (isset($_SESSION["user_id"])) {
 
 function changeFontSize($size) 
 {
+  //if signed in
+  if (isset($_SESSION["user_id"])) {
     $id = ($user["id"]);
     $link = mysqli_connect("localhost", "u885077784_alexmcbrier", "AMcB0807", "u885077784_cozytypes");
     if($link === false){
-        die("ERROR: Could not connect. " 
-                    . mysqli_connect_error());
+        die("ERROR: Could not connect. " . mysqli_connect_error());
+
     }
     $sql = "UPDATE user SET fontSize=$size WHERE id=19";
     if(mysqli_query($link, $sql)){
@@ -29,27 +31,17 @@ function changeFontSize($size)
     } else {
         echo "ERROR: Could not able to execute $sql. " 
                                 . mysqli_error($link);
+
     } 
+
     mysqli_close($link);
     header("location: index.php");
 }
-function changeFontFamily($font) 
-{
-    $id = ($user["id"]);
-    $link = mysqli_connect("localhost", "u885077784_alexmcbrier", "AMcB0807", "u885077784_cozytypes");
-    if($link === false){
-        die("ERROR: Could not connect. " 
-                    . mysqli_connect_error());
-    }
-    $sql = "UPDATE user SET fontFamily=$font WHERE id=19";
-    if(mysqli_query($link, $sql)){
-        echo "Record was updated successfully.";
-    } else {
-        echo "ERROR: Could not able to execute $sql. " 
-                                . mysqli_error($link);
-    } 
-    mysqli_close($link);
+  else
+  {
     header("location: index.php");
+
+  }
 }
   if (isset($_GET['size1'])) {
     $size = 1;

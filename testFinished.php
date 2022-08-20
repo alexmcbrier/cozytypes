@@ -13,7 +13,6 @@ $testTime = $_SESSION['testTime'];
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>cozytypes</title>
         <link rel="stylesheet" href="style.css">
-        <script type = "text/javascript" src="script.js" defer ></script>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     </head>
@@ -25,15 +24,10 @@ $testTime = $_SESSION['testTime'];
             <li><a href="preferences.php">preferences</a></li>
             <li><a href="learn.php">learn</a></li>
     </nav>
-        <div id="typingArea">
-            <div class ="rowContainer">
-                <div class = "statsHeader" >wpm</div>
-                <div class = "row" ><?= $wpm ?> wpm</div>
-                <div class = "statsHeader" >accuracy</div>
-                <div class = "row" ><?= $accuracy ?>%</div>
-                <div class = "statsHeader" >Time</div>
-                <div class = "row" ><?= $testTime ?>s</div>
-            </div>
+        <div id="statsArea">
+                <div class = "statsRow" ><?= $wpm ?> wpm</div>
+                <div class = "statsRow" ><?= $accuracy ?>% accuracy</div>
+                <div class = "statsRow" ><?= $testTime ?> s</div>
         </div>
     </body>
 </html>

@@ -39,12 +39,9 @@ else //if not logged in but somehow managed to get to this page (Neccesary)
             <li><a href="preferences.php">preferences</a></li>
             <li><a href="learn.php">learn</a></li>
     </nav>
-        <form id="typingArea">
-                    <h1 id = "username" >Hello <?= htmlspecialchars($user["username"]) ?></h1>
-                    <div class ="rowContainer">
-                        <div class = "preferencesRow">friends</div>
-                    </div>
-                    <a id = "loginButton" href="logout.php">logout</a>
+        <form id="profileTypingArea">
+                    <h1 id = "username" >Hello, <?= htmlspecialchars($user["username"]) ?></h1>
+                    <a id = "logoutButton" href="logout.php">logout</a>
         </form>
     </body>
 </html>
