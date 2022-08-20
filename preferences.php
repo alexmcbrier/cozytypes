@@ -20,7 +20,7 @@ function changeFontSize($size)
   //if signed in
   if (isset($_SESSION["user_id"])) {
     $id = ($user["id"]);
-    $link = mysqli_connect("localhost", "u885077784_alexmcbrier", "AMcB0807", "u885077784_cozytypes");
+    $link = mysqli_connect("localhost", "alexmcbrier", "AMcB0807", "cozytypes");
     if($link === false){
         die("ERROR: Could not connect. " . mysqli_connect_error());
 
