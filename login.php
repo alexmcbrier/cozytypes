@@ -73,12 +73,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <form id="loginContainer" method = "post">
         <div id = "topContainer">
             <h1 id = "loginHeader">Hello there, welcome back</h1>
-            <div id="kecapContainer">
-                <img id = "keycapBottom" src="images\keycapBottom.png" alt="keycapBottom">
-                <img id = "keycapTop" src="images\keycapTop.png" alt="keycapTop">
-            </div>
             <?php if ($is_invalid): ?>
-                <div id="passwordForget">Invalid login</div>
+                <div id="invalid">Invalid login</div>
             <?php endif; ?>
             <input type="text" placeholder="email" name="email" id="email" value="<?= htmlspecialchars($_POST["email"] ?? "") ?>">
             <input type="text" placeholder="password" name="password"id="password">

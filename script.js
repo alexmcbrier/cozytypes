@@ -4,19 +4,21 @@ const displayInput = document.getElementById('textInput') // Input Box
 const displayTimer = document.getElementById('time') // Time Display
 const displayWPM = document.getElementById('wpmDisplay') // wpm Display
 var timerVar = "not running" // Turns on when user begins typing...
-var sentenceLength = 50;
+var sentenceLength = 25;
 var sentence = []
 var words = [] //word elements
 var currentWordNum = 0;
 var time = 15;
+var duration = 0;
 //var for after test is over
-var wpmFinal = 0;
-displayTimer.innerHTML = getTime(time) //sets the time (does not begin timer however)
+var wpm = 0;
+var count = 0
+var lastWord = 0
 //Executes after each keystroke
 displayInput.addEventListener('input', keystroke)
 function keystroke()
 {
-  let word = document.getElementsByClassName('current-word')[0] //Only want 1 value in class list ALWAYS FUCKING 0
+  let word = document.getElementsByClassName('current-word')[0] //Only want 1 value in class list
   let chars = word.querySelectorAll('letter')
   let inputChars =  displayInput.value.split('');
   let wordChars =  word.innerText.split('');
@@ -90,8 +92,22 @@ function keystroke()
         letter.innerText = (displayInput.value.substring(inputLength-1, inputLength))
         word.appendChild(letter)
       }
+  var currentWord = displayText.getElementsByClassName('current-word')[0];
+  if (currentWord == lastWord && inputChars[inputChars.length - 1] != " ") //dont include space
+  {
+    var last = currentWord.querySelectorAll('letter')
+    var lastLetter = last[last.length - 1]
+    if (lastLetter.classList.contains('correct') || lastLetter.classList.contains('incorrect')) //the last letter can be both correct or incorrect
+    {
+      endTest()
+    }
+  }
 }
-
+function restart() {
+  displayTimer.innerText = getTime(time)
+  newQuote()
+  timerVar = "not running"
+}
 function randomQuote() {
   displayText.innerText = ''// removing previous sentence if applicable
   var wordList = ["the","be","to","of","and","a","in","that","have","I","it","for","not","on","with","he","as","you","do","at","this","but","his","by","from","they","we","say","her","she","or","an","will","my","one","all","would","there","their","what","so","up","out","if","about","who","get","which","go","me","when","make","can","like","time","no","just","him","know","take","people","into","year","your","good","some","could","them","see","other","than","then","now","look","only","come","its","over","think","also","back","after","use","two","how","our","work","first","well","way","even","new","want","because","any","these","give","day","most","us"]
@@ -114,6 +130,7 @@ function wordsPerMinute(testDuration) {
     return wpm
 }
 async function newQuote(){
+    displayTimer.innerHTML = getTime(time) //sets the time (does not begin timer however)
     displayInput.addEventListener('input', () => {startTimer() }) //starts the timer on input
     randomQuote() //creates a new random quote (Values stored inside sentence Array)
     for(let i = 0; i < sentenceLength; i++) 
@@ -135,20 +152,19 @@ async function newQuote(){
       }
       words[i] = word //adds each element
     }
+    count = document.getElementById('testText').getElementsByClassName('word').length + displayText.getElementsByClassName('incorrect-word').length; //not including current word
+    lastWord = document.getElementById('testText').getElementsByClassName('word')[count-1]//Only want 1 value in class list
 }
 function startTimer() {
   displayInput.addEventListener('input', () => {
     if (timerVar != "running") {
       startTime = new Date()
       setInterval(() => {
-        var duration =  Math.floor(time+1 - (new Date() - startTime) / 1000)
+        duration =  Math.floor(time+1 - (new Date() - startTime) / 1000)
         displayTimer.innerText = getTime(duration)
         displayWPM.innerText = wordsPerMinute(duration) + " WPM"
         if (duration <= 0) {
-
-          wpmFinal = wordsPerMinute(duration)
-          accuracy = getAccuracy();
-          endTest(wpmFinal)
+          endTest()
         }
       }, 1000)
       timerVar = "running"
@@ -162,11 +178,6 @@ function getAccuracy()
   const incorrect = displayText.querySelectorAll('.incorrect').length
   const total = correct + incorrect;
   return parseInt(correct / total * 100);
-}
-function restart() {
-  displayTimer.innerText = getTime(time)
-  newQuote()
-  timerVar = "not running"
 }
 function getTime(time) {
   var minutes = Math.floor(time / 60);
@@ -185,8 +196,10 @@ function wrongWord(words, charecters)
     charecters[i].classList.add("incorrect")
   }
 }
-function endTest(wpm) {
+function endTest() {
   //this is where all the data is sent from javascript to php
+  wpmFinal = wordsPerMinute(duration)
+  accuracy = getAccuracy();
   window.location.href="index.php?finish=true&testTime=" + time + "&wpm=" + wpmFinal + "&accuracy=" + accuracy;
 }
 newQuote();

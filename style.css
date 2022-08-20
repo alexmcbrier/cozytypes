@@ -87,6 +87,9 @@ nav a:hover{
     vertical-align: top;
     text-decoration: none;
 }
+.preferencesRow:hover {
+    background-color: #4413e5;
+}
 
 .rowContainer {
     display: block;
@@ -110,6 +113,9 @@ nav a:hover{
     background-color: #4413e5;
     outline-width: 0;
     transition: 2s;
+}
+#restartTest:hover{
+    background-color:#4413e5;
 }
 #testText{
   user-select: none;
@@ -135,7 +141,6 @@ nav a:hover{
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-
 }
 .correct {
     transition: all .5s ease; /* fade in word */
@@ -191,29 +196,6 @@ nav a:hover{
     bottom: 7rem;
     right: 25rem;
 }
-#keycapBottom
-{      
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 60%;
-}
-#keycapTop
-{
-    position: absolute;
-    bottom: -21rem;
-    left: 0;
-    width: 60%;
-    transition: 0.5s 1s;
-}
-@keyframes MoveUpDown {
-    0%, 100% {
-      bottom: -21rem;
-    }
-    50% {
-      bottom: -25rem;
-    }
-  }
 /*neccesary when automatically filling in email */
 input:-webkit-autofill{
     transition: background-color 5000s ease-in-out 0s;
@@ -221,7 +203,56 @@ input:-webkit-autofill{
 }
 #username
 {
-    color: white
+    opacity: 0;
+    color: rgb(255, 255, 255);
+    font-size: 6rem;
+    user-select: none;
+    margin-bottom: 5rem;
+    width: 40%;
+    line-height: 3rem;
+    text-align: left;
+    position: absolute;
+    bottom:0rem;
+    left: -23rem;
+    line-height: 8rem;
+    animation: fadeIn 3s, slide 1.5s forwards ease;
+    animation-delay: .25s;
+    animation-fill-mode: forwards /* keep the opacity at 100 after finish */
+}
+#profileTypingArea
+{
+    margin: 0;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+#logoutButton 
+{
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 2.5rem 10rem;
+    border-radius: 1.5rem;
+    font-family: masterFont;
+    text-decoration: none;
+    width: 50%;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    margin-right: 5rem;
+    border-radius: 50px;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    background-color: #4413e5;
+    box-shadow: 0 4px 15px 0 rgba(68,19,229,1);
+
 }
 #loginContainer
 {
@@ -239,25 +270,37 @@ input:-webkit-autofill{
 }
 #invalid
 {
+    margin: 0;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    font-family: masterFont;
     color: rgb(255, 255, 255);
-    font-size: 2.5rem;
-    margin-left: 17rem;
+    font-size: 1rem;
     user-select: none;
     margin-bottom: 5rem;
-    width: 40%;
     line-height: 3rem;
-    text-align: left;
+    padding: 2rem;
+    width: 8rem;
+    background-color: #e5137c;
+    border-radius: 25px;
+    animation: fadeIn 4s ease;
+    text-align: center;
 }
 #preferenceHeader{
     color: rgb(255, 255, 255);
     font-size: 1.5rem;
     margin-left: 2rem;
+    user-select: none;
 
 }
 #loginHeader
 {
     color: rgb(255, 255, 255);
-    font-size: 2.5rem;
+    font-size: 3rem;
     user-select: none;
     margin-bottom: 5rem;
     width: 40%;
@@ -274,6 +317,14 @@ input:-webkit-autofill{
       }
       to {
         margin-left: 16rem;
+      }
+}
+@keyframes slideUp {
+    from {
+        margin-top: 10rem;
+      }
+      to {
+        margin-top: 0rem;
       }
 }
 @keyframes fadeIn {
@@ -310,7 +361,6 @@ input:-webkit-autofill{
     color: #fff;
     cursor: pointer;
     border: none;
-    background-size: 300% 100%;
     margin-left: 15rem;
     border-radius: 50px;
     -o-transition: all .4s ease-in-out;
@@ -369,19 +419,49 @@ input:-webkit-autofill{
     z-index: 1;
     position:relative;
 }
-#time:hover
-{
-    width: 14rem;
+#statsArea {
+    margin: 0;
+    position: absolute;
 
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display:         flex;
+    flex-wrap:       wrap;
+    justify-content: center;
 }
-#time
+.statsRow
 {
-    transition: 1s ease;
-    width: 3rem;
-}
-.statsHeader
-{
-    color: rgb(255, 255, 255);
-    font-size: 1.5rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 10rem 5rem;
+    border-radius: 1.5rem;
+    font-family: masterFont;
+    
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    color: white;
+    font-size: 5rem;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    background-image: linear-gradient(to right, rgba(68,19,229,1) , rgba(164,69,252,1)); /* background color*/
+    box-shadow: 0rem 0rem 10rem 0 rgba(68,19,229,1);
     margin-left: 2rem;
+    margin-right: 2rem;
+    user-select: none;
+    animation: fadeIn 4s, slideUp 2s forwards ease ;
+    animation-delay: .25s;
+    opacity: 0;
+    animation-fill-mode: forwards /* keep the opacity at 100 after finish */
 }
