@@ -1,3 +1,28 @@
+<?php
+header('Content-Type: text/css');
+//add the theme in the db
+session_start();
+if (isset($_SESSION["user_id"])) {
+    
+    $mysqli = require __DIR__ . "/config.php";
+    
+    $sql = "SELECT * FROM user
+            WHERE id = {$_SESSION["user_id"]}";
+            
+    $result = $mysqli->query($sql);
+    
+    $user = $result->fetch_assoc();
+    $theme = htmlspecialchars($user["theme"]);
+    include "themes/".$theme.".css"; //theme added depends on the name of the one in the database
+}
+else //if the user has not registered or logged in set a default theme
+{
+    include "themes/mizu.css"; //theme added depends on the name of the one in the database
+}
+
+
+?>
+<style>
 *{
     font-family: masterFont;
 }
@@ -6,7 +31,7 @@
     src:url("./Fonts/LexendDeca.ttf"); /* Access to fonts on web  page */
     }
 body {
-    background-color: #00021b;
+    background-color: var(--primary);
     margin: 0;
     min-height: 100vh;
     display: flex;
@@ -38,7 +63,7 @@ nav{
   margin: 0;
   padding-top: 2.5rem;
   overflow: hidden;
-  background: linear-gradient(to top,#00021b, 75%, #4413e5);
+  background: linear-gradient(to top, var(--primary), 75%, var(--secondary));
   width: 100%;
   position: fixed;
   text-align: center;
@@ -49,7 +74,7 @@ nav a{
     transition: all .5s ease;
 }
 nav a:hover{
-    color: #7068ff;
+    color: var(--tertiary);
 
 }
 .word
@@ -61,7 +86,7 @@ nav a:hover{
     user-select: none;
     color: white;
     /* background-color:#191919;                      Background color */
-    border:.3rem solid #4413e5;
+    border:.3rem solid var(--tertiary);
     font-size: 1rem;
     border-radius: 1.5rem;
     display:inline-block;
@@ -76,7 +101,7 @@ nav a:hover{
     user-select: none;
     color: white;
     /* background-color:#191919;                      Background color */
-    border:.3rem solid #4413e5;
+    border:.3rem solid var(--tertiary);
     font-size: 1rem;
     border-radius: 1.5rem;
     display:inline-block;
@@ -88,7 +113,7 @@ nav a:hover{
     text-decoration: none;
 }
 .preferencesRow:hover {
-    background-color: #4413e5;
+    background-color: var(--tertiary);
 }
 
 .rowContainer {
@@ -106,16 +131,16 @@ nav a:hover{
   width: 15rem;
   text-align: center;
   width: 20%;
-  background-color: #00021b;
+  background-color: var(--primary);
   height: .75rem;
 }
 #textInput:focus { /*in focus */
-    background-color: #4413e5;
+    background-color: var(--tertiary);
     outline-width: 0;
     transition: 2s;
 }
 #restartTest:hover{
-    background-color:#4413e5;
+    background-color:var(--tertiary);
 }
 #testText{
   user-select: none;
@@ -125,7 +150,7 @@ nav a:hover{
   font-size: 2rem;                     /* font size */
   border-radius: .5rem;
   display: block;
-  color: #3c4c79;                     /* font color */
+  color: var(--tertiary);                 /* font color */
   text-align: left;
   height: fit-content;
   line-height: 3.5rem;
@@ -142,20 +167,24 @@ nav a:hover{
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
+#preferencesArea
+{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
 .correct {
     transition: all .5s ease; /* fade in word */
-    color: rgb(85, 125, 255);
+    color: var(--correct);
     
 }
-.incorrect {
-    color: #4413e5;
+.incorrect, .extra{
+    color: var(--incorrect);
     transition: all .55s ease; /* fade in word */
-    text-shadow: 1px 1px 2px #4413e5, 0 0 1em #4413e5, 0 0 0.2em #4413e5;
-}
-.extra {
-    color: #4413e5;
-    transition: all .55s ease; /* fade in word */
-    text-shadow: 1px 1px 2px #4413e5, 0 0 1em #4413e5, 0 0 0.2em #4413e5;
+    text-shadow: 1px 1px 2px var(--incorrect), 0 0 1em var(--incorrect), 0 0 0.2em var(--incorrect);
 }
 .current-word {
 
@@ -168,10 +197,9 @@ nav a:hover{
     */
 }
 .incorrect-word {
-    color: #4413e5;
+    color: var(--incorrect);
     display: inline-block;
     padding: 0px 10px;
-    text-decoration: underline; 
 }
 #listOfStats {
     color: white;
@@ -250,8 +278,8 @@ input:-webkit-autofill{
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
-    background-color: #4413e5;
-    box-shadow: 0 4px 15px 0 rgba(68,19,229,1);
+    background-color: var(--tertiary);
+    box-shadow: 0 4px 15px 0 var(--tertiary);
 
 }
 #loginContainer
@@ -283,9 +311,9 @@ input:-webkit-autofill{
     user-select: none;
     margin-bottom: 5rem;
     line-height: 3rem;
-    padding: 2rem;
+    padding: 1rem;
     width: 8rem;
-    background-color: #e5137c;
+    background-color: var(--tertiary);
     border-radius: 25px;
     animation: fadeIn 4s ease;
     text-align: center;
@@ -341,6 +369,17 @@ input:-webkit-autofill{
         text-shadow: none;
     }
 }
+@keyframes zoom{
+    0% {
+        transform: scale(1, 1);
+      }
+      50% {
+        transform: scale(1.1, 1.1);
+      }
+      100% {
+        transform: scale(1, 1);
+      }
+}
 #loginButton 
 {
     -webkit-box-sizing: border-box;
@@ -366,14 +405,13 @@ input:-webkit-autofill{
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
-    background-image: linear-gradient(to right, rgba(68,19,229,1) , rgba(164,69,252,1));
-    box-shadow: 0 4px 15px 0 rgba(68,19,229,1);
+    background-image: linear-gradient(to right, var(--tertiary) , var(--secondary));
+    box-shadow: 0 4px 15px 0 var(--tertiary);
 
 }
 #loginButton:hover {
     background-position: 100% 0;
 }
-
 #loginButton:focus {
     outline: none;
 }
@@ -386,7 +424,7 @@ input:-webkit-autofill{
 }
 #accountCreate a {
     text-decoration: none;
-    color: rgb(100, 30, 225);
+    color: var(--tertiary);
     margin-left: .25rem;
 }
 #check{
@@ -397,7 +435,7 @@ input:-webkit-autofill{
 {
     display: inline-block;
     padding: 0;
-    accent-color: rgba(68,19,229,1);
+    accent-color: var(--tertiary);
     margin-right: 7rem;
     
 }
@@ -407,7 +445,7 @@ input:-webkit-autofill{
 }
 #passwordForget{
     text-decoration: none;
-    color:rgb(100, 30, 225);
+    color: var(--tertiary);
 }
 #signupContainer
 {
@@ -455,13 +493,53 @@ input:-webkit-autofill{
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
-    background-image: linear-gradient(to right, rgba(68,19,229,1) , rgba(164,69,252,1)); /* background color*/
-    box-shadow: 0rem 0rem 10rem 0 rgba(68,19,229,1);
+    background-image: linear-gradient(to right, var(--tertiary) , var(--secondary) ); /* background color*/
+    box-shadow: 0rem 0rem 10rem 0 var(--tertiary);
     margin-left: 2rem;
     margin-right: 2rem;
     user-select: none;
-    animation: fadeIn 4s, slideUp 2s forwards ease ;
+    transform: 3s ease-in-out;
+    animation: fadeIn 3s ease;
     animation-delay: .25s;
+    animation-fill-mode: forwards;
     opacity: 0;
-    animation-fill-mode: forwards /* keep the opacity at 100 after finish */
 }
+.statsRow:hover
+{
+    transform: scale(1.1, 1.1);
+}
+.themesRow {
+    user-select: none;
+    font-size: 1rem;
+    border-radius: 1.5rem;
+    display:inline-block;
+    padding: 2rem 2.5rem;
+    margin-left: .5rem;
+    transition: 1s;
+    line-height: 10px;
+    vertical-align: top;
+    text-decoration: none;
+    transition: all .5s ease;
+}
+#theme-olivia
+{
+    color: #deaf9d;
+    background-color:#1c1b1d;
+
+}
+#theme-dracula
+{
+    color: #4413e5;
+    background-color:#00021b;     
+}
+#theme-8008
+{
+    color: #f44c7f;
+    background-color:#333a45;     
+}
+#theme-mizu
+{
+    color: #fcfbf6;
+    background-color:#afcbdd;     
+}
+<style>
