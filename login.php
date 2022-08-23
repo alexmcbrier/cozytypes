@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>cozytype</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.php">
         <script src="script.js" defer></script>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
@@ -84,8 +84,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <input type="checkbox" id="myCheck" checked = "checked" onclick="myFunction()">
         </div>
         <a id = "passwordForget" href = "profile.html">forgot Password?</a>             
-        <button id = "loginButton" type="submit" value="submit">login</button>\
-        <div id = "accountCreate">Not registered yet? <a href="signup.html">Create an Account</a></div>
+        <button id = "loginButton" type="submit" value="submit">login</button>
+        <div id = "accountCreate">Not registered yet? <a href="signup.php">Create an Account</a></div>
     </form>  
     </body>
 </html>

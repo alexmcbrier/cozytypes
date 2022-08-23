@@ -1,0 +1,7 @@
+:root {
+    --primary: #00021b;
+    --secondary: #4413e5;
+    --tertiary: #4413e5;
+    --correct: #a29bff;
+    --incorrect: rgb(255, 60, 197);
+  }

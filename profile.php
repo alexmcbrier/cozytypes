@@ -26,7 +26,7 @@ else //if not logged in but somehow managed to get to this page (Neccesary)
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>cozytype</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.php">
         <script src="script.js" defer></script>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">

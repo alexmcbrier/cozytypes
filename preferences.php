@@ -11,21 +11,82 @@ if (isset($_SESSION["user_id"])) {
     
     $user = $result->fetch_assoc();
     $id = ($user["id"]);
-    //for some reason the id is not working for the WHERE
     
+    //for some reason the id is not working for the WHERE
 }
-
+function setup()
+{
+  $mysqli = require __DIR__ . "/config.php";
+    
+    $sql = "SELECT * FROM user
+            WHERE id = {$_SESSION["user_id"]}";
+            
+    $result = $mysqli->query($sql);
+    
+    $user = $result->fetch_assoc();
+    $id = ($user["id"]);
+    //for some reason the id is not working for the WHERE
+}
 function changeFontSize($size) 
 {
   //if signed in
   if (isset($_SESSION["user_id"])) {
+    //neccessary to setup
+    $mysqli = require __DIR__ . "/config.php";
+    
+    $sql = "SELECT * FROM user
+            WHERE id = {$_SESSION["user_id"]}";
+            
+    $result = $mysqli->query($sql);
+    
+    $user = $result->fetch_assoc();
+
+    //change
     $id = ($user["id"]);
     $link = require __DIR__ . "/config.php";
     if($link === false){
         die("ERROR: Could not connect. " . mysqli_connect_error());
 
     }
-    $sql = "UPDATE user SET fontSize=$size WHERE id=19";
+    $sql = "UPDATE user SET fontSize=$size WHERE id=$id";
+    if(mysqli_query($link, $sql)){
+        echo "Record was updated successfully.";
+    } else {
+        echo "ERROR: Could not able to execute $sql. " 
+                                . mysqli_error($link);
+
+    } 
+    mysqli_close($link);
+    header("location: index.php");
+  }
+  else
+  {
+    header("location: index.php");
+
+  }
+}
+function changeTheme($theme) 
+{
+   //if signed in
+   if (isset($_SESSION["user_id"])) {
+    //neccessary to setup
+    $mysqli = require __DIR__ . "/config.php";
+
+    $sql = "SELECT * FROM user
+            WHERE id = {$_SESSION["user_id"]}";
+            
+    $result = $mysqli->query($sql);
+    
+    $user = $result->fetch_assoc();
+
+    //theme changing
+    $id = ($user["id"]);
+    $link = require __DIR__ . "/config.php";
+    if($link === false){
+        die("ERROR: Could not connect. " . mysqli_connect_error());
+
+    }
+    $sql = "UPDATE user SET theme='$theme' WHERE id=$id";
     if(mysqli_query($link, $sql)){
         echo "Record was updated successfully.";
     } else {
@@ -36,7 +97,7 @@ function changeFontSize($size)
 
     mysqli_close($link);
     header("location: index.php");
-}
+  }
   else
   {
     header("location: index.php");
@@ -68,6 +129,24 @@ function changeFontSize($size)
     changeFontSize($size);
   }
 
+
+  //themes
+  if (isset($_GET['theme-olivia'])) {
+    $theme = "olivia";
+    changeTheme($theme);
+  }
+  if (isset($_GET['theme-dracula'])) {
+    $theme = "dracula";
+    changeTheme($theme);
+  }
+  if (isset($_GET['theme-8008'])) {
+    $theme = "8008";
+    changeTheme($theme);
+  }
+  if (isset($_GET['theme-mizu'])) {
+    $theme = "mizu";
+    changeTheme($theme);
+  }
 ?>
 <!DOCTYPE html>
 <html>
@@ -77,8 +156,8 @@ function changeFontSize($size)
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>cozytypes</title>
-        <link rel="stylesheet" href="style.css">
-        <script type = "text/javascript" src="script.js" defer ></script>
+        <link rel="stylesheet" href="style.php">
+        <script type = "text/javascript" src="themeChange.js" defer ></script>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     </head>
@@ -90,8 +169,8 @@ function changeFontSize($size)
             <li><a href="preferences.php">preferences</a></li>
             <li><a href="learn.php">learn</a></li>
     </nav>
-        <form id="typingArea" method="POST" action="preferences.php">
-            <h1 id="preferenceHeader">size</h1>
+        <form id="preferencesArea" method="POST" action="preferences.php">
+            <h1 class = "notSignedIn" id="preferenceHeader">size</h1>
             <div class ="rowContainer">
                 <a class = "preferencesRow" href="preferences.php?size1=true">1</a>
                 <a class = "preferencesRow" href="preferences.php?size2=true">1.5</a>
@@ -99,11 +178,12 @@ function changeFontSize($size)
                 <a class = "preferencesRow" href="preferences.php?size4=true">2.5</a>
                 <a class = "preferencesRow" href="preferences.php?size5=true">3</a>
             </div>
-            <h1 id="preferenceHeader">fonts</h1>
+            <h1 id="preferenceHeader">theme</h1>
             <div class ="rowContainer">
-                <div class = "preferencesRow">arial</div>
-                <div class = "preferencesRow">times new roman</div>
-                <div class = "preferencesRow">lexend deca</div>
+                <a class = "themesRow" id = "theme-olivia" href="preferences.php?theme-olivia=true">olivia</a>
+                <a class = "themesRow" id = "theme-dracula" href="preferences.php?theme-dracula=true">dracula</a>
+                <a class = "themesRow" id = "theme-8008" href="preferences.php?theme-8008=true">8008</a>
+                <a class = "themesRow" id = "theme-mizu" href="preferences.php?theme-mizu=true">mizu</a>
             </div>
 </form>
     </body>

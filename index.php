@@ -13,6 +13,8 @@ if (isset($_SESSION["user_id"])) {
     $user = $result->fetch_assoc();
     $font = htmlspecialchars($user["fontSize"]);
     $id = htmlspecialchars($user["id"]);
+    $font = htmlspecialchars($user["fontSize"]);
+    $theme = htmlspecialchars($user["theme"]);
 }
 
 //executes when typing test has concluded
@@ -23,6 +25,7 @@ if (isset($_GET["finish"]))
     $_SESSION['testTime'] = $_GET["testTime"];
     header("Location: testFinished.php");
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -33,12 +36,12 @@ if (isset($_GET["finish"]))
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>cozytypes</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" type="text/css" href="style.php">
         <script type = "text/javascript" src="script.js " defer ></script>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     </head>
-    <body>
+    <body class="purple-theme">
     <nav>
             <li>CozyTypes</li>
             <li><a id = "play" href="index.php">play</a></li>
@@ -56,4 +59,7 @@ if (isset($_GET["finish"]))
             </div>
         </div>
     </body>
+    <script>
+        
+    </script>
 </html>
