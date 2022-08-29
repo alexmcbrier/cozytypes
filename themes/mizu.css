@@ -1,7 +1,9 @@
 :root {
-    --primary: #afcbdd;
-    --secondary: #f6fafc;
-    --tertiary: #85a5bb;
+    --background: #afcbdd;
+    --backgrounndGradient: #f6fafc;
+    --testText: #85a5bb;
+    --currentWord: #f6fafc;
+    --row: #7693a7;
     --correct: #7693a7;
     --incorrect: #ba8591;
   }

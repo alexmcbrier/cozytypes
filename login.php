@@ -77,7 +77,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <div id="invalid">Invalid login</div>
             <?php endif; ?>
             <input type="text" placeholder="email" name="email" id="email" value="<?= htmlspecialchars($_POST["email"] ?? "") ?>">
-            <input type="text" placeholder="password" name="password"id="password">
+            <input type="text" placeholder="password" name="password"id="password" style="-webkit-text-security: disc;">
         </div>
         <div id = "middleContainer">
             <label id = "check">Remember me</label> 
