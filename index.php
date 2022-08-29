@@ -41,7 +41,7 @@ if (isset($_GET["finish"]))
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     </head>
-    <body class="purple-theme">
+    <body>
     <nav>
             <li>CozyTypes</li>
             <li><a id = "play" href="index.php">play</a></li>
@@ -59,7 +59,4 @@ if (isset($_GET["finish"]))
             </div>
         </div>
     </body>
-    <script>
-        
-    </script>
 </html>

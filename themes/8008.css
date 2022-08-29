@@ -1,7 +1,9 @@
 :root {
-    --primary: #333a45;
-    --secondary: #939eae;
-    --tertiary: #f44c7f;
+    --background: #333a45;
+    --backgroundGradient: #939eae;
+    --testText: #939eae;
+    --currentWord: rgb(255, 255, 255);
     --correct: #f44c7f;
-    --incorrect: #704cf4;
+    --row: #f44c7f;
+    --incorrect: #828aff;
   }

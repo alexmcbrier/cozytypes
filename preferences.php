@@ -14,19 +14,6 @@ if (isset($_SESSION["user_id"])) {
     
     //for some reason the id is not working for the WHERE
 }
-function setup()
-{
-  $mysqli = require __DIR__ . "/config.php";
-    
-    $sql = "SELECT * FROM user
-            WHERE id = {$_SESSION["user_id"]}";
-            
-    $result = $mysqli->query($sql);
-    
-    $user = $result->fetch_assoc();
-    $id = ($user["id"]);
-    //for some reason the id is not working for the WHERE
-}
 function changeFontSize($size) 
 {
   //if signed in
@@ -128,8 +115,6 @@ function changeTheme($theme)
     $font = 3;
     changeFontSize($size);
   }
-
-
   //themes
   if (isset($_GET['theme-olivia'])) {
     $theme = "olivia";

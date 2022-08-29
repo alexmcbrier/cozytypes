@@ -13,11 +13,12 @@ if (isset($_SESSION["user_id"])) {
     
     $user = $result->fetch_assoc();
     $theme = htmlspecialchars($user["theme"]);
+    $font = htmlspecialchars($user["fontSize"]);
     include "themes/".$theme.".css"; //theme added depends on the name of the one in the database
 }
 else //if the user has not registered or logged in set a default theme
 {
-    include "themes/mizu.css"; //theme added depends on the name of the one in the database
+    include "themes/dracula.css";  //theme added depends on the name of the one in the database
 }
 
 
@@ -31,7 +32,7 @@ else //if the user has not registered or logged in set a default theme
     src:url("./Fonts/LexendDeca.ttf"); /* Access to fonts on web  page */
     }
 body {
-    background-color: var(--primary);
+    background-color: var(--background);
     margin: 0;
     min-height: 100vh;
     display: flex;
@@ -63,7 +64,7 @@ nav{
   margin: 0;
   padding-top: 2.5rem;
   overflow: hidden;
-  background: linear-gradient(to top, var(--primary), 75%, var(--secondary));
+  background: linear-gradient(to top, var(--background), 75%, var(--backgroundGradient));
   width: 100%;
   position: fixed;
   text-align: center;
@@ -74,7 +75,7 @@ nav a{
     transition: all .5s ease;
 }
 nav a:hover{
-    color: var(--tertiary);
+    color: var(--testText);
 
 }
 .word
@@ -86,7 +87,7 @@ nav a:hover{
     user-select: none;
     color: white;
     /* background-color:#191919;                      Background color */
-    border:.3rem solid var(--tertiary);
+    border:.3rem solid var(--row);
     font-size: 1rem;
     border-radius: 1.5rem;
     display:inline-block;
@@ -101,7 +102,7 @@ nav a:hover{
     user-select: none;
     color: white;
     /* background-color:#191919;                      Background color */
-    border:.3rem solid var(--tertiary);
+    border:.3rem solid var(--testText);
     font-size: 1rem;
     border-radius: 1.5rem;
     display:inline-block;
@@ -113,7 +114,7 @@ nav a:hover{
     text-decoration: none;
 }
 .preferencesRow:hover {
-    background-color: var(--tertiary);
+    background-color: var(--testText);
 }
 
 .rowContainer {
@@ -131,26 +132,26 @@ nav a:hover{
   width: 15rem;
   text-align: center;
   width: 20%;
-  background-color: var(--primary);
+  background-color: var(--background);
   height: .75rem;
 }
 #textInput:focus { /*in focus */
-    background-color: var(--tertiary);
+    background-color: var(--row);
     outline-width: 0;
     transition: 2s;
 }
 #restartTest:hover{
-    background-color:var(--tertiary);
+    background-color:var(--row);
 }
 #testText{
   user-select: none;
   width: 98%;
   margin: auto;
   resize: none;
-  font-size: 2rem;                     /* font size */
+  font-size:  2rem;                     /* font size */
   border-radius: .5rem;
   display: block;
-  color: var(--tertiary);                 /* font color */
+  color: var(--testText);                 /* font color */
   text-align: left;
   height: fit-content;
   line-height: 3.5rem;
@@ -188,13 +189,9 @@ nav a:hover{
 }
 .current-word {
 
-    color: #ffffff;
+    color: var(--currentWord);
     display: inline-block;
     padding: 0rem .3rem;
-    /* left to right animation 
-    transform:scale(110%);
-    transition: 300ms ease;
-    */
 }
 .incorrect-word {
     color: var(--incorrect);
@@ -278,8 +275,8 @@ input:-webkit-autofill{
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
-    background-color: var(--tertiary);
-    box-shadow: 0 4px 15px 0 var(--tertiary);
+    background-color: var(--testText);
+    box-shadow: 0 4px 15px 0 var(--testText);
 
 }
 #loginContainer
@@ -313,7 +310,7 @@ input:-webkit-autofill{
     line-height: 3rem;
     padding: 1rem;
     width: 8rem;
-    background-color: var(--tertiary);
+    background-color: var(--testText);
     border-radius: 25px;
     animation: fadeIn 4s ease;
     text-align: center;
@@ -405,8 +402,8 @@ input:-webkit-autofill{
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
-    background-image: linear-gradient(to right, var(--tertiary) , var(--secondary));
-    box-shadow: 0 4px 15px 0 var(--tertiary);
+    background-image: linear-gradient(to right, var(--testText) , var(--testText));
+    box-shadow: 0 4px 15px 0 var(--testText);
 
 }
 #loginButton:hover {
@@ -424,7 +421,7 @@ input:-webkit-autofill{
 }
 #accountCreate a {
     text-decoration: none;
-    color: var(--tertiary);
+    color: var(--testText);
     margin-left: .25rem;
 }
 #check{
@@ -435,7 +432,7 @@ input:-webkit-autofill{
 {
     display: inline-block;
     padding: 0;
-    accent-color: var(--tertiary);
+    accent-color: var(--testText);
     margin-right: 7rem;
     
 }
@@ -445,7 +442,7 @@ input:-webkit-autofill{
 }
 #passwordForget{
     text-decoration: none;
-    color: var(--tertiary);
+    color: var(--testText);
 }
 #signupContainer
 {
@@ -493,8 +490,8 @@ input:-webkit-autofill{
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
-    background-image: linear-gradient(to right, var(--tertiary) , var(--secondary) ); /* background color*/
-    box-shadow: 0rem 0rem 10rem 0 var(--tertiary);
+    background-image: linear-gradient(to right, var(--testText) , var(--testText) ); /* background color*/
+    box-shadow: 0rem 0rem 10rem 0 var(--testText);
     margin-left: 2rem;
     margin-right: 2rem;
     user-select: none;
