@@ -1,29 +1,14 @@
 <?php
 //if user already logged in then go to the profile page
 session_start();
-
 if (isset($_SESSION["user_id"])) {
-    
-    $mysqli = require __DIR__ . "/config.php";
-    
-    $sql = "SELECT * FROM user
-            WHERE id = {$_SESSION["user_id"]}";
-            
-    $result = $mysqli->query($sql);
-    
-    $user = $result->fetch_assoc();
     header("Location: profile.php");
     exit;
 }
-
-
-
-
-
-
 $is_invalid = false;
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     //make sure email in database
+
     $mysqli = require __DIR__ . "/config.php";
     $sql = sprintf("SELECT * FROM user 
                     WHERE email = '%s'", 
@@ -31,6 +16,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $result = $mysqli->query($sql);
     $user = $result->fetch_assoc();
+    $_SESSION["email"] = ($_POST["email"]);
+    $_SESSION["id"] = $user["id"];
     //verify password matches email
     if ($user) {
         if (password_verify($_POST["password"], $user["password_hash"]))
@@ -40,10 +27,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             session_regenerate_id();
             
             $_SESSION["user_id"] = $user["id"];
+            //setting cookies
+            $mysqli = require __DIR__ . "/config.php";
+            $sql = "SELECT * FROM user
+                    WHERE id = {$_SESSION["user_id"]}";
+            $result = $mysqli->query($sql);
+            $user = $result->fetch_assoc();
+            //change
+            $id = ($user["id"]);
+            setcookie("rememberMe", $user["email"], time() + (86400 * 30), "/", NULL); // 86400 = 1 day
             //succesfully registered an account
             header("location: profile.php");
             exit;
         }
+
     }
     //if wrong password
     $is_invalid = true;
