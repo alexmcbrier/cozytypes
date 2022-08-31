@@ -1,6 +1,15 @@
 <?php
 session_start();
-
+if(isset($_COOKIE["rememberMe"]))
+{
+    $mysqli = require __DIR__ . "/config.php";
+    $name = $_COOKIE["rememberMe"];
+    //change to whatever
+    $sql = "SELECT id FROM user WHERE email = '$name'";
+    $result = $mysqli->query($sql);
+    $user = $result->fetch_assoc();
+    $_SESSION["user_id"] = $user["id"];
+}
 if (isset($_SESSION["user_id"])) {
     
     $mysqli = require __DIR__ . "/config.php";
