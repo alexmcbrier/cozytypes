@@ -20,10 +20,7 @@ if (isset($_SESSION["user_id"])) {
 else //if the user has not registered or logged in set a default theme
 {
     include "themes/dracula.css";  //theme added depends on the name of the one in the database
-    include "themes/lexendDeca.css";  //theme added depends on the name of the one in the database
 }
- 
- 
 ?>
 <style>
 
@@ -33,9 +30,6 @@ else //if the user has not registered or logged in set a default theme
 @font-face {
     font-family: masterFont;
     src: url('./Fonts/LexendDeca.ttf');
-    font-weight: normal;
-    font-style: normal;
-
 }
 /*scrollbar*/
 ::-webkit-scrollbar {
