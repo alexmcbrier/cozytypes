@@ -10,3 +10,5 @@ if ($mysqli->connect_errno)
 {
 	die("Connection error: " . $mysqli->connection_error);
 }
+
+return $mysqli;
