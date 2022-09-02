@@ -44,4 +44,4 @@ else //if not logged in but somehow managed to get to this page (Neccesary)
                     <a id = "logoutButton" href="logout.php">logout</a>
         </form>
     </body>
-</html>
+</html> 
