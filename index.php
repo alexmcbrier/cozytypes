@@ -60,11 +60,11 @@ if (isset($_GET["finish"]))
     </nav>
         <div id="typingArea">
             <div id="testText" style="font-size:<?php echo $font; ?>rem;"></div>
-            <div>
+            <div id="testRow">
                 <textarea class = "row" id="textInput" autofocus></textarea>
                 <div class = "row" id="wpmDisplay">0 WPM</div>
                 <div class = "row" id="time"></div>
-                <div class = "row" id="restartTest" onclick="restart()">redo</div>
+                <img class = "row" id="restartTest" onclick="restart()"src="images/refresh-button.png">
             </div>
         </div>
     </body>
