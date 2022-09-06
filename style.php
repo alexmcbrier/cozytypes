@@ -19,7 +19,7 @@ if (isset($_SESSION["user_id"])) {
 }
 else //if the user has not registered or logged in set a default theme
 {
-    include "themes/dracula.css";  //theme added depends on the name of the one in the database
+    include "themes/mizu.css";  //theme added depends on the name of the one in the database
 }
 ?>
 <style>
