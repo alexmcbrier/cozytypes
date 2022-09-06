@@ -1,5 +1,6 @@
 :root {
     --background: #333a45;
+    --backgroundDark: #2f343d;
     --backgroundGradient: #939eae;
     --testText: #939eae;
     --currentWord: rgb(255, 255, 255);

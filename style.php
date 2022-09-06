@@ -103,7 +103,6 @@ nav{
   text-align: center;
   height: 10rem;
   user-select: none;
-  z-index: 1; /* make first in order*/
 
 }
 nav a{
@@ -175,11 +174,10 @@ nav a:hover{
   overflow: hidden;
   font-family: masterFont;
   resize: none; /* Neccesary so user cannot resize */
-  width: 15rem;
-  text-align: center;
   width: 20%;
   background-color: var(--background);
-  height: .75rem;
+  height: 1rem;
+  line-height: 1rem;
 }
 #textInput:focus { /*in focus */
     background-color: var(--row);
@@ -187,7 +185,22 @@ nav a:hover{
     transition: 2s;
 }
 #restartTest:hover{
+    background-color:var(--incorrect);
+    border:.3rem solid var(--incorrect);
+}
+#restartTest
+{
+    padding: 1rem;
     background-color:var(--row);
+    width: 3rem;
+}
+#restartTestDiv
+{
+    
+}
+#testRow
+{
+    display: flex; /* equal height of the children */
 }
 #testText{
   user-select: none;
@@ -274,58 +287,230 @@ input:-webkit-autofill{
     transition: background-color 5000s ease-in-out 0s;
     -webkit-text-fill-color: white !important;
 }
+.statsItem
+{
+    user-select: none;
+    color: white;
+    background-color: var(--row);
+    border:.3rem solid var(--row);
+    /* background-color:#191919;                      Background color */
+    font-size: 2rem;
+    border-radius: 5rem;
+    text-align: center;
+    text-decoration: none;
+    line-height: 20px;
+    padding: 2rem 2rem 2rem 2rem;
+    margin-right: 3rem;
+    width: 25%;
+    height: 10rem;
+    box-shadow: 0 4px 15px 0 var(--row);
+}
+#showLevel, #logoutButton
+{
+    line-height: 15rem;
+} 
 #showUsername
 {
-    opacity: 0;
-    color: rgb(255, 255, 255);
-    font-size: 6rem;
-    user-select: none;
-    margin-bottom: 5rem;
-    width: 40%;
     line-height: 3rem;
-    text-align: left;
-    position: absolute;
-    bottom:0rem;
-    left: -23rem;
-    line-height: 8rem;
-    animation: fadeIn 3s, slide 1.5s forwards ease;
-    animation-delay: .25s;
-    animation-fill-mode: forwards /* keep the opacity at 100 after finish */
 }
-#profileTypingArea
+#showRank
 {
-    margin: 0;
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    line-height: 1rem;
+    font-size: 1rem;
 }
-#logoutButton
-{
- 
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    text-align: center;
-    padding: 2.5rem 10rem;
-    border-radius: 1.5rem;
-    font-family: masterFont;
-    text-decoration: none;
-    width: 50%;
+#friendsListArea, #statsArea 
+{    
+
     color: white;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
+    border-radius: 1.5rem;
+
+}
+button
+{
+    background: none;
     border: none;
-    margin-right: 5rem;
-    border-radius: 50px;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
-    background-color: var(--testText);
-    box-shadow: 0 4px 15px 0 var(--testText);
- 
+    color: none;
+}
+#xpBar
+{
+    margin-top: 3rem;
+    width: 100%;
+  height: 2rem;
+  border-radius:5rem;
+  background: var(--backgroundDark);
+  border:.3rem solid var(--background);
+  text-align: center;
+}
+#friendsListArea
+{
+    background-color: var(--backgroundDark);
+    /* background-color:#191919;                      Background color */
+    font-size: 1rem;
+    text-align: center;
+    line-height: 10px;
+    vertical-align: top;
+    text-decoration: none;
+    line-height: 10px;
+    position:absolute;
+    /*animation */
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    right:0; 
+    width: 0;
+    top: 0;
+    height: 100%;
+}
+.sidebarOpen
+{
+    animation:  sidebarPadding 1s forwards, sidebar 1.5s forwards;
+}
+.sidebarClose
+{
+    animation: sidebarClose 1.5s forwards;
+}
+#closeSidebar
+{
+    user-select: none;
+    color: white;
+    background-color: var(--background);
+    border:.3rem solid var(--row);
+    /* background-color:#191919;                      Background color */
+    font-size: 1rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    line-height: 20px;
+    padding: 2rem 2rem 2rem 2rem;
+    transition: 1s;
+    position: absolute;
+    bottom: 10rem;
+    width: 25rem;
+}
+#sidebarImage
+{
+    padding: 2rem;
+}
+#sidebar
+{
+    z-index: 2; /* make first in order*/
+    position: relative;
+    background: var(--backgroundDark);
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 10rem;
+    border-radius: 3rem;
+    text-align: center;
+}
+.hideSidebar
+{
+    animation: sidebarClose2 1s forwards;
+}
+.showSidebar
+{
+    animation: sidebarOpen 1s forwards;
+}
+#friendsListArea input{
+
+    margin-left: 2rem;
+    font-family: masterFont;
+    border: none;
+    background: none;
+    border-bottom: 2px solid #D1D1D4;
+    outline: none;
+    color: white;
+
+}
+#friendsListHeader
+{
+    color: white;
+    background-color: var(--row);
+    /* background-color:#191919;                      Background color */
+    font-size: 1rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    vertical-align: top;
+    text-decoration: none;
+    line-height: 10px;
+    margin-bottom: 2rem;
+    padding: 2rem 6rem 2rem 6rem;
+}
+#addFriendButton
+{
+    color: white;
+    background-color: var(--background);
+    border:.3rem solid var(--row);
+    /* background-color:#191919;                      Background color */
+    font-size: 1rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    line-height: 20px;
+    padding: 2rem 2rem 2rem 2rem;
+    transition: 1s;
+    width: 25rem;
+}
+.friendDiv
+{
+    display: flex;
+    flex-direction: row;
+}
+.removeFriend
+{
+    color: white;
+    background-color: var(--row);
+    /* background-color:#191919;                      Background color */
+    font-size: 1rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    vertical-align: top;
+    text-decoration: none;
+    line-height: 20px;
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+    padding: 2rem 2rem;
+    box-shadow: 0 4px 15px 0 var(--row);
+    margin-bottom: 2.25rem;
+
+}
+.inviteFriend
+{
+    color: white;
+    background-color: var(--row);
+    /* background-color:#191919;                      Background color */
+    font-size: 1rem;
+    border-radius: 1.5rem;
+    text-align: center;
+
+    text-decoration: none;
+    line-height: 20px;
+    margin-bottom: 2.25rem;
+    margin-left: 1rem;
+    padding: 2rem 3rem;
+    box-shadow: 0 4px 15px 0 var(--row);
+}
+.friend
+{
+    color: white;
+    background-color: var(--background);
+    /* background-color:#191919;                      Background color */
+    font-size: 1rem;
+    border-radius: 1.5rem;
+
+    vertical-align: top;
+    text-decoration: none;
+    line-height: 20px;
+    margin-bottom: 2rem;
+    padding: 2rem 4rem 2rem 4rem;
+    text-align: center;
+}
+#profileArea
+{
+    width:100%;
+    margin-top: 10rem;
+    display: flex;
+
 }
 #loginContainer
 {
@@ -378,18 +563,103 @@ input:-webkit-autofill{
     margin-bottom: 5rem;
     width: 40%;
     line-height: 3rem;
-    text-align: left;
     position: absolute;
     bottom: 20rem;
-    left: -10;
+    left: 16rem;
     animation: fadeIn 4s, slide 1.5s forwards ease;
 }
 @keyframes slide {
     from {
-        margin-left: 0;
+        margin-left: -16rem;
       }
       to {
-        margin-left: 16rem;
+        margin-left: 0rem;
+      }
+}
+@keyframes statsMoveIn {
+    from {
+        width: 90%;
+      }
+      to {
+        width: 70%;
+      }
+}
+@keyframes statsMoveOut {
+    from {
+        width: 70%;
+      }
+      to {
+        width: 90%;
+      }
+}
+@keyframes sidebar {
+    from {
+    position:absolute;
+    right:0; 
+    width: 0;
+
+      }
+      to {
+        width: 25%;
+      }
+}
+@keyframes sidebarOpen {
+    from {
+
+        right:0; 
+        width: 0;
+      }
+      to {
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 10rem;
+      }
+}
+@keyframes sidebarPadding
+{
+    from {
+    padding-left: 0rem;
+    padding-right: 0rem;
+
+      }
+      to {
+        padding-left: 3rem;
+        padding-right: 3rem;
+        width: 25%;
+      }
+}
+@sidebarPaddingClose
+{
+    
+}
+@keyframes sidebarClose {
+    from {
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding: 3rem;
+        width: 25%;
+      }
+      to {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        padding-left: 0rem;
+        padding-right: 0rem;
+        position:absolute;
+        right:0; 
+        width: 0;
+      }
+}
+@keyframes sidebarClose2 {
+    from {
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 10rem;
+      }
+      to {
+        right:0; 
+        width: 0;
       }
 }
 @keyframes slideUp {
@@ -403,6 +673,10 @@ input:-webkit-autofill{
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
+  }
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
   }
 @keyframes blur{
     from {
@@ -503,17 +777,16 @@ input:-webkit-autofill{
     position:relative;
 }
 #statsArea {
-    margin: 0;
-    position: absolute;
- 
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    display:         flex;
-    flex-wrap:       wrap;
-    justify-content: center;
+    margin-left: 2rem;
+    width: 90%;
+}
+.statsAreaOpen {
+
+    animation: statsMoveIn 1.5s forwards ease;
+}
+.statsAreaClosed {
+
+animation: statsMoveOut 1.5s forwards ease;
 }
 .statsRow
 {
@@ -553,6 +826,11 @@ input:-webkit-autofill{
 {
     transform: scale(1.1, 1.1);
 }
+#statsRow1
+{
+    display: flex;
+    margin-bottom: 3rem;
+}
 .themesRow {
     user-select: none;
     font-size: 1rem;
@@ -573,7 +851,14 @@ input:-webkit-autofill{
 {
     transform: scale(1.2, 1.2);
 }
+#displayStats
+{
+    display: flex;
+    margin: 0;
+    position: absolute;
+    top: 30%;
 
+}
 #theme-olivia
 {
     color: #deaf9d;
