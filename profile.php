@@ -115,7 +115,7 @@ else //if not logged in but somehow managed to get to this page (Neccesary)
                         </div>
                         <div id = "showRank" class="statsItem">
                             <div id = "xpBar"></div>
-                            <h1>lvl 49</h1>
+                            <h1>lvl 0</h1>
                         </div>
                         <div id = "showRank" class="statsItem">
                             <img width="100" height="100" display = "block" src="images/<?= $rank ?>.png">
