@@ -197,7 +197,7 @@ function changeTheme($theme)
                 <a class = "themesRow" id = "theme-striker" href="preferences.php?theme-striker=true">striker</a>
                 <a class = "themesRow" id = "theme-blueberry" href="preferences.php?theme-blueberry=true">blueberry</a>
                 <a class = "themesRow" id = "theme-creamsicle" href="preferences.php?theme-creamsicle=true">creamsicle</a>
-               <a class = "themesRow" id = "theme-botanical" href="preferences.php?theme-botanical=true">creamsicle</a>
+               <a class = "themesRow" id = "theme-botanical" href="preferences.php?theme-botanical=true">botanical</a>
             </div>
             
 </form>
