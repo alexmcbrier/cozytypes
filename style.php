@@ -900,5 +900,10 @@ animation: statsMoveOut 1.5s forwards ease;
     color: #7B9C98;
     background-color: #161B22;    
 }
+   #theme-luna
+{
+    color: #F67599;
+    background-color: #221C35;    
+}
 
 <style>
