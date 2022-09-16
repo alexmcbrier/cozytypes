@@ -1,0 +1,11 @@
+:root {
+    --background: #221C35;
+    --backgroundDark: #181426;
+    --backgrounndGradient: none;
+    --testText: #5A3A7E;
+    --currentWord: #FFFFFF;
+    --row: #5A3A7E;
+    --rowBackground: #472b66;
+    --correct: #F67599;
+    --incorrect: #EFC050;
+  }
