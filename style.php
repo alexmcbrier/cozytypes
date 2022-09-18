@@ -149,8 +149,12 @@ nav a:hover{
     align-items: center;
     line-height: 10px;
     margin-top: 1rem;
-}
 
+}
+.horizontalAlign
+{
+    display: flex; /* equal height of the children */
+}
  
 .rowContainer {
     user-select: none;
@@ -164,9 +168,9 @@ nav a:hover{
     line-height: 10px;
     vertical-align: top;
     text-decoration: none;
-    width: fit-content; /*neccesary if you want each width different based off size */
-
+    margin: 1rem;
 }
+
 #textInput {
   font-size: 2rem;
   border-radius: 1.5rem;
@@ -198,13 +202,18 @@ nav a:hover{
 {
     
 }
+#wordsWrapper
+{
+    margin-top: 0rem;
+    transition:all .5s ;
+}
 #testRow
 {
     display: flex; /* equal height of the children */
 }
 #testText{
   user-select: none;
-  width: 98%;
+  width: 60rem;
   margin: auto;
   resize: none;
   font-size:  2rem;                     /* font size */
@@ -212,13 +221,26 @@ nav a:hover{
   display: block;
   color: var(--testText);                 /* font color */
   text-align: left;
-  height: fit-content;
+  overflow: hidden;
   line-height: 3.5rem;
 }
 #testText::first-line {
     color: white;
 }
- 
+#cursor
+{
+    width: 5rem;
+    height: 1rem;
+    background-color: var(--backgroundDark);
+    border-radius: 1.5rem;
+    position: absolute;
+    margin-top: 5rem;
+    transition: all .25s;
+}
+.blur
+{
+    filter: blur(.25rem);
+}
 #typingArea {
     margin: 0;
     position: absolute;
@@ -229,14 +251,9 @@ nav a:hover{
 }
 #preferencesArea
 {
-    margin: 0;
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    width: 100%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    width: 50%;
+    margin-top:10rem;
+    width: 90%;
+    align-items: center;
 }
 .correct {
     transition: all .5s ease; /* fade in word */
@@ -294,29 +311,37 @@ input:-webkit-autofill{
     background-color: var(--row);
     border:.3rem solid var(--row);
     /* background-color:#191919;                      Background color */
-    font-size: 2rem;
-    border-radius: 5rem;
+    font-size: 1rem;
+    border-radius: 3rem;
     text-align: center;
     text-decoration: none;
     line-height: 20px;
-    padding: 2rem 2rem 2rem 2rem;
+    padding: 2rem;
     margin-right: 3rem;
-    width: 25%;
     height: 10rem;
-    box-shadow: 0 4px 15px 0 var(--row);
-}
-#showLevel, #logoutButton
-{
-    line-height: 15rem;
-} 
-#showUsername
-{
-    line-height: 3rem;
-}
-#showRank
-{
     line-height: 1rem;
     font-size: 1rem;
+
+}
+#profilePicture
+{
+    width: 25%;
+}
+#profileLevel
+{
+    width: 25%;
+}
+#profileRank
+{
+    width: 25%;
+}
+#profileWPM
+{
+    width: 25%;
+}
+#profileLogout
+{
+    width: 100%;
 }
 #friendsListArea, #statsArea 
 {    
@@ -834,9 +859,9 @@ animation: statsMoveOut 1.5s forwards ease;
 .themesRow {
     user-select: none;
     font-size: 1rem;
-    border-radius: 1.5rem;
+    border-radius: 2rem;
     display:inline-block;
-    padding: 2rem 2.5rem;
+    padding: 3rem 7%;
     margin-left: .5rem;
     transition: 1s;
     line-height: 10px;
@@ -844,12 +869,11 @@ animation: statsMoveOut 1.5s forwards ease;
     transition: all .5s ease;
     margin-top: 1rem;
     text-align: center;
-    width: 5rem; /*changes how many can fit */
-    width: fit-content;
+
 }
 .themesRow:hover, .preferencesRow:hover
 {
-    transform: scale(1.2, 1.2);
+    transform: scale(1.1, 1.1);
 }
 #displayStats
 {
@@ -894,16 +918,6 @@ animation: statsMoveOut 1.5s forwards ease;
 {
     color: white;
     background-color:#FF9869;    
-}
-   #theme-botanical
-{
-    color: #7B9C98;
-    background-color: #161B22;    
-}
-   #theme-luna
-{
-    color: #F67599;
-    background-color: #221C35;    
 }
 
 <style>
