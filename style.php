@@ -19,7 +19,7 @@ if (isset($_SESSION["user_id"])) {
 }
 else //if the user has not registered or logged in set a default theme
 {
-    include "themes/mizu.css";  //theme added depends on the name of the one in the database
+    include "themes/dracula.css";  //theme added depends on the name of the one in the database
 }
 ?>
 <style>
@@ -101,7 +101,7 @@ nav{
   width: 100%;
   position: fixed;
   text-align: center;
-  height: 10rem;
+  height: 20rem;
   user-select: none;
 
 }
@@ -231,7 +231,7 @@ nav a:hover{
 {
     width: 5rem;
     height: 1rem;
-    background-color: var(--backgroundDark);
+    background-color: var(--correct);
     border-radius: 1.5rem;
     position: absolute;
     margin-top: 5rem;
@@ -308,8 +308,7 @@ input:-webkit-autofill{
 {
     user-select: none;
     color: white;
-    background-color: var(--row);
-    border:.3rem solid var(--row);
+    background-color: var(--rowBackground);
     /* background-color:#191919;                      Background color */
     font-size: 1rem;
     border-radius: 3rem;
