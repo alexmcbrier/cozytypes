@@ -24,6 +24,27 @@ if (isset($_SESSION["user_id"])) {
     $id = htmlspecialchars($user["id"]);
     $font = htmlspecialchars($user["fontSize"]);
     $theme = htmlspecialchars($user["theme"]);
+    $height = 1.5 * $font * htmlspecialchars($user["lineCount"]); //increments of line height, in this case 1.5 
+    $blur = htmlspecialchars($user["textBlur"]);
+    $caret = htmlspecialchars($user["caret"]);
+    $caretMarginTop = 0;
+    $caretHeight = 0;
+    if ($caret == "none")
+    {
+        $caretMarginTop = 0;
+        $caretHeight = 0;
+    }
+    if ($caret == "underline")
+    {
+        $caretMarginTop = $font *1.25;
+        $caretHeight = $font / 3;
+    }
+    if ($caret == "highlight")
+    {
+        $caretMarginTop = 0;
+        $caretHeight = $font * 1.5;
+    }
+
 }
 
 //executes when typing test has concluded
@@ -58,8 +79,11 @@ if (isset($_GET["finish"]))
             <li><a href="preferences.php">preferences</a></li>
             <li><a href="learn.php">learn</a></li>
     </nav>
+        <div id = "cursor" style="margin-top:<?php echo $caretMarginTop?>rem; height:<?php echo $caretHeight;?>rem;"></div>
         <div id="typingArea">
-            <div id="testText" style="font-size:<?php echo $font; ?>rem;"></div>
+            <div id="testText" style="height:<?php echo $height?>rem;">
+            <div id="wordsWrapper"style="font-size:<?php echo $font; ?>rem; line-height:<?php echo $font * 1.5; ?>rem;"></div>
+            </div>
             <div id="testRow">
                 <textarea class = "row" id="textInput" autofocus></textarea>
                 <div class = "row" id="wpmDisplay">0 WPM</div>
