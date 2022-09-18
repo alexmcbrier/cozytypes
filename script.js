@@ -1,10 +1,10 @@
 //Web elements
-const displayText = document.getElementById('testText')
+const displayText = document.getElementById('wordsWrapper')
 const displayInput = document.getElementById('textInput') // Input Box
 const displayTimer = document.getElementById('time') // Time Display
 const displayWPM = document.getElementById('wpmDisplay') // wpm Display
 var timerVar = "not running" // Turns on when user begins typing...
-var sentenceLength = 25;
+var sentenceLength = 100;
 var sentence = []
 var words = [] //word elements
 var currentWordNum = 0;
@@ -14,14 +14,18 @@ var duration = 0;
 var wpm = 0;
 var count = 0
 var lastWord = 0
+
+
 //Executes after each keystroke
 displayInput.addEventListener('input', keystroke)
 function keystroke()
 {
+  moveCursor();
   let word = document.getElementsByClassName('current-word')[0] //Only want 1 value in class list
   let chars = word.querySelectorAll('letter')
   let inputChars =  displayInput.value.split('');
   let wordChars =  word.innerText.split('');
+
   for (let i = 0; i < chars.length; i++) //need to remove previous when user deletes
   {
     chars[i].classList.remove("correct")
@@ -62,6 +66,10 @@ function keystroke()
       }
     }
   }
+  //index is which word they are on as well
+  //what this does is look for a seperation in the top px.
+  //if the current word is lower than the last word than they need to shift down (:
+
   if (inputChars[inputChars.length - 1] == " ") //Checking for space bar on the last entered character ALSO runs a check to see if the word was spelled right or not
   {
     displayInput.value  = ""; //reset the typing input box
@@ -81,8 +89,31 @@ function keystroke()
         wrongWord(words, chars)
       }
     }
+
+    //CHECKING TO SEE IF ON NEXT LINE (should probably make a function)
     currentWordNum++;
     words[currentWordNum].className = 'current-word';
+    //restart animatioin
+    const placement = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
+    const currentWordIndex = Array.from(
+      placement.parentElement.children
+    ).indexOf(placement);
+    const lastWordIndex = currentWordIndex - 1;
+    if (lastWordIndex >= 0) //cannot be negative
+    {
+      const rect = placement.getBoundingClientRect();
+      const lastWord = document.getElementsByClassName('word')[0];
+      const rect2 = lastWord.getBoundingClientRect();
+
+      if (rect.y > rect2.y)
+      {
+        displayText.style.marginTop = (rect2.y - rect.y)  + "px";
+        blurText();
+      }
+    }
+    //moving the cursor
+    moveCursor();
+
   }
   if (inputChars.length > wordChars.length) //extra characters
       {
@@ -152,8 +183,8 @@ async function newQuote(){
       }
       words[i] = word //adds each element
     }
-    count = document.getElementById('testText').getElementsByClassName('word').length + displayText.getElementsByClassName('incorrect-word').length; //not including current word
-    lastWord = document.getElementById('testText').getElementsByClassName('word')[count-1]//Only want 1 value in class list
+    count = displayText.getElementsByClassName('word').length + displayText.getElementsByClassName('incorrect-word').length; //not including current word
+    lastWord = displayText.getElementsByClassName('word')[count-1]//Only want 1 value in class list
 }
 function startTimer() {
   displayInput.addEventListener('input', () => {
@@ -202,4 +233,48 @@ function endTest() {
   accuracy = getAccuracy();
   window.location.href="index.php?finish=true&testTime=" + time + "&wpm=" + wpmFinal + "&accuracy=" + accuracy;
 }
+function moveCursor()
+{
+  const cursor = document.getElementById('cursor') 
+  const placement = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
+  const rect = placement.getBoundingClientRect();
+  cursor.style.left = rect.x + "px";
+  cursor.style.width = rect.width + "px";
+}
+function moveCursorWithY()
+{
+  const cursor = document.getElementById('cursor') 
+  const placement = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
+  const rect = placement.getBoundingClientRect();
+  cursor.style.left = rect.x + "px";
+  cursor.style.top = rect.y + "px";
+  cursor.style.width = rect.width + "px";
+}
+function blurText() //basically we want to blur any characters not on the same line as the current line (or just the last)
+{
+  const placement = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
+  const currentWordIndex = Array.from(
+    placement.parentElement.children
+  ).indexOf(placement);
+  //loop through trying to find a change in y px
+  const rect = placement.getBoundingClientRect();
+  const yNum = rect.y;
+
+  for (let i = currentWordIndex; i < sentenceLength; i++)
+  {
+    const lastWord = document.getElementsByClassName('word')[i];
+    const rect2 = lastWord.getBoundingClientRect();
+    document.getElementsByClassName('word')[i].classList.remove('blur');
+    if (rect2.y > rect.y)
+    {
+      for (let j = i; j < sentenceLength; j++)
+      {
+        document.getElementsByClassName('word')[j].classList.add('blur');
+      }
+      break;
+    }
+  }
+}
 newQuote();
+moveCursorWithY();
+blurText();
