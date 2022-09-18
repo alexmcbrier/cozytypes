@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 function getInfo($id)
 {
@@ -64,6 +63,7 @@ if (isset($_SESSION["user_id"])) {
 
     //getting friends
     $friendsArray = getInfo($user["username"]); //all u have to do is input your id 
+    
 }
 else //if not logged in but somehow managed to get to this page (Neccesary)
 {
@@ -109,26 +109,26 @@ else //if not logged in but somehow managed to get to this page (Neccesary)
         <div id = profileArea>
             <div id="statsArea">
                 <div id="statsRow1">
-                        <div id = "showRank" class="statsItem">
+                        <div id = "profilePicture" class="statsItem">
                             <img width="100" height="100" display = "block" src="images/user.png">
                             <h1><?= htmlspecialchars($user["username"]) ?></h1>
                         </div>
-                        <div id = "showRank" class="statsItem">
+                        <div id = "profileLevel" class="statsItem">
                             <div id = "xpBar"></div>
                             <h1>lvl 0</h1>
                         </div>
-                        <div id = "showRank" class="statsItem">
+                        <div id = "profileRank" class="statsItem">
                             <img width="100" height="100" display = "block" src="images/<?= $rank ?>.png">
                             <h1><?= $range ?></h1>
                         </div>
-                        <div id = "showRank" class="statsItem">
+                        <div id = "profileWPM" class="statsItem">
                             <img width="100" height="100" display = "block" src="images/shooting-star.png">
                             <h1><?=$wpmPR?> wpm</h1>
                         </div>
 
                 </div>
                 <div id="statsRow1">
-                    <a id = "showRank" class="statsItem" href="logout.php">
+                    <a id = "profileLogout" class="statsItem" href="logout.php">
                             <img width="100" height="100" display = "block" src="images/exit.png">
                             <h1>logout</h1>
                     </a>
@@ -176,7 +176,12 @@ else //if not logged in but somehow managed to get to this page (Neccesary)
             button.innerHTML = '<img width="30"height="30" type="submit" value="submit"src="images/delete.png">';
             div.appendChild(form);
             form.appendChild(button);
-            //
+            function openSidebar() {
+                document.getElementById('friendsListArea').className = 'sidebarOpen';
+                document.getElementById('sidebar').className = 'hideSidebar';
+                document.getElementById('statsArea').className = 'statsAreaOpen';
+            };
+
         }
     </script>
     </body>
