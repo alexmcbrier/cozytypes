@@ -78,7 +78,7 @@ if (isset($_GET["finish"]))
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>cozytypes</title>
         <link rel="stylesheet" type="text/css" href="style.php">
-        <script  type="module" src="script.js " defer ></script>
+        <script type = "text/javascript" src="script.js " defer ></script>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     </head>
