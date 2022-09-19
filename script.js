@@ -1,3 +1,4 @@
+
 //Web elements
 const displayText = document.getElementById('wordsWrapper')
 const displayInput = document.getElementById('textInput') // Input Box
@@ -20,6 +21,7 @@ var lastWord = 0
 displayInput.addEventListener('input', keystroke)
 function keystroke()
 {
+  startTimer();
   moveCursor();
   let word = document.getElementsByClassName('current-word')[0] //Only want 1 value in class list
   let chars = word.querySelectorAll('letter')
@@ -154,9 +156,7 @@ function randomQuote() {
 }
 function wordsPerMinute(testDuration) {
     const timeIn = time - testDuration
-    const listText = displayText.querySelectorAll('span')
     const correctText = displayText.querySelectorAll('.correct').length
-    const listValue = displayInput.value.split('')
     const wpm = Math.round(correctText/5/timeIn*60)
     return wpm
 }
@@ -187,7 +187,6 @@ async function newQuote(){
     lastWord = displayText.getElementsByClassName('word')[count-1]//Only want 1 value in class list
 }
 function startTimer() {
-  displayInput.addEventListener('input', () => {
     if (timerVar != "running") {
       startTime = new Date()
       setInterval(() => {
@@ -201,7 +200,6 @@ function startTimer() {
       timerVar = "running"
 
     }
-  })
 }
 function getAccuracy()
 {
