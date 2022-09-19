@@ -104,6 +104,7 @@ function changePreference($type, $value)
                 <a class = "themesRow" id = "theme-8008" href="preferences.php?change=true&type=theme&value=8008">8008</a>
                 <a class = "themesRow" id = "theme-mizu" href="preferences.php?change=true&type=theme&value=mizu">mizu</a>
                 <a class = "themesRow" id = "theme-striker" href="preferences.php?change=true&type=theme&value=striker">striker</a>
+                <a class = "themesRow" id = "theme-9009" href="preferences.php?change=true&type=theme&value=9009">9009</a>
                 <a class = "themesRow" id = "theme-blueberry" href="preferences.php?change=true&type=theme&value=blueberry">blueberry</a>
                 <a class = "themesRow" id = "theme-creamsicle" href="preferences.php?change=true&type=theme&value=creamsicle">creamsicle</a>
                 <a class = "themesRow" id = "theme-botanical" href="preferences.php?change=true&type=theme&value=botanical">botanical</a>
