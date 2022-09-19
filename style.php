@@ -928,5 +928,10 @@ animation: statsMoveOut 1.5s forwards ease;
     color: #F67599;
     background-color: #221C35;    
 }
+   #theme-9009
+{
+    color: #080909;
+    background-color: #EEEBE2;    
+}
 
 <style>
