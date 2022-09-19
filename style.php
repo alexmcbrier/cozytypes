@@ -933,5 +933,9 @@ animation: statsMoveOut 1.5s forwards ease;
     color: #080909;
     background-color: #EEEBE2;    
 }
-
+   #theme-sakura
+{
+    color: #A30000;
+    background-color: #FEC8CD;    
+}
 <style>
