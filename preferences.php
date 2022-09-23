@@ -99,6 +99,8 @@ function changePreference($type, $value)
           </div>
             <div class ="rowContainer">
             <h1 id="preferenceHeader">theme</h1>
+                <a class = "themesRow" id = "theme-light" href="preferences.php?change=true&type=theme&value=light">light</a>
+                <a class = "themesRow" id = "theme-dark" href="preferences.php?change=true&type=theme&value=dark">dark</a>
                 <a class = "themesRow" id = "theme-olivia" href="preferences.php?change=true&type=theme&value=olivia">olivia</a>
                 <a class = "themesRow" id = "theme-dracula" href="preferences.php?change=true&type=theme&value=dracula">dracula</a>
                 <a class = "themesRow" id = "theme-8008" href="preferences.php?change=true&type=theme&value=8008">8008</a>
