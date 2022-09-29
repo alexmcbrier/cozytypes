@@ -143,7 +143,7 @@ function restart() {
 }
 function randomQuote() {
   displayText.innerText = ''// removing previous sentence if applicable
-  var var wordList = [ "a",
+  var wordList = [ "a",
       "able",
       "about",
       "absolute",
