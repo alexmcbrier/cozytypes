@@ -325,12 +325,12 @@ nav a:hover{
 .modeStack
 {
     display: inline-block; /* equal height of the children */
-    margin-right: 3rem;
-    padding:2rem;
+    margin-right: 1rem;
+    padding:.5rem;
 }
 .modeHeader
 {
-    font-size: 4rem;
+    font-size: 3rem;
 }
 #testText::first-line {
     color: white;
