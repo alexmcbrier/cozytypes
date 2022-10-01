@@ -12,7 +12,7 @@ if (checkCookie("words"))
 {
   sentenceLength = getCookie("words");
 }
-if (checkCookie("words"))
+if (checkCookie("time"))
 {
   time = getCookie("time");
 }
