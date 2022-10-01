@@ -62,6 +62,13 @@ if (isset($_GET["finish"]))
                     <div class = "typingModes" onclick="changeWords(100)">100</div>
                 </div>
             </div>
+            <div class = "modeStack"> 
+                <div class="modeHeader">difficulty</div>
+                <div class = "individualMode">
+                    <div class = "typingModes" onclick="changeMode('easy')">easy</div>
+                    <div class = "typingModes" onclick="changeMode('hard')">hard</div>
+                </div>
+            </div>
         </div>
         <div id="testText"></div>
         <div id="typingArea">
