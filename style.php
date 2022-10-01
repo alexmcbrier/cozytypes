@@ -187,7 +187,6 @@ nav a:hover{
     color: white;
     background-color: var(--row);
     /* background-color:#191919;                      Background color */
-    border:.3rem solid var(--row);
     font-size: 1rem;
     border-radius: 1.5rem;
     display:inline-block;
@@ -308,14 +307,14 @@ nav a:hover{
 
     margin-right: 1rem;
     display: flex; /* equal height of the children */
-    color: var(--rowBackground);
+    color: white;
     z-index: 0;
     user-select: none;
     transition: all .25s ease; 
 }
 .typingModes:hover
 {
-    color: var(--currentWord);
+    color: var(--incorrect);
 }
 .individualMode
 {
@@ -688,6 +687,10 @@ button
     margin-left: 2rem;
     margin-top: 5rem;
     user-select: none;
+}
+.preferencesRow:hover
+{
+    background-color: var(--incorrect);
 }
 #loginHeader
 {
