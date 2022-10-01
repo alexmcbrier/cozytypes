@@ -55,8 +55,8 @@
             </div>
             <div class ="rowContainer" style="width: 25%">
               <h1 class = "notSignedIn" id="preferenceHeader">blur text</h1>
-                <a class = "preferencesRow" onclick="setCookie('theme', 'dracula', 30)">on</a> 
-                <a class = "preferencesRow" onclick="setCookie('theme', 'dracula', 30)">off</a>
+                <a class = "preferencesRow" onclick="setCookie('blur', 'on', 30)">on</a> 
+                <a class = "preferencesRow" onclick="setCookie('blur', 'off', 30)">off</a>
             </div>
           </div>
             <div id = "themesContainer" class ="rowContainer">
