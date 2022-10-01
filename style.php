@@ -2,25 +2,76 @@
 header('Content-Type: text/css');
 //add the theme in the db
 session_start();
-if (isset($_SESSION["user_id"])) {
-   
-    $mysqli = require __DIR__ . "/config.php";
-   
-    $sql = "SELECT * FROM user
-            WHERE id = {$_SESSION["user_id"]}";
-           
-    $result = $mysqli->query($sql);
-   
-    $user = $result->fetch_assoc();
-    $theme = htmlspecialchars($user["theme"]);
-    $font = htmlspecialchars($user["fontSize"]);
-    include "themes/".$theme.".css"; //theme added depends on the name of the one in the database
-    include "fonts/".$font.".css"; //theme added depends on the name of the one in the database
+if (isset($_COOKIE["theme"])) {
+    $theme = $_COOKIE["theme"];
 }
-else //if the user has not registered or logged in set a default theme
+else{
+    $theme = "dracula";
+}
+if (isset($_COOKIE["fontFamily"])) {
+    $fontFamily = $_COOKIE["fontFamily"];
+}
+else{
+    $fontFamily = "lexendDeca";
+}
+if (isset($_COOKIE["fontSize"])) {
+    $fontSize = ($_COOKIE["fontSize"]);
+}
+else{
+    $fontSize = 3;
+}
+if (isset($_COOKIE["caret"])) {
+    $caret = $_COOKIE["caret"];
+}
+else{
+    $caret = "underline";
+}
+if (isset($_COOKIE["lineCount"])) {
+    $lineCount = $_COOKIE["lineCount"];
+}
+else{
+    $lineCount = 2;
+}
+if (isset($_COOKIE["time"])) {
+    $time = $_COOKIE["time"];
+}
+else{
+    $time = 15;
+}
+if (isset($_COOKIE["words"])) {
+    $words = $_COOKIE["words"];
+}
+else{
+    $words = 30;
+}
+if (isset($_COOKIE["typingMode"])) {
+    $typingMode = $_COOKIE["typingMode"];
+}
+else{
+    $typingMode = "words";
+}
+
+
+$height = 1.5 * $fontSize * $lineCount;
+$caretTop = 0;
+$caretHeight = 0;
+//others
+if ($caret == "none")
 {
-    include "themes/dracula.css";  //theme added depends on the name of the one in the database
+    $caretTop = 0;
+    $caretHeight = 0;
 }
+else if ($caret == "underline")
+{
+    $caretTop = $fontSize * 1.25;
+    $caretHeight = $fontSize / 3;
+}
+else if ($caret == "highlight")
+{
+    $caretTop = 0;
+    $caretHeight = $fontSize * 1.5;
+}
+include "themes/".$theme.".css"; //theme added depends on the name of the one in the database
 ?>
 <style>
 
@@ -151,6 +202,15 @@ nav a:hover{
     margin-top: 1rem;
 
 }
+.box
+{
+    z-index: 0;
+    position: absolute;
+    margin-top: 6rem;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0), var(--background));
+}
 .horizontalAlign
 {
     display: flex; /* equal height of the children */
@@ -206,6 +266,8 @@ nav a:hover{
 {
     margin-top: 0rem;
     transition:all .5s ;
+    line-height:  <?php echo strval($fontSize * 1.5) . "rem"; ?>;
+
 }
 #testRow
 {
@@ -216,13 +278,59 @@ nav a:hover{
   width: 60rem;
   margin: auto;
   resize: none;
-  font-size:  2rem;                     /* font size */
+  font-size:  <?php echo strval($fontSize) . "rem"; ?>;
+  height:  <?php echo strval($height) . "rem"; ?>;
   border-radius: .5rem;
   display: block;
-  color: var(--testText);                 /* font color */
+  color: var(--testText);
   text-align: left;
   overflow: hidden;
   line-height: 3.5rem;
+}
+#typingmode
+{
+  border:.3rem solid var(--rowBackground);
+  width: 60rem;
+  margin: auto;
+  resize: none;
+  font-size: 2rem;
+  border-radius: .5rem;
+  display: block;
+  color: var(--row);
+  text-align: left;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  padding: 1rem;
+  line-height: 3rem;
+}
+.typingModes
+{
+
+    margin-right: 1rem;
+    display: flex; /* equal height of the children */
+    color: var(--rowBackground);
+    z-index: 0;
+    user-select: none;
+    transition: all .25s ease; 
+}
+.typingModes:hover
+{
+    color: var(--currentWord);
+}
+.individualMode
+{
+    display: flex; /* equal height of the children */
+
+}
+.modeStack
+{
+    display: inline-block; /* equal height of the children */
+    margin-right: 3rem;
+    padding:2rem;
+}
+.modeHeader
+{
+    font-size: 4rem;
 }
 #testText::first-line {
     color: white;
@@ -236,6 +344,8 @@ nav a:hover{
     position: absolute;
     margin-top: 5rem;
     transition: all .25s;
+    margin-top:  <?php echo strval($caretTop) . "rem"; ?>;
+    height:  <?php echo strval($caretHeight) . "rem"; ?>;
 }
 .blur
 {
@@ -928,25 +1038,5 @@ animation: statsMoveOut 1.5s forwards ease;
     color: #F67599;
     background-color: #221C35;    
 }
-   #theme-9009
-{
-    color: #080909;
-    background-color: #EEEBE2;    
-}
-   #theme-sakura
-{
-    color: #A30000;
-    background-color: #FEC8CD;    
-}
-   #theme-light
-{
-    color: #383E42;
-    background-color: #eeeeee;    
-}
-   #theme-dark
-{
-    color: #383E42;
-    background-color: #121212;    
-}
-   
+
 <style>
