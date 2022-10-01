@@ -1,42 +1,3 @@
-
-<?php
-session_start();
-function changePreference($type, $value)
-{
-   if (isset($_SESSION["user_id"])) {
-    $mysqli = require __DIR__ . "/config.php";
-    $sql = "SELECT * FROM user
-            WHERE id = {$_SESSION["user_id"]}";
-    $result = $mysqli->query($sql);
-    $user = $result->fetch_assoc();
-    $id = ($user["id"]);
-    $link = require __DIR__ . "/config.php";
-    if($link === false){
-        die("ERROR: Could not connect. " . mysqli_connect_error());
-    }
-    $sql = "UPDATE user SET $type='$value' WHERE id=$id";
-    if(mysqli_query($link, $sql)){
-        echo "Record was updated successfully.";
-    } else {
-        echo "ERROR: Could not able to execute $sql. "
-                                . mysqli_error($link);
- 
-    }
-    mysqli_close($link);
-    header("location: index.php");
-  }
-  else
-  {
-    header("location: index.php");
- 
-  }
-}
-  if (isset($_GET['change'])) {
-    $type = htmlspecialchars($_GET["type"]);
-    $value = htmlspecialchars($_GET["value"]);
-    changePreference($type, $value);
-  }
-?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -46,7 +7,8 @@ function changePreference($type, $value)
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>cozytypes</title>
         <link rel="stylesheet" href="style.php">
-        <script type = "text/javascript" src="themeChange.js" defer ></script>
+        <script type = "text/javascript" src="script.js"></script>  
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     </head>
@@ -62,59 +24,54 @@ function changePreference($type, $value)
           <div class = "horizontalAlign">
             <div class ="rowContainer" style="width: 40%">
               <h1 class = "notSignedIn" id="preferenceHeader">size</h1>
-              <a class = "preferencesRow" href="preferences.php?change=true&type=fontSize&value=1">1</a>
-              <a class = "preferencesRow" href="preferences.php?change=true&type=fontSize&value=2">2</a>
-              <a class = "preferencesRow" href="preferences.php?change=true&type=fontSize&value=3">3</a>
-              <a class = "preferencesRow" href="preferences.php?change=true&type=fontSize&value=4">4</a>
-              <a class = "preferencesRow" href="preferences.php?change=true&type=fontSize&value=5">5</a>
+              <a class = "preferencesRow" onclick="setCookie('fontSize', 1, 30)">1</a>
+              <a class = "preferencesRow" onclick="setCookie('fontSize', 2, 30)">2</a>
+              <a class = "preferencesRow" onclick="setCookie('fontSize', 3, 30)">3</a>
+              <a class = "preferencesRow" onclick="setCookie('fontSize', 4, 30)">4</a>
+              <a class = "preferencesRow" onclick="setCookie('fontSize', 5, 30)">5</a>
             </div>
             <div class ="rowContainer" style="width: 60%">
               <h1 class = "notSignedIn" id="preferenceHeader">font</h1>
-                <a class = "preferencesRow" href="preferences.php?change=true&type=fontSize&value=1">arial</a>
-                <a class = "preferencesRow" href="preferences.php?change=true&type=fontSize&value=1">helvetica</a>
-                <a class = "preferencesRow" href="preferences.php?change=true&type=fontSize&value=1">futura</a>
-                <a class = "preferencesRow" href="preferences.php?change=true&type=fontSize&value=1">lexendDeca</a>
-                <a class = "preferencesRow" href="preferences.php?change=true&type=fontSize&value=1">verdana</a>
+                <a class = "preferencesRow" onclick="setCookie('fontFamily', 'arial', 30)">arial</a>
+                <a class = "preferencesRow" onclick="setCookie('fontFamily', 'helvetica', 30)">helvetica</a>
+                <a class = "preferencesRow" onclick="setCookie('fontFamily', 'futura', 30)">futura</a>
+                <a class = "preferencesRow" onclick="setCookie('fontFamily', 'lexendDeca', 30)">lexendDeca</a>
+                <a class = "preferencesRow" onclick="setCookie('fontFamily', 'verdana', 30)">verdana</a>
             </div>
           </div>
           <div class = "horizontalAlign">
             <div class ="rowContainer" style="width: 40%">
               <h1 class = "notSignedIn" id="preferenceHeader">caret</h1>
-              <a class = "preferencesRow" href="preferences.php?change=true&type=caret&value=none">none</a>
-              <a class = "preferencesRow" href="preferences.php?change=true&type=caret&value=underline">underline</a>
-              <a class = "preferencesRow" href="preferences.php?change=true&type=caret&value=highlight">highlight</a>
+              <a class = "preferencesRow" onclick="setCookie('caret', 'none', 30)">none</a>
+              <a class = "preferencesRow" onclick="setCookie('caret', 'underline', 30)">underline</a>
+              <a class = "preferencesRow" onclick="setCookie('caret', 'highlight', 30)">highlight</a>
             </div>
             <div class ="rowContainer" style="width: 35%">
               <h1 class = "notSignedIn" id="preferenceHeader"># of lines</h1>
-                <a class = "preferencesRow" href="preferences.php?change=true&type=lineCount&value=1">1</a>
-                <a class = "preferencesRow" href="preferences.php?change=true&type=lineCount&value=2">2</a>
-                <a class = "preferencesRow" href="preferences.php?change=true&type=lineCount&value=3">3</a>
-                <a class = "preferencesRow" href="preferences.php?change=true&type=lineCount&value=4">4</a>
+                <a class = "preferencesRow" onclick="setCookie('lineCount', 1, 30)">1</a>
+                <a class = "preferencesRow" onclick="setCookie('lineCount', 2, 30)">2</a>
+                <a class = "preferencesRow" onclick="setCookie('lineCount', 3, 30)">3</a>
+                <a class = "preferencesRow" onclick="setCookie('lineCount', 4, 30)">4</a>
             </div>
             <div class ="rowContainer" style="width: 25%">
               <h1 class = "notSignedIn" id="preferenceHeader">blur text</h1>
-                <a class = "preferencesRow" href="preferences.php?change=true&type=textBlur&value=on">on</a>
-                <a class = "preferencesRow" href="preferences.php?change=true&type=textBlur&value=off">off</a>
+                <a class = "preferencesRow" onclick="setCookie('theme', 'dracula', 30)">on</a> 
+                <a class = "preferencesRow" onclick="setCookie('theme', 'dracula', 30)">off</a>
             </div>
           </div>
-            <div class ="rowContainer">
+            <div id = "themesContainer" class ="rowContainer">
             <h1 id="preferenceHeader">theme</h1>
-                <a class = "themesRow" id = "theme-light" href="preferences.php?change=true&type=theme&value=light">light</a>
-                <a class = "themesRow" id = "theme-dark" href="preferences.php?change=true&type=theme&value=dark">dark</a>
-                <a class = "themesRow" id = "theme-olivia" href="preferences.php?change=true&type=theme&value=olivia">olivia</a>
-                <a class = "themesRow" id = "theme-dracula" href="preferences.php?change=true&type=theme&value=dracula">dracula</a>
-                <a class = "themesRow" id = "theme-8008" href="preferences.php?change=true&type=theme&value=8008">8008</a>
-                <a class = "themesRow" id = "theme-mizu" href="preferences.php?change=true&type=theme&value=mizu">mizu</a>
-                <a class = "themesRow" id = "theme-striker" href="preferences.php?change=true&type=theme&value=striker">striker</a>
-                <a class = "themesRow" id = "theme-9009" href="preferences.php?change=true&type=theme&value=9009">9009</a>
-                <a class = "themesRow" id = "theme-blueberry" href="preferences.php?change=true&type=theme&value=blueberry">blueberry</a>
-                <a class = "themesRow" id = "theme-creamsicle" href="preferences.php?change=true&type=theme&value=creamsicle">creamsicle</a>
-                <a class = "themesRow" id = "theme-botanical" href="preferences.php?change=true&type=theme&value=botanical">botanical</a>
-                <a class = "themesRow" id = "theme-luna" href="preferences.php?change=true&type=theme&value=luna">luna</a>
-                <a class = "themesRow" id = "theme-sakura" href="preferences.php?change=true&type=theme&value=sakura">sakura</a>
+                <a class = "themesRow" id = "theme-olivia" onclick="setCookie('theme', 'olivia', 30)">olivia</a>
+                <a class = "themesRow" id = "theme-dracula" onclick="setCookie('theme', 'dracula', 30)">dracula</a>
+                <a class = "themesRow" id = "theme-8008" onclick="setCookie('theme', '8008', 30)">8008</a>
+                <a class = "themesRow" id = "theme-mizu" onclick="setCookie('theme', 'mizu', 30)">mizu</a>
+                <a class = "themesRow" id = "theme-striker" onclick="setCookie('theme', 'striker', 30)">striker</a>
+                <a class = "themesRow" id = "theme-blueberry" onclick="setCookie('theme', 'blueberry', 30)">blueberry</a>
+                <a class = "themesRow" id = "theme-creamsicle" onclick="setCookie('theme', 'creamsicle', 30)">creamsicle</a>
+                <a class = "themesRow" id = "theme-botanical" onclick="setCookie('theme', 'botanical', 30)">botanical</a>
+                <a class = "themesRow" id = "theme-luna" onclick="setCookie('theme', 'luna', 30)">luna</a>
             </div>
-            
-</form>
+        </form>
     </body>
 </html>
  
