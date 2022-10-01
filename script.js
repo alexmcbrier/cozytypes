@@ -319,7 +319,7 @@ function moveCursorWithY()
 }
 function setBlur()
 {
-  if(getCookie("lineCount") > 1)
+  if(getCookie("lineCount") > 1 && getCookie('blur') == "on")
   {
     let lines = getCookie("lineCount");
     let height = window.getComputedStyle(document.getElementById('testText')).getPropertyValue("height").replace("px", "") //remove px
