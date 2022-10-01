@@ -233,7 +233,6 @@ async function newQuote(){
     }
     count = displayText.getElementsByClassName('word').length + displayText.getElementsByClassName('incorrect-word').length; //not including current word
     lastWord = displayText.getElementsByClassName('word')[count-1]//Only want 1 value in class list
-    moveCursorWithY();
 }
 function startTimer() {
     if (timerVar != "running") {
