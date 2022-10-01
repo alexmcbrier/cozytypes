@@ -5,12 +5,19 @@ const displayInput = document.getElementById('textInput') // Input Box
 const displayTimer = document.getElementById('time') // Time Display
 const displayWPM = document.getElementById('wpmDisplay') // wpm Display
 var timerVar = "not running" // Turns on when user begins typing...
-var sentenceLength = getCookie("words");
+var sentenceLength = 50;
+var time = 15;
+if (checkCookie("words"))
+{
+  sentenceLength = getCookie("words");
+}
+if (checkCookie("words"))
+{
+  time = getCookie("time");
+}
 var sentence = []
 var words = [] //word elements
 var currentWordNum = 0;
-var time = 15;
-
 function changeTime(value)
 {
   time = value;
@@ -287,6 +294,15 @@ function moveCursor()
   cursor.style.left = rect.x + "px";
   cursor.style.width = rect.width + "px";
 }
+function moveCursorWithY()
+{
+  const cursor = document.getElementById('cursor') 
+  const placement = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
+  const rect = placement.getBoundingClientRect();
+  cursor.style.left = rect.x + "px";
+  cursor.style.top = rect.y + "px";
+  cursor.style.width = rect.width + "px";
+}
 function setBlur()
 {
   if(getCookie("lineCount") > 1)
@@ -307,6 +323,6 @@ function setBlur()
 
   }
 }
-
 newQuote();
+moveCursorWithY();
 setBlur();
