@@ -14,7 +14,7 @@ if (checkCookie("words"))
 }
 if (checkCookie("time"))
 {
-  time = getCookie("time");
+  time = parseInt(getCookie("time"));
 }
 if (checkCookie("mode"))
 {
