@@ -1,63 +1,16 @@
 <?php
 session_start();
-if(isset($_COOKIE["rememberMe"]))
+//grabbing user session information (neccesary for staying signed in etc.)
+if(isset($_COOKIE["email"]))
 {
     $mysqli = require __DIR__ . "/config.php";
-    $name = $_COOKIE["rememberMe"];
+    $name = $_COOKIE["email"];
     //change to whatever
     $sql = "SELECT id FROM user WHERE email = '$name'";
     $result = $mysqli->query($sql);
     $user = $result->fetch_assoc();
     $_SESSION["user_id"] = $user["id"];
 }
-if (isset($_SESSION["user_id"])) {
-    
-    $mysqli = require __DIR__ . "/config.php";
-    
-    $sql = "SELECT * FROM user
-            WHERE id = {$_SESSION["user_id"]}";
-            
-    $result = $mysqli->query($sql);
-    
-    $user = $result->fetch_assoc();
-    $font = htmlspecialchars($user["fontSize"]);
-    $id = htmlspecialchars($user["id"]);
-    $font = htmlspecialchars($user["fontSize"]);
-    $theme = htmlspecialchars($user["theme"]);
-    $height = 1.5 * $font * htmlspecialchars($user["lineCount"]); //increments of line height, in this case 1.5 
-    $blur = htmlspecialchars($user["textBlur"]);
-    $caret = htmlspecialchars($user["caret"]);
-    $caretMarginTop = 0;
-    $caretHeight = 0;
-    if ($caret == "none")
-    {
-        $caretMarginTop = 0;
-        $caretHeight = 0;
-    }
-    if ($caret == "underline")
-    {
-        $caretMarginTop = $font *1.25;
-        $caretHeight = $font / 3;
-    }
-    if ($caret == "highlight")
-    {
-        $caretMarginTop = 0;
-        $caretHeight = $font * 1.5;
-    }
-
-}
-else //user not signed in
-{
-    $lineCount = 3;
-
-    $font = 3;
-    $height = 1.5 * $font * $lineCount;
-    $blur = "yes";
-    $caret = "underline";
-    $caretMarginTop = $font *1.25;
-    $caretHeight = $font / 3;
-}
-
 //executes when typing test has concluded
 if (isset($_GET["finish"]))
 {
@@ -66,7 +19,6 @@ if (isset($_GET["finish"]))
     $_SESSION['testTime'] = $_GET["testTime"];
     header("Location: testFinished.php");
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -90,13 +42,34 @@ if (isset($_GET["finish"]))
             <li><a href="preferences.php">preferences</a></li>
             <li><a href="learn.php">learn</a></li>
     </nav>
-        <div id = "cursor" style="margin-top:<?php echo $caretMarginTop?>rem; height:<?php echo $caretHeight;?>rem;"></div>
+        <div id = "cursor"></div>
+        <div id = "typingmode">
+            <div class = "modeStack">
+                <div class="modeHeader">time</div>
+                <div class = "individualMode">
+                    <a class = "typingModes" onclick="changeTime(15)">15</a>
+                    <div class = "typingModes" onclick="changeTime(30)">30</div>
+                    <div class = "typingModes" onclick="changeTime(60)">60</div>
+                    <div class = "typingModes" onclick="changeTime(120)">120</div>
+                </div>
+            </div>
+            <div class = "modeStack"> 
+                <div class="modeHeader">words</div>
+                <div class = "individualMode">
+                    <div class = "typingModes" onclick="changeWords(10)">10</div>
+                    <div class = "typingModes" onclick="changeWords(25)">25</div>
+                    <div class = "typingModes" onclick="changeWords(50)">50</div>
+                    <div class = "typingModes" onclick="changeWords(100)">100</div>
+                </div>
+            </div>
+        </div>
+        <div id="testText"></div>
         <div id="typingArea">
-            <div id="testText" style="height:<?php echo $height?>rem;">
-            <div id="wordsWrapper"style="font-size:<?php echo $font; ?>rem; line-height:<?php echo $font * 1.5; ?>rem;"></div>
+            <div id="testText">
+            <div id="wordsWrapper"></div>
             </div>
             <div id="testRow">
-                <textarea class = "row" id="textInput" autofocus></textarea>
+                <textarea class = "row" id="textInput" spellcheck="false" maxlength = "10" autofocus></textarea>
                 <div class = "row" id="wpmDisplay">0 WPM</div>
                 <div class = "row" id="time"></div>
                 <img class = "row" id="restartTest" onclick="restart()"src="images/refresh-button.png">
