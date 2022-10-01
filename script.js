@@ -110,7 +110,6 @@ function keystroke()
       if (rect.y > rect2.y)
       {
         displayText.style.marginTop = (rect2.y - rect.y)  + "px";
-        blurText();
       }
     }
     //moving the cursor
@@ -1226,31 +1225,26 @@ function moveCursorWithY()
   cursor.style.top = rect.y + "px";
   cursor.style.width = rect.width + "px";
 }
-function blurText() //basically we want to blur any characters not on the same line as the current line (or just the last)
+function setBlur()
 {
-  const placement = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
-  const currentWordIndex = Array.from(
-    placement.parentElement.children
-  ).indexOf(placement);
-  //loop through trying to find a change in y px
-  const rect = placement.getBoundingClientRect();
-  const yNum = rect.y;
-
-  for (let i = currentWordIndex; i < sentenceLength; i++)
+  if(getCookie("lineCount") > 1)
   {
-    const lastWord = document.getElementsByClassName('word')[i];
-    const rect2 = lastWord.getBoundingClientRect();
-    document.getElementsByClassName('word')[i].classList.remove('blur');
-    if (rect2.y > rect.y)
-    {
-      for (let j = i; j < sentenceLength; j++)
-      {
-        document.getElementsByClassName('word')[j].classList.add('blur');
-      }
-      break;
-    }
+    let lines = getCookie("lineCount");
+    let height = window.getComputedStyle(document.getElementById('testText')).getPropertyValue("height").replace("px", "") //remove px
+    let boxHeight = (height / lines * (lines - 1))
+    console.log(boxHeight)
+    const blurBox = document.createElement('div')
+    blurBox.style.height = boxHeight + "px"
+    blurBox.style.width = window.getComputedStyle(document.getElementById('testText')).getPropertyValue("width")
+    blurBox.classList.add("box")
+    const placement = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
+    const rect = placement.getBoundingClientRect();
+    blurBox.style.top = rect.y + "px";
+    document.body.appendChild(blurBox)
+
+
   }
 }
 newQuote();
 moveCursorWithY();
-blurText();
+setBlur();
