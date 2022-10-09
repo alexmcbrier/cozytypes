@@ -341,7 +341,7 @@ nav a:hover{
     background-color: var(--correct);
     border-radius: 1.5rem;
     position: absolute;
-    margin-top: 5rem;
+    margin-top: 1.5rem;
     transition: all .25s;
     margin-top:  <?php echo strval($caretTop) . "rem"; ?>;
     height:  <?php echo strval($caretHeight) . "rem"; ?>;
