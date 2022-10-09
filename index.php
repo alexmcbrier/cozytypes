@@ -24,14 +24,15 @@ if (isset($_GET["finish"]))
 <!DOCTYPE html>
 <html>
     <head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-9W2ZHHJ7P5"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9W2ZHHJ7P5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-          gtag('config', 'G-9W2ZHHJ7P5');
-        </script>
+  gtag('config', 'G-9W2ZHHJ7P5');
+</script>
 
         <link rel="shortcut icon" type="image/x-icon" href="images\keyboard.ico" />
         <meta charset="UTF-8">
