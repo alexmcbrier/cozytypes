@@ -63,7 +63,7 @@ if ($caret == "none")
 }
 else if ($caret == "underline")
 {
-    $caretTop = $fontSize * 1.25;
+    $caretTop = $fontSize * 1.15;
     $caretHeight = $fontSize / 3;
 }
 else if ($caret == "highlight")
@@ -344,6 +344,7 @@ nav a:hover{
     margin-top: 1.75rem;
     transition: all .25s;
     height:  <?php echo strval($caretHeight) . "rem"; ?>;
+    margin-top:  <?php echo strval($caretTop) . "rem"; ?>;
 }
 .blur
 {
