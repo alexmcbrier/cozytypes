@@ -31,7 +31,6 @@
             <li><a id = "play" href="index.php">play</a></li>
             <li><a href="login.php">profile</a></li>
             <li><a href="preferences.php">preferences</a></li>
-            <li><a href="learn.php">learn</a></li>
     </nav>
         <form id="preferencesArea" method="POST" action="preferences.php">
           <div class = "horizontalAlign">
