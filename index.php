@@ -57,7 +57,6 @@ if (isset($_GET["finish"]))
             <li><a id = "play" href="index.php">play</a></li>
             <li><a href="login.php">profile</a></li>
             <li><a href="preferences.php">preferences</a></li>
-            <li><a href="learn.php">learn</a></li>
     </nav>
         <div id = "cursor"></div>
         <div id = "typingmode">
