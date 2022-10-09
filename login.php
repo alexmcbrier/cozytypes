@@ -78,7 +78,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <li><a id = "play" href="index.php">play</a></li>
             <li><a href="login.php">profile</a></li>
             <li><a href="preferences.php">preferences</a></li>
-            <li><a href="learn.php">learn</a></li>
     </nav>
     <form id="loginContainer" method = "post">
         <div id = "topContainer">
