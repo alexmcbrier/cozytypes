@@ -339,7 +339,7 @@ nav a:hover{
     width: 5rem;
     height: 1rem;
     background-color: var(--correct);
-    opacity:0.5;
+    opacity:0.25;
     border-radius: 1.5rem;
     position: absolute;
     margin-top: 1.75rem;
