@@ -338,7 +338,7 @@ nav a:hover{
 {
     width: 5rem;
     height: 1rem;
-    background-color: var(--incorrect);
+    background-color: var(--currentWord);
     border-radius: 1.5rem;
     position: absolute;
     margin-top: 1.75rem;
