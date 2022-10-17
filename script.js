@@ -338,5 +338,6 @@ function setBlur()
   }
 }
 newQuote();
+moveCursor();
 moveCursorWithY();
 setBlur();
