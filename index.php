@@ -92,7 +92,7 @@ if (isset($_GET["finish"]))
             <div id="wordsWrapper"></div>
             </div>
             <div id="testRow">
-                <textarea class = "row" id="textInput" spellcheck="false" maxlength = "10" autofocus></textarea>
+                <textarea class = "row" id="textInput" spellcheck="false" maxlength = "16" autofocus></textarea>
                 <div class = "row" id="wpmDisplay">0 WPM</div>
                 <div class = "row" id="time"></div>
                 <img class = "row" id="restartTest" onclick="restart()"src="images/refresh-button.png">
