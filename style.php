@@ -292,9 +292,7 @@ nav a:hover{
   resize: none;
   font-size: 2rem;
   border-radius: .5rem;
-  display: block;
   color: var(--row);
-  text-align: left;
   overflow: hidden;
   border-radius: 1.5rem;
   padding: 1rem;
