@@ -179,7 +179,6 @@ nav a:hover{
     padding: 2rem 2.5rem;
     margin-left: .5rem;
     margin-top: 1.5rem;
-    transition: 1s;
     line-height: 10px;
     vertical-align: top;
 }
