@@ -297,6 +297,7 @@ nav a:hover{
   border-radius: 1.5rem;
   padding: 1rem;
   line-height: 3rem;
+  display: flex;
 }
 .typingModes
 {
@@ -319,7 +320,6 @@ nav a:hover{
 }
 .modeStack
 {
-    display: inline-block; /* equal height of the children */
     margin-right: 1rem;
     padding:.5rem;
 }
