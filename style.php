@@ -63,7 +63,7 @@ if ($caret == "none")
 }
 else if ($caret == "underline")
 {
-    $caretTop = $fontSize * 1.15;
+    $caretTop = $fontSize * 1.25;
     $caretHeight = $fontSize / 3;
 }
 else if ($caret == "highlight")
