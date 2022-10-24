@@ -287,7 +287,6 @@ nav a:hover{
 #typingmode
 {
   border:.3rem solid var(--rowBackground);
-  width: 60rem;
   margin: auto;
   resize: none;
   font-size: 2rem;
