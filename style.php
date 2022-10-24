@@ -264,7 +264,6 @@ nav a:hover{
 #wordsWrapper
 {
     margin-top: 0rem;
-    transition:all .5s ;
     line-height:  <?php echo strval($fontSize * 1.5) . "rem"; ?>;
 
 }
