@@ -230,10 +230,6 @@ function wordsPerMinute(testDuration) {
     return wpm
 }
 async function newQuote(){
-    await delay(3000);
-    moveCursor();
-    moveCursorWithY();
-    setBlur();
     displayTimer.innerHTML = getTime(getCookie("time")) //sets the time (does not begin timer however)
     displayInput.addEventListener('input', () => {startTimer() }) //starts the timer on input
     randomQuote() //creates a new random quote (Values stored inside sentence Array)
@@ -341,7 +337,7 @@ function setBlur()
 
   }
 }
-function delay(time) {
-  return new Promise(resolve => setTimeout(resolve, time));
-}
 newQuote();
+moveCursor();
+moveCursorWithY();
+setBlur();
