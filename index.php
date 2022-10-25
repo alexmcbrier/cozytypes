@@ -42,6 +42,7 @@ if (isset($_GET["finish"]))
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>cozytypes</title>
         <meta name="description" content="A website designed to help and teach people to type. Play with friends, customize preferences, and improve your typing speed.">
+        <meta name="author" content="alexmcbrier">
         <link rel="stylesheet" type="text/css" href="style.php">
         <script type = "text/javascript" src="script.js " defer ></script>
         <link rel="preconnect" href="https://fonts.gstatic.com">
