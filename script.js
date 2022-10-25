@@ -337,7 +337,11 @@ function setBlur()
 
   }
 }
+function delay(time) {
+  return new Promise(resolve => setTimeout(resolve, time));
+}
 newQuote();
+await delay(3000);
 moveCursor();
 moveCursorWithY();
 setBlur();
