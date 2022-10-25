@@ -43,6 +43,7 @@ if (isset($_GET["finish"]))
         <title>cozytypes</title>
         <meta name="description" content="A website designed to help and teach people to type. Play with friends, customize preferences, and improve your typing speed.">
         <meta name="author" content="alexmcbrier">
+        <meta name="keywords" content="typing speed test, typing speedtest, typing test, speedtest, speed test, typing, test, typing-test, typing test, cozytypes, cozytype, cozy types, alex mcbrier, cosytypes, types, cozy, type, alexmcbrier, wpm, words per minute, typing website, minimalistic, custom typing test, customizable, asthetic, themes, new, learn to type, learn typing, practice, new typing site, new typing website, minimalist typing website, minimalistic typing website, minimalist typing test">
         <link rel="stylesheet" type="text/css" href="style.php">
         <script type = "text/javascript" src="script.js " defer ></script>
         <link rel="preconnect" href="https://fonts.gstatic.com">
