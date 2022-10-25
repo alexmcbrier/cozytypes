@@ -262,7 +262,7 @@ nav a:hover{
 }
 #wordsWrapper
 {
-    transition: .25s all;
+    transition: 1s all;
     line-height:  <?php echo strval($fontSize * 1.5) . "rem"; ?>;
 
 }
@@ -362,13 +362,13 @@ nav a:hover{
     align-items: center;
 }
 .correct {
-    transition: all .15s ease; /* fade in word */
+    transition: all .35s ease; /* fade in word */
     color: var(--correct);
    
 }
 .incorrect, .extra{
     color: var(--incorrect);
-    transition: all .15s ease; /* fade in word */
+    transition: all .35s ease; /* fade in word */
     text-shadow: 1px 1px 2px var(--incorrect), 0 0 1em var(--incorrect), 0 0 0.2em var(--incorrect);
 }
 .current-word {
