@@ -22,7 +22,7 @@ if (isset($_GET["finish"]))
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=TAG_ID"></script>
