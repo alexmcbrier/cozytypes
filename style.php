@@ -77,6 +77,7 @@ include "themes/".$theme.".css"; //theme added depends on the name of the one in
 
 *{
     font-family: masterFont;
+    box-sizing: border-box;
 }
 @font-face {
     font-family: masterFont;
@@ -143,18 +144,26 @@ li a{
     vertical-align: middle;
     text-decoration: none;
 }
+#mainContent
+{
+    width: 100%;
+    align-items: center;
+    display: grid;
+    gap: 2em;
+    grid-auto-flow: row;
+    grid-template rows: auto 1fr auto;
+    min height: 100hv;
+    padding 2rem;
+    transition: padding-top .125s;
+    z-index: 999;
+}
 nav{
-  list-style-type: none;
-  margin: 0;
-  padding-top: 2.5rem;
-  overflow: hidden;
   background: linear-gradient(to top, rgba(255,0,0,0), 70%, var(--backgroundGradient));
   width: 100%;
-  position: fixed;
   text-align: center;
-  height: 20rem;
+  height: 4em;
   user-select: none;
-
+  padding-top: 2.5rem;
 }
 nav a{
     transition: all .5s ease;
@@ -236,7 +245,7 @@ nav a:hover{
   overflow: hidden;
   font-family: masterFont;
   resize: none; /* Neccesary so user cannot resize */
-  width: 20%;
+  width: 40%;
   background-color: var(--background);
   height: 1rem;
   line-height: 1rem;
@@ -262,17 +271,21 @@ nav a:hover{
 }
 #wordsWrapper
 {
-    transition: 1s all;
+    /* transition: .25s all; */
     line-height:  <?php echo strval($fontSize * 1.5) . "rem"; ?>;
 
 }
 #testRow
 {
     display: flex; /* equal height of the children */
+    width: 60%;
+  margin: 0 auto;
+  justify-content: center;
+  margin-top: 1rem;
 }
 #testText{
   user-select: none;
-  width: 60rem;
+  width: 60%;
   margin: auto;
   resize: none;
   font-size:  <?php echo strval($fontSize) . "rem"; ?>;
@@ -286,18 +299,16 @@ nav a:hover{
 }
 #typingmode
 {
-  width: 60rem;
   border:.3rem solid var(--rowBackground);
-  margin: auto;
-  resize: none;
-  font-size: 2rem;
-  border-radius: .5rem;
+  font-size: 1rem;
   color: var(--row);
-  overflow: hidden;
-  border-radius: 1.5rem;
-  padding: 1rem;
-  line-height: 3rem;
+  border-radius: 1.5rem;;
   display: flex;
+  width: 60%;
+  margin: 0 auto;
+  justify-content: left; /* can change to center */
+  padding: 1rem 0rem;
+  margin-bottom: 1rem;
 }
 .typingModes
 {
@@ -320,12 +331,12 @@ nav a:hover{
 }
 .modeStack
 {
-    margin-right: 1rem;
+    margin-left: 2rem;
     padding:.5rem;
 }
 .modeHeader
 {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 #testText::first-line {
     color: white;
@@ -346,14 +357,6 @@ nav a:hover{
 .blur
 {
     filter: blur(.25rem);
-}
-#typingArea {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
 }
 #preferencesArea
 {
@@ -384,6 +387,16 @@ nav a:hover{
 }
 #listOfStats {
     color: white;
+}
+#top
+{
+    align-items: center;
+    font-size: 2.3rem;
+    grid-auto-flow: column;
+    grid-template-areas: "logo menu";
+    line-height: 2.3rem;
+    padding: 0 5px;
+    z-index: 2;
 }
 #topContainer input{
     display: flex;
@@ -892,6 +905,10 @@ button
     margin-right: 7rem;
    
 }
+#middle
+{
+    height: 100%;
+}
 #middleContainer{
     display: inline-block;
     margin-left: 18rem;
@@ -935,7 +952,7 @@ animation: statsMoveOut 1.5s forwards ease;
     margin-top: 3rem;
     margin-bottom: 1rem;
     color: white;
-    font-size: 5rem;
+    font-size: 3rem;
     font-weight: bold;
     color: #fff;
     cursor: pointer;
@@ -947,8 +964,8 @@ animation: statsMoveOut 1.5s forwards ease;
     transition: all .4s ease-in-out;
     background-image: linear-gradient(to right, var(--testText) , var(--testText) ); /* background color*/
     box-shadow: 0rem 0rem 10rem 0 var(--testText);
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
     user-select: none;
     transform: 3s ease-in-out;
     animation: fadeIn 3s ease;
