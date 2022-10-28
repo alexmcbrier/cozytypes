@@ -54,51 +54,56 @@ if (isset($_GET["finish"]))
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JMV592"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <nav>
-            <li>CozyTypes</li>
-            <li><a id = "play" href="index.php">play</a></li>
-            <li><a href="login.php">profile</a></li>
-            <li><a href="preferences.php">preferences</a></li>
-    </nav>
+    <div id ="mainContent">
+        <div id = "top">
+            <nav>
+                    <li>CozyTypes</li>
+                    <li><a id = "play" href="index.php">play</a></li>
+                    <li><a href="login.php">profile</a></li>
+                    <li><a href="preferences.php">preferences</a></li>
+            </nav>
+        </div>
         <div id = "cursor"></div>
-        <div id = "typingmode">
-            <div class = "modeStack">
-                <div class="modeHeader">time</div>
-                <div class = "individualMode">
-                    <a class = "typingModes" onclick="changeTime(15)">15</a>
-                    <div class = "typingModes" onclick="changeTime(30)">30</div>
-                    <div class = "typingModes" onclick="changeTime(60)">60</div>
-                    <div class = "typingModes" onclick="changeTime(120)">120</div>
+        <div id = "middle">
+            <div id = "typingmode">
+                <div class = "modeStack">
+                    <div class="modeHeader">time</div>
+                    <div class = "individualMode">
+                        <a class = "typingModes" onclick="changeTime(15)">15</a>
+                        <div class = "typingModes" onclick="changeTime(30)">30</div>
+                        <div class = "typingModes" onclick="changeTime(60)">60</div>
+                        <div class = "typingModes" onclick="changeTime(120)">120</div>
+                    </div>
+                </div>
+                <div class = "modeStack"> 
+                    <div class="modeHeader">words</div>
+                    <div class = "individualMode">
+                        <div class = "typingModes" onclick="changeWords(10)">10</div>
+                        <div class = "typingModes" onclick="changeWords(25)">25</div>
+                        <div class = "typingModes" onclick="changeWords(50)">50</div>
+                        <div class = "typingModes" onclick="changeWords(100)">100</div>
+                    </div>
+                </div>
+                <div class = "modeStack"> 
+                    <div class="modeHeader">difficulty</div>
+                    <div class = "individualMode">
+                        <div class = "typingModes" onclick="changeMode('easy')">easy</div>
+                        <div class = "typingModes" onclick="changeMode('hard')">hard</div>
+                    </div>
                 </div>
             </div>
-            <div class = "modeStack"> 
-                <div class="modeHeader">words</div>
-                <div class = "individualMode">
-                    <div class = "typingModes" onclick="changeWords(10)">10</div>
-                    <div class = "typingModes" onclick="changeWords(25)">25</div>
-                    <div class = "typingModes" onclick="changeWords(50)">50</div>
-                    <div class = "typingModes" onclick="changeWords(100)">100</div>
-                </div>
+            <div id="typingArea">
+                <div id="testText">
+                <div id="wordsWrapper"></div>
             </div>
-            <div class = "modeStack"> 
-                <div class="modeHeader">difficulty</div>
-                <div class = "individualMode">
-                    <div class = "typingModes" onclick="changeMode('easy')">easy</div>
-                    <div class = "typingModes" onclick="changeMode('hard')">hard</div>
+                <div id="testRow">
+                    <textarea class = "row" id="textInput" spellcheck="false" maxlength = "16" autofocus></textarea>
+                    <div class = "row" id="wpmDisplay">0 WPM</div>
+                    <div class = "row" id="time"></div>
+                    <img class = "row" id="restartTest" onclick="restart()"src="images/refresh-button.png">
                 </div>
             </div>
         </div>
-        <div id="testText"></div>
-        <div id="typingArea">
-            <div id="testText">
-            <div id="wordsWrapper"></div>
-            </div>
-            <div id="testRow">
-                <textarea class = "row" id="textInput" spellcheck="false" maxlength = "16" autofocus></textarea>
-                <div class = "row" id="wpmDisplay">0 WPM</div>
-                <div class = "row" id="time"></div>
-                <img class = "row" id="restartTest" onclick="restart()"src="images/refresh-button.png">
-            </div>
         </div>
     </body>
 </html>
