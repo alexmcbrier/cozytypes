@@ -21,6 +21,18 @@ if (isset($_GET["finish"]))
 }
 ?>
 
+<script>
+//function to update the 
+function moveCursor()
+{
+  const cursor = document.getElementById('cursor') 
+  const placement = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
+  const rect = placement.getBoundingClientRect();
+  cursor.style.left = rect.x + "px";
+  cursor.style.top = rect.y + "px";
+  cursor.style.width = rect.width + "px";
+}
+</script>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -49,7 +61,7 @@ if (isset($_GET["finish"]))
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     </head>
-    <body>
+    <body onresize="moveCursor()">
             <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JMV592"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
