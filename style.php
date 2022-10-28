@@ -657,7 +657,7 @@ button
 }
 #loginContainer
 {
-    top:2rem;
+    top:0rem;
     width: 60rem; /* width of the container menu */
     /* background-color: #0a0c29; I personally think this is tacky */
     border-radius: 1.5rem;
