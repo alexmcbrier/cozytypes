@@ -73,15 +73,19 @@
           </div>
             <div id = "themesContainer" class ="rowContainer">
             <h1 id="preferenceHeader">theme</h1>
-                <a class = "themesRow" id = "theme-olivia" onclick="setCookie('theme', 'olivia', 30)">olivia</a>
+                <a class = "themesRow" id = "theme-light" onclick="setCookie('theme', 'light', 30)">light</a>
+                <a class = "themesRow" id = "theme-dark" onclick="setCookie('theme', 'dark', 30)">dark</a>
                 <a class = "themesRow" id = "theme-dracula" onclick="setCookie('theme', 'dracula', 30)">dracula</a>
-                <a class = "themesRow" id = "theme-8008" onclick="setCookie('theme', '8008', 30)">8008</a>
+                <a class = "themesRow" id = "theme-olivia" onclick="setCookie('theme', 'olivia', 30)">olivia</a>\
                 <a class = "themesRow" id = "theme-mizu" onclick="setCookie('theme', 'mizu', 30)">mizu</a>
                 <a class = "themesRow" id = "theme-striker" onclick="setCookie('theme', 'striker', 30)">striker</a>
                 <a class = "themesRow" id = "theme-blueberry" onclick="setCookie('theme', 'blueberry', 30)">blueberry</a>
                 <a class = "themesRow" id = "theme-creamsicle" onclick="setCookie('theme', 'creamsicle', 30)">creamsicle</a>
                 <a class = "themesRow" id = "theme-botanical" onclick="setCookie('theme', 'botanical', 30)">botanical</a>
                 <a class = "themesRow" id = "theme-luna" onclick="setCookie('theme', 'luna', 30)">luna</a>
+                <a class = "themesRow" id = "theme-sakura" onclick="setCookie('theme', 'sakura', 30)">sakura</a>
+                <a class = "themesRow" id = "theme-8008" onclick="setCookie('theme', '8008', 30)">8008</a>
+                <a class = "themesRow" id = "theme-9009" onclick="setCookie('theme', '9009', 30)">9009</a>
             </div>
         </form>
     </body>
