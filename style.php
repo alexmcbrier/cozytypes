@@ -196,11 +196,11 @@ nav a:hover{
     background-color: var(--row);
     /* background-color:#191919;                      Background color */
     font-size: 1rem;
-    border-radius: 1.5rem;
+    border-radius: 1rem;
     display:inline-block;
-    padding: 2rem 2.5rem;
+    padding: 1.25rem 1.35rem;
     margin-left: .5rem;
-    transition: 1s;
+    transition: .3s;
     line-height: 10px;
     vertical-align: top;
     text-decoration: none;
@@ -360,7 +360,7 @@ nav a:hover{
 }
 #preferencesArea
 {
-    margin-top:10rem;
+    margin-top:2rem;
     width: 90%;
     align-items: center;
 }
@@ -657,7 +657,7 @@ button
 }
 #loginContainer
 {
-    top:0rem;
+    top:4rem;
     width: 60rem; /* width of the container menu */
     /* background-color: #0a0c29; I personally think this is tacky */
     border-radius: 1.5rem;
@@ -693,9 +693,9 @@ button
 }
 #preferenceHeader{
     color: rgb(255, 255, 255);
-    font-size: 3rem;
-    margin-left: 2rem;
-    margin-top: 5rem;
+    font-size: 2rem;
+    margin-left: 1rem;
+    margin-top: 3rem;
     user-select: none;
 }
 .preferencesRow:hover
@@ -1054,26 +1054,6 @@ animation: statsMoveOut 1.5s forwards ease;
 {
     color: #F67599;
     background-color: #221C35;    
-}
-#theme-light
-{
-    color: #444444;
-    background-color: #eeeeee;    
-}
-#theme-dark
-{
-    color: #eeeeee;
-    background-color: #010203;    
-}
-#theme-sakura
-{
-    color: #A30000;
-    background-color: #FEC8CD;    
-}
-#theme-9009
-{
-    color: #99947F;
-    background-color: #EEEBE2;    
 }
 
 <style>
