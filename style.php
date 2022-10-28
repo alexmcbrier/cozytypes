@@ -63,7 +63,7 @@ if ($caret == "none")
 }
 else if ($caret == "underline")
 {
-    $caretTop = $fontSize * 1.25;
+    $caretTop = $fontSize * 1.45;
     $caretHeight = $fontSize / 3;
 }
 else if ($caret == "highlight")
@@ -85,7 +85,7 @@ include "themes/".$theme.".css"; //theme added depends on the name of the one in
 }
 /*scrollbar*/
 ::-webkit-scrollbar {
-  width: 2em;
+  width: 1.5em;
   height: 1em;
   background: linear-gradient(to top, rgba(255,0,0,0), 93%, var(--backgroundGradient));
 }
@@ -93,7 +93,7 @@ include "themes/".$theme.".css"; //theme added depends on the name of the one in
 ::-webkit-scrollbar-track {
   background: var(--testText);
   border-radius: 100vw;
-  margin-block: 0.5em;
+  margin-block: .5em;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -161,7 +161,7 @@ nav{
   background: linear-gradient(to top, rgba(255,0,0,0), 70%, var(--backgroundGradient));
   width: 100%;
   text-align: center;
-  height: 4em;
+  height: 3em;
   user-select: none;
   padding-top: 2.5rem;
 }
@@ -190,6 +190,7 @@ nav a:hover{
     margin-top: 1.5rem;
     line-height: 10px;
     vertical-align: top;
+    min-height: 1rem;
 }
 .preferencesRow {
     color: white;
@@ -236,6 +237,7 @@ nav a:hover{
     vertical-align: top;
     text-decoration: none;
     margin: 1rem;
+    align-content: center;
 }
 
 #textInput {
@@ -245,7 +247,7 @@ nav a:hover{
   overflow: hidden;
   font-family: masterFont;
   resize: none; /* Neccesary so user cannot resize */
-  width: 40%;
+  width: 30%;
   background-color: var(--background);
   height: 1rem;
   line-height: 1rem;
@@ -277,8 +279,7 @@ nav a:hover{
 }
 #testRow
 {
-    display: flex; /* equal height of the children */
-    width: 60%;
+  width: 60%;
   margin: 0 auto;
   justify-content: center;
   margin-top: 1rem;
@@ -350,7 +351,7 @@ nav a:hover{
     border-radius: 1.5rem;
     position: absolute;
     margin-top: 1.75rem;
-    transition: all .25s;
+    transition: all .15s;
     height:  <?php echo strval($caretHeight) . "rem"; ?>;
     margin-top:  <?php echo strval($caretTop) . "rem"; ?>;
 }
@@ -995,7 +996,7 @@ animation: statsMoveOut 1.5s forwards ease;
     transition: all .5s ease;
     margin-top: 1rem;
     text-align: center;
-
+    min-width: 7rem;
 }
 .themesRow:hover, .preferencesRow:hover
 {
