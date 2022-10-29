@@ -73,12 +73,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     </head>
     <body> 
+    <div id ="mainContent">
     <nav>
             <li>CozyTypes</li>
             <li><a id = "play" href="index.php">play</a></li>
             <li><a href="login.php">profile</a></li>
             <li><a href="preferences.php">preferences</a></li>
     </nav>
+    <div id="middle">
     <form id="loginContainer" method = "post">
         <div id = "topContainer">
             <h1 id = "loginHeader">Hello there, welcome back</h1>
@@ -96,5 +98,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <button id = "loginButton" type="submit" value="submit">login</button>
         <div id = "accountCreate">Not registered yet? <a href="signup.php">Create an Account</a></div>
     </form>  
+    </div>
+    </div>
     </body>
 </html>
