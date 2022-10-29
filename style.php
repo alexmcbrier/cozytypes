@@ -251,6 +251,7 @@ nav a:hover{
   background-color: var(--background);
   height: 1rem;
   line-height: 1rem;
+  padding-bottom: 3rem;
 }
 #textInput:focus { /*in focus */
     background-color: var(--row);
