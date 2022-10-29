@@ -77,13 +77,13 @@
                 <a class = "preferencesRow" onclick="setCookie('blur', 'off', 30)">off</a>
             </div>
           </div>
-            <div id = "themesContainer" class ="rowContainer">
+            <div class ="rowContainer">
             <h1 id="preferenceHeader">theme</h1>
                 <a class = "themesRow" id = "theme-light" onclick="setCookie('theme', 'light', 30)">light</a>
                 <a class = "themesRow" id = "theme-dark" onclick="setCookie('theme', 'dark', 30)">dark</a>
                 <a class = "themesRow" id = "theme-olivia" onclick="setCookie('theme', 'olivia', 30)">olivia</a>
                 <a class = "themesRow" id = "theme-dracula" onclick="setCookie('theme', 'dracula', 30)">dracula</a>
-                <a class = "themesRow" id = "theme-olivia" onclick="setCookie('theme', 'olivia', 30)">olivia</a>\
+                <a class = "themesRow" id = "theme-olivia" onclick="setCookie('theme', 'olivia', 30)">olivia</a>
                 <a class = "themesRow" id = "theme-8008" onclick="setCookie('theme', '8008', 30)">8008</a>
                 <a class = "themesRow" id = "theme-mizu" onclick="setCookie('theme', 'mizu', 30)">mizu</a>
                 <a class = "themesRow" id = "theme-striker" onclick="setCookie('theme', 'striker', 30)">striker</a>
