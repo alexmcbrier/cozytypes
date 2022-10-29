@@ -1,4 +1,4 @@
 ![Screenshot](images/keyboard.ico)
 # cozytypes
- A website designed to help and teach people to type
+ Cozytypes is a simple and asthetic typing website for keyboard enthusiasts. Users can modify themes, fonts, and difficulty. 
 [Link to Website](https://www.cozytypes.com)
