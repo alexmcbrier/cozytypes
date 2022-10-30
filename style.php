@@ -203,6 +203,17 @@ nav a:hover{
     margin-top: 1rem;
     text-align: center;
 }
+#footer
+{
+  width: 100%;
+  text-align: center;
+  height: 3em;
+  user-select: none;
+  padding-top: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .box
 {
     z-index: 0;
