@@ -75,7 +75,7 @@ function move()
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     </head>
-    <body onresize="cursorMove()" style="overflow: hidden;  width: 5000px;">
+    <body onresize="cursorMove()" style="overflow: hidden;  width: 100%;">
             <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JMV592"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
