@@ -211,7 +211,6 @@ nav a:hover{
   user-select: none;
   padding-top: 2.5rem;
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 .box
