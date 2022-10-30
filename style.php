@@ -117,17 +117,10 @@ include "themes/".$theme.".css"; //theme added depends on the name of the one in
 
 body {
     background-color: var(--background);
-    margin: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
     font-family: masterFont;                     /* Master font type for page */
-    line-height: 1.6rem;
-    overflow-x: hidden;
-    overflow-y: hidden;  
-    overflow:auto; /*able to scroll */
+    width: 100%;
+    margin: 0;
+    transition: all .4s ease-in-out 0s;
 }
 li{
     font-size: 3rem;
@@ -146,16 +139,14 @@ li a{
 }
 #mainContent
 {
-    width: 100%;
+    transition: all .5s ease-in-out 0s;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    display: grid;
-    gap: 2em;
-    grid-auto-flow: row;
-    grid-template rows: auto 1fr auto;
-    min height: 100hv;
-    padding 2rem;
-    transition: padding-top .125s;
-    z-index: 999;
+    justify-content: space-between;
+    line-height: 1.6rem;
 }
 nav{
   background: linear-gradient(to top, rgba(255,0,0,0), 70%, var(--backgroundGradient));
@@ -164,6 +155,9 @@ nav{
   height: 3em;
   user-select: none;
   padding-top: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 nav a{
     transition: all .5s ease;
@@ -239,6 +233,12 @@ nav a:hover{
     margin: 1rem;
     align-content: center;
 }
+#bottom
+{
+    width: 100%;
+    height: 5rem;
+    margin-bottom: 1rem;
+}
 
 #textInput {
   font-size: 2rem;
@@ -284,6 +284,7 @@ nav a:hover{
   margin: 0 auto;
   justify-content: center;
   margin-top: 1rem;
+  user-select: none;
 }
 #testText{
   user-select: none;
@@ -362,8 +363,7 @@ nav a:hover{
 }
 #preferencesArea
 {
-    margin-top:2rem;
-    width: 90%;
+    padding: 5rem;
     align-items: center;
 }
 .correct {
@@ -394,11 +394,8 @@ nav a:hover{
 {
     align-items: center;
     font-size: 2.3rem;
-    grid-auto-flow: column;
-    grid-template-areas: "logo menu";
     line-height: 2.3rem;
-    padding: 0 5px;
-    z-index: 2;
+    width: 100%;
 }
 #topContainer input{
     display: flex;

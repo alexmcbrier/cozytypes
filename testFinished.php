@@ -51,6 +51,7 @@ if (isset($_SESSION["user_id"])) {
         <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     </head>
     <body>
+        <div id="mainContent">
     <nav>
             <li>CozyTypes</li>
             <li><a id = "play" href="index.php">play</a></li>
@@ -59,9 +60,10 @@ if (isset($_SESSION["user_id"])) {
             <li><a href="learn.php">learn</a></li>
     </nav>
         <div id="displayStats">
-                <div class = "statsRow" ><?= $wpm ?> wpm</div>
-                <div class = "statsRow" ><?= $accuracy ?>% accuracy</div>
-                <div class = "statsRow" ><?= $testTime ?> s</div>
+            <div class = "statsRow" ><?= $wpm ?> wpm</div>
+            <div class = "statsRow" ><?= $accuracy ?>% accuracy</div>
+            <div class = "statsRow" ><?= $testTime ?> s</div>
+        </div>
         </div>
     </body>
 </html>

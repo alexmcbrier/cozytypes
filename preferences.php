@@ -27,12 +27,13 @@
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Courier+Prime&family=IBM+Plex+Sans&family=Lexend+Deca&family=Lora&family=Merriweather&family=Nunito&family=PT+Serif&family=Raleway&family=Source+Code+Pro&family=Titillium+Web&display=swap" rel="stylesheet">
     </head>
     <body>
-    <nav>
-            <li>CozyTypes</li>
-            <li><a id = "play" href="index.php">play</a></li>
-            <li><a href="login.php">profile</a></li>
-            <li><a href="preferences.php">preferences</a></li>
-    </nav>
+            <nav>
+                    <img width="45" height="45" display = "block" src="images/night.png">
+                    <li style="padding-left: .5rem; padding-right: 2rem">CozyTypes</li>
+                    <li ><a id = "play" href="index.php"><img width="45" height="45" display = "block" src="images/keyboard.png"></a></li>
+                    <li><a href="login.php"><img width="35" height="35" display = "block" src="images/person.png"></a></li>
+                    <li><a href="preferences.php"><img width="35" height="35" display = "block" src="images/setting.png"></a></li>
+            </nav>
         <form id="preferencesArea" method="POST" action="preferences.php">
           <div class = "horizontalAlign">
             <div class ="rowContainer" style="width: 30%">
@@ -43,7 +44,7 @@
               <a class = "preferencesRow" onclick="setCookie('fontSize', 4, 30)">4</a>
               <a class = "preferencesRow" onclick="setCookie('fontSize', 5, 30)">5</a>
             </div>
-            <div class ="rowContainer" style="width: 60%">
+            <div class ="rowContainer" style="width: 70%">
               <h1 class = "notSignedIn" id="preferenceHeader">font</h1>
                 <a class = "preferencesRow" style = "font-family: Arial;" onclick="setCookie('fontFamily', 'arial', 30)">arial</a>
                 <a class = "preferencesRow" style = "font-family: 'IBM Plex Sans', sans-serif;" onclick="setCookie('fontFamily', 'ibmplexsans', 30)">IBM Plex Sans</a>
@@ -77,7 +78,7 @@
                 <a class = "preferencesRow" onclick="setCookie('blur', 'off', 30)">off</a>
             </div>
           </div>
-            <div class ="rowContainer">
+            <div id = "themesContainer" class ="rowContainer">
             <h1 id="preferenceHeader">theme</h1>
                 <a class = "themesRow" id = "theme-light" onclick="setCookie('theme', 'light', 30)">light</a>
                 <a class = "themesRow" id = "theme-dark" onclick="setCookie('theme', 'dark', 30)">dark</a>

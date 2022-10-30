@@ -112,12 +112,13 @@ else //if not logged in but somehow managed to get to this page (Neccesary)
         <div id="sidebar">
             <a onclick="openSidebar()" ><img id="sidebarImage" width="60" height="60" src="images/follow.png"></a>
         </div>
-    <nav>
-            <li>CozyTypes</li>
-            <li><a id = "play" href="index.php">play</a></li>
-            <li><a href="login.php">profile</a></li>
-            <li><a href="preferences.php">preferences</a></li>
-    </nav>
+        <nav>
+                    <img width="45" height="45" display = "block" src="images/night.png">
+                    <li style="padding-left: .5rem; padding-right: 2rem">CozyTypes</li>
+                    <li ><a id = "play" href="index.php"><img width="45" height="45" display = "block" src="images/keyboard.png"></a></li>
+                    <li><a href="login.php"><img width="35" height="35" display = "block" src="images/person.png"></a></li>
+                    <li><a href="preferences.php"><img width="35" height="35" display = "block" src="images/setting.png"></a></li>
+            </nav>
         <div id = profileArea>
             <div id="statsArea">
                 <div id="statsRow1">

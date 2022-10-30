@@ -23,7 +23,19 @@ if (isset($_GET["finish"]))
 
 <script>
 //function to update the 
-function moveCursor()
+function cursorMove()
+{   const cursor = document.getElementById('cursor') 
+    cursor.style.opacity = 0;
+    const placement = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
+    const rect = placement.getBoundingClientRect();
+    cursor.style.left = rect.x + "px";
+    cursor.style.top = rect.y + "px";
+
+
+    setTimeout(() => {  move(); }, 500);
+
+}
+function move()
 {
   const cursor = document.getElementById('cursor') 
   const placement = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
@@ -31,7 +43,9 @@ function moveCursor()
   cursor.style.left = rect.x + "px";
   cursor.style.top = rect.y + "px";
   cursor.style.width = rect.width + "px";
+  cursor.style.opacity = .25;
 }
+
 </script>
 <!DOCTYPE html>
 <html lang="en">
@@ -61,28 +75,29 @@ function moveCursor()
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     </head>
-    <body onresize="moveCursor()">
+    <body onresize="cursorMove()">
             <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JMV592"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+
     <div id ="mainContent">
-        <div id = "top">
+    <div id = "cursor"></div>
             <nav>
-                    <li>CozyTypes</li>
-                    <li><a id = "play" href="index.php">play</a></li>
-                    <li><a href="login.php">profile</a></li>
-                    <li><a href="preferences.php">preferences</a></li>
+                    <img width="45" height="45" display = "block" src="images/night.png">
+                    <li style="padding-left: .5rem; padding-right: 2rem">CozyTypes</li>
+                    <li ><a id = "play" href="index.php"><img width="45" height="45" display = "block" src="images/keyboard.png"></a></li>
+                    <li><a href="login.php"><img width="35" height="35" display = "block" src="images/person.png"></a></li>
+                    <li><a href="preferences.php"><img width="35" height="35" display = "block" src="images/setting.png"></a></li>
             </nav>
-        </div>
-        <div id = "cursor"></div>
+
         <div id = "middle">
             <div id = "typingmode">
                 <div class = "modeStack">
                     <div class="modeHeader">time</div>
                     <div class = "individualMode">
                         <a class = "typingModes" onclick="changeTime(15)">15</a>
-                        <div class = "typingModes" onclick="changeTime(30)">30</div>
+                        <div class = "typingModes" onclick="changeTime(50)">50</div>
                         <div class = "typingModes" onclick="changeTime(60)">60</div>
                         <div class = "typingModes" onclick="changeTime(120)">120</div>
                     </div>
@@ -115,6 +130,11 @@ function moveCursor()
                     <img class = "row" id="restartTest" onclick="restart()"src="images/refresh-button.png">
                 </div>
             </div>
+        </div>
+        <div id = "bottom">
+            <nav>
+                    <li><a style="font-size:1.25rem;" href="https://github.com/alexmcbrier/cozytypes"><&sol;> github </a></li>
+            </nav>
         </div>
         </div>
     </body>

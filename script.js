@@ -208,7 +208,9 @@ function keystroke()
 function restart() {
   displayTimer.innerText = getTime(getCookie("time"))
   newQuote()
-  timerVar = "not running"
+  timerVar = "running"
+  moveCursor();
+  startTimer();
 }
 function randomQuote() {
   displayText.innerText = ''// removing previous sentence if applicable
@@ -266,7 +268,6 @@ function startTimer() {
         }
       }, 1000)
       timerVar = "running"
-
     }
 }
 function getAccuracy()

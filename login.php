@@ -74,11 +74,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     </head>
     <body> 
     <nav>
-            <li>CozyTypes</li>
-            <li><a id = "play" href="index.php">play</a></li>
-            <li><a href="login.php">profile</a></li>
-            <li><a href="preferences.php">preferences</a></li>
-    </nav>
+                    <img width="45" height="45" display = "block" src="images/night.png">
+                    <li style="padding-left: .5rem; padding-right: 2rem">CozyTypes</li>
+                    <li ><a id = "play" href="index.php"><img width="45" height="45" display = "block" src="images/keyboard.png"></a></li>
+                    <li><a href="login.php"><img width="35" height="35" display = "block" src="images/person.png"></a></li>
+                    <li><a href="preferences.php"><img width="35" height="35" display = "block" src="images/setting.png"></a></li>
+            </nav>
     <form id="loginContainer" method = "post">
         <div id = "topContainer">
             <h1 id = "loginHeader">Hello there, welcome back</h1>
