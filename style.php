@@ -120,7 +120,6 @@ body {
     font-family: masterFont;                     /* Master font type for page */
     width: 100%;
     margin: 0;
-    transition: all .4s ease-in-out 0s;
 }
 li{
     font-size: 3rem;
