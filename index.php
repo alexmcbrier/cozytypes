@@ -132,7 +132,7 @@ function move()
             </div>
         </div>
         <div id = "bottom">
-             <li><a style="font-size:1.25rem;" href="https://github.com/alexmcbrier/cozytypes"><&sol;> github </a></li>
+             <li id="footer"><a style="font-size:1.25rem;" href="https://github.com/alexmcbrier/cozytypes"><&sol;> github </a></li>
         </div>
         </div>
     </body>
