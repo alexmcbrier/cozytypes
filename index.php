@@ -84,7 +84,7 @@ function move()
     <div id ="mainContent">
     <div id = "cursor"></div>
             <nav>
-                    <img width="45" height="45" display = "block" src="images/night.png">
+                    <img width="45" height="45" display = "block" src="images/panda.png">
                     <li style="padding-left: .5rem; padding-right: 2rem">CozyTypes</li>
                     <li ><a id = "play" href="index.php"><img width="45" height="45" display = "block" src="images/keyboard.png"></a></li>
                     <li><a href="login.php"><img width="35" height="35" display = "block" src="images/person.png"></a></li>
