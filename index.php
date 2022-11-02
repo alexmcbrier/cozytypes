@@ -53,10 +53,10 @@ if(isset($_COOKIE["email"]))
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JMV592"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-
+    <div id = "cursor"></div>
     <div id ="mainContent">
     <?php if (!isset($_GET["finish"])): ?>  <!-- Display if test not complete -->
-    <div id = "cursor"></div>
+
             <nav>
                     <img width="55" height="55" display = "block" src="images/panda2.png">
                     <li style="padding-left: .5rem; padding-right: 2rem;">CozyTypes</li>

@@ -339,17 +339,10 @@ function setCursorVisibility()
 {
   document.getElementById('cursor').style.visibility = 'visible';
 }
-newQuote();
-moveCursorWithY();
-setBlur();
+
 function zoomwait()
 {
-  const cursor = document.getElementById('cursor') 
-  const placement = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
-  const rect = placement.getBoundingClientRect();
-  cursor.style.left = rect.x + "px";
-  cursor.style.top = rect.y + "px";
-  cursor.style.width = rect.width + "px";
+  moveCursorWithY();
   document.getElementById('cursor').style.visibility = 'hidden';
   try {
     document.getElementsByClassName('box')[0].remove(); //if has blur box
@@ -360,3 +353,6 @@ function zoomwait()
 }
 
 document.body.onresize = function() {zoomwait()};
+newQuote();
+moveCursorWithY();
+setBlur();

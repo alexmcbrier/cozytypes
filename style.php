@@ -181,7 +181,6 @@ li a{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-
 }
 nav{
   background: linear-gradient(to top, rgba(255,0,0,0), 70%, var(--backgroundGradient));
