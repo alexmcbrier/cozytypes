@@ -27,13 +27,13 @@
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Courier+Prime&family=IBM+Plex+Sans&family=Lexend+Deca&family=Lora&family=Merriweather&family=Nunito&family=PT+Serif&family=Raleway&family=Source+Code+Pro&family=Titillium+Web&display=swap" rel="stylesheet">
     </head>
     <body>
-            <nav>
-                    <img width="45" height="45" display = "block" src="images/night.png">
-                    <li style="padding-left: .5rem; padding-right: 2rem">CozyTypes</li>
-                    <li ><a id = "play" href="index.php"><img width="45" height="45" display = "block" src="images/keyboard.png"></a></li>
-                    <li><a href="login.php"><img width="35" height="35" display = "block" src="images/person.png"></a></li>
-                    <li><a href="preferences.php"><img width="35" height="35" display = "block" src="images/setting.png"></a></li>
-            </nav>
+      <nav>
+            <img width="45" height="45" display = "block" src="images/panda2.png">
+            <li style="padding-left: .5rem; padding-right: 2rem">CozyTypes</li>
+            <li ><a id = "play" href="index.php"><img width="45" height="45" display = "block" src="images/keyboard.png"></a></li>
+            <li><a href="login.php"><img width="35" height="35" display = "block" src="images/person.png"></a></li>
+            <li><a href="preferences.php"><img width="35" height="35" display = "block" src="images/setting.png"></a></li>
+        </nav>
         <form id="preferencesArea" method="POST" action="preferences.php">
           <div class = "horizontalAlign">
             <div class ="rowContainer" style="width: 30%">
@@ -50,11 +50,11 @@
                 <a class = "preferencesRow" style = "font-family: 'IBM Plex Sans', sans-serif;" onclick="setCookie('fontFamily', 'ibmplexsans', 30)">IBM Plex Sans</a>
                 <a class = "preferencesRow" style = "font-family: 'Comfortaa', cursive;" onclick="setCookie('fontFamily', 'comfortaa', 30)">comfortaa</a>
                 <a class = "preferencesRow" style = "font-family: 'Courier Prime', monospace;" onclick="setCookie('fontFamily', 'courier', 30)">courier</a>
-                <a class = "preferencesRow" style = "font-family: 'Nunito', sans-serif;" onclick="setCookie('fontFamily', 'nutino', 30)">Nutino</a>
+                <a class = "preferencesRow" style = "font-family: 'Nunito', sans-serif;" onclick="setCookie('fontFamily', 'nutino', 30)">Nunito</a>
                 <a class = "preferencesRow" style = "font-family: 'Source Code Pro', monospace;" onclick="setCookie('fontFamily', 'sourcecodepro', 30)">source code pro</a>
                 <a class = "preferencesRow" style = "font-family: 'Raleway', sans-serif;" onclick="setCookie('fontFamily', 'raleway', 30)">raleway</a>
                 <a class = "preferencesRow" style = "font-family: 'Titillium Web', sans-serif;" onclick="setCookie('fontFamily', 'titilliumweb', 30)">titillium Web</a>
-                <a class = "preferencesRow" style = "font-family: 'Lora', serif;" onclick="setCookie('fontFamily', 'lora', 30)">lori</a>
+                <a class = "preferencesRow" style = "font-family: 'Lora', serif;" onclick="setCookie('fontFamily', 'lora', 30)">lora</a>
                 <a class = "preferencesRow" style = "font-family: 'Merriweather', serif;" onclick="setCookie('fontFamily', 'merrieweather', 30)">merriweather</a>
             </div>
           </div>

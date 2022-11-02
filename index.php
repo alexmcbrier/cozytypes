@@ -12,41 +12,7 @@ if(isset($_COOKIE["email"]))
     $_SESSION["user_id"] = $user["id"];
 }
 //executes when typing test has concluded
-if (isset($_GET["finish"]))
-{
-    $_SESSION['wpm'] = $_GET["wpm"];
-    $_SESSION['accuracy'] = $_GET["accuracy"];
-    $_SESSION['testTime'] = $_GET["testTime"];
-    header("Location: testFinished.php");
-}
 ?>
-
-<script>
-//function to update the 
-function cursorMove()
-{   const cursor = document.getElementById('cursor') 
-    cursor.style.opacity = 0;
-    const placement = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
-    const rect = placement.getBoundingClientRect();
-    cursor.style.left = rect.x + "px";
-    cursor.style.top = rect.y + "px";
-
-
-    setTimeout(() => {  move(); }, 500);
-
-}
-function move()
-{
-  const cursor = document.getElementById('cursor') 
-  const placement = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
-  const rect = placement.getBoundingClientRect();
-  cursor.style.left = rect.x + "px";
-  cursor.style.top = rect.y + "px";
-  cursor.style.width = rect.width + "px";
-  cursor.style.opacity = .25;
-}
-
-</script>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -62,7 +28,6 @@ function move()
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JMV592"
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- End Google Tag Manager (noscript) -->
-        
         <link rel="shortcut icon" type="image/x-icon" href="images\keyboard.ico" />
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -74,23 +39,31 @@ function move()
         <script type = "text/javascript" src="script.js " defer ></script>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+        <!-- need to get rid of page fragment in url with page finished -->
+        <script type="text/javascript">
+            var uri = window.location.toString();
+            if (uri.indexOf("?") > 0) {
+                var clean_uri = uri.substring(0, uri.indexOf("?"));
+                window.history.replaceState({}, document.title, clean_uri);
+            }
+        </script>
     </head>
-    <body onresize="cursorMove()" style="overflow: hidden;  width: 100%;">
+    <body class="main-body">
             <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JMV592"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
     <div id ="mainContent">
+    <?php if (!isset($_GET["finish"])): ?>  <!-- Display if test not complete -->
     <div id = "cursor"></div>
             <nav>
-                    <img width="65" height="65" display = "block" src="images/panda2.png">
+                    <img width="55" height="55" display = "block" src="images/panda2.png">
                     <li style="padding-left: .5rem; padding-right: 2rem">CozyTypes</li>
                     <li ><a id = "play" href="index.php"><img width="45" height="45" display = "block" src="images/keyboard.png"></a></li>
                     <li><a href="login.php"><img width="35" height="35" display = "block" src="images/person.png"></a></li>
                     <li><a href="preferences.php"><img width="35" height="35" display = "block" src="images/setting.png"></a></li>
             </nav>
-
         <div id = "middle">
             <div id = "typingmode">
                 <div class = "modeStack">
@@ -135,5 +108,25 @@ function move()
              <li id="footer"><a style="font-size:1.25rem;" href="https://github.com/alexmcbrier/cozytypes"><&sol;> github </a></li>
         </div>
         </div>
+        <?php endif; ?>
+        <?php if (isset($_GET["finish"])): ?> <!-- Display if test IS complete -->
+            <div id ="mainContent">
+                <nav>
+                        <img width="55" height="55" display = "block" src="images/panda2.png">
+                        <li style="padding-left: .5rem; padding-right: 2rem">CozyTypes</li>
+                        <li ><a id = "play" href="index.php"><img width="45" height="45" display = "block" src="images/keyboard.png"></a></li>
+                        <li><a href="login.php"><img width="35" height="35" display = "block" src="images/person.png"></a></li>
+                        <li><a href="preferences.php"><img width="35" height="35" display = "block" src="images/setting.png"></a></li>
+                </nav>
+                <div id = "middle">
+                    <div id="displayStats">
+                        <div class = "statsRow" ><?= $_GET["wpm"] ?> wpm</div>
+                        <div class = "statsRow" ><?= $_GET["accuracy"] ?>% accuracy</div>
+                        <div class = "statsRow" ><?= $_GET["testTime"] ?> s</div>
+                    </div>
+                </div>
+                <div id = "bottom"></div>
+            </div>
+        <?php endif; ?>
     </body>
 </html>

@@ -6,7 +6,7 @@ if (isset($_COOKIE["theme"])) {
     $theme = $_COOKIE["theme"];
 }
 else{
-    $theme = "dracula";
+    $theme = "dark";
 }
 if (isset($_COOKIE["fontFamily"])) {
     $fontFamily = $_COOKIE["fontFamily"];
@@ -74,14 +74,49 @@ else if ($caret == "highlight")
 include "themes/".$theme.".css"; //theme added depends on the name of the one in the database
 ?>
 <style>
-
-*{
-    font-family: masterFont;
-    box-sizing: border-box;
+@font-face {
+    font-family: "comfortaa";
+    src: url("./Fonts/comfortaa.ttf");
+    }
+@font-face {
+    font-family: 'lexendDeca';  
+    src: url('./Fonts/LexendDeca.ttf');
 }
 @font-face {
-    font-family: masterFont;
-    src: url('./Fonts/LexendDeca.ttf');
+    font-family: 'raleway';  
+    src: url('./Fonts/raleway.ttf');
+}
+@font-face {
+    font-family: 'sourceCodePro';  
+    src: url('./Fonts/sourceCodePro.ttf');
+}
+@font-face {
+    font-family: 'courier';  
+    src: url('./Fonts/courier.ttf');
+}
+@font-face {
+    font-family: 'ibmPlexSans';  
+    src: url('./Fonts/ibmPlexSans.ttf');
+}
+@font-face {
+    font-family: 'lora';  
+    src: url('./Fonts/lora.ttf');
+}
+@font-face {
+    font-family: 'merriweather';  
+    src: url('./Fonts/merriweather.ttf');
+}
+@font-face {
+    font-family: 'nunito';  
+    src: url('./Fonts/nunito.ttf');
+}
+@font-face {
+    font-family: 'titilliumWeb';  
+    src: url('./Fonts/ibmPlexSans.ttf');
+}
+*{
+    
+    font-family: "lexendDeca", serif;
 }
 /*scrollbar*/
 ::-webkit-scrollbar {
@@ -113,16 +148,17 @@ include "themes/".$theme.".css"; //theme added depends on the name of the one in
   border: 0.5em var(--testText);
   padding: 1em;
 }
-
-
 body {
     background-color: var(--background);
-    font-family: masterFont;                     /* Master font type for page */
     width: 100%;
     margin: 0;
 }
+.main-body
+{
+    overflow: hidden;  
+}
 li{
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: bold;
     color: white;
     user-select: none;
@@ -260,7 +296,6 @@ nav a:hover{
   background-color: var(--background);
   height: 1rem;
   line-height: 1rem;
-  padding-bottom: 3rem;
 }
 #textInput:focus { /*in focus */
     background-color: var(--row);
@@ -308,6 +343,7 @@ nav a:hover{
   text-align: left;
   overflow: hidden;
   line-height: 3.5rem;
+
 }
 #typingmode
 {
@@ -317,6 +353,7 @@ nav a:hover{
   border-radius: 1.5rem;;
   display: flex;
   width: 60%;
+
   margin: 0 auto;
   justify-content: left; /* can change to center */
   padding: 1rem 0rem;
@@ -406,17 +443,17 @@ nav a:hover{
     line-height: 2.3rem;
     width: 100%;
 }
-#topContainer input{
+input{
     display: flex;
   flex-direction: row;
-    padding: 1rem 1rem 1rem 1rem;
+    padding: 1rem 0;
     font-family: masterFont;
     margin: 0 auto;
-    margin-bottom: 1rem;
-    width: 40%;
+    margin-bottom: 1.5rem;
+    width: 100%;
     border: none;
     background: none;
-    border-bottom: 2px solid #D1D1D4;
+    border-bottom: 1px solid #D1D1D4;
     outline: none;
     color: white;
 }
@@ -665,13 +702,7 @@ button
 }
 #loginContainer
 {
-    top:4rem;
-    width: 60rem; /* width of the container menu */
-    /* background-color: #0a0c29; I personally think this is tacky */
-    border-radius: 1.5rem;
-    margin-top: 10rem;
-    z-index: 1; /* make first in order*/
-    position:relative;
+    height: 100%;
 }
 #logout
 {
@@ -705,6 +736,7 @@ button
     margin-left: 1rem;
     margin-top: 2rem;
     user-select: none;
+    line-height: 2rem;
 }
 .preferencesRow:hover
 {
@@ -712,16 +744,8 @@ button
 }
 #loginHeader
 {
-    color: rgb(255, 255, 255);
-    font-size: 3rem;
-    user-select: none;
-    margin-bottom: 5rem;
-    width: 40%;
-    line-height: 3rem;
-    position: absolute;
-    bottom: 20rem;
-    left: 16rem;
-    animation: fadeIn 4s, slide 1.5s forwards ease;
+    color: white;
+
 }
 @keyframes slide {
     from {
@@ -854,46 +878,78 @@ button
         transform: scale(1, 1);
       }
 }
-#loginButton
+#loginButtons
+{
+    display: flex;
+    padding: 1rem;
+}
+#loginButton1
 {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     text-align: center;
-    padding: 1rem 1rem 1rem 1rem;
+    padding: 1.5rem 1rem 1.5rem 1rem;
     border-radius: 1.5rem;
-    font-family: masterFont;
-   
     margin: 0 auto;
     margin-top: 3rem;
     margin-bottom: 1rem;
-    width: 50%;
+    width: 100%;
     color: white;
     font-size: 16px;
     font-weight: 600;
     color: #fff;
     cursor: pointer;
     border: none;
-    margin-left: 15rem;
     border-radius: 50px;
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
-    background-image: linear-gradient(to right, var(--testText) , var(--testText));
+    background-color: var(--testText);
     box-shadow: 0 4px 15px 0 var(--testText);
- 
+    transition: .75s;
+    text-decoration: none;
+    margin: .5rem;
 }
-#loginButton:hover {
-    background-position: 100% 0;
+#loginButton2
+{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 1.5rem 1rem 1.5rem 1rem;
+    border-radius: 1.5rem;
+    margin: 0 auto;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    background-color: var(--background);
+
+    transition: .75s;
+    text-decoration: none;
+    border:.3rem solid var(--row);
+    margin: .5rem;
 }
-#loginButton:focus {
-    outline: none;
+#loginButton2:hover {
+    background-color: var(--testText);
+}
+#loginButton1:hover {
+    background-color: var(--incorrect);
 }
 #accountCreate
 {
   color: white;
   display: inline-block;
-  margin-left: 17rem;
   margin-top: 1rem;
 }
 #accountCreate a {
@@ -1012,10 +1068,6 @@ animation: statsMoveOut 1.5s forwards ease;
 #displayStats
 {
     display: flex;
-    margin: 0;
-    position: absolute;
-    top: 30%;
-
 }
 #theme-olivia
 {

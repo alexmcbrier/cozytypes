@@ -4,6 +4,7 @@ const displayText = document.getElementById('wordsWrapper')
 const displayInput = document.getElementById('textInput') // Input Box
 const displayTimer = document.getElementById('time') // Time Display
 const displayWPM = document.getElementById('wpmDisplay') // wpm Display
+const mainContent = document.getElementById('mainContent') // wpm Display
 var timerVar = "not running" // Turns on when user begins typing...
 var sentenceLength = 50;
 var time = 15;
@@ -332,12 +333,17 @@ function setBlur()
     const placement = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
     const rect = placement.getBoundingClientRect();
     blurBox.style.top = rect.y + "px";
-    document.body.appendChild(blurBox)
-
-
+    mainContent.appendChild(blurBox)
   }
 }
 newQuote();
 moveCursor();
 moveCursorWithY();
 setBlur();
+function zoomwait()
+{
+  document.getElementsByClassName('box')[0].remove();
+  setTimeout(() => {  moveCursorWithY(), setBlur();  }, 500);
+}
+
+document.body.onresize = function() {zoomwait()};

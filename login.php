@@ -73,29 +73,29 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     </head>
     <body> 
-    <nav>
-                    <img width="45" height="45" display = "block" src="images/night.png">
-                    <li style="padding-left: .5rem; padding-right: 2rem">CozyTypes</li>
-                    <li ><a id = "play" href="index.php"><img width="45" height="45" display = "block" src="images/keyboard.png"></a></li>
-                    <li><a href="login.php"><img width="35" height="35" display = "block" src="images/person.png"></a></li>
-                    <li><a href="preferences.php"><img width="35" height="35" display = "block" src="images/setting.png"></a></li>
-            </nav>
-    <form id="loginContainer" method = "post">
-        <div id = "topContainer">
+
+    <form id="mainContent" method = "post">
+        <nav>
+            <img width="55" height="55" display = "block" src="images/panda2.png">
+            <li style="padding-left: .5rem; padding-right: 2rem">CozyTypes</li>
+            <li ><a id = "play" href="index.php"><img width="45" height="45" display = "block" src="images/keyboard.png"></a></li>
+            <li><a href="login.php"><img width="35" height="35" display = "block" src="images/person.png"></a></li>
+            <li><a href="preferences.php"><img width="35" height="35" display = "block" src="images/setting.png"></a></li>
+        </nav>
+        <div id = "middle" style="width:40%;">
             <h1 id = "loginHeader">Hello there, welcome back</h1>
+            <input type="text" placeholder="email" name="email" id="email" value="<?= htmlspecialchars($_POST["email"] ?? "") ?>">
+            <input type="text" placeholder="password" name="password"id="password" style="-webkit-text-security: disc;">  
+            <div id="loginButtons">  
+                <button id = "loginButton1" type="submit" value="submit">login</button>
+                <a href="signup.php" id = "loginButton2">sign up</a>
+            </div>
+        </div>
+        <div id = "bottom">
             <?php if ($is_invalid): ?>
                 <div id="invalid">Invalid login</div>
             <?php endif; ?>
-            <input type="text" placeholder="email" name="email" id="email" value="<?= htmlspecialchars($_POST["email"] ?? "") ?>">
-            <input type="text" placeholder="password" name="password"id="password" style="-webkit-text-security: disc;">
         </div>
-        <div id = "middleContainer">
-            <label id = "check">Remember me</label> 
-            <input type="checkbox" id="myCheck" checked = "checked" onclick="myFunction()">
-        </div>
-        <a id = "passwordForget" href = "profile.html">forgot Password?</a>             
-        <button id = "loginButton" type="submit" value="submit">login</button>
-        <div id = "accountCreate">Not registered yet? <a href="signup.php">Create an Account</a></div>
     </form>  
     </body>
 </html>
