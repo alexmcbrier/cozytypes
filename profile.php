@@ -108,7 +108,7 @@ else //if not logged in but somehow managed to get to this page (Neccesary)
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     </head>
-    <body> 
+    <body class="main-body">
         <div id="sidebar">
             <a onclick="openSidebar()" ><img id="sidebarImage" width="60" height="60" src="images/follow.png"></a>
         </div>
