@@ -210,7 +210,6 @@ function restart() {
   displayTimer.innerText = getTime(getCookie("time"))
   newQuote()
   timerVar = "running"
-  moveCursor();
   startTimer();
 }
 function randomQuote() {
@@ -336,14 +335,28 @@ function setBlur()
     mainContent.appendChild(blurBox)
   }
 }
+function setCursorVisibility()
+{
+  document.getElementById('cursor').style.visibility = 'visible';
+}
 newQuote();
-moveCursor();
 moveCursorWithY();
 setBlur();
 function zoomwait()
 {
-  document.getElementsByClassName('box')[0].remove();
-  setTimeout(() => {  moveCursorWithY(), setBlur();  }, 500);
+  const cursor = document.getElementById('cursor') 
+  const placement = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
+  const rect = placement.getBoundingClientRect();
+  cursor.style.left = rect.x + "px";
+  cursor.style.top = rect.y + "px";
+  cursor.style.width = rect.width + "px";
+  document.getElementById('cursor').style.visibility = 'hidden';
+  try {
+    document.getElementsByClassName('box')[0].remove(); //if has blur box
+    setTimeout(() => {  moveCursorWithY(), setBlur(), setCursorVisibility(); }, 500);
+  } catch (err) {
+    setTimeout(() => {  moveCursorWithY(), setCursorVisibility(); }, 500);
+  }
 }
 
 document.body.onresize = function() {zoomwait()};

@@ -181,7 +181,7 @@ li a{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    line-height: 1.6rem;
+
 }
 nav{
   background: linear-gradient(to top, rgba(255,0,0,0), 70%, var(--backgroundGradient));
@@ -220,6 +220,7 @@ nav a:hover{
     line-height: 10px;
     vertical-align: top;
     min-height: 1rem;
+    transition: .5s;
 }
 .preferencesRow {
     color: white;
@@ -357,6 +358,7 @@ nav a:hover{
   justify-content: left; /* can change to center */
   padding: 1rem 0rem;
   margin-bottom: 1rem;
+  user-select: none;
 }
 .typingModes
 {
@@ -937,7 +939,7 @@ button
     margin: .5rem;
 }
 #loginButton2:hover {
-    background-color: var(--testText);
+    background-color: var(--row);
 }
 #loginButton1:hover {
     background-color: var(--incorrect);
