@@ -290,7 +290,6 @@ nav a:hover{
   border-radius: 1.5rem;
   color: white; /* text input font color */
   overflow: hidden;
-  font-family: masterFont;
   resize: none; /* Neccesary so user cannot resize */
   width: 30%;
   background-color: var(--background);
@@ -447,7 +446,6 @@ input{
     display: flex;
   flex-direction: row;
     padding: 1rem 0;
-    font-family: masterFont;
     margin: 0 auto;
     margin-bottom: 1.5rem;
     width: 100%;
@@ -602,7 +600,6 @@ button
 #friendsListArea input{
 
     margin-left: 2rem;
-    font-family: masterFont;
     border: none;
     background: none;
     border-bottom: 2px solid #D1D1D4;
@@ -717,7 +714,6 @@ button
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     opacity: 0;
-    font-family: masterFont;
     color: rgb(255, 255, 255);
     font-size: 1rem;
     user-select: none;
@@ -1011,8 +1007,6 @@ animation: statsMoveOut 1.5s forwards ease;
     text-align: center;
     padding: 10rem 5rem;
     border-radius: 1.5rem;
-    font-family: masterFont;
-   
     margin-top: 3rem;
     margin-bottom: 1rem;
     color: white;
