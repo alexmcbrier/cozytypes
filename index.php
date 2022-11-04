@@ -28,7 +28,7 @@ if(isset($_COOKIE["email"]))
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JMV592"
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- End Google Tag Manager (noscript) -->
-        <link rel="shortcut icon" type="image/x-icon" href="images\keyboard.ico" />
+        <link rel="shortcut icon" type="image/x-icon" href="images\panda.ico" />
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>cozytypes</title>
