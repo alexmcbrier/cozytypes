@@ -360,7 +360,23 @@ function moveCursor()
     }
 
   }
-
+  else //no cookie chosen, so default is caret
+  {
+    const cursor = document.getElementById('cursor') 
+    const parent = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
+    let chars = parent.querySelectorAll("*");
+    let index = displayInput.value.length
+    if (index > chars.length - 1)
+    {
+      const rect = chars[index - (index - (chars.length - 1))].getBoundingClientRect();
+      cursor.style.left = rect.x + rect.width + "px";
+    }
+    else
+    {
+      const rect = chars[index].getBoundingClientRect();
+      cursor.style.left = rect.x - 10 + "px";
+    }
+  }
 }
 function moveCursorWithY()
 {

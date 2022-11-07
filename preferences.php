@@ -123,12 +123,69 @@
                 }
             }
         }
-        findCookie('fontSize', 'sizesContainer').classList.add("currentSetting");
-        findCookie('fontFamily', 'fontsContainer').classList.add("currentSetting");
-        findCookie('caret', 'caretsContainer').classList.add("currentSetting");
-        findCookie('lineCount', 'linesContainer').classList.add("currentSetting");
-        findCookie('blur', 'blurContainer').classList.add("currentSetting");
-        findCookie('theme', 'themesContainer').innerHTML  += " ✦";
+        function checkCookie(cName) {
+            let name = getCookie(cName);
+            if (name != "") {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        function setCookie(cName, cValue, expDays) {
+            let date = new Date();
+            date.setTime(date.getTime() + (expDays * 24 * 60 * 60 * 1000));
+            const expires = "expires=" + date.toUTCString();
+            document.cookie = cName + "=" + cValue + "; " + expires + "; path=/";
+            document.location.reload();
+        }
+        if(checkCookie('fontSize'))
+        {
+            findCookie('fontSize', 'sizesContainer').classList.add("currentSetting");
+        }
+        else
+        {
+            setCookie("fontSize", 2, 30); //default if have no cookies yet
+        }
+        if(checkCookie('fontFamily'))
+        {
+            findCookie('fontFamily', 'fontsContainer').classList.add("currentSetting");
+        }
+        else
+        {
+            setCookie("fontFamily", "lexenddeca", 30); //default if have no cookies yet
+        }
+        if(checkCookie('caret'))
+        {
+            findCookie('caret', 'caretsContainer').classList.add("currentSetting");
+        }
+        else
+        {
+            setCookie("caret", 'caret', 30); //default if have no cookies yet
+        }
+        if(checkCookie('lineCount'))
+        {
+            findCookie('lineCount', 'linesContainer').classList.add("currentSetting");
+        }
+        else
+        {
+            setCookie("lineCount", 4, 30); //default if have no cookies yet
+        }
+        if(checkCookie('blur'))
+        {
+            findCookie('blur', 'blurContainer').classList.add("currentSetting");
+        }
+        else
+        {
+            setCookie("blur", "off", 30); //default if have no cookies yet
+        }
+        if(checkCookie('theme'))
+        {
+            findCookie('theme', 'themesContainer').innerHTML  += " ✦";
+        }
+        else
+        {
+            setCookie("theme", "mizu", 30); //default if have no cookies yet
+        }
     </script>
 </body>
 
