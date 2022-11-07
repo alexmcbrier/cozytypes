@@ -300,22 +300,75 @@ function endTest() {
   accuracy = getAccuracy();
   window.location.href="index.php?finish=true&testTime=" + time + "&wpm=" + wpmFinal + "&accuracy=" + accuracy;
 }
+function findCookie(name, parentId) //checks to see which cookie is selected (used in prefrences to highlight current setting)
+{
+  const children = document.getElementById(parentId).children // wpm Display
+  for (var i = 0; i < children.length; i++) {
+    var child = children[i];
+    if (getCookie(name) == child.title)
+    {
+      return child;
+    }
+  }
+}
 function moveCursor()
 {
-  const cursor = document.getElementById('cursor') 
-  const placement = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
-  const rect = placement.getBoundingClientRect();
-  cursor.style.left = rect.x + "px";
-  cursor.style.width = rect.width + "px";
+  if (getCookie('caret') == "highlightWord" || getCookie('caret') == "underlineWord") //
+  {
+    const cursor = document.getElementById('cursor') 
+    const placement = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
+    const rect = placement.getBoundingClientRect();
+    cursor.style.left = rect.x + "px";
+    cursor.style.width = rect.width + "px";
+  }
+  else if(getCookie('caret') == "caret")
+  {
+    const cursor = document.getElementById('cursor') 
+    const parent = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
+    let chars = parent.querySelectorAll("*");
+    let index = displayInput.value.length
+    if (index > chars.length - 1)
+    {
+      const rect = chars[index - (index - (chars.length - 1))].getBoundingClientRect();
+      cursor.style.left = rect.x + rect.width + "px";
+    }
+    else
+    {
+      const rect = chars[index].getBoundingClientRect();
+      cursor.style.left = rect.x - 10 + "px";
+    }
+  }
+  else if(getCookie('caret') == "underlineLetter")
+  {
+    const cursor = document.getElementById('cursor') 
+    const parent = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
+    let chars = parent.querySelectorAll("*");
+    let index = displayInput.value.length
+    if (index > chars.length - 1)
+    {
+      const rect = chars[index - (index - (chars.length - 1))].getBoundingClientRect();
+      cursor.style.left = rect.x + rect.width - 10 + "px";
+      cursor.style.width = rect.width + "px";
+      cursor.style.minWidth = "30px";
+    }
+    else
+    {
+      const rect = chars[index].getBoundingClientRect();
+      cursor.style.left = rect.x + "px";
+      cursor.style.width = rect.width + "px";
+      cursor.style.minWidth = "30px";
+    }
+
+  }
+
 }
 function moveCursorWithY()
 {
+  moveCursor();
   const cursor = document.getElementById('cursor') 
   const placement = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
   const rect = placement.getBoundingClientRect();
-  cursor.style.left = rect.x + "px";
   cursor.style.top = rect.y + "px";
-  cursor.style.width = rect.width + "px";
 }
 function setBlur()
 {
@@ -324,7 +377,6 @@ function setBlur()
     let lines = getCookie("lineCount");
     let height = window.getComputedStyle(document.getElementById('testText')).getPropertyValue("height").replace("px", "") //remove px
     let boxHeight = (height / lines * (lines - 1))
-    console.log(boxHeight)
     const blurBox = document.createElement('div')
     blurBox.style.height = boxHeight + "px"
     blurBox.style.width = window.getComputedStyle(document.getElementById('testText')).getPropertyValue("width")

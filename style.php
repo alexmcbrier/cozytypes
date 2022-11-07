@@ -5,7 +5,7 @@ session_start();
 if (isset($_COOKIE["theme"])) {
     $theme = $_COOKIE["theme"];
 } else {
-    $theme = "dark";
+    $theme = "mizu";
 }
 if (isset($_COOKIE["fontFamily"])) {
     $fontFamily = $_COOKIE["fontFamily"];
@@ -15,17 +15,17 @@ if (isset($_COOKIE["fontFamily"])) {
 if (isset($_COOKIE["fontSize"])) {
     $fontSize = ($_COOKIE["fontSize"]);
 } else {
-    $fontSize = 3;
+    $fontSize = 2;
 }
 if (isset($_COOKIE["caret"])) {
     $caret = $_COOKIE["caret"];
 } else {
-    $caret = "underline";
+    $caret = "caret";
 }
 if (isset($_COOKIE["lineCount"])) {
     $lineCount = $_COOKIE["lineCount"];
 } else {
-    $lineCount = 2;
+    $lineCount = 3;
 }
 if (isset($_COOKIE["time"])) {
     $time = $_COOKIE["time"];
@@ -47,16 +47,27 @@ if (isset($_COOKIE["typingMode"])) {
 $height = 1.5 * $fontSize * $lineCount;
 $caretTop = 0;
 $caretHeight = 0;
+$caretWidth = 0;
+$caretOpacity = 25;
 //others
 if ($caret == "none") {
     $caretTop = 0;
     $caretHeight = 0;
-} else if ($caret == "underline") {
+} else if ($caret == "underlineWord") {
     $caretTop = $fontSize * 1.35;
     $caretHeight = $fontSize / 3;
-} else if ($caret == "highlight") {
+} else if ($caret == "underlineLetter") {
+    $caretTop = $fontSize * 1.35;
+    $caretHeight = $fontSize / 5;
+    $caretOpacity = 25;
+} else if ($caret == "highlightWord") {
     $caretTop = 0;
     $caretHeight = $fontSize * 1.5;
+} else if ($caret == "caret") {
+    $caretTop = $fontSize * .2;
+    $caretHeight = $fontSize * 1.25;
+    $caretWidth = $fontSize * .15;
+    $caretOpacity = 100;
 }
 include "themes/" . $theme . ".css"; //theme added depends on the name of the one in the database
 ?>
@@ -67,7 +78,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     }
 
     @font-face {
-        font-family: 'lexendDeca';
+        font-family: 'lexenddeca';
         src: url('./Fonts/LexendDeca.ttf');
     }
 
@@ -77,7 +88,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     }
 
     @font-face {
-        font-family: 'sourceCodePro';
+        font-family: 'sourcecodepro';
         src: url('./Fonts/sourceCodePro.ttf');
     }
 
@@ -87,7 +98,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     }
 
     @font-face {
-        font-family: 'ibmPlexSans';
+        font-family: 'ibmplexsans';
         src: url('./Fonts/ibmPlexSans.ttf');
     }
 
@@ -107,13 +118,13 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     }
 
     @font-face {
-        font-family: 'titilliumWeb';
+        font-family: 'titilliumweb';
         src: url('./Fonts/ibmPlexSans.ttf');
     }
 
     * {
 
-        font-family: "lexendDeca", serif;
+        font-family: <?php echo strval($fontFamily) ?>, serif;
     }
 
     /*scrollbar*/
@@ -182,6 +193,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
+        width: 100%;
     }
 
     nav {
@@ -207,7 +219,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
 
     .word {
         display: inline-block;
-        padding: 0rem .3rem;
+        padding: 0rem .5rem;
         /* line spacing */
     }
 
@@ -228,7 +240,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         transition: .5s;
     }
 
-    .preferences a {
+    .preference {
         cursor: pointer;
         color: white;
         background-color: var(--row);
@@ -247,7 +259,10 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         margin-top: 1rem;
         text-align: center;
     }
-
+    .currentSetting
+    {
+        background-color: var(--background);
+    }
     #footer {
         width: 100%;
         text-align: center;
@@ -410,10 +425,10 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     }
 
     #cursor {
-        width: 5rem;
+        width: <?php echo strval($caretWidth) . "rem"; ?>;
         height: 1rem;
         background-color: var(--correct);
-        opacity: 0.25;
+        opacity: <?php echo strval($caretOpacity) . "%"; ?>;
         border-radius: 1.5rem;
         position: absolute;
         margin-top: 1.75rem;
@@ -432,8 +447,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     }
 
     .correct {
-        transition: all .35s ease;
-        /* fade in word */
+        transition: all .2s ease;
         color: var(--correct);
 
     }
@@ -441,22 +455,22 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     .incorrect,
     .extra {
         color: var(--incorrect);
-        transition: all .35s ease;
-        /* fade in word */
-        text-shadow: 1px 1px 2px var(--incorrect), 0 0 1em var(--incorrect), 0 0 0.2em var(--incorrect);
+        transition: all .2s ease;
+        text-shadow: 0px 0px 8px var(--incorrect);
     }
 
     .current-word {
 
         color: var(--currentWord);
         display: inline-block;
-        padding: 0rem .3rem;
+        padding: 0rem .5rem;
     }
 
     .incorrect-word {
         color: var(--incorrect);
         display: inline-block;
-        padding: 0px 10px;
+        padding: 0rem .5rem;
+        transition: all .2s ease;
     }
 
     #listOfStats {
@@ -769,7 +783,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     }
 
     .preferences a:hover {
-        background-color: var(--incorrect);
+        background-color: var(--background);
     }
 
     #loginHeader {

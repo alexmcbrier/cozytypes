@@ -78,8 +78,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </head>
 
 <body>
-    <?php include "./nav.php" ?>
     <form id="mainContent" method="post">
+        <?php include "./nav.php" ?>
         <div id="middle" style="width:40%;">
             <h1 id="loginHeader">Hello there, welcome back</h1>
             <input type="text" placeholder="email" name="email" id="email" value="<?= htmlspecialchars($_POST["email"] ?? "") ?>">
