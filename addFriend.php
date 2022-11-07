@@ -37,4 +37,3 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         //throw error and make them type a new name
     }
 }
-?>

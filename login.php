@@ -50,49 +50,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <!DOCTYPE html>
 <html>
 
-<head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=TAG_ID"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments)
-        };
-        gtag('js', new Date());
-        gtag('config', 'G-9W2ZHHJ7P5');
-    </script>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JMV592" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
-    <link rel="shortcut icon" type="image/x-icon" href="images\panda.ico" />
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>cozytype</title>
-    <link rel="stylesheet" href="style.php">
-    <script src="script.js" defer></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
-</head>
+<?php include "./head.php" ?>
 
 <body>
     <?php include "./nav.php" ?>
     <form id="mainContent" method="post">
-        <div id="middle" style="width:40%;">
-            <h1 id="loginHeader">Hello there, welcome back</h1>
-            <input type="text" placeholder="email" name="email" id="email" value="<?= htmlspecialchars($_POST["email"] ?? "") ?>">
-            <input type="text" placeholder="password" name="password" id="password" style="-webkit-text-security: disc;">
-            <div id="loginButtons">
-                <button id="loginButton1" type="submit" value="submit">login</button>
-                <a href="signup.php" id="loginButton2">sign up</a>
-            </div>
-        </div>
-        <div id="bottom">
-            <?php if ($is_invalid) : ?>
-                <div id="invalid">Invalid login</div>
-            <?php endif; ?>
+        <h1 id="loginHeader">Hello there, welcome back</h1>
+        <?php if ($is_invalid) : ?>
+            <div id="invalid">Invalid login</div>
+        <?php endif; ?>
+        <input type="text" placeholder="email" name="email" id="email" value="<?= htmlspecialchars($_POST["email"] ?? "") ?>">
+        <input type="text" placeholder="password" name="password" id="password" style="-webkit-text-security: disc;">
+        <div style="display: flex; gap: 1rem">
+            <button class="loginBtn" id="loginButton1" type="submit" value="submit">Login</button>
+            <a class="loginBtn" id="loginButton2" href="signup.php">Sign Up</a>
         </div>
     </form>
 </body>

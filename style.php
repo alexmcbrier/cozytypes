@@ -176,12 +176,10 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
 
     #mainContent {
         transition: all .5s ease-in-out 0s;
-        margin: 0;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
+        width: 80%;
+        margin: auto;
+        display: grid;
+        gap: 1rem;
     }
 
     nav {
@@ -190,7 +188,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         text-align: center;
         height: 3em;
         user-select: none;
-        padding-top: 2.5rem;
+        padding: 2.5rem 0;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -214,7 +212,6 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     .row {
         user-select: none;
         color: white;
-        /* background-color:#191919;                      Background color */
         border: .3rem solid var(--row);
         font-size: 1rem;
         border-radius: 1.5rem;
@@ -222,7 +219,6 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         padding: 2rem 2.5rem;
         margin-left: .5rem;
         margin-top: 1.5rem;
-        line-height: 10px;
         vertical-align: top;
         min-height: 1rem;
         transition: .5s;
@@ -249,11 +245,10 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     }
 
     #footer {
-        width: 100%;
+        text-decoration: none;
+        color: white;
         text-align: center;
-        height: 3em;
         user-select: none;
-        padding-top: 2.5rem;
         display: flex;
         justify-content: center;
     }
@@ -302,10 +297,10 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         overflow: hidden;
         resize: none;
         /* Neccesary so user cannot resize */
-        width: 30%;
         background-color: var(--background);
         height: 1rem;
         line-height: 1rem;
+        width: 100%;
     }
 
     #textInput:focus {
@@ -321,41 +316,42 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     }
 
     #restartTest {
+        cursor: pointer;
         padding: 1rem;
         background-color: var(--row);
         width: 3rem;
     }
 
-    #restartTestDiv {}
-
     #wordsWrapper {
         /* transition: .25s all; */
         line-height: <?php echo strval($fontSize * 1.5) . "rem"; ?>;
-
-    }
-
-    #testRow {
-        width: 60%;
-        margin: 0 auto;
-        justify-content: center;
-        margin-top: 1rem;
-        user-select: none;
     }
 
     #testText {
         user-select: none;
-        width: 60%;
-        margin: auto;
-        resize: none;
         font-size: <?php echo strval($fontSize) . "rem"; ?>;
         height: <?php echo strval($height) . "rem"; ?>;
         border-radius: .5rem;
-        display: block;
         color: var(--testText);
-        text-align: left;
         overflow: hidden;
         line-height: 3.5rem;
+    }
 
+    .testRow {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .testRow * {
+        user-select: none;
+        color: white;
+        border: .3rem solid var(--row);
+        border-radius: 1.5rem;
+        display: inline-block;
+        padding: 2rem 2.5rem;
+        white-space: nowrap;
+        transition: .35s;
     }
 
     #typingmode {
@@ -363,15 +359,11 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         font-size: 1rem;
         color: var(--row);
         border-radius: 1.5rem;
-        ;
         display: flex;
-        width: 60%;
+        justify-content: space-evenly;
 
-        margin: 0 auto;
-        justify-content: left;
         /* can change to center */
         padding: 1rem 0rem;
-        margin-bottom: 1rem;
         user-select: none;
     }
 
@@ -388,12 +380,6 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
 
     .typingModes:hover {
         color: var(--incorrect);
-    }
-
-    .individualMode {
-        display: flex;
-        /* equal height of the children */
-
     }
 
     .modeStack {
@@ -473,15 +459,14 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     input {
         display: flex;
         flex-direction: row;
-        padding: 1rem 0;
-        margin: 0 auto;
-        margin-bottom: 1.5rem;
         width: 100%;
         border: none;
         background: none;
         border-bottom: 1px solid #D1D1D4;
         outline: none;
         color: white;
+        padding: 1rem;
+        box-sizing: border-box;
     }
 
     #kecapContainer {
@@ -586,21 +571,19 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     }
 
     #closeSidebar {
+        cursor: pointer;
         user-select: none;
         color: white;
         background-color: var(--background);
         border: .3rem solid var(--row);
-        /* background-color:#191919;                      Background color */
         font-size: 1rem;
         border-radius: 1.5rem;
         text-align: center;
-        text-decoration: none;
-        line-height: 20px;
-        padding: 2rem 2rem 2rem 2rem;
+        padding: 2rem;
         transition: 1s;
-        position: absolute;
-        bottom: 10rem;
-        width: 25rem;
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 1rem;
     }
 
     #sidebarImage {
@@ -630,14 +613,11 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     }
 
     #friendsListArea input {
-
-        margin-left: 2rem;
         border: none;
         background: none;
         border-bottom: 2px solid #D1D1D4;
         outline: none;
         color: white;
-
     }
 
     #friendsListHeader {
@@ -739,24 +719,16 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     }
 
     #invalid {
-        margin: 0;
-        position: absolute;
-        top: 30%;
-        left: 10%;
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        opacity: 0;
-        color: rgb(255, 255, 255);
+        color: white;
         font-size: 1rem;
         user-select: none;
-        margin-bottom: 5rem;
-        line-height: 3rem;
         padding: 1rem;
-        width: 8rem;
-        background-color: var(--testText);
-        border-radius: 25px;
-        animation: fadeIn 4s ease;
+        width: 100%;
+        line-height: 3rem;
+        background-color: var(--incorrect);
+        border-radius: 1.5rem;
         text-align: center;
+        box-sizing: border-box;
     }
 
     #preferenceHeader {
@@ -940,74 +912,38 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         }
     }
 
-    #loginButtons {
-        display: flex;
+    .loginBtn {
         padding: 1rem;
+        box-sizing: border-box;
+        text-align: center;
+        border-radius: 999px;
+        width: 100%;
+        color: white;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all .2s ease-in-out;
     }
 
     #loginButton1 {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        text-align: center;
-        padding: 1.5rem 1rem 1.5rem 1rem;
-        border-radius: 1.5rem;
-        margin: 0 auto;
-        margin-top: 3rem;
-        margin-bottom: 1rem;
-        width: 100%;
-        color: white;
-        font-size: 16px;
-        font-weight: 600;
-        color: #fff;
-        cursor: pointer;
-        border: none;
-        border-radius: 50px;
-        -o-transition: all .4s ease-in-out;
-        -webkit-transition: all .4s ease-in-out;
-        transition: all .4s ease-in-out;
         background-color: var(--testText);
         box-shadow: 0 4px 15px 0 var(--testText);
-        transition: .75s;
         text-decoration: none;
-        margin: .5rem;
     }
 
     #loginButton2 {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        text-align: center;
-        padding: 1.5rem 1rem 1.5rem 1rem;
-        border-radius: 1.5rem;
-        margin: 0 auto;
-        margin-top: 3rem;
-        margin-bottom: 1rem;
-        width: 100%;
-        color: white;
-        font-size: 16px;
-        font-weight: 600;
-        color: #fff;
-        cursor: pointer;
-        border: none;
-        border-radius: 50px;
-        -o-transition: all .4s ease-in-out;
-        -webkit-transition: all .4s ease-in-out;
-        transition: all .4s ease-in-out;
-        background-color: var(--background);
-
-        transition: .75s;
+        background-color: transparent;
         text-decoration: none;
         border: .3rem solid var(--row);
-        margin: .5rem;
-    }
-
-    #loginButton2:hover {
-        background-color: var(--row);
     }
 
     #loginButton1:hover {
         background-color: var(--incorrect);
+        box-shadow: 0 4px 15px 0 var(--incorrect);
+    }
+
+    #loginButton2:hover {
+        background-color: var(--row);
     }
 
     #accountCreate {
