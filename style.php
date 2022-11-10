@@ -406,10 +406,10 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     }
 
     #cursor {
-        width: 5rem;
+        width: <?php echo strval($caretWidth) . "rem"; ?>;
         height: 1rem;
         background-color: var(--correct);
-        opacity: 0.25;
+        opacity: <?php echo strval($caretOpacity) . "%"; ?>;
         border-radius: 1.5rem;
         position: absolute;
         margin-top: 1.75rem;
