@@ -43,20 +43,30 @@ if (isset($_COOKIE["typingMode"])) {
     $typingMode = "words";
 }
 
-
 $height = 1.5 * $fontSize * $lineCount;
 $caretTop = 0;
 $caretHeight = 0;
+$caretWidth = 0;
+$caretOpacity = 25;
 //others
 if ($caret == "none") {
     $caretTop = 0;
     $caretHeight = 0;
-} else if ($caret == "underline") {
+} else if ($caret == "underlineWord") {
     $caretTop = $fontSize * 1.35;
     $caretHeight = $fontSize / 3;
-} else if ($caret == "highlight") {
+} else if ($caret == "underlineLetter") {
+    $caretTop = $fontSize * 1.35;
+    $caretHeight = $fontSize / 5;
+    $caretOpacity = 25;
+} else if ($caret == "highlightWord") {
     $caretTop = 0;
     $caretHeight = $fontSize * 1.5;
+} else if ($caret == "caret") {
+    $caretTop = $fontSize * .2;
+    $caretHeight = $fontSize * 1.25;
+    $caretWidth = $fontSize * .15;
+    $caretOpacity = 100;
 }
 include "themes/" . $theme . ".css"; //theme added depends on the name of the one in the database
 ?>
