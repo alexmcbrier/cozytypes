@@ -33,9 +33,11 @@
             <div class="horizontalAlign">
                 <div class="rowContainer" style="width: 40%">
                     <h1 class="notSignedIn" id="preferenceHeader">Caret</h1>
-                    <a onclick="setCookie('caret', 'none', 30)">none</a>
-                    <a onclick="setCookie('caret', 'underline', 30)">underline</a>
-                    <a onclick="setCookie('caret', 'highlight', 30)">highlight</a>
+                    <a title="none" class="preference" onclick="setCookie('caret', 'none', 30)">none</a>
+                    <a title="caret" class="preference" onclick="setCookie('caret', 'caret', 30)">caret</a>
+                    <a title="underlineLetter" class="preference" onclick="setCookie('caret', 'underlineLetter', 30)">underline letter</a>
+                    <a title="underlineWord" class="preference" onclick="setCookie('caret', 'underlineWord', 30)">underline word</a>
+                    <a title="highlightWord" class="preference" onclick="setCookie('caret', 'highlightWord', 30)">highlight word</a>
                 </div>
                 <div class="rowContainer" style="width: 35%">
                     <h1 class="notSignedIn" id="preferenceHeader">Amount of lines</h1>
