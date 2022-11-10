@@ -277,20 +277,80 @@ function endTest() {
     accuracy = getAccuracy();
     window.location.href = "index.php?finish=true&testTime=" + time + "&wpm=" + wpmFinal + "&accuracy=" + accuracy;
 }
-function moveCursor() {
-    const cursor = document.getElementById('cursor')
+function moveCursor()
+{
+  if (getCookie('caret') == "highlightWord" || getCookie('caret') == "underlineWord") //
+  {
+    const cursor = document.getElementById('cursor') 
     const placement = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
-    const rect = placement?.getBoundingClientRect();
+    const rect = placement.getBoundingClientRect();
     cursor.style.left = rect.x + "px";
     cursor.style.width = rect.width + "px";
+  }
+  else if(getCookie('caret') == "caret")
+  {
+    const cursor = document.getElementById('cursor') 
+    const parent = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
+    let chars = parent.querySelectorAll("*");
+    let index = displayInput.value.length
+    if (index > chars.length - 1)
+    {
+      const rect = chars[index - (index - (chars.length - 1))].getBoundingClientRect();
+      cursor.style.left = rect.x + rect.width + "px";
+    }
+    else
+    {
+      const rect = chars[index].getBoundingClientRect();
+      cursor.style.left = rect.x - 10 + "px";
+    }
+  }
+  else if(getCookie('caret') == "underlineLetter")
+  {
+    const cursor = document.getElementById('cursor') 
+    const parent = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
+    let chars = parent.querySelectorAll("*");
+    let index = displayInput.value.length
+    if (index > chars.length - 1)
+    {
+      const rect = chars[index - (index - (chars.length - 1))].getBoundingClientRect();
+      cursor.style.left = rect.x + rect.width - 10 + "px";
+      cursor.style.width = rect.width + "px";
+      cursor.style.minWidth = "30px";
+    }
+    else
+    {
+      const rect = chars[index].getBoundingClientRect();
+      cursor.style.left = rect.x + "px";
+      cursor.style.width = rect.width + "px";
+      cursor.style.minWidth = "30px";
+    }
+
+  }
+  else //no cookie chosen, so default is caret
+  {
+    const cursor = document.getElementById('cursor') 
+    const parent = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
+    let chars = parent.querySelectorAll("*");
+    let index = displayInput.value.length
+    if (index > chars.length - 1)
+    {
+      const rect = chars[index - (index - (chars.length - 1))].getBoundingClientRect();
+      cursor.style.left = rect.x + rect.width + "px";
+    }
+    else
+    {
+      const rect = chars[index].getBoundingClientRect();
+      cursor.style.left = rect.x - 10 + "px";
+    }
+  }
 }
-function moveCursorWithY() {
-    const cursor = document.getElementById('cursor')
-    const placement = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
-    const rect = placement?.getBoundingClientRect();
-    cursor.style.left = rect.x + "px";
-    cursor.style.top = rect.y + "px";
-    cursor.style.width = rect.width + "px";
+function moveCursorWithY()
+{
+  moveCursor();
+  const cursor = document.getElementById('cursor') 
+  const placement = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
+  const rect = placement.getBoundingClientRect();
+  cursor.style.top = rect.y + "px";
 }
 function setBlur() {
     if (getCookie("lineCount") > 1 && getCookie('blur') == "on") {
