@@ -122,7 +122,6 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     }
 
     * {
-
         font-family: <?php echo strval($fontFamily) ?>, serif;
     }
 
@@ -983,6 +982,8 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
 
     #middle {
         height: 100%;
+        justify-content: center;
+        display: flex;
     }
 
     #middleContainer {
