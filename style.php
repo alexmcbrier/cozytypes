@@ -233,7 +233,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         transition: .5s;
     }
 
-    .preferences a {
+    .preferences {
         cursor: pointer;
         color: white;
         background-color: var(--row);
