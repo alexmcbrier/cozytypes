@@ -19,6 +19,7 @@
                 <div class="rowContainer" style="width: 70%">
                     <h1 class="notSignedIn" id="preferenceHeader">Font</h1>
                     <a style="font-family: Arial;" onclick="setCookie('fontFamily', 'arial', 30)">arial</a>
+                    <a style="font-family: 'LexendDeca', serif;" onclick="setCookie('fontFamily', 'lexenddeca', 30)">lexend deca</a>
                     <a style="font-family: 'IBM Plex Sans', sans-serif;" onclick="setCookie('fontFamily', 'ibmplexsans', 30)">IBM Plex Sans</a>
                     <a style="font-family: 'Comfortaa', cursive;" onclick="setCookie('fontFamily', 'comfortaa', 30)">comfortaa</a>
                     <a style="font-family: 'Courier Prime', monospace;" onclick="setCookie('fontFamily', 'courier', 30)">courier</a>
