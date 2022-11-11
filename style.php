@@ -123,7 +123,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
 
     * {
 
-        font-family: "lexendDeca", serif;
+        font-family: <?php echo strval($fontFamily) ?>, serif;
     }
 
     /*scrollbar*/
