@@ -216,7 +216,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         display: inline-block;
         padding: 0rem .3rem;
         /* line spacing */
-    }
+    } 
 
     .row {
         user-select: none;
@@ -233,7 +233,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         transition: .5s;
     }
 
-    .preferences {
+    .preference {
         cursor: pointer;
         color: white;
         background-color: var(--row);
