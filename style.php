@@ -330,7 +330,10 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         background-color: var(--row);
         width: 3rem;
     }
-
+    .currentSetting
+    {
+        background-color: var(--background);
+    }
     #wordsWrapper {
         /* transition: .25s all; */
         line-height: <?php echo strval($fontSize * 1.5) . "rem"; ?>;
