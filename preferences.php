@@ -3,14 +3,14 @@
 
 <?php include "./head.php" ?>
 
-<body onload="updatePreferences();">
+<body onload="updatePreferences()">
     <?php include "./nav.php" ?>
     <form id="preferencesArea" method="POST" action="preferences.php">
         <div class="preferences">
             <div class="horizontalAlign">
                 <div id="sizesContainer" class="rowContainer" style="width: 30%">
                     <h1 class="notSignedIn" id="preferenceHeader">Size</h1>
-                    <a title="1" class="preference" onclick="setCookie('fontSize', 1, 30)">1</a>
+                    <a title="1" class="preference" onclick="updatePreferences()">1</a>
                     <a title="2" class="preference" onclick="setCookie('fontSize', 2, 30)">2</a>
                     <a title="3" class="preference" onclick="setCookie('fontSize', 3, 30)">3</a>
                     <a title="4" class="preference" onclick="setCookie('fontSize', 4, 30)">4</a>
