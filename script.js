@@ -382,7 +382,57 @@ function zoomwait() {
         setTimeout(() => { moveCursorWithY(), setCursorVisibility(); }, 500);
     }
 }
-
+function updatePreferences()
+{
+    if(checkCookie('fontSize'))
+        {
+            findCookie('fontSize', 'sizesContainer').classList.add("currentSetting");
+        }
+        else
+        {
+            setCookie("fontSize", 2, 30); //default if have no cookies yet
+        }
+        if(checkCookie('fontFamily'))
+        {
+            findCookie('fontFamily', 'fontsContainer').classList.add("currentSetting");
+        }
+        else
+        {
+            setCookie("fontFamily", "lexenddeca", 30); //default if have no cookies yet
+        }
+        if(checkCookie('caret'))
+        {
+            findCookie('caret', 'caretsContainer').classList.add("currentSetting");
+        }
+        else
+        {
+            setCookie("caret", 'caret', 30); //default if have no cookies yet
+        }
+        if(checkCookie('lineCount'))
+        {
+            findCookie('lineCount', 'linesContainer').classList.add("currentSetting");
+        }
+        else
+        {
+            setCookie("lineCount", 4, 30); //default if have no cookies yet
+        }
+        if(checkCookie('blur'))
+        {
+            findCookie('blur', 'blurContainer').classList.add("currentSetting");
+        }
+        else
+        {
+            setCookie("blur", "off", 30); //default if have no cookies yet
+        }
+        if(checkCookie('theme'))
+        {
+            findCookie('theme', 'themesContainer').innerHTML  += " ✦";
+        }
+        else
+        {
+            setCookie("theme", "mizu", 30); //default if have no cookies yet
+        }
+}
 document.body.onresize = function() { zoomwait() };
 newQuote();
 moveCursorWithY();

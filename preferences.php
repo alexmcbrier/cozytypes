@@ -3,7 +3,7 @@
 
 <?php include "./head.php" ?>
 
-<body>
+<body onload="updatePreferences();">
     <?php include "./nav.php" ?>
     <form id="preferencesArea" method="POST" action="preferences.php">
         <div class="preferences">
