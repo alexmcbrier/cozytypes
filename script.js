@@ -382,6 +382,17 @@ function zoomwait() {
         setTimeout(() => { moveCursorWithY(), setCursorVisibility(); }, 500);
     }
 }
+function findCookie(name, parentId) //checks to see which cookie is selected (used in prefrences to highlight current setting)
+        {
+            const children = document.getElementById(parentId).children // wpm Display
+            for (var i = 0; i < children.length; i++) {
+                var child = children[i];
+                if (getCookie(name) == child.title)
+                {
+                return child;
+                }
+            }
+        }
 function updatePreferences()
 {
     if(checkCookie('fontSize'))
