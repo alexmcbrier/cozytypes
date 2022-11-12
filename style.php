@@ -213,7 +213,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
 
     .word {
         display: inline-block;
-        padding: 0rem .3rem;
+        padding: 0rem <?php echo strval($fontSize * .3) . "rem"; ?>;
         /* line spacing */
     } 
 
@@ -447,7 +447,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
 
         color: var(--currentWord);
         display: inline-block;
-        padding: 0rem .3rem;
+        padding: 0rem <?php echo strval($fontSize * .3) . "rem"; ?>;
     }
 
     .incorrect-word {
