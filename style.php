@@ -192,7 +192,6 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     }
 
     nav {
-        background: linear-gradient(to top, rgba(255, 0, 0, 0), 70%, var(--backgroundGradient));
         width: 100%;
         text-align: center;
         height: 3em;
