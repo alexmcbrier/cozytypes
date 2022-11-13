@@ -5,7 +5,7 @@ session_start();
 if (isset($_COOKIE["theme"])) {
     $theme = $_COOKIE["theme"];
 } else {
-    $theme = "dark";
+    $theme = "mizu";
 }
 if (isset($_COOKIE["fontFamily"])) {
     $fontFamily = $_COOKIE["fontFamily"];
@@ -15,17 +15,17 @@ if (isset($_COOKIE["fontFamily"])) {
 if (isset($_COOKIE["fontSize"])) {
     $fontSize = ($_COOKIE["fontSize"]);
 } else {
-    $fontSize = 3;
+    $fontSize = 2;
 }
 if (isset($_COOKIE["caret"])) {
     $caret = $_COOKIE["caret"];
 } else {
-    $caret = "underline";
+    $caret = "caret";
 }
 if (isset($_COOKIE["lineCount"])) {
     $lineCount = $_COOKIE["lineCount"];
 } else {
-    $lineCount = 2;
+    $lineCount = 4;
 }
 if (isset($_COOKIE["time"])) {
     $time = $_COOKIE["time"];
@@ -35,7 +35,7 @@ if (isset($_COOKIE["time"])) {
 if (isset($_COOKIE["words"])) {
     $words = $_COOKIE["words"];
 } else {
-    $words = 30;
+    $words = 100;
 }
 if (isset($_COOKIE["typingMode"])) {
     $typingMode = $_COOKIE["typingMode"];
