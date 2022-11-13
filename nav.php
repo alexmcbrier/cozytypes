@@ -4,6 +4,6 @@
         <li style="padding-left: .5rem; padding-right: 2rem;">CozyTypes</li>
     </a>
     <a href="/index.php"><i class="fa-solid fa-house"></i></a>
-    <a href="/login.php"><i class="fa-solid fa-user"></i></a>
     <a href="/preferences.php"><i class="fa-solid fa-gear"></i></a>
+    <a href="/login.php"><i class="fa-solid fa-user"></i></a>
 </nav>

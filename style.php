@@ -150,6 +150,11 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
 
     i {
         font-size: 2rem;
+        padding: 1rem;
+        color: var(--testText)
+    }
+    i:hover {
+        color: white;
     }
     .vertical-scroll>div {
         background: var(--testText);
