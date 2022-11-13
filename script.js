@@ -413,6 +413,30 @@ function addCookies()
     if(!checkCookie('theme')){
         setCookie("theme", "mizu", 30); //default if have no cookies yet
     }
+    if(!checkCookie('words')){
+        setCookie("words", "50", 30); //default if have no cookies yet
+    }
+    if(!checkCookie('time')){
+        setCookie("time", "15", 30); //default if have no cookies yet
+    }
+    if(!checkCookie('mode')){
+        setCookie("mode", "east", 30); //default if have no cookies yet
+    }
+}
+function updateIndex()
+{
+    findCookie('words', 'wordsContainer').classList.add("currentSetting");
+    findCookie('time', 'timesContainer').classList.add("currentSetting");
+    findCookie('mode', 'modesContainer').classList.add("currentSetting");
+}
+function updatePreferences()
+{
+    findCookie('fontSize', 'sizesContainer').classList.add("currentSetting");
+    findCookie('fontFamily', 'fontsContainer').classList.add("currentSetting");
+    findCookie('caret', 'caretsContainer').classList.add("currentSetting");
+    findCookie('lineCount', 'linesContainer').classList.add("currentSetting");
+    findCookie('blur', 'blurContainer').classList.add("currentSetting");
+    findCookie('theme', 'themesContainer').innerHTML  += " ✦";
 }
 function updateCookies()
 {
@@ -424,20 +448,6 @@ function updateCookies()
         updatePreferences();
     }
 }
-function updateIndex()
-{
-    findCookie('words', 'wordsContainer').classList.add("currentSetting");
-}
-function updatePreferences()
-{
-    findCookie('fontSize', 'sizesContainer').classList.add("currentSetting");
-    findCookie('fontFamily', 'fontsContainer').classList.add("currentSetting");
-    findCookie('caret', 'caretsContainer').classList.add("currentSetting");
-    findCookie('lineCount', 'linesContainer').classList.add("currentSetting");
-    findCookie('blur', 'blurContainer').classList.add("currentSetting");
-    findCookie('theme', 'themesContainer').innerHTML  += " ✦";
-}
-
 addCookies();
 document.body.onLoad = updateCookies();
 document.body.onresize = function() { zoomwait() };
