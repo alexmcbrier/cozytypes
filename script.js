@@ -397,7 +397,7 @@ function addCookies()
 {
     if(!checkCookie('fontSize'))
     {
-        setCookie("fontSize", 2, 30); //default if have no cookies yet
+        setCookie("fontSize", 5, 30); //default if have no cookies yet
     }
     if(!checkCookie('fontFamily'))
     {
@@ -417,7 +417,7 @@ function addCookies()
     }
     if(!checkCookie('theme'))
     {
-        setCookie("theme", "mizu", 30); //default if have no cookies yet
+        setCookie("theme", "dark", 30); //default if have no cookies yet
     }
 }
 function updatePreferences()
