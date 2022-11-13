@@ -5,6 +5,10 @@
     </a>
 
     <a href="/profile"><i class="fa-regular fa-user"></i></a>
+    <i class="fa-solid fa-keyboard"></i>
+    <i class="fa-solid fa-bars"></i>
+    <i class="fa-solid fa-gear"></i>
+    <i class="fa-solid fa-sliders"></i>
     <li><a href="login.php"><img title="Profile" width="35" height="35" display="block" src="images/person.png"></a></li>
     <li><a href="preferences.php"><img title="Settings" width="35" height="35" display="block" src="images/setting.png"></a></li>
 </nav>
