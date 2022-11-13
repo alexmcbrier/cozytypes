@@ -151,7 +151,8 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     i {
         font-size: 2rem;
         padding: 1rem;
-        color: var(--testText)
+        color: var(--testText);
+        transition: all .35s ease;
     }
     i:hover {
         color: white;
@@ -174,7 +175,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     }
 
     li {
-        font-size: 4rem;
+        font-size: 3.75rem;
         font-weight: bold;
         color: white;
         user-select: none;
