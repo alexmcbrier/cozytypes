@@ -31,4 +31,7 @@
             window.history.replaceState({}, document.title, clean_uri);
         }
     </script>
+    <script>
+        addCookies();
+    </script>
 </head>
