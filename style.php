@@ -335,7 +335,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     }
     .currentMode
     {
-        background-color: var(--rowBackground);
+        color: var(--rowBackground);
     }
     #wordsWrapper {
         /* transition: .25s all; */
