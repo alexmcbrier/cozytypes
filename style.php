@@ -148,7 +148,9 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         background: var(--incorrect);
     }
 
-
+    i {
+        font-size: 2rem;
+    }
     .vertical-scroll>div {
         background: var(--testText);
         border-radius: 1em;
