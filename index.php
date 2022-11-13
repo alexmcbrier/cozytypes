@@ -17,7 +17,7 @@ if (isset($_COOKIE["email"])) {
 
 <?php include "./head.php" ?>
 
-<body class="main-body" onload="updateCookies()">
+<body class="main-body">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JMV592" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
@@ -28,9 +28,9 @@ if (isset($_COOKIE["email"])) {
             <!-- Display if test not complete -->
 
             <div id="typingmode">
-                <div class="modeStack">
+                <div id = "timesContainer" class="modeStack">
                     <div class="modeHeader">time</div>
-                    <div id = "timesContainer" style="display: flex">
+                    <div style="display: flex">
                         <div title = "15" class="typingModes" onclick="changeTime(15)">15</div>
                         <div title = "30" class="typingModes" onclick="changeTime(50)">30</div>
                         <div title = "60" class="typingModes" onclick="changeTime(60)">60</div>
