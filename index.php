@@ -32,7 +32,7 @@ if (isset($_COOKIE["email"])) {
                     <div class="modeHeader">time</div>
                     <div id = "timesContainer" style="display: flex">
                         <div title = "15" class="typingModes" onclick="changeTime(15)">15</div>
-                        <div title = "30" class="typingModes" onclick="changeTime(50)">30</div>
+                        <div title = "30" class="typingModes" onclick="changeTime(30)">30</div>
                         <div title = "60" class="typingModes" onclick="changeTime(60)">60</div>
                         <div title = "120" class="typingModes" onclick="changeTime(120)">120</div>
                     </div>

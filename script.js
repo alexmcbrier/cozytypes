@@ -441,6 +441,7 @@ function updatePreferences()
 function updateCookies()
 {
     addCookies();
+    updateIndex();
     if ( window.location.href == ("https://www.cozytypes.com") || window.location.href == ("https://www.cozytypes.com/index.php")) {
         updateIndex();
     }
