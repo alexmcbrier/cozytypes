@@ -418,7 +418,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         border-radius: 1.5rem;
         position: absolute;
         margin-top: 1.75rem;
-        transition: all .15s;
+        transition: all .25s;
         height: <?php echo strval($caretHeight) . "rem"; ?>;
         margin-top: <?php echo strval($caretTop) . "rem"; ?>;
     }
