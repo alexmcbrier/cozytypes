@@ -395,81 +395,49 @@ function findCookie(name, parentId) //checks to see which cookie is selected (us
         }
 function addCookies()
 {
-    if(!checkCookie('fontSize'))
-    {
+    if(!checkCookie('fontSize')){
         setCookie("fontSize", 2, 30); //default if have no cookies yet
     }
-    if(!checkCookie('fontFamily'))
-    {
+    if(!checkCookie('fontFamily')){
         setCookie("fontFamily", "lexenddeca", 30); //default if have no cookies yet
     }
-    if(!checkCookie('caret'))
-    {
+    if(!checkCookie('caret')){
         setCookie("caret", 'caret', 30); //default if have no cookies yet
     }
-    if(!checkCookie('lineCount'))
-    {
+    if(!checkCookie('lineCount')){
         setCookie("lineCount", 3, 30); //default if have no cookies yet
     }
-    if(!checkCookie('blur'))
-    {
+    if(!checkCookie('blur')){
         setCookie("blur", "off", 30); //default if have no cookies yet
     }
-    if(!checkCookie('theme'))
-    {
+    if(!checkCookie('theme')){
         setCookie("theme", "mizu", 30); //default if have no cookies yet
     }
 }
+function updateCookies()
+{
+    addCookies();
+    if ( window.location.href == ("https://www.cozytypes.com") || window.location.href == ("https://www.cozytypes.com/index.php")) {
+        updateIndex();
+    }
+    else if ( window.location.href == ("https://www.cozytypes.comp/preferences.php") ) {
+        updatePreferences();
+    }
+}
+function updateIndex()
+{
+    findCookie('words', 'sizesContainer').classList.add("currentSetting");
+    findCookie('time', 'fontsContainer').classList.add("currentSetting");
+    findCookie('mode', 'caretsContainer').classList.add("currentSetting");
+}
 function updatePreferences()
 {
-    if(checkCookie('fontSize'))
-        {
-            findCookie('fontSize', 'sizesContainer').classList.add("currentSetting");
-        }
-        else
-        {
-            setCookie("fontSize", 2, 30); //default if have no cookies yet
-        }
-        if(checkCookie('fontFamily'))
-        {
-            findCookie('fontFamily', 'fontsContainer').classList.add("currentSetting");
-        }
-        else
-        {
-            setCookie("fontFamily", "lexenddeca", 30); //default if have no cookies yet
-        }
-        if(checkCookie('caret'))
-        {
-            findCookie('caret', 'caretsContainer').classList.add("currentSetting");
-        }
-        else
-        {
-            setCookie("caret", 'caret', 30); //default if have no cookies yet
-        }
-        if(checkCookie('lineCount'))
-        {
-            findCookie('lineCount', 'linesContainer').classList.add("currentSetting");
-        }
-        else
-        {
-            setCookie("lineCount", 4, 30); //default if have no cookies yet
-        }
-        if(checkCookie('blur'))
-        {
-            findCookie('blur', 'blurContainer').classList.add("currentSetting");
-        }
-        else
-        {
-            setCookie("blur", "off", 30); //default if have no cookies yet
-        }
-        if(checkCookie('theme'))
-        {
-            findCookie('theme', 'themesContainer').innerHTML  += " ✦";
-        }
-        else
-        {
-            setCookie("theme", "mizu", 30); //default if have no cookies yet
-        }
+    findCookie('fontSize', 'sizesContainer').classList.add("currentSetting");
+    findCookie('fontFamily', 'fontsContainer').classList.add("currentSetting");
+    findCookie('caret', 'caretsContainer').classList.add("currentSetting");
+    findCookie('lineCount', 'linesContainer').classList.add("currentSetting");
+    findCookie('blur', 'blurContainer').classList.add("currentSetting");
+    findCookie('theme', 'themesContainer').innerHTML  += " ✦";
 }
 addCookies()
 document.body.onresize = function() { zoomwait() };

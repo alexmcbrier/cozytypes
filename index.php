@@ -30,27 +30,27 @@ if (isset($_COOKIE["email"])) {
             <div id="typingmode">
                 <div class="modeStack">
                     <div class="modeHeader">time</div>
-                    <div style="display: flex">
-                        <div class="typingModes" onclick="changeTime(15)">15</div>
-                        <div class="typingModes" onclick="changeTime(50)">50</div>
-                        <div class="typingModes" onclick="changeTime(60)">60</div>
-                        <div class="typingModes" onclick="changeTime(120)">120</div>
+                    <div id = "timesContainer" style="display: flex">
+                        <div title = "15" class="typingModes" onclick="changeTime(15)">15</div>
+                        <div title = "30" class="typingModes" onclick="changeTime(50)">30</div>
+                        <div title = "60" class="typingModes" onclick="changeTime(60)">60</div>
+                        <div title = "120" class="typingModes" onclick="changeTime(120)">120</div>
                     </div>
                 </div>
                 <div class="modeStack">
                     <div class="modeHeader">words</div>
-                    <div style="display: flex">
-                        <div class="typingModes" onclick="changeWords(10)">10</div>
-                        <div class="typingModes" onclick="changeWords(25)">25</div>
-                        <div class="typingModes" onclick="changeWords(50)">50</div>
-                        <div class="typingModes" onclick="changeWords(100)">100</div>
+                    <div id = "wordsContainer" style="display: flex">
+                        <div title = "15" class="typingModes" onclick="changeWords(10)">10</div>
+                        <div title = "25" class="typingModes" onclick="changeWords(25)">25</div>
+                        <div title = "50" class="typingModes" onclick="changeWords(50)">50</div>
+                        <div title = "100" class="typingModes" onclick="changeWords(100)">100</div>
                     </div>
                 </div>
                 <div class="modeStack">
                     <div class="modeHeader">difficulty</div>
-                    <div style="display: flex">
-                        <div class="typingModes" onclick="changeMode('easy')">easy</div>
-                        <div class="typingModes" onclick="changeMode('hard')">hard</div>
+                    <div id = "modesContainer" style="display: flex">
+                        <div title = "easy" class="typingModes" onclick="changeMode('easy')">easy</div>
+                        <div title = "hard" class="typingModes" onclick="changeMode('hard')">hard</div>
                     </div>
                 </div>
             </div>
