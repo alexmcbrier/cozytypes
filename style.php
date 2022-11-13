@@ -25,7 +25,7 @@ if (isset($_COOKIE["caret"])) {
 if (isset($_COOKIE["lineCount"])) {
     $lineCount = $_COOKIE["lineCount"];
 } else {
-    $lineCount = 4;
+    $lineCount = 3;
 }
 if (isset($_COOKIE["time"])) {
     $time = $_COOKIE["time"];
