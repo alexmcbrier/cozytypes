@@ -420,7 +420,7 @@ function addCookies()
         setCookie("time", "15", 30); //default if have no cookies yet
     }
     if(!checkCookie('mode')){
-        setCookie("mode", "east", 30); //default if have no cookies yet
+        setCookie("mode", "easy", 30); //default if have no cookies yet
     }
 }
 function updateIndex()
