@@ -420,7 +420,7 @@ function updateCookies()
     if ( window.location.href == ("https://www.cozytypes.com") || window.location.href == ("https://www.cozytypes.com/index.php")) {
         updateIndex();
     }
-    else if ( window.location.href == ("https://www.cozytypes.comp/preferences.php") ) {
+    else if ( window.location.href == ("https://www.cozytypes.com/preferences.php") ) {
         updatePreferences();
     }
 }
