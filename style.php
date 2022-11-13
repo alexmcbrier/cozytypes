@@ -382,7 +382,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         margin-right: 1rem;
         display: flex;
         /* equal height of the children */
-        color: white;
+        color: var(--rowBackground);
         z-index: 0;
         user-select: none;
         transition: all .25s ease;
@@ -1063,7 +1063,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     }
     .currentMode
     {
-        color: var(--rowBackground);
+        color: white;
     }
     #themesContainer a {
         user-select: none;
