@@ -251,7 +251,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         margin-top: 1rem;
         text-align: center;
     }
-
+    
     #footer {
         text-decoration: none;
         color: white;
@@ -333,6 +333,10 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     {
         background-color: var(--background);
     }
+    .currentMode
+    {
+        background-color: var(--rowBackground);
+    }
     #wordsWrapper {
         /* transition: .25s all; */
         line-height: <?php echo strval($fontSize * 1.5) . "rem"; ?>;
@@ -396,12 +400,8 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     .modeStack {
         margin-left: 2rem;
         padding: .5rem;
-    }
-
-    .modeHeader {
         font-size: 2rem;
     }
-
     #testText::first-line {
         color: white;
     }

@@ -425,9 +425,9 @@ function addCookies()
 }
 function updateIndex()
 {
-    findCookie('words', 'wordsContainer').classList.add("currentSetting");
-    findCookie('time', 'timesContainer').classList.add("currentSetting");
-    findCookie('mode', 'modesContainer').classList.add("currentSetting");
+    findCookie('words', 'wordsContainer').classList.add("currentMode");
+    findCookie('time', 'timesContainer').classList.add("currentMode");
+    findCookie('mode', 'modesContainer').classList.add("currentMode");
 }
 function updatePreferences()
 {
@@ -441,8 +441,7 @@ function updatePreferences()
 function updateCookies()
 {
     addCookies();
-    updateIndex();
-    if ( window.location.href == ("https://www.cozytypes.com") || window.location.href == ("https://www.cozytypes.com/index.php")) {
+    if ( window.location.href == ("https://www.cozytypes.com/") || window.location.href == ("https://www.cozytypes.com/index.php")) {
         updateIndex();
     }
     else if ( window.location.href == ("https://www.cozytypes.com/preferences.php") ) {
