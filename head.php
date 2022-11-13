@@ -31,4 +31,5 @@
             window.history.replaceState({}, document.title, clean_uri);
         }
     </script>
+    <script src="https://kit.fontawesome.com/c76282caa4.js" crossorigin="anonymous"></script> 
 </head>
