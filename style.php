@@ -333,10 +333,6 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     {
         background-color: var(--background);
     }
-    .currentMode
-    {
-        color: var(--rowBackground);
-    }
     #wordsWrapper {
         /* transition: .25s all; */
         line-height: <?php echo strval($fontSize * 1.5) . "rem"; ?>;
@@ -1065,7 +1061,10 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         display: flex;
         margin-bottom: 3rem;
     }
-
+    .currentMode
+    {
+        color: var(--rowBackground);
+    }
     #themesContainer a {
         user-select: none;
         font-size: 1rem;
