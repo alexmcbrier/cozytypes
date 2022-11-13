@@ -427,8 +427,6 @@ function updateCookies()
 function updateIndex()
 {
     findCookie('words', 'wordsContainer').classList.add("currentSetting");
-    findCookie('time', 'timesContainer').classList.add("currentSetting");
-    findCookie('mode', 'modesContainer').classList.add("currentSetting");
 }
 function updatePreferences()
 {

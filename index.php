@@ -28,9 +28,9 @@ if (isset($_COOKIE["email"])) {
             <!-- Display if test not complete -->
 
             <div id="typingmode">
-                <div id = "timesContainer" class="modeStack">
+                <div class="modeStack">
                     <div class="modeHeader">time</div>
-                    <div style="display: flex">
+                    <div id = "timesContainer" style="display: flex">
                         <div title = "15" class="typingModes" onclick="changeTime(15)">15</div>
                         <div title = "30" class="typingModes" onclick="changeTime(50)">30</div>
                         <div title = "60" class="typingModes" onclick="changeTime(60)">60</div>
