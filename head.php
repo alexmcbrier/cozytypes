@@ -21,8 +21,6 @@
     <title>CozyTypes</title>
     <script defer type="text/javascript" src="script.js"></script>
     <script type="text/javascript" src="script.js">
-        addCookies();
-    </script>
     <link rel="stylesheet" href="style.php">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

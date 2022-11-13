@@ -471,6 +471,7 @@ function updatePreferences()
             setCookie("theme", "mizu", 30); //default if have no cookies yet
         }
 }
+addCookies()
 document.body.onresize = function() { zoomwait() };
 newQuote();
 moveCursorWithY();
