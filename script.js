@@ -426,9 +426,9 @@ function updateCookies()
 }
 function updateIndex()
 {
-    findCookie('words', 'sizesContainer').classList.add("currentSetting");
-    findCookie('time', 'fontsContainer').classList.add("currentSetting");
-    findCookie('mode', 'caretsContainer').classList.add("currentSetting");
+    findCookie('words', 'wordsContainer').classList.add("currentSetting");
+    findCookie('time', 'timesContainer').classList.add("currentSetting");
+    findCookie('mode', 'modesContainer').classList.add("currentSetting");
 }
 function updatePreferences()
 {
@@ -439,7 +439,7 @@ function updatePreferences()
     findCookie('blur', 'blurContainer').classList.add("currentSetting");
     findCookie('theme', 'themesContainer').innerHTML  += " ✦";
 }
-addCookies()
+updateCookies();
 document.body.onresize = function() { zoomwait() };
 newQuote();
 moveCursorWithY();
