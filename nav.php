@@ -3,12 +3,7 @@
         <img alt="logo" width="55" height="55" display="block" src="images/panda2.png">
         <li style="padding-left: .5rem; padding-right: 2rem;">CozyTypes</li>
     </a>
-
-    <a href="/profile"><i class="fa-regular fa-user"></i></a>
-    <i class="fa-solid fa-keyboard"></i>
-    <i class="fa-solid fa-bars"></i>
-    <i class="fa-solid fa-gear"></i>
-    <i class="fa-solid fa-sliders"></i>
-    <li><a href="login.php"><img title="Profile" width="35" height="35" display="block" src="images/person.png"></a></li>
-    <li><a href="preferences.php"><img title="Settings" width="35" height="35" display="block" src="images/setting.png"></a></li>
+    <a href="/index.php"><i class="fa-solid fa-house"></i></a>
+    <a href="/login.php"><i class="fa-solid fa-user"></i></a>
+    <a href="/preferences.php"><i class="fa-solid fa-gear"></i></a>
 </nav>
