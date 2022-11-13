@@ -393,6 +393,33 @@ function findCookie(name, parentId) //checks to see which cookie is selected (us
                 }
             }
         }
+function addCookies()
+{
+    if(!checkCookie('fontSize'))
+    {
+        setCookie("fontSize", 2, 30); //default if have no cookies yet
+    }
+    if(!checkCookie('fontFamily'))
+    {
+        setCookie("fontFamily", "lexenddeca", 30); //default if have no cookies yet
+    }
+    if(!checkCookie('caret'))
+    {
+        setCookie("caret", 'caret', 30); //default if have no cookies yet
+    }
+    if(!checkCookie('lineCount'))
+    {
+        setCookie("lineCount", 4, 30); //default if have no cookies yet
+    }
+    if(!checkCookie('blur'))
+    {
+        setCookie("blur", "off", 30); //default if have no cookies yet
+    }
+    if(!checkCookie('theme'))
+    {
+        setCookie("theme", "mizu", 30); //default if have no cookies yet
+    }
+}
 function updatePreferences()
 {
     if(checkCookie('fontSize'))

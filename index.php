@@ -17,7 +17,7 @@ if (isset($_COOKIE["email"])) {
 
 <?php include "./head.php" ?>
 
-<body class="main-body">
+<body class="main-body" onload="addCookies()">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JMV592" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
