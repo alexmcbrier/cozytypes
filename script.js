@@ -439,7 +439,7 @@ function updatePreferences()
     findCookie('blur', 'blurContainer').classList.add("currentSetting");
     findCookie('theme', 'themesContainer').innerHTML  += " ✦";
 }
-updateCookies();
+addCookies();
 document.body.onresize = function() { zoomwait() };
 newQuote();
 moveCursorWithY();
