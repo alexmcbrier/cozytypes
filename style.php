@@ -444,7 +444,6 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         color: var(--incorrect);
         transition: all .35s ease;
         /* fade in word */
-        text-shadow: 1px 1px 2px var(--incorrect), 0 0 1em var(--incorrect), 0 0 0.2em var(--incorrect);
     }
 
     .current-word {
