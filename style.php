@@ -152,6 +152,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         font-size: 2rem;
         padding: 1rem;
         color: var(--testText);
+        transition: all .35s ease;
     }
     i:hover {
         color: white;
