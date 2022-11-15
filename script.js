@@ -217,9 +217,13 @@ function wordsPerMinute(testDuration) {
     return wpm
 }
 async function newQuote() {
-    if (getCookie("typingMode") == "words")
+    if (getCookie("typingMode") == "time")
     {
         displayTimer.innerHTML = getTime(getCookie("time")) //sets the time (does not begin timer however)
+    }
+    else
+    {
+        displayTimer.innerHTML = getTime(0);
     }
     displayInput.addEventListener('input', () => { startTimer() }) //starts the timer on input
     randomQuote() //creates a new random quote (Values stored inside sentence Array)
