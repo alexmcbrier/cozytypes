@@ -214,7 +214,7 @@ function wordsPerMinute(testDuration) {
     const timeIn = time - testDuration
     if (getCookie("typingMode") == "words")
     {
-        const timeIn = testDuration
+        timeIn = testDuration
     }
     const correctText = displayText?.querySelectorAll('.correct').length
     const wpm = Math.round(correctText / 5 / timeIn * 60)
