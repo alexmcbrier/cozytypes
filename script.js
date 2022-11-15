@@ -211,14 +211,21 @@ function randomQuote() {
     }
 }
 function wordsPerMinute(testDuration) {
-    const timeIn = time - testDuration
-    if (getCookie("typingMode") == "words")
+    if (getCookie("typingMode") == "time")
     {
-        timeIn = testDuration
+        const timeIn = time - testDuration
+        const correctText = displayText?.querySelectorAll('.correct').length
+        const wpm = Math.round(correctText / 5 / timeIn * 60)
+        return wpm
     }
-    const correctText = displayText?.querySelectorAll('.correct').length
-    const wpm = Math.round(correctText / 5 / timeIn * 60)
-    return wpm
+    else
+    {
+        const timeIn = testDuration
+        const correctText = displayText?.querySelectorAll('.correct').length
+        const wpm = Math.round(correctText / 5 / timeIn * 60)
+        return wpm
+    }
+
 }
 async function newQuote() {
     if (getCookie("typingMode") == "time")
