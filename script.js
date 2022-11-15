@@ -198,6 +198,10 @@ function restart() {
 }
 function randomQuote() {
     displayText.innerText = ''// removing previous sentence if applicable
+    if (getCookie("typingMode") == "time")
+    {
+        sentenceLength = 250; //max amount of words (should eventually be changed to update after tyhe begin typing to minimize latency)
+    }
     for (let i = 0; i < sentenceLength; i++) {
         sentence[i] = wordList[Math.floor(Math.random() * wordList.length)] //prevent repeats from occuring, very janky
         const index = wordList.indexOf(sentence[i]);
@@ -421,6 +425,9 @@ function addCookies()
     }
     if(!checkCookie('mode')){
         setCookie("mode", "easy", 30); //default if have no cookies yet
+    }
+    if(!checkCookie('typingMode')){
+        setCookie("typingMode", "time", 30); //default if have no cookies yet
     }
 }
 function updateIndex()
