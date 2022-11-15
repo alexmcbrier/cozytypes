@@ -432,9 +432,15 @@ function addCookies()
 }
 function updateIndex()
 {
-    findCookie('words', 'wordsContainer').classList.add("currentMode");
-    findCookie('time', 'timesContainer').classList.add("currentMode");
-    findCookie('mode', 'modesContainer').classList.add("currentMode");
+    if (getCookie("typingMode") == "time") //set the current time
+    {
+        findCookie('time', 'timesContainer').classList.add("currentMode");
+    }
+    else if (getCookie("typingMode") == "words") //set the current num words
+    {
+        findCookie('words', 'wordsContainer').classList.add("currentMode");
+    }
+    findCookie('mode', 'modesContainer').classList.add("currentMode"); //update regardless
 }
 function updatePreferences()
 {
