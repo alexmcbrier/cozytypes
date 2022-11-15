@@ -31,19 +31,19 @@ if (isset($_COOKIE["email"])) {
                 <div class="modeStack">
                     <div>time</div>
                     <div id = "timesContainer" style="display: flex">
-                        <div title = "15" class="typingModes" onclick="setCookie('typingMode', 'time', 30) changeTime(15)">15</div>
-                        <div title = "30" class="typingModes" onclick="setCookie('typingMode', 'time', 30) changeTime(30)">30</div>
-                        <div title = "60" class="typingModes" onclick="setCookie('typingMode', 'time', 30) changeTime(60)">60</div>
-                        <div title = "120" class="typingModes" onclick="setCookie('typingMode', 'time', 30) changeTime(120)">120</div>
+                        <div title = "15" class="typingModes" onclick="setCookie('typingMode', 'time', 30); changeTime(15)">15</div>
+                        <div title = "30" class="typingModes" onclick="setCookie('typingMode', 'time', 30); changeTime(30)">30</div>
+                        <div title = "60" class="typingModes" onclick="setCookie('typingMode', 'time', 30); changeTime(60)">60</div>
+                        <div title = "120" class="typingModes" onclick="setCookie('typingMode', 'time', 30); changeTime(120)">120</div>
                     </div>
                 </div>
                 <div class="modeStack">
                     <div>words</div>
                     <div id = "wordsContainer" style="display: flex">
-                        <div title = "10" class="typingModes" onclick="setCookie('typingMode', 'words', 30) changeWords(10)">10</div>
-                        <div title = "25" class="typingModes" onclick="setCookie('typingMode', 'words', 30) changeWords(25)">25</div>
-                        <div title = "50" class="typingModes" onclick="setCookie('typingMode', 'words', 30) changeWords(50)">50</div>
-                        <div title = "100" class="typingModes" onclick="setCookie('typingMode', 'words', 30) changeWords(100)">100</div>
+                        <div title = "10" class="typingModes" onclick="setCookie('typingMode', 'words', 30); changeWords(10)">10</div>
+                        <div title = "25" class="typingModes" onclick="setCookie('typingMode', 'words', 30); changeWords(25)">25</div>
+                        <div title = "50" class="typingModes" onclick="setCookie('typingMode', 'words', 30); changeWords(50)">50</div>
+                        <div title = "100" class="typingModes" onclick="setCookie('typingMode', 'words', 30); changeWords(100)">100</div>
                     </div>
                 </div>
                 <div class="modeStack">
