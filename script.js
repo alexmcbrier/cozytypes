@@ -411,7 +411,7 @@ function addCookies()
         setCookie("blur", "off", 30); //default if have no cookies yet
     }
     if(!checkCookie('theme')){
-        setCookie("theme", "mizu", 30); //default if have no cookies yet
+        setCookie("theme", "sakura", 30); //default if have no cookies yet
     }
     if(!checkCookie('words')){
         setCookie("words", "50", 30); //default if have no cookies yet

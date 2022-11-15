@@ -5,7 +5,7 @@ session_start();
 if (isset($_COOKIE["theme"])) {
     $theme = $_COOKIE["theme"];
 } else {
-    $theme = "mizu";
+    $theme = "sakura";
 }
 if (isset($_COOKIE["fontFamily"])) {
     $fontFamily = $_COOKIE["fontFamily"];
