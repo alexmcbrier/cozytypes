@@ -241,16 +241,30 @@ async function newQuote() {
     lastWord = displayText?.getElementsByClassName('word')[count - 1]//Only want 1 value in class list
 }
 function startTimer() {
+
     if (timerVar != "running") {
         startTime = new Date()
-        setInterval(() => {
-            duration = Math.floor(time + 1 - (new Date() - startTime) / 1000)
-            displayTimer.innerText = getTime(duration)
-            displayWPM.innerText = wordsPerMinute(duration) + " WPM"
-            if (duration <= 0) {
-                endTest()
-            }
-        }, 1000)
+        if (getCookie("typingMode") == "words")
+        {
+            setInterval(() => {
+
+                duration = Math.floor(0 + (new Date() - startTime) / 1000)
+                displayTimer.innerText = getTime(duration)
+                displayWPM.innerText = wordsPerMinute(duration) + " WPM"
+            }, 1000)
+        }
+        else
+        {
+            setInterval(() => {
+
+                duration = Math.floor(time + 1 - (new Date() - startTime) / 1000)
+                displayTimer.innerText = getTime(duration)
+                displayWPM.innerText = wordsPerMinute(duration) + " WPM"
+                if (duration <= 0) {
+                    endTest()
+                }
+            }, 1000)
+        }
         timerVar = "running"
     }
 }
