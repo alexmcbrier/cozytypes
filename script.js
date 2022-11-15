@@ -211,11 +211,8 @@ function randomQuote() {
     }
 }
 function wordsPerMinute(testDuration) {
-    if (getCookie("typingMode") == "time")
-    {
-        const timeIn = time - testDuration
-    }
-    else
+    const timeIn = time - testDuration
+    if (getCookie("typingMode") == "words")
     {
         const timeIn = testDuration
     }
