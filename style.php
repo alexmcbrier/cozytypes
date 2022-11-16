@@ -419,6 +419,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         transition: all .125s;
         height: <?php echo strval($caretHeight) . "rem"; ?>;
         margin-top: <?php echo strval($caretTop) . "rem"; ?>;
+        transition-timing-function: linear;
     }
 
     .blur {
