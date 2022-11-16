@@ -1,6 +1,5 @@
 <?php
 header('Content-Type: text/css');
-//add the theme in the db
 session_start();
 if (isset($_COOKIE["theme"])) {
     $theme = $_COOKIE["theme"];
@@ -42,13 +41,12 @@ if (isset($_COOKIE["typingMode"])) {
 } else {
     $typingMode = "words";
 }
-
+//caret settinngs
 $height = 1.5 * $fontSize * $lineCount;
 $caretTop = 0;
 $caretHeight = 0;
 $caretWidth = 0;
 $caretOpacity = 25;
-//others
 if ($caret == "none") {
     $caretTop = 0;
     $caretHeight = 0;
@@ -433,21 +431,15 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     }
 
     .correct {
-        transition: all .35s ease;
-        /* fade in word */
         color: var(--correct);
-
     }
 
     .incorrect,
     .extra {
         color: var(--incorrect);
-        transition: all .35s ease;
-        /* fade in word */
     }
 
     .current-word {
-
         /* color: var(--currentWord); */
         display: inline-block;
         padding: 0rem <?php echo strval($fontSize * .2) . "rem"; ?>;
