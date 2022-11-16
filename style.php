@@ -65,7 +65,7 @@ if ($caret == "none") {
 } else if ($caret == "caret") {
     $caretTop = $fontSize * .2;
     $caretHeight = $fontSize * 1.25;
-    $caretWidth = $fontSize * .15;
+    $caretWidth = $fontSize * .1;
     $caretOpacity = 100;
 }
 include "themes/" . $theme . ".css"; //theme added depends on the name of the one in the database
@@ -418,7 +418,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         border-radius: 1.5rem;
         position: absolute;
         margin-top: 1.75rem;
-        transition: all .25s;
+        transition: all .125s;
         height: <?php echo strval($caretHeight) . "rem"; ?>;
         margin-top: <?php echo strval($caretTop) . "rem"; ?>;
     }
