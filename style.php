@@ -448,7 +448,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
 
     .current-word {
 
-        color: var(--currentWord);
+        /* color: var(--currentWord); */
         display: inline-block;
         padding: 0rem <?php echo strval($fontSize * .2) . "rem"; ?>;
     }
