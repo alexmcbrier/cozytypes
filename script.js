@@ -329,7 +329,7 @@ function moveCursor()
     const parent = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
     let chars = parent.querySelectorAll("*");
     let index = displayInput.value.length
-    if (index > chars.length - 1)
+    if (index >= chars.length)
     {
       const rect = chars[index - (index - (chars.length - 1))].getBoundingClientRect();
       cursor.style.left = rect.x + rect.width + "px";
@@ -337,7 +337,7 @@ function moveCursor()
     else
     {
       const rect = chars[index].getBoundingClientRect();
-      cursor.style.left = rect.x - 10 + "px";
+      cursor.style.left = rect.x + "px";
     }
   }
   else if(getCookie('caret') == "underlineLetter")
