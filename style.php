@@ -150,7 +150,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         font-size: 2rem;
         padding: 1rem;
         color: var(--testText);
-        transition: .35s ease;
+        transition: color .25s ease;
     }
     i:hover {
         color: white;
@@ -406,7 +406,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         color: var(--rowBackground);
         z-index: 0;
         user-select: none;
-        transition: all .25s ease;
+        transition: color .25s ease;
         cursor: pointer;
     }
 
