@@ -260,8 +260,7 @@ async function newQuote() {
 }
 function startTimer() {
     if (timerVar != "running") {
-        document.getElementsByClassName("modeStack").style.display = "none";
-        document.getElementById("footer").style.display = "none";
+        document.getElementsById("typingmode").style.visibility = 'hidden';
         startTime = new Date()
         if (getCookie("typingMode") == "words")
         {
