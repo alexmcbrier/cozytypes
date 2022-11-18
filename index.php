@@ -26,7 +26,7 @@ if (isset($_COOKIE["email"])) {
         <?php include "./nav.php" ?>
         <?php if (!isset($_GET["finish"])) { ?>
             <!-- Display if test not complete -->
-
+          <div id="middle">
             <div id="typingmode">
                 <div class="modeStack">
                     <div>time</div>
@@ -64,10 +64,10 @@ if (isset($_COOKIE["email"])) {
                 <div id="time"></div>
                 <img id="restartTest" onclick="restart()" src="images/refresh-button.png">
             </div>
-
-            <a id="footer" href="https://github.com/alexmcbrier/cozytypes">
-                <&sol;> github
-            </a>
+            </div>
+            <div id = "bottom">
+                <a id="footer" href="https://github.com/alexmcbrier/cozytypes"><&sol;> github</a>
+            </div>
         <?php } else if (isset($_GET["finish"])) { ?>
             <!-- Display if test IS complete -->
             <div id="middle">
