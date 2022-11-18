@@ -259,8 +259,8 @@ async function newQuote() {
     lastWord = displayText?.getElementsByClassName('word')[count - 1]//Only want 1 value in class list
 }
 function startTimer() {
-
     if (timerVar != "running") {
+        hideElement(timesContainer);
         startTime = new Date()
         if (getCookie("typingMode") == "words")
         {
@@ -417,6 +417,10 @@ function zoomwait() {
     } catch (err) {
         setTimeout(() => { moveCursorWithY(), setCursorVisibility(); }, 500);
     }
+}
+function hideElement(elementId)
+{
+    document.getElementById(elementId).style.display = "none";
 }
 function findCookie(name, parentId) //checks to see which cookie is selected (used in prefrences to highlight current setting)
         {
