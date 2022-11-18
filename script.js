@@ -260,7 +260,7 @@ async function newQuote() {
 }
 function startTimer() {
     if (timerVar != "running") {
-        hideElement(timesContainer);
+        hideElement(wordsWrapper);
         startTime = new Date()
         if (getCookie("typingMode") == "words")
         {
