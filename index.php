@@ -65,6 +65,7 @@ if (isset($_COOKIE["email"])) {
                 <img id="restartTest" onclick="restart()" src="images/refresh-button.png">
             </div>
             </div>
+            <?php include "./footer.php" ?>
         <?php } else if (isset($_GET["finish"])) { ?>
             <!-- Display if test IS complete -->
             <div id="middle">
