@@ -290,6 +290,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     {
         color: white;
         padding: 0 .5rem;
+        line-height: 4rem;
     }
     .box {
         z-index: 0;
