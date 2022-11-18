@@ -273,6 +273,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         user-select: none;
         display: flex;
         justify-content: center;
+        font-size: 2rem;
     }
     
     .footerLinks {
@@ -283,6 +284,14 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         display: flex;
         justify-content: center;
         padding 1rem 0rem;
+        line-height: 3.5rem;
+    }
+    
+    .linkDivider
+    {
+        color: white;
+        padding: 1rem;
+        line-height: 3.5rem;
     }
     .box {
         z-index: 0;
