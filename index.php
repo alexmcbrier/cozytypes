@@ -26,7 +26,6 @@ if (isset($_COOKIE["email"])) {
         <?php include "./nav.php" ?>
         <?php if (!isset($_GET["finish"])) { ?>
             <!-- Display if test not complete -->
-            <div id="typingArea"> 
                 <div class="modeStack">
                     <div>time</div>
                     <div id = "timesContainer" style="display: flex">
