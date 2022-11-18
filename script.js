@@ -260,7 +260,7 @@ async function newQuote() {
 }
 function startTimer() {
     if (timerVar != "running") {
-        document.getElementById("timesContainer").style.display = "none";
+        document.getElementsByClassName("modeStack").style.display = "none";
         document.getElementById("footer").style.display = "none";
         startTime = new Date()
         if (getCookie("typingMode") == "words")
