@@ -195,12 +195,8 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         margin: auto;
         display: grid;
         gap: 1rem;
-    }
-    #bottom
-    {
-        width: 100%;
-        height: 5rem;
-        margin-bottom: 1rem;
+        justify-content: space-between;
+        min-height: 100vh;
     }
     nav {
         width: 100%;
