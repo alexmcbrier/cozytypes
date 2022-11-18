@@ -269,14 +269,12 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     
     #footer
     {
-      width: 100%;
-      text-align: center;
-      color: white;
-      text-decoration: none
-      height: 3em;
-      user-select: none;
-      display: flex;
-      justify-content: center;
+        text-decoration: none;
+        color: white;
+        text-align: center;
+        user-select: none;
+        display: flex;
+        justify-content: center;
     }
 
     .box {
