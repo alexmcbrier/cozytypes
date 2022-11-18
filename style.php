@@ -689,7 +689,6 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         margin-bottom: 2rem;
         margin-left: 1rem;
         padding: 2rem 2rem;
-        box-shadow: 0 4px 15px 0 var(--row);
         margin-bottom: 2.25rem;
 
     }
@@ -707,7 +706,6 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         margin-bottom: 2.25rem;
         margin-left: 1rem;
         padding: 2rem 3rem;
-        box-shadow: 0 4px 15px 0 var(--row);
     }
 
     .friend {
@@ -949,7 +947,6 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
 
     #loginButton1 {
         background-color: var(--testText);
-        box-shadow: 0 4px 15px 0 var(--testText);
         text-decoration: none;
     }
 
@@ -961,7 +958,6 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
 
     #loginButton1:hover {
         background-color: var(--incorrect);
-        box-shadow: 0 4px 15px 0 var(--incorrect);
     }
 
     #loginButton2:hover {
@@ -1056,7 +1052,6 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         transition: all .4s ease-in-out;
         background-image: linear-gradient(to right, var(--testText), var(--testText));
         /* background color*/
-        box-shadow: 0rem 0rem 10rem 0 var(--testText);
         margin-left: 1.5rem;
         margin-right: 1.5rem;
         user-select: none;
