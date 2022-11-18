@@ -265,6 +265,9 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         user-select: none;
         display: flex;
         justify-content: center;
+        width: 100%;
+        height: 5rem;
+        margin-bottom: 1rem;
     }
 
     .box {
@@ -296,13 +299,6 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         margin: 1rem;
         align-content: center;
     }
-
-    #bottom {
-        width: 100%;
-        height: 5rem;
-        margin-bottom: 1rem;
-    }
-
     #textInput {
         font-size: 2rem;
         border-radius: 1.5rem;
@@ -975,7 +971,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
 
     }
 
-    #middle {
+    #typingArea {
         height: 100%;
         justify-content: center;
         display: flex;
