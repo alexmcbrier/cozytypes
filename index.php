@@ -69,9 +69,9 @@ if (isset($_COOKIE["email"])) {
                 <div id="footer">
                 <a class = "footerLinks" href="https://github.com/alexmcbrier/cozytypes"><&sol;> github</a>
                 <div class = "linkDivider">/</div>
-                <a class = "footerLinks" href="/preferences.php">theme <i class="fa-solid fa-palette"></i></a>
+                <a class = "footerLinks" href="/preferences.php">theme <i class="fa-solid fa-palette fa-sm"></i></a>
                 <div class = "linkDivider">/</div>
-                <a class = "footerLinks" href="/preferences.php">font <i class="fa-solid fa-font"></i></a>
+                <a class = "footerLinks" href="/preferences.php">font <i class="fa-solid fa-font fa-sm"></i></a>
             </a>
             </div>
         <?php } else if (isset($_GET["finish"])) { ?>
