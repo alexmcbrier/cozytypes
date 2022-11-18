@@ -416,10 +416,10 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         border-radius: 1.5rem;
         position: absolute;
         margin-top: 1.75rem;
-        transition: all .125s;
+        transition: all .08s;
+        transition-timing-function: linear;
         height: <?php echo strval($caretHeight) . "rem"; ?>;
         margin-top: <?php echo strval($caretTop) . "rem"; ?>;
-        transition-timing-function: linear;
     }
 
     .blur {
