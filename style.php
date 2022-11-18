@@ -271,9 +271,10 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     {
       width: 100%;
       text-align: center;
+      color: white;
+      text-decoration: none
       height: 3em;
       user-select: none;
-      padding-top: 2.5rem;
       display: flex;
       justify-content: center;
     }
