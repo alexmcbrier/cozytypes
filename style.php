@@ -278,19 +278,17 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     
     .footerLinks {
         text-decoration: none;
-        color: white;
+        color: var(--row);
         text-align: center;
         user-select: none;
         display: flex;
         justify-content: center;
-        line-height: 4rem;
     }
     
     .linkDivider
     {
         color: white;
         padding: 0 .5rem;
-        line-height: 4rem;
     }
     .box {
         z-index: 0;
