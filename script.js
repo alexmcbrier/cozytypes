@@ -261,6 +261,7 @@ async function newQuote() {
 function startTimer() {
     if (timerVar != "running") {
         document.getElementById("typingmode").style.visibility = 'hidden';
+        document.getElementById("footer").style.visibility = 'hidden';
         startTime = new Date()
         if (getCookie("typingMode") == "words")
         {
