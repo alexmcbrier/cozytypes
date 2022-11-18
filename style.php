@@ -372,12 +372,9 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     }
 
     #typingmode {
-        border: .3rem solid var(--rowBackground);
         font-size: 1rem;
         color: var(--row);
-        border-radius: 1.5rem;
         display: flex;
-        justify-content: space-evenly;
 
         /* can change to center */
         padding: 1rem 0rem;
