@@ -195,6 +195,14 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         margin: auto;
         display: grid;
         gap: 1rem;
+    }
+    #testContent
+    {
+        transition: all .5s ease-in-out 0s;
+        width: 80%;
+        margin: auto;
+        display: grid;
+        gap: 1rem;
         justify-content: space-between;
         min-height: 100vh;
     }
