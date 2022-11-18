@@ -260,7 +260,7 @@ async function newQuote() {
 }
 function startTimer() {
     if (timerVar != "running") {
-        hideElement(wordsWrapper);
+        document.getElementById("wordsWrapper").style.display = "none";
         startTime = new Date()
         if (getCookie("typingMode") == "words")
         {
@@ -420,7 +420,7 @@ function zoomwait() {
 }
 function hideElement(elementId)
 {
-    document.getElementById("" + elementId).style.display = "none";
+    document.getElementById(elementId).style.display = "none";
 }
 function findCookie(name, parentId) //checks to see which cookie is selected (used in prefrences to highlight current setting)
         {
