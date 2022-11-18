@@ -320,12 +320,6 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         align-content: center;
     }
 
-    #bottom {
-        width: 100%;
-        height: 5rem;
-        margin-bottom: 1rem;
-    }
-
     #textInput {
         font-size: 2rem;
         border-radius: 1.5rem;
