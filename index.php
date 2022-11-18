@@ -66,7 +66,7 @@ if (isset($_COOKIE["email"])) {
             </div>
             </div>
             <div id="footer">
-                <a class = "footerLinks" href="https://github.com/alexmcbrier/cozytypes">github <i class="fa-solid fa-code"></i></a>
+                <a class = "footerLinks" href="https://github.com/alexmcbrier/cozytypes">github <i class="fa-solid fa-code fa-sm"></i></a>
                 <div class = "linkDivider">/</div>
                 <a class = "footerLinks" href="/preferences.php">theme <i class="fa-solid fa-palette fa-sm"></i></a>
                 <div class = "linkDivider">/</div>
