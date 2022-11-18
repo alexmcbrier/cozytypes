@@ -287,7 +287,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     
     .linkDivider
     {
-        color: white;
+        color: var(--row);
         padding: 0 .5rem;
     }
     .box {
