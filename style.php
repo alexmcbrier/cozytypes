@@ -196,7 +196,16 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         display: grid;
         gap: 1rem;
     }
-
+    #middle
+    {
+        height: 100%;
+    }
+    #bottom
+    {
+        width: 100%;
+        height: 5rem;
+        margin-bottom: 1rem;
+    }
     nav {
         width: 100%;
         text-align: center;
