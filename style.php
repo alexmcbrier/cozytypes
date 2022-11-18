@@ -296,6 +296,13 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         margin: 1rem;
         align-content: center;
     }
+
+    #bottom {
+        width: 100%;
+        height: 5rem;
+        margin-bottom: 1rem;
+    }
+
     #textInput {
         font-size: 2rem;
         border-radius: 1.5rem;
@@ -968,7 +975,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
 
     }
 
-    #typingArea {
+    #middle {
         height: 100%;
         justify-content: center;
         display: flex;
