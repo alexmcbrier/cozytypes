@@ -9,7 +9,7 @@
         <div class="preferences">
             <div class="horizontalAlign">
                 <div id="sizesContainer" class="rowContainer" style="width: 30%">
-                    <h1 class="notSignedIn" id="preferenceHeader">Size</h1>
+                    <h1 class="notSignedIn" id="preferenceHeader">Size <i class="fa-solid fa-text-height"></i> </h1>
                     <a title="1" class="preference" onclick="setCookie('fontSize', 1, 30)">1</a>
                     <a title="2" class="preference" onclick="setCookie('fontSize', 2, 30)">2</a>
                     <a title="3" class="preference" onclick="setCookie('fontSize', 3, 30)">3</a>
@@ -17,7 +17,7 @@
                     <a title="5" class="preference" onclick="setCookie('fontSize', 5, 30)">5</a>
                 </div>
                 <div id="fontsContainer" class="rowContainer" style="width: 70%">
-                    <h1 class="notSignedIn" id="preferenceHeader">Font</h1>
+                    <h1 class="notSignedIn" id="preferenceHeader">Font <i class="fa-solid fa-font"></i></h1>
                     <a title="lexenddeca" class="preference" style="font-family: 'LexendDeca', serif;" onclick="setCookie('fontFamily', 'lexenddeca', 30)">lexend deca</a>
                     <a title="arial" class="preference" style="font-family: Arial;" onclick="setCookie('fontFamily', 'arial', 30)">arial</a>
                     <a title="ibmplexsans" class="preference" style="font-family: 'IBM Plex Sans', sans-serif;" onclick="setCookie('fontFamily', 'ibmplexsans', 30)">IBM Plex Sans</a>
@@ -33,7 +33,7 @@
             </div>
             <div class="horizontalAlign">
                 <div id="caretsContainer" class="rowContainer" style="width: 40%">
-                    <h1 class="notSignedIn" id="preferenceHeader">Caret</h1>
+                    <h1 class="notSignedIn" id="preferenceHeader">Caret <i class="fa-solid fa-arrow-pointer"></i></h1>
                     <a title="none" class="preference" onclick="setCookie('caret', 'none', 30)">none</a>
                     <a title="caret" class="preference" onclick="setCookie('caret', 'caret', 30)">caret</a>
                     <a title="underlineLetter" class="preference" onclick="setCookie('caret', 'underlineLetter', 30)">underline letter</a>
@@ -41,21 +41,21 @@
                     <a title="highlightWord" class="preference" onclick="setCookie('caret', 'highlightWord', 30)">highlight word</a>
                 </div>
                 <div id="linesContainer" class="rowContainer" style="width: 35%">
-                    <h1 class="notSignedIn" id="preferenceHeader">Amount of lines</h1>
+                    <h1 class="notSignedIn" id="preferenceHeader">Amount of lines <i class="fa-solid fa-align-left"></i></h1>
                     <a title="1" class="preference" onclick="setCookie('lineCount', 1, 30)">1</a>
                     <a title="2" class="preference" onclick="setCookie('lineCount', 2, 30)">2</a>
                     <a title="3" class="preference" onclick="setCookie('lineCount', 3, 30)">3</a>
                     <a title="4" class="preference" onclick="setCookie('lineCount', 4, 30)">4</a>
                 </div>
                 <div id="blurContainer" class="rowContainer" style="width: 25%">
-                    <h1 class="notSignedIn" id="preferenceHeader">Blur Text</h1>
+                    <h1 class="notSignedIn" id="preferenceHeader">Blur Text <i class="fa-solid fa-eye"></i></h1>
                     <a title="on" class="preference" onclick="setCookie('blur', 'on', 30)">on</a>
                     <a title="off" class="preference" onclick="setCookie('blur', 'off', 30)">off</a>
                 </div>
             </div>
         </div>
         <div id="themesContainer" class="rowContainer">
-            <h1 id="preferenceHeader">Theme</h1>
+            <h1 id="preferenceHeader">Theme <i class="fa-solid fa-palette"></i></h1>
             <a title="light" id="theme-light" onclick="setCookie('theme', 'light', 30)">light</a>
             <a title="dark" id="theme-dark" onclick="setCookie('theme', 'dark', 30)">dark</a>
             <a title="dracula" id="theme-dracula" onclick="setCookie('theme', 'dracula', 30)">dracula</a>
