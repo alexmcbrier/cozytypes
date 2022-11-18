@@ -24,7 +24,7 @@ if (isset($_COOKIE["email"])) {
     <div id="cursor"></div>
     <div id="testContent">
         <?php include "./nav.php" ?>
-        <?php if (!isset($_GET["finish"])) { ?>
+
             <!-- Display if test not complete -->
           <div id="middle">
             <div id="typingmode">
@@ -55,27 +55,35 @@ if (isset($_COOKIE["email"])) {
                 </div>
             </div>
 
-            <div id="testText">
-                <div id="wordsWrapper"></div>
-            </div>
-            <div class="testRow">
-                <textarea id="textInput" spellcheck="false" maxlength="16" autofocus></textarea>
-                <div id="wpmDisplay">0 WPM</div>
-                <div id="time"></div>
-                <img id="restartTest" onclick="restart()" src="images/refresh-button.png">
-            </div>
-            </div>
-            <?php include "./footer.php" ?>
-        <?php } else if (isset($_GET["finish"])) { ?>
-            <!-- Display if test IS complete -->
-            <div id="middle">
-                <div id="displayStats">
-                    <div class="statsRow"><?= $_GET["wpm"] ?>wpm</div>
-                    <div class="statsRow"><?= $_GET["accuracy"] ?>% accuracy</div>
-                    <div class="statsRow"><?= $_GET["testTime"] ?>s</div>
+            <?php if (!isset($_GET["finish"])) { ?>
+                <div id="testText">
+                    <div id="wordsWrapper"></div>
+                </div>
+                <div class="testRow">
+                    <textarea id="textInput" spellcheck="false" maxlength="16" autofocus></textarea>
+                    <div id="wpmDisplay">0 WPM</div>
+                    <div id="time"></div>
+                    <div id ="resetBox"><i id="restartTest"class="fa-solid fa-rotate" onclick="restart()"></i></div>
                 </div>
             </div>
-        <?php } ?>
+            <?php } else if (isset($_GET["finish"])) { ?>
+            <!-- Display if test IS complete -->
+            <div id="displayStats">
+                <div class="rowContainer" style="width: 33%;">
+                    <h1 class="notSignedIn" id="preferenceHeader">Words Per Minute<i class="fa-solid fa-clock-rotate-left"></i></h1>
+                    <a class="preference results"><?= $_GET["wpm"] ?></a>
+                </div>
+                <div class="rowContainer" style="width: 33%">
+                    <h1 class="notSignedIn" id="preferenceHeader">Accuracy<i class="fa-solid fa-crosshairs"></i></h1>
+                    <a class="preference results"><?= $_GET["accuracy"] ?>%</a>
+                </div>
+                <div class="rowContainer" style="width: 33%">
+                    <h1 class="notSignedIn" id="preferenceHeader">Time<i class="fa-regular fa-hourglass-half"></i></i></i></h1>
+                    <a class="preference results"><?= $_GET["testTime"] ?>s</a>
+                </div>
+            </div>
+            <?php } ?>
+        <?php include "./footer.php" ?>
     </div>
 </body>
 

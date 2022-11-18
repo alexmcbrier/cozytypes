@@ -5,6 +5,9 @@ const displayInput = document.getElementById('textInput') // Input Box
 const displayTimer = document.getElementById('time') // Time Display
 const displayWPM = document.getElementById('wpmDisplay') // wpm Display
 const mainContent = document.getElementById('mainContent') // wpm Display
+const cursor = document.getElementById('cursor') 
+const footer = document.getElementById("footer")
+const typingMode = document.getElementById("typingmode")
 var timerVar = "not running" // Turns on when user begins typing...
 var sentenceLength = 50;
 var time = 0;
@@ -260,8 +263,10 @@ async function newQuote() {
 }
 function startTimer() {
     if (timerVar != "running") {
-        document.getElementById("typingmode").style.visibility = 'hidden';
-        document.getElementById("footer").style.visibility = 'hidden';
+        footer.classList.add('fadeOut');
+        typingMode.classList.add('fadeOut');
+        cursor.style.animation = "none";
+
         startTime = new Date()
         if (getCookie("typingMode") == "words")
         {
@@ -448,7 +453,7 @@ function addCookies()
         setCookie("blur", "off", 30); //default if have no cookies yet
     }
     if(!checkCookie('theme')){
-        setCookie("theme", "sakura", 30); //default if have no cookies yet
+        setCookie("theme", "dracula", 30); //default if have no cookies yet
     }
     if(!checkCookie('words')){
         setCookie("words", "50", 30); //default if have no cookies yet

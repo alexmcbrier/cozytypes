@@ -4,7 +4,7 @@ session_start();
 if (isset($_COOKIE["theme"])) {
     $theme = $_COOKIE["theme"];
 } else {
-    $theme = "sakura";
+    $theme = "dracula";
 }
 if (isset($_COOKIE["fontFamily"])) {
     $fontFamily = $_COOKIE["fontFamily"];
@@ -46,7 +46,7 @@ $height = 1.5 * $fontSize * $lineCount;
 $caretTop = 0;
 $caretHeight = 0;
 $caretWidth = 0;
-$caretOpacity = 25;
+$caretOpacity = 100;
 if ($caret == "none") {
     $caretTop = 0;
     $caretHeight = 0;
@@ -56,7 +56,6 @@ if ($caret == "none") {
 } else if ($caret == "underlineLetter") {
     $caretTop = $fontSize * 1.35;
     $caretHeight = $fontSize / 5;
-    $caretOpacity = 25;
 } else if ($caret == "highlightWord") {
     $caretTop = 0;
     $caretHeight = $fontSize * 1.5;
@@ -203,7 +202,6 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         margin: auto;
         display: grid;
         gap: 1rem;
-        justify-content: space-between;
         min-height: 100vh;
     }
     nav {
@@ -275,7 +273,6 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         justify-content: center;
         font-size: 1.5rem;
     }
-    
     .footerLinks {
         text-decoration: none;
         color: var(--row);
@@ -329,28 +326,35 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         resize: none;
         /* Neccesary so user cannot resize */
         background-color: var(--background);
-        height: 1rem;
         line-height: 1rem;
-        width: 100%;
+        height: 1rem;
+        min-width: 60%;
     }
 
     #textInput:focus {
-        /*in focus */
-        background-color: var(--row);
         outline-width: 0;
-        transition: 2s;
     }
-
-    #restartTest:hover {
-        background-color: var(--incorrect);
+    #resetBox
+    {
+        background-color: var(--row);
+        padding: 0;
+        transition: background-color 1s ease, border 1s ease, transform 1s ease;
+    }
+    #resetBox:hover {
         border: .3rem solid var(--incorrect);
+        background-color: var(--incorrect);
+    }
+    #restartTest:hover {
+
+        transform: rotate(-90deg);
     }
 
     #restartTest {
+        border: none;
         cursor: pointer;
         padding: 1rem;
-        background-color: var(--row);
-        width: 3rem;
+        transition: background-color 1s ease, border 1s ease, transform 1s ease;
+        
     }
     .currentSetting
     {
@@ -376,8 +380,11 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         align-items: center;
         gap: 1rem;
         padding: 1rem 0rem;
+        font-size: 1rem;
     }
-
+    .fadeOut {
+        animation: fadeOut 1s  ease forwards, fadeColor .5s ease forwards;
+    }
     .testRow * {
         user-select: none;
         color: white;
@@ -386,7 +393,6 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         display: inline-block;
         padding: 2rem 2.5rem;
         white-space: nowrap;
-        transition: .35s;
     }
 
     #typingmode {
@@ -434,8 +440,8 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         transition-timing-function: linear;
         height: <?php echo strval($caretHeight) . "rem"; ?>;
         margin-top: <?php echo strval($caretTop) . "rem"; ?>;
+        animation: blink 1s step-end infinite;
     }
-
     .blur {
         filter: blur(.25rem);
     }
@@ -767,7 +773,14 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         color: white;
 
     }
-
+    @keyframes blink {
+    from, to {
+        opacity: .75;
+    }
+    50% {
+        opacity: 0;
+    }
+    }
     @keyframes slide {
         from {
             margin-left: -16rem;
@@ -884,6 +897,15 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
             margin-top: 0rem;
         }
     }
+    @keyframes slideDown {
+        from {
+            margin-top: 0rem;
+        }
+
+        to {
+            margin-top: 10rem;
+        }
+    }
 
     @keyframes fadeIn {
         0% {
@@ -902,18 +924,27 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
 
         100% {
             opacity: 0;
+
         }
     }
+    @keyframes fadeColor {
+        0% {
+        }
 
+        100% {
+            color: var(--background)
+        }
+    }
     @keyframes blur {
         from {
-            color: transparent;
-            text-shadow: 0 0 8px rgb(187, 187, 187);
+
+            color: #3c4c79;
+            text-shadow: none;
         }
 
         to {
-            color: #3c4c79;
-            text-shadow: none;
+            color: transparent;
+            text-shadow: 0 0 8px rgb(187, 187, 187);
         }
     }
 
@@ -943,7 +974,11 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         cursor: pointer;
         transition: all .2s ease-in-out;
     }
-
+    .results
+    {
+        padding: 10rem 5rem;
+        font-size: 10rem;
+    }
     #loginButton1 {
         background-color: var(--testText);
         text-decoration: none;
@@ -1027,47 +1062,6 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     .statsAreaClosed {
 
         animation: statsMoveOut 1.5s forwards ease;
-    }
-
-    .statsRow {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        text-align: center;
-        padding: 10rem 5rem;
-        border-radius: 1.5rem;
-        margin-top: 3rem;
-        margin-bottom: 1rem;
-        color: white;
-        font-size: 3rem;
-        font-weight: bold;
-        color: #fff;
-        cursor: pointer;
-        border: none;
-        background-size: 300% 100%;
-        border-radius: 50px;
-        -o-transition: all .4s ease-in-out;
-        -webkit-transition: all .4s ease-in-out;
-        transition: all .4s ease-in-out;
-        background-image: linear-gradient(to right, var(--testText), var(--testText));
-        /* background color*/
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-        user-select: none;
-        transform: 3s ease-in-out;
-        animation: fadeIn 3s ease;
-        animation-delay: .25s;
-        animation-fill-mode: forwards;
-        opacity: 0;
-    }
-
-    .statsRow:hover {
-        transform: scale(1.1, 1.1);
-    }
-
-    #statsRow1 {
-        display: flex;
-        margin-bottom: 3rem;
     }
     .currentMode
     {
