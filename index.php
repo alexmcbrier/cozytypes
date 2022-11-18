@@ -22,7 +22,7 @@ if (isset($_COOKIE["email"])) {
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JMV592" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <div id="cursor"></div>
-    <div id="mainContent">
+    <div id="testContent">
         <?php include "./nav.php" ?>
         <?php if (!isset($_GET["finish"])) { ?>
             <!-- Display if test not complete -->
