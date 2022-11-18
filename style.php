@@ -368,6 +368,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         display: flex;
         align-items: center;
         gap: 1rem;
+        padding: 1rem 0rem;
     }
 
     .testRow * {
