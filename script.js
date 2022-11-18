@@ -260,7 +260,7 @@ async function newQuote() {
 }
 function startTimer() {
     if (timerVar != "running") {
-        document.getElementsById("typingmode").style.visibility = 'hidden';
+        document.getElementById("typingmode").style.visibility = 'hidden';
         startTime = new Date()
         if (getCookie("typingMode") == "words")
         {
