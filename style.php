@@ -265,9 +265,6 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         user-select: none;
         display: flex;
         justify-content: center;
-        width: 100%;
-        height: 5rem;
-        margin-bottom: 1rem;
     }
 
     .box {
