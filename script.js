@@ -481,7 +481,7 @@ function updatePreferences()
     findCookie('caret', 'caretsContainer').classList.add("currentSetting");
     findCookie('lineCount', 'linesContainer').classList.add("currentSetting");
     findCookie('blur', 'blurContainer').classList.add("currentSetting");
-    findCookie('theme', 'themesContainer').innerHTML  += "<i class="fa-solid fa-star"></i>";
+    findCookie('theme', 'themesContainer').innerHTML  += " ✦";
 }
 function updateCookies()
 {
