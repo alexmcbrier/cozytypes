@@ -7,7 +7,7 @@ if (isset($_COOKIE["email"])) {
     $sql = "SELECT username FROM user WHERE email = '$name'";
     $result = $mysqli->query($sql);
     $user = $result->fetch_assoc();
-    $username= $user["username"];
+    $displayUsername= $user["username"];
 }
 ?>
 <nav>
@@ -18,5 +18,5 @@ if (isset($_COOKIE["email"])) {
     <a href="/index.php"><i class="fa-solid fa-house"></i></a>
     <a href="/preferences.php"><i class="fa-solid fa-gear"></i></a>
     <a href="/login.php"><i class="fa-regular fa-user"></i></a>
-    <h1 id = "showName"><?php echo $username; ?></h1>
+    <h1 id = "showName"><?php echo $displayUsername; ?></h1>
 </nav>
