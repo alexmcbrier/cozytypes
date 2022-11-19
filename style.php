@@ -404,8 +404,6 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         font-size: 1rem;
         color: var(--row);
         display: flex;
-        /* can change to center */
-        padding: 1rem 0rem;
         user-select: none;
     }
 
