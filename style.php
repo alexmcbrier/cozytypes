@@ -4,7 +4,7 @@ session_start();
 if (isset($_COOKIE["theme"])) {
     $theme = $_COOKIE["theme"];
 } else {
-    $theme = "dracula";
+    $theme = "dark";
 }
 if (isset($_COOKIE["fontFamily"])) {
     $fontFamily = $_COOKIE["fontFamily"];
@@ -14,7 +14,7 @@ if (isset($_COOKIE["fontFamily"])) {
 if (isset($_COOKIE["fontSize"])) {
     $fontSize = ($_COOKIE["fontSize"]);
 } else {
-    $fontSize = 2;
+    $fontSize = 4;
 }
 if (isset($_COOKIE["caret"])) {
     $caret = $_COOKIE["caret"];
@@ -209,7 +209,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         text-align: center;
         height: 3em;
         user-select: none;
-        padding: 2.5rem 0;
+        padding: 2.5rem 0 1rem 0;
         display: flex;
         align-items: center;
         justify-content: center;
