@@ -4,7 +4,7 @@ session_start();
 if (isset($_COOKIE["theme"])) {
     $theme = $_COOKIE["theme"];
 } else {
-    $theme = "dark";
+    $theme = "light";
 }
 if (isset($_COOKIE["fontFamily"])) {
     $fontFamily = $_COOKIE["fontFamily"];
@@ -175,7 +175,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     li {
         font-size: 3rem;
         font-weight: bold;
-        color: white;
+        color: var(--currentWord);
         user-select: none;
         display: inline;
         padding-right: 1rem;
@@ -183,7 +183,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     }
 
     li a {
-        color: white;
+        color: var(--currentWord);
         font-size: 1rem;
         vertical-align: middle;
         text-decoration: none;
@@ -221,7 +221,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     }
 
     nav i:hover {
-        color: white;
+        color: var(--currentWord);
     }
 
     .word {
@@ -232,7 +232,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
 
     .row {
         user-select: none;
-        color: white;
+        color: var(--currentWord);
         border: .3rem solid var(--row);
         font-size: 1rem;
         border-radius: 1.5rem;
@@ -247,7 +247,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
 
     .preference {
         cursor: pointer;
-        color: white;
+        color: var(--currentWord);
         background-color: var(--row);
         /* background-color:#191919;                      Background color */
         font-size: 1rem;
@@ -284,7 +284,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         transition: all .25s ease;
     }
     .footerLinks:hover {
-        color: white;
+        color: var(--currentWord);
     }
     .linkDivider
     {
@@ -307,7 +307,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
 
     .rowContainer {
         user-select: none;
-        color: white;
+        color: var(--currentWord);
         background-color: var(--rowBackground);
         font-size: 1rem;
         border-radius: 1.5rem;
@@ -320,11 +320,39 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         margin: 1rem;
         align-content: center;
     }
-
+    #showRestart
+    {
+        color: var(--row);
+        text-decoration: none;
+        font-size: 2rem;
+        padding: 0rem 1rem;
+        transition: color .25s;
+    }
+    #showRestart:hover
+    {
+        color: var(--currentWord);
+    }
+    .statsContainer
+    {
+        user-select: none;
+        color: var(--currentWord);
+        background-color: var(--rowBackground);
+        font-size: 1rem;
+        border-radius: 1.5rem;
+        padding: 1rem;
+        margin-left: .5rem;
+        transition: 1s;
+        line-height: 10px;
+        vertical-align: top;
+        text-decoration: none;
+        margin: 1rem;
+        align-content: center;
+        padding: 2rem;
+    }
     #textInput {
         font-size: 2rem;
         border-radius: 1.5rem;
-        color: white;
+        color: var(--currentWord);
         /* text input font color */
         overflow: hidden;
         resize: none;
@@ -391,12 +419,12 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     }
     .testRow * {
         user-select: none;
-        color: white;
+        color: var(--currentWord);
         border: .3rem solid var(--row);
         border-radius: 1.5rem;
         display: inline-block;
         padding: 2rem 2.5rem;
-        white-space: nowrap;
+        var(--currentWord)-space: nowrap;
     }
 
     #typingmode {
@@ -427,7 +455,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         font-size: 2rem;
     }
     #testText::first-line {
-        color: white;
+        color: var(--currentWord);
     }
 
     #cursor {
@@ -475,7 +503,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     }
 
     #listOfStats {
-        color: white;
+        color: var(--currentWord);
     }
 
     #top {
@@ -493,7 +521,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         background: none;
         border-bottom: 1px solid #D1D1D4;
         outline: none;
-        color: white;
+        color: var(--currentWord);
         padding: 1rem;
         box-sizing: border-box;
     }
@@ -507,12 +535,12 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     /*neccesary when automatically filling in email */
     input:-webkit-autofill {
         transition: background-color 5000s ease-in-out 0s;
-        -webkit-text-fill-color: white !important;
+        -webkit-text-fill-color: var(--currentWord) !important;
     }
 
     .statsItem {
         user-select: none;
-        color: white;
+        color: var(--currentWord);
         background-color: var(--rowBackground);
         /* background-color:#191919;                      Background color */
         font-size: 1rem;
@@ -551,7 +579,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     #friendsListArea,
     #statsArea {
 
-        color: white;
+        color: var(--currentWord);
         border-radius: 1.5rem;
 
     }
@@ -602,7 +630,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     #closeSidebar {
         cursor: pointer;
         user-select: none;
-        color: white;
+        color: var(--currentWord);
         background-color: var(--background);
         border: .3rem solid var(--row);
         font-size: 1rem;
@@ -646,11 +674,11 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         background: none;
         border-bottom: 2px solid #D1D1D4;
         outline: none;
-        color: white;
+        color: var(--currentWord);
     }
 
     #friendsListHeader {
-        color: white;
+        color: var(--currentWord);
         background-color: var(--row);
         /* background-color:#191919;                      Background color */
         font-size: 1rem;
@@ -664,7 +692,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     }
 
     #addFriendButton {
-        color: white;
+        color: var(--currentWord);
         background-color: var(--background);
         border: .3rem solid var(--row);
         /* background-color:#191919;                      Background color */
@@ -684,7 +712,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     }
 
     .removeFriend {
-        color: white;
+        color: var(--currentWord);
         background-color: var(--row);
         /* background-color:#191919;                      Background color */
         font-size: 1rem;
@@ -701,7 +729,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     }
 
     .inviteFriend {
-        color: white;
+        color: var(--currentWord);
         background-color: var(--row);
         /* background-color:#191919;                      Background color */
         font-size: 1rem;
@@ -716,7 +744,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     }
 
     .friend {
-        color: white;
+        color: var(--currentWord);
         background-color: var(--background);
         /* background-color:#191919;                      Background color */
         font-size: 1rem;
@@ -742,11 +770,11 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     }
 
     #logout {
-        color: white;
+        color: var(--currentWord);
     }
 
     #invalid {
-        color: white;
+        color: var(--currentWord);
         font-size: 1rem;
         user-select: none;
         padding: 1rem;
@@ -772,7 +800,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     }
 
     #loginHeader {
-        color: white;
+        color: var(--currentWord);
 
     }
     @keyframes blink {
@@ -970,16 +998,17 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         text-align: center;
         border-radius: 999px;
         width: 100%;
-        color: white;
+        color: var(--currentWord);
         font-size: 1rem;
         font-weight: bold;
         cursor: pointer;
         transition: all .2s ease-in-out;
     }
     .results
-    {
-        padding: 10rem 5rem;
-        font-size: 10rem;
+    {   
+        font-size: 1.5rem;
+        margin-left: 1rem;
+        margin-top: 2rem;
     }
     #loginButton1 {
         background-color: var(--testText);
@@ -1001,7 +1030,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     }
 
     #accountCreate {
-        color: white;
+        color: var(--currentWord);
         display: inline-block;
         margin-top: 1rem;
     }
@@ -1013,7 +1042,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     }
 
     #check {
-        color: white;
+        color: var(--currentWord);
         margin-right: 0rem;
     }
 
@@ -1067,7 +1096,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     }
     .currentMode
     {
-        color: white;
+        color: var(--currentWord);
     }
     #themesContainer a {
         user-select: none;
@@ -1092,6 +1121,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     }
 
     #displayStats {
+
         display: flex;
     }
 
@@ -1127,7 +1157,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     }
 
     #theme-creamsicle {
-        color: white;
+        color: var(--currentWord);
         background-color: #FF9869;
     }
 

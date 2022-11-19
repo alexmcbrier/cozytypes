@@ -1,8 +1,8 @@
 :root {
     --background: #010203;
-    --backgroundGradient: none;
+    --backgroundDark: #000000;
     --testText: #5E676E;
-    --currentWord: #5E676E;
+    --currentWord: #ffffff;
     --row: #383E42;
     --rowBackground: #131517;
     --correct: #383E42;

@@ -21,13 +21,14 @@ if (isset($_COOKIE["email"])) {
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JMV592" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <div id="cursor"></div>
+
     <div id="testContent">
         <?php include "./nav.php" ?>
 
             <!-- Display if test not complete -->
           <div id="middle">
             <?php if (!isset($_GET["finish"])) { ?>
+                <div id="cursor"></div>
                 <div id="typingmode">
                 <div class="modeStack">
                     <div>time</div>
@@ -68,18 +69,21 @@ if (isset($_COOKIE["email"])) {
             <?php } else if (isset($_GET["finish"])) { ?>
             <!-- Display if test IS complete -->
             <div id="displayStats">
-                <div class="rowContainer" style="width: 33%;">
+                <div class="statsContainer">
                     <h1 class="notSignedIn" id="preferenceHeader">Words Per Minute<i class="fa-solid fa-clock-rotate-left"></i></h1>
-                    <a class="preference results"><?= $_GET["wpm"] ?></a>
+                    <a class="results"><?= $_GET["wpm"] ?></a>
                 </div>
-                <div class="rowContainer" style="width: 33%">
+                <div class="statsContainer">
                     <h1 class="notSignedIn" id="preferenceHeader">Accuracy<i class="fa-solid fa-crosshairs"></i></h1>
-                    <a class="preference results"><?= $_GET["accuracy"] ?>%</a>
+                    <a class="results"><?= $_GET["accuracy"] ?>%</a>
                 </div>
-                <div class="rowContainer" style="width: 33%">
+                <div class="statsContainer">
                     <h1 class="notSignedIn" id="preferenceHeader">Time<i class="fa-regular fa-hourglass-half"></i></i></i></h1>
-                    <a class="preference results"><?= $_GET["testTime"] ?>s</a>
+                    <a class="results"><?= $_GET["testTime"] ?>s</a>
                 </div>
+            </div>
+            <a id = "showRestart" class="notSignedIn" href="index.php">play again<i class="fa-solid fa-backward"></i></a>
+            <a id = "showRestart" class="notSignedIn" href="login.php">track progress<i class="fa-solid fa-medal"></i></a>
             </div>
             <?php } ?>
         <?php include "./footer.php" ?>

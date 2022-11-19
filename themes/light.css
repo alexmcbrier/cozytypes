@@ -1,10 +1,10 @@
 :root {
-    --background: ##eeeeee;
-    --backgroundGradient: none;
+    --background: #eeeeee;
+    --backgroundDark: #d5cdcd;
     --testText: #B2B2B2;
-    --currentWord: #444444;
-    --correct: #8DA0A8;
-    --row: #444444;
-    --rowBackground: #212020;
-    --incorrect: #D70000;
+    --currentWord: #404040;
+    --correct: #463e3e;
+    --row: #cbcbcb;
+    --rowBackground: #b0b0b0;
+    --incorrect: #be6969;
   }

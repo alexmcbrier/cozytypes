@@ -453,7 +453,7 @@ function addCookies()
         setCookie("blur", "off", 30); //default if have no cookies yet
     }
     if(!checkCookie('theme')){
-        setCookie("theme", "dark", 30); //default if have no cookies yet
+        setCookie("theme", "light", 30); //default if have no cookies yet
     }
     if(!checkCookie('words')){
         setCookie("words", "100", 30); //default if have no cookies yet
@@ -505,3 +505,4 @@ document.body.onresize = function() { zoomwait() };
 newQuote();
 moveCursorWithY();
 setBlur();
+
