@@ -341,7 +341,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     #resetBox
     {
         background-color: var(--row);
-        padding: 0;
+        padding: .5rem;
         transition: background-color 1s ease, border 1s ease, transform 1s ease;
     }
     #resetBox:hover {
