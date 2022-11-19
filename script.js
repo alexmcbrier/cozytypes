@@ -438,7 +438,7 @@ function findCookie(name, parentId) //checks to see which cookie is selected (us
 function addCookies()
 {
     if(!checkCookie('fontSize')){
-        setCookie("fontSize", 2, 30); //default if have no cookies yet
+        setCookie("fontSize", 4, 30); //default if have no cookies yet
     }
     if(!checkCookie('fontFamily')){
         setCookie("fontFamily", "lexenddeca", 30); //default if have no cookies yet
@@ -453,16 +453,16 @@ function addCookies()
         setCookie("blur", "off", 30); //default if have no cookies yet
     }
     if(!checkCookie('theme')){
-        setCookie("theme", "dracula", 30); //default if have no cookies yet
+        setCookie("theme", "dark", 30); //default if have no cookies yet
     }
     if(!checkCookie('words')){
-        setCookie("words", "50", 30); //default if have no cookies yet
+        setCookie("words", "100", 30); //default if have no cookies yet
     }
     if(!checkCookie('time')){
         setCookie("time", "15", 30); //default if have no cookies yet
     }
     if(!checkCookie('mode')){
-        setCookie("mode", "easy", 30); //default if have no cookies yet
+        setCookie("mode", "hard", 30); //default if have no cookies yet
     }
     if(!checkCookie('typingMode')){
         setCookie("typingMode", "time", 30); //default if have no cookies yet
