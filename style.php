@@ -308,6 +308,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     {
         min-width: 4.5rem;
         text-align: center;
+        padding: 2rem;
     }
     .rowContainer {
         user-select: none;
