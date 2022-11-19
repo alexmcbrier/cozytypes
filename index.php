@@ -27,7 +27,8 @@ if (isset($_COOKIE["email"])) {
 
             <!-- Display if test not complete -->
           <div id="middle">
-            <div id="typingmode">
+            <?php if (!isset($_GET["finish"])) { ?>
+                <div id="typingmode">
                 <div class="modeStack">
                     <div>time</div>
                     <div id = "timesContainer" style="display: flex">
@@ -54,17 +55,15 @@ if (isset($_COOKIE["email"])) {
                     </div>
                 </div>
             </div>
-
-            <?php if (!isset($_GET["finish"])) { ?>
-                <div id="testText">
-                    <div id="wordsWrapper"></div>
-                </div>
-                <div class="testRow">
-                    <textarea id="textInput" spellcheck="false" maxlength="16" autofocus></textarea>
-                    <div id="wpmDisplay">0 WPM</div>
-                    <div id="time"></div>
-                    <div id ="resetBox"><i id="restartTest"class="fa-solid fa-rotate" onclick="restart()"></i></div>
-                </div>
+            <div id="testText">
+                <div id="wordsWrapper"></div>
+            </div>
+            <div class="testRow">
+                <textarea id="textInput" spellcheck="false" maxlength="16" autofocus></textarea>
+                <div id="wpmDisplay">0 WPM</div>
+                <div id="time"></div>
+                <div id ="resetBox"><i id="restartTest"class="fa-solid fa-rotate" onclick="restart()"></i></div>
+            </div>
             </div>
             <?php } else if (isset($_GET["finish"])) { ?>
             <!-- Display if test IS complete -->
