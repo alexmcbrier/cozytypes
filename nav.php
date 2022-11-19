@@ -6,5 +6,5 @@
     <a href="/index.php"><i class="fa-solid fa-house"></i></a>
     <a href="/preferences.php"><i class="fa-solid fa-gear"></i></a>
     <a href="/login.php"><i class="fa-regular fa-user"></i></a>
-    <?php if (isset($_SESSION["user_id"])){ ?><h1 id = "showName">hello</h1><?php }?>  
+    <?php if (isset($_SESSION["user_id"])){ ?><h1 id = "showName"><?php echo $name ?></h1><?php }?>  
 </nav>
