@@ -1,3 +1,15 @@
+<?php
+//grabbing user session information (neccesary for staying signed in etc.)
+if (isset($_COOKIE["email"])) {
+    $mysqli = require __DIR__ . "/config.php";
+    $name = $_COOKIE["email"];
+    //change to whatever
+    $sql = "SELECT id FROM user WHERE email = '$name'";
+    $result = $mysqli->query($sql);
+    $user = $result->fetch_assoc();
+    $_SESSION["user_id"] = $user["id"];
+}
+?>
 <nav>
     <a href="index.php" style="text-decoration: none;">
         <img alt="logo" width="55" height="55" display="block" src="images/panda2.png">
@@ -6,5 +18,5 @@
     <a href="/index.php"><i class="fa-solid fa-house"></i></a>
     <a href="/preferences.php"><i class="fa-solid fa-gear"></i></a>
     <a href="/login.php"><i class="fa-regular fa-user"></i></a>
-    <?php if (isset($_SESSION["user_id"])){ ?><h1 id = "showName"><?php echo $name ?></h1><?php }?>  
+    <h1 id = "showName"><?php echo $name ?></h1>
 </nav>
