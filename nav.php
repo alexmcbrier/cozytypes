@@ -8,6 +8,7 @@ if (isset($_COOKIE["email"])) {
     $result = $mysqli->query($sql);
     $user = $result->fetch_assoc();
     $_SESSION["user_id"] = $user["id"];
+    $pound = 23;
 }
 ?>
 <nav>
@@ -18,5 +19,5 @@ if (isset($_COOKIE["email"])) {
     <a href="/index.php"><i class="fa-solid fa-house"></i></a>
     <a href="/preferences.php"><i class="fa-solid fa-gear"></i></a>
     <a href="/login.php"><i class="fa-regular fa-user"></i></a>
-    <h1 id = "showName"><?php echo $name ?></h1>
+    <h1 id = "showName"><?php echo $pound; ?></h1>
 </nav>
