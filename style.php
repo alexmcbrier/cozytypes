@@ -306,7 +306,8 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     }
     #wpmDisplay
     {
-        min-width: 3.5rem;
+        min-width: 4.5rem;
+        text-align: center;
     }
     .rowContainer {
         user-select: none;
