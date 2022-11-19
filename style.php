@@ -374,12 +374,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     #resetBox
     {
         background-color: var(--row);
-        padding: .5rem;
-        transition: background-color 1s ease, border 1s ease, transform 1s ease;
-    }
-    #resetBox:hover {
-        border: .3rem solid var(--incorrect);
-        background-color: var(--incorrect);
+        padding: 0;
     }
     #restartTest:hover {
 
@@ -389,7 +384,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     #restartTest {
         border: none;
         cursor: pointer;
-        padding: 1rem;
+        padding: 1.5rem;
         transition: background-color 1s ease, border 1s ease, transform 1s ease;
         
     }
