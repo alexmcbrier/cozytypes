@@ -247,7 +247,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
 
     .preference {
         cursor: pointer;
-        color: var(--currentWord);
+        color: white;
         background-color: var(--row);
         /* background-color:#191919;                      Background color */
         font-size: 1rem;
@@ -304,7 +304,10 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         display: flex;
         /* equal height of the children */
     }
-
+    #wpmDisplay
+    {
+        min-width: 3.5rem;
+    }
     .rowContainer {
         user-select: none;
         color: var(--currentWord);
