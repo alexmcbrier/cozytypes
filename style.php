@@ -152,9 +152,6 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         color: var(--testText);
         transition: color .25s ease;
     }
-    i:hover {
-        color: white;
-    }
     .vertical-scroll>div {
         background: var(--testText);
         border-radius: 1em;
@@ -220,12 +217,8 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         justify-content: center;
     }
 
-    nav a {
-        transition: all .5s ease;
-    }
-
-    nav a:hover {
-        color: var(--testText);
+    nav i:hover {
+        color: white;
 
     }
 
@@ -288,8 +281,8 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         justify-content: center;
         transition: all .5s ease;
     }
-    .footerLinks: hover {
-        color: var(--testText);
+    .footerLinks:hover {
+        color: white;
     }
     
     .linkDivider
