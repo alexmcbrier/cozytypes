@@ -203,6 +203,10 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         display: grid;
         gap: 1rem;
         min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
     }
     nav {
         width: 100%;
@@ -272,6 +276,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         display: flex;
         justify-content: center;
         font-size: 1.5rem;
+        padding: 2rem;
     }
     .footerLinks {
         text-decoration: none;
