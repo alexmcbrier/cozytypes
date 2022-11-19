@@ -194,6 +194,8 @@ function keystroke() {
     }
 }
 function restart() {
+    displayInput.value = ""; //remove Text;
+    moveCursorWithY(); //reset cursor
     displayTimer.innerText = getTime(getCookie("time"))
     newQuote()
     timerVar = "running"
