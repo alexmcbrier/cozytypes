@@ -154,6 +154,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     {
         transition: color .25s ease;
         color: var(--testText);
+        padding: 2rem 1rem 1rem 1rem;
     }
     .vertical-scroll>div {
         background: var(--testText);
@@ -413,6 +414,10 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         gap: .8rem;
         padding: 1rem 0rem;
         font-size: 1rem;
+    }
+    #showName
+    {
+        color: var(--testText)
     }
     .fadeOut {
         animation: fadeOut .5s  ease forwards, fadeColor .5s ease forwards;
