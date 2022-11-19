@@ -193,7 +193,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         width: 80%;
         margin: auto;
         display: grid;
-        gap: 1rem;
+        gap: .8rem;
     }
     #testContent
     {
@@ -201,7 +201,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         width: 80%;
         margin: auto;
         display: grid;
-        gap: 1rem;
+        gap: .8rem;
         min-height: 100vh;
         display: flex;
         flex-direction: column;
@@ -373,7 +373,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     #testText {
         user-select: none;
         font-size: <?php echo strval($fontSize) * .8 . "rem"; ?>; /*reducing by a factor of .8*/
-        height: <?php echo strval($height) . "rem"; ?>;
+        height: <?php echo strval($height) * .8 . "rem"; ?>;  /*reducing by a factor of .8*/
         border-radius: .5rem;
         color: var(--testText);
         overflow: hidden;
@@ -383,7 +383,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     .testRow {
         display: flex;
         align-items: center;
-        gap: 1rem;
+        gap: .8rem;
         padding: 1rem 0rem;
         font-size: 1rem;
     }
