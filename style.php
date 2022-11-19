@@ -42,6 +42,7 @@ if (isset($_COOKIE["typingMode"])) {
     $typingMode = "words";
 }
 //caret settinngs
+$fontSize = $fontSize * .8; /*reducing by a factor of .8 */
 $height = 1.5 * $fontSize * $lineCount;
 $caretTop = 0;
 $caretHeight = 0;
@@ -372,8 +373,8 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
 
     #testText {
         user-select: none;
-        font-size: <?php echo strval($fontSize) * .8 . "rem"; ?>; /*reducing by a factor of .8*/
-        height: <?php echo strval($height) * .8 . "rem"; ?>;  /*reducing by a factor of .8*/
+        font-size: <?php echo strval($fontSize) . "rem"; ?>;
+        height: <?php echo strval($height) . "rem"; ?>;
         border-radius: .5rem;
         color: var(--testText);
         overflow: hidden;
