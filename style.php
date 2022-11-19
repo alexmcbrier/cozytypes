@@ -172,7 +172,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     }
 
     li {
-        font-size: 3.75rem;
+        font-size: 3rem;
         font-weight: bold;
         color: white;
         user-select: none;
@@ -213,7 +213,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         text-align: center;
         height: 3em;
         user-select: none;
-        padding: 2.5rem 0 1rem 0;
+        padding: 2rem 0 1rem 0;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -372,7 +372,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
 
     #testText {
         user-select: none;
-        font-size: <?php echo strval($fontSize) . "rem"; ?>;
+        font-size: <?php echo strval($fontSize) * .8 . "rem"; ?>; /*reducing by a factor of .8*/
         height: <?php echo strval($height) . "rem"; ?>;
         border-radius: .5rem;
         color: var(--testText);
@@ -401,7 +401,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     }
 
     #typingmode {
-        font-size: 1rem;
+        font-size: .8rem;
         color: var(--row);
         display: flex;
         user-select: none;
