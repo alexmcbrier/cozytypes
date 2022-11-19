@@ -286,6 +286,10 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         user-select: none;
         display: flex;
         justify-content: center;
+        transition: all .5s ease;
+    }
+    .footerLinks: hover {
+        color: var(--testText);
     }
     
     .linkDivider
