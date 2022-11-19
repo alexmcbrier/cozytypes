@@ -149,8 +149,11 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     i {
         font-size: 2rem;
         padding: 1rem;
-        color: var(--testText);
+    }
+    nav i 
+    {
         transition: color .25s ease;
+        color: var(--testText);
     }
     .vertical-scroll>div {
         background: var(--testText);
@@ -219,7 +222,6 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
 
     nav i:hover {
         color: white;
-
     }
 
     .word {
@@ -279,12 +281,11 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         user-select: none;
         display: flex;
         justify-content: center;
-        transition: all .5s ease;
+        transition: all .25s ease;
     }
     .footerLinks:hover {
         color: white;
     }
-    
     .linkDivider
     {
         color: var(--row);
