@@ -389,7 +389,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         font-size: 1rem;
     }
     .fadeOut {
-        animation: fadeOut 1s  ease forwards, fadeColor .5s ease forwards;
+        animation: fadeOut .5s  ease forwards, fadeColor .5s ease forwards;
     }
     .testRow * {
         user-select: none;
