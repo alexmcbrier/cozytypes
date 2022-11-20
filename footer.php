@@ -3,8 +3,8 @@ session_start();
 if (isset($_COOKIE["theme"])) {
     $theme = $_COOKIE["theme"];
 }
-if (isset($_COOKIE["font"])) {
-    $font = $_COOKIE["font"];
+if (isset($_COOKIE["fontFamily"])) {
+    $font = $_COOKIE["fontFamily"];
 }
 ?>
 <div id="footer">
