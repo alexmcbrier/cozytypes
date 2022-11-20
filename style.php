@@ -341,6 +341,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         color: var(--testText);
         display: flex;
         line-height: 2rem;
+        transition: color .25s ease;
     }
     #showUsername:hover {
         color: var(--currentWord);
