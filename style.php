@@ -190,18 +190,9 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         margin: auto;
         display: grid;
         gap: .8rem;
-    }
-    #testContent
-    {
-        transition: all .5s ease-in-out 0s;
-        width: 80%;
-        margin: auto;
-        display: grid;
-        gap: .8rem;
         min-height: 100vh;
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: space-between;
     }
     #logo 

@@ -22,7 +22,7 @@ if (isset($_COOKIE["id"])) {
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JMV592" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <div id="testContent">
+    <div id="mainContent" style = "align-items: center;">
         <?php include "./nav.php" ?>
 
             <!-- Display if test not complete -->
