@@ -19,6 +19,7 @@ if (isset($_SESSION["user_id"])) {
     <a class = "footerLinks tooltip" href="/preferences.php">theme <?= $theme ?><span class="tooltiptext"><?= $theme ?></span>
         <i class="fa-solid fa-palette fa-sm"></i>
     </a>
+    <p><?=$font?></p>
     <div class = "linkDivider">/</div>
     <a class = "footerLinks tooltip" href="/preferences.php">font<span class="tooltiptext"><?= $font ?></span>
         <i class="fa-solid fa-font fa-sm"></i>
