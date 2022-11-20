@@ -145,7 +145,45 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     ::-webkit-scrollbar-thumb:hover {
         background: var(--incorrect);
     }
+    .tooltip {
+        position: relative;
+        display: inline-block;
+    }
 
+    .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: var(--row);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -60px;
+
+    }
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--row) transparent transparent transparent;
+    
+    
+    }
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    animation: fadeIn 1s  ease, slideUp 1s ease;
+    
+    }
     i {
         font-size: 2rem;
         padding: 1rem;
@@ -303,6 +341,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         min-width: 4.5rem;
         text-align: center;
         padding: 2rem;
+        overflow: hidden;
     }
     .rowContainer {
         user-select: none;
@@ -526,6 +565,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     {
         font-size: 1rem;
         line-height: 1.5rem;
+        letter-spacing: 1px;
         padding: 0 1rem;
     }
     input {
