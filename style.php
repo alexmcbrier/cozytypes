@@ -220,7 +220,11 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         color: var(--testText);
         padding: 2rem 1rem 1rem 1rem;
     }
-
+    .navIcon
+    {
+        color: var(--testText);
+        transition: color .25s ease;
+    }
     nav i:hover{
         color: var(--currentWord);
     }
