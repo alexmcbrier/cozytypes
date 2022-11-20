@@ -6,7 +6,7 @@ if (isset($_SESSION["user_id"])) {
     $user = $result->fetch_assoc();
 } ?>
 <nav>
-    <a href="index.php" style="text-decoration: none;">
+    <a id = "logo" href="index.php" style="text-decoration: none;">
         <img alt="logo" width="55" height="55" display="block" src="images/panda2.png">
         <li style="padding-left: .5rem; padding-right: 2rem;">CozyTypes</li>
     </a>

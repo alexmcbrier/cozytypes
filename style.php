@@ -204,6 +204,10 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         align-items: center;
         justify-content: space-between;
     }
+    #logo 
+    {
+        margin-bottom: 1rem;
+    }
     nav {
         width: 100%;
         text-align: center;
@@ -213,6 +217,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         justify-content: center;
         transition: color .25s ease;
         color: var(--testText);
+        padding: 1rem;
     }
     .navIcon
     {
