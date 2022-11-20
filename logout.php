@@ -4,9 +4,9 @@ session_start();
 
 session_destroy();
 
-if (isset($_COOKIE['rememberMe'])) {
-    unset($_COOKIE['rememberMe']); 
-    setcookie('rememberMe', null, -1, '/'); 
+if (isset($_COOKIE['id'])) {
+    unset($_COOKIE['id']); 
+    setcookie('id', null, -1, '/'); 
 } else {
 }
 header("Location: login.php");
