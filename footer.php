@@ -20,7 +20,7 @@ if (isset($_SESSION["user_id"])) {
         <i class="fa-solid fa-palette fa-sm"></i>
     </a>
     <div class = "linkDivider">/</div>
-    <a class = "footerLinks tooltip" href="/preferences.php">font<span class="tooltiptext"><?= $font ?></span>
+    <a class = "footerLinks tooltip" href="/preferences.php">font<span class="tooltiptext"><?= $font ?>sdfdsf</span>
         <i class="fa-solid fa-font fa-sm"></i>
     </a>
 </div>
