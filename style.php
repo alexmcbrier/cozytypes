@@ -204,21 +204,15 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         align-items: center;
         justify-content: space-between;
     }
-    #logo 
-    {
-        padding: 2rem 0 1rem 0;
-    }
     nav {
         width: 100%;
         text-align: center;
-        height: 3em;
         user-select: none;
         display: flex;
         align-items: center;
         justify-content: center;
         transition: color .25s ease;
         color: var(--testText);
-        padding: 2rem 1rem 1rem 1rem;
     }
     .navIcon
     {
