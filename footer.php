@@ -1,15 +1,10 @@
 <?php
 session_start();
-if (isset($_SESSION["user_id"])) {
-    $mysqli = require __DIR__ . "/config.php";
-    $sql = "SELECT * FROM user WHERE id = {$_SESSION["user_id"]}";
-    $result = $mysqli->query($sql);
-    $user = $result->fetch_assoc();
-    $font = htmlspecialchars($user["fontSize"]);
-    $id = htmlspecialchars($user["id"]);
-}
 if (isset($_COOKIE["theme"])) {
     $theme = $_COOKIE["theme"];
+}
+if (isset($_COOKIE["font"])) {
+    $font = $_COOKIE["font"];
 }
 ?>
 <div id="footer">
@@ -21,7 +16,7 @@ if (isset($_COOKIE["theme"])) {
         <i class="fa-solid fa-palette fa-sm"></i>
     </a>
     <div class = "linkDivider">/</div>
-    <a class = "footerLinks tooltip" href="/preferences.php">font<span class="tooltiptext">font</span>
+    <a class = "footerLinks tooltip" href="/preferences.php">font<span class="tooltiptext"><?= $font ?></span>
         <i class="fa-solid fa-font fa-sm"></i>
     </a>
 </div>
