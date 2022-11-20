@@ -53,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <body class="main-body">
         <div id="mainContent">
             <?php include "./nav.php" ?>
-            <form id="mainContent" method="post" style = "width: 60%;">
+            <form method ="post" style = "width: 60%; margin: auto">
                 <div id="middle">
                     <h1 id="loginHeader">Hello there, welcome back</h1>
                     <?php if ($is_invalid) : ?>
