@@ -32,24 +32,7 @@ if (isset($_SESSION["user_id"])) {
     $font = htmlspecialchars($user["fontSize"]);
     $theme = htmlspecialchars($user["theme"]);
     $wpmPR = htmlspecialchars($user["wpm"]);
-    if ($wpmPR < 80) {
-        $rank = "emerald";
-        $range = "emerald (0-80)";
-    } else if ($wpmPR >= 80 && $wpmPR < 100) {
-        $rank = "silver";
-        $range = "silver (80-100)";
-    } else if ($wpmPR >= 100 && $wpmPR < 110) {
-        $rank = "gold";
-        $range = "gold (100-110)";
-    } else if ($wpmPR >= 110 && $wpmPR < 120) {
-        $rank = "heart";
-        $range = "heart (110-120)";
-    } else {
-        $rank = "purple";
-        $range = "purple (120+)";
-    }
-
-
+    $totalTests = htmlspecialchars($user["testsTaken"]);
     //getting friends
     $friendsArray = getInfo($user["username"]); //all u have to do is input your id 
 
@@ -89,7 +72,7 @@ if (isset($_SESSION["user_id"])) {
                 </div>
                 <div class="statsContainer">
                     <h1 class="notSignedIn" id="preferenceHeader">tests completed<i class="fa-solid fa-chart-line"></i></h1>
-                    <a class="results">29 tests</a>
+                    <a class="results"><?= $totalTests ?> tests</a>
                 </div>
                 <div class="statsContainer">
                     <h1 class="notSignedIn" id="preferenceHeader">highest wpm<i class="fa-solid fa-crown"></i></h1>
