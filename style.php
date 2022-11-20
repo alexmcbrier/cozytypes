@@ -219,18 +219,14 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         color: var(--testText);
         padding: 1rem;
     }
-    .navIcon
-    {
-        color: var(--testText);
-    }
-    nav i, #showUsername
+    .navIcon, #showUsername
     {
         transition: color .25s ease;
+        color: var(--testText);
     }
-    nav i:hover{
+    .navIcon:hover , #showUsername:hover {
         color: var(--currentWord);
     }
-    
     .word {
         display: inline-block;
         padding: 0rem <?php echo strval($fontSize * .2) . "rem"; ?>;
