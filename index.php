@@ -10,6 +10,34 @@ if (isset($_COOKIE["id"])) {
     $user = $result->fetch_assoc();
     $_SESSION["user_id"] = $user["id"];
 }
+if (isset($_GET["finish"]))
+{
+    $wpm = $_GET["wpm"];
+    if (isset($_SESSION["user_id"])) {
+        $mysqli = require __DIR__ . "/config.php";
+        $sql = "SELECT * FROM user WHERE id = {$_SESSION["user_id"]}";
+        $result = $mysqli->query($sql);
+        $user = $result->fetch_assoc();
+        $wpmPR = htmlspecialchars($user["wpm"]);
+        $id = ($user["id"]);
+        //if the wpm is higher update
+        if ($wpm > $wpmPR)
+        {
+            $sql = "UPDATE user SET wpm='$wpm' WHERE id=$id";
+            if ($mysqli->query($sql) === TRUE) {
+            } else {
+            }
+        }
+        //update total tests taken
+        $testsTaken  = $user["testsTaken"] + 1;
+        $sql = "UPDATE user SET testsTaken ='$testsTaken' WHERE id=$id";
+        if ($mysqli->query($sql) === TRUE) {
+        } else {
+        }
+    }
+}
+?>
+
 //executes when typing test has concluded
 ?>
 <!DOCTYPE html>
