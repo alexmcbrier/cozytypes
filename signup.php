@@ -1,6 +1,7 @@
 <?php
-$is_invalid = true;
+$is_invalid = false;
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $is_invalid = true;
     if (empty($_POST["username"])) { //if name empty
         $is_invalid = true;
     }
