@@ -221,9 +221,6 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         justify-content: center;
     }
 
-    nav i:hover{
-        color: var(--currentWord);
-    }
     
 
     .word {
