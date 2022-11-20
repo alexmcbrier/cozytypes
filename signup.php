@@ -74,16 +74,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <?php include "./head.php" ?>
     <body class="main-body">
     <?php include "./nav.php" ?>
-    <form id="mainContent" method ="post" style = "width: 60%;">
-        <h1 id = "loginHeader">sign up</h1>
+    <form id="mainContent" method="post" style = "width: 60%;">
+        <h1 id="loginHeader">Hello there, welcome back</h1>
         <?php if ($is_invalid) : ?>
-            <div id="invalid">Invalid Credentials</div>
+            <div id="invalid">Invalid login</div>
         <?php endif; ?>
-        <input type="text" autocomplete = "off" placeholder="username" id="username" name = "username">
-        <input type="text" autocomplete = "off" placeholder="email" id="email"  name = "email">
-        <input type="text" autocomplete = "off" placeholder="password" id="password" name = "password">
-        <input type="text" autocomplete = "off" placeholder="confirm password" id="confirm"  name = "confirm">
-        <button class = "loginBtn" id = "loginButton1" type="submit" value="submit" name="register">Create account</button>
-    </form>  
+        <input type="text" placeholder="email" name="email" id="email" value="<?= htmlspecialchars($_POST["email"] ?? "") ?>">
+        <input type="text" placeholder="password" name="password" id="password" style="-webkit-text-security: disc;">
+        <div style="display: flex; gap: 1rem">
+            <button class="loginBtn" id="loginButton1" type="submit" value="submit">Login</button>
+            <a class="loginBtn" id="loginButton2" href="signup.php">Sign Up</a>
+        </div>
+    </form>
     </body>
 </html>
