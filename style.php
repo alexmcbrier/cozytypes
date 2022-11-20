@@ -219,7 +219,12 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         color: var(--testText);
         padding: 2rem 1rem 1rem 1rem;
     }
-    nav i, showUsername
+    nav i
+    {
+        padding: 2rem 0 1rem 0;
+        transition: color .25s ease;
+    }
+    showUsername
     {
         padding: 2rem 0 1rem 0;
         transition: color .25s ease;
