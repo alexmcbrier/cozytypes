@@ -89,10 +89,6 @@ if (isset($_SESSION["user_id"])) {
                     <h1 class="notSignedIn" id="preferenceHeader"><?= htmlspecialchars($user["username"]) ?><i class="fa-regular fa-user"></i></h1>
                 </div>
                 <div class="statsContainer">
-                    <h1 class="notSignedIn" id="preferenceHeader">streak<i class="fa-solid fa-fire"></i></h1>
-                    <a class="results">1 day</a>
-                </div>
-                <div class="statsContainer">
                     <h1 class="notSignedIn" id="preferenceHeader">tests completed<i class="fa-solid fa-chart-line"></i></h1>
                     <a class="results">29 tests</a>
                 </div>
