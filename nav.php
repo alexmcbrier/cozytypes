@@ -10,7 +10,11 @@ if (isset($_SESSION["user_id"])) {
         <img alt="logo" width="55" height="55" display="block" src="images/panda2.png">
         <li style="padding-left: .5rem; padding-right: 2rem;">CozyTypes</li>
     </a>
-    <a class ="navIcons" href="/index.php"><i class="fa-solid fa-house"></i></a>
-    <a class ="navIcons" href="/preferences.php"><i class="fa-solid fa-gear"></i></a>
-    <a class ="navIcons" href="/login.php"><i class="fa-regular fa-user"></i><?= htmlspecialchars($user["username"]) ?></a>
+    <a href="/index.php"><i class="fa-solid fa-house"></i></a>
+    <a href="/preferences.php"><i class="fa-solid fa-gear"></i></a>
+    <div id = "showUsername">
+        <a href="/login.php"><i class="fa-regular fa-user"></i></a>
+        <div><?= htmlspecialchars($user["username"]) ?></div>
+    </div>
+    
 </nav>

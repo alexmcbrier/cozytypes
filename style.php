@@ -220,6 +220,12 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         align-items: center;
         justify-content: center;
     }
+
+    nav i:hover{
+        color: var(--currentWord);
+    }
+    
+
     .word {
         display: inline-block;
         padding: 0rem <?php echo strval($fontSize * .2) . "rem"; ?>;
@@ -329,13 +335,13 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         padding: 0rem 1rem;
         transition: color .25s;
     }
-    .navIcons
+    #showUsername
     {
         font-size: 2rem;
         text-decoration: none;
         color: var(--testText)
     }
-    .navIcons:hover {
+    #showUsername:hover {
         color: var(--currentWord);
     }
     #showRestart:hover
