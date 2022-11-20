@@ -5,7 +5,7 @@ if (isset($_COOKIE["id"])) {
     $mysqli = require __DIR__ . "/config.php";
     $hash = $_COOKIE["id"];
     //change to whatever
-    $sql = "SELECT id FROM user WHERE password = '$hash'";
+    $sql = "SELECT id FROM user WHERE password_hash = '$hash'";
     $result = $mysqli->query($sql);
     $user = $result->fetch_assoc();
     $_SESSION["user_id"] = $user["id"];
