@@ -7,7 +7,7 @@ if (isset($_SESSION["user_id"])) {
     exit;
 }
 $is_invalid = false;
-if(!empty($_POST))  {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $is_invalid = true;
     if (empty($_POST["username"])) { //if name empty
         $is_invalid = true;
