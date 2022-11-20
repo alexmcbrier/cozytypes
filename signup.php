@@ -50,6 +50,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             $_SESSION["user_id"] = $user["id"];
             //succesfully registered an account
+            //set cookie as the password hash, then decrypt to sign back in on page reload (rememberme)
+            setcookie("id", $password_hash, time() + (86400 * 30), "/", NULL); // 86400 = 1 day
             header("location: profile.php");
             exit;
         } else {

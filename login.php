@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $user = $result->fetch_assoc();
             //change
             $id = ($user["id"]);
-            setcookie("rememberMe", $user["email"], time() + (86400 * 30), "/", NULL); // 86400 = 1 day
+            setcookie("id", $user["password_hash"], time() + (86400 * 30), "/", NULL); // 86400 = 1 day
             //succesfully registered an account
             header("location: profile.php");
             exit;

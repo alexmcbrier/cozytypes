@@ -1,11 +1,11 @@
 <?php
 session_start();
 //grabbing user session information (neccesary for staying signed in etc.)
-if (isset($_COOKIE["email"])) {
+if (isset($_COOKIE["id"])) {
     $mysqli = require __DIR__ . "/config.php";
-    $name = $_COOKIE["email"];
+    $hash = $_COOKIE["id"];
     //change to whatever
-    $sql = "SELECT id FROM user WHERE email = '$name'";
+    $sql = "SELECT id FROM user WHERE password = '$hash'";
     $result = $mysqli->query($sql);
     $user = $result->fetch_assoc();
     $_SESSION["user_id"] = $user["id"];
