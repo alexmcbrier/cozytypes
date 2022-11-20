@@ -567,6 +567,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         line-height: 1.5rem;
         letter-spacing: 1px;
         padding: 0 1rem;
+        color: var(--row);
     }
     input {
         display: flex;
