@@ -13,7 +13,7 @@ session_start();
             <div class="horizontalAlign">
                 <div id="sizesContainer" class="rowContainer" style="width: 30%">
                     <h1 class="notSignedIn" id="preferenceHeader">Size <i class="fa-solid fa-text-height"></i> </h1>
-                    <div class="description">Change the size of the words in the test.</div>
+                    <h1 class="description">Change the size of the words in the test.</h1>
                     <a title="1" class="preference" onclick="setCookie('fontSize', 1, 30)">1</a>
                     <a title="2" class="preference" onclick="setCookie('fontSize', 2, 30)">2</a>
                     <a title="3" class="preference" onclick="setCookie('fontSize', 3, 30)">3</a>

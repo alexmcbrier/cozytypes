@@ -522,7 +522,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         line-height: 2.3rem;
         width: 100%;
     }
-    #description
+    .description
     {
         font-size: 1rem;
         line-height: 1.5rem;
