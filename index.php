@@ -38,8 +38,6 @@ if (isset($_GET["finish"]))
 }
 ?>
 
-//executes when typing test has concluded
-?>
 <!DOCTYPE html>
 <html lang="en">
 
