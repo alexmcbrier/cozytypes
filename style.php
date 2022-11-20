@@ -221,8 +221,10 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         justify-content: center;
     }
 
+    nav i:hover{
+        color: var(--currentWord);
+    }
     
-
     .word {
         display: inline-block;
         padding: 0rem <?php echo strval($fontSize * .2) . "rem"; ?>;
@@ -336,7 +338,8 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     {
         font-size: 2rem;
         text-decoration: none;
-        color: var(--testText)
+        color: var(--testText);
+        display: flex;
     }
     #showUsername:hover {
         color: var(--currentWord);

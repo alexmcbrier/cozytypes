@@ -12,9 +12,9 @@ if (isset($_SESSION["user_id"])) {
     </a>
     <a href="/index.php"><i class="fa-solid fa-house"></i></a>
     <a href="/preferences.php"><i class="fa-solid fa-gear"></i></a>
-    <div id = "showUsername">
-        <a href="/login.php"><i class="fa-regular fa-user"></i></a>
+    <a href="/login.php" id = "showUsername">
+        <i class="fa-regular fa-user"></i>
         <div><?= htmlspecialchars($user["username"]) ?></div>
-    </div>
+    </a>
     
 </nav>
