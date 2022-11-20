@@ -222,6 +222,9 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     .navIcon
     {
         color: var(--testText);
+    }
+    nav i, #showUsername
+    {
         transition: color .25s ease;
     }
     nav i:hover{
