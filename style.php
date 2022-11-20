@@ -522,7 +522,11 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         line-height: 2.3rem;
         width: 100%;
     }
-
+    #description
+    {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
     input {
         display: flex;
         flex-direction: row;
@@ -793,7 +797,6 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         color: rgb(255, 255, 255);
         font-size: 2rem;
         margin-left: 1rem;
-        margin-top: 2rem;
         user-select: none;
         line-height: 2rem;
     }
