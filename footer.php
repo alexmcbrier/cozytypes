@@ -9,6 +9,8 @@ if (isset($_SESSION["user_id"])) {
     $id = htmlspecialchars($user["id"]);
     $font = htmlspecialchars($user["fontSize"]);
     $theme = htmlspecialchars($user["theme"]);
+    echo("dsfsdf");
+    quit;
 }
 ?>
 <div id="footer">
