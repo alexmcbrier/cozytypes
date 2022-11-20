@@ -334,6 +334,10 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         padding: 0rem 1rem;
         transition: color .25s;
     }
+    #showUsername
+    {
+        font-size: 2rem;
+    }
     #showRestart:hover
     {
         color: var(--currentWord);
