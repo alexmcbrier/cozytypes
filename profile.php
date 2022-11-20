@@ -82,86 +82,77 @@ if (isset($_SESSION["user_id"])) {
     </div>
 
     <?php include "./nav.php" ?>
-    <div id=profileArea>
-        <div id="statsArea">
-            <div id="statsRow1">
-                <div id="profilePicture" class="statsItem">
-                    <img width="100" height="100" display="block" src="images/user.png">
-                    <h1><?= htmlspecialchars($user["username"]) ?></h1>
-                </div>
-                <div id="profileLevel" class="statsItem">
-                    <div id="xpBar"></div>
-                    <h1>lvl 0</h1>
-                </div>
-                <div id="profileRank" class="statsItem">
-                    <img width="100" height="100" display="block" src="images/<?= $rank ?>.png">
-                    <h1><?= $range ?></h1>
-                </div>
-                <div id="profileWPM" class="statsItem">
-                    <img width="100" height="100" display="block" src="images/shooting-star.png">
-                    <h1><?= $wpmPR ?> wpm</h1>
-                </div>
-
+    <div class="preferences">
+        <div class="horizontalAlign">
+            <div class="statsContainer"> 
+                <h1 class="notSignedIn" id="preferenceHeader"><?= htmlspecialchars($user["username"]) ?><i class="fa-regular fa-user"></i></h1>
             </div>
-            <div id="statsRow1">
-                <a id="profileLogout" class="statsItem" href="logout.php">
-                    <img width="100" height="100" display="block" src="images/exit.png">
-                    <h1>logout</h1>
-                </a>
+            <div class="statsContainer">
+                <h1 class="notSignedIn" id="preferenceHeader">streak<i class="fa-solid fa-fire"></i></h1>
+                <a class="results">1 day</a>
             </div>
-            <div id="friendsListArea">
-                <div id="friendsListHeader">Friends</div>
-                <div id="friendsList"></div>
-                <form style="box-sizing: border-box; width: 100%;" action="addFriend.php" method="post">
-                    <h3>Add Friend</h3>
-                    <input type="text" name="friendAccount" autocomplete="off" placeholder="username" id="username" name="username">
-                </form>
-                <div id="closeSidebar" onclick="closeSidebar()">Close</div>
+            <div class="statsContainer">
+                <h1 class="notSignedIn" id="preferenceHeader">tests completed<i class="fa-solid fa-chart-line"></i></h1>
+                <a class="results">29 tests</a>
             </div>
-        </div>
-        <script>
-            // Create element:
-            const parent = document.getElementById('friendsList');
-            const array = <?php echo json_encode($friendsArray); ?>;
-            const length = <?= count($friendsArray) ?>;
-            for (let i = 0; i < length; i++) {
-                //user div
-                const div = document.createElement("div");
-                div.classList.add("friendDiv");
-                parent.appendChild(div);
-                //profile pic
-                //name
-                const name = document.createElement("div");
-                name.classList.add("friend");
-                name.innerHTML = '<img width="20" height="20" src="images/user.png">' + array[i];
-                div.appendChild(name);
-                //invite friend
-                const invite = document.createElement("div");
-                invite.classList.add("inviteFriend");
-                invite.innerHTML = "invite";
-                div.appendChild(invite);
-                //remove friend
+            <div class="statsContainer">
+                <h1 class="notSignedIn" id="preferenceHeader">highest wpm<i class="fa-solid fa-crown"></i></h1>
+                <a class="results"><?= $wpmPR ?> wpm</a>
+            </div>
+    </div>
+    <a id = "showRestart" class="notSignedIn" href="logout.php">logout<i class="fa-solid fa-right-from-bracket"></i></a>
+    <div id="friendsListArea">
+        <div id="friendsListHeader">Friends</div>
+        <div id="friendsList"></div>
+        <form style="box-sizing: border-box; width: 100%;" action="addFriend.php" method="post">
+            <h3>Add Friend</h3>
+            <input type="text" name="friendAccount" autocomplete="off" placeholder="username" id="username" name="username">
+        </form>
+        <div id="closeSidebar" onclick="closeSidebar()">Close</div>
+    </div>
+    <script>
+        // Create element:
+        const parent = document.getElementById('friendsList');
+        const array = <?php echo json_encode($friendsArray); ?>;
+        const length = <?= count($friendsArray) ?>;
+        for (let i = 0; i < length; i++) {
+            //user div
+            const div = document.createElement("div");
+            div.classList.add("friendDiv");
+            parent.appendChild(div);
+            //profile pic
+            //name
+            const name = document.createElement("div");
+            name.classList.add("friend");
+            name.innerHTML = '<img width="20" height="20" src="images/user.png">' + array[i];
+            div.appendChild(name);
+            //invite friend
+            const invite = document.createElement("div");
+            invite.classList.add("inviteFriend");
+            invite.innerHTML = "invite";
+            div.appendChild(invite);
+            //remove friend
 
-                const form = document.createElement("form");
-                form.setAttribute("class", "removeFriend");
-                form.setAttribute("action", "removeFriend.php");
-                form.setAttribute("method", "post");
-                form.classList.add("removeFriend");
-                const button = document.createElement("button");
-                button.setAttribute("name", "friendAccount");
-                button.setAttribute("value", array[i]);
-                button.innerHTML = '<img width="30"height="30" type="submit" value="submit"src="images/delete.png">';
-                div.appendChild(form);
-                form.appendChild(button);
+            const form = document.createElement("form");
+            form.setAttribute("class", "removeFriend");
+            form.setAttribute("action", "removeFriend.php");
+            form.setAttribute("method", "post");
+            form.classList.add("removeFriend");
+            const button = document.createElement("button");
+            button.setAttribute("name", "friendAccount");
+            button.setAttribute("value", array[i]);
+            button.innerHTML = '<img width="30"height="30" type="submit" value="submit"src="images/delete.png">';
+            div.appendChild(form);
+            form.appendChild(button);
 
-                function openSidebar() {
-                    document.getElementById('friendsListArea').className = 'sidebarOpen';
-                    document.getElementById('sidebar').className = 'hideSidebar';
-                    document.getElementById('statsArea').className = 'statsAreaOpen';
-                };
+            function openSidebar() {
+                document.getElementById('friendsListArea').className = 'sidebarOpen';
+                document.getElementById('sidebar').className = 'hideSidebar';
+                document.getElementById('statsArea').className = 'statsAreaOpen';
+            };
 
-            }
-        </script>
+        }
+    </script>
 </body>
 
 </html>
