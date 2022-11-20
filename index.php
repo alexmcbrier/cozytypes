@@ -82,8 +82,8 @@ if (isset($_COOKIE["email"])) {
                     <a class="results"><?= $_GET["testTime"] ?>s</a>
                 </div>
             </div>
-            <a id = "showRestart" class="notSignedIn" href="index.php">play again<i class="fa-solid fa-backward"></i></a>
-            <a id = "showRestart" class="notSignedIn" href="login.php">track progress<i class="fa-solid fa-medal"></i></a>
+            <a id = "showRestart" href="index.php">play again<i class="fa-solid fa-backward"></i></a>
+            <a id = "showRestart" href="login.php">track progress<i class="fa-solid fa-medal"></i></a>
             </div>
             <?php } ?>
         <?php include "./footer.php" ?>

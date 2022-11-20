@@ -13,5 +13,6 @@ if (isset($_SESSION["user_id"])) {
     <a href="/index.php"><i class="fa-solid fa-house"></i></a>
     <a href="/preferences.php"><i class="fa-solid fa-gear"></i></a>
     <div id ="showUsername" ></div>
-    <a id ="showUsername" href="/login.php"><i class="fa-regular fa-user"></i><?= htmlspecialchars($user["username"]) ?></a>
+    <a id ="showRestart" href="/login.php"><?= htmlspecialchars($user["username"]) ?><i class="fa-regular fa-user"></i></a>
+    <a id = "showRestart" href="index.php">play again<i class="fa-solid fa-backward"></i></a>
 </nav>
