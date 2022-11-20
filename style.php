@@ -221,7 +221,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         justify-content: center;
     }
 
-    nav i:hover, nav a:hover {
+    nav i:hover{
         color: var(--currentWord);
     }
     
@@ -340,6 +340,9 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         font-size: 2rem;
         text-decoration: none;
         color: var(--testText)
+    }
+    #showUsername:hover {
+        color: var(--currentWord);
     }
     #showRestart:hover
     {
