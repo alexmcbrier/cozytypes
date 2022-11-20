@@ -148,22 +148,21 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     .tooltip {
         position: relative;
         display: inline-block;
+        white-space: nowrap; 
     }
 
     .tooltip .tooltiptext {
     visibility: hidden;
-    width: 120px;
     background-color: var(--row);
     color: #fff;
     text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
     position: absolute;
     z-index: 1;
     bottom: 150%;
     left: 50%;
     margin-left: -60px;
-
     }
 
 .tooltip .tooltiptext::after {
@@ -172,17 +171,14 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     top: 100%;
     left: 50%;
     margin-left: -5px;
-    border-width: 5px;
+    border-width: 7.5px;
     border-style: solid;
     border-color: var(--row) transparent transparent transparent;
-    
-    
     }
 
 .tooltip:hover .tooltiptext {
     visibility: visible;
     animation: fadeIn 1s  ease, slideUp 1s ease;
-    
     }
     i {
         font-size: 2rem;
