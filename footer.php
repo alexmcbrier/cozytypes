@@ -7,8 +7,9 @@ if (isset($_SESSION["user_id"])) {
     $user = $result->fetch_assoc();
     $font = htmlspecialchars($user["fontSize"]);
     $id = htmlspecialchars($user["id"]);
-    $font = $_SESSION["font"];
-    $theme = $_SESSION["theme"];
+}
+if (isset($_COOKIE["theme"])) {
+    $theme = $_COOKIE["theme"];
 }
 ?>
 <div id="footer">
@@ -16,11 +17,11 @@ if (isset($_SESSION["user_id"])) {
         <i class="fa-solid fa-code fa-sm"></i>
     </a>
     <div class = "linkDivider">/</div>
-    <a class = "footerLinks tooltip" href="/preferences.php">theme<?= $theme ?><span class="tooltiptext"><?= $theme ?></span>
+    <a class = "footerLinks tooltip" href="/preferences.php">theme<span class="tooltiptext"><?= $theme ?></span>
         <i class="fa-solid fa-palette fa-sm"></i>
     </a>
     <div class = "linkDivider">/</div>
-    <a class = "footerLinks tooltip" href="/preferences.php">font<span class="tooltiptext"><?= $font ?></span>
+    <a class = "footerLinks tooltip" href="/preferences.php">font<span class="tooltiptext">font</span>
         <i class="fa-solid fa-font fa-sm"></i>
     </a>
 </div>
