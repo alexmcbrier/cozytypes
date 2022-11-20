@@ -337,6 +337,8 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     #showUsername
     {
         font-size: 2rem;
+        text-decoration: none;
+        color: var(--testText)
     }
     #showRestart:hover
     {
