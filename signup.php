@@ -1,5 +1,5 @@
 <?php
-$is_invalid = false;
+$is_invalid = true;
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (empty($_POST["username"])) { //if name empty
         $is_invalid = true;
@@ -66,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <?php include "./head.php" ?>
     <body class="main-body">
     <?php include "./nav.php" ?>
-    <form id="mainContent" method ="post">
+    <form id="mainContent" method ="post" style = "width: 60%;">
         <h1 id = "loginHeader">sign up</h1>
         <?php if ($is_invalid) : ?>
             <div id="invalid">Invalid Credentials</div>
