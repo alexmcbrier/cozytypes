@@ -24,7 +24,6 @@ available themes:
 ## fonts
 available fonts:
 - `arial`
-- `arial`
 - `IBM Plex Sans`
 - `comfortaa`
 - `courier`
@@ -34,9 +33,13 @@ available fonts:
 - `titillium web`
 - `merriweather`
 ## caret
-users can either underline or highlight the current word when typing.
+the default caret is a blinking cursor, however, users have the option of underlining the letter, word, or highlighting the word.
 ## blur
 users can blur the following lines of text to further challenge themselves.
 ## difficulty
 - `easy`(selects from a list of 100 simple words)
 - `hard` (selects from a list of 1,000 difficult words)
+## track progress
+by creating an account, you have access to metrics such as tests completed, best typing speeds, along with many others.
+## friends
+by adding friends in the profile page, you are able to view their stats and metrics. 
