@@ -1,4 +1,11 @@
 <?php
+session_start();
+//if user already logged in then go to the profile page
+session_start();
+if (isset($_SESSION["user_id"])) {
+    header("Location: profile.php");
+    exit;
+}
 $is_invalid = false;
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $is_invalid = true;
