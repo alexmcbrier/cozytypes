@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 <?php include "./head.php" ?>
 
-<body>
+<body class="main-body">
     <?php include "./nav.php" ?>
     <form id="mainContent" method="post">
         <h1 id="loginHeader">Hello there, welcome back</h1>
