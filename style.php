@@ -216,19 +216,11 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: color .25s ease;
         color: var(--testText);
         padding: 2rem 1rem 1rem 1rem;
     }
-    nav i
-    {
-        padding: 2rem 0 1rem 0;
-        transition: color .25s ease;
-    }
-    showUsername
-    {
-        padding: 2rem 0 1rem 0;
-        transition: color .25s ease;
-    }
+
     nav i:hover{
         color: var(--currentWord);
     }
@@ -349,7 +341,6 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         color: var(--testText);
         display: flex;
         line-height: 2rem;
-        transition: color .25s ease;
     }
     #showUsername:hover {
         color: var(--currentWord);
