@@ -533,6 +533,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         outline: none;
         color: var(--currentWord);
         padding: 1rem;
+        margin: 2.5rem 0;
         box-sizing: border-box;
     }
 
