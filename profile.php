@@ -80,9 +80,8 @@ if (isset($_SESSION["user_id"])) {
     <div id="sidebar">
         <a onclick="openSidebar()" style="cursor: pointer"><img id="sidebarImage" width="60" height="60" src="images/follow.png"></a>
     </div>
-
-    <?php include "./nav.php" ?>
-    <div id="testContent">
+    <div id="mainContent">
+        <?php include "./nav.php" ?>
         <div id="middle">
             <div id="displayStats">
                 <div class="statsContainer"> 
@@ -96,8 +95,10 @@ if (isset($_SESSION["user_id"])) {
                     <h1 class="notSignedIn" id="preferenceHeader">highest wpm<i class="fa-solid fa-crown"></i></h1>
                     <a class="results"><?= $wpmPR ?> wpm</a>
                 </div>
+            </div>
+            <a id = "showRestart" class="notSignedIn" href="logout.php">logout<i class="fa-solid fa-right-from-bracket"></i></a>
         </div>
-        <a id = "showRestart" class="notSignedIn" href="logout.php">logout<i class="fa-solid fa-right-from-bracket"></i></a>
+        <?php include "./footer.php" ?>
     </div>
     <div id="friendsListArea">
         <div id="friendsListHeader">Friends</div>
