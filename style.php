@@ -335,6 +335,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         font-size: 2rem;
         padding: 0rem 1rem;
         transition: color .25s;
+        user-select: none;
     }
     #showUsername
     {
@@ -399,7 +400,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         border: none;
         cursor: pointer;
         padding: 1.5rem;
-        transition: background-color 1s ease, border 1s ease, transform 1s ease;
+        transition: transform .5s ease;
         
     }
     .currentSetting
@@ -620,15 +621,8 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
 
     #friendsListArea {
         background-color: var(--backgroundDark);
-        /* background-color:#191919;                      Background color */
-        font-size: 1rem;
-        text-align: center;
-        line-height: 10px;
-        vertical-align: top;
-        text-decoration: none;
         line-height: 10px;
         position: absolute;
-        /*animation */
         padding-top: 3rem;
         padding-bottom: 3rem;
         right: 0;
@@ -726,7 +720,6 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
 
     .friendDiv {
         display: flex;
-        flex-direction: row;
     }
 
     .removeFriend {

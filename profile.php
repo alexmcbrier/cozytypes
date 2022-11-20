@@ -82,25 +82,27 @@ if (isset($_SESSION["user_id"])) {
     </div>
 
     <?php include "./nav.php" ?>
-    <div class="preferences">
-        <div class="horizontalAlign">
-            <div class="statsContainer"> 
-                <h1 class="notSignedIn" id="preferenceHeader"><?= htmlspecialchars($user["username"]) ?><i class="fa-regular fa-user"></i></h1>
-            </div>
-            <div class="statsContainer">
-                <h1 class="notSignedIn" id="preferenceHeader">streak<i class="fa-solid fa-fire"></i></h1>
-                <a class="results">1 day</a>
-            </div>
-            <div class="statsContainer">
-                <h1 class="notSignedIn" id="preferenceHeader">tests completed<i class="fa-solid fa-chart-line"></i></h1>
-                <a class="results">29 tests</a>
-            </div>
-            <div class="statsContainer">
-                <h1 class="notSignedIn" id="preferenceHeader">highest wpm<i class="fa-solid fa-crown"></i></h1>
-                <a class="results"><?= $wpmPR ?> wpm</a>
-            </div>
+    <div id="testContent">
+        <div id="middle">
+            <div id="displayStats">
+                <div class="statsContainer"> 
+                    <h1 class="notSignedIn" id="preferenceHeader"><?= htmlspecialchars($user["username"]) ?><i class="fa-regular fa-user"></i></h1>
+                </div>
+                <div class="statsContainer">
+                    <h1 class="notSignedIn" id="preferenceHeader">streak<i class="fa-solid fa-fire"></i></h1>
+                    <a class="results">1 day</a>
+                </div>
+                <div class="statsContainer">
+                    <h1 class="notSignedIn" id="preferenceHeader">tests completed<i class="fa-solid fa-chart-line"></i></h1>
+                    <a class="results">29 tests</a>
+                </div>
+                <div class="statsContainer">
+                    <h1 class="notSignedIn" id="preferenceHeader">highest wpm<i class="fa-solid fa-crown"></i></h1>
+                    <a class="results"><?= $wpmPR ?> wpm</a>
+                </div>
+        </div>
+        <a id = "showRestart" class="notSignedIn" href="logout.php">logout<i class="fa-solid fa-right-from-bracket"></i></a>
     </div>
-    <a id = "showRestart" class="notSignedIn" href="logout.php">logout<i class="fa-solid fa-right-from-bracket"></i></a>
     <div id="friendsListArea">
         <div id="friendsListHeader">Friends</div>
         <div id="friendsList"></div>
