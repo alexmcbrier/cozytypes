@@ -525,6 +525,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     #description
     {
         font-size: 1rem;
+        line-height: 1.5rem;
         padding: 0 1rem;
     }
     input {
