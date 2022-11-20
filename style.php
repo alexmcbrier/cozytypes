@@ -812,7 +812,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
 
     #loginHeader {
         color: var(--currentWord);
-
+        user-select: none;
     }
     @keyframes blink {
     from, to {

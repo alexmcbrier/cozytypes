@@ -64,6 +64,5 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <a class="loginBtn" id="loginButton2" href="signup.php">Sign Up</a>
             </div>
         </form>
-        <?php include "./footer.php" ?>
     </body>
 </html>
