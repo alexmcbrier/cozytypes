@@ -131,7 +131,6 @@ if (isset($_SESSION["user_id"])) {
                 document.getElementById('friendsListArea').className = 'sidebarOpen';
                 document.getElementById('sidebar').className = 'hideSidebar';
                 document.getElementById('statsArea').className = 'statsAreaOpen';
-                document.getElemenyById('sidebarIcon').style.opacity = '0%';
             };
 
         }

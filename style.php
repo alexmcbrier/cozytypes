@@ -171,6 +171,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     position: absolute;
     top: 100%;
     left: 50%;
+    transform: translateX(-50%);
     margin-left: -5px;
     border-width: 7.5px;
     border-style: solid;
