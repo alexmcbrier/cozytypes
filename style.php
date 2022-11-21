@@ -698,6 +698,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     {
         display: table-cell;
         vertical-align: middle;
+        transition: .5s all ease;
     }
     #sidebar {
         z-index: 2;
@@ -710,7 +711,6 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         text-align: center;
         display: table; 
         overflow: hidden;
-        transition: .5s all ease;
     }
 
     .hideSidebar {
