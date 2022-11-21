@@ -495,7 +495,7 @@ function updateCookies()
 {
     addCookies();
 
-    if ( window.location.href == ("https://cozytypes.com/preferences") ) {
+    if (window.location.href == ("https://cozytypes.com/preferences") ) {
             updatePreferences();
         }
     else if ( window.location.href == ("https://cozytypes.com/")) {
@@ -507,5 +507,6 @@ newQuote();
 moveCursorWithY();
 setBlur();
 document.body.onLoad = updateCookies();
+document.body.onLoad = updatePreferences();
 document.body.onresize = function() { zoomwait() };
 
