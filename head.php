@@ -19,6 +19,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A simple and customisable typing website. Test yourself in different modes, track your progress and improve your typing speed."/>
+    <meta name="keywords" content="typing speed test, typing speedtest, typing test, speedtest, speed test, typing, test, typing-test, typing test, types, type, alexmcbrier, wpm, words per minute, typing website, minimalistic, custom typing test, customizable, customisable, themes, random words, smooth caret, smooth, new, new typing site, new typing website, minimalist typing website, minimalistic typing website, minimalist typing test"/>
     <title>CozyTypes</title>
     <script defer type="text/javascript" src="script.js"></script>
     <link rel="stylesheet" href="style.php">
