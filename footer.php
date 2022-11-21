@@ -12,7 +12,7 @@ if (isset($_COOKIE["fontFamily"])) {
         <i class="fa-solid fa-code fa-sm"></i>
     </a>
     <div class = "linkDivider">/</div>
-    <a class = "footerLinks tooltip" href="/preferences.php">theme<span id = "middleFooter" class="tooltiptext"><?= $theme ?></span>
+    <a class = "footerLinks tooltip" href="/preferences.php">theme<span class="tooltiptext"><?= $theme ?></span>
         <i class="fa-solid fa-palette fa-sm"></i>
     </a>
     <div class = "linkDivider">/</div>

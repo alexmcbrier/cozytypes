@@ -151,10 +151,6 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         display: inline-block;
         white-space: nowrap; 
     }
-    #middleFooter
-    {
-        transform: translateX(0);
-    }
     .tooltip .tooltiptext {
     visibility: hidden;
     background-color: var(--row);
@@ -168,6 +164,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     left: 50%;
     transform: translateX(-25%);
     margin-left: -60px;
+    min-width: 8rem;
     }
 
 .tooltip .tooltiptext::after {
