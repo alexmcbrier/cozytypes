@@ -507,6 +507,6 @@ newQuote();
 moveCursorWithY();
 setBlur();
 document.body.onLoad = updateCookies();
-document.body.onLoad = updatePreferences();
+updatePreferences();
 document.body.onresize = function() { zoomwait() };
 
