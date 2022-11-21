@@ -494,10 +494,10 @@ function updatePreferences()
 function updateCookies()
 {
     addCookies();
-    if ( window.location.href == ("https://www.cozytypes.com/")) {
+    if ( window.location.href == ("https://cozytypes.com/")) {
         updateIndex();
     }
-    else if ( window.location.href == ("https://www.cozytypes.com/preferences") ) {
+    else if ( window.location.href == ("https://cozytypes.com/preferences") ) {
         updatePreferences();
     }
 }
