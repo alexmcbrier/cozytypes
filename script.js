@@ -502,9 +502,9 @@ function updateCookies()
     }
 }
 addCookies();
-document.body.onLoad = updateCookies();
-document.body.onresize = function() { zoomwait() };
 newQuote();
 moveCursorWithY();
 setBlur();
+document.body.onLoad = updateCookies();
+document.body.onresize = function() { zoomwait() };
 
