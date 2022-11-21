@@ -108,8 +108,8 @@ if (isset($_GET["finish"]))
                     <a class="results"><?= $_GET["testTime"] ?>s</a>
                 </div>
             </div>
-            <a id = "showRestart" href="index.php">play again<i class="fa-solid fa-backward"></i></a>
-            <a id = "showRestart" href="login.php">track progress<i class="fa-solid fa-medal"></i></a>
+            <a id = "showRestart" href="index">play again<i class="fa-solid fa-backward"></i></a>
+            <a id = "showRestart" href="login">track progress<i class="fa-solid fa-medal"></i></a>
             </div>
             <?php } ?>
         <?php include "./footer.php" ?>

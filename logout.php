@@ -9,5 +9,5 @@ if (isset($_COOKIE['id'])) {
     setcookie('id', null, -1, '/'); 
 } else {
 }
-header("Location: login.php");
+header("Location: login");
 ?>

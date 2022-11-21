@@ -26,13 +26,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $stmt->bind_param("ss", $user["username"], $_POST["friendAccount"]);
         if ($stmt->execute()) 
             {
-            header("location: profile.php");
+            header("location: profile");
             exit;
             }
     }
     else
     {
-        header("location: profile.php");
+        header("location: profile");
         exit;
         //throw error and make them type a new name
     }

@@ -38,7 +38,7 @@ if (isset($_SESSION["user_id"])) {
 
 } else //if not logged in but somehow managed to get to this page (Neccesary)
 {
-    header("Location: login.php");
+    header("Location: login");
 }
 ?>
 <!DOCTYPE html>

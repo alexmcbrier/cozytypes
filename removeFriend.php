@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         exit;
     }
 
-    header("location: profile.php");
+    header("location: profile");
     exit;
 }
 ?>
