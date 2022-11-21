@@ -697,9 +697,6 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
 
     #sidebar {
         z-index: 2;
-        /* make first in order*/
-        position: relative;
-        background: var(--backgroundDark);
         position: absolute;
         top: 0;
         right: 0;

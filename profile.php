@@ -61,7 +61,7 @@ if (isset($_SESSION["user_id"])) {
 
 <body class="main-body">
     <div id="sidebar">
-        <a onclick="openSidebar()" style="cursor: pointer"><img id="sidebarImage" width="60" height="60" src="images/follow.png"></a>
+        <i style="cursor: pointer" onclick="openSidebar()" class="fa-solid fa-chevron-left"></i>
     </div>
     <div id="mainContent">
         <?php include "./nav.php" ?>
