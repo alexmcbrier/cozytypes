@@ -61,8 +61,8 @@ if ($caret == "none") {
     $caretTop = 0;
     $caretHeight = $fontSize * 1.5;
 } else if ($caret == "caret") {
-    $caretTop = $fontSize * .25;
-    $caretHeight = $fontSize * .65;
+    $caretTop = $fontSize * .3;
+    $caretHeight = $fontSize * .7;
     $caretWidth = $fontSize * .1;
     $caretOpacity = 100;
 }
