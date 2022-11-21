@@ -698,7 +698,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     {
         display: table-cell;
         vertical-align: middle;
-        transition: .5s all ease;
+        transition: .5s opacity ease;
     }
     #sidebar {
         z-index: 2;
