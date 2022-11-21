@@ -494,19 +494,17 @@ function updatePreferences()
 function updateCookies()
 {
     addCookies();
-
-    if (window.location.href == ("https://cozytypes.com/preferences") ) {
-            updatePreferences();
-        }
-    else if ( window.location.href == ("https://cozytypes.com/")) {
+    if ( window.location.href == ("https://www.cozytypes.com/")) {
         updateIndex();
+    }
+    else if ( window.location.href == ("https://www.cozytypes.com/preferences") ) {
+        updatePreferences();
     }
 }
 addCookies();
+document.body.onLoad = updateCookies();
+document.body.onresize = function() { zoomwait() };
 newQuote();
 moveCursorWithY();
 setBlur();
-document.body.onLoad = updateCookies();
-updatePreferences();
-document.body.onresize = function() { zoomwait() };
 
