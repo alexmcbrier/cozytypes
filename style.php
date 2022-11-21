@@ -61,8 +61,8 @@ if ($caret == "none") {
     $caretTop = 0;
     $caretHeight = $fontSize * 1.5;
 } else if ($caret == "caret") {
-    $caretTop = $fontSize * .2;
-    $caretHeight = $fontSize * 1.25;
+    $caretTop = $fontSize * .25;
+    $caretHeight = $fontSize * 65;
     $caretWidth = $fontSize * .1;
     $caretOpacity = 100;
 }
@@ -505,12 +505,10 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
 
     #cursor {
         width: <?php echo strval($caretWidth) . "rem"; ?>;
-        height: 1rem;
         background-color: var(--correct);
         opacity: <?php echo strval($caretOpacity) . "%"; ?>;
         border-radius: 1.5rem;
         position: absolute;
-        margin-top: 1.75rem;
         transition: all .08s;
         transition-timing-function: linear;
         height: <?php echo strval($caretHeight) . "rem"; ?>;
