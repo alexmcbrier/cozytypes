@@ -2,7 +2,7 @@
 //if user already logged in then go to the profile page
 session_start();
 if (isset($_SESSION["user_id"])) {
-    header("Location: profile.php");
+    header("Location: profile");
     exit;
 }
 $is_invalid = false;
@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $id = ($user["id"]);
             setcookie("id", $user["password_hash"], time() + (86400 * 30), "/", NULL); // 86400 = 1 day
             //succesfully registered an account
-            header("location: profile.php");
+            header("location: profile");
             exit;
         }
     }
@@ -63,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     <input type="text" placeholder="password" name="password" id="password" style="-webkit-text-security: disc;">
                     <div style="display: flex; gap: 1rem">
                         <button class="loginBtn" id="loginButton1" type="submit" value="submit">Login</button>
-                        <a class="loginBtn" id="loginButton2" href="signup.php">Sign Up</a>
+                        <a class="loginBtn" id="loginButton2" href="signup">Sign Up</a>
                     </div>
                 </form>
             </div>
