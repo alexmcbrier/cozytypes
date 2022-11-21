@@ -542,7 +542,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     .incorrect-word {
         color: var(--incorrect);
         display: inline-block;
-        padding: 0px .8rem;
+        padding: 0rem <?php echo strval($fontSize * .2) . "rem"; ?>;
     }
 
     #listOfStats {
