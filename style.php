@@ -60,6 +60,7 @@ if ($caret == "none") {
 } else if ($caret == "highlightWord") {
     $caretTop = 0;
     $caretHeight = $fontSize * 1.5;
+    $caretOpacity = 20;
 } else if ($caret == "caret") {
     $caretTop = $fontSize * .25;
     $caretHeight = $fontSize * 1;
