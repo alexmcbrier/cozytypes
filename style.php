@@ -696,7 +696,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     }
     #sidebarIcon 
     {
-        display: table-cell; v
+        display: table-cell;
         vertical-align: middle;
     }
     #sidebar {
