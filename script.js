@@ -503,7 +503,6 @@ function updateCookies()
 }
 function startTest()
 {
-    addCookies();
     updateCookies();
     newQuote();
     moveCursorWithY();
