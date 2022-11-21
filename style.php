@@ -184,6 +184,9 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         font-size: 2rem;
         padding: 0 1rem;
     }
+    #footer i {
+        padding: 1rem;
+    }
     .vertical-scroll>div {
         background: var(--testText);
         border-radius: 1em;
