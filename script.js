@@ -501,10 +501,16 @@ function updateCookies()
         updatePreferences();
     }
 }
-addCookies();
+function startTest()
+{
+    addCookies();
+    updateCookies();
+    newQuote();
+    moveCursorWithY();
+    setBlur();
+}
+
 document.body.onLoad = updateCookies();
 document.body.onresize = function() { zoomwait() };
-newQuote();
-moveCursorWithY();
-setBlur();
+
 
