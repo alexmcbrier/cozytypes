@@ -694,7 +694,11 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     #sidebarImage {
         padding: 2rem;
     }
-
+    #sidebarIcon 
+    {
+        display: table-cell; v
+        vertical-align: middle;
+    }
     #sidebar {
         z-index: 2;
         position: absolute;
@@ -704,6 +708,8 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         width: 10rem;
         border-radius: 3rem;
         text-align: center;
+        display: table; 
+        overflow: hidden;
     }
 
     .hideSidebar {
