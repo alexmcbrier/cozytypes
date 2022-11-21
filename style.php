@@ -852,7 +852,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     }
     @keyframes blink {
     from, to {
-        opacity: .75;
+        opacity: $caretOpacity;
     }
     50% {
         opacity: 0;
