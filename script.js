@@ -495,10 +495,11 @@ function updateCookies()
 {
     addCookies();
     alert("no")
-    if ( window.location.href == ("https://www.cozytypes.com/")) {
+    if ( window.location.href == ("https://cozytypes.com/")) {
+        alert("oops");
         updateIndex();
     }
-    else if ( window.location.href == ("https://www.cozytypes.com/preferences") ) {
+    else if ( window.location.href == ("https://cozytypes.com/preferences") || window.location.href == ("https://cozytypes.com/preferences.php")) {
         alert("YESSS");
         updatePreferences();
     }
