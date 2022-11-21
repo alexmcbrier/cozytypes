@@ -163,6 +163,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     z-index: 1;
     bottom: 150%;
     left: 50%;
+    transform: translateX(-50%);
     margin-left: -60px;
     }
 
