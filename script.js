@@ -510,7 +510,7 @@ function startTest()
     setBlur();
 }
 
-document.body.onLoad = updateCookies();
+document.body.onLoad = startTest();
 document.body.onresize = function() { zoomwait() };
 
 
