@@ -498,6 +498,7 @@ function updateCookies()
         updateIndex();
     }
     else if ( window.location.href == ("https://www.cozytypes.com/preferences") ) {
+        console.log("YESSS")
         updatePreferences();
     }
 }
