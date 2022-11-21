@@ -182,7 +182,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     }
     i {
         font-size: 2rem;
-        padding: 1rem;
+        padding: 0 1rem;
     }
     .vertical-scroll>div {
         background: var(--testText);
@@ -835,8 +835,9 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         margin-left: 1rem;
         user-select: none;
         line-height: 2rem;
+        display: flex;
+        white-space: nowrap;
     }
-
     .preferences a:hover {
         background-color: var(--incorrect);
     }
