@@ -69,7 +69,7 @@ if ($caret == "none") {
 }
 ?>
 <style>
-    @import 'themes/<?php echo strval($theme) ?>.css';
+    @import 'themes/dracula.css';
     @font-face {
         font-family: "comfortaa";
         src: url("./Fonts/comfortaa.ttf");
