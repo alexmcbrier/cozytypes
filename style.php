@@ -67,9 +67,9 @@ if ($caret == "none") {
     $caretWidth = $fontSize * .1;
     $caretOpacity = 100;
 }
-include "themes/" . $theme . ".css"; //theme added depends on the name of the one in the database
 ?>
 <style>
+    @import 'themes/<?php echo strval($theme) ?>.css';
     @font-face {
         font-family: "comfortaa";
         src: url("./Fonts/comfortaa.ttf");
