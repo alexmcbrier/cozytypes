@@ -360,7 +360,6 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         border-radius: 1.5rem;
         padding: 1rem;
         margin-left: .5rem;
-        transition: 1s;
         line-height: 10px;
         vertical-align: top;
         text-decoration: none;

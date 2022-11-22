@@ -63,12 +63,6 @@ function reloadCss()
             link.href += "";
     }
 }
-function changeCookie(cName, cValue, expDays)
-{
-    setCookie(cName, cValue, expDays); //first it sets the cookie values
-    updateCookies();
-
-}
 function checkCookie(cName) {
     let name = getCookie(cName);
     if (name != "") {
