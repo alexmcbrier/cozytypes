@@ -51,7 +51,17 @@ function setCookie(cName, cValue, expDays) {
     date.setTime(date.getTime() + (expDays * 24 * 60 * 60 * 1000));
     const expires = "expires=" + date.toUTCString();
     document.cookie = cName + "=" + cValue + "; " + expires + "; path=/";
-
+    reloadCss();
+}
+function reloadCss()
+{
+    var links = document.getElementsByTagName("link");
+    for (var cl in links)
+    {
+        var link = links[cl];
+        if (link.rel === "stylesheet")
+            link.href += "";
+    }
 }
 function changeCookie(cName, cValue, expDays)
 {
