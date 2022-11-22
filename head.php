@@ -23,6 +23,7 @@
     <meta name="author" content="alexmcbrier">
     <title>CozyTypes</title>
     <script defer type="text/javascript" src="script.js"></script>
+    <link href="https://cozytypes.com/" rel="canonical" />
     <link rel="stylesheet" href="style.php">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
