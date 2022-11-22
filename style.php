@@ -289,7 +289,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         display: inline-block;
         padding: 1.25rem 1.5rem;
         margin-left: .5rem;
-        transition: .3s;
+        transition: transform .3s ease;
         line-height: 10px;
         vertical-align: top;
         text-decoration: none;
