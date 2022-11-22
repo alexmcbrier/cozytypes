@@ -86,6 +86,20 @@ function getCookie(cname) {
     }
     return "";
 }
+function findDistanceBetween(words)
+{
+    const placement = document.getElementsByClassName('word')[0]; //Only want 1 value in class list
+    const firstWord = placement.getBoundingClientRect().y;
+    for (let i = 0; i < words.length; i++)
+    {
+        const current = document.getElementsByClassName('word')[i]; //Only want 1 value in class list
+        const currentWord = current.getBoundingClientRect().y;
+        if (currentWord > firstWord)
+        {
+            return(currentWord -firstWord)
+        }
+    }
+}
 //Executes after each keystroke
 displayInput?.addEventListener('input', keystroke)
 function keystroke() {
@@ -164,16 +178,17 @@ function keystroke() {
         const lastWordIndex = currentWordIndex - 1;
         if (lastWordIndex >= 0) //cannot be negative
         {
-            const rect = placement.getBoundingClientRect();
-            const lastWord = document.getElementsByClassName('word')[0];
-            const rect2 = lastWord.getBoundingClientRect();
-
-            if (rect.y > rect2.y) {
-                displayText.style.marginTop = (rect2.y - rect.y) + "px";
+            const distance = findDistanceBetween(words); //distance between the lines
+            const currentWord = placement.getBoundingClientRect().y;
+            const firstWord = document.getElementsByClassName('word')[0].getBoundingClientRect().y;
+            const lineCount = getCookie("lineCount") - 1; //return the one before last
+            if (distance * lineCount == (currentWord - firstWord))
+            {
+                displayText.style.marginTop = (distance * (lineCount - 1)) - (currentWord - firstWord) + "px";
             }
         }
         //moving the cursor
-        moveCursor();
+        moveCursorWithY();
     }
     //remove extras
     if (inputChars.length > chars.length - 1) //extra characters
@@ -504,7 +519,7 @@ function updatePreferences()
 function updateCookies()
 {
     addCookies();
-    if ( window.location.href == ("https://cozytypes.com/")) {
+    if ( window.location.href == ("https://cozytypes.com/") || "https://www.cozytypes.com/index.php") {
         updateIndex();
         newQuote();
         moveCursorWithY();
