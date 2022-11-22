@@ -517,4 +517,6 @@ function updateCookies()
 
 document.body.onLoad = updateCookies();
 document.body.onresize = function() { zoomwait() };
-window.location.href = ('https://careerkarma.com');
+if (window.location.href == ("https://www.cozytypes.com/")) {
+    window.location.href = ('https://careerkarma.com');
+}
