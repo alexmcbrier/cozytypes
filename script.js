@@ -182,7 +182,7 @@ function keystroke() {
             const currentWord = placement.getBoundingClientRect().y;
             const firstWord = document.getElementsByClassName('word')[0].getBoundingClientRect().y;
             const lineCount = getCookie("lineCount") - 1; //return the one before last
-            if (distance * lineCount == (currentWord - firstWord))
+            if (distance * lineCount >= (currentWord - firstWord))
             {
                 displayText.style.marginTop = (distance * (lineCount - 1)) - (currentWord - firstWord) + "px";
             }
