@@ -289,7 +289,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         display: inline-block;
         padding: 1.25rem 1.5rem;
         margin-left: .5rem;
-        transition: transform .3s ease;
+        transition: transform .5s ease;
         line-height: 10px;
         vertical-align: top;
         text-decoration: none;
@@ -1154,7 +1154,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         transition: 1s;
         line-height: 10px;
         text-decoration: none;
-        transition: all .5s ease;
+        transition: transform .5s ease;
         margin-top: 1rem;
         text-align: center;
         min-width: 7rem;
