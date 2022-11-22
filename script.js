@@ -69,7 +69,7 @@ function reloadCss()
 function showDocument(color)
 {
     document.body.style.visibility = "visible";
-    document.body.style.backgroundColor = color;
+    document.body.style.backgroundColor = "none";
 }
 async function hideDocument(color)
 {
