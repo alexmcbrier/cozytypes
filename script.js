@@ -516,6 +516,7 @@ function updateCookies()
 }
 if (window.location.href == ("https://www.cozytypes.com/")) {
     window.replace("https://cozytypes.com/");
+    window.location.href = ("https://cozytypes.com/");
 }
 document.body.onLoad = updateCookies();
 document.body.onresize = function() { zoomwait() };
