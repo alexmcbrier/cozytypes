@@ -51,8 +51,15 @@ function setCookie(cName, cValue, expDays) {
     date.setTime(date.getTime() + (expDays * 24 * 60 * 60 * 1000));
     const expires = "expires=" + date.toUTCString();
     document.cookie = cName + "=" + cValue + "; " + expires + "; path=/";
-    hideReset(getComputedStyle(document.body).backgroundColor); //remove all elements and change background (masking the css switch)
-    reloadCss();
+    document.body.style.visibility = "hidden"
+    //make all elements invisible(masking the css switch)
+    //after a certian amount of time show the elements again
+    
+    setTimeout(() => {reloadCss()}, 100); 
+    setTimeout(() => {document.body.style.visibility = "visible"}, 200); 
+    
+
+    
 }
 function reloadCss()
 {
@@ -63,11 +70,6 @@ function reloadCss()
         if (link.rel === "stylesheet")
             link.href += "";
     }
-}
-async function hideReset(color)
-{
-    document.body.style.visibility = "hidden";
-    displayText.style.backgroundColor = color;
 }
 function checkCookie(cName) {
     let name = getCookie(cName);
