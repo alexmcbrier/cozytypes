@@ -503,9 +503,14 @@ function updatePreferences()
 }
 function updateCookies()
 {
-    addCookies();
-
+    if ( window.location.href == ("https://cozytypes.com/")) {
+        updateIndex();
+    }
+    else if ( window.location.href == ("https://cozytypes.com/preferences") || window.location.href == ("https://cozytypes.com/preferences.php")) {
+        updatePreferences();
+    }
 }
+addCookies();
 document.body.onLoad = updateCookies();
 document.body.onresize = function() { zoomwait() };
 newQuote();
