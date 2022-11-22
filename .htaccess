@@ -1,5 +1,5 @@
 RewriteEngine On
-RewriteCond %{HTTP_HOST} ^www.example.com$ [NC]
-RewriteRule ^(.*)$ http://example.com/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^www.cozytypes.com$ [NC]
+RewriteRule ^(.*)$ http://cozytypes.com/$1 [R=301,L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.php [NC,L]
