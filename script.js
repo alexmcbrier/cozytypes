@@ -51,19 +51,22 @@ function setCookie(cName, cValue, expDays) {
     date.setTime(date.getTime() + (expDays * 24 * 60 * 60 * 1000));
     const expires = "expires=" + date.toUTCString();
     document.cookie = cName + "=" + cValue + "; " + expires + "; path=/";
-    reloadCss();
+    hideReset();
 }
-function reloadCSS() {
-    const links = document.getElementsByTagName('link');
-    
-    Array.from(links)
-      .filter(link => link.rel.toLowerCase() === 'stylesheet' && link.href)
-      .forEach(link => {
-        const url = new URL(link.href, location.href);
-        url.searchParams.set('forceReload', Date.now());
-        link.href = url.href;
-      });
-  }
+function reloadCss()
+{
+    var links = document.getElementsByTagName("link");
+    for (var cl in links)
+    {
+        var link = links[cl];
+        if (link.rel === "stylesheet")
+            link.href += "";
+    }
+}
+async function hideReset()
+{
+    document.body.style.backgroundColor = "red";
+}
 function checkCookie(cName) {
     let name = getCookie(cName);
     if (name != "") {
