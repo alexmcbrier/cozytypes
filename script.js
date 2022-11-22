@@ -51,7 +51,13 @@ function setCookie(cName, cValue, expDays) {
     date.setTime(date.getTime() + (expDays * 24 * 60 * 60 * 1000));
     const expires = "expires=" + date.toUTCString();
     document.cookie = cName + "=" + cValue + "; " + expires + "; path=/";
-    document.location.reload();
+
+}
+function changeCookie(cName, cValue, expDays)
+{
+    setCookie(cName, cValue, expDays); //first it sets the cookie values
+    updateCookies();
+
 }
 function checkCookie(cName) {
     let name = getCookie(cName);

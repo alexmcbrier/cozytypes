@@ -65,7 +65,7 @@ session_start();
         <div id="themesContainer" class="rowContainer">
             <h1 id="preferenceHeader">Theme <i class="fa-solid fa-palette"></i></h1>
             <a title="light" id="theme-light" onclick="setCookie('theme', 'light', 30)">light</a>
-            <a title="dark" id="theme-dark" onclick="setCookie('theme', 'dark', 30)">dark</a>
+            <a title="dark" id="theme-dark" onclick="changeCookie('theme', 'dark', 30)">dark</a>
             <a title="dracula" id="theme-dracula" onclick="setCookie('theme', 'dracula', 30)">dracula</a>
             <a title="olivia" id="theme-olivia" onclick="setCookie('theme', 'olivia', 30)">olivia</a>
             <a title="mizu" id="theme-mizu" onclick="setCookie('theme', 'mizu', 30)">mizu</a>
