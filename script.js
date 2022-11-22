@@ -504,8 +504,6 @@ function updateCookies()
         updatePreferences();
     }
 }
-addCookies();
-
 document.body.onLoad = updateCookies();
 document.body.onresize = function() { zoomwait() };
 
