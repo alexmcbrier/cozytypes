@@ -55,7 +55,7 @@ function setCookie(cName, cValue, expDays) {
     //make all elements invisible(masking the css switch)
     //after a certian amount of time show the elements again
     
-    setTimeout(() => {reloadCss()}, 100); 
+    setTimeout(() => {reloadCss()}, 0); 
     setTimeout(() => {document.body.style.visibility = "visible"}, 200); 
     
 
