@@ -14,7 +14,7 @@ if (isset($_COOKIE["fontFamily"])) {
 if (isset($_COOKIE["fontSize"])) {
     $fontSize = ($_COOKIE["fontSize"]);
 } else {
-    $fontSize = 4;
+    $fontSize = 3;
 }
 if (isset($_COOKIE["caret"])) {
     $caret = $_COOKIE["caret"];

@@ -450,7 +450,7 @@ function findCookie(name, parentId) //checks to see which cookie is selected (us
 function addCookies()
 {
     if(!checkCookie('fontSize')){
-        setCookie("fontSize", 4, 30); //default if have no cookies yet
+        setCookie("fontSize", 3, 30); //default if have no cookies yet
     }
     if(!checkCookie('fontFamily')){
         setCookie("fontFamily", "lexenddeca", 30); //default if have no cookies yet
