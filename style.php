@@ -1,46 +1,6 @@
 <?php
 header('Content-Type: text/css');
 session_start();
-if (isset($_COOKIE["theme"])) {
-    $theme = $_COOKIE["theme"];
-} else {
-    $theme = "light";
-}
-if (isset($_COOKIE["fontFamily"])) {
-    $fontFamily = $_COOKIE["fontFamily"];
-} else {
-    $fontFamily = "lexendDeca";
-}
-if (isset($_COOKIE["fontSize"])) {
-    $fontSize = ($_COOKIE["fontSize"]);
-} else {
-    $fontSize = 4;
-}
-if (isset($_COOKIE["caret"])) {
-    $caret = $_COOKIE["caret"];
-} else {
-    $caret = "caret";
-}
-if (isset($_COOKIE["lineCount"])) {
-    $lineCount = $_COOKIE["lineCount"];
-} else {
-    $lineCount = 3;
-}
-if (isset($_COOKIE["time"])) {
-    $time = $_COOKIE["time"];
-} else {
-    $time = 15;
-}
-if (isset($_COOKIE["words"])) {
-    $words = $_COOKIE["words"];
-} else {
-    $words = 100;
-}
-if (isset($_COOKIE["typingMode"])) {
-    $typingMode = $_COOKIE["typingMode"];
-} else {
-    $typingMode = "words";
-}
 //caret settinngs
 $fontSize = $fontSize * .8; /*reducing by a factor of .8 */
 $height = 1.5 * $fontSize * $lineCount;
