@@ -51,7 +51,7 @@ function setCookie(cName, cValue, expDays) {
     date.setTime(date.getTime() + (expDays * 24 * 60 * 60 * 1000));
     const expires = "expires=" + date.toUTCString();
     document.cookie = cName + "=" + cValue + "; " + expires + "; path=/";
-    hideReset(getComputedStyle(document.body).backgroundColor);
+    hideReset(getComputedStyle(document.body).backgroundColor); //remove all elements and change background (masking the css switch)
     reloadCss();
 }
 function reloadCss()
@@ -63,6 +63,7 @@ function reloadCss()
         if (link.rel === "stylesheet")
             link.href += "";
     }
+    document.body.style.visibility = "visible";
 }
 async function hideReset(color)
 {
