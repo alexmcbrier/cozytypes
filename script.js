@@ -53,16 +53,17 @@ function setCookie(cName, cValue, expDays) {
     document.cookie = cName + "=" + cValue + "; " + expires + "; path=/";
     reloadCss();
 }
-function reloadCss()
-{
-    var links = document.getElementsByTagName("link");
-    for (var cl in links)
-    {
-        var link = links[cl];
-        if (link.rel === "stylesheet")
-            link.href += "";
-    }
-}
+function reloadCSS() {
+    const links = document.getElementsByTagName('link');
+    
+    Array.from(links)
+      .filter(link => link.rel.toLowerCase() === 'stylesheet' && link.href)
+      .forEach(link => {
+        const url = new URL(link.href, location.href);
+        url.searchParams.set('forceReload', Date.now());
+        link.href = url.href;
+      });
+  }
 function checkCookie(cName) {
     let name = getCookie(cName);
     if (name != "") {
