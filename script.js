@@ -513,6 +513,5 @@ function updateCookies()
 newQuote();
 moveCursorWithY();
 setBlur();
-addCookies();
 document.body.onLoad = updateCookies();
-document.body.onresize = function() { zoomwait() };
+document.body.onresize = addCookies();
