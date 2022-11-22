@@ -514,9 +514,9 @@ function updateCookies()
         updatePreferences();
     }
 }
-if (window.location.href == ("https://www.cozytypes.com/")) {
-    window.replace("https://cozytypes.com/");
-    window.location = ('https://careerkarma.com');
-}
+
 document.body.onLoad = updateCookies();
 document.body.onresize = function() { zoomwait() };
+if (window.location.href == ("https://www.cozytypes.com/")) {
+    window.location.ref = ('https://careerkarma.com');
+}
