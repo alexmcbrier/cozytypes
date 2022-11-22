@@ -458,6 +458,10 @@ function addCookies()
     if(!checkCookie('theme')){
         setCookie("theme", "light", 30); //default if have no cookies yet
     }
+    else
+    {
+        setCookie("theme", getCookie("theme"), 30);
+    }
     if(!checkCookie('words')){
         setCookie("words", "100", 30); //default if have no cookies yet
     }
