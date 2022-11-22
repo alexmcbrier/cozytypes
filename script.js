@@ -503,7 +503,7 @@ function updatePreferences()
 }
 function updateCookies()
 {
-    addCookies();
+
     if ( window.location.href == ("https://cozytypes.com/")) {
         updateIndex();
     }
