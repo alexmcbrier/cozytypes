@@ -52,6 +52,7 @@ function setCookie(cName, cValue, expDays) {
     const expires = "expires=" + date.toUTCString();
     document.cookie = cName + "=" + cValue + "; " + expires + "; path=/";
     hideReset();
+    reloadCss();
 }
 function reloadCss()
 {
