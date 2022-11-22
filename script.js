@@ -67,7 +67,7 @@ function reloadCss()
 async function hideReset(color)
 {
     document.body.style.visibility = "hidden";
-    document.body.style.backgroundColor = color;
+
 }
 function checkCookie(cName) {
     let name = getCookie(cName);
