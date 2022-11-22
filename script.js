@@ -178,13 +178,22 @@ function keystroke() {
         const lastWordIndex = currentWordIndex - 1;
         if (lastWordIndex >= 0) //cannot be negative
         {
-            const distance = findDistanceBetween(words); //distance between the lines
-            const currentWord = placement.getBoundingClientRect().y;
-            const firstWord = document.getElementsByClassName('word')[0].getBoundingClientRect().y;
-            const lineCount = getCookie("lineCount"); 
             if (distance * (lineCount - 1) <= (currentWord - firstWord) && lineCount > 1) //return the one before last
             {
+                const distance = findDistanceBetween(words); //distance between the lines
+                const currentWord = placement.getBoundingClientRect().y;
+                const firstWord = document.getElementsByClassName('word')[0].getBoundingClientRect().y;
+                const lineCount = getCookie("lineCount"); 
                 displayText.style.marginTop = (distance * (lineCount - 2)) - (currentWord - firstWord) + "px";
+            }
+            else //return the one before last
+            {
+                const rect = placement.getBoundingClientRect();
+                const lastWord = document.getElementsByClassName('word')[0];
+                const rect2 = lastWord.getBoundingClientRect();
+                if (rect.y > rect2.y) {
+                    displayText.style.marginTop = (rect2.y - rect.y) + "px";
+                }
             }
         }
         //moving the cursor
