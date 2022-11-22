@@ -1,6 +1,15 @@
 <?php
 header('Content-Type: text/css');
 session_start();
+$theme = $_COOKIE["theme"];
+$fontFamily = $_COOKIE["fontFamily"];
+$fontSize = ($_COOKIE["fontSize"]);
+$caret = $_COOKIE["caret"];
+$lineCount = $_COOKIE["lineCount"];
+$time = $_COOKIE["time"];
+$words = $_COOKIE["words"];
+$typingMode = $_COOKIE["typingMode"];
+$typingMode = "words";
 //caret settinngs
 $fontSize = $fontSize * .8; /*reducing by a factor of .8 */
 $height = 1.5 * $fontSize * $lineCount;
