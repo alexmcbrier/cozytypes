@@ -338,12 +338,19 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         display: flex;
         /* equal height of the children */
     }
-    #wpmDisplay
+    .testItem
     {
-        min-width: 4.5rem;
-        text-align: center;
+        font-size: <?php echo strval($fontSize) * .5 . "rem" ?>;
         padding: 2rem;
         overflow: hidden;
+    }
+    #wpmDisplay
+    {
+        min-width: <?php echo strval($fontSize) * 2.25 . "rem" ?>;
+    }
+    #wpmDisplay, #time
+    {
+        text-align: center;
     }
     .rowContainer {
         user-select: none;
@@ -402,17 +409,12 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         padding: 2rem;
     }
     #textInput {
-        font-size: 2rem;
-        border-radius: 1.5rem;
-        color: var(--currentWord);
-        /* text input font color */
-        overflow: hidden;
         resize: none;
-        /* Neccesary so user cannot resize */
         background-color: var(--background);
-        line-height: 1rem;
-        height: 1rem;
-        min-width: 60%;
+        width: 50%;
+        font-size: <?php echo strval($fontSize) * .753 . "rem"; ?>;
+        height: <?php echo strval($fontSize) * .5 . "rem"; ?>;
+        line-height: <?php echo strval($fontSize) * .5 . "rem"; ?>;
     }
 
     #textInput:focus {
@@ -431,8 +433,8 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     #restartTest {
         border: none;
         cursor: pointer;
-        padding: 1.5rem;
         transition: transform .5s ease;
+        font-size: <?php echo strval($fontSize) * .5 . "rem" ?>;
         
     }
     .currentSetting
@@ -457,9 +459,8 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     .testRow {
         display: flex;
         align-items: center;
-        gap: .8rem;
-        padding: 1rem 0rem;
-        font-size: 1rem;
+        gap: <?php echo strval($fontSize) / 4 . "rem"?>;
+        padding: <?php echo strval($fontSize) * .2 . "rem"?> 0rem;
     }
     #showName
     {
@@ -471,11 +472,10 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     .testRow * {
         user-select: none;
         color: var(--currentWord);
-        border: .3rem solid var(--row);
-        border-radius: 1.5rem;
+        border: <?php echo strval($fontSize) * .1 . "rem"?> solid var(--row);
+        border-radius: <?php echo strval($fontSize) * .6 . "rem"?>;
         display: inline-block;
-        padding: 2rem 2.5rem;
-        var(--currentWord)-space: nowrap;
+        padding: <?php echo strval($fontSize) * .625 . "rem"?>;
     }
 
     #typingmode {
@@ -510,15 +510,15 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     }
 
     #cursor {
-        width: <?php echo strval($caretWidth) . "rem"; ?>;
+        width: <?php echo strval($caretWidth) . "rem" ?>;
         background-color: var(--correct);
-        opacity: <?php echo strval($caretOpacity) . "%"; ?>;
+        opacity: <?php echo strval($caretOpacity) . "%" ?>;
         border-radius: 1.5rem;
         position: absolute;
         transition: all .08s;
         transition-timing-function: linear;
-        height: <?php echo strval($caretHeight) . "rem"; ?>;
-        margin-top: <?php echo strval($caretTop) . "rem"; ?>;
+        height: <?php echo strval($caretHeight) . "rem" ?>;
+        margin-top: <?php echo strval($caretTop) . "rem" ?>;
         animation: blink 1s step-end infinite;
     }
     .blur {
@@ -1116,12 +1116,6 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         display: inline-block;
         margin-left: 18rem;
     }
-
-    #passwordForget {
-        text-decoration: none;
-        color: var(--testText);
-    }
-
     #signupContainer {
         top: 11.5rem;
         width: 60rem;

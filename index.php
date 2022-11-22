@@ -86,10 +86,10 @@ if (isset($_GET["finish"]))
                 <div id="wordsWrapper"></div>
             </div>
             <div class="testRow">
-                <textarea id="textInput" spellcheck="false" maxlength="16" autofocus></textarea>
-                <div id="wpmDisplay">0 WPM</div>
-                <div id="time"></div>
-                <div id ="resetBox"><i id="restartTest"class="fa-solid fa-rotate" onclick="restart()"></i></div>
+                <textarea id="textInput" class = "testItem" spellcheck="false" maxlength="16" autofocus></textarea>
+                <div id="wpmDisplay" class = "testItem" >0 WPM</div>
+                <div id="time" class = "testItem" ></div>
+                <div id ="resetBox" class = "testItem"><i id="restartTest"class="fa-solid fa-rotate" onclick="restart()"></i></div>
             </div>
             </div>
             <?php } else if (isset($_GET["finish"])) { ?>
