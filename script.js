@@ -51,15 +51,7 @@ function setCookie(cName, cValue, expDays) {
     date.setTime(date.getTime() + (expDays * 24 * 60 * 60 * 1000));
     const expires = "expires=" + date.toUTCString();
     document.cookie = cName + "=" + cValue + "; " + expires + "; path=/";
-    document.body.style.visibility = "hidden"
-    //make all elements invisible(masking the css switch)
-    //after a certian amount of time show the elements again
-    
-    setTimeout(() => {reloadCss()}, 0); 
-    setTimeout(() => {document.body.style.visibility = "visible"}, 200); 
-    
-
-    
+    document.location.reload();
 }
 function reloadCss()
 {
