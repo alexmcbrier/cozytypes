@@ -90,6 +90,10 @@ function findDistanceBetween(words)
 {
     const placement = document.getElementsByClassName('word')[0]; //Only want 1 value in class list
     const firstWord = placement.getBoundingClientRect().y;
+    if (getCookie("lineCount") == 1)
+    {
+        return 0;
+    }
     for (let i = 0; i < words.length; i++)
     {
         const current = document.getElementsByClassName('word')[i]; //Only want 1 value in class list
@@ -181,10 +185,10 @@ function keystroke() {
             const distance = findDistanceBetween(words); //distance between the lines
             const currentWord = placement.getBoundingClientRect().y;
             const firstWord = document.getElementsByClassName('word')[0].getBoundingClientRect().y;
-            const lineCount = getCookie("lineCount") - 1; //return the one before last
-            if (distance * lineCount <= (currentWord - firstWord))
+            const lineCount = getCookie("lineCount"); 
+            if (distance * (lineCount - 1) <= (currentWord - firstWord)) //return the one before last
             {
-                displayText.style.marginTop = (distance * (lineCount - 1)) - (currentWord - firstWord) + "px";
+                displayText.style.marginTop = (distance * (lineCount - 2)) - (currentWord - firstWord) + "px";
             }
         }
         //moving the cursor
