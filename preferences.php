@@ -49,10 +49,10 @@ session_start();
                 <div id="linesContainer" class="rowContainer" style="width: 35%">
                     <h1 class="notSignedIn" id="preferenceHeader">Amount of lines <i class="fa-solid fa-align-left"></i></h1>
                     <h1 class="description">Show a different number of lines on the screen; More lines on the page will allow to see you what is coming next.</h1>
-                    <a title="1" class="preference" onclick="setCookie('lineCount', 1, 30)">1</a>
                     <a title="2" class="preference" onclick="setCookie('lineCount', 2, 30)">2</a>
                     <a title="3" class="preference" onclick="setCookie('lineCount', 3, 30)">3</a>
                     <a title="4" class="preference" onclick="setCookie('lineCount', 4, 30)">4</a>
+                    <a title="5" class="preference" onclick="setCookie('lineCount', 5, 30)">5</a>
                 </div>
                 <div id="blurContainer" class="rowContainer" style="width: 25%">
                     <h1 class="notSignedIn" id="preferenceHeader">Blur Text <i class="fa-solid fa-eye"></i></h1>
