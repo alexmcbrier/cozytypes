@@ -224,7 +224,6 @@ function restart() {
     displayTimer.innerText = getTime(getCookie("time"))
     newQuote()
     timerVar = "running"
-    startTimer();
 }
 function randomQuote() {
     displayText.innerText = ''// removing previous sentence if applicable
