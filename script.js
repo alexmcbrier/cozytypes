@@ -520,7 +520,6 @@ function updateCookies()
 {
     addCookies();
     if (window.location.href.indexOf("preferences") > -1) { //contains preferences
-        alert("hi")
         updatePreferences();
     }
     if ( window.location.href == ("https://cozytypes.com/") || "https://www.cozytypes.com/index.php") {
