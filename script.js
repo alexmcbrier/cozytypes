@@ -8,6 +8,7 @@ const mainContent = document.getElementById('mainContent') // wpm Display
 const cursor = document.getElementById('cursor') 
 const footer = document.getElementById("footer")
 const typingMode = document.getElementById("typingmode")
+var timerStatus = false; // Turns on when user begins typing...
 var check = null;
 var sentenceLength = 50;
 var time = 0;
@@ -103,7 +104,6 @@ function findDistanceBetween(words)
 //Executes after each keystroke
 displayInput?.addEventListener('input', keystroke)
 function keystroke() {
-    startTimer();
     moveCursor();
     let word = document.getElementsByClassName('current-word')[0] //Only want 1 value in class list
     let chars = word.querySelectorAll('letter')
@@ -214,9 +214,21 @@ function keystroke() {
         var lastLetter = last[last.length - 1]
         if (lastLetter.classList.contains('correct') || lastLetter.classList.contains('incorrect')) //the last letter can be both correct or incorrect
         {
-            endTest();
+            endTest()
         }
     }
+}
+function restart() {
+    newQuote()
+    clearInterval(check);
+    timerStatus = false;
+    displayWPM.innerHTML = '0 wpm';
+    displayTimer.innerText = getTime(getCookie("time"));
+    displayInput.focus();
+    displayInput.value = ""; //remove Text;
+    moveCursorWithY(); //reset cursor
+
+
 }
 function randomQuote() {
     displayText.innerText = ''// removing previous sentence if applicable
@@ -250,11 +262,9 @@ function wordsPerMinute(testDuration) {
 
 }
 async function newQuote() {
-    displayWPM.innerHTML = "0 wpm";
-    if (getCookie("typingMode") == "time") //set initial time values in display
+    if (getCookie("typingMode") == "time")
     {
         displayTimer.innerHTML = getTime(getCookie("time")) //sets the time (does not begin timer however)
-        
     }
     else
     {
@@ -283,41 +293,34 @@ async function newQuote() {
     lastWord = displayText?.getElementsByClassName('word')[count - 1]//Only want 1 value in class list
 }
 function startTimer() {
-    footer.classList.add('fadeOut');
-    typingMode.classList.add('fadeOut');
-    cursor.style.animation = "none";
-    startTime = new Date()
-    if (check == null)
-    {
+    if (timerStatus == false) {
+        footer.classList.add('fadeOut');
+        typingMode.classList.add('fadeOut');
+        cursor.style.animation = "none";
+        startTime = new Date()
         if (getCookie("typingMode") == "words")
         {
             check = setInterval(function () {
+
                 duration = Math.floor(0 + (new Date() - startTime) / 1000)
                 displayTimer.innerText = getTime(duration)
-                displayWPM.innerText = wordsPerMinute(duration) + " wpm"
+                displayWPM.innerText = wordsPerMinute(duration) + " WPM"
             }, 1000)
         }
         else
         {
             check = setInterval(function () {
+
                 duration = Math.floor(time + 1 - (new Date() - startTime) / 1000)
                 displayTimer.innerText = getTime(duration)
-                displayWPM.innerText = wordsPerMinute(duration) + " wpm"
+                displayWPM.innerText = wordsPerMinute(duration) + " WPM"
                 if (duration <= 0) {
                     endTest()
                 }
             }, 1000)
         }
+        timerStatus = true;
     }
-    
-}
-function stopTimer() {
-    clearInterval(check);
-    check = null;
-    displayInput.value = ""; //remove Text;
-    moveCursorWithY(); //reset cursor
-    newQuote()
-    document.getElementById("textInput").focus();
 }
 function getAccuracy() {
     const correct = displayText?.querySelectorAll('.correct').length
