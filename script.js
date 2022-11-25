@@ -519,14 +519,15 @@ function updatePreferences()
 function updateCookies()
 {
     addCookies();
+    if (window.location.href.indexOf("cozytypes") > -1) { //contains preferences
+        alert("hi")
+        updatePreferences();
+    }
     if ( window.location.href == ("https://cozytypes.com/") || "https://www.cozytypes.com/index.php") {
         updateIndex();
         newQuote();
         moveCursorWithY();
         setBlur();
-    }
-    if (window.location.href.indexOf("preferences") > -1) { //contains preferences
-        updatePreferences();
     }
 }
 document.body.onLoad = updateCookies();
