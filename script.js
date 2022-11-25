@@ -525,8 +525,7 @@ function updateCookies()
         moveCursorWithY();
         setBlur();
     }
-    if (window.location.href == ("https://cozytypes.com/preferences")) {
-        alert("hi")
+    if (window.location.href.indexOf("preferences") > -1) { //contains preferences
         updatePreferences();
     }
 }
