@@ -8,7 +8,7 @@ const mainContent = document.getElementById('mainContent') // wpm Display
 const cursor = document.getElementById('cursor') 
 const footer = document.getElementById("footer")
 const typingMode = document.getElementById("typingmode")
-var timerVar = "not running" // Turns on when user begins typing...
+var check = null;
 var sentenceLength = 50;
 var time = 0;
 var wordList = ["the", "be", "to", "of", "and", "a", "in", "that", "have", "I", "it", "for", "not", "on", "with", "he", "as", "you", "do", "at", "this", "but", "his", "by", "from", "they", "we", "say", "her", "she", "or", "an", "will", "my", "one", "all", "would", "there", "their", "what", "so", "up", "out", "if", "about", "who", "get", "which", "go", "me", "when", "make", "can", "like", "time", "no", "just", "him", "know", "take", "people", "into", "year", "your", "good", "some", "could", "them", "see", "other", "than", "then", "now", "look", "only", "come", "its", "over", "think", "also", "back", "after", "use", "two", "how", "our", "work", "first", "well", "way", "even", "new", "want", "because", "any", "these", "give", "day", "most", "us"]
@@ -214,17 +214,9 @@ function keystroke() {
         var lastLetter = last[last.length - 1]
         if (lastLetter.classList.contains('correct') || lastLetter.classList.contains('incorrect')) //the last letter can be both correct or incorrect
         {
-            endTest()
+            endTest();
         }
     }
-}
-function restart() {
-    displayInput.value = ""; //remove Text;
-    moveCursorWithY(); //reset cursor
-    displayTimer.innerText = getTime(getCookie("time"))
-    newQuote()
-    timerVar = "running"
-    startTimer();
 }
 function randomQuote() {
     displayText.innerText = ''// removing previous sentence if applicable
@@ -258,9 +250,11 @@ function wordsPerMinute(testDuration) {
 
 }
 async function newQuote() {
-    if (getCookie("typingMode") == "time")
+    displayWPM.innerHTML = "0 wpm";
+    if (getCookie("typingMode") == "time") //set initial time values in display
     {
         displayTimer.innerHTML = getTime(getCookie("time")) //sets the time (does not begin timer however)
+        
     }
     else
     {
@@ -289,39 +283,41 @@ async function newQuote() {
     lastWord = displayText?.getElementsByClassName('word')[count - 1]//Only want 1 value in class list
 }
 function startTimer() {
-    if (timerVar != "running") {
-        footer.classList.add('fadeOut');
-        typingMode.classList.add('fadeOut');
-        cursor.style.animation = "none";
-
-        startTime = new Date()
+    footer.classList.add('fadeOut');
+    typingMode.classList.add('fadeOut');
+    cursor.style.animation = "none";
+    startTime = new Date()
+    if (check == null)
+    {
         if (getCookie("typingMode") == "words")
         {
-            setInterval(() => {
-
+            check = setInterval(function () {
                 duration = Math.floor(0 + (new Date() - startTime) / 1000)
                 displayTimer.innerText = getTime(duration)
-                displayWPM.innerText = wordsPerMinute(duration) + " WPM"
+                displayWPM.innerText = wordsPerMinute(duration) + " wpm"
             }, 1000)
         }
         else
         {
-            setInterval(() => {
-
+            check = setInterval(function () {
                 duration = Math.floor(time + 1 - (new Date() - startTime) / 1000)
                 displayTimer.innerText = getTime(duration)
-                displayWPM.innerText = wordsPerMinute(duration) + " WPM"
+                displayWPM.innerText = wordsPerMinute(duration) + " wpm"
                 if (duration <= 0) {
                     endTest()
                 }
             }, 1000)
         }
-        timerVar = "running"
     }
-    else
-    {
-        clearInterval();
-    }
+    
+}
+function stopTimer() {
+    clearInterval(check);
+    check = null;
+    displayInput.value = ""; //remove Text;
+    moveCursorWithY(); //reset cursor
+    newQuote()
+    document.getElementById("textInput").focus();
 }
 function getAccuracy() {
     const correct = displayText?.querySelectorAll('.correct').length
