@@ -712,6 +712,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         text-align: center;
         display: table; 
         overflow: hidden;
+        visibility: hidden; /* hide for now */
     }
 
     .hideSidebar {
