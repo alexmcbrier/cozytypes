@@ -219,14 +219,20 @@ function keystroke() {
     }
 }
 function restart() {
-    newQuote()
+    //test
     clearInterval(check);
+    currentWordNum = 0;
     timerStatus = false;
     displayWPM.innerHTML = '0 wpm';
     displayTimer.innerText = getTime(getCookie("time"));
     displayInput.focus();
     displayInput.value = ""; //remove Text;
+    newQuote()
     moveCursorWithY(); //reset cursor
+    //display
+    footer.classList.remove('fadeOut');
+    typingMode.classList.remove('fadeOut');
+
 
 
 }
