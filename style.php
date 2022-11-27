@@ -460,6 +460,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         align-items: center;
         gap: <?php echo strval($fontSize) / 4 . "rem"?>;
         padding: <?php echo strval($fontSize) * .2 . "rem"?> 0rem;
+        user-select: none;
     }
     #showName
     {
