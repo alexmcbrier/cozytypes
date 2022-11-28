@@ -538,7 +538,8 @@ function updatePreferences()
 function updateCookies()
 {
     addCookies();
-    if (window.location.href.indexOf("preferences") > -1) { //contains preferences
+    hotkey.classList.add('fadeOut');
+    if (window.location.href.indexOf("preferences") > -1) { //preferences
         updatePreferences();
     }
     if ( window.location.href == ("https://cozytypes.com/") || "https://www.cozytypes.com/index.php") {
@@ -546,7 +547,9 @@ function updateCookies()
         newQuote();
         moveCursorWithY();
         setBlur();
+        hotkey.classList.remove('fadeOut');
     }
+
 }
 document.body.onLoad = updateCookies();
 document.body.onresize = function() { zoomwait() };
