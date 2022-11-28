@@ -14,12 +14,6 @@ var check = null;
 var sentenceLength = 50;
 var time = 0;
 //hotkey to restart
-$('input[type=text]').bind('focus',function(){
-    var e = jQuery.Event("keydown");
-     e.which = 35; // # key code for end key
-    $("input[type=text]").trigger(e);
-    return false;
-});
 document.onkeyup = function(e) {
     if (e.which == 9) { // tab
       restart();
