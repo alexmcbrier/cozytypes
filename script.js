@@ -355,11 +355,9 @@ function endTest() {
     const incorrect = displayText?.querySelectorAll('.incorrect').length //incorrect characters
     const total = correct + incorrect;
     const accuracy = parseInt(correct / total * 100);
-
-
     const correctWords = displayText?.querySelectorAll('.word').length + displayText?.querySelectorAll('.current-word').length //correct words
     const incorrectWords = displayText?.querySelectorAll('.incorrect-word').length //incorrect words
-    hotkey.style.visibility = "visible"; //show the hotkey
+    hotkey.style.visibility = "hidden";
     window.location.href = "index.php?finish=true&testTime=" + time + "&wpm=" + wpmFinal + "&accuracy=" + accuracy + "&mode=" + getCookie('typingMode') + "&correctWords=" + correctWords + "&incorrectWords=" + incorrectWords;
 }
 function moveCursor()
