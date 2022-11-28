@@ -1168,7 +1168,6 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     }
     #themesContainer a {
         user-select: none;
-        font-size: 1rem;
         border-radius: 2rem;
         display: inline-block;
         padding: 3rem 7%;
@@ -1179,7 +1178,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         transition: transform .5s ease;
         margin-top: 1rem;
         text-align: center;
-        min-width: 7rem;
+        min-width: 10.6rem;
         cursor: pointer;
     }
 
