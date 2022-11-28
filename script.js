@@ -16,6 +16,9 @@ var time = 0;
 //hotkey to restart
 document.onkeyup = function(e) {
     if (e.which == 9) { // tab
+        if ( window.location.href != ("https://cozytypes.com/") || "https://www.cozytypes.com/index.php") {
+            window.location.href = ("https://cozytypes.com/");
+        }
       restart();
     }
   };
@@ -333,12 +336,6 @@ function startTimer() {
         timerStatus = true;
     }
 }
-function getAccuracy() {
-    const correct = displayText?.querySelectorAll('.correct').length
-    const incorrect = displayText?.querySelectorAll('.incorrect').length
-    const total = correct + incorrect;
-    return parseInt(correct / total * 100);
-}
 function getTime(time) {
     var minutes = Math.floor(time / 60);
     var seconds = time - minutes * 60;
@@ -357,8 +354,16 @@ function wrongWord(words, charecters) {
 function endTest() {
     //this is where all the data is sent from javascript to php
     wpmFinal = wordsPerMinute(duration)
-    accuracy = getAccuracy();
-    window.location.href = "index.php?finish=true&testTime=" + time + "&wpm=" + wpmFinal + "&accuracy=" + accuracy + "&mode=" + getCookie('typingMode');
+    const correct = displayText?.querySelectorAll('.correct').length //correct characters
+    const incorrect = displayText?.querySelectorAll('.incorrect').length //incorrect characters
+    const total = correct + incorrect;
+    const accuracy = parseInt(correct / total * 100);
+
+
+    const correctWords = displayText?.querySelectorAll('.word').length + displayText?.querySelectorAll('.current-word').length //correct words
+    const incorrectWords = displayText?.querySelectorAll('.incorrect-word').length //incorrect words
+    hotkey.style.visibility = "visible"; //show the hotkey
+    window.location.href = "index.php?finish=true&testTime=" + time + "&wpm=" + wpmFinal + "&accuracy=" + accuracy + "&mode=" + getCookie('typingMode') + "&correctWords=" + correctWords + "&incorrectWords=" + incorrectWords;
 }
 function moveCursor()
 {
