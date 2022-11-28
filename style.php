@@ -1238,4 +1238,9 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         color: #99947F;
         background-color: #EEEBE2;
     }
+
+    #theme-amethyst {
+        color: #e2caea;
+        background-color: #9774aa;
+    }
 </style>
