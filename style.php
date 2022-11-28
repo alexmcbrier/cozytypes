@@ -316,9 +316,16 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         text-align: center;
         user-select: none;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         font-size: 1.5rem;
         padding: 2rem;
+        gap: 3rem;
+
+    }
+    #footerDiv
+    {
+        display: flex;
     }
     .footerLinks {
         text-decoration: none;
