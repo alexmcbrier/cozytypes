@@ -487,7 +487,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         color: var(--testText)
     }
     .fadeOut {
-        animation: fadeOut .5s  ease forwards, fadeColor .5s ease forwards;
+        animation: fadeOut .25s  ease forwards, fadeColor .25s ease forwards;
     }
     .testRow * {
         user-select: none;
