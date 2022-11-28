@@ -538,7 +538,7 @@ function updatePreferences()
 function updateCookies()
 {
     addCookies();
-    hotkey.classList.add('fadeOut');
+    hotkey.style.visibility = "hidden";
     if (window.location.href.indexOf("preferences") > -1) { //preferences
         updatePreferences();
     }
@@ -547,7 +547,7 @@ function updateCookies()
         newQuote();
         moveCursorWithY();
         setBlur();
-        hotkey.classList.remove('fadeOut');
+        hotkey.style.visibility = "visibile";
     }
 
 }
