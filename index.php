@@ -104,7 +104,7 @@ if (isset($_GET["finish"]))
                     <a class="results"><?= $_GET["accuracy"] ?>%</a>
                 </div>
                 <div class="statsContainer">
-                    <h1 class="notSignedIn" id="preferenceHeader">Time<i class="fa-regular fa-hourglass-half"></i></i></i></h1>
+                    <h1 class="notSignedIn" id="preferenceHeader"><?= $_GET["mode"] ?><i class="fa-regular fa-hourglass-half"></i></i></i></h1>
                     <a class="results"><?= $_GET["testTime"] ?>s</a>
                 </div>
             </div>

@@ -358,7 +358,7 @@ function endTest() {
     //this is where all the data is sent from javascript to php
     wpmFinal = wordsPerMinute(duration)
     accuracy = getAccuracy();
-    window.location.href = "index.php?finish=true&testTime=" + time + "&wpm=" + wpmFinal + "&accuracy=" + accuracy;
+    window.location.href = "index.php?finish=true&testTime=" + time + "&wpm=" + wpmFinal + "&accuracy=" + accuracy + "&mode=" + getCookie('typingMode');
 }
 function moveCursor()
 {
