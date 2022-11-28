@@ -108,16 +108,6 @@ if (isset($_GET["finish"]))
                     <a class="results"><?= $_GET["testTime"] ?>s</a>
                 </div>
             </div>
-            <div id="displayStats">
-                <div class="statsContainer">
-                    <h1 class="notSignedIn" id="preferenceHeader">correct words<i class="fa-solid fa-check"></i></h1>
-                    <a class="results"><?= $_GET["correctWords"] ?></a>
-                </div>
-                <div class="statsContainer">
-                    <h1 class="notSignedIn" id="preferenceHeader">incorrect words<i class="fa-solid fa-xmark"></i></h1>
-                    <a class="results"><?= $_GET["incorrectWords"] ?></a>
-                </div>
-            </div>
             <a id = "showRestart" href="https://cozytypes.com/">play again<i class="fa-solid fa-backward"></i></a>
             <a id = "showRestart" href="login">track progress<i class="fa-solid fa-medal"></i></a>
             </div>
