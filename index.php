@@ -92,8 +92,6 @@ if (isset($_GET["finish"]))
                 <div id ="resetBox" class = "testItem"><i id="restartTest"class="fa-solid fa-rotate" onclick="restart()"></i></div>
             </div>
             </div>
-            <div id = "adspace1">
-            </div>
             <?php } else if (isset($_GET["finish"])) { ?>
             <!-- Display if test IS complete -->
             <div id="displayStats">
