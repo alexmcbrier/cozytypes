@@ -210,6 +210,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
     {
         font-size: 1.5rem;
         word-spacing: .25rem;
+        color: var(--testText);
     }
     kbd
     {
