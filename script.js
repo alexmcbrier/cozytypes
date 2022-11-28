@@ -247,16 +247,11 @@ function restart() {
 }
 function randomQuote() {
     displayText.innerText = ''// removing previous sentence if applicable
-    if (getCookie("typingMode") == "time")
-    {
+    if (getCookie("typingMode") == "time") {
         sentenceLength = 250; //max amount of words (should eventually be changed to update after tyhe begin typing to minimize latency)
     }
     for (let i = 0; i < sentenceLength; i++) {
         sentence[i] = wordList[Math.floor(Math.random() * wordList.length)] //prevent repeats from occuring, very janky
-        const index = wordList.indexOf(sentence[i]);
-        if (index > -1) {
-            wordList.splice(index, 1);
-        }
     }
 }
 function wordsPerMinute(testDuration) {
