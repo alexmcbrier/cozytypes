@@ -16,9 +16,6 @@ var time = 0;
 //hotkey to restart
 document.onkeyup = function(e) {
     if (e.which == 9) { // tab
-        if ( window.location.href != ("https://cozytypes.com/") || "https://www.cozytypes.com/index.php") {
-            window.location.href = ("https://cozytypes.com/");
-        }
       restart();
     }
   };
@@ -538,7 +535,6 @@ function updatePreferences()
 function updateCookies()
 {
     addCookies();
-    hotkey.style.visibility = "hidden";
     if (window.location.href.indexOf("preferences") > -1) { //preferences
         updatePreferences();
     }
@@ -548,6 +544,10 @@ function updateCookies()
         moveCursorWithY();
         setBlur();
         hotkey.style.visibility = "visible";
+    }
+    else
+    {
+        hotkey.style.visibility = "hidden";
     }
 
 }
