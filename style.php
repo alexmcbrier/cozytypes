@@ -473,6 +473,7 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         color: var(--testText);
         overflow: hidden;
         line-height: 3.5rem;
+        animation: fadeIn 1s ease, slideUp .5s ease;
     }
 
     .testRow {
