@@ -8,10 +8,18 @@ const mainContent = document.getElementById('mainContent') // wpm Display
 const cursor = document.getElementById('cursor') 
 const footer = document.getElementById("footer")
 const typingMode = document.getElementById("typingmode")
+const hotkey  = document.getElementById("hotkey")
 var timerStatus = false; // Turns on when user begins typing...
 var check = null;
 var sentenceLength = 50;
 var time = 0;
+//hotkey to restart
+document.onkeyup = function(e) {
+    if (e.which == 9) { // tab
+      restart();
+    }
+  };
+//
 var wordList = ["the", "be", "to", "of", "and", "a", "in", "that", "have", "I", "it", "for", "not", "on", "with", "he", "as", "you", "do", "at", "this", "but", "his", "by", "from", "they", "we", "say", "her", "she", "or", "an", "will", "my", "one", "all", "would", "there", "their", "what", "so", "up", "out", "if", "about", "who", "get", "which", "go", "me", "when", "make", "can", "like", "time", "no", "just", "him", "know", "take", "people", "into", "year", "your", "good", "some", "could", "them", "see", "other", "than", "then", "now", "look", "only", "come", "its", "over", "think", "also", "back", "after", "use", "two", "how", "our", "work", "first", "well", "way", "even", "new", "want", "because", "any", "these", "give", "day", "most", "us"]
 if (checkCookie("words")) {
     sentenceLength = getCookie("words");
@@ -232,6 +240,7 @@ function restart() {
     //display
     footer.classList.remove('fadeOut');
     typingMode.classList.remove('fadeOut');
+    hotkey.classList.remove('fadeOut');
 
 
 
@@ -302,6 +311,7 @@ function startTimer() {
     if (timerStatus == false) {
         footer.classList.add('fadeOut');
         typingMode.classList.add('fadeOut');
+        hotkey.classList.add('fadeOut');
         cursor.style.animation = "none";
         startTime = new Date()
         if (getCookie("typingMode") == "words")
