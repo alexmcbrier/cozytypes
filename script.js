@@ -547,7 +547,7 @@ function updateCookies()
         newQuote();
         moveCursorWithY();
         setBlur();
-        hotkey.style.visibility = "visibile";
+        hotkey.style.visibility = "visible";
     }
 
 }
