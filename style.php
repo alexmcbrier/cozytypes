@@ -1,11 +1,6 @@
 <?php
 header('Content-Type: text/css');
 session_start();
-if (isset($_COOKIE["theme"])) {
-    $theme = $_COOKIE["theme"];
-} else {
-    $theme = "light";
-}
 if (isset($_COOKIE["fontFamily"])) {
     $fontFamily = $_COOKIE["fontFamily"];
 } else {
@@ -67,7 +62,7 @@ if ($caret == "none") {
     $caretWidth = $fontSize * .1;
     $caretOpacity = 100;
 }
-include "themes/" . $theme . ".css"; //theme added depends on the name of the one in the database
+include "themes.scss"; //file contains all fonts
 ?>
 <style>
     @font-face {
@@ -119,11 +114,6 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         font-family: 'titilliumWeb';
         src: url('./Fonts/ibmPlexSans.ttf');
     }
-
-    * {
-        font-family: <?php echo strval($fontFamily) ?>, serif;
-    }
-
     /*scrollbar*/
     ::-webkit-scrollbar {
         width: 1.5em;
@@ -196,8 +186,14 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         border: 0.5em var(--testText);
         padding: 1em;
     }
-
+    *
+    {
+        font-family: <?php echo strval($fontFamily) ?>, serif;
+    }
     body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        scroll-behavior: smooth;
         background-color: var(--background);
         width: 100%;
         margin: 0;
@@ -538,11 +534,19 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         opacity: <?php echo strval($caretOpacity) . "%" ?>;
         border-radius: 1.5rem;
         position: absolute;
-        transition: all .08s;
-        transition-timing-function: linear;
+        transition: left 0.1s ease;
         height: <?php echo strval($caretHeight) . "rem" ?>;
         margin-top: <?php echo strval($caretTop) . "rem" ?>;
-        animation: blink 1s step-end infinite;
+        animation: blink 1.5s infinite 1s;
+    }
+    @keyframes blink {
+        0%,
+        100% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+        }
     }
     .blur {
         filter: blur(.25rem);
@@ -880,14 +884,6 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         color: var(--currentWord);
         user-select: none;
     }
-    @keyframes blink {
-    from, to {
-        opacity: $caretOpacity;
-    }
-    50% {
-        opacity: 0;
-    }
-    }
     @keyframes slide {
         from {
             margin-left: -16rem;
@@ -1200,69 +1196,9 @@ include "themes/" . $theme . ".css"; //theme added depends on the name of the on
         background-color: #1c1b1d;
 
     }
-
-    #theme-dracula {
-        color: #4413e5;
-        background-color: #00021b;
-    }
-
-    #theme-8008 {
-        color: #f44c7f;
-        background-color: #333a45;
-    }
-
-    #theme-mizu {
-        color: #fcfbf6;
-        background-color: #afcbdd;
-    }
-
-    #theme-striker {
-        color: #D7DCDA;
-        background-color: #124883;
-    }
-
-    #theme-blueberry {
-        color: #D7DCDA;
-        background-color: #5C7DA5;
-    }
-
-    #theme-creamsicle {
-        color: var(--currentWord);
-        background-color: #FF9869;
-    }
-
-    #theme-botanical {
-        color: #7B9C98;
-        background-color: #161B22;
-    }
-
-    #theme-luna {
-        color: #F67599;
-        background-color: #221C35;
-    }
-
-    #theme-light {
-        color: #444444;
-        background-color: #eeeeee;
-    }
-
-    #theme-dark {
-        color: #eeeeee;
-        background-color: #010203;
-    }
-
-    #theme-sakura {
-        color: #A30000;
-        background-color: #FEC8CD;
-    }
-
-    #theme-9009 {
-        color: #99947F;
-        background-color: #EEEBE2;
-    }
-
-    #theme-amethyst {
-        color: #e2caea;
-        background-color: #9774aa;
+    .color-theme
+    {
+        color: var(--testText);
+        background-color: var(--background);;  
     }
 </style>

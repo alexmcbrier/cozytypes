@@ -1,4 +1,3 @@
-
 //Web elements
 const displayText = document.getElementById('wordsWrapper')
 const displayInput = document.getElementById('textInput') // Input Box
@@ -546,7 +545,30 @@ function updateCookies()
     {
         hotkey.style.visibility = "hidden";
     }
-
 }
+function setTheme(oldTheme, newTheme) {
+    const body = document.getElementsByTagName("body")[0];
+    body.classList.remove(oldTheme);
+    body.classList.add(newTheme);
+    currentTheme = newTheme;
+    localStorage.setItem("theme", newTheme);
+    }
+function setPreference(type, newPreference)
+{
+    const root = document.querySelector(':root');
+    root.style.setProperty("--" + type, newPreference);
+    localStorage.setItem(type, newPreference);
+}
+function loadPreferences() {
+    //for each preference
+    //1. Try to read from local storage, otherwise set to default
+    //2. set preference to local storage
+    let currentTheme = localStorage.getItem("theme") || "light";
+    let currentFontSize = localStorage.getItem("fontSize") || "3rem";
+    
+    setTheme("default", currentTheme); 
+    setPreference("fontSize", currentFontSize); 
+}
+loadPreferences();
 document.body.onLoad = updateCookies();
 document.body.onresize = function() { zoomwait() };

@@ -64,20 +64,19 @@ session_start();
         </div>
         <div id="themesContainer" class="rowContainer">
             <h1 id="preferenceHeader">Theme <i class="fa-solid fa-palette"></i></h1>
-            <a title="light" id="theme-light" onclick="setCookie('theme', 'light', 30)">light</a>
-            <a title="9009" id="theme-9009" onclick="setCookie('theme', '9009', 30)">9009</a>
-            <a title="mizu" id="theme-mizu" onclick="setCookie('theme', 'mizu', 30)">mizu</a>
-            <a title="blueberry" id="theme-blueberry" onclick="setCookie('theme', 'blueberry', 30)">blueberry</a>
-            <a title="striker" id="theme-striker" onclick="setCookie('theme', 'striker', 30)">striker</a>
-            <a title="sakura" id="theme-sakura" onclick="setCookie('theme', 'sakura', 30)">sakura</a>
-            <a title="creamsicle" id="theme-creamsicle" onclick="setCookie('theme', 'creamsicle', 30)">creamsicle</a>
-            <a title="botanical" id="theme-botanical" onclick="setCookie('theme', 'botanical', 30)">botanical</a>
-            <a title="8008" id="theme-8008" onclick="setCookie('theme', '8008', 30)">8008</a>
-            <a title="amethyst" id="theme-amethyst" onclick="setCookie('theme', 'amethyst', 30)">amethyst</a>
-            <a title="luna" id="theme-luna" onclick="setCookie('theme', 'luna', 30)">luna</a>
-            <a title="dracula" id="theme-dracula" onclick="setCookie('theme', 'dracula', 30)">dracula</a>
-            <a title="olivia" id="theme-olivia" onclick="setCookie('theme', 'olivia', 30)">olivia</a>
-            <a title="dark" id="theme-dark" onclick="setCookie('theme', 'dark', 30)">dark</a>
+            <a title="light" class = "color-theme light" onclick="setTheme(currentTheme, 'light')">light</a>
+            <a title="9009" class = "color-theme theme-9009" onclick="setTheme(currentTheme, 'theme-9009')">9009</a>
+            <a title="mizu" class = "color-theme mizu" onclick="setTheme(currentTheme, 'mizu')">mizu</a>
+            <a title="blueberry" class = "color-theme blueberry" onclick="setTheme(currentTheme, 'blueberry')">blueberry</a>
+            <a title="striker" class = "color-theme striker" onclick="setTheme(currentTheme, 'striker')">striker</a>
+            <a title="sakura" class = "color-theme sakura" onclick="setTheme(currentTheme, 'sakura')">sakura</a>
+            <a title="creamsicle" class = "color-theme creamsicle" onclick="setTheme(currentTheme, 'creamsicle')">creamsicle</a>
+            <a title="botanical" class = "color-theme botanical" onclick="setTheme(currentTheme, 'botanical')">botanical</a>
+            <a title="8008" class = "color-theme theme-8008" onclick="setTheme(currentTheme, 'theme-8008')">8008</a>
+            <a title="amethyst" class = "color-theme amethyst" onclick="setTheme(currentTheme, 'amethyst')">amethyst</a>
+            <a title="dracula" class = "color-theme dracula" onclick="setTheme(currentTheme, 'dracula')">dracula</a>
+            <a title="olivia" class = "color-theme olivia" onclick="setTheme(currentTheme, 'olivia')">olivia</a>
+            <a title="dark" class = "color-theme dark" onclick="setTheme(currentTheme, 'dark')">dark</a>
         </div>
     </form>
 </body>
