@@ -11,15 +11,19 @@ const hotkey  = document.getElementById("hotkey")
 var timerStatus = false; // Turns on when user begins typing...
 var check = null;
 var sentenceLength = 50;
+var sentence = []
+var words = []
+var currentWordNum = 0;
 var time = 0;
-//hotkey to restart
-document.onkeyup = function(e) {
+var duration = 0;
+var wpm = 0;
+var count = 0
+var lastWord = 0
+document.onkeyup = function(e) { 
     if (e.which == 9) { // tab
       restart();
     }
   };
-//
-var wordList = ["the", "be", "to", "of", "and", "a", "in", "that", "have", "I", "it", "for", "not", "on", "with", "he", "as", "you", "do", "at", "this", "but", "his", "by", "from", "they", "we", "say", "her", "she", "or", "an", "will", "my", "one", "all", "would", "there", "their", "what", "so", "up", "out", "if", "about", "who", "get", "which", "go", "me", "when", "make", "can", "like", "time", "no", "just", "him", "know", "take", "people", "into", "year", "your", "good", "some", "could", "them", "see", "other", "than", "then", "now", "look", "only", "come", "its", "over", "think", "also", "back", "after", "use", "two", "how", "our", "work", "first", "well", "way", "even", "new", "want", "because", "any", "these", "give", "day", "most", "us"]
 if (getStorageItem("typingMode") == "words")
 {
     sentenceLength = getStorageItem("words")
@@ -30,47 +34,12 @@ if (getStorageItem("typingMode") == "time")
     sentenceLength = 200;
     time = getStorageItem("time");
 }
-if (getStorageItem("mode") == "hard") {
-        wordList = ["able", "about", "absolute", "accept", "account", "achieve", "across", "act", "active", "actual", "add", "address", "admit", "advertise", "affect", "afford", "after", "afternoon", "again", "against", "age", "agent", "ago", "agree", "air", "all", "allow", "almost", "along", "already", "alright", "also", "although", "always", "america", "amount", "and", "another", "answer", "any", "apart", "apparent", "appear", "apply", "appoint", "approach", "appropriate", "area", "argue", "arm", "around", "arrange", "art", "as", "ask", "associate", "assume", "at", "attend", "authority", "available", "aware", "away", "awful", "baby", "back", "bad", "bag", "balance", "ball", "bank", "bar", "base", "basis", "be", "bear", "beat", "beauty", "because", "become", "bed", "before", "begin", "behind", "believe", "benefit", "best", "bet", "between", "big", "bill", "birth", "bit", "black", "bloke", "blood", "blow", "blue", "board", "boat", "body", "book", "both", "bother", "bottle", "bottom", "box", "boy", "break", "brief", "brilliant", "bring", "britain", "brother", "budget", "build", "bus", "business", "busy", "but", "buy", "by", "cake", "call", "can", "car", "card", "care", "carry", "case", "cat", "catch", "cause", "cent", "centre", "certain", "chair", "chairman", "chance", "change", "chap", "character", "charge", "cheap", "check", "child", "choice", "choose", "Christ", "Christmas", "church", "city", "claim", "class", "clean", "clear", "client", "clock", "close", "closes", "clothe", "club", "coffee", "cold", "colleague", "collect", "college", "colour", "come", "comment", "commit", "committee", "common", "community", "company", "compare", "complete", "compute", "concern", "condition", "confer", "consider", "consult", "contact", "continue", "contract", "control", "converse", "cook", "copy", "corner", "correct", "cost", "could", "council", "count", "country", "county", "couple", "course", "court", "cover", "create", "cross", "cup", "current", "cut", "dad", "danger", "date", "day", "dead", "deal", "dear", "debate", "decide", "decision", "deep", "definite", "degree", "department", "depend", "describe", "design", "detail", "develop", "die", "difference", "difficult", "dinner", "direct", "discuss", "district", "divide", "do", "doctor", "document", "dog", "door", "double", "doubt", "down", "draw", "dress", "drink", "drive", "drop", "dry", "due", "during", "each", "early", "east", "easy", "eat", "economy", "educate", "effect", "egg", "eight", "either", "elect", "electric", "eleven", "else", "employ", "encourage", "end", "engine", "english", "enjoy", "enough", "enter", "environment", "equal", "especial", "europe", "even", "evening", "ever", "every", "evidence", "exact", "example", "except", "excuse", "exercise", "exist", "expect", "expense", "experience", "explain", "express", "extra", "eye", "face", "fact", "fair", "fall", "family", "far", "farm", "fast", "father", "favour", "feed", "feel", "few", "field", "fight", "figure", "file", "fill", "film", "final", "finance", "find", "fine", "finish", "fire", "first", "fish", "fit", "five", "flat", "floor", "fly", "follow", "food", "foot", "for", "force", "forget", "form", "fortune", "forward", "four", "france", "free", "friday", "friend", "from", "front", "full", "fun", "function", "fund", "further", "future", "game", "garden", "gas", "general", "germany", "get", "girl", "give", "glass", "go", "god", "good", "goodbye", "govern", "grand", "grant", "great", "green", "ground", "group", "grow", "guess", "guy", "hair", "half", "hall", "hand", "hang", "happen", "happy", "hard", "hate", "have", "he", "head", "health", "hear", "heart", "heat", "heavy", "hell", "help", "here", "high", "history", "hit", "hold", "holiday", "home", "honest", "hope", "horse", "hospital", "hot", "hour", "house", "how", "however", "hullo", "hundred", "husband", "idea", "identify", "if", "imagine", "important", "improve", "in", "include", "income", "increase", "indeed", "individual", "industry", "inform", "inside", "instead", "insure", "interest", "into", "introduce", "invest", "involve", "issue", "it", "item", "jesus", "job", "join", "judge", "jump", "just", "keep", "key", "kid", "kill", "kind", "king", "kitchen", "knock", "know", "labour", "lad", "lady", "land", "language", "large", "last", "late", "laugh", "law", "lay", "lead", "learn", "leave", "left", "leg", "less", "let", "letter", "level", "lie", "life", "light", "like", "likely", "limit", "line", "link", "list", "listen", "little", "live", "load", "local", "lock", "london", "long", "look", "lord", "lose", "lot", "love", "low", "luck", "lunch", "machine", "main", "major", "make", "man", "manage", "many", "mark", "market", "marry", "match", "matter", "may", "maybe", "mean", "meaning", "measure", "meet", "member", "mention", "middle", "might", "mile", "milk", "million", "mind", "minister", "minus", "minute", "miss", "mister", "moment", "monday", "money", "month", "more", "morning", "most", "mother", "motion", "move", "mrs", "much", "music", "must", "name", "nation", "nature", "near", "necessary", "need", "never", "new", "news", "next", "nice", "night", "nine", "no", "non", "none", "normal", "north", "not", "note", "notice", "now", "number", "obvious", "occasion", "odd", "of", "off", "offer", "office", "often", "okay", "old", "on", "once", "one", "only", "open", "operate", "opportunity", "oppose", "or", "order", "organize", "original", "other", "otherwise", "ought", "out", "over", "own", "pack", "page", "paint", "pair", "paper", "paragraph", "pardon", "parent", "park", "part", "particular", "party", "pass", "past", "pay", "pence", "pension", "people", "per", "percent", "perfect", "perhaps", "period", "person", "photograph", "pick", "picture", "piece", "place", "plan", "play", "please", "plus", "point", "police", "policy", "politic", "poor", "position", "positive", "possible", "post", "pound", "power", "practise", "prepare", "present", "press", "pressure", "presume", "pretty", "previous", "price", "print", "private", "probable", "problem", "proceed", "process", "produce", "product", "programme", "project", "proper", "propose", "protect", "provide", "public", "pull", "purpose", "push", "put", "quality", "quarter", "question", "quick", "quid", "quiet", "quite", "radio", "rail", "raise", "range", "rate", "rather", "read", "ready", "real", "realise", "really", "reason", "receive", "recent", "reckon", "recognize", "recommend", "record", "red", "reduce", "refer", "regard", "region", "relation", "remember", "report", "represent", "require", "research", "resource", "respect", "responsible", "rest", "result", "return", "rid", "right", "ring", "rise", "road", "role", "roll", "room", "round", "rule", "run", "safe", "sale", "same", "saturday", "save", "say", "scheme", "school", "science", "score", "scotland", "seat", "second", "secretary", "section", "secure", "see", "seem", "self", "sell", "send", "sense", "separate", "serious", "serve", "service", "set", "settle", "seven", "sex", "shall", "share", "she", "sheet", "shoe", "shoot", "shop", "short", "should", "show", "shut", "sick", "side", "sign", "similar", "simple", "since", "sing", "single", "sir", "sister", "sit", "site", "situate", "six", "size", "sleep", "slight", "slow", "small", "smoke", "so", "social", "society", "some", "son", "soon", "sorry", "sort", "sound", "south", "space", "speak", "special", "specific", "speed", "spell", "spend", "square", "staff", "stage", "stairs", "stand", "standard", "start", "state", "station", "stay", "step", "stick", "still", "stop", "story", "straight", "strategy", "street", "strike", "strong", "structure", "student", "study", "stuff", "stupid", "subject", "succeed", "such", "sudden", "suggest", "suit", "summer", "sun", "sunday", "supply", "support", "suppose", "sure", "surprise", "switch", "system", "table", "take", "talk", "tape", "tax", "tea", "teach", "team", "telephone", "television", "tell", "ten", "tend", "term", "terrible", "test", "than", "thank", "the", "then", "there", "therefore", "they", "thing", "think", "thirteen", "thirty", "this", "thou", "though", "thousand", "three", "through", "throw", "thursday", "tie", "time", "to", "today", "together", "tomorrow", "tonight", "too", "top", "total", "touch", "toward", "town", "trade", "traffic", "train", "transport", "travel", "treat", "tree", "trouble", "true", "trust", "try", "tuesday", "turn", "twelve", "twenty", "two", "type", "under", "understand", "union", "unit", "unite", "university", "unless", "until", "up", "upon", "use", "usual", "value", "various", "very", "video", "view", "village", "visit", "vote", "wage", "wait", "walk", "wall", "want", "war", "warm", "wash", "waste", "watch", "water", "way", "we", "wear", "wednesday", "wee", "week", "weigh", "welcome", "well", "west", "what", "when", "where", "whether", "which", "while", "white", "who", "whole", "why", "wide", "wife", "will", "win", "wind", "window", "wish", "with", "within", "without", "woman", "wonder", "wood", "word", "work", "world", "worry", "worse", "worth", "would", "write", "wrong", "year", "yes", "yesterday", "yet", "you", "young"]
-}
-var sentence = []
-var words = [] //word elements
-var currentWordNum = 0;
-function changeTime(value) {
-    time = value;
-    setCookie("time", value, 30);
-}
-function changeWords(value) {
-    time = value;
-    setCookie("words", value, 30);
-}
-function changeMode(value) {
-    mode = value;
-    setCookie("mode", value, 30);
-}
-
-
-var duration = 0;
-//var for after test is over
-var wpm = 0;
-var count = 0
-var lastWord = 0
 function setCookie(cName, cValue, expDays) {
     let date = new Date();
     date.setTime(date.getTime() + (expDays * 24 * 60 * 60 * 1000));
     const expires = "expires=" + date.toUTCString();
     document.cookie = cName + "=" + cValue + "; " + expires + "; path=/";
     document.location.reload();
-}
-function reloadCss()
-{
-    var links = document.getElementsByTagName("link");
-    for (var cl in links)
-    {
-        var link = links[cl];
-        if (link.rel === "stylesheet")
-            link.href += "";
-    }
 }
 function checkCookie(cName) {
     let name = getCookie(cName);
@@ -109,7 +78,6 @@ function findDistanceBetween(words)
         }
     }
 }
-//Executes after each keystroke
 displayInput?.addEventListener('input', keystroke)
 function keystroke() {
     moveCursor();
@@ -227,29 +195,32 @@ function keystroke() {
     }
 }
 function restart() {
-    //test
     clearInterval(check);
     currentWordNum = 0;
     timerStatus = false;
     displayWPM.innerHTML = '0 wpm';
     displayTimer.innerText = getTime(getStorageItem("time"));
     displayInput.focus();
-    displayInput.value = ""; //remove Text;
+    displayInput.value = "";
     newQuote()
-    moveCursorWithY(); //reset cursor
-    //display
+    moveCursorWithY();
     footer.classList.remove('fadeOut');
     typingMode.classList.remove('fadeOut');
     hotkey.classList.remove('fadeOut');
-
 }
 function randomQuote() {
     displayText.innerText = ''// removing previous sentence if applicable
+    var wordlist = [];
+    if (getStorageItem("mode") == "easy") {
+    wordList = ["the", "be", "to", "of", "and", "a", "in", "that", "have", "I", "it", "for", "not", "on", "with", "he", "as", "you", "do", "at", "this", "but", "his", "by", "from", "they", "we", "say", "her", "she", "or", "an", "will", "my", "one", "all", "would", "there", "their", "what", "so", "up", "out", "if", "about", "who", "get", "which", "go", "me", "when", "make", "can", "like", "time", "no", "just", "him", "know", "take", "people", "into", "year", "your", "good", "some", "could", "them", "see", "other", "than", "then", "now", "look", "only", "come", "its", "over", "think", "also", "back", "after", "use", "two", "how", "our", "work", "first", "well", "way", "even", "new", "want", "because", "any", "these", "give", "day", "most", "us"]
+    }
+    else if (getStorageItem("mode") == "hard") {
+        wordList = ["able", "about", "absolute", "accept", "account", "achieve", "across", "act", "active", "actual", "add", "address", "admit", "advertise", "affect", "afford", "after", "afternoon", "again", "against", "age", "agent", "ago", "agree", "air", "all", "allow", "almost", "along", "already", "alright", "also", "although", "always", "america", "amount", "and", "another", "answer", "any", "apart", "apparent", "appear", "apply", "appoint", "approach", "appropriate", "area", "argue", "arm", "around", "arrange", "art", "as", "ask", "associate", "assume", "at", "attend", "authority", "available", "aware", "away", "awful", "baby", "back", "bad", "bag", "balance", "ball", "bank", "bar", "base", "basis", "be", "bear", "beat", "beauty", "because", "become", "bed", "before", "begin", "behind", "believe", "benefit", "best", "bet", "between", "big", "bill", "birth", "bit", "black", "bloke", "blood", "blow", "blue", "board", "boat", "body", "book", "both", "bother", "bottle", "bottom", "box", "boy", "break", "brief", "brilliant", "bring", "britain", "brother", "budget", "build", "bus", "business", "busy", "but", "buy", "by", "cake", "call", "can", "car", "card", "care", "carry", "case", "cat", "catch", "cause", "cent", "centre", "certain", "chair", "chairman", "chance", "change", "chap", "character", "charge", "cheap", "check", "child", "choice", "choose", "Christ", "Christmas", "church", "city", "claim", "class", "clean", "clear", "client", "clock", "close", "closes", "clothe", "club", "coffee", "cold", "colleague", "collect", "college", "colour", "come", "comment", "commit", "committee", "common", "community", "company", "compare", "complete", "compute", "concern", "condition", "confer", "consider", "consult", "contact", "continue", "contract", "control", "converse", "cook", "copy", "corner", "correct", "cost", "could", "council", "count", "country", "county", "couple", "course", "court", "cover", "create", "cross", "cup", "current", "cut", "dad", "danger", "date", "day", "dead", "deal", "dear", "debate", "decide", "decision", "deep", "definite", "degree", "department", "depend", "describe", "design", "detail", "develop", "die", "difference", "difficult", "dinner", "direct", "discuss", "district", "divide", "do", "doctor", "document", "dog", "door", "double", "doubt", "down", "draw", "dress", "drink", "drive", "drop", "dry", "due", "during", "each", "early", "east", "easy", "eat", "economy", "educate", "effect", "egg", "eight", "either", "elect", "electric", "eleven", "else", "employ", "encourage", "end", "engine", "english", "enjoy", "enough", "enter", "environment", "equal", "especial", "europe", "even", "evening", "ever", "every", "evidence", "exact", "example", "except", "excuse", "exercise", "exist", "expect", "expense", "experience", "explain", "express", "extra", "eye", "face", "fact", "fair", "fall", "family", "far", "farm", "fast", "father", "favour", "feed", "feel", "few", "field", "fight", "figure", "file", "fill", "film", "final", "finance", "find", "fine", "finish", "fire", "first", "fish", "fit", "five", "flat", "floor", "fly", "follow", "food", "foot", "for", "force", "forget", "form", "fortune", "forward", "four", "france", "free", "friday", "friend", "from", "front", "full", "fun", "function", "fund", "further", "future", "game", "garden", "gas", "general", "germany", "get", "girl", "give", "glass", "go", "god", "good", "goodbye", "govern", "grand", "grant", "great", "green", "ground", "group", "grow", "guess", "guy", "hair", "half", "hall", "hand", "hang", "happen", "happy", "hard", "hate", "have", "he", "head", "health", "hear", "heart", "heat", "heavy", "hell", "help", "here", "high", "history", "hit", "hold", "holiday", "home", "honest", "hope", "horse", "hospital", "hot", "hour", "house", "how", "however", "hullo", "hundred", "husband", "idea", "identify", "if", "imagine", "important", "improve", "in", "include", "income", "increase", "indeed", "individual", "industry", "inform", "inside", "instead", "insure", "interest", "into", "introduce", "invest", "involve", "issue", "it", "item", "jesus", "job", "join", "judge", "jump", "just", "keep", "key", "kid", "kill", "kind", "king", "kitchen", "knock", "know", "labour", "lad", "lady", "land", "language", "large", "last", "late", "laugh", "law", "lay", "lead", "learn", "leave", "left", "leg", "less", "let", "letter", "level", "lie", "life", "light", "like", "likely", "limit", "line", "link", "list", "listen", "little", "live", "load", "local", "lock", "london", "long", "look", "lord", "lose", "lot", "love", "low", "luck", "lunch", "machine", "main", "major", "make", "man", "manage", "many", "mark", "market", "marry", "match", "matter", "may", "maybe", "mean", "meaning", "measure", "meet", "member", "mention", "middle", "might", "mile", "milk", "million", "mind", "minister", "minus", "minute", "miss", "mister", "moment", "monday", "money", "month", "more", "morning", "most", "mother", "motion", "move", "mrs", "much", "music", "must", "name", "nation", "nature", "near", "necessary", "need", "never", "new", "news", "next", "nice", "night", "nine", "no", "non", "none", "normal", "north", "not", "note", "notice", "now", "number", "obvious", "occasion", "odd", "of", "off", "offer", "office", "often", "okay", "old", "on", "once", "one", "only", "open", "operate", "opportunity", "oppose", "or", "order", "organize", "original", "other", "otherwise", "ought", "out", "over", "own", "pack", "page", "paint", "pair", "paper", "paragraph", "pardon", "parent", "park", "part", "particular", "party", "pass", "past", "pay", "pence", "pension", "people", "per", "percent", "perfect", "perhaps", "period", "person", "photograph", "pick", "picture", "piece", "place", "plan", "play", "please", "plus", "point", "police", "policy", "politic", "poor", "position", "positive", "possible", "post", "pound", "power", "practise", "prepare", "present", "press", "pressure", "presume", "pretty", "previous", "price", "print", "private", "probable", "problem", "proceed", "process", "produce", "product", "programme", "project", "proper", "propose", "protect", "provide", "public", "pull", "purpose", "push", "put", "quality", "quarter", "question", "quick", "quid", "quiet", "quite", "radio", "rail", "raise", "range", "rate", "rather", "read", "ready", "real", "realise", "really", "reason", "receive", "recent", "reckon", "recognize", "recommend", "record", "red", "reduce", "refer", "regard", "region", "relation", "remember", "report", "represent", "require", "research", "resource", "respect", "responsible", "rest", "result", "return", "rid", "right", "ring", "rise", "road", "role", "roll", "room", "round", "rule", "run", "safe", "sale", "same", "saturday", "save", "say", "scheme", "school", "science", "score", "scotland", "seat", "second", "secretary", "section", "secure", "see", "seem", "self", "sell", "send", "sense", "separate", "serious", "serve", "service", "set", "settle", "seven", "sex", "shall", "share", "she", "sheet", "shoe", "shoot", "shop", "short", "should", "show", "shut", "sick", "side", "sign", "similar", "simple", "since", "sing", "single", "sir", "sister", "sit", "site", "situate", "six", "size", "sleep", "slight", "slow", "small", "smoke", "so", "social", "society", "some", "son", "soon", "sorry", "sort", "sound", "south", "space", "speak", "special", "specific", "speed", "spell", "spend", "square", "staff", "stage", "stairs", "stand", "standard", "start", "state", "station", "stay", "step", "stick", "still", "stop", "story", "straight", "strategy", "street", "strike", "strong", "structure", "student", "study", "stuff", "stupid", "subject", "succeed", "such", "sudden", "suggest", "suit", "summer", "sun", "sunday", "supply", "support", "suppose", "sure", "surprise", "switch", "system", "table", "take", "talk", "tape", "tax", "tea", "teach", "team", "telephone", "television", "tell", "ten", "tend", "term", "terrible", "test", "than", "thank", "the", "then", "there", "therefore", "they", "thing", "think", "thirteen", "thirty", "this", "thou", "though", "thousand", "three", "through", "throw", "thursday", "tie", "time", "to", "today", "together", "tomorrow", "tonight", "too", "top", "total", "touch", "toward", "town", "trade", "traffic", "train", "transport", "travel", "treat", "tree", "trouble", "true", "trust", "try", "tuesday", "turn", "twelve", "twenty", "two", "type", "under", "understand", "union", "unit", "unite", "university", "unless", "until", "up", "upon", "use", "usual", "value", "various", "very", "video", "view", "village", "visit", "vote", "wage", "wait", "walk", "wall", "want", "war", "warm", "wash", "waste", "watch", "water", "way", "we", "wear", "wednesday", "wee", "week", "weigh", "welcome", "well", "west", "what", "when", "where", "whether", "which", "while", "white", "who", "whole", "why", "wide", "wife", "will", "win", "wind", "window", "wish", "with", "within", "without", "woman", "wonder", "wood", "word", "work", "world", "worry", "worse", "worth", "would", "write", "wrong", "year", "yes", "yesterday", "yet", "you", "young"]
+    }
     if (getStorageItem("typingMode") == "time") {
         sentenceLength = 250; //max amount of words (should eventually be changed to update after tyhe begin typing to minimize latency)
     }
-    else
-    {
+    else {
         sentenceLength = getStorageItem("words");
     }
     for (let i = 0; i < sentenceLength; i++) {
@@ -257,21 +228,18 @@ function randomQuote() {
     }
 }
 function wordsPerMinute(testDuration) {
-    if (getStorageItem("typingMode") == "time")
-    {
+    if (getStorageItem("typingMode") == "time") {
         const timeIn = time - testDuration
         const correctText = displayText?.querySelectorAll('.correct').length
         const wpm = Math.round(correctText / 5 / timeIn * 60)
         return wpm
     }
-    else
-    {
+    else {
         const timeIn = testDuration
         const correctText = displayText?.querySelectorAll('.correct').length
         const wpm = Math.round(correctText / 5 / timeIn * 60)
         return wpm
     }
-
 }
 async function newQuote() {
     if (getStorageItem("typingMode") == "time")
@@ -351,7 +319,6 @@ function wrongWord(words, charecters) {
     }
 }
 function endTest() {
-    //this is where all the data is sent from javascript to php
     wpmFinal = wordsPerMinute(duration)
     const correct = displayText?.querySelectorAll('.correct').length //correct characters
     const incorrect = displayText?.querySelectorAll('.incorrect').length //incorrect characters
@@ -363,7 +330,7 @@ function endTest() {
 }
 function moveCursor()
 {
-  if (getCookie('caret') == "highlightWord" || getCookie('caret') == "underlineWord") //
+  if (getStorageItem('caret') == "highlightWord" || getStorageItem('caret') == "underlineWord") //
   {
     const cursor = document.getElementById('cursor') 
     const placement = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
@@ -371,7 +338,7 @@ function moveCursor()
     cursor.style.left = rect.x + "px";
     cursor.style.width = rect.width + "px";
   }
-  else if(getCookie('caret') == "caret")
+  else if(getStorageItem('caret') == "caret")
   {
     const cursor = document.getElementById('cursor') 
     const parent = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
@@ -388,7 +355,7 @@ function moveCursor()
       cursor.style.left = rect.x + "px";
     }
   }
-  else if(getCookie('caret') == "underlineLetter")
+  else if(getStorageItem('caret') == "underlineLetter")
   {
     const cursor = document.getElementById('cursor') 
     const parent = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
@@ -410,7 +377,7 @@ function moveCursor()
     }
 
   }
-  else //no cookie chosen, so default is caret
+  else
   {
     const cursor = document.getElementById('cursor') 
     const parent = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
@@ -428,8 +395,7 @@ function moveCursor()
     }
   }
 }
-function moveCursorWithY()
-{
+function moveCursorWithY() {
   moveCursor();
   const cursor = document.getElementById('cursor') 
   const placement = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
@@ -455,7 +421,6 @@ function setBlur() {
 function setCursorVisibility() {
     document.getElementById('cursor').style.visibility = 'visible';
 }
-
 function zoomwait() {
     moveCursorWithY();
     document.getElementById('cursor').style.visibility = 'hidden';
@@ -466,19 +431,17 @@ function zoomwait() {
         setTimeout(() => { moveCursorWithY(), setCursorVisibility(); }, 500);
     }
 }
-function findCookie(name, parentId) //checks to see which cookie is selected (used in prefrences to highlight current setting)
+function findCookie(name, parentId) {
+    const children = document.getElementById(parentId).children // wpm Display
+    for (var i = 0; i < children.length; i++) {
+        var child = children[i];
+        if (getCookie(name) == child.title)
         {
-            const children = document.getElementById(parentId).children // wpm Display
-            for (var i = 0; i < children.length; i++) {
-                var child = children[i];
-                if (getCookie(name) == child.title)
-                {
-                return child;
-                }
-            }
+        return child;
         }
-function refresh()
-{
+    }
+}
+function refresh() {
     if ( window.location.href == ("https://cozytypes.com/") || "https://www.cozytypes.com/index.php") {
         newQuote();
         moveCursorWithY();
@@ -496,15 +459,14 @@ function setTheme(oldTheme, newTheme) {
     body.classList.add(newTheme);
     currentTheme = newTheme;
     localStorage.setItem("theme", newTheme);
-    }
+}
 function setPreference(type, newPreference)
     {
         const root = document.querySelector(':root');
         root.style.setProperty("--" + type, newPreference);
         localStorage.setItem(type, newPreference);
-    }
-function getStorageItem(name)
-{
+}
+function getStorageItem(name) {
     return localStorage.getItem(name);
 }
 function loadPreferences() {
