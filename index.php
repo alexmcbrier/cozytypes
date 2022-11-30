@@ -50,11 +50,13 @@ if (isset($_GET["finish"]))
 
     <div id="mainContent" style = "align-items: center;">
         <?php include "./nav.php" ?>
-
             <!-- Display if test not complete -->
           <div id="middle">
             <?php if (!isset($_GET["finish"])) { ?>
                 <div id="cursor"></div>
+                <div id="notifications">
+                    <div class = "notification"></div>
+                </div>
                 <div id="typingmode">
                 <div class="modeStack">
                     <div>time</div>

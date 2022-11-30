@@ -956,11 +956,11 @@ include "themes.scss"; //file contains all fonts
     }
     @keyframes slideDown {
         from {
-            margin-top: 0rem;
+            margin-top: -3rem;
         }
 
         to {
-            margin-top: 10rem;
+            margin-top: 0rem;
         }
     }
 
@@ -1018,7 +1018,84 @@ include "themes.scss"; //file contains all fonts
             transform: scale(1, 1);
         }
     }
-
+        .animated-theme {
+        display: block;
+        position: fixed;
+        border-radius: 50%;
+        background-color: var(--bg-color);
+        transform: translate(-50%, -50%);
+        overflow: hidden;
+        z-index: 99;
+        animation: grow 1s ease-in-out;
+        &.default {
+            background-color: black !important;
+        }
+        @keyframes grow {
+            0% {
+                min-height: 0;
+                min-width: 0;
+            }
+            80% {
+                min-width: 4000px;
+                min-height: 4000px;
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+    }
+    #notifications
+    {
+        position: fixed;
+        top: 5rem;
+        right: 5rem;
+        width: 15rem;
+        height: 7rem;
+    }
+    .notificationH
+    {
+        font-size: 2rem;
+        font-weight: bold;
+        color: var(--currentWord);
+    }
+    .notificationD
+    {
+        font-size: 1rem;
+        color: var(--rowBackground);
+    }
+    .notification
+    {
+        user-select: none;
+        background-color: var(--row);
+        border-radius: 1.5rem;
+        padding: 1rem;
+        -moz-animation: fadeIn 1s  ease, slideDown 1s ease;
+        /* Firefox */
+        -webkit-animation: fadeIn 1s  ease, slideDown 1s ease;
+        /* Safari and Chrome */
+        -o-animation: fadeIn 1s  ease, slideDown 1s ease;
+        /* Opera */
+        animation: cssAnimation 0s ease-in 3s forwards, fadeIn 1s  ease, slideDown 1s ease;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+    }
+    @keyframes cssAnimation {
+        to {
+            width:0;
+            height:0;
+            overflow:hidden;
+            padding: 0;
+        }
+    }
+    @-webkit-keyframes cssAnimation {
+        to {
+            width:0;
+            height:0;
+            visibility:hidden;
+            padding: 0;
+        }
+    }
     .loginBtn {
         padding: 1rem;
         box-sizing: border-box;
@@ -1139,7 +1216,7 @@ include "themes.scss"; //file contains all fonts
     .preferences a:hover {
         transform: scale(1.1, 1.1);
     }
-
+    
     #displayStats {
 
         display: flex;

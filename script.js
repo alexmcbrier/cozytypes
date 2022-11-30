@@ -474,6 +474,29 @@ function setPreference(type, newPreference)
         root.style.setProperty("--" + type, newPreference);
         localStorage.setItem(type, newPreference);
 }
+function addNotification(header, description)
+{
+    var parent = document.getElementById('notifications');
+    var element = document.createElement("div");
+    element.classList.add('notification');
+    var h = document.createElement("div");
+    var d = document.createElement("div");
+    h.classList.add('notificationH');
+    d.classList.add('notificationD');
+    h.appendChild(document.createTextNode(header));
+    d.appendChild(document.createTextNode(description));
+
+    while (parent.firstChild) {
+        parent.removeChild(parent.lastChild);
+      }
+    element.appendChild(h);
+    element.appendChild(d);
+
+    parent.appendChild(element);
+
+    var parent = document.getElementById('notifications');
+    var notification = document.createElement("div");
+}
 function getStorageItem(name) {
     return localStorage.getItem(name);
 }
