@@ -477,27 +477,6 @@ function findCookie(name, parentId) //checks to see which cookie is selected (us
                 }
             }
         }
-function updateIndex()
-{
-    if (getStorageItem("typingMode") == "time") //set the current time
-    {
-        findCookie('time', 'timesContainer').classList.add("currentMode");
-    }
-    else if (getStorageItem("typingMode") == "words") //set the current num words
-    {
-        findCookie('words', 'wordsContainer').classList.add("currentMode");
-    }
-    findCookie('mode', 'modesContainer').classList.add("currentMode"); //update regardless
-}
-function updatePreferences()
-{
-    findCookie('fontSize', 'sizesContainer').classList.add("currentSetting");
-    findCookie('fontFamily', 'fontsContainer').classList.add("currentSetting");
-    findCookie('caret', 'caretsContainer').classList.add("currentSetting");
-    findCookie('lineCount', 'linesContainer').classList.add("currentSetting");
-    findCookie('blur', 'blurContainer').classList.add("currentSetting");
-    findCookie('theme', 'themesContainer').innerHTML  += " ✦";
-}
 function refresh()
 {
     if ( window.location.href == ("https://cozytypes.com/") || "https://www.cozytypes.com/index.php") {
