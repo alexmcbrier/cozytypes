@@ -488,7 +488,7 @@ function loadPreferences() {
     let caret = localStorage.getItem("caret") || "caret";
     let typingMode = localStorage.getItem("typingMode") || "time";
     let words = localStorage.getItem("words") || 100;
-    let time = localStorage.getItem("time") || "15";
+    let time = localStorage.getItem("time") || 15;
     let blur = localStorage.getItem("blur") || "off";
     let mode = localStorage.getItem("mode") || "hard";
     setTheme("default", theme); 
