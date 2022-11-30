@@ -105,7 +105,7 @@ if (isset($_GET["finish"]))
                 </div>
                 <div class="statsContainer">
                     <h1 class="notSignedIn" id="preferenceHeader"><?= $_GET["mode"] ?><i class="fa-regular fa-hourglass-half"></i></h1>
-                    <a class="results"><?= $_GET["testTime"] ?>s</a>
+                    <a class="results"><?= $_GET["testTime"] ?></a>
                 </div>
             </div>
             <a id = "showRestart" href="https://cozytypes.com/">play again<i class="fa-solid fa-backward"></i></a>

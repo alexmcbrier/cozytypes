@@ -326,7 +326,15 @@ function endTest() {
     const accuracy = parseInt(correct / total * 100);
     const correctWords = displayText?.querySelectorAll('.word').length + displayText?.querySelectorAll('.current-word').length //correct words
     const incorrectWords = displayText?.querySelectorAll('.incorrect-word').length //incorrect words
-    window.location.href = "index.php?finish=true&testTime=" + time + "&wpm=" + wpmFinal + "&accuracy=" + accuracy + "&mode=" + getCookie('typingMode') + "&correctWords=" + correctWords + "&incorrectWords=" + incorrectWords
+    if (getStorageItem("typingMode") == "time")
+    {
+        window.location.href = "index.php?finish=true&testTime=" + getStorageItem("time") + "&wpm=" + wpmFinal + "&accuracy=" + accuracy + "&mode=time&correctWords=" + correctWords + "&incorrectWords=" + incorrectWords
+    }
+    else if (getStorageItem("typingMode") == "words")
+    {
+        window.location.href = "index.php?finish=true&testTime=" + getStorageItem("words") + "&wpm=" + wpmFinal + "&accuracy=" + accuracy + "&mode=words&correctWords=" + correctWords + "&incorrectWords=" + incorrectWords
+    }
+    
 }
 function moveCursor()
 {
