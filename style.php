@@ -1,67 +1,6 @@
 <?php
 header('Content-Type: text/css');
 session_start();
-if (isset($_COOKIE["fontFamily"])) {
-    $fontFamily = $_COOKIE["fontFamily"];
-} else {
-    $fontFamily = "lexendDeca";
-}
-if (isset($_COOKIE["fontSize"])) {
-    $fontSize = ($_COOKIE["fontSize"]);
-} else {
-    $fontSize = 3;
-}
-if (isset($_COOKIE["caret"])) {
-    $caret = $_COOKIE["caret"];
-} else {
-    $caret = "caret";
-}
-if (isset($_COOKIE["lineCount"])) {
-    $lineCount = $_COOKIE["lineCount"];
-} else {
-    $lineCount = 3;
-}
-if (isset($_COOKIE["time"])) {
-    $time = $_COOKIE["time"];
-} else {
-    $time = 15;
-}
-if (isset($_COOKIE["words"])) {
-    $words = $_COOKIE["words"];
-} else {
-    $words = 100;
-}
-if (isset($_COOKIE["typingMode"])) {
-    $typingMode = $_COOKIE["typingMode"];
-} else {
-    $typingMode = "words";
-}
-//caret settinngs
-$fontSize = $fontSize * .8; /*reducing by a factor of .8 */
-$height = 1.5 * $fontSize * $lineCount;
-$caretTop = 0;
-$caretHeight = 0;
-$caretWidth = 0;
-$caretOpacity = 100;
-if ($caret == "none") {
-    $caretTop = 0;
-    $caretHeight = 0;
-} else if ($caret == "underlineWord") {
-    $caretTop = $fontSize * 1.35;
-    $caretHeight = $fontSize / 3;
-} else if ($caret == "underlineLetter") {
-    $caretTop = $fontSize * 1.35;
-    $caretHeight = $fontSize / 5;
-} else if ($caret == "highlightWord") {
-    $caretTop = 0;
-    $caretHeight = $fontSize * 1.5;
-    $caretOpacity = 20;
-} else if ($caret == "caret") {
-    $caretTop = $fontSize * .25;
-    $caretHeight = $fontSize * 1;
-    $caretWidth = $fontSize * .1;
-    $caretOpacity = 100;
-}
 include "themes.scss"; //file contains all fonts
 ?>
 <style>
@@ -115,6 +54,22 @@ include "themes.scss"; //file contains all fonts
         src: url('./Fonts/ibmPlexSans.ttf');
     }
     /*scrollbar*/
+    :root
+    {
+        --fontFamily: 'lexendDeca';
+        --fontSize: 2;
+        --height: calc(1.5rem * var(--fontSize) * var(--lineCount));
+        --caret: 'caret';
+        --caretTop: calc(var(--fontSize) * .25rem);
+        --caretHeight: calc(var(--fontSize) * 1rem);
+        --caretWidth: calc(var(--fontSize) * .1rem);
+        --caretOpacity: 100%;
+        --lineCount: 3;
+        --typingMode: 'words';
+        --time: 15;
+        --words: 100;
+        --blur: 'off';
+    }
     ::-webkit-scrollbar {
         width: 1.5em;
         height: 1em;
@@ -188,7 +143,7 @@ include "themes.scss"; //file contains all fonts
     }
     *
     {
-        font-family: <?php echo strval($fontFamily) ?>, serif;
+        font-family: var(--fontFamily);
     }
     body {
         -webkit-font-smoothing: antialiased;
@@ -272,10 +227,9 @@ include "themes.scss"; //file contains all fonts
     }
     .word {
         display: inline-block;
-        padding: 0rem <?php echo strval($fontSize * .2) . "rem"; ?>;
+        padding: 0rem calc(var(--fontSize) * .2rem);;
         /* line spacing */
     } 
-
     .row {
         user-select: none;
         color: var(--currentWord);
@@ -359,13 +313,13 @@ include "themes.scss"; //file contains all fonts
     }
     .testItem
     {
-        font-size: <?php echo strval($fontSize) * .5 . "rem" ?>;
+        font-size: calc(var(--fontSize) * .5rem);;
         padding: 2rem;
         overflow: hidden;
     }
     #wpmDisplay
     {
-        min-width: <?php echo strval($fontSize) * 2.25 . "rem" ?>;
+        min-width: calc(var(--fontSize) * 2.25rem);;
     }
     #wpmDisplay, #time
     {
@@ -430,9 +384,9 @@ include "themes.scss"; //file contains all fonts
         resize: none;
         background-color: var(--background);
         width: 50%;
-        font-size: <?php echo strval($fontSize) * .753 . "rem"; ?>;
-        height: <?php echo strval($fontSize) * .5 . "rem"; ?>;
-        line-height: <?php echo strval($fontSize) * .5 . "rem"; ?>;
+        font-size: calc(var(--fontSize) * .7rem);
+        height: calc(var(--fontSize) * .5rem);
+        line-height: calc(var(--fontSize) * .5rem);
     }
 
     #textInput:focus {
@@ -452,7 +406,7 @@ include "themes.scss"; //file contains all fonts
         border: none;
         cursor: pointer;
         transition: transform .5s ease;
-        font-size: <?php echo strval($fontSize) * .5 . "rem" ?>;
+        font-size: calc(var(--fontSize) * .5rem);
         
     }
     .currentSetting
@@ -461,13 +415,13 @@ include "themes.scss"; //file contains all fonts
     }
     #wordsWrapper {
         /* transition: .25s all; */
-        line-height: <?php echo strval($fontSize * 1.5) . "rem"; ?>;
+        line-height: calc(var(--fontSize) * 1.5rem);
     }
 
     #testText {
         user-select: none;
-        font-size: <?php echo strval($fontSize) . "rem"; ?>;
-        height: <?php echo strval($height) . "rem"; ?>;
+        font-size: calc(var(--fontSize) * 1rem);
+        height: var(--height);
         border-radius: .5rem;
         color: var(--testText);
         overflow: hidden;
@@ -477,8 +431,8 @@ include "themes.scss"; //file contains all fonts
     .testRow {
         display: flex;
         align-items: center;
-        gap: <?php echo strval($fontSize) / 4 . "rem"?>;
-        padding: <?php echo strval($fontSize) * .2 . "rem"?> 0rem;
+        gap: calc(var(--fontSize) * .25rem);;
+        padding: calc(var(--fontSize) * .2rem) 0rem;
         user-select: none;
     }
     #showName
@@ -491,10 +445,10 @@ include "themes.scss"; //file contains all fonts
     .testRow * {
         user-select: none;
         color: var(--currentWord);
-        border: <?php echo strval($fontSize) * .1 . "rem"?> solid var(--row);
-        border-radius: <?php echo strval($fontSize) * .6 . "rem"?>;
+        border: calc(var(--fontSize) * .1rem) solid var(--row);
+        border-radius: calc(var(--fontSize) * .6rem);
         display: inline-block;
-        padding: <?php echo strval($fontSize) * .625 . "rem"?>;
+        padding: calc(var(--fontSize) * .625rem);
     }
 
     #typingmode {
@@ -529,14 +483,14 @@ include "themes.scss"; //file contains all fonts
     }
 
     #cursor {
-        width: <?php echo strval($caretWidth) . "rem" ?>;
+        width: var(--caretWidth);
         background-color: var(--correct);
-        opacity: <?php echo strval($caretOpacity) . "%" ?>;
+        opacity: var(--caretOpacity);
         border-radius: 1.5rem;
         position: absolute;
         transition: left 0.1s ease;
-        height: <?php echo strval($caretHeight) . "rem" ?>;
-        margin-top: <?php echo strval($caretTop) . "rem" ?>;
+        height: var(--caretHeight);
+        margin-top: var(--caretTop);
         animation: blink 1.5s infinite 1s;
     }
     @keyframes blink {
@@ -569,13 +523,13 @@ include "themes.scss"; //file contains all fonts
     .current-word {
         /* color: var(--currentWord); */
         display: inline-block;
-        padding: 0rem <?php echo strval($fontSize * .2) . "rem"; ?>;
+        padding: 0rem calc(var(--fontSize) * .2rem);
     }
 
     .incorrect-word {
         color: var(--incorrect);
         display: inline-block;
-        padding: 0rem <?php echo strval($fontSize * .2) . "rem"; ?>;
+        padding: 0rem calc(var(--fontSize) * .2rem);
     }
 
     #listOfStats {

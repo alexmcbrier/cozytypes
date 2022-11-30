@@ -59,26 +59,26 @@ if (isset($_GET["finish"]))
                 <div class="modeStack">
                     <div>time</div>
                     <div id = "timesContainer" style="display: flex">
-                        <div title = "15" class="typingModes" onclick="setCookie('typingMode', 'time', 30); changeTime(15)">15</div>
-                        <div title = "30" class="typingModes" onclick="setCookie('typingMode', 'time', 30); changeTime(30)">30</div>
-                        <div title = "60" class="typingModes" onclick="setCookie('typingMode', 'time', 30); changeTime(60)">60</div>
-                        <div title = "120" class="typingModes" onclick="setCookie('typingMode', 'time', 30); changeTime(120)">120</div>
+                        <div class="typingModes" onclick="setPreference('typingMode', 'time'); setPreference('time', 15); restart() ">15</div>
+                        <div class="typingModes" onclick="setPreference('typingMode', 'time'); setPreference('time', 30); restart()">30</div>
+                        <div class="typingModes" onclick="setPreference('typingMode', 'time'); setPreference('time', 60); restart()">60</div>
+                        <div class="typingModes" onclick="setPreference('typingMode', 'time'); setPreference('time', 120); restart()">120</div>
                     </div>
                 </div>
                 <div class="modeStack">
                     <div>words</div>
                     <div id = "wordsContainer" style="display: flex">
-                        <div title = "10" class="typingModes" onclick="setCookie('typingMode', 'words', 30); changeWords(10)">10</div>
-                        <div title = "25" class="typingModes" onclick="setCookie('typingMode', 'words', 30); changeWords(25)">25</div>
-                        <div title = "50" class="typingModes" onclick="setCookie('typingMode', 'words', 30); changeWords(50)">50</div>
-                        <div title = "100" class="typingModes" onclick="setCookie('typingMode', 'words', 30); changeWords(100)">100</div>
+                        <div class="typingModes" onclick="setPreference('typingMode', 'words'); setPreference('words', 10); restart()">10</div>
+                        <div class="typingModes" onclick="setPreference('typingMode', 'words'); setPreference('words', 25); restart()">25</div>
+                        <div class="typingModes" onclick="setPreference('typingMode', 'words'); setPreference('words', 50); restart()">50</div>
+                        <div class="typingModes" onclick="setPreference('typingMode', 'words'); setPreference('words', 100); restart()">100</div>
                     </div>
                 </div>
                 <div class="modeStack">
                     <div>difficulty</div>
                     <div id = "modesContainer" style="display: flex">
-                        <div title = "easy" class="typingModes" onclick="changeMode('easy')">easy</div>
-                        <div title = "hard" class="typingModes" onclick="changeMode('hard')">hard</div>
+                        <div class="typingModes" onclick="setPreference('mode', 'easy'); restart()">easy</div>
+                        <div class="typingModes" onclick="setPreference('mode', 'hard'); restart()">hard</div>
                     </div>
                 </div>
             </div>

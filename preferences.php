@@ -14,51 +14,51 @@ session_start();
                 <div id="sizesContainer" class="rowContainer" style="width: 30%">
                     <h1 class="notSignedIn" id="preferenceHeader">Size <i class="fa-solid fa-text-height"></i> </h1>
                     <h1 class="description">Change the size of the words in the test.</h1>
-                    <a title="1" class="preference" onclick="setCookie('fontSize', 1, 30)">1</a>
-                    <a title="2" class="preference" onclick="setCookie('fontSize', 2, 30)">2</a>
-                    <a title="3" class="preference" onclick="setCookie('fontSize', 3, 30)">3</a>
-                    <a title="4" class="preference" onclick="setCookie('fontSize', 4, 30)">4</a>
-                    <a title="5" class="preference" onclick="setCookie('fontSize', 5, 30)">5</a>
+                    <a class="preference" onclick="setPreference('fontSize', 1)">1</a>
+                    <a class="preference" onclick="setPreference('fontSize', 1.5)">2</a>
+                    <a class="preference" onclick="setPreference('fontSize', 2)">2</a>
+                    <a class="preference" onclick="setPreference('fontSize', 2.5)">4</a>
+                    <a class="preference" onclick="setPreference('fontSize', 3)">5</a>
                 </div>
                 <div id="fontsContainer" class="rowContainer" style="width: 70%">
                     <h1 class="notSignedIn" id="preferenceHeader">Font <i class="fa-solid fa-font"></i></h1>
                     <h1 class="description">Choose from various styles to change the font family across the site.</h1>
-                    <a title="lexenddeca" class="preference" style="font-family: 'LexendDeca', serif;" onclick="setCookie('fontFamily', 'lexenddeca', 30)">lexend deca</a>
-                    <a title="arial" class="preference" style="font-family: Arial;" onclick="setCookie('fontFamily', 'arial', 30)">arial</a>
-                    <a title="ibmplexsans" class="preference" style="font-family: 'IBM Plex Sans', sans-serif;" onclick="setCookie('fontFamily', 'ibmplexsans', 30)">IBM Plex Sans</a>
-                    <a title="comfortaa" class="preference" style="font-family: 'Comfortaa', cursive;" onclick="setCookie('fontFamily', 'comfortaa', 30)">comfortaa</a>
-                    <a title="courier" class="preference" style="font-family: 'Courier Prime', monospace;" onclick="setCookie('fontFamily', 'courier', 30)">courier</a>
-                    <a title="nutino" class="preference" style="font-family: 'Nunito', sans-serif;" onclick="setCookie('fontFamily', 'nutino', 30)">Nunito</a>
-                    <a title="sourcecodepro" class="preference" style="font-family: 'Source Code Pro', monospace;" onclick="setCookie('fontFamily', 'sourcecodepro', 30)">source code pro</a>
-                    <a title="raleway" class="preference" style="font-family: 'Raleway', sans-serif;" onclick="setCookie('fontFamily', 'raleway', 30)">raleway</a>
-                    <a title="titilliumweb" class="preference" style="font-family: 'Titillium Web', sans-serif;" onclick="setCookie('fontFamily', 'titilliumweb', 30)">titillium Web</a>
-                    <a title="lora" class="preference" style="font-family: 'Lora', serif;" onclick="setCookie('fontFamily', 'lora', 30)">lora</a>
-                    <a title="merrieweather" class="preference" style="font-family: 'Merriweather', serif;" onclick="setCookie('fontFamily', 'merrieweather', 30)">merriweather</a>
+                    <a class="preference" style="font-family: 'LexendDeca', serif;" onclick="setPreference('fontFamily', 'lexenddeca')">lexend deca</a>
+                    <a class="preference" style="font-family: Arial;" onclick="setPreference('fontFamily', 'arial')">arial</a>
+                    <a class="preference" style="font-family: 'IBM Plex Sans', sans-serif;" onclick="setPreference('fontFamily', 'ibmplexsans')">IBM Plex Sans</a>
+                    <a class="preference" style="font-family: 'Comfortaa', cursive;" onclick="setPreference('fontFamily', 'comfortaa')">comfortaa</a>
+                    <a class="preference" style="font-family: 'Courier Prime', monospace;" onclick="setPreference('fontFamily', 'courier')">courier</a>
+                    <a class="preference" style="font-family: 'Nunito', sans-serif;" onclick="setPreference('fontFamily', 'Nunito')">Nunito</a>
+                    <a class="preference" style="font-family: 'Source Code Pro', monospace;" onclick="setPreference('fontFamily', 'sourceCodePro')">source code pro</a>
+                    <a class="preference" style="font-family: 'Raleway', sans-serif;" onclick="setPreference('fontFamily', 'raleway')">raleway</a>
+                    <a class="preference" style="font-family: 'Titillium Web', sans-serif;" onclick="setPreference('fontFamily', 'titilliumWeb')">titillium Web</a>
+                    <a class="preference" style="font-family: 'Lora', serif;" onclick="setPreference('fontFamily', 'lora')">lora</a>
+                    <a class="preference" style="font-family: 'Merriweather', serif;" onclick="setPreference('fontFamily', 'merriweather')">merriweather</a>
                 </div>
             </div>
             <div class="horizontalAlign">
                 <div id="caretsContainer" class="rowContainer" style="width: 40%">
                     <h1 class="notSignedIn" id="preferenceHeader">Caret <i class="fa-solid fa-arrow-pointer"></i></h1>
                     <h1 class="description">When enabled, the caret will move along the page as you type. Change the style for different typing experiences.</h1>
-                    <a title="none" class="preference" onclick="setCookie('caret', 'none', 30)">none</a>
-                    <a title="caret" class="preference" onclick="setCookie('caret', 'caret', 30)">caret</a>
-                    <a title="underlineLetter" class="preference" onclick="setCookie('caret', 'underlineLetter', 30)">underline letter</a>
-                    <a title="underlineWord" class="preference" onclick="setCookie('caret', 'underlineWord', 30)">underline word</a>
-                    <a title="highlightWord" class="preference" onclick="setCookie('caret', 'highlightWord', 30)">highlight word</a>
+                    <a class="preference" onclick="setPreference('caret', 'none')">none</a>
+                    <a class="preference" onclick="setPreference('caret', 'caret')">caret</a>
+                    <a class="preference" onclick="setPreference('caret', 'underlineLetter')">underline letter</a>
+                    <a class="preference" onclick="setPreference('caret', 'underlineWord')">underline word</a>
+                    <a class="preference" onclick="setPreference('caret', 'highlightWord')">highlight word</a>
                 </div>
                 <div id="linesContainer" class="rowContainer" style="width: 35%">
                     <h1 class="notSignedIn" id="preferenceHeader">Amount of lines <i class="fa-solid fa-align-left"></i></h1>
                     <h1 class="description">Show a different number of lines on the screen; More lines on the page will allow to see you what is coming next.</h1>
-                    <a title="2" class="preference" onclick="setCookie('lineCount', 2, 30)">2</a>
-                    <a title="3" class="preference" onclick="setCookie('lineCount', 3, 30)">3</a>
-                    <a title="4" class="preference" onclick="setCookie('lineCount', 4, 30)">4</a>
-                    <a title="5" class="preference" onclick="setCookie('lineCount', 5, 30)">5</a>
+                    <a class="preference" onclick="setPreference('lineCount', 2)">2</a>
+                    <a class="preference" onclick="setPreference('lineCount', 3)">3</a>
+                    <a class="preference" onclick="setPreference('lineCount', 4)">4</a>
+                    <a class="preference" onclick="setPreference('lineCount', 5)">5</a>
                 </div>
                 <div id="blurContainer" class="rowContainer" style="width: 25%">
                     <h1 class="notSignedIn" id="preferenceHeader">Blur Text <i class="fa-solid fa-eye"></i></h1>
                     <h1 class="description">Enabling blur will cause a gradient to be placed over the test, allowing you to rely less on memorization.</h1>
-                    <a title="on" class="preference" onclick="setCookie('blur', 'on', 30)">on</a>
-                    <a title="off" class="preference" onclick="setCookie('blur', 'off', 30)">off</a>
+                    <a class="preference" onclick="setPreference('blur', 'on')">on</a>
+                    <a class="preference" onclick="setPreference('blur', 'off')">off</a>
                 </div>
             </div>
         </div>
