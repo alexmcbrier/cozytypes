@@ -272,6 +272,7 @@ include "themes.scss"; //file contains all fonts
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         font-size: 1.5rem;
         padding: 2rem;
         gap: 3rem;
