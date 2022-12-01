@@ -1067,13 +1067,13 @@ include "themes.scss"; //file contains all fonts
         background-color: var(--row);
         border-radius: 1.5rem;
         padding: 1rem;
-        -moz-animation: fadeIn 1s  ease, slideDown 1s ease;
+        -moz-animation: fadeIn 1s  ease;
         /* Firefox */
-        -webkit-animation: fadeIn 1s  ease, slideDown 1s ease;
+        -webkit-animation: fadeIn 1s  ease,;
         /* Safari and Chrome */
-        -o-animation: fadeIn 1s  ease, slideDown 1s ease;
+        -o-animation: fadeIn 1s  ease;
         /* Opera */
-        animation: cssAnimation 0s ease-in 3s forwards, fadeIn 1s  ease, slideDown 1s ease;
+        animation: cssAnimation 0s ease-in-out 1.5s forwards, fadeIn 1s  ease;
         -webkit-animation-fill-mode: forwards;
         animation-fill-mode: forwards;
     }

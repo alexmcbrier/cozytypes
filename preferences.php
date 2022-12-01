@@ -65,18 +65,18 @@ session_start();
         </div>
         <div id="themesContainer" class="rowContainer">
             <h1 id="preferenceHeader">Theme <i class="fa-solid fa-palette"></i></h1>
-            <a class = "color-theme light" onclick="setTheme(currentTheme, 'light'), addNotification('theme','light');">light</a>
-            <a class = "color-theme theme-9009" onclick="setTheme(currentTheme, 'theme-9009'), addNotification('theme','light');">9009</a>
-            <a class = "color-theme mizu" onclick="setTheme(currentTheme, 'mizu'), addNotification('theme','mizu');">mizu</a>
-            <a class = "color-theme blueberry" onclick="setTheme(currentTheme, 'blueberry'), addNotification('theme','blueberry');">blueberry</a>
-            <a class = "color-theme striker" onclick="setTheme(currentTheme, 'striker'), addNotification('theme','striker');">striker</a>
-            <a class = "color-theme creamsicle" onclick="setTheme(currentTheme, 'creamsicle'), addNotification('theme','creamsicle');">creamsicle</a>
-            <a class = "color-theme botanical" onclick="setTheme(currentTheme, 'botanical'), addNotification('theme','botanical');">botanical</a>
-            <a class = "color-theme theme-8008" onclick="setTheme(currentTheme, 'theme-8008'), addNotification('theme','8008');">8008</a>
-            <a class = "color-theme amethyst" onclick="setTheme(currentTheme, 'amethyst'), addNotification('theme','amethyst');">amethyst</a>
-            <a class = "color-theme dracula" onclick="setTheme(currentTheme, 'dracula'), addNotification('theme','dracula');">dracula</a>
-            <a class = "color-theme olivia" onclick="setTheme(currentTheme, 'olivia'), addNotification('theme','olivia');">olivia</a>
-            <a class = "color-theme dark" onclick="setTheme(currentTheme, 'dark'), addNotification('theme','dark');">dark</a>
+            <a class = "color-theme light" onclick="setTheme(currentTheme, 'light')">light</a>
+            <a class = "color-theme theme-9009" onclick="setTheme(currentTheme, 'theme-9009')">9009</a>
+            <a class = "color-theme mizu" onclick="setTheme(currentTheme, 'mizu')">mizu</a>
+            <a class = "color-theme blueberry" onclick="setTheme(currentTheme, 'blueberry')">blueberry</a>
+            <a class = "color-theme striker" onclick="setTheme(currentTheme, 'striker')">striker</a>
+            <a class = "color-theme creamsicle" onclick="setTheme(currentTheme, 'creamsicle')">creamsicle</a>
+            <a class = "color-theme botanical" onclick="setTheme(currentTheme, 'botanical')">botanical</a>
+            <a class = "color-theme theme-8008" onclick="setTheme(currentTheme, 'theme-8008')">8008</a>
+            <a class = "color-theme amethyst" onclick="setTheme(currentTheme, 'amethyst')">amethyst</a>
+            <a class = "color-theme dracula" onclick="setTheme(currentTheme, 'dracula')">dracula</a>
+            <a class = "color-theme olivia" onclick="setTheme(currentTheme, 'olivia')">olivia</a>
+            <a class = "color-theme dark" onclick="setTheme(currentTheme, 'dark')">dark</a>
         </div>
     </form>
 </body>
