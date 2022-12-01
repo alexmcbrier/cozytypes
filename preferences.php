@@ -17,7 +17,7 @@ session_start();
                     <h1 class="description">Change the size of the words in the test.</h1>
                     <a class="preference" onclick="setPreference('fontSize', 1), addNotification('font size','1');">1</a>
                     <a class="preference" onclick="setPreference('fontSize', 1.5), addNotification('font size','2');">2</a>
-                    <a class="preference" onclick="setPreference('fontSize', 2), addNotification('font size','3');">2</a>
+                    <a class="preference" onclick="setPreference('fontSize', 2), addNotification('font size','3');">3</a>
                     <a class="preference" onclick="setPreference('fontSize', 2.5), addNotification('font size','4');">4</a>
                     <a class="preference" onclick="setPreference('fontSize', 3), addNotification('font size','5');">5</a>
                 </div>
