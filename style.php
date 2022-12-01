@@ -141,10 +141,6 @@ include "themes.scss"; //file contains all fonts
         border: 0.5em var(--testText);
         padding: 1em;
     }
-    *
-    {
-        font-family: var(--fontFamily);
-    }
     body {
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
@@ -152,8 +148,8 @@ include "themes.scss"; //file contains all fonts
         background-color: var(--background);
         width: 100%;
         margin: 0;
+        font-family: var(--fontFamily);
     }
-
     .main-body {
         overflow: hidden;
     }
@@ -216,6 +212,7 @@ include "themes.scss"; //file contains all fonts
         transition: color .25s ease;
         color: var(--testText);
         padding: 1rem;
+        font-family: lexendDeca;
     }
     .navIcon, #showUsername
     {
@@ -276,7 +273,6 @@ include "themes.scss"; //file contains all fonts
         font-size: 1.5rem;
         padding: 2rem;
         gap: 3rem;
-
     }
     #footerDiv
     {
