@@ -202,11 +202,10 @@ function restart() {
     displayTimer.innerText = getTime(getStorageItem("time"));
     displayInput.focus();
     displayInput.value = "";
-    newQuote()
-    moveCursorWithY();
     footer.classList.remove('fadeOut');
     typingMode.classList.remove('fadeOut');
     hotkey.classList.remove('fadeOut');
+    refresh();
 }
 function randomQuote() {
     displayText.innerText = ''// removing previous sentence if applicable
@@ -440,15 +439,38 @@ function zoomwait() {
         setTimeout(() => { moveCursorWithY(), setCursorVisibility(); }, 500);
     }
 }
-function findCookie(name, parentId) {
+function findItem(name, parentId) {
     const children = document.getElementById(parentId).children // wpm Display
     for (var i = 0; i < children.length; i++) {
         var child = children[i];
-        if (getCookie(name) == child.title)
-        {
-        return child;
+        if (getStorageItem(name) == child.innerHTML){
+            return child;
         }
     }
+}
+function updateModes()
+{
+    //remove current chosen classes
+    const modes = ['timesContainer', 'wordsContainer', 'modesContainer']
+    for (var i = 0; i < modes.length; i++) {
+        const mode = document.getElementById(modes[i]).children // wpm Display
+        for (var j = 0; j < mode.length; j++) {
+            var child = mode[j];
+            try {
+                child.classList.remove("currentMode");
+            } catch (e) {
+            }
+        }
+    }
+    if (getStorageItem("typingMode") == "time") //set the current time
+    {
+        findItem('time', 'timesContainer').classList.add("currentMode");
+    }
+    else if (getStorageItem("typingMode") == "words") //set the current num words
+    {
+        findItem('words', 'wordsContainer').classList.add("currentMode");
+    }
+    findItem('mode', 'modesContainer').classList.add("currentMode"); //update regardless
 }
 function refresh() {
     if(window.location.href.indexOf("login") > -1) {
@@ -468,6 +490,7 @@ function refresh() {
         newQuote();
         moveCursorWithY();
         setBlur();
+        updateModes();
         hotkey.style.visibility = "visible";
     }
 }
