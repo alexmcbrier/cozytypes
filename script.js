@@ -326,6 +326,7 @@ function endTest() {
     const accuracy = parseInt(correct / total * 100);
     const correctWords = displayText?.querySelectorAll('.word').length + displayText?.querySelectorAll('.current-word').length //correct words
     const incorrectWords = displayText?.querySelectorAll('.incorrect-word').length //incorrect words
+
     if (getStorageItem("typingMode") == "time")
     {
         window.location.href = "index.php?finish=true&testTime=" + getStorageItem("time") + "&wpm=" + wpmFinal + "&accuracy=" + accuracy + "&mode=time&correctWords=" + correctWords + "&incorrectWords=" + incorrectWords
@@ -450,15 +451,24 @@ function findCookie(name, parentId) {
     }
 }
 function refresh() {
-    if ( window.location.href == ("https://cozytypes.com/") || "https://www.cozytypes.com/index.php") {
+    if(window.location.href.indexOf("login") > -1) {
+        hotkey.style.visibility = "hidden";
+    }
+    else if(window.location.href.indexOf("signup") > -1) {
+        hotkey.style.visibility = "hidden";
+    }
+    else if(window.location.href.indexOf("profile") > -1) {
+        hotkey.style.visibility = "hidden";
+    }
+    else if(window.location.href.indexOf("index") > -1) {
+        hotkey.style.visibility = "hidden";
+    }
+    else
+    {
         newQuote();
         moveCursorWithY();
         setBlur();
         hotkey.style.visibility = "visible";
-    }
-    else
-    {
-        hotkey.style.visibility = "hidden";
     }
 }
 function setTheme(oldTheme, newTheme) {

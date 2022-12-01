@@ -159,7 +159,7 @@ include "themes.scss"; //file contains all fonts
     }
     #hotkey
     {
-        font-size: 1.5rem;
+        font-size: 1rem;
         word-spacing: .25rem;
         color: var(--testText);
         display: flex;
@@ -168,7 +168,7 @@ include "themes.scss"; //file contains all fonts
     }
     kbd
     {
-        font-size: 1.5rem;
+        font-size: 1rem;
         color: var(--currentWord);
         background-color: var(--row);
         padding: .4rem 1rem;
