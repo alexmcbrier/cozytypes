@@ -19,6 +19,7 @@ var duration = 0;
 var wpm = 0;
 var count = 0
 var lastWord = 0
+const spaces = 0;
 //hotkey
 document.onkeyup = function(e) { 
     if (e.which == 9) { // tab
@@ -102,6 +103,7 @@ function keystroke() {
             }
             else if (inputChars[i] == " ") //skip spaces
             {
+                spaces++;
                 continue
             }
             else {
@@ -231,6 +233,7 @@ function wordsPerMinute(testDuration) {
     if (getStorageItem("typingMode") == "time") {
         const timeIn = getStorageItem("time") - testDuration
         const correctText = displayText?.querySelectorAll('.correct').length
+        correctText += spaces; //spaces are included
         const wpm = Math.round(correctText / 5 / timeIn * 60)
         return wpm
     }
