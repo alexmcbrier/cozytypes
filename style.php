@@ -130,7 +130,7 @@ include "themes.scss"; //file contains all fonts
     }
     i {
         font-size: 1.5rem;
-        padding: .5rem;
+        padding: .75rem;
     }
     #footer i {
         padding: .75rem;
@@ -189,7 +189,7 @@ include "themes.scss"; //file contains all fonts
 
     #mainContent {
         transition: all .5s ease-in-out 0s;
-        width: 90%;
+        width: 80%;
         margin: auto;
         display: grid;
         gap: .8rem;
@@ -450,14 +450,15 @@ include "themes.scss"; //file contains all fonts
     }
 
     #typingmode {
-        font-size: .8rem;
+        font-size: 1.25rem;
         color: var(--row);
         display: flex;
         user-select: none;
+        padding: 1rem .5rem;
     }
 
     .typingModes {
-        margin-right: 1rem;
+        margin-right: .75rem;
         display: flex;
         /* equal height of the children */
         color: var(--rowBackground);
@@ -472,9 +473,7 @@ include "themes.scss"; //file contains all fonts
     }
 
     .modeStack {
-        margin-left: 2rem;
-        padding: .5rem;
-        font-size: 2rem;
+        margin-right: 2rem;
     }
     #testText::first-line {
         color: var(--currentWord);
