@@ -86,7 +86,6 @@ function keystroke() {
     let chars = word.querySelectorAll('letter')
     let inputChars = displayInput?.value.split('');
     let wordChars = word.innerText.split('');
-    let spaces = 0;
     for (let i = 0; i < chars.length; i++) //need to remove previous when user deletes
     {
         chars[i].classList.remove("correct")
@@ -102,7 +101,7 @@ function keystroke() {
             }
             else if (inputChars[i] == " ") //skip spaces
             {
-                spaces++;
+                continue;
             }
             else {
                 chars[i].classList.add("incorrect") //wrong letter
