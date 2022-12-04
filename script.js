@@ -338,13 +338,26 @@ function endTest() {
 }
 function moveCursor()
 {
-  if (getStorageItem('caret') == "highlightWord" || getStorageItem('caret') == "underlineWord") //
+  if (getStorageItem('caret') == "highlightWord") //
   {
     const cursor = document.getElementById('cursor') 
     const placement = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
     const rect = placement.getBoundingClientRect();
     cursor.style.left = rect.x + "px";
     cursor.style.width = rect.width + "px";
+    cursor.style.animation = "none";
+    cursor.style.opacity = "20%";
+  }
+  else if (getStorageItem('caret') == "underlineWord") //
+  {
+    const cursor = document.getElementById('cursor') 
+    const placement = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
+    const rect = placement.getBoundingClientRect();
+    cursor.style.left = rect.x + "px";
+    cursor.style.width = rect.width + "px";
+    cursor.style.marginTop = (localStorage.getItem("fontSize") * 1.25) + "rem";
+    cursor.style.height = (localStorage.getItem("fontSize") / 4) + "rem";
+    cursor.style.animation = "none";
   }
   else if(getStorageItem('caret') == "caret")
   {
@@ -366,28 +379,30 @@ function moveCursor()
   else if(getStorageItem('caret') == "underlineLetter")
   {
     const cursor = document.getElementById('cursor') 
+    cursor.style.animation = "none";
     const parent = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
     let chars = parent.querySelectorAll("*");
     let index = displayInput.value.length
+    cursor.style.marginTop = (localStorage.getItem("fontSize") * 1.25) + "rem";
+    cursor.style.height = (localStorage.getItem("fontSize") / 4) + "rem";
     if (index > chars.length - 1)
     {
       const rect = chars[index - (index - (chars.length - 1))].getBoundingClientRect();
       cursor.style.left = rect.x + rect.width - 10 + "px";
       cursor.style.width = rect.width + "px";
-      cursor.style.minWidth = "30px";
     }
     else
     {
       const rect = chars[index].getBoundingClientRect();
       cursor.style.left = rect.x + "px";
       cursor.style.width = rect.width + "px";
-      cursor.style.minWidth = "30px";
     }
 
   }
   else
   {
     const cursor = document.getElementById('cursor') 
+    cursor.style.animation = "none";
     const parent = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
     let chars = parent.querySelectorAll("*");
     let index = displayInput.value.length
