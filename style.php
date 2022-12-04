@@ -129,7 +129,7 @@ include "themes.scss"; //file contains all fonts
     animation: fadeIn 1s  ease, slideUp 1s ease;
     }
     i {
-        font-size: 2rem;
+        font-size: 1.5rem;
         padding: 0 1rem;
     }
     #footer i {
@@ -171,7 +171,7 @@ include "themes.scss"; //file contains all fonts
         border-radius: .75rem;
     }
     li {
-        font-size: 3rem;
+        font-size: 2.25rem;
         font-weight: bold;
         color: var(--currentWord);
         user-select: none;
@@ -200,7 +200,7 @@ include "themes.scss"; //file contains all fonts
     }
     #logo 
     {
-        margin-bottom: 1rem;
+        margin-bottom: .5rem;
     }
     nav {
         width: 100%;
@@ -208,7 +208,6 @@ include "themes.scss"; //file contains all fonts
         user-select: none;
         display: flex;
         align-items: center;
-        justify-content: center;
         transition: color .25s ease;
         color: var(--testText);
         padding: 1rem;
