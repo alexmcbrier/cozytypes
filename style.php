@@ -1044,17 +1044,16 @@ include "themes.scss"; //file contains all fonts
         right: 5rem;
         width: 15rem;
         height: 7rem;
+        color: var(--currentWord);
     }
     .notificationH
     {
         font-size: 2rem;
         font-weight: bold;
-        color: var(--currentWord);
     }
     .notificationD
     {
         font-size: 1rem;
-        color: var(--rowBackground);
     }
     .notification
     {
