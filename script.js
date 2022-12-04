@@ -137,7 +137,7 @@ function keystroke() {
             try {
                 if (!chars[i].classList.contains('correct')) //wrong
                 {
-                    wrongWord(words, chars)
+                    wrongWord(words, chars);
                 }
             } catch (TypeError) { //wrong also because too many letters
                 wrongWord(words, chars)
@@ -230,7 +230,7 @@ function wordsPerMinute(testDuration) {
     if (getStorageItem("typingMode") == "time") {
         const timeIn = getStorageItem("time") - testDuration
         const correctText = displayText?.querySelectorAll('.correct').length
-        const wpm = Math.round(correctText / 5 / timeIn * 60)
+        const wpm = Math.round(correctText / 4 / timeIn * 60)
         return wpm
     }
     else {
