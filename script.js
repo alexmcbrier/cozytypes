@@ -104,7 +104,7 @@ function keystroke() {
             else if (inputChars[i] == " ") //skip spaces
             {
                 spaces++;
-                continue
+                continue;
             }
             else {
                 chars[i].classList.add("incorrect") //wrong letter
