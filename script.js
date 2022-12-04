@@ -18,7 +18,7 @@ var time = 0;
 var duration = 0;
 var wpm = 0;
 var count = 0
-var lastWord = 0
+var lastWord = 0;
 var spaces = 0;
 //hotkey
 document.onkeyup = function(e) { 
