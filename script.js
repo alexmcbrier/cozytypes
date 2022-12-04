@@ -19,7 +19,6 @@ var duration = 0;
 var wpm = 0;
 var count = 0
 var lastWord = 0;
-var spaces = 0;
 //hotkey
 document.onkeyup = function(e) { 
     if (e.which == 9) { // tab
@@ -87,7 +86,7 @@ function keystroke() {
     let chars = word.querySelectorAll('letter')
     let inputChars = displayInput?.value.split('');
     let wordChars = word.innerText.split('');
-
+    let spaces = 0;
     for (let i = 0; i < chars.length; i++) //need to remove previous when user deletes
     {
         chars[i].classList.remove("correct")
@@ -103,7 +102,7 @@ function keystroke() {
             }
             else if (inputChars[i] == " ") //skip spaces
             {
-                spaces += 1;
+                spaces++;
             }
             else {
                 chars[i].classList.add("incorrect") //wrong letter
