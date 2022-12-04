@@ -130,7 +130,7 @@ include "themes.scss"; //file contains all fonts
     }
     i {
         font-size: 1.5rem;
-        padding: 0 1rem;
+        padding: .5rem;
     }
     #footer i {
         padding: 1rem;
