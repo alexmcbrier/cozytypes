@@ -230,7 +230,6 @@ function wordsPerMinute(testDuration) {
     if (getStorageItem("typingMode") == "time") {
         const timeIn = getStorageItem("time") - testDuration
         const correctText = displayText?.querySelectorAll('.correct').length
-        correctText += spaces; //spaces are included
         const wpm = Math.round(correctText / 5 / timeIn * 60)
         return wpm
     }
