@@ -384,6 +384,7 @@ include "themes.scss"; //file contains all fonts
         font-size: calc(var(--fontSize) * .7rem);
         height: calc(var(--fontSize) * .5rem);
         line-height: calc(var(--fontSize) * .5rem);
+        font-family: var(--fontFamily);
     }
 
     #textInput:focus {
@@ -559,6 +560,7 @@ include "themes.scss"; //file contains all fonts
         padding: 1rem;
         margin: 2.5rem 0;
         box-sizing: border-box;
+        font-family: var(--fontFamily);
     }
 
     #kecapContainer {
@@ -1104,6 +1106,7 @@ include "themes.scss"; //file contains all fonts
         font-weight: bold;
         cursor: pointer;
         transition: all .2s ease-in-out;
+        font-family: var(--fontFamily);
     }
     .results
     {   
