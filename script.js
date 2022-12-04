@@ -19,7 +19,7 @@ var duration = 0;
 var wpm = 0;
 var count = 0
 var lastWord = 0
-const spaces = 0;
+var spaces = 0;
 //hotkey
 document.onkeyup = function(e) { 
     if (e.which == 9) { // tab
