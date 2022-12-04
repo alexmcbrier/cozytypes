@@ -66,19 +66,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <body class="main-body">
         <div id="mainContent">
             <?php include "./nav.php" ?>
-            <div id="middle">
-                <form method ="post" style = "width: 60%; margin: auto">
-                    <h1 id = "loginHeader">sign up</h1>
-                    <?php if ($is_invalid) : ?>
-                        <div id="invalid">Invalid Credentials</div>
-                    <?php endif; ?>
-                    <input type="text" autocomplete = "off" placeholder="username" id="username" name = "username">
-                    <input type="text" autocomplete = "off" placeholder="email" id="email"  name = "email">
-                    <input type="text" autocomplete = "off" placeholder="password" id="password" name = "password">
-                    <input type="text" autocomplete = "off" placeholder="confirm password" id="confirm"  name = "confirm">
-                    <button class = "loginBtn" id = "loginButton1" type="submit" value="submit" name="register">Create account</button>
-                </form>  
-            </div>
+            <form id="middle" method ="post" style = "width: 70%; margin: auto;">
+                <h1 id = "loginHeader">sign up</h1>
+                <?php if ($is_invalid) : ?>
+                    <div id="invalid">Invalid Credentials</div>
+                <?php endif; ?>
+                <input type="text" autocomplete = "off" placeholder="username" id="username" name = "username">
+                <input type="text" autocomplete = "off" placeholder="email" id="email"  name = "email">
+                <input type="text" autocomplete = "off" placeholder="password" id="password" name = "password">
+                <input type="text" autocomplete = "off" placeholder="confirm password" id="confirm"  name = "confirm">
+                <button class = "loginBtn" id = "loginButton1" type="submit" value="submit" name="register">Create account</button>
+            </form>  
             <?php include "./footer.php" ?>
         </div>
     </body>

@@ -7,9 +7,10 @@ session_start();
 <?php include "./head.php" ?>
 
 <body>
-    <?php include "./nav.php" ?>
+
     <div id="notifications"></div>
-    <form id="preferencesArea" method="POST" action="preferences.php">
+    <form id="mainContent" method="POST" action="preferences.php">
+        <?php include "./nav.php" ?>
         <div class="preferences">
             <div class="horizontalAlign">
                 <div id="sizesContainer" class="rowContainer" style="width: 30%">

@@ -189,7 +189,7 @@ include "themes.scss"; //file contains all fonts
 
     #mainContent {
         transition: all .5s ease-in-out 0s;
-        width: 80%;
+        width: 90%;
         margin: auto;
         display: grid;
         gap: .8rem;
@@ -502,12 +502,6 @@ include "themes.scss"; //file contains all fonts
     .blur {
         filter: blur(.25rem);
     }
-
-    #preferencesArea {
-        padding: 5rem;
-        align-items: center;
-    }
-
     .correct {
         color: var(--correct);
     }
