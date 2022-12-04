@@ -133,7 +133,7 @@ include "themes.scss"; //file contains all fonts
         padding: .5rem;
     }
     #footer i {
-        padding: 1rem;
+        padding: .75rem;
     }
     .vertical-scroll>div {
         background: var(--testText);
@@ -269,7 +269,7 @@ include "themes.scss"; //file contains all fonts
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         padding: 2rem;
         gap: 3rem;
     }
@@ -285,6 +285,7 @@ include "themes.scss"; //file contains all fonts
         display: flex;
         justify-content: center;
         transition: all .25s ease;
+        align-items: center;
     }
     .footerLinks:hover {
         color: var(--currentWord);
@@ -821,6 +822,7 @@ include "themes.scss"; //file contains all fonts
         line-height: 2rem;
         display: flex;
         white-space: nowrap;
+        align-items: center;
     }
     .preferences a:hover {
         background-color: var(--incorrect);
