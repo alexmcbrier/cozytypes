@@ -48,7 +48,7 @@ if (isset($_GET["finish"]))
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JMV592" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <div id="mainContent" style = "align-items: center;">
+    <div id="mainContent">
         <?php include "./nav.php" ?>
             <!-- Display if test not complete -->
           <div id="middle">
