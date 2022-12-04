@@ -332,11 +332,11 @@ function endTest() {
 
     if (getStorageItem("typingMode") == "time")
     {
-        window.location.href = "index.php?finish=true&testTime=" + getStorageItem("time") + "&wpm=" + wpmFinal + "&accuracy=" + accuracy + "&mode=time&correctWords=" + correctWords + "&incorrectWords=" + incorrectWords
+        window.location.href = "?finish=true&testTime=" + getStorageItem("time") + "&wpm=" + wpmFinal + "&accuracy=" + accuracy + "&mode=time&correctWords=" + correctWords + "&incorrectWords=" + incorrectWords
     }
     else if (getStorageItem("typingMode") == "words")
     {
-        window.location.href = "index.php?finish=true&testTime=" + getStorageItem("words") + "&wpm=" + wpmFinal + "&accuracy=" + accuracy + "&mode=words&correctWords=" + correctWords + "&incorrectWords=" + incorrectWords
+        window.location.href = "?finish=true&testTime=" + getStorageItem("words") + "&wpm=" + wpmFinal + "&accuracy=" + accuracy + "&mode=words&correctWords=" + correctWords + "&incorrectWords=" + incorrectWords
     }
     
 }
