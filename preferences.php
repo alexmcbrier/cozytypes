@@ -12,6 +12,21 @@ session_start();
     <form id="mainContent" method="POST" action="preferences.php">
         <?php include "./nav.php" ?>
         <div class="preferences">
+            <div id="themesContainer" class="rowContainer">
+                <h1 id="preferenceHeader">Theme <i class="fa-solid fa-palette"></i></h1>
+                <a class = "color-theme light" onclick="setTheme(currentTheme, 'light')">light</a>
+                <a class = "color-theme theme-9009" onclick="setTheme(currentTheme, 'theme-9009')">9009</a>
+                <a class = "color-theme mizu" onclick="setTheme(currentTheme, 'mizu')">mizu</a>
+                <a class = "color-theme blueberry" onclick="setTheme(currentTheme, 'blueberry')">blueberry</a>
+                <a class = "color-theme striker" onclick="setTheme(currentTheme, 'striker')">striker</a>
+                <a class = "color-theme creamsicle" onclick="setTheme(currentTheme, 'creamsicle')">creamsicle</a>
+                <a class = "color-theme botanical" onclick="setTheme(currentTheme, 'botanical')">botanical</a>
+                <a class = "color-theme theme-8008" onclick="setTheme(currentTheme, 'theme-8008')">8008</a>
+                <a class = "color-theme amethyst" onclick="setTheme(currentTheme, 'amethyst')">amethyst</a>
+                <a class = "color-theme dracula" onclick="setTheme(currentTheme, 'dracula')">dracula</a>
+                <a class = "color-theme olivia" onclick="setTheme(currentTheme, 'olivia')">olivia</a>
+                <a class = "color-theme dark" onclick="setTheme(currentTheme, 'dark')">dark</a>
+            </div>
             <div id="sizesContainer" class="rowContainer">
                 <h1 class="notSignedIn" id="preferenceHeader">size <i class="fa-solid fa-text-height"></i> </h1>
                 <h1 class="description">Change the size of the words in the test.</h1>
@@ -59,21 +74,6 @@ session_start();
                 <a class="preference" onclick="setPreference('blur', 'on'), addNotification('blur text','on');">on</a>
                 <a class="preference" onclick="setPreference('blur', 'off'), addNotification('blur text','off');">off</a>
             </div>
-        </div>
-        <div id="themesContainer" class="rowContainer">
-            <h1 id="preferenceHeader">Theme <i class="fa-solid fa-palette"></i></h1>
-            <a class = "color-theme light" onclick="setTheme(currentTheme, 'light')">light</a>
-            <a class = "color-theme theme-9009" onclick="setTheme(currentTheme, 'theme-9009')">9009</a>
-            <a class = "color-theme mizu" onclick="setTheme(currentTheme, 'mizu')">mizu</a>
-            <a class = "color-theme blueberry" onclick="setTheme(currentTheme, 'blueberry')">blueberry</a>
-            <a class = "color-theme striker" onclick="setTheme(currentTheme, 'striker')">striker</a>
-            <a class = "color-theme creamsicle" onclick="setTheme(currentTheme, 'creamsicle')">creamsicle</a>
-            <a class = "color-theme botanical" onclick="setTheme(currentTheme, 'botanical')">botanical</a>
-            <a class = "color-theme theme-8008" onclick="setTheme(currentTheme, 'theme-8008')">8008</a>
-            <a class = "color-theme amethyst" onclick="setTheme(currentTheme, 'amethyst')">amethyst</a>
-            <a class = "color-theme dracula" onclick="setTheme(currentTheme, 'dracula')">dracula</a>
-            <a class = "color-theme olivia" onclick="setTheme(currentTheme, 'olivia')">olivia</a>
-            <a class = "color-theme dark" onclick="setTheme(currentTheme, 'dark')">dark</a>
         </div>
     </form>
 </body>
