@@ -1211,6 +1211,7 @@ include "themes.scss"; //file contains all fonts
     .preferences
     {
         display: flex;
+        flex-direction: column;
     }
     #displayStats {
 
