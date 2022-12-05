@@ -13,7 +13,7 @@ session_start();
         <?php include "./nav.php" ?>
         <div class="preferences">
             <div id="sizesContainer" class="rowContainer">
-                <h1 class="notSignedIn" id="preferenceHeader">Size <i class="fa-solid fa-text-height"></i> </h1>
+                <h1 class="notSignedIn" id="preferenceHeader">size <i class="fa-solid fa-text-height"></i> </h1>
                 <h1 class="description">Change the size of the words in the test.</h1>
                 <a class="preference" onclick="setPreference('fontSize', 1), addNotification('font size','1');">1</a>
                 <a class="preference" onclick="setPreference('fontSize', 1.5), addNotification('font size','2');">2</a>
@@ -22,7 +22,7 @@ session_start();
                 <a class="preference" onclick="setPreference('fontSize', 3), addNotification('font size','5');">5</a>
             </div>
             <div id="fontsContainer" class="rowContainer">
-                <h1 class="notSignedIn" id="preferenceHeader">Font <i class="fa-solid fa-font"></i></h1>
+                <h1 class="notSignedIn" id="preferenceHeader">font <i class="fa-solid fa-font"></i></h1>
                 <h1 class="description">Choose from various styles to change the font family across the site.</h1>
                 <a class="preference" style="font-family: 'LexendDeca', serif;" onclick="setPreference('fontFamily', 'lexenddeca'), addNotification('font family','lexend deca');">lexend deca</a>
                 <a class="preference" style="font-family: Arial;" onclick="setPreference('fontFamily', 'arial'), addNotification('font family','arial');">arial</a>
@@ -37,7 +37,7 @@ session_start();
                 <a class="preference" style="font-family: 'Merriweather', serif;" onclick="setPreference('fontFamily', 'merriweather'), addNotification('font family','merriweather');">merriweather</a>
             </div>
             <div id="caretsContainer" class="rowContainer">
-                <h1 class="notSignedIn" id="preferenceHeader">Caret <i class="fa-solid fa-arrow-pointer"></i></h1>
+                <h1 class="notSignedIn" id="preferenceHeader">pace caret <i class="fa-solid fa-arrow-pointer"></i></h1>
                 <h1 class="description">When enabled, the caret will move along the page as you type. Change the style for different typing experiences.</h1>
                 <a class="preference" onclick="setPreference('caret', 'none'), addNotification('caret style','none');">none</a>
                 <a class="preference" onclick="setPreference('caret', 'caret'), addNotification('caret style','classic');">caret</a>
@@ -46,7 +46,7 @@ session_start();
                 <a class="preference" onclick="setPreference('caret', 'highlightWord'), addNotification('caret style','highlight');">highlight word</a>
             </div>
             <div id="linesContainer" class="rowContainer">
-                <h1 class="notSignedIn" id="preferenceHeader">Amount of lines <i class="fa-solid fa-align-left"></i></h1>
+                <h1 class="notSignedIn" id="preferenceHeader">lines <i class="fa-solid fa-align-left"></i></h1>
                 <h1 class="description">Show a different number of lines on the screen; More lines on the page will allow to see you what is coming next.</h1>
                 <a class="preference" onclick="setPreference('lineCount', 2), addNotification('line count','2');">2</a>
                 <a class="preference" onclick="setPreference('lineCount', 3), addNotification('line count','3');">3</a>
@@ -54,7 +54,7 @@ session_start();
                 <a class="preference" onclick="setPreference('lineCount', 5), addNotification('line count','5');">5</a>
             </div>
             <div id="blurContainer" class="rowContainer">
-                <h1 class="notSignedIn" id="preferenceHeader">Blur Text <i class="fa-solid fa-eye"></i></h1>
+                <h1 class="notSignedIn" id="preferenceHeader">text blur <i class="fa-solid fa-eye"></i></h1>
                 <h1 class="description">Enabling blur will cause a gradient to be placed over the test, allowing you to rely less on memorization.</h1>
                 <a class="preference" onclick="setPreference('blur', 'on'), addNotification('blur text','on');">on</a>
                 <a class="preference" onclick="setPreference('blur', 'off'), addNotification('blur text','off');">off</a>

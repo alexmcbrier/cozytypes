@@ -246,10 +246,10 @@ include "themes.scss"; //file contains all fonts
         color: white;
         background-color: var(--row);
         /* background-color:#191919;                      Background color */
-        font-size: 1rem;
+        font-size: .75rem;
         border-radius: 1rem;
         display: inline-block;
-        padding: 1.25rem 1.5rem;
+        padding: 1rem 1.1rem;
         margin-left: .5rem;
         transition: transform .5s ease;
         line-height: 10px;
@@ -257,7 +257,7 @@ include "themes.scss"; //file contains all fonts
         text-decoration: none;
         align-items: center;
         line-height: 10px;
-        margin-top: 1rem;
+        margin-top: .5rem;
         text-align: center;
     }
     
@@ -535,8 +535,6 @@ include "themes.scss"; //file contains all fonts
     .description
     {
         font-size: 1rem;
-        line-height: 1.5rem;
-        letter-spacing: 1px;
         padding: 0 1rem;
         color: var(--row);
     }
@@ -816,6 +814,8 @@ include "themes.scss"; //file contains all fonts
         color: rgb(255, 255, 255);
         font-size: 2rem;
         margin-left: 1rem;
+        margin-top: 0;
+        margin-bottom: 0rem;
         user-select: none;
         line-height: 2rem;
         display: flex;
