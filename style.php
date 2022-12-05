@@ -351,7 +351,6 @@ include "themes.scss"; //file contains all fonts
         text-decoration: none;
         color: var(--testText);
         display: flex;
-        line-height: 2rem;
     }
     #showUsername:hover {
         color: var(--currentWord);
@@ -1209,7 +1208,10 @@ include "themes.scss"; //file contains all fonts
     .preferences a:hover {
         transform: scale(1.1, 1.1);
     }
-    
+    .preferences
+    {
+        display: flex;
+    }
     #displayStats {
 
         display: flex;
