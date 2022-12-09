@@ -499,7 +499,34 @@ include "themes.scss"; //file contains all fonts
         }
     }
     .blur {
-        filter: blur(.25rem);
+        opacity: 50%;
+        transition: all 1s ease;
+        filter: blur(10px)
+    }
+    @-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+    }
+    @-webkit-keyframes spin {
+        from { -webkit-transform: rotate(0deg); }
+        to { -webkit-transform: rotate(360deg); }
+    }
+    @keyframes spin {
+        from {transform:rotate(0deg);}
+        to {transform:rotate(360deg);}
+    }
+    #loadingIcon
+    {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 3rem;
+    margin-top: -3rem;
+    margin-left: -3rem;
+    color: var(--currentWord);
+    transition: opacity .25s ease;
+    animation: spin 3s infinite linear;
     }
     .correct {
         color: var(--correct);
