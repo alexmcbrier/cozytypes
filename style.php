@@ -322,6 +322,15 @@ include "themes.scss"; //file contains all fonts
     {
         text-align: center;
     }
+    #time
+    {
+        gap: calc(var(--fontSize) * .25rem);
+        padding: calc(var(--fontSize) * .2rem) 0rem;
+        user-select: none;
+        display: flex;
+        padding: 0 .5rem;
+        font-size: 2rem;
+    }
     .rowContainer {
         user-select: none;
         color: var(--currentWord);
@@ -359,6 +368,10 @@ include "themes.scss"; //file contains all fonts
     {
         color: var(--currentWord);
     }
+    #resetBox
+    {
+        font-size: 0rem;
+    }
     .statsContainer
     {
         user-select: none;
@@ -378,21 +391,12 @@ include "themes.scss"; //file contains all fonts
     }
     #textInput {
         resize: none;
-        background-color: var(--background);
-        width: 50%;
-        font-size: calc(var(--fontSize) * .7rem);
-        height: calc(var(--fontSize) * .5rem);
-        line-height: calc(var(--fontSize) * .5rem);
-        font-family: var(--fontFamily);
+        position: absolute;
+        opacity: 0;
     }
 
     #textInput:focus {
         outline-width: 0;
-    }
-    #resetBox
-    {
-        background-color: var(--row);
-        padding: 0;
     }
     #restartTest:hover {
 
@@ -402,8 +406,8 @@ include "themes.scss"; //file contains all fonts
     #restartTest {
         border: none;
         cursor: pointer;
-        transition: transform .5s ease;
-        font-size: calc(var(--fontSize) * .5rem);
+        transition: transform 1s ease-in-out;
+        font-size: calc(var(--fontSize) *1rem);
         
     }
     .currentSetting
@@ -428,9 +432,11 @@ include "themes.scss"; //file contains all fonts
     .testRow {
         display: flex;
         align-items: center;
-        gap: calc(var(--fontSize) * .25rem);;
+        gap: calc(var(--fontSize) * .25rem);
         padding: calc(var(--fontSize) * .2rem) 0rem;
         user-select: none;
+        justify-content: center;
+
     }
     #showName
     {
@@ -442,10 +448,9 @@ include "themes.scss"; //file contains all fonts
     .testRow * {
         user-select: none;
         color: var(--currentWord);
-        border: calc(var(--fontSize) * .1rem) solid var(--row);
-        border-radius: calc(var(--fontSize) * .6rem);
         display: inline-block;
         padding: calc(var(--fontSize) * .625rem);
+        font-size: 5rem;
     }
 
     #typingmode {

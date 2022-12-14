@@ -282,7 +282,7 @@ function startTimer() {
         {
             check = setInterval(function () {
 
-                duration = Math.floor(0 + (new Date() - startTime) / 1000)
+                duration = Math.floor(0 + (new Date() - startTime) / 1000) //1 second intervals
                 displayTimer.innerText = getTime(duration)
                 displayWPM.innerText = wordsPerMinute(duration) + " WPM"
             }, 1000)
@@ -291,7 +291,7 @@ function startTimer() {
         {
             check = setInterval(function () {
                 let testTime = parseInt(getStorageItem("time"));
-                duration = Math.floor(testTime + 1 - (new Date() - startTime) / 1000)
+                duration = Math.floor(testTime + 1 - (new Date() - startTime) / 1000) //1 second intervals
                 displayTimer.innerText = getTime(duration)
                 displayWPM.innerText = wordsPerMinute(duration) + " WPM"
                 if (duration <= 0) {
@@ -506,6 +506,7 @@ function refresh() {
         moveCursorWithY();
         setBlur();
         updateModes();
+
         hotkey.style.visibility = "visible";
     }
 }
