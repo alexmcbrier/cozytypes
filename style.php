@@ -541,7 +541,10 @@ include "themes.scss"; //file contains all fonts
     .extra {
         color: var(--incorrect);
     }
-
+    #time
+    {
+        color: var(--currentWord);
+    }
     .current-word {
         /* color: var(--currentWord); */
         display: inline-block;
