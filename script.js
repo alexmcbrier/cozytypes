@@ -4,7 +4,6 @@ const displayInput = document.getElementById('textInput') // Input Box
 const displayTimer = document.getElementById('time') // Time Display
 const displayWPM = document.getElementById('wpmDisplay') // wpm Display
 const mainContent = document.getElementById('mainContent') // wpm Display
-const cursor = document.getElementById('cursor') 
 const footer = document.getElementById("footer")
 const typingMode = document.getElementById("typingmode")
 const hotkey  = document.getElementById("hotkey")
@@ -276,7 +275,7 @@ function startTimer() {
         footer.classList.add('fadeOut');
         typingMode.classList.add('fadeOut');
         hotkey.classList.add('fadeOut');
-        cursor.style.animation = "none";
+        document.getElementById('cursor').style.animation = "none";
         startTime = new Date()
         if (getStorageItem("typingMode") == "words")
         {
@@ -570,10 +569,9 @@ function loadPreferences() {
     setPreference("time", time);
     setPreference("blur", blur);
     setPreference("mode", mode);
-
 }
 newQuote();
-moveCursorWithY();
 loadPreferences();
+moveCursorWithY();
 document.body.onLoad = refresh();
 document.body.onresize = function() { zoomwait() };
