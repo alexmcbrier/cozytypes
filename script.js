@@ -551,8 +551,8 @@ function loadPreferences() {
     //for each preference
     //1. Try to read from local storage, otherwise set to default
     //2. set preference to local storage
-    let theme = localStorage.getItem("theme") || "light";
-    let fontSize = localStorage.getItem("fontSize") || "2";
+    let theme = localStorage.getItem("theme") || "dark";
+    let fontSize = localStorage.getItem("fontSize") || "3";
     let fontFamily = localStorage.getItem("fontFamily") || "lexendDeca";
     let lineCount = localStorage.getItem("lineCount") || "3";
     let caret = localStorage.getItem("caret") || "caret";
