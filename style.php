@@ -60,7 +60,7 @@ include "themes.scss"; //file contains all fonts
         --fontSize: 2;
         --height: calc(1.5rem * var(--fontSize) * var(--lineCount));
         --caret: 'caret';
-        --caretTop: calc(var(--fontSize) * .25rem);
+        --caretTop: calc(var(--fontSize));
         --caretHeight: calc(var(--fontSize) * 1rem);
         --caretWidth: calc(var(--fontSize) * .1rem);
         --caretOpacity: 100%;
