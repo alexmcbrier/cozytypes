@@ -501,6 +501,7 @@ function refresh() {
     }
     else
     {
+        newQuote();
         setBlur();
         updateModes();
         moveCursorWithY();
