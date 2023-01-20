@@ -371,6 +371,7 @@ include "themes.scss"; //file contains all fonts
     #resetBox
     {
         font-size: 0rem;
+        padding: 0;
     }
     .statsContainer
     {
@@ -407,7 +408,7 @@ include "themes.scss"; //file contains all fonts
         border: none;
         cursor: pointer;
         transition: transform .25s ease-in-out;
-        font-size: calc(var(--fontSize) *1rem);
+        font-size: calc(var(--fontSize) * 1rem);
         
     }
     .currentSetting
@@ -431,9 +432,6 @@ include "themes.scss"; //file contains all fonts
 
     .testRow {
         display: flex;
-        align-items: center;
-        gap: calc(var(--fontSize) * .25rem);
-        padding: calc(var(--fontSize) * .2rem) 0rem;
         user-select: none;
         justify-content: center;
 

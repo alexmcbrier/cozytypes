@@ -103,7 +103,7 @@ if (isset($_GET["finish"]))
             <div id ="resetBox" class = "testItem"><i id="restartTest"class="fa-solid fa-rotate" onclick="restart()"></i></div>
         </div>
         <div class="testRow">
-            <div id="wpmDisplay" class = "testItem" >0 WPM</div>
+            <div id="wpmDisplay" class = "testItem" >0 wpm</div>
         </div>
         </div>
         <?php } else if (isset($_GET["finish"])) { ?>
