@@ -317,7 +317,7 @@ function wrongWord(words, charecters) {
     }
 }
 function endTest() {
-    document.getElementById('cursor').style.opacity = 0;
+    document.getElementById('cursor').style.opacity = "0%";
     wpmFinal = wordsPerMinute(duration)
     const correct = displayText?.querySelectorAll('.correct').length //correct characters
     const incorrect = displayText?.querySelectorAll('.incorrect').length //incorrect characters
