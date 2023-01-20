@@ -19,7 +19,7 @@ var duration = 0;
 var wpm = 0;
 var count = 0
 var lastWord = 0;
-//hotkey
+//hotkey=
 document.onkeyup = function(e) { 
     if (e.which == 9) { // tab
       restart();
@@ -502,11 +502,8 @@ function refresh() {
     }
     else
     {
-        newQuote();
-        moveCursorWithY();
         setBlur();
         updateModes();
-
         hotkey.style.visibility = "visible";
     }
 }
@@ -573,7 +570,10 @@ function loadPreferences() {
     setPreference("time", time);
     setPreference("blur", blur);
     setPreference("mode", mode);
+
 }
+newQuote();
+moveCursorWithY();
 loadPreferences();
 document.body.onLoad = refresh();
 document.body.onresize = function() { zoomwait() };

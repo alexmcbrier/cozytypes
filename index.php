@@ -43,6 +43,7 @@ if (isset($_GET["finish"]))
 <?php include "./head.php" ?>
 
 <body class="main-body">
+    <div id="cursor"></div>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JMV592" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
@@ -61,13 +62,11 @@ if (isset($_GET["finish"]))
         $(window).load(function(){
             // Page is loaded, fade out the loading animation
             fadeOut('loadingIcon');
-            moveCursorWithY();
         });
     </script>
         <!-- Display if test not complete -->
         <div id="middle" class = "blur">
         <?php if (!isset($_GET["finish"])) { ?>
-            <div id="cursor"></div>
             <div id="typingmode">
             <div class="modeStack">
                 <div>time</div>

@@ -223,7 +223,7 @@ include "themes.scss"; //file contains all fonts
     }
     .word {
         display: inline-block;
-        padding: 0rem calc(var(--fontSize) * .2rem);;
+        padding-right: calc(var(--fontSize) * .2rem);
         /* line spacing */
     } 
     .row {
@@ -406,7 +406,7 @@ include "themes.scss"; //file contains all fonts
     #restartTest {
         border: none;
         cursor: pointer;
-        transition: transform 1s ease-in-out;
+        transition: transform .25s ease-in-out;
         font-size: calc(var(--fontSize) *1rem);
         
     }
@@ -548,7 +548,7 @@ include "themes.scss"; //file contains all fonts
     .current-word {
         /* color: var(--currentWord); */
         display: inline-block;
-        padding: 0rem calc(var(--fontSize) * .2rem);
+        padding-right: calc(var(--fontSize) * .2rem);
     }
 
     .incorrect-word {
