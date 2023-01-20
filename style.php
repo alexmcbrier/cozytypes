@@ -1225,7 +1225,7 @@ include "themes.scss"; //file contains all fonts
         user-select: none;
         border-radius: 2rem;
         display: inline-block;
-        padding: 3rem 7%;
+        padding: 3rem 5.6rem;
         margin-left: .5rem;
         transition: 1s;
         line-height: 10px;
