@@ -503,6 +503,7 @@ function refresh() {
     {
         setBlur();
         updateModes();
+        moveCursorWithY();
         hotkey.style.visibility = "visible";
     }
 }
@@ -572,6 +573,6 @@ function loadPreferences() {
 }
 newQuote();
 loadPreferences();
-moveCursorWithY();
+zoomwait()
 document.body.onLoad = refresh();
 document.body.onresize = function() { zoomwait() };
