@@ -423,7 +423,7 @@ include "themes.scss"; //file contains all fonts
     #testText {
         user-select: none;
         font-size: calc(var(--fontSize) * 1rem);
-        height: var(--height);
+        max-height: var(--height);
         border-radius: .5rem;
         color: var(--testText);
         overflow: hidden;

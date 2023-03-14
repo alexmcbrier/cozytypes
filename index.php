@@ -56,6 +56,7 @@ if (isset($_GET["finish"]))
         function fadeOut(id)
         {
             document.getElementById(id).style.opacity = 0;
+            document.getElementById(id).style.display = 'none';
             document.getElementById('middle').style.opacity = '100%';
             document.getElementById('footer').style.opacity = '100%';
             document.getElementById('middle').style.filter = 'none';
