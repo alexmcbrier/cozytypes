@@ -43,7 +43,9 @@ if (isset($_GET["finish"]))
 <?php include "./head.php" ?>
 
 <body class="main-body">
-    <div id="cursor"></div>
+    <?php if (!isset($_GET["finish"])) { ?> <!-- only show if taking test, not complete -->
+        <div id="cursor"></div>
+    <?php } ?>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JMV592" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->

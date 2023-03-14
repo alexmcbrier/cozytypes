@@ -1186,6 +1186,8 @@ include "themes.scss"; //file contains all fonts
     #middle {
         height: 100%;
         justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     #middleContainer {
