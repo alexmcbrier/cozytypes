@@ -21,7 +21,15 @@ var lastWord = 0;
 //hotkey=
 document.onkeyup = function(e) { 
     if (e.which == 9) { // tab
-      restart();
+      var elementExists = document.getElementById("showRestart");
+      if(elementExists) // if test concluded
+      {
+        window.location.replace("https://cozytypes.com/");
+      }
+      else
+      {
+        restart();
+      }
     }
   };
 if (getStorageItem("typingMode") == "words")

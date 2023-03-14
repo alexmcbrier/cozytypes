@@ -1189,7 +1189,6 @@ include "themes.scss"; //file contains all fonts
         margin-left: auto;
         margin-right: auto;
     }
-
     #middleContainer {
         display: inline-block;
         margin-left: 18rem;
