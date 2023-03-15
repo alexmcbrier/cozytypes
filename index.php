@@ -36,16 +36,19 @@ if (isset($_GET["finish"]))
         }
     }
     $mysqli = require __DIR__ . "/config.php";
+    $sql = "INSERT INTO TypingTest (date, mode, duration, account_id, session_id, wpm) 
+                VALUES (?, ?, ?, ?, ?, ?)";
+    $stmt = $mysqli->stmt_init();
+    if (! $stmt->prepare($sql)) {
+        die("SQL error: " . $mysqli->error);
+    }
     $date = '2011-03-14 17:00:01';
     $mode = 'time';
+    $duration = 12;
     $account_id = 234;
     $session_id = 2345;
     $wpm = 120;
-    $sql = "INSERT INTO TypingTest (date, mode, duration, account_id, session_id, wpm) VALUES (?, ?, ?, ?, ?, ?)";
-    $stmt = $mysqli->stmt_init();
-    $stmt->bind_param("ssiiii", $date, $mode, $time, $account_id, $session_id, $wpm);
-    $stmt->execute();
-    $stmt->close();
+    $stmt->bind_param("ssiiii", $date, $mode, $duration, $account_id, $session_id, $wpm);
 }
 ?>
 
