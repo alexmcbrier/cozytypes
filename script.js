@@ -18,20 +18,16 @@ var duration = 0;
 var wpm = 0;
 var count = 0
 var lastWord = 0;
-//hotkey=
-document.onkeyup = function(e) { 
-    if (e.which == 9) { // tab
-      var elementExists = document.getElementById("showRestart");
-      if(elementExists) // if test concluded
-      {
-        window.location.replace("https://cozytypes.com/");
-      }
-      else
-      {
-        restart();
-      }
-    }
-  };
+document.addEventListener('keydown', function (event) { //restart test if tab key
+  // Check if the pressed key is the 'Tab' key (key code 9)
+  if (event.key === 'Tab' || event.keyCode === 9) {
+    // Prevent the default tab key behavior
+    event.preventDefault();
+
+    // restart typing test
+    restart();
+  }
+});
 if (getStorageItem("typingMode") == "words")
 {
     sentenceLength = getStorageItem("words")
@@ -86,18 +82,6 @@ function findDistanceBetween(words)
         }
     }
 }
-document.addEventListener('keydown', function (event) { //restart test if tab key
-  // Check if the pressed key is the 'Tab' key (key code 9)
-  if (event.key === 'Tab' || event.keyCode === 9) {
-    // Prevent the default tab key behavior
-    event.preventDefault();
-
-    // Add your code to restart the typing test here
-    restart();
-  }
-});
-
-
 displayInput?.addEventListener('input', keystroke)
 function keystroke() {
     moveCursor();
