@@ -86,6 +86,18 @@ function findDistanceBetween(words)
         }
     }
 }
+document.addEventListener('keydown', function (event) { //restart test if tab key
+  // Check if the pressed key is the 'Tab' key (key code 9)
+  if (event.key === 'Tab' || event.keyCode === 9) {
+    // Prevent the default tab key behavior
+    event.preventDefault();
+
+    // Add your code to restart the typing test here
+    restart();
+  }
+});
+
+
 displayInput?.addEventListener('input', keystroke)
 function keystroke() {
     moveCursor();
