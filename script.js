@@ -18,7 +18,7 @@ var duration = 0;
 var wpm = 0;
 var count = 0
 var lastWord = 0;
-document.addEventListener('keydown', function (event) { //restart test if tab key
+window.addEventListener('keydown', function (event) { //restart test if tab key
   // Check if the pressed key is the 'Tab' key (key code 9)
   if (event.key === 'Tab' || event.keyCode === 9) {
     // Prevent the default tab key behavior
