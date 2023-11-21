@@ -1,7 +1,10 @@
 # cozytypes
  [cozytypes.com](https://www.cozytypes.com) is a simple and asthetic typing website for keyboard enthusiasts. Users can modify themes, fonts, and difficulty. 
  
- ![Screenshot](images/mainscreenDark.PNG)
+
+<p align="center">
+  <img src="https://github.com/alexmcbrier/cozytypes/assets/58454148/172a7c7c-a051-4dc1-9bbe-ec95af63e8f5" />
+</p>
 
 ## themes
 users can select different themes by scrolling to the bottom of the preferences page. In addition to the provided themes, users can create their own.
