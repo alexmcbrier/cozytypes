@@ -80,11 +80,6 @@ if (isset($_GET["finish"]))
             // Page is loaded, fade out the loading animation
             fadeOut('loadingIcon');
         });
-    var xhttp = new XMLHttpRequest();
-     // Define what happens on successful data submission
-    xhttp.onreadystatechange = function() {
-        fadeOut('loadingIcon');
-    };
     </script>
         <!-- Display if test not complete -->
         <div id="middle" class = "blur">
