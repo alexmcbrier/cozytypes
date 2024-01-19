@@ -76,19 +76,15 @@ if (isset($_GET["finish"]))
             document.getElementById('middle').style.filter = 'none';
             document.getElementById('footer').style.filter = 'none';
         }
-        $(window).load(function(){
-            // Page is loaded, fade out the loading animation
+        document.addEventListener('DOMContentLoaded', function() {
             fadeOut('loadingIcon');
             loadPreferences();
             newQuote();
             zoomwait();
-
-            document.body.onload = refresh;
-
-            window.addEventListener('resize', function() {
-                zoomwait();
-            });
+            refresh();
         });
+        document.body.onLoad = refresh();
+        document.body.onresize = function() { zoomwait() };
     </script>
         <!-- Display if test not complete -->
         <div id="middle" class = "blur">
