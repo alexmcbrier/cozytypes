@@ -1,42 +1,23 @@
-function initializeVariables() {
-    const displayText = document.getElementById('wordsWrapper');
-    const displayInput = document.getElementById('textInput'); // Input Box
-    displayInput?.addEventListener('input', keystroke)
-    const displayTimer = document.getElementById('time'); // Time Display
-    const displayWPM = document.getElementById('wpmDisplay'); // wpm Display
-    const mainContent = document.getElementById('mainContent'); // wpm Display
-    const footer = document.getElementById("footer");
-    const typingMode = document.getElementById("typingmode");
-    const hotkey = document.getElementById("hotkey");
-    var timerStatus = false; // Turns on when the user begins typing...
-    var check = null;
-    var sentenceLength = 50;
-    var sentence = [];
-    var words = [];
-    var currentWordNum = 0;
-    var time = 0;
-    var duration = 0;
-    var wpm = 0;
-    var count = 0;
-    var lastWord = 0;
-    if (getStorageItem("typingMode") == "words")
-    {
-        sentenceLength = getStorageItem("words")
-        time = 0;
-    }
-    if (getStorageItem("typingMode") == "time")
-    {
-        sentenceLength = 200;
-        time = getStorageItem("time");
-    }
-    // Additional initialization code if needed
-}
-
-// Event listener for the 'load' event
-window.addEventListener('load', function () {
-    // Call the function to initialize variables
-    initializeVariables();
-});
+//Web elements
+const displayText = document.getElementById('wordsWrapper')
+const displayInput = document.getElementById('textInput') // Input Box
+const displayTimer = document.getElementById('time') // Time Display
+const displayWPM = document.getElementById('wpmDisplay') // wpm Display
+const mainContent = document.getElementById('mainContent') // wpm Display
+const footer = document.getElementById("footer")
+const typingMode = document.getElementById("typingmode")
+const hotkey  = document.getElementById("hotkey")
+var timerStatus = false; // Turns on when user begins typing...
+var check = null;
+var sentenceLength = 50;
+var sentence = []
+var words = []
+var currentWordNum = 0;
+var time = 0;
+var duration = 0;
+var wpm = 0;
+var count = 0
+var lastWord = 0;
 window.addEventListener('keydown', function (event) { //restart test if tab key
   // Check if the pressed key is the 'Tab' key (key code 9)
   if (event.key === 'Tab' || event.keyCode === 9) {
@@ -47,6 +28,16 @@ window.addEventListener('keydown', function (event) { //restart test if tab key
     restart();
   }
 });
+if (getStorageItem("typingMode") == "words")
+{
+    sentenceLength = getStorageItem("words")
+    time = 0;
+}
+if (getStorageItem("typingMode") == "time")
+{
+    sentenceLength = 200;
+    time = getStorageItem("time");
+}
 function setCookie(cName, cValue, expDays) {
     let date = new Date();
     date.setTime(date.getTime() + (expDays * 24 * 60 * 60 * 1000));
@@ -91,7 +82,7 @@ function findDistanceBetween(words)
         }
     }
 }
-
+displayInput?.addEventListener('input', keystroke)
 function keystroke() {
     moveCursor();
     let word = document.getElementsByClassName('current-word')[0] //Only want 1 value in class list
@@ -587,3 +578,4 @@ function loadPreferences() {
     setPreference("blur", blur);
     setPreference("mode", mode);
 }
+loadPreferences();
