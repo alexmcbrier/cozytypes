@@ -76,7 +76,7 @@ if (isset($_GET["finish"]))
             document.getElementById('middle').style.filter = 'none';
             document.getElementById('footer').style.filter = 'none';
         }
-        $(window).load(function(){
+        $(window).ready(function(){
             // Page is loaded, fade out the loading animation
             fadeOut('loadingIcon');
         });
