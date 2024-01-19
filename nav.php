@@ -7,10 +7,10 @@ if (isset($_SESSION["user_id"])) {
 } ?>
 <script src="loadPage.js"></script>
 <nav> 
-    <a id = "logo" href="#" onClick = "loadPage('index.php')" style="text-decoration: none;">
+    <a id = "logo" href="https://cozytypes.com" style="text-decoration: none;">
         <li>cozytypes</li>
     </a>
-    <a class = "navIcon" href="#" onClick = "loadPage('index.php')"><i class="fa-solid fa-house"></i></a>
+    <a class = "navIcon" href="https://cozytypes.com" ><i class="fa-solid fa-house"></i></a>
     <a class = "navIcon" href="#" onClick = "loadPage('preferences.php')"><i class="fa-solid fa-gear"></i></a>
     <a href="#" onClick = "loadPage('login.php')" id = "showUsername">
         <i class="fa-regular fa-user"></i>
