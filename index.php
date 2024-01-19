@@ -65,7 +65,7 @@ if (isset($_GET["finish"]))
     <!-- End Google Tag Manager (noscript) -->
     <i class="fa-solid fa-circle-notch" id="loadingIcon"></i>
     <script defer type="text/javascript" src="script.js">
-n       ewQuote();
+        newQuote();
         zoomwait();
     </script>
     <div id="mainContent">
