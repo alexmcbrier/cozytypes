@@ -64,16 +64,9 @@ if (isset($_GET["finish"]))
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JMV592" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <i class="fa-solid fa-circle-notch" id="loadingIcon"></i>
-    <script defer type="text/javascript" src="script.js">
-        newQuote();
-        zoomwait();
-        restart();
-    </script>
     <div id="mainContent">
         <?php include "./nav.php" ?>
         <script type="text/javascript">
-        
-        
         function fadeOut(id)
         {
             document.getElementById(id).style.opacity = 0;
@@ -86,6 +79,7 @@ if (isset($_GET["finish"]))
         $(window).ready(function(){
             // Page is loaded, fade out the loading animation
             fadeOut('loadingIcon');
+            restart();
         });
     </script>
         <!-- Display if test not complete -->
