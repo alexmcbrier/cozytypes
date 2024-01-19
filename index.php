@@ -83,6 +83,8 @@ if (isset($_GET["finish"]))
             newQuote();
             zoomwait()
         });
+        document.body.onLoad = refresh();
+        document.body.onresize = function() { zoomwait() };
     </script>
         <!-- Display if test not complete -->
         <div id="middle" class = "blur">
