@@ -6,7 +6,6 @@ if (isset($_SESSION["user_id"])) {
     $user = $result->fetch_assoc();
 } ?>
 <script src="loadPage.js"></script>
-<script src="script.js"></script>
 <nav> 
     <a id = "logo" href="#" onClick = "loadPage('index.php')" style="text-decoration: none;">
         <li>cozytypes</li>
