@@ -6,7 +6,7 @@ function loadPage(page) {
     xhttp.onreadystatechange = function() {
         if (this.readyState === 4 && this.status === 200) {
             // Replace the content of the 'content' div with the loaded page
-            document.getElementsByClassName("main-body").innerHTML = this.responseText;
+            document.getElementsByClassName("main-body")[0].innerHTML = this.responseText;
         }
     };
     
