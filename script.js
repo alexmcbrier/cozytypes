@@ -578,8 +578,6 @@ function loadPreferences() {
     setPreference("blur", blur);
     setPreference("mode", mode);
 }
-loadPreferences();
-newQuote();
-zoomwait()
+
 document.body.onLoad = refresh();
 document.body.onresize = function() { zoomwait() };

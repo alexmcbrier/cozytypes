@@ -79,6 +79,9 @@ if (isset($_GET["finish"]))
         $(window).ready(function(){
             // Page is loaded, fade out the loading animation
             fadeOut('loadingIcon');
+            loadPreferences();
+            newQuote();
+            zoomwait()
             
         });
     </script>
