@@ -78,7 +78,6 @@ if (isset($_GET["finish"]))
         }
         $(window).ready(function(){
             // Page is loaded, fade out the loading animation
-            loadPreferences();
             fadeOut('loadingIcon');
             
         });
