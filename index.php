@@ -80,7 +80,7 @@ if (isset($_GET["finish"]))
             // Page is loaded, fade out the loading animation
             loadPreferences();
             fadeOut('loadingIcon');
-            restart();
+            refresh();
         });
     </script>
         <!-- Display if test not complete -->
