@@ -79,6 +79,15 @@ if (isset($_GET["finish"]))
         $(window).load(function(){
             // Page is loaded, fade out the loading animation
             fadeOut('loadingIcon');
+            loadPreferences();
+            newQuote();
+            zoomwait();
+
+            document.body.onload = refresh;
+
+            window.addEventListener('resize', function() {
+                zoomwait();
+            });
         });
     </script>
         <!-- Display if test not complete -->
