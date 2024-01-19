@@ -67,6 +67,7 @@ if (isset($_GET["finish"]))
     <script defer type="text/javascript" src="script.js">
         newQuote();
         zoomwait();
+        restart();
     </script>
     <div id="mainContent">
         <?php include "./nav.php" ?>
