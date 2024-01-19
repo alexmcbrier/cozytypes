@@ -55,7 +55,7 @@ if (isset($_GET["finish"]))
 <!DOCTYPE html>
 <html lang="en">
 <?php include "./head.php" ?>
-<script src="script.js"></script>
+
 <body class="main-body">
     <?php if (!isset($_GET["finish"])) { ?> <!-- only show if taking test, not complete -->
         <div id="cursor"></div>
@@ -76,16 +76,10 @@ if (isset($_GET["finish"]))
             document.getElementById('middle').style.filter = 'none';
             document.getElementById('footer').style.filter = 'none';
         }
-        document.body.onLoad = refresh();
-        document.body.onresize = function() { zoomwait() };
         $(window).load(function(){
             // Page is loaded, fade out the loading animation
             fadeOut('loadingIcon');
-            loadPreferences();
-            newQuote();
-            zoomwait()
         });
-        
     </script>
         <!-- Display if test not complete -->
         <div id="middle" class = "blur">
