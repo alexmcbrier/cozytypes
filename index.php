@@ -55,7 +55,7 @@ if (isset($_GET["finish"]))
 <!DOCTYPE html>
 <html lang="en">
 <?php include "./head.php" ?>
-<script src="pageReload.js"></script> <!--make the page not reload when switching pages -->
+<script src="script.js"></script> <!--make the page not reload when switching pages -->
 <body class="main-body">
     <?php if (!isset($_GET["finish"])) { ?> <!-- only show if taking test, not complete -->
         <div id="cursor"></div>
