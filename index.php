@@ -64,13 +64,15 @@ if (isset($_GET["finish"]))
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JMV592" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <i class="fa-solid fa-circle-notch" id="loadingIcon"></i>
-    <script defer type="text/javascript" src="script.js"></script>
+    <script defer type="text/javascript" src="script.js">
+n       ewQuote();
+        zoomwait();
+    </script>
     <div id="mainContent">
         <?php include "./nav.php" ?>
         <script type="text/javascript">
         
-        newQuote();
-        zoomwait()
+        
         function fadeOut(id)
         {
             document.getElementById(id).style.opacity = 0;
