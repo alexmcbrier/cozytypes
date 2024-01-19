@@ -578,3 +578,4 @@ function loadPreferences() {
     setPreference("blur", blur);
     setPreference("mode", mode);
 }
+loadPreferences();
