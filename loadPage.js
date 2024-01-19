@@ -29,5 +29,5 @@ function loadPage(page) {
 
 // Function defined in script.js
 function rerunScript() {
-    restart();
+    fadeOut('loadingIcon');
 }
