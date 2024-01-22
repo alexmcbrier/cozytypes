@@ -11,7 +11,7 @@ if (isset($_SESSION["user_id"])) {
         <li>cozytypes</li>
     </a>
     <a class = "navIcon" href="https://cozytypes.com" ><i class="fa-solid fa-house"></i></a>
-    <a class = "navIcon" href="#" onClick = "loadPage('preferences.php')"><i class="fa-solid fa-gear"></i></a>
+    <a class = "navIcon" href="/settings"><i class="fa-solid fa-gear"></i></a>
     <a href="/login" id = "showUsername">
         <i class="fa-regular fa-user"></i>
         <div><?= htmlspecialchars($user["username"]) ?></div>
