@@ -505,6 +505,9 @@ function refresh() {
     else if(window.location.href.indexOf("index") > -1) {
         hotkey.style.visibility = "hidden";
     }
+    else if(window.location.href.indexOf("preferences") > -1) {
+        hotkey.style.visibility = "hidden";
+    }
     else
     {
         newQuote();
