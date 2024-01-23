@@ -8,7 +8,7 @@ if (isset($_SESSION["user_id"])) {
 <script src="loadPage.js"></script>
 <nav> 
     <a id = "logo" href="https://cozytypes.com" style="text-decoration: none;">
-        <h1 id ="#titleh1">cozytypes</h1>
+        <h1>cozytypes</h1>
     </a>
     <a class = "navIcon" href="https://cozytypes.com" ><i class="fa-solid fa-house"></i></a>
     <a class = "navIcon" href="/preferences"><i class="fa-solid fa-gear"></i></a>
