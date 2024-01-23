@@ -61,7 +61,7 @@ session_start();
             </div>
         </div>
         <div id="themesContainer" class="rowContainer">
-            <h1 id="preferenceHeader">Theme <i class="fa-solid fa-palette"></i></h1>
+            <h1 id="preferenceHeader">color theme <i class="fa-solid fa-palette"></i></h1>
             <a class = "color-theme light" onclick="setTheme(currentTheme, 'light')">light</a>
             <a class = "color-theme theme-9009" onclick="setTheme(currentTheme, 'theme-9009')">9009</a>
             <a class = "color-theme blueberryLight" onclick="setTheme(currentTheme, 'blueberryLight')">blueberry light</a>

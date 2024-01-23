@@ -846,7 +846,7 @@ include "themes.scss"; //file contains all fonts
 
     #preferenceHeader {
     color: rgb(255, 255, 255);
-    font-size: 2rem;
+    font-size: 1.75rem;
     margin-left: 1rem;
     margin-top: 0;
     margin-bottom: 0rem;
