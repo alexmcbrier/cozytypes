@@ -364,11 +364,9 @@ include "themes.scss"; //file contains all fonts
     text-decoration: none;
     /* Remove one of the margin properties */
     margin: 1rem;
-    align-content: center;
-    display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh; /* Adjust as needed */
+    justify-content: center;
+    align-items: center;
+    display: grid;
 }
     #showRestart
     {
