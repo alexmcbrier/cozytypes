@@ -70,10 +70,10 @@ session_start();
             <a class = "color-theme amethyst" onclick="setTheme(currentTheme, 'amethyst')">amethyst</a>
             <a class = "color-theme creamsicle" onclick="setTheme(currentTheme, 'creamsicle')">creamsicle</a>
             <a class = "color-theme strawberry" onclick="setTheme(currentTheme, 'strawberry')">strawberry</a>
-            <a class = "color-theme theme-8008" onclick="setTheme(currentTheme, 'theme-8008')">8008</a>
             <a class = "color-theme striker" onclick="setTheme(currentTheme, 'striker')">striker</a>
-            <a class = "color-theme blueberry" onclick="setTheme(currentTheme, 'blueberry')">blueberry dark</a>
             <a class = "color-theme alpine" onclick="setTheme(currentTheme, 'alpine')">alpine</a>
+            <a class = "color-theme theme-8008" onclick="setTheme(currentTheme, 'theme-8008')">8008</a>
+            <a class = "color-theme blueberry" onclick="setTheme(currentTheme, 'blueberry')">blueberry dark</a>
             <a class = "color-theme bliss" onclick="setTheme(currentTheme, 'bliss')">bliss</a>
             <a class = "color-theme olivia" onclick="setTheme(currentTheme, 'olivia')">olivia</a>
             <a class = "color-theme dracula" onclick="setTheme(currentTheme, 'dracula')">dracula</a>
