@@ -16,10 +16,10 @@ session_start();
                 <h1 class="notSignedIn" id="preferenceHeader">size <i class="fa-solid fa-text-height"></i> </h1>
                 <h1 class="description">Change the size of the words in the test.</h1>
                 <a class="preference" onclick="setPreference('fontSize', 1), addNotification('font size','1');">1</a>
-                <a class="preference" onclick="setPreference('fontSize', 1.5), addNotification('font size','2');">2</a>
-                <a class="preference" onclick="setPreference('fontSize', 2), addNotification('font size','3');">3</a>
-                <a class="preference" onclick="setPreference('fontSize', 2.5), addNotification('font size','4');">4</a>
-                <a class="preference" onclick="setPreference('fontSize', 3), addNotification('font size','5');">5</a>
+                <a class="preference" onclick="setPreference('fontSize', 2), addNotification('font size','2');">2</a>
+                <a class="preference" onclick="setPreference('fontSize', 3), addNotification('font size','3');">3</a>
+                <a class="preference" onclick="setPreference('fontSize', 4), addNotification('font size','4');">4</a>
+                <a class="preference" onclick="setPreference('fontSize', 5), addNotification('font size','5');">5</a>
             </div>
             <div id="fontsContainer" class="rowContainer">
                 <h1 class="notSignedIn" id="preferenceHeader">font <i class="fa-solid fa-font"></i></h1>
