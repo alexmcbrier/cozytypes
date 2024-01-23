@@ -199,12 +199,11 @@ include "themes.scss"; //file contains all fonts
     #logo 
     {
         font-weight: bold;
-        color: var(--currentWord);
         user-select: none;
         display: inline;
         padding-right: 1rem;
         color: var(--currentWord);
-        font-size: 2.25rem;
+        font-size: 1.75rem;
         vertical-align: middle;
         text-decoration: none;
         margin-bottom: .5rem;
