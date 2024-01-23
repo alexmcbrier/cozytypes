@@ -53,12 +53,6 @@ session_start();
                 <a class="preference" onclick="setPreference('lineCount', 4), addNotification('line count','4');">4</a>
                 <a class="preference" onclick="setPreference('lineCount', 5), addNotification('line count','5');">5</a>
             </div>
-            <div id="blurContainer" class="rowContainer">
-                <h1 class="notSignedIn" id="preferenceHeader">text blur <i class="fa-solid fa-eye"></i></h1>
-                <h1 class="description">Enabling blur will cause a gradient to be placed over the test, allowing you to rely less on memorization.</h1>
-                <a class="preference" onclick="setPreference('blur', 'on'), addNotification('blur text','on');">on</a>
-                <a class="preference" onclick="setPreference('blur', 'off'), addNotification('blur text','off');">off</a>
-            </div>
         </div>
         <div id="themesContainer" class="rowContainer">
             <h1 id="preferenceHeader">color theme <i class="fa-solid fa-palette"></i></h1>
