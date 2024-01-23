@@ -208,7 +208,6 @@ function restart() {
     footer.classList.remove('fadeOut');
     typingMode.classList.remove('fadeOut');
     hotkey.classList.remove('fadeOut');
-    refresh();
 }
 function randomQuote() {
     displayText.innerText = ''// removing previous sentence if applicable
@@ -491,31 +490,6 @@ function updateModes()
         findItem('words', 'wordsContainer').classList.add("currentMode");
     }
     findItem('mode', 'modesContainer').classList.add("currentMode"); //update regardless
-}
-function refresh() {
-    if(window.location.href.indexOf("login") > -1) {
-        hotkey.style.visibility = "hidden";
-    }
-    else if(window.location.href.indexOf("signup") > -1) {
-        hotkey.style.visibility = "hidden";
-    }
-    else if(window.location.href.indexOf("profile") > -1) {
-        hotkey.style.visibility = "hidden";
-    }
-    else if(window.location.href.indexOf("index") > -1) {
-        hotkey.style.visibility = "hidden";
-    }
-    else if(window.location.href.indexOf("preferences") > -1) {
-        hotkey.style.visibility = "hidden";
-    }
-    else
-    {
-        newQuote();
-        setBlur();
-        updateModes();
-        moveCursorWithY();
-        hotkey.style.visibility = "visible";
-    }
 }
 function setTheme(oldTheme, newTheme) {
     const body = document.getElementsByTagName("body")[0];
