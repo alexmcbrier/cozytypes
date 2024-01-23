@@ -9,13 +9,15 @@
                 <h1 class="notSignedIn" id="preferenceHeader">about us</h1>
             </div>
             <div id="sizesContainer" class="rowContainer">
-                <h1 class="notSignedIn" id="preferenceHeader">
-                imophi is a small game studio started by two friends <br> 
-                with a deep passion for game development. We are so excited <br> 
-                to bring our first game, CozyTyper, to anyone who might enjoy it. <br>
-                We have refined this game after a great deal of tester feedback, <br> 
-                and look forward to continuing that work to make CozyTyper the best it can be. Thanks for taking the time to consider our game, and we hope you love it as much as we do!</h1>
-            </div>
+                <div>
+                cozytypes is a simple typing website created by Alex McBrier, <br> 
+                a student at Boston University with a love for typing. <br> 
+                Test your typing abilities in different modes, track your <br> 
+                progress, and improve your overall typing speed."/><br> 
+                I am very excited to bring this game to you and anyone else who <br> 
+                may enjoy it, and am looking forward to hearing feedback<br> 
+                I hope you love it as much as I do!</h1>
+                </div>
         </div>
         <?php include "./footer.php" ?>
     </div>
