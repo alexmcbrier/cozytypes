@@ -582,7 +582,7 @@ include "themes.scss"; //file contains all fonts
         font-size: 2rem;
         padding: 5rem;
         color: var(--row);
-        line-height: 10px;
+        line-height: 2rem;
     }
     input {
         display: flex;
