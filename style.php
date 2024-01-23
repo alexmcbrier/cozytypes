@@ -599,9 +599,6 @@ include "themes.scss"; //file contains all fonts
     /* Remove one of the margin properties */
     margin: 1rem;
     align-content: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     }
     input {
         display: flex;
