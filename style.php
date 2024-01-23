@@ -1244,7 +1244,7 @@ include "themes.scss"; //file contains all fonts
     #themesContainer a:hover,
     .preferences a:hover {
         transform: scale(1.1, 1.1);
-        background-color: var(--row);
+        background-color: var(--rowBackground);
     }
     .preferences
     {
