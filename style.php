@@ -578,6 +578,12 @@ include "themes.scss"; //file contains all fonts
         padding: 0 1rem;
         color: var(--row);
     }
+    .aboutDescription {
+        font-size: 2rem;
+        padding: 5rem;
+        color: var(--row);
+        line-height: 10px;
+    }
     input {
         display: flex;
         flex-direction: row;
