@@ -14,7 +14,8 @@
                 progress, and improve your overall typing speed. 
                 I am very excited to bring this game to you and anyone else who 
                 may enjoy it, and am looking forward to hearing feedback
-                I hope you love it as much as I do!
+                I hope you love it as much as I do!<br><br>
+                Contact us via email: <a href="alexmcbrier@gmail.com">alexmcbrier@gmail.com</a>
                 </h1>
             </div>
         </div>
