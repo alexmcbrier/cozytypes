@@ -337,6 +337,10 @@ include "themes.scss"; //file contains all fonts
         padding: 0 .5rem;
         font-size: 2rem;
     }
+    .aboutLink {
+        text-decoration: none;
+        color: var(--correct);
+    }
     .rowContainer {
     user-select: none;
     color: var(--currentWord);
