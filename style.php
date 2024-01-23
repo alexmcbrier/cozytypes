@@ -178,7 +178,7 @@ include "themes.scss"; //file contains all fonts
         padding-right: 1rem;
 
     }
-    h1 {
+    #titleh1 {
         font-weight: bold;
         color: var(--currentWord);
         user-select: none;
