@@ -64,7 +64,7 @@ session_start();
             <h1 id="preferenceHeader">Theme <i class="fa-solid fa-palette"></i></h1>
             <a class = "color-theme light" onclick="setTheme(currentTheme, 'light')">light</a>
             <a class = "color-theme theme-9009" onclick="setTheme(currentTheme, 'theme-9009')">9009</a>
-            <a class = "color-theme dark" onclick="setTheme(currentTheme, 'blueberryLight')">blueberry light</a>
+            <a class = "color-theme blueberryLight" onclick="setTheme(currentTheme, 'blueberryLight')">blueberry light</a>
             <a class = "color-theme mizu" onclick="setTheme(currentTheme, 'mizu')">mizu</a>
             <a class = "color-theme blueberry" onclick="setTheme(currentTheme, 'blueberry')">blueberry dark</a>
             <a class = "color-theme striker" onclick="setTheme(currentTheme, 'striker')">striker</a>
