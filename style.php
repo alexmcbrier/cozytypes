@@ -579,8 +579,8 @@ include "themes.scss"; //file contains all fonts
         color: var(--row);
     }
     .aboutDescription {
-        font-size: 2rem;
-        padding: 5rem;
+        font-size: 1.5rem;
+        padding: 1 3rem;
         color: var(--row);
         line-height: 2rem;
     }
