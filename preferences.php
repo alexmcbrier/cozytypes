@@ -36,27 +36,25 @@ session_start();
                 <a class="preference" style="font-family: 'Lora', serif;" onclick="setPreference('fontFamily', 'lora'), addNotification('font family','lora');">lora</a>
                 <a class="preference" style="font-family: 'Merriweather', serif;" onclick="setPreference('fontFamily', 'merriweather'), addNotification('font family','merriweather');">merriweather</a>
             </div>
-        </div>
-        <div id="themesContainer" class="rowContainer">
-            <h1 id="preferenceHeader">color theme <i class="fa-solid fa-palette"></i></h1>
-            <a class = "color-theme light" onclick="setTheme(currentTheme, 'light')">light</a>
-            <a class = "color-theme theme-9009" onclick="setTheme(currentTheme, 'theme-9009')">9009</a>
-            <a class = "color-theme blueberryLight" onclick="setTheme(currentTheme, 'blueberryLight')">blueberry light</a>
-            <a class = "color-theme mizu" onclick="setTheme(currentTheme, 'mizu')">mizu</a>
-            <a class = "color-theme botanical" onclick="setTheme(currentTheme, 'botanical')">botanical</a>
-            <a class = "color-theme amethyst" onclick="setTheme(currentTheme, 'amethyst')">amethyst</a>
-            <a class = "color-theme creamsicle" onclick="setTheme(currentTheme, 'creamsicle')">creamsicle</a>
-            <a class = "color-theme strawberry" onclick="setTheme(currentTheme, 'strawberry')">strawberry</a>
-            <a class = "color-theme striker" onclick="setTheme(currentTheme, 'striker')">striker</a>
-            <a class = "color-theme alpine" onclick="setTheme(currentTheme, 'alpine')">alpine</a>
-            <a class = "color-theme theme-8008" onclick="setTheme(currentTheme, 'theme-8008')">8008</a>
-            <a class = "color-theme blueberry" onclick="setTheme(currentTheme, 'blueberry')">blueberry dark</a>
-            <a class = "color-theme bliss" onclick="setTheme(currentTheme, 'bliss')">bliss</a>
-            <a class = "color-theme olivia" onclick="setTheme(currentTheme, 'olivia')">olivia</a>
-            <a class = "color-theme dracula" onclick="setTheme(currentTheme, 'dracula')">dracula</a>
-            <a class = "color-theme dark" onclick="setTheme(currentTheme, 'dark')">dark</a>
-        </div>
-        <div class="preferences">
+            <div id="themesContainer" class="rowContainer">
+                <h1 id="preferenceHeader">color theme <i class="fa-solid fa-palette"></i></h1>
+                <a class = "color-theme light" onclick="setTheme(currentTheme, 'light')">light</a>
+                <a class = "color-theme theme-9009" onclick="setTheme(currentTheme, 'theme-9009')">9009</a>
+                <a class = "color-theme blueberryLight" onclick="setTheme(currentTheme, 'blueberryLight')">blueberry light</a>
+                <a class = "color-theme mizu" onclick="setTheme(currentTheme, 'mizu')">mizu</a>
+                <a class = "color-theme botanical" onclick="setTheme(currentTheme, 'botanical')">botanical</a>
+                <a class = "color-theme amethyst" onclick="setTheme(currentTheme, 'amethyst')">amethyst</a>
+                <a class = "color-theme creamsicle" onclick="setTheme(currentTheme, 'creamsicle')">creamsicle</a>
+                <a class = "color-theme strawberry" onclick="setTheme(currentTheme, 'strawberry')">strawberry</a>
+                <a class = "color-theme striker" onclick="setTheme(currentTheme, 'striker')">striker</a>
+                <a class = "color-theme alpine" onclick="setTheme(currentTheme, 'alpine')">alpine</a>
+                <a class = "color-theme theme-8008" onclick="setTheme(currentTheme, 'theme-8008')">8008</a>
+                <a class = "color-theme blueberry" onclick="setTheme(currentTheme, 'blueberry')">blueberry dark</a>
+                <a class = "color-theme bliss" onclick="setTheme(currentTheme, 'bliss')">bliss</a>
+                <a class = "color-theme olivia" onclick="setTheme(currentTheme, 'olivia')">olivia</a>
+                <a class = "color-theme dracula" onclick="setTheme(currentTheme, 'dracula')">dracula</a>
+                <a class = "color-theme dark" onclick="setTheme(currentTheme, 'dark')">dark</a>
+            </div>
             <div id="caretsContainer" class="rowContainer">
                 <h1 class="notSignedIn" id="preferenceHeader">pace caret <i class="fa-solid fa-arrow-pointer"></i></h1>
                 <h1 class="description">When enabled, the caret will move along the page as you type. Change the style for different typing experiences.</h1>

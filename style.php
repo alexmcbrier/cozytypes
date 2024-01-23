@@ -1239,10 +1239,12 @@ include "themes.scss"; //file contains all fonts
     /* Remove min-width */
     width: 10%;
     cursor: pointer;
+    
 }
     #themesContainer a:hover,
     .preferences a:hover {
         transform: scale(1.1, 1.1);
+        background-color: var(--row);
     }
     .preferences
     {
