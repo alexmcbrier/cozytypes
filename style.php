@@ -1237,7 +1237,7 @@ include "themes.scss"; //file contains all fonts
     margin-top: 1rem;
     text-align: center;
     /* Remove min-width */
-    min-width: unset;
+    width: 10%;
     cursor: pointer;
 }
     #themesContainer a:hover,
