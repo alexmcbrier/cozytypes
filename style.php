@@ -351,7 +351,25 @@ include "themes.scss"; //file contains all fonts
     /* Remove one of the margin properties */
     margin: 1rem;
     align-content: center;
-    }
+}
+.aboutContainer {
+    user-select: none;
+    color: var(--currentWord);
+    font-size: 1rem;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    margin-left: .5rem;
+    line-height: 10px;
+    vertical-align: top;
+    text-decoration: none;
+    /* Remove one of the margin properties */
+    margin: 1rem;
+    align-content: center;
+    display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* Adjust as needed */
+}
     #showRestart
     {
         color: var(--row);
@@ -583,22 +601,6 @@ include "themes.scss"; //file contains all fonts
         padding: 4 2rem;
         color: var(--row);
         line-height: 2rem;
-        align-items:
-    }
-    .aboutContainer {
-    user-select: none;
-    color: var(--currentWord);
-    background-color: var(--rowBackground);
-    font-size: 1rem;
-    border-radius: 1.5rem;
-    padding: 1rem;
-    margin-left: .5rem;
-    line-height: 10px;
-    vertical-align: top;
-    text-decoration: none;
-    /* Remove one of the margin properties */
-    margin: 1rem;
-    align-content: center;
     }
     input {
         display: flex;

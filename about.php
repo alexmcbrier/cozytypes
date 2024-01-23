@@ -5,7 +5,7 @@
     <div id="mainContent">
         <?php include "./nav.php" ?>
         <div class="preferences">
-            <div id="sizesContainer" class="abooutContainer">
+            <div id="sizesContainer" class="aboutContainer">
                 <h1 class="notSignedIn" id="preferenceHeader">about us</h1>
                 <h1 class="aboutDescription">
                 cozytypes is a simple typing website created by Alex McBrier, <br> 
