@@ -83,7 +83,7 @@ include "themes.scss"; //file contains all fonts
     }
     */
     ::-webkit-scrollbar-thumb {
-        background: var(--rowBackground);
+        background: var(--backgroundDark);
         border-radius: 100vw;
     }
 
