@@ -66,15 +66,15 @@ session_start();
             <a class = "color-theme theme-9009" onclick="setTheme(currentTheme, 'theme-9009')">9009</a>
             <a class = "color-theme blueberryLight" onclick="setTheme(currentTheme, 'blueberryLight')">blueberry light</a>
             <a class = "color-theme mizu" onclick="setTheme(currentTheme, 'mizu')">mizu</a>
-            <a class = "color-theme blueberry" onclick="setTheme(currentTheme, 'blueberry')">blueberry dark</a>
-            <a class = "color-theme striker" onclick="setTheme(currentTheme, 'striker')">striker</a>
-            <a class = "color-theme creamsicle" onclick="setTheme(currentTheme, 'creamsicle')">creamsicle</a>
             <a class = "color-theme botanical" onclick="setTheme(currentTheme, 'botanical')">botanical</a>
-            <a class = "color-theme theme-8008" onclick="setTheme(currentTheme, 'theme-8008')">8008</a>
             <a class = "color-theme amethyst" onclick="setTheme(currentTheme, 'amethyst')">amethyst</a>
+            <a class = "color-theme creamsicle" onclick="setTheme(currentTheme, 'creamsicle')">creamsicle</a>
+            <a class = "color-theme striker" onclick="setTheme(currentTheme, 'striker')">striker</a>
+            <a class = "color-theme blueberry" onclick="setTheme(currentTheme, 'blueberry')">blueberry dark</a>
             <a class = "color-theme dracula" onclick="setTheme(currentTheme, 'dracula')">dracula</a>
             <a class = "color-theme olivia" onclick="setTheme(currentTheme, 'olivia')">olivia</a>
             <a class = "color-theme bliss" onclick="setTheme(currentTheme, 'bliss')">bliss</a>
+            <a class = "color-theme theme-8008" onclick="setTheme(currentTheme, 'theme-8008')">8008</a>
             <a class = "color-theme dark" onclick="setTheme(currentTheme, 'dark')">dark</a>
         </div>
     </form>
