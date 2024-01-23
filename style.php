@@ -355,9 +355,10 @@ include "themes.scss"; //file contains all fonts
 .aboutContainer {
     user-select: none;
     color: var(--currentWord);
+    background-color: var(--rowBackground);
     font-size: 1rem;
     border-radius: 1.5rem;
-    padding: 1rem;
+    padding: 5rem;
     margin-left: .5rem;
     line-height: 10px;
     vertical-align: top;
@@ -365,8 +366,6 @@ include "themes.scss"; //file contains all fonts
     /* Remove one of the margin properties */
     margin: 1rem;
     justify-content: center;
-    align-items: center;
-    display: grid;
 }
     #showRestart
     {
