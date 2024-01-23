@@ -332,18 +332,20 @@ include "themes.scss"; //file contains all fonts
         font-size: 2rem;
     }
     .rowContainer {
-        user-select: none;
-        color: var(--currentWord);
-        background-color: var(--rowBackground);
-        font-size: 1rem;
-        border-radius: 1.5rem;
-        padding: 1rem;
-        line-height: 10px;
-        vertical-align: top;
-        text-decoration: none;
-        margin: 1rem;
-        align-content: center;
-    }
+    user-select: none;
+    color: var(--currentWord);
+    background-color: var(--rowBackground);
+    font-size: 1rem;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    margin-left: .5rem;
+    line-height: 10px;
+    vertical-align: top;
+    text-decoration: none;
+    /* Remove one of the margin properties */
+    margin: 1rem;
+    align-content: center;
+}
     #showRestart
     {
         color: var(--row);
@@ -1238,7 +1240,9 @@ include "themes.scss"; //file contains all fonts
     min-width: unset;
     cursor: pointer;
 }
-
+#themesContainer {
+    display: flex;
+}
     #themesContainer a:hover,
     .preferences a:hover {
         transform: scale(1.1, 1.1);
