@@ -71,7 +71,7 @@ include "themes.scss"; //file contains all fonts
         --blur: 'off';
     }
     ::-webkit-scrollbar {
-        width: 1.5em;
+        width: .2em;
         height: 1em;
         background: linear-gradient(to top, rgba(255, 0, 0, 0), 93%, var(--backgroundGradient));
     }
@@ -84,7 +84,7 @@ include "themes.scss"; //file contains all fonts
     */
     ::-webkit-scrollbar-thumb {
         background: var(--correct);
-        border: 0.25em solid var(--testText);
+        border: 0.25em solid var(--correct);
         border-radius: 100vw;
     }
 
