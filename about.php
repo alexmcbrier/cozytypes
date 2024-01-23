@@ -11,9 +11,9 @@
                 cozytypes is a simple typing website created by Alex McBrier,
                 a student at Boston University with a love for typing. 
                 Test your typing abilities in different modes, track your 
-                progress, and improve your overall typing speed. <br> 
-                I am very excited to bring this game to you and anyone else who <br> 
-                may enjoy it, and am looking forward to hearing feedback<br> 
+                progress, and improve your overall typing speed. 
+                I am very excited to bring this game to you and anyone else who 
+                may enjoy it, and am looking forward to hearing feedback
                 I hope you love it as much as I do!
                 </h1>
             </div>
