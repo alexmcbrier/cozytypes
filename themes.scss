@@ -155,6 +155,16 @@
     --currentWord: #FFFFFF;
     --row: #d46f73;
     --rowBackground: #bb5a5d;
-    --correct: #d8bdbd;
+    --correct: #ea8d90;
     --incorrect: #bab4f6;
+  }
+  .alpine {
+    --background: #6c687f;
+    --backgroundDark: #5c5870;
+    --testText: #9994b8;
+    --currentWord: #fff;
+    --row: #403d51;
+    --rowBackground: #565267;
+    --correct: #a199d0;
+    --incorrect: rgb(227, 180, 246);
   }
