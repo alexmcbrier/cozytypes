@@ -562,11 +562,11 @@ function loadPreferences() {
     let fontFamily = localStorage.getItem("fontFamily") || "lexendDeca";
     let lineCount = localStorage.getItem("lineCount") || "3";
     let caret = localStorage.getItem("caret") || "caret";
-    let typingMode = localStorage.getItem("typingMode") || "words";
+    let typingMode = localStorage.getItem("typingMode") || "time";
     let words = localStorage.getItem("words") || 10;
     let time = localStorage.getItem("time") || 15;
     let blur = localStorage.getItem("blur") || "off";
-    let mode = localStorage.getItem("mode") || "hard";
+    let mode = localStorage.getItem("mode") || "easy";
     setTheme("default", theme); 
     setPreference("fontSize", fontSize); 
     setPreference("fontFamily", fontFamily); 
