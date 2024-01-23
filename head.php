@@ -17,7 +17,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A simple and customisable typing website. Test yourself in different modes, track your progress and improve your typing speed."/>
+    <meta name="description" content="A simple typing website. Test yourself in different modes, change theme, change difficulty, track your progress and improve your typing speed."/>
     <meta name="keywords" content="typing test, typing speed test, typing-test, cozytypes, words per minute, minimalistic typing"/>
     <meta name="author" content="alexmcbrier">
     <title>cozytypes</title>

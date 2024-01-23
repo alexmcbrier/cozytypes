@@ -178,7 +178,17 @@ include "themes.scss"; //file contains all fonts
         padding-right: 1rem;
 
     }
-
+    h1 {
+        font-weight: bold;
+        color: var(--currentWord);
+        user-select: none;
+        display: inline;
+        padding-right: 1rem;
+        color: var(--currentWord);
+        font-size: 1rem;
+        vertical-align: middle;
+        text-decoration: none;
+    }
     li a {
         color: var(--currentWord);
         font-size: 1rem;
