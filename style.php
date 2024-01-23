@@ -1240,9 +1240,6 @@ include "themes.scss"; //file contains all fonts
     min-width: unset;
     cursor: pointer;
 }
-#themesContainer {
-    display: flex;
-}
     #themesContainer a:hover,
     .preferences a:hover {
         transform: scale(1.1, 1.1);
