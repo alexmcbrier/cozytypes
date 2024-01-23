@@ -580,4 +580,7 @@ function loadPreferences() {
 }
 loadPreferences();
 document.body.onLoad = refresh();
-document.body.onresize = function() { zoomwait() };
+module.exports = {
+    ...exports,
+    ...module.exports
+  };
