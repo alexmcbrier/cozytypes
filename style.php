@@ -448,7 +448,7 @@ include "themes.scss"; //file contains all fonts
         color: var(--testText)
     }
     .fadeOut {
-        animation: fadeOut .6s  ease forwards, fadeColor .6s ease forwards;
+        animation: fadeOut .45s  ease forwards, fadeColor .45s ease forwards;
     }
     .testRow * {
         user-select: none;
