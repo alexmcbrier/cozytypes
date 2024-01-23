@@ -580,7 +580,3 @@ function loadPreferences() {
 }
 loadPreferences();
 document.body.onLoad = refresh();
-module.exports = {
-    ...exports,
-    ...module.exports
-  };
