@@ -21,7 +21,7 @@
     <meta name="keywords" content="cozytypes, cozy types, cozy-types, cozytype, cozy-type, type, cozy, types, typing speed test, typing speedtest, typing test, speedtest, speed test, typing, test, typing-test, typing test, alexmcbrier, alex mcbrier, mcbrier, words per minute, typing website, minimalistic, wpm, customizable, themes, random words, smooth caret, smooth, new, new typing site, new typing website, minimalist typing website, minimalistic typing website, minimalist typing test"/>
     <meta name="author" content="alexmcbrier">
     <title>cozytypes</title>
-    <script defer type="text/javascript" src="script.js"></script>
+    <script defer type="text/javascript" src="script2.js"></script>
     <link href="https://cozytypes.com/" rel="canonical" />
     <link rel="stylesheet" href="style.php">
     <link rel="preconnect" href="https://fonts.googleapis.com">
