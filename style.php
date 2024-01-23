@@ -75,13 +75,13 @@ include "themes.scss"; //file contains all fonts
         height: 1em;
         background: linear-gradient(to top, rgba(255, 0, 0, 0), 93%, var(--backgroundGradient));
     }
-
+     /*
     ::-webkit-scrollbar-track {
         background: var(--testText);
         border-radius: 100vw;
         margin-block: .5em;
     }
-
+    */
     ::-webkit-scrollbar-thumb {
         background: var(--correct);
         border: 0.25em solid var(--testText);
