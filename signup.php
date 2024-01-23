@@ -62,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 <!DOCTYPE html>
 <html>
-    <?php include "./head.php" ?>
+    <?php include "./head2.php" ?>
     <body class="main-body">
         <div id="mainContent">
             <?php include "./nav.php" ?>
