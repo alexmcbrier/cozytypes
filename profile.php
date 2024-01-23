@@ -35,7 +35,7 @@ if (isset($_SESSION["user_id"])) {
     };
 </script>
 
-<?php include "./head.php" ?>
+<?php include "./head2.php" ?>
 
 <body class="main-body">
     <div id="sidebar">

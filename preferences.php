@@ -4,7 +4,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 
-<?php include "./head.php" ?>
+<?php include "./head2.php" ?>
 
 <body>
 
