@@ -9,9 +9,9 @@ if (isset($_COOKIE["fontFamily"])) {
 ?>
 
 <div id="footer" class = "blur">
-    <div id ="hotkey">
+    <h2 id ="hotkey">
         <div><kbd>Tab</kbd> to restart</div>
-    </div>
+    </h2>
     <div id = "footerDiv">
         <a class = "footerLinks tooltip" href="https://github.com/alexmcbrier/cozytypes">github</span>
             <i class="fa-solid fa-code fa-sm"></i>
