@@ -579,3 +579,5 @@ function loadPreferences() {
     setPreference("mode", mode);
 }
 loadPreferences();
+document.body.onLoad = refresh();
+document.body.onresize = function() { zoomwait() };
