@@ -83,13 +83,12 @@ include "themes.scss"; //file contains all fonts
     }
     */
     ::-webkit-scrollbar-thumb {
-        background: var(--correct);
-        border: 0.25em solid var(--testText);
+        background: var(--backgroundDark);
         border-radius: 100vw;
     }
 
     ::-webkit-scrollbar-thumb:hover {
-        background: var(--incorrect);
+        background: var(--row);
     }
     .tooltip {
         position: relative;
