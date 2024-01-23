@@ -73,6 +73,7 @@ session_start();
             <a class = "color-theme amethyst" onclick="setTheme(currentTheme, 'amethyst')">amethyst</a>
             <a class = "color-theme dracula" onclick="setTheme(currentTheme, 'dracula')">dracula</a>
             <a class = "color-theme olivia" onclick="setTheme(currentTheme, 'olivia')">olivia</a>
+            <a class = "color-theme bliss" onclick="setTheme(currentTheme, 'bliss')">bliss</a>
             <a class = "color-theme dark" onclick="setTheme(currentTheme, 'dark')">dark</a>
         </div>
     </form>
