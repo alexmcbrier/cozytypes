@@ -29,14 +29,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     {
         //Credentials are accurate, create a password hash (encrypt)
         $password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
+        $dateCreated = date("Y-m-d H:i:s"); // Get current date and time
         $mysqli = require __DIR__ . "/config.php";
-        $sql = "INSERT INTO user (username, email, password_hash) 
-                VALUES (?, ?, ?)";
+        $sql = "INSERT INTO user (username, email, password_hash, dateCreated) 
+                VALUES (?, ?, ?, ?)";
+        
         $stmt = $mysqli->stmt_init();
-        if (! $stmt->prepare($sql)) {
+        if (!$stmt->prepare($sql)) {
             die("SQL error: " . $mysqli->error);
         }
-        $stmt->bind_param("sss", $_POST["username"], $_POST["email"], $password_hash);
+    
+        $stmt->bind_param("ssss", $_POST["username"], $_POST["email"], $password_hash, $dateCreated);    
         if ($stmt->execute()) {
             $mysqli = require __DIR__ . "/config.php";
             $sql = sprintf("SELECT * FROM user 
