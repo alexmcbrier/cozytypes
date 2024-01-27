@@ -53,7 +53,7 @@ if (isset($_SESSION["user_id"])) {
             </div>
             <div class="statsContainer">
                 <div class="preferences">
-                    <div class = "preference">mode testTime wpm accuracy date</div>
+                    <div class = "preferenceHeader">15s highscore</div>
                     <?php foreach ($rows as $row): ?>
                         <div class = "preference"><?= $row['mode'] ?> - <?= $row['testTime'] ?> -<?= $row['wpm'] ?> - <?= $row['accuracy'] ?> - <?= $row['date'] ?></div>
                     <?php endforeach; ?>
