@@ -14,24 +14,7 @@ if (isset($_SESSION["user_id"])) {
     $totalTests = htmlspecialchars($user["testsTaken"]);
     //typingtest table
     // Fetch user data from the database
-    $query = "SELECT * FROM typingtest WHERE id = {$_SESSION["user_id"]}";
     
-    // Prepare the statement
-    $stmt = $mysqli->prepare($query);
-
-    // Bind the user ID from the session to the query
-    $stmt->bind_param("i", $_SESSION["user_id"]);
-
-    // Execute the query
-    $stmt->execute();
-
-    // Get the result set
-    $result = $stmt->get_result();
-
-    // Fetch all rows
-    $userData = $result->fetch_all(MYSQLI_ASSOC);
-
-
 } else //if not logged in but somehow managed to get to this page (Neccesary)
 {
     header("Location: login");
