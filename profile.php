@@ -173,7 +173,7 @@ if (isset($_SESSION["user_id"])) {
                     <a class="results"><?= $wpmPR ?> wpm</a>
                 </div>
             </div>
-            <div id = "preferenceHeader">personal best</div>
+            <div id = "preferenceHeader" style = "font-weight: bold; padding: 2rem;" >personal bests</div>
             <div id="displayStats">
                 <div class="statsContainer">
                     <div id = "preferenceHeader" class = "notSignedIn">15 seconds</div>
