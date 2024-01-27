@@ -19,7 +19,7 @@ if (isset($_SESSION["user_id"])) {
     $rows = $result->fetch_all(MYSQLI_ASSOC);
     foreach ($rows as $row) {
         echo "<p>User ID: " . $row['id'] . "</p>";
-        echo 'document.getElementById("user-data-container").innerHTML += "<div>' . $row['mode'] . ' - ' . $row['wpm'] . . $row['accuracy'] . ' - ' . $row['date'] . '</div>";';
+        echo 'document.getElementById("user-data-container").innerHTML += "<p>' . $row['mode'] . ' - ' . $row['wpm'] . . $row['accuracy'] . ' - ' . $row['date'] . '</p>";';
     }
     
 
