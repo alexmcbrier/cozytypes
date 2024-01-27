@@ -17,7 +17,19 @@ if (isset($_SESSION["user_id"])) {
     $query = "SELECT * FROM typingtest WHERE id = {$_SESSION["user_id"]}";
     $result = $mysqli->query($query);
     $rows = $result->fetch_all(MYSQLI_ASSOC);
-    
+    $sumWpm = 0;
+    $sumAccuracy = 0;
+    $count = 0;
+
+    foreach ($rows as $row) {
+        $sumWpm += $row['wpm'];
+        $sumAccuracy += $row['accuracy'];
+        // Add any additional columns for which you want to calculate the average
+        $count++;
+    }
+
+    $avgWpm = ($count > 0) ? $sumWpm / $count : 0;
+    $avgAccuracy = ($count > 0) ? $sumAccuracy / $count : 0;
     
     
 
@@ -54,9 +66,9 @@ if (isset($_SESSION["user_id"])) {
             <div class="statsContainer">
                 <div class="preferences">
                     <div id = "preferenceHeader" class = "notSignedIn">15s</div>
-                    <?php foreach ($rows as $row): ?>
-                        <div class = "preference"><?= $row['mode'] ?> - <?= $row['testTime'] ?> -<?= $row['wpm'] ?> - <?= $row['accuracy'] ?> - <?= $row['date'] ?></div>
-                    <?php endforeach; ?>
+                    <div class = "results">tests complete<?= $count ?></div>
+                    <div class = "results">average wpm<?= $avgWpm ?></div>
+                    <div class = "results">average accuracy<?= $avgAccuracy ?></div>
                 </div>
             </div>
             <a id = "showRestart" class="notSignedIn" href="logout.php">logout<i class="fa-solid fa-right-from-bracket"></i></a>
