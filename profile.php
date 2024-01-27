@@ -62,11 +62,11 @@ if (isset($_SESSION["user_id"])) {
                     <a class="results"><?= $wpmPR ?> wpm</a>
                 </div>
             </div>
+            <div id = "logo">personal bests</div>
             <div id="displayStats">
-                <div id = "title">personal bests</div>
                 <div class="statsContainer">
                     <div id = "preferenceHeader" class = "notSignedIn">15s</div>
-                    <div class = "results">wpm | <?= $maxWpm ?></div>
+                    <div class = "results">wpm <div style = "color: var(--testText)"><?= $maxWpm ?></div></div>
                     <div class = "results">accuracy | <?= $accuracyForMaxWpm ?></div>
                     <div class = "results">tests | <?= $count ?></div>
                 </div>
