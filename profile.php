@@ -35,7 +35,7 @@ if (isset($_SESSION["user_id"])) {
     echo '<div id="user-data-container">';
     foreach ($userData as $row) {
         // Adjust column names as needed
-        echo "<p>User ID: " . $row['id'] . " - Name: " . $row['name'] . "</p>";
+        echo "<p>User ID: " . htmlspecialchars($row['id']) . "</p>";
     }
     echo '</div>';
 } else //if not logged in but somehow managed to get to this page (Neccesary)
