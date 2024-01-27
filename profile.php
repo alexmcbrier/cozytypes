@@ -13,14 +13,27 @@ if (isset($_SESSION["user_id"])) {
     $wpmPR = htmlspecialchars($user["wpm"]);
     $totalTests = htmlspecialchars($user["testsTaken"]);
     //typingtest table
-    $sql = "SELECT * FROM typingtest WHERE id = {$_SESSION["user_id"]}";
+    try {
+        $pdo = new PDO("your_database_connection_string", "your_username", "your_password");
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    } catch (PDOException $e) {
+        die("Error: " . $e->getMessage());
+    }
+    
+    // Fetch user data from the database
+    $sql = "SELECT * FROM typingtest WHERE id = :userId";
     $stmt = $pdo->prepare($sql);
+    $stmt->bindParam(':userId', $_SESSION["user_id"], PDO::PARAM_STR);
     $stmt->execute();
     $userData = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+    // Output HTML for each row
+    echo '<div id="user-data-container">';
     foreach ($userData as $row) {
-        // Assuming you have columns named 'column1', 'column2', etc.
-        echo 'document.getElementById("user-data-container").innerHTML += "<p>' . $row['wpm'] . ' - ' . $row['accuracy'] . '</p>";';
+        // Assuming you have columns named 'wpm' and 'accuracy'
+        echo "<p>WPM: " . $row['wpm'] . " - Accuracy: " . $row['accuracy'] . "</p>";
     }
+    echo '</div>';
 } else //if not logged in but somehow managed to get to this page (Neccesary)
 {
     header("Location: login");
