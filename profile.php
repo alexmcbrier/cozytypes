@@ -14,11 +14,33 @@ if (isset($_SESSION["user_id"])) {
     $totalTests = htmlspecialchars($user["testsTaken"]);
     //typingtest table
     // Fetch user data from the database
-    $sql = "SELECT * FROM typingtest WHERE id = {$_SESSION["user_id"]}";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute();
-    $userData = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $query = "SELECT * FROM typingtest WHERE id = {$_SESSION["user_id"]}";
     
+    // Prepare the statement
+    $stmt = $mysqli->prepare($query);
+
+    // Bind the user ID from the session to the query
+    $stmt->bind_param("i", $_SESSION["user_id"]);
+
+    // Execute the query
+    $stmt->execute();
+
+    // Get the result set
+    $result = $stmt->get_result();
+
+    // Fetch all rows
+    $userData = $result->fetch_all(MYSQLI_ASSOC);
+
+    // Output HTML for each row
+    echo '<div id="user-data-container">';
+    foreach ($userData as $row) {
+        // Adjust column names as needed
+        echo "<p>User ID: " . $row['id'] . " - Name: " . $row['name'] . "</p>";
+    }
+    echo '</div>';
+
+    // Close the statement
+    $stmt->close();
     // Output HTML for each row
     echo '<div id="user-data-container">';
     foreach ($userData as $row) {
@@ -55,7 +77,6 @@ if (isset($_SESSION["user_id"])) {
                     <a class="results"><?= $wpmPR ?> wpm</a>
                 </div>
             </div>
-            <div id = "user-data-container"></div>
             <a id = "showRestart" class="notSignedIn" href="logout.php">logout<i class="fa-solid fa-right-from-bracket"></i></a>
         </div>
         <?php include "./footer.php" ?>
