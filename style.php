@@ -1168,6 +1168,7 @@ include "themes.scss"; //file contains all fonts
     }
     .results
     {   
+        color: var(--background);
         font-size: 1.5rem;
         margin-left: 1rem;
         margin-top: 2rem;
