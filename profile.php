@@ -17,6 +17,7 @@ if (isset($_SESSION["user_id"])) {
     $query = "SELECT * FROM typingtest WHERE id = {$_SESSION["user_id"]}";
     $result = $mysqli->query($query);
     $rows = $result->fetch_all(MYSQLI_ASSOC);
+    //15s
     $sumWpm = 0;
     $sumAccuracy = 0;
     $count = 0;
@@ -27,6 +28,7 @@ if (isset($_SESSION["user_id"])) {
             $maxWpm = $row['wpm'];
             $accuracyForMaxWpm = $row['accuracy'];
         }
+        count++;
         // Update for additional columns as needed
     }
     
