@@ -13,13 +13,6 @@ if (isset($_SESSION["user_id"])) {
     $wpmPR = htmlspecialchars($user["wpm"]);
     $totalTests = htmlspecialchars($user["testsTaken"]);
     //typingtest table
-    try {
-        $pdo = new PDO("your_database_connection_string", "your_username", "your_password");
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    } catch (PDOException $e) {
-        die("Error: " . $e->getMessage());
-    }
-    
     // Fetch user data from the database
     $sql = "SELECT * FROM typingtest WHERE id = :userId";
     $stmt = $pdo->prepare($sql);
