@@ -19,6 +19,7 @@ if (isset($_SESSION["user_id"])) {
     $rows = $result->fetch_all(MYSQLI_ASSOC);
     foreach ($rows as $row) {
         echo $row['id']; // Accessing values using column names
+        echo "<p>User ID: " . $row['id'] . "</p>";
     }
 
 
