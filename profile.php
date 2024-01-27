@@ -181,6 +181,18 @@ if (isset($_SESSION["user_id"])) {
                     <div class = "results">accuracy <span style = "color: var(--testText)"><?= $accuracyForMaxWpm15s ?></span></div>
                     <div class = "results">tests <span style = "color: var(--testText)"><?= $count15s ?></span></div>
                 </div>
+                <div class="statsContainer">
+                    <div id = "preferenceHeader" class = "notSignedIn">30s</div>
+                    <div class = "results">wpm <span style = "color: var(--testText)"><?= $maxWpm30s ?></span></div>
+                    <div class = "results">accuracy <span style = "color: var(--testText)"><?= $accuracyForMaxWpm30s ?></span></div>
+                    <div class = "results">tests <span style = "color: var(--testText)"><?= $count30s ?></span></div>
+                </div>
+                <div class="statsContainer">
+                    <div id = "preferenceHeader" class = "notSignedIn">60s</div>
+                    <div class = "results">wpm <span style = "color: var(--testText)"><?= $maxWpm60s ?></span></div>
+                    <div class = "results">accuracy <span style = "color: var(--testText)"><?= $accuracyForMaxWpm60s ?></span></div>
+                    <div class = "results">tests <span style = "color: var(--testText)"><?= $count60s ?></span></div>
+                </div>
             </div>
             <a id = "showRestart" class="notSignedIn" href="logout.php">logout<i class="fa-solid fa-right-from-bracket"></i></a>
         </div>
