@@ -17,10 +17,8 @@ if (isset($_SESSION["user_id"])) {
     $query = "SELECT * FROM typingtest WHERE id = {$_SESSION["user_id"]}";
     $result = $mysqli->query($query);
     $rows = $result->fetch_all(MYSQLI_ASSOC);
-    foreach ($rows as $row) {
-        echo 'document.getElementById("user-data-container").innerHTML += `<p>' . $row['mode'] . ' - ' . $row['testTime'] . ' - '. $row['wpm'] . ' ' . $row['accuracy'] . ' - ' . $row['date'] . '</p>`;';
-
-    }
+    
+    
     
 
 
@@ -53,7 +51,11 @@ if (isset($_SESSION["user_id"])) {
                     <a class="results"><?= $wpmPR ?> wpm</a>
                 </div>
             </div>
-            <div id = "user-data-container"></div>
+            <div id="user-data-container">
+                <?php foreach ($rows as $row): ?>
+                    <p><?= $row['mode'] ?> - <?= $row['testTime'] ?> - <?= $row['wpm'] ?> <?= $row['accuracy'] ?> - <?= $row['date'] ?></p>
+                <?php endforeach; ?>
+            </div>
             <a id = "showRestart" class="notSignedIn" href="logout.php">logout<i class="fa-solid fa-right-from-bracket"></i></a>
         </div>
         <?php include "./footer.php" ?>
