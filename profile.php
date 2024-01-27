@@ -63,8 +63,9 @@ if (isset($_SESSION["user_id"])) {
                 </div>
             </div>
             <div id="displayStats">
+                <div id = "title">personal bests</div>
                 <div class="statsContainer">
-                    <div id = "preferenceHeader" class = "notSignedIn">15s highscore</div>
+                    <div id = "preferenceHeader" class = "notSignedIn">15s</div>
                     <div class = "results">wpm | <?= $maxWpm ?></div>
                     <div class = "results">accuracy | <?= $accuracyForMaxWpm ?></div>
                     <div class = "results">tests | <?= $count ?></div>
