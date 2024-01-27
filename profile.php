@@ -51,10 +51,10 @@ if (isset($_SESSION["user_id"])) {
                     <a class="results"><?= $wpmPR ?> wpm</a>
                 </div>
             </div>
-            <div id="displayStats">
-                <div>mode testTime wpm accuracy date</div>
+            <div class="preferences">
+                <div class = "preference">mode testTime wpm accuracy date</div>
                 <?php foreach ($rows as $row): ?>
-                    <div class = "statsContainer"><?= $row['mode'] ?> - <?= $row['testTime'] ?> -<?= $row['wpm'] ?> - <?= $row['accuracy'] ?> - <?= $row['date'] ?></div>
+                    <div class = "preference"><?= $row['mode'] ?> - <?= $row['testTime'] ?> -<?= $row['wpm'] ?> - <?= $row['accuracy'] ?> - <?= $row['date'] ?></div>
                 <?php endforeach; ?>
             </div>
             <a id = "showRestart" class="notSignedIn" href="logout.php">logout<i class="fa-solid fa-right-from-bracket"></i></a>
