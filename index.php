@@ -23,7 +23,7 @@ if (isset($_GET["finish"]))
             die("SQL error: " . $mysqli->error);
         }
     
-        $stmt->bind_param("i", $_POST["username"], $_POST["email"], $password_hash, $dateCreated);   
+        $stmt->bind_param("i", 12);   
         $stmt->execute();
         $stmt->close();
 
