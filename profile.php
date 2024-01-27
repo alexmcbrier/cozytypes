@@ -51,19 +51,11 @@ if (isset($_SESSION["user_id"])) {
                     <a class="results"><?= $wpmPR ?> wpm</a>
                 </div>
             </div>
-            <div id="user-data-container" class = "preferences" style="white-space: pre;">
+            <div id="user-data-container">
                 <div>mode testTime wpm accuracy date</div>
-                <div class = "preferences">
                 <?php foreach ($rows as $row): ?>
-                    <div class = "sizesContainer">
-                        <div class = "preference"><?= $row['mode'] ?></div>
-                        <div class = "preference"><?= $row['testTime'] ?></div>
-                        <div class = "preference"><?= $row['wpm'] ?></div>
-                        <div class = "preference"><?= $row['accuracy'] ?></div>
-                        <div class = "preference"><?= $row['date'] ?></div>
-                    </div>
+                    <div><?= $row['mode'] ?> - <?= $row['testTime'] ?> -<?= $row['wpm'] ?> - <?= $row['accuracy'] ?> - <?= $row['date'] ?></div>
                 <?php endforeach; ?>
-                </div>
             </div>
             <a id = "showRestart" class="notSignedIn" href="logout.php">logout<i class="fa-solid fa-right-from-bracket"></i></a>
         </div>
