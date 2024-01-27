@@ -45,7 +45,7 @@ if (isset($_GET["finish"]))
 
         $sql = "INSERT INTO typing_test (id, wpm, accuracy, type, time, words) 
                 VALUES ('$id', '$wpm', '$accuracy', '$type', '$time', '$words')";
-
+    }
 }
 ?>
 
