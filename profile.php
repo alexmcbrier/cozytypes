@@ -202,30 +202,30 @@ if (isset($_SESSION["user_id"])) {
             </div>
             <div id="displayStats">
                 <div class="statsContainer">
-                        <div id = "preferenceHeader" class = "notSignedIn">10 words</div>
-                        <div class = "results">wpm <span style = "color: var(--testText)"><?= $maxWpm10w ?></span></div>
-                        <div class = "results">accuracy <span style = "color: var(--testText)"><?= $accuracyForMaxWpm10w ?></span></div>
-                        <div class = "results">tests <span style = "color: var(--testText)"><?= $count10w ?></span></div>
-                    </div>
-                    <div class="statsContainer">
-                        <div id = "preferenceHeader" class = "notSignedIn">25 words</div>
-                        <div class = "results">wpm <span style = "color: var(--testText)"><?= $maxWpm25w ?></span></div>
-                        <div class = "results">accuracy <span style = "color: var(--testText)"><?= $accuracyForMaxWpm25w ?></span></div>
-                        <div class = "results">tests <span style = "color: var(--testText)"><?= $count25w ?></span></div>
-                    </div>
-                    <div class="statsContainer">
-                        <div id = "preferenceHeader" class = "notSignedIn">50 words</div>
-                        <div class = "results">wpm <span style = "color: var(--testText)"><?= $maxWpm50w ?></span></div>
-                        <div class = "results">accuracy <span style = "color: var(--testText)"><?= $accuracyForMaxWpm50w ?></span></div>
-                        <div class = "results">tests <span style = "color: var(--testText)"><?= $count50w ?></span></div>
-                    </div>
-                    <div class="statsContainer">
-                        <div id = "preferenceHeader" class = "notSignedIn">100 words</div>
-                        <div class = "results">wpm <span style = "color: var(--testText)"><?= $maxWpm100w ?></span></div>
-                        <div class = "results">accuracy <span style = "color: var(--testText)"><?= $accuracyForMaxWpm100w ?></span></div>
-                        <div class = "results">tests <span style = "color: var(--testText)"><?= $count100w ?></span></div>
-                    </div>
+                    <div id = "preferenceHeader" class = "notSignedIn">   10 words   </div>
+                    <div class = "results">wpm <span style = "color: var(--testText)"><?= $maxWpm10w ?></span></div>
+                    <div class = "results">accuracy <span style = "color: var(--testText)"><?= $accuracyForMaxWpm10w ?></span></div>
+                    <div class = "results">tests <span style = "color: var(--testText)"><?= $count10w ?></span></div>
                 </div>
+                <div class="statsContainer">
+                    <div id = "preferenceHeader" class = "notSignedIn">   25 words   </div>
+                    <div class = "results">wpm <span style = "color: var(--testText)"><?= $maxWpm25w ?></span></div>
+                    <div class = "results">accuracy <span style = "color: var(--testText)"><?= $accuracyForMaxWpm25w ?></span></div>
+                    <div class = "results">tests <span style = "color: var(--testText)"><?= $count25w ?></span></div>
+                </div>
+                <div class="statsContainer">
+                    <div id = "preferenceHeader" class = "notSignedIn">   50 words   </div>
+                    <div class = "results">wpm <span style = "color: var(--testText)"><?= $maxWpm50w ?></span></div>
+                    <div class = "results">accuracy <span style = "color: var(--testText)"><?= $accuracyForMaxWpm50w ?></span></div>
+                    <div class = "results">tests <span style = "color: var(--testText)"><?= $count50w ?></span></div>
+                </div>
+                <div class="statsContainer">
+                    <div id = "preferenceHeader" class = "notSignedIn">   100 words  </div>
+                    <div class = "results">wpm <span style = "color: var(--testText)"><?= $maxWpm100w ?></span></div>
+                    <div class = "results">accuracy <span style = "color: var(--testText)"><?= $accuracyForMaxWpm100w ?></span></div>
+                    <div class = "results">tests <span style = "color: var(--testText)"><?= $count100w ?></span></div>
+                </div>
+            </div>
             <a id = "showRestart" class="notSignedIn" href="logout.php">logout<i class="fa-solid fa-right-from-bracket"></i></a>
         </div>
         <?php include "./footer.php" ?>
