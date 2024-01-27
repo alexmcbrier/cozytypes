@@ -38,16 +38,6 @@ if (isset($_SESSION["user_id"])) {
         echo "<p>User ID: " . $row['id'] . " - Name: " . $row['name'] . "</p>";
     }
     echo '</div>';
-
-    // Close the statement
-    $stmt->close();
-    // Output HTML for each row
-    echo '<div id="user-data-container">';
-    foreach ($userData as $row) {
-        // Assuming you have columns named 'wpm' and 'accuracy'
-        echo "<p>WPM: " . $row['wpm'] . " - Accuracy: " . $row['accuracy'] . "</p>";
-    }
-    echo '</div>';
 } else //if not logged in but somehow managed to get to this page (Neccesary)
 {
     header("Location: login");
