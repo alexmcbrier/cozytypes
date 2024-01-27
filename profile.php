@@ -52,8 +52,9 @@ if (isset($_SESSION["user_id"])) {
                 </div>
             </div>
             <div id="user-data-container">
+                <div>mode   testTime   wpm   accuracy   date</div>
                 <?php foreach ($rows as $row): ?>
-                    <div><?= $row['mode'] ?> - <?= $row['testTime'] ?> - <?= $row['wpm'] ?> <?= $row['accuracy'] ?> - <?= $row['date'] ?></div>
+                    <div><?= $row['mode'] ?>      <?= $row['testTime'] ?>     <?= $row['wpm'] ?>     <?= $row['accuracy'] ?>     <?= $row['date'] ?></div>
                 <?php endforeach; ?>
             </div>
             <a id = "showRestart" class="notSignedIn" href="logout.php">logout<i class="fa-solid fa-right-from-bracket"></i></a>
