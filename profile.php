@@ -2,10 +2,9 @@
 session_start();
 if (isset($_SESSION["user_id"])) {
     $mysqli = require __DIR__ . "/config.php";
-
+    //user table
     $sql = "SELECT * FROM user
             WHERE id = {$_SESSION["user_id"]}";
-
     $result = $mysqli->query($sql);
     $user = $result->fetch_assoc();
     $font = htmlspecialchars($user["fontSize"]);
@@ -14,6 +13,11 @@ if (isset($_SESSION["user_id"])) {
     $theme = htmlspecialchars($user["theme"]);
     $wpmPR = htmlspecialchars($user["wpm"]);
     $totalTests = htmlspecialchars($user["testsTaken"]);
+    //typingtest table
+    $sql = "SELECT * FROM typingtest
+            WHERE id = {$_SESSION["user_id"]}";
+    $result = $mysqli->query($sql);
+    $user = $result->fetch_assoc();
 } else //if not logged in but somehow managed to get to this page (Neccesary)
 {
     header("Location: login");
@@ -21,20 +25,6 @@ if (isset($_SESSION["user_id"])) {
 ?>
 <!DOCTYPE html>
 <html>
-<script>
-    function openSidebar() {
-        document.getElementById('friendsListArea').className = 'sidebarOpen';
-        document.getElementById('sidebar').className = 'hideSidebar';
-        document.getElementById('statsArea').className = 'statsAreaOpen';
-    };
-
-    function closeSidebar() {
-        document.getElementById('friendsListArea').className = 'sidebarClose';
-        document.getElementById('sidebar').className = 'showSidebar ';
-        document.getElementById('statsArea').className = 'statsAreaClosed';
-    };
-</script>
-
 <?php include "./head2.php" ?>
 
 <body class="main-body">
