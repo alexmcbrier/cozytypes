@@ -14,7 +14,7 @@ if (isset($_SESSION["user_id"])) {
     $totalTests = htmlspecialchars($user["testsTaken"]);
     //typingtest table
     // Fetch user data from the database
-    $query = "SELECT * FROM typingtest WHERE id = {$_SESSION["user_id"]}" AND mode = "time" AND testTime = 15;
+    $query = "SELECT * FROM typingtest WHERE id = {$_SESSION["user_id"]}" AND mode = "time";
     $result = $mysqli->query($query);
     $rows = $result->fetch_all(MYSQLI_ASSOC);
     //15s
