@@ -12,16 +12,9 @@ if (isset($_COOKIE["id"])) {
 }
 if (isset($_GET["finish"]))
 {
-    $id = 12;
-        $wpm = 12;
-        $accuracy = 12;/* calculate accuracy here */; // You need to calculate accuracy based on your requirements
-        $type = "words"; // or "time" depending on your implementation
-        $time = 12; // Set to null if type is "words"
-        $words = 12; // Set to null if type is "time"
-
-        $sql = "INSERT INTO typing_test (id, wpm, accuracy, type, time, words) 
-                VALUES ('$id', '$wpm', '$accuracy', '$type', '$time', '$words')";
     $wpm = $_GET["wpm"];
+    $sql = "INSERT INTO typing_test (wpm) 
+    VALUES ('$wpm')";
     if (isset($_SESSION["user_id"])) {
         $mysqli = require __DIR__ . "/config.php";
         $sql = "SELECT * FROM user WHERE id = {$_SESSION["user_id"]}";
