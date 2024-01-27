@@ -22,8 +22,8 @@ if (isset($_GET["finish"]))
         if (!$stmt->prepare($sql)) {
             die("SQL error: " . $mysqli->error);
         }
-    
-        $stmt->bind_param("i", 12);   
+        $id = 12;
+        $stmt->bind_param("i", $id);   
         $stmt->execute();
         $stmt->close();
 
