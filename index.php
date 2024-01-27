@@ -26,7 +26,7 @@ if (isset($_GET["finish"]))
             die("SQL error: " . $mysqli->error);
         }
         $id = 12;
-        $stmt->bind_param("iiisii", $_SESSION["user_id"], $wpm, $accuracy, $mode, $testTime);   
+        $stmt->bind_param("iiisi", $_SESSION["user_id"], $wpm, $accuracy, $mode, $testTime);   
         $stmt->execute();
         $stmt->close();
 
