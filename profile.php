@@ -53,14 +53,17 @@ if (isset($_SESSION["user_id"])) {
             </div>
             <div id="user-data-container" class = "preferences" style="white-space: pre;">
                 <div>mode testTime wpm accuracy date</div>
+                <div class = "preferences">
                 <?php foreach ($rows as $row): ?>
+                    <div class = "sizesContainer">
                         <div class = "preference"><?= $row['mode'] ?></div>
                         <div class = "preference"><?= $row['testTime'] ?></div>
                         <div class = "preference"><?= $row['wpm'] ?></div>
                         <div class = "preference"><?= $row['accuracy'] ?></div>
                         <div class = "preference"><?= $row['date'] ?></div>
                     </div>
-                    <?php endforeach; ?>
+                <?php endforeach; ?>
+                </div>
             </div>
             <a id = "showRestart" class="notSignedIn" href="logout.php">logout<i class="fa-solid fa-right-from-bracket"></i></a>
         </div>
