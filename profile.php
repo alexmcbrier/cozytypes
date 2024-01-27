@@ -3,8 +3,7 @@ session_start();
 if (isset($_SESSION["user_id"])) {
     $mysqli = require __DIR__ . "/config.php";
     //user table
-    $sql = "SELECT * FROM user
-            WHERE id = {$_SESSION["user_id"]}";
+    $sql = "SELECT * FROM user WHERE id = {$_SESSION["user_id"]}";
     $result = $mysqli->query($sql);
     $user = $result->fetch_assoc();
     $font = htmlspecialchars($user["fontSize"]);
@@ -14,11 +13,11 @@ if (isset($_SESSION["user_id"])) {
     $wpmPR = htmlspecialchars($user["wpm"]);
     $totalTests = htmlspecialchars($user["testsTaken"]);
     //typingtest table
-    $sql = "SELECT * FROM typingtest
-            WHERE id = {$_SESSION["user_id"]}";
-    $result = $mysqli->query($sql);
-    $user = $result->fetch_assoc();
-    foreach ($user as $row) {
+    $sql = "SELECT * FROM typingtest WHERE id = {$_SESSION["user_id"]}";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
+    $userData = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    foreach ($userData as $row) {
         // Assuming you have columns named 'column1', 'column2', etc.
         echo 'document.getElementById("user-data-container").innerHTML += "<p>' . $row['wpm'] . ' - ' . $row['accuracy'] . '</p>";';
     }
