@@ -15,6 +15,20 @@ if (isset($_SESSION["user_id"])) {
     //typingtest table
     // Fetch user data from the database
 
+    //find total tests and find highest wpm
+    $query = "SELECT * FROM typingtest WHERE id = {$_SESSION["user_id"]}";
+    $result = $mysqli->query($query);
+    $rows = $result->fetch_all(MYSQLI_ASSOC);
+    $totalMaxWpm = 0;
+    $totalCount = 0;
+    foreach ($rows as $row) {
+        if ($row['wpm'] > $totalMaxWpm) {
+            $totalMaxWpm = $row['wpm'];
+        }
+        $totalCount++;
+        // Update for additional columns as needed
+    }
+
     //15s stats
     $query = "SELECT * FROM typingtest WHERE id = {$_SESSION["user_id"]} AND mode = 'time' AND testTime = 15";
     $result = $mysqli->query($query);
@@ -166,11 +180,11 @@ if (isset($_SESSION["user_id"])) {
                 </div>
                 <div class="statsContainer">
                     <h1 class="notSignedIn" id="preferenceHeader">total tests completed<i class="fa-solid fa-chart-line"></i></h1>
-                    <a class="results"><?= $totalTests ?> tests</a>
+                    <a class="results"><?= $totalCount ?> tests</a>
                 </div>
                 <div class="statsContainer">
                     <h1 class="notSignedIn" id="preferenceHeader">highest wpm<i class="fa-solid fa-crown"></i></h1>
-                    <a class="results"><?= $wpmPR ?> wpm</a>
+                    <a class="results"><?= $totalMaxWpm ?> wpm</a>
                 </div>
             </div>
             <div id = "preferenceHeader" style = "font-weight: bold; padding: 2rem;" >personal bests</div>
