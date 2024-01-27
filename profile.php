@@ -15,11 +15,12 @@ if (isset($_SESSION["user_id"])) {
     //typingtest table
     // Fetch user data from the database
     $query = "SELECT * FROM typingtest WHERE id = {$_SESSION["user_id"]}";
-    $result = $mysqli->query($sql);
+    $result = $mysqli->query($query);
     $rows = $result->fetch_all(MYSQLI_ASSOC);
     foreach ($rows as $row) {
         echo "<p>User ID: " . $row['id'] . "</p>";
     }
+    
 
 
 } else //if not logged in but somehow managed to get to this page (Neccesary)
