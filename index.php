@@ -13,6 +13,20 @@ if (isset($_COOKIE["id"])) {
 if (isset($_GET["finish"]))
 {
     $wpm = $_GET["wpm"];
+    //update the typingtests completed
+    $mysqli = require __DIR__ . "/config.php";
+    $sql = "INSERT INTO typingtest (id) 
+                VALUES (?)";
+        
+        $stmt = $mysqli->stmt_init();
+        if (!$stmt->prepare($sql)) {
+            die("SQL error: " . $mysqli->error);
+        }
+    
+        $stmt->bind_param("i", $_POST["username"], $_POST["email"], $password_hash, $dateCreated);   
+        $stmt->execute();
+        $stmt->close();
+
     $sql = "INSERT INTO typingtest (wpm) 
     VALUES ('$wpm')";
     if (isset($_SESSION["user_id"])) {
