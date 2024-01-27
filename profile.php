@@ -14,7 +14,7 @@ if (isset($_SESSION["user_id"])) {
     $totalTests = htmlspecialchars($user["testsTaken"]);
     //typingtest table
     // Fetch user data from the database
-    $sql = "SELECT * FROM typingtest WHERE id = :userId";
+    $sql = "SELECT * FROM typingtest WHERE id = {$_SESSION["user_id"]}";
     $stmt = $pdo->prepare($sql);
     $stmt->bindParam(':userId', $_SESSION["user_id"], PDO::PARAM_STR);
     $stmt->execute();
