@@ -886,6 +886,7 @@ include "themes.scss"; //file contains all fonts
     display: flex;
     white-space: nowrap;
     align-items: center;
+    white-space: pre;
 }
 
     .preferences a:hover {
