@@ -14,26 +14,134 @@ if (isset($_SESSION["user_id"])) {
     $totalTests = htmlspecialchars($user["testsTaken"]);
     //typingtest table
     // Fetch user data from the database
-    $query = "SELECT * FROM typingtest WHERE id = {$_SESSION["user_id"]} AND mode = 'time' AND testTime = 15";
 
+    //15s stats
+    $query = "SELECT * FROM typingtest WHERE id = {$_SESSION["user_id"]} AND mode = 'time' AND testTime = 15";
     $result = $mysqli->query($query);
     $rows = $result->fetch_all(MYSQLI_ASSOC);
-    //15s
-    $sumWpm = 0;
-    $sumAccuracy = 0;
-    $count = 0;
-    $maxWpm = 0;
-    $accuracyForMaxWpm = 0;
+    $count15s = 0;
+    $maxWpm15s = 0;
+    $accuracyForMaxWpm15s = 0;
     foreach ($rows as $row) {
-        if ($row['wpm'] > $maxWpm) {
-            $maxWpm = $row['wpm'];
-            $accuracyForMaxWpm = $row['accuracy'];
+        if ($row['wpm'] > $maxWpm15s) {
+            $maxWpm15s = $row['wpm'];
+            $accuracyForMaxWpm15s = $row['accuracy'];
         }
-        $count++;
+        $count15s++;
+        // Update for additional columns as needed
+    }
+
+    //30s stats
+    $query = "SELECT * FROM typingtest WHERE id = {$_SESSION["user_id"]} AND mode = 'time' AND testTime = 30";
+    $result = $mysqli->query($query);
+    $rows = $result->fetch_all(MYSQLI_ASSOC);
+    $count30s = 0;
+    $maxWpm30s = 0;
+    $accuracyForMaxWpm30s = 0;
+    foreach ($rows as $row) {
+        if ($row['wpm'] > $maxWpm30s) {
+            $maxWpm30s = $row['wpm'];
+            $accuracyForMaxWpm30s = $row['accuracy'];
+        }
+        $count30s++;
+        // Update for additional columns as needed
+    }
+
+    //60s stats
+    $query = "SELECT * FROM typingtest WHERE id = {$_SESSION["user_id"]} AND mode = 'time' AND testTime = 60";
+    $result = $mysqli->query($query);
+    $rows = $result->fetch_all(MYSQLI_ASSOC);
+    $count60s = 0;
+    $maxWpm60s = 0;
+    $accuracyForMaxWpm60s = 0;
+    foreach ($rows as $row) {
+        if ($row['wpm'] > $maxWpm60s) {
+            $maxWpm60s = $row['wpm'];
+            $accuracyForMaxWpm60s = $row['accuracy'];
+        }
+        $count60s++;
         // Update for additional columns as needed
     }
     
+    //120s stats
+    $query = "SELECT * FROM typingtest WHERE id = {$_SESSION["user_id"]} AND mode = 'time' AND testTime = 120";
+    $result = $mysqli->query($query);
+    $rows = $result->fetch_all(MYSQLI_ASSOC);
+    $count120s = 0;
+    $maxWpm120s = 0;
+    $accuracyForMaxWpm120s = 0;
+    foreach ($rows as $row) {
+        if ($row['wpm'] > $maxWpm120s) {
+            $maxWpm120s = $row['wpm'];
+            $accuracyForMaxWpm120s = $row['accuracy'];
+        }
+        $count120s++;
+        // Update for additional columns as needed
+    }
+
+    //10w stats
+    $query = "SELECT * FROM typingtest WHERE id = {$_SESSION["user_id"]} AND mode = 'words' AND testTime = 10";
+    $result = $mysqli->query($query);
+    $rows = $result->fetch_all(MYSQLI_ASSOC);
+    $count10w = 0;
+    $maxWpm10w = 0;
+    $accuracyForMaxWpm10w = 0;
+    foreach ($rows as $row) {
+        if ($row['wpm'] > $maxWpm10w) {
+            $maxWpm10w = $row['wpm'];
+            $accuracyForMaxWpm10w = $row['accuracy'];
+        }
+        $count10w++;
+        // Update for additional columns as needed
+    }
+
+    //25w stats
+    $query = "SELECT * FROM typingtest WHERE id = {$_SESSION["user_id"]} AND mode = 'words' AND testTime = 25";
+    $result = $mysqli->query($query);
+    $rows = $result->fetch_all(MYSQLI_ASSOC);
+    $count25w = 0;
+    $maxWpm25w = 0;
+    $accuracyForMaxWpm25w = 0;
+    foreach ($rows as $row) {
+        if ($row['wpm'] > $maxWpm25w) {
+            $maxWpm25w = $row['wpm'];
+            $accuracyForMaxWpm25w = $row['accuracy'];
+        }
+        $count25w++;
+        // Update for additional columns as needed
+    }
+
+    //50w stats
+    $query = "SELECT * FROM typingtest WHERE id = {$_SESSION["user_id"]} AND mode = 'words' AND testTime = 50";
+    $result = $mysqli->query($query);
+    $rows = $result->fetch_all(MYSQLI_ASSOC);
+    $count50w = 0;
+    $maxWpm50w = 0;
+    $accuracyForMaxWpm50w = 0;
+    foreach ($rows as $row) {
+        if ($row['wpm'] > $maxWpm50w) {
+            $maxWpm50w = $row['wpm'];
+            $accuracyForMaxWpm50w = $row['accuracy'];
+        }
+        $count50w++;
+        // Update for additional columns as needed
+    }
     
+    //100w stats
+    $query = "SELECT * FROM typingtest WHERE id = {$_SESSION["user_id"]} AND mode = 'words' AND testTime = 100";
+    $result = $mysqli->query($query);
+    $rows = $result->fetch_all(MYSQLI_ASSOC);
+    $count100w = 0;
+    $maxWpm50w = 0;
+    $accuracyForMaxWpm100w = 0;
+    foreach ($rows as $row) {
+        if ($row['wpm'] > $maxWpm100w) {
+            $maxWpm100w = $row['wpm'];
+            $accuracyForMaxWpm50w = $row['accuracy'];
+        }
+        $count100w++;
+        // Update for additional columns as needed
+    }
 
 
 } else //if not logged in but somehow managed to get to this page (Neccesary)
@@ -69,9 +177,9 @@ if (isset($_SESSION["user_id"])) {
             <div id="displayStats">
                 <div class="statsContainer">
                     <div id = "preferenceHeader" class = "notSignedIn">15s</div>
-                    <div class = "results">wpm <span style = "color: var(--testText)"><?= $maxWpm ?></span></div>
-                    <div class = "results">accuracy <span style = "color: var(--testText)"><?= $accuracyForMaxWpm ?></span></div>
-                    <div class = "results">tests <span style = "color: var(--testText)"><?= $count ?></span></div>
+                    <div class = "results">wpm <span style = "color: var(--testText)"><?= $maxWpm15s ?></span></div>
+                    <div class = "results">accuracy <span style = "color: var(--testText)"><?= $accuracyForMaxWpm15s ?></span></div>
+                    <div class = "results">tests <span style = "color: var(--testText)"><?= $count15s ?></span></div>
                 </div>
             </div>
             <a id = "showRestart" class="notSignedIn" href="logout.php">logout<i class="fa-solid fa-right-from-bracket"></i></a>
