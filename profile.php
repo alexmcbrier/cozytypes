@@ -66,9 +66,9 @@ if (isset($_SESSION["user_id"])) {
             <div id="displayStats">
                 <div class="statsContainer">
                     <div id = "preferenceHeader" class = "notSignedIn">15s</div>
-                    <span class = "results">wpm <span style = "color: var(--testText)"><?= $maxWpm ?></span></span>
-                    <div class = "results">accuracy | <?= $accuracyForMaxWpm ?></div>
-                    <div class = "results">tests | <?= $count ?></div>
+                    <div class = "results">wpm <span style = "color: var(--testText)"><?= $maxWpm ?></span></div>
+                    <div class = "results">accuracy <span style = "color: var(--testText)"><?= $accuracyForMaxWpm ?></span></div>
+                    <div class = "results">tests <span style = "color: var(--testText)"><?= $count ?></span></div>
                 </div>
             </div>
             <a id = "showRestart" class="notSignedIn" href="logout.php">logout<i class="fa-solid fa-right-from-bracket"></i></a>
