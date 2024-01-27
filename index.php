@@ -13,7 +13,7 @@ if (isset($_COOKIE["id"])) {
 if (isset($_GET["finish"]))
 {
     $wpm = $_GET["wpm"];
-    $sql = "INSERT INTO typing_test (wpm) 
+    $sql = "INSERT INTO typingtest (wpm) 
     VALUES ('$wpm')";
     if (isset($_SESSION["user_id"])) {
         $mysqli = require __DIR__ . "/config.php";
