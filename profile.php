@@ -20,16 +20,15 @@ if (isset($_SESSION["user_id"])) {
     $sumWpm = 0;
     $sumAccuracy = 0;
     $count = 0;
-
+    $maxWpm = 0;
+    $accuracyForMaxWpm = 0;
     foreach ($rows as $row) {
-        $sumWpm += $row['wpm'];
-        $sumAccuracy += $row['accuracy'];
-        // Add any additional columns for which you want to calculate the average
-        $count++;
+        if ($row['wpm'] > $maxWpm) {
+            $maxWpm = $row['wpm'];
+            $accuracyForMaxWpm = $row['accuracy'];
+        }
+        // Update for additional columns as needed
     }
-
-    $avgWpm = ($count > 0) ? $sumWpm / $count : 0;
-    $avgAccuracy = ($count > 0) ? $sumAccuracy / $count : 0;
     
     
 
@@ -55,7 +54,7 @@ if (isset($_SESSION["user_id"])) {
                     <h1 class="notSignedIn" id="preferenceHeader"><?= htmlspecialchars($user["username"]) ?><i class="fa-regular fa-user"></i></h1>
                 </div>
                 <div class="statsContainer">
-                    <h1 class="notSignedIn" id="preferenceHeader">tests completed<i class="fa-solid fa-chart-line"></i></h1>
+                    <h1 class="notSignedIn" id="preferenceHeader">total tests completed<i class="fa-solid fa-chart-line"></i></h1>
                     <a class="results"><?= $totalTests ?> tests</a>
                 </div>
                 <div class="statsContainer">
@@ -63,12 +62,12 @@ if (isset($_SESSION["user_id"])) {
                     <a class="results"><?= $wpmPR ?> wpm</a>
                 </div>
             </div>
-            <div class="statsContainer">
-                <div class="preferences">
-                    <div id = "preferenceHeader" class = "notSignedIn">15s</div>
-                    <div class = "results">tests complete<?= $count ?></div>
-                    <div class = "results">average wpm<?= $avgWpm ?></div>
-                    <div class = "results">average accuracy<?= $avgAccuracy ?></div>
+            <div id="displayStats">
+                <div class="statsContainer">
+                    <div id = "preferenceHeader" class = "notSignedIn">15s highscore</div>
+                    <div class = "results">wpm | <?= $maxWpm ?></div>
+                    <div class = "results">accuracy | <?= $accuracyForMaxWpm ?></div>
+                    <div class = "results">tests | <?= $count ?></div>
                 </div>
             </div>
             <a id = "showRestart" class="notSignedIn" href="logout.php">logout<i class="fa-solid fa-right-from-bracket"></i></a>
