@@ -28,7 +28,7 @@ if (isset($_SESSION["user_id"])) {
             $maxWpm = $row['wpm'];
             $accuracyForMaxWpm = $row['accuracy'];
         }
-        count++;
+        $count++;
         // Update for additional columns as needed
     }
     
