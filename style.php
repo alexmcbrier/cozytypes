@@ -513,7 +513,7 @@ include "themes.scss"; //file contains all fonts
         opacity: var(--caretOpacity);
         border-radius: 1.5rem;
         position: absolute;
-        transition: left 0.125s ease;
+        transition: left 0s ease;
         height: var(--caretHeight);
         margin-top: var(--caretTop);
         animation: blink 1.5s infinite 1s;
