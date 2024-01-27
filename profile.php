@@ -214,7 +214,7 @@ if (isset($_SESSION["user_id"])) {
                     <div class = "results">tests <span style = "color: var(--testText)"><?= $count25w ?></span></div>
                 </div>
                 <div class="statsContainer">
-                    <div id = "preferenceHeader" class = "notSignedIn">   50 words    </div>
+                    <div id = "preferenceHeader" class = "notSignedIn">    50 words    </div>
                     <div class = "results">wpm <span style = "color: var(--testText)"><?= $maxWpm50w ?></span></div>
                     <div class = "results">accuracy <span style = "color: var(--testText)"><?= $accuracyForMaxWpm50w ?></span></div>
                     <div class = "results">tests <span style = "color: var(--testText)"><?= $count50w ?></span></div>
