@@ -18,7 +18,7 @@ if (isset($_SESSION["user_id"])) {
             WHERE id = {$_SESSION["user_id"]}";
     $result = $mysqli->query($sql);
     $user = $result->fetch_assoc();
-    foreach ($userData as $row) {
+    foreach ($user as $row) {
         // Assuming you have columns named 'column1', 'column2', etc.
         echo 'document.getElementById("user-data-container").innerHTML += "<p>' . $row['wpm'] . ' - ' . $row['accuracy'] . '</p>";';
     }
