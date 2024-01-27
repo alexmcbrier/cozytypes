@@ -16,7 +16,6 @@ if (isset($_SESSION["user_id"])) {
     // Fetch user data from the database
     $sql = "SELECT * FROM typingtest WHERE id = {$_SESSION["user_id"]}";
     $stmt = $pdo->prepare($sql);
-    $stmt->bindParam(':userId', $_SESSION["user_id"], PDO::PARAM_STR);
     $stmt->execute();
     $userData = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
