@@ -13,17 +13,20 @@ if (isset($_COOKIE["id"])) {
 if (isset($_GET["finish"]))
 {
     $wpm = $_GET["wpm"];
+    $accuracy = $_GET["accuracy"];
+    $mode = $_GET["mode"];
+    $testTime = $_GET["testTime"];
     //update the typingtests completed
     $mysqli = require __DIR__ . "/config.php";
-    $sql = "INSERT INTO typingtest (id) 
-                VALUES (?)";
+    $sql = "INSERT INTO typingtest (id, wpm, accuracy, mode, testTime) 
+                VALUES (?, ?, ?, ?, ?)";
         
         $stmt = $mysqli->stmt_init();
         if (!$stmt->prepare($sql)) {
             die("SQL error: " . $mysqli->error);
         }
         $id = 12;
-        $stmt->bind_param("i", $id);   
+        $stmt->bind_param("iiisii", $_SESSION["user_id"], $wpm, $accuracy, $mode, $testTime);   
         $stmt->execute();
         $stmt->close();
 
