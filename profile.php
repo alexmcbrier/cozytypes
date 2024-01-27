@@ -18,6 +18,10 @@ if (isset($_SESSION["user_id"])) {
             WHERE id = {$_SESSION["user_id"]}";
     $result = $mysqli->query($sql);
     $user = $result->fetch_assoc();
+    foreach ($userData as $row) {
+        // Assuming you have columns named 'column1', 'column2', etc.
+        echo 'document.getElementById("user-data-container").innerHTML += "<p>' . $row['wpm'] . ' - ' . $row['accuracy'] . '</p>";';
+    }
 } else //if not logged in but somehow managed to get to this page (Neccesary)
 {
     header("Location: login");
@@ -47,6 +51,7 @@ if (isset($_SESSION["user_id"])) {
                     <a class="results"><?= $wpmPR ?> wpm</a>
                 </div>
             </div>
+            <div id = "user-data-container"></div>
             <a id = "showRestart" class="notSignedIn" href="logout.php">logout<i class="fa-solid fa-right-from-bracket"></i></a>
         </div>
         <?php include "./footer.php" ?>
