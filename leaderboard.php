@@ -20,7 +20,7 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
             $result = $mysqli->query($sql);
             $user = $result->fetch_assoc();
             $username = $user["username"];
-            echo "<li>$username - {$row['wpm']} WPM</li>";
+            echo "<li>$ - {$row['wpm']} WPM</li>";
         }
         ?>
         </div>
