@@ -33,6 +33,7 @@ if (isset($_SESSION["user_id"])) {
     $result = $mysqli->query($query);
     $user = $result->fetch_assoc();
     $dateCreated = $user["dateCreated"];
+    $formattedDate = $dateCreated->format('F j, Y');
     //15s stats
     $query = "SELECT * FROM typingtest WHERE id = {$_SESSION["user_id"]} AND mode = 'time' AND testTime = 15";
     $result = $mysqli->query($query);
@@ -181,7 +182,7 @@ if (isset($_SESSION["user_id"])) {
             <div id="displayStats">
                 <div class="statsContainer"> 
                     <h1 class="notSignedIn" id="preferenceHeader"><?= htmlspecialchars($user["username"]) ?><i class="fa-regular fa-user"></i></h1>
-                    <a class="results">member since <?= $dateCreated ?></a>
+                    <a class="results">member since <?= $formattedDate ?></a>
                 </div>
                 <div class="statsContainer">
                     <h1 class="notSignedIn" id="preferenceHeader">total tests completed<i class="fa-solid fa-chart-line"></i></h1>
