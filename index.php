@@ -145,7 +145,7 @@ if (isset($_GET["finish"]))
                 }
             });
         </script>
-        <div id="displayStats" style = "background-color: var(--background)">
+        <div id="displayStats" style = "background-color: var(--background); margin: 1rem 0rem">
             <div class="statsContainer" style = "background-color: var(--rowBackground);">
                 <h1 class="notSignedIn" id="preferenceHeader">Words Per Minute<i class="fa-solid fa-clock-rotate-left"></i></h1>
                 <a class="results"><?= $_GET["wpm"] ?></a>
