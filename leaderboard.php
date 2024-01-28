@@ -17,10 +17,10 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
         <?php
         foreach ($rows as $row) {
             //now to get the username from the id
-            $sql = "SELECT * FROM user WHERE id = {$row['id']}";
-            $result = $mysqli->query($sql);
+            $query = "SELECT * FROM user WHERE id = {$row['id']}";
+            $result = $mysqli->query($query);
             $user = $result->fetch_assoc();
-            echo "<li>{$user["username"]} - {$row['wpm']} WPM</li>";
+            echo "<li> - {$row['wpm']} WPM</li>";
             }
         ?>
         </div>
