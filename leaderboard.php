@@ -4,6 +4,7 @@ $mysqli = require __DIR__ . "/config.php";
 $query = "SELECT * FROM typingtest ORDER BY wpm DESC LIMIT 5";
 $result = $mysqli->query($query);
 $rows = $result->fetch_all(MYSQLI_ASSOC);
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,12 +16,8 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
         <div id="middle">
         <?php
         foreach ($rows as $row) {
-            // Now to get the username from the id
-            $sql = "SELECT * FROM user WHERE id = {$row['id']}";
-            $result = $mysqli->query($sql);
-            $user = $result->fetch_assoc();
-            $username = $user["username"];
-            echo "<li>$ - {$row['wpm']} WPM</li>";
+            //now to get the username from the id
+            echo "<li>{$row['username']} - {$row['wpm']} WPM</li>";
         }
         ?>
         </div>
