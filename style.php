@@ -1219,7 +1219,12 @@ include "themes.scss"; //file contains all fonts
     }
     #signInLink {
         text-decoration: none;
-        color: var(--row);
+        color: var(--currentWord);
+    }
+    #signInText {
+       align-self: center; 
+       display: flex; 
+       color: var(--row)
     }
     #middle {
         height: 100%;
