@@ -1217,7 +1217,10 @@ include "themes.scss"; //file contains all fonts
         margin-right: 7rem;
 
     }
-
+    #signInLink {
+        text-decoration: none;
+        color: var(--row);
+    }
     #middle {
         height: 100%;
         justify-content: center;
