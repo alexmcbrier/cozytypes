@@ -17,8 +17,11 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
         <?php
         foreach ($rows as $row) {
             //now to get the username from the id
-            echo "<li>{$row['username']} - {$row['wpm']} WPM</li>";
-        }
+            $sql = "SELECT * FROM user WHERE id = {$row['id']}";
+            $result = $mysqli->query($sql);
+            $user = $result->fetch_assoc();
+            echo "<li>{$user["username"]} - {$row['wpm']} WPM</li>";
+            }
         ?>
         </div>
         <?php include "./footer.php" ?>
