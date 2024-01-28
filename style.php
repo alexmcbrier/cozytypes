@@ -616,6 +616,7 @@ include "themes.scss"; //file contains all fonts
         margin: 2.5rem 0;
         box-sizing: border-box;
         font-family: var(--fontFamily);
+        font-size: 1rem;
     }
 
     #kecapContainer {
@@ -896,6 +897,7 @@ include "themes.scss"; //file contains all fonts
     #loginHeader {
         color: var(--currentWord);
         user-select: none;
+        font-size: 2.5rem
     }
     @keyframes slide {
         from {
