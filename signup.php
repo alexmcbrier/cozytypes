@@ -14,15 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     else if (empty($_POST["password"])) { //if passowrd empty
         $is_invalid = true;
     }
-
-    else if  (empty($_POST["confirm"])) { //if confirm passowrd empty
-        $is_invalid = true;
-    }
-
     else if  (strlen($_POST["password"]) < 8) { //at least 8 characters
-        $is_invalid = true;
-    }
-    else if  ($_POST["password"] !== $_POST["confirm"]) { //make sure confirmation matches
         $is_invalid = true;
     }
     if (!$is_invalid)
@@ -77,7 +69,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <input type="text" autocomplete = "off" placeholder="username" id="username" name = "username">
                 <input type="text" autocomplete = "off" placeholder="email" id="email"  name = "email">
                 <input type="text" autocomplete = "off" placeholder="password" id="password" name = "password">
-                <input type="text" autocomplete = "off" placeholder="confirm password" id="confirm"  name = "confirm">
                 <button class = "loginBtn" id = "loginButton1" type="submit" value="submit" name="register">Create account</button>
             </form>  
             <?php include "./footer.php" ?>
