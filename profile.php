@@ -194,7 +194,7 @@ if (isset($_SESSION["user_id"])) {
                     <a class="results"><?= $totalMaxWpm ?> wpm</a>
                 </div>
             </div>
-            <div id = "showSignIn" style = "font-weight: bold; padding: 2rem;" >personal bests<i class="fa-solid fa-medal"></div>
+            <div id = "showSignIn" style = "font-weight: bold; padding: 2rem;" >personal bests<i class="fa-solid fa-medal"></i></div>
             <div id="displayStats">
                 <div class="statsContainer">
                     <div id = "preferenceHeader" class = "notSignedIn">  15 seconds  </div>
