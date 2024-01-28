@@ -1155,7 +1155,7 @@ include "themes.scss"; //file contains all fonts
         }
     }
     .loginBtn {
-        padding: 1rem;
+        padding: 1.5rem;
         box-sizing: border-box;
         text-align: center;
         border-radius: 999px;
@@ -1223,8 +1223,9 @@ include "themes.scss"; //file contains all fonts
     }
     #signInText {
        align-self: center; 
-       display: flex; 
-       color: var(--row)
+       color: var(--row);
+       text-align: center;
+       padding: 2rem;
     }
     #middle {
         height: 100%;
