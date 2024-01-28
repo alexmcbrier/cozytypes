@@ -18,8 +18,9 @@ if (isset($_SESSION["user_id"])) {
     //find total tests and find highest wpm
     $query = "SELECT * FROM typingtest WHERE id = {$_SESSION["user_id"]}";
     $result = $mysqli->query($query);
-    $user = $result->fetch_assoc();
-    $dateCreated = htmlspecialchars($user["dateCreated"]);
+    $rows = $result->fetch_all(MYSQLI_ASSOC);
+    $totalMaxWpm = 0;
+    $totalCount = 0;
     foreach ($rows as $row) {
         if ($row['wpm'] > $totalMaxWpm) {
             $totalMaxWpm = $row['wpm'];
@@ -30,7 +31,8 @@ if (isset($_SESSION["user_id"])) {
     //get User account created created
     $query = "SELECT * FROM typingtest WHERE id = {$_SESSION["user_id"]}";
     $result = $mysqli->query($query);
-    $rows = $result->fetch_all(MYSQLI_ASSOC);
+    $user = $result->fetch_assoc();
+    $dateCreated = $user["dateCreated"];
     //15s stats
     $query = "SELECT * FROM typingtest WHERE id = {$_SESSION["user_id"]} AND mode = 'time' AND testTime = 15";
     $result = $mysqli->query($query);
