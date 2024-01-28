@@ -29,7 +29,7 @@ if (isset($_SESSION["user_id"])) {
         // Update for additional columns as needed
     }
     //get User account created created
-    $query = "SELECT * FROM typingtest WHERE id = {$_SESSION["user_id"]}";
+    $query = "SELECT * FROM user WHERE id = {$_SESSION["user_id"]}";
     $result = $mysqli->query($query);
     $user = $result->fetch_assoc();
     $dateCreated = $user["dateCreated"];
