@@ -32,7 +32,8 @@ if (isset($_SESSION["user_id"])) {
     $query = "SELECT * FROM user WHERE id = {$_SESSION["user_id"]}";
     $result = $mysqli->query($query);
     $user = $result->fetch_assoc();
-    $dateCreated = $user["dateCreated"];
+    $dateCreated = new DateTime($user["dateCreated"]);
+    // Format the date as "F j, Y"
     $formattedDate = $dateCreated->format('F j, Y');
     //15s stats
     $query = "SELECT * FROM typingtest WHERE id = {$_SESSION["user_id"]} AND mode = 'time' AND testTime = 15";
