@@ -70,8 +70,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <input type="text" autocomplete = "off" placeholder="email" id="email"  name = "email">
                 <input type="text" autocomplete = "off" placeholder="password" id="password" name = "password">
                 <button class = "loginBtn" id = "loginButton1" type="submit" value="submit" name="register">Create account</button>
+                <div id = "signInText">Already have an account? <a id = "signInLink" href="login"> Login</a></div>
             </form>  
-            <div id = "signInText">Already have an account?<a id = "signInLink" href="login">Login</a></div>
             <?php include "./footer.php" ?>
         </div>
     </body>
