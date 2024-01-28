@@ -18,9 +18,8 @@ if (isset($_SESSION["user_id"])) {
     //find total tests and find highest wpm
     $query = "SELECT * FROM typingtest WHERE id = {$_SESSION["user_id"]}";
     $result = $mysqli->query($query);
-    $rows = $result->fetch_all(MYSQLI_ASSOC);
-    $totalMaxWpm = 0;
-    $totalCount = 0;
+    $user = $result->fetch_assoc();
+    $dateCreated = htmlspecialchars($user["dateCreated"]);
     foreach ($rows as $row) {
         if ($row['wpm'] > $totalMaxWpm) {
             $totalMaxWpm = $row['wpm'];
@@ -28,7 +27,10 @@ if (isset($_SESSION["user_id"])) {
         $totalCount++;
         // Update for additional columns as needed
     }
-
+    //get User account created created
+    $query = "SELECT * FROM typingtest WHERE id = {$_SESSION["user_id"]}";
+    $result = $mysqli->query($query);
+    $rows = $result->fetch_all(MYSQLI_ASSOC);
     //15s stats
     $query = "SELECT * FROM typingtest WHERE id = {$_SESSION["user_id"]} AND mode = 'time' AND testTime = 15";
     $result = $mysqli->query($query);
@@ -177,6 +179,7 @@ if (isset($_SESSION["user_id"])) {
             <div id="displayStats">
                 <div class="statsContainer"> 
                     <h1 class="notSignedIn" id="preferenceHeader"><?= htmlspecialchars($user["username"]) ?><i class="fa-regular fa-user"></i></h1>
+                    <a class="results">member since <?= $dateCreated ?></a>
                 </div>
                 <div class="statsContainer">
                     <h1 class="notSignedIn" id="preferenceHeader">total tests completed<i class="fa-solid fa-chart-line"></i></h1>
