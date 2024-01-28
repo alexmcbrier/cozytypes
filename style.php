@@ -631,6 +631,7 @@ include "themes.scss"; //file contains all fonts
     }
     #saveProgress {
         text-decoration: underline;
+        transition: color .25s;
     }
     #saveProgress:hover {
         color: var(--currentWord);
