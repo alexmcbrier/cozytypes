@@ -630,10 +630,10 @@ include "themes.scss"; //file contains all fonts
         -webkit-text-fill-color: var(--currentWord) !important;
     }
     #saveProgress {
-        text-decoration: underline
+        text-decoration: underline;
     }
-    #saveProgress :hover{
-        color: var(--currentWord)
+    #saveProgress:hover {
+        color: var(--currentWord);
     }
     #showSignIn {
         color: var(--row);
