@@ -247,7 +247,7 @@ if (isset($_SESSION["user_id"])) {
                     <div class = "results">tests | <span style = "color: var(--testText)"><?= $count100w ?></span></div>
                 </div>
             </div>
-            <a id = "showRestart" class="notSignedIn" href="logout.php">logout<i class="fa-solid fa-right-from-bracket"></i></a>
+            <a id = "showRestart" class="notSignedIn" href="logout.php" style = "font-weight: bold; padding:0rem 2rem;">logout<i class="fa-solid fa-right-from-bracket"></i></a>
         </div>
         <?php include "./footer.php" ?>
     </div>
