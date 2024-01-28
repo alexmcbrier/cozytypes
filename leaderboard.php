@@ -20,7 +20,10 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
             $query = "SELECT * FROM user WHERE id = {$row['id']}";
             $result = $mysqli->query($query);
             $user = $result->fetch_assoc();
-            echo "<li> - {$row['wpm']} WPM</li>";
+            if (!$result) {
+                die("Error in query: " . $mysqli->error);
+            }
+            echo "<li>{$user["username"]} - {$row['wpm']} WPM</li>";
             }
         ?>
         </div>
