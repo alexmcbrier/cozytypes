@@ -171,7 +171,7 @@ if (isset($_SESSION["user_id"])) {
     <div id="sidebar">
         <i style="cursor: pointer" onclick="openSidebar()" id = "sidebarIcon" class="fa-solid fa-chevron-left"></i>
     </div>
-    <div id="mainContent" method="POST" action="preferences.php">
+    <div id="mainContent">
         <?php include "./nav.php" ?>
         <div id="middle">
             <div id="displayStats">
