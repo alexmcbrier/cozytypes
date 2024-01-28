@@ -17,13 +17,8 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
         <?php
         foreach ($rows as $row) {
             //now to get the username from the id
-            $query = "SELECT * FROM user WHERE id = {$row['id']}";
-            $result = $mysqli->query($query);
-            $user = $result->fetch_assoc();
-            if (!$result) {
-                die("Error in query: " . $mysqli->error);
-            }
-            echo "<li>{$user["username"]} - {$row['wpm']} WPM</li>";
+            
+            echo "<li>{{$row['wpm']} WPM</li>";
             }
         ?>
         </div>
