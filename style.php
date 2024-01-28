@@ -403,7 +403,6 @@ include "themes.scss"; //file contains all fonts
     {
         user-select: none;
         color: var(--currentWord);
-        background-color: var(--rowBackground);
         font-size: 1rem;
         border-radius: 1.5rem;
         padding: 1rem;
@@ -1309,7 +1308,10 @@ include "themes.scss"; //file contains all fonts
         flex-direction: column;
     }
     #displayStats {
-
+        display: flex;
+        background-color: var(--rowBackground);
+        border-radius: 2rem;
+        margin: 2rem;
         display: flex;
     }
 
