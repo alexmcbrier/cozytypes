@@ -160,7 +160,7 @@ if (isset($_GET["finish"]))
             </div>
         </div>
         <a id = "showRestart" href="https://cozytypes.com/">play again<i class="fa-solid fa-backward"></i></a>
-        <a id = "showRestart" href="signup"><span class = "footerLinks" >login</span> to save progress<i class="fa-solid fa-medal"></i></a>
+        <a id = "showRestart" href="signup"><span style = "text-decoration: underline" >login</span> to save progress<i class="fa-solid fa-medal"></i></a>
         </div>
         <?php } ?>
         <?php include "./footer.php"?>
