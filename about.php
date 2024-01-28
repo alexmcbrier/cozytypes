@@ -16,7 +16,7 @@ session_start();
                 progress, and improve your overall typing speed. 
                 I am excited to bring this game to you and anyone else who 
                 may enjoy it, and am looking forward to hearing feedback.<br><br>
-                Contact via email: <a class = "aboutLink" href="mailto:cozytypes@cozytypes.com">cozytypes@cozytypes.com</a>
+                Contact via email: <a class = "aboutLink" href="mailto:alexmcbrier@gmail.com">alexmcbrier@gmail.com</a>
                 </h1>
             </div>
         </div>
