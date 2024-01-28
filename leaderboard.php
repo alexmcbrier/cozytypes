@@ -1,7 +1,7 @@
 <?php
 session_start();
 $mysqli = require __DIR__ . "/config.php";
-$query = "SELECT * FROM typingtest ORDER BY wpm DESC LIMIT 5";
+$query = "SELECT * FROM typingtest WHERE id IS NOT NULL ORDER BY wpm DESC LIMIT 5";
 $result = $mysqli->query($query);
 $rows = $result->fetch_all(MYSQLI_ASSOC);
 
@@ -17,6 +17,9 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
         <?php
         foreach ($rows as $row) {
             //now to get the username from the id
+            $query = "SELECT * FROM user WHERE id = {$row['id']}";
+            $result = $mysqli->query($query);
+            $user = $result->fetch_assoc();
             
             echo "<li>{{$row['wpm']} WPM</li>";
             }
