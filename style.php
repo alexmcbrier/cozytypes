@@ -624,13 +624,25 @@ include "themes.scss"; //file contains all fonts
         bottom: 7rem;
         right: 25rem;
     }
-
     /*neccesary when automatically filling in email */
     input:-webkit-autofill {
         transition: background-color 5000s ease-in-out 0s;
         -webkit-text-fill-color: var(--currentWord) !important;
     }
-
+    #saveProgress {
+        text-decoration: underline
+    }
+    #saveProgress :hover{
+        color: var(--currentWord)
+    }
+    #showSignIn {
+        color: var(--row);
+        text-decoration: none;
+        font-size: 2rem;
+        padding: 0rem 1rem;
+        transition: color .25s;
+        user-select: none;
+    }
     .statsItem {
         user-select: none;
         color: var(--currentWord);
