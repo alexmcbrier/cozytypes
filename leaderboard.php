@@ -15,11 +15,11 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
         <div id="middle">
         <?php
         foreach ($rows as $row) {
-            //now to get the username from the id
-            $sql = "SELECT * FROM user WHERE id = {$_SESSION["user_id"]}";
+            // Now to get the username from the id
+            $sql = "SELECT * FROM user WHERE id = {$row['id']}";
             $result = $mysqli->query($sql);
             $user = $result->fetch_assoc();
-            $username = $user["username"]
+            $username = $user["username"];
             echo "<li>$username - {$row['wpm']} WPM</li>";
         }
         ?>
