@@ -139,7 +139,7 @@ $mysqli = require __DIR__ . "/config.php";
                         $query = "SELECT * FROM user WHERE id = {$row['id']}";
                         $result = $mysqli->query($query);
                         $user = $result->fetch_assoc();
-                        $wpm = ($row['wpm'] !== null) ? $row['wpm'] . ' WPM' : '---';
+                        $wpm = ($row['id'] !== null) ? $row['wpm'] . ' WPM' : '---';
                         echo '<div class = "results">' . $user['username'] . ' | ' . $wpm . '</div>';
                         }
                     ?>
