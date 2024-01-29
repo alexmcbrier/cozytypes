@@ -149,12 +149,6 @@ include "themes.scss"; //file contains all fonts
         margin: 0;
         font-family: var(--fontFamily);
     }
-    @media only screen and (max-width: 600px) {
-    .main-body {
-    height: 50%;
-    width: 50%;
-    }
-  }
     .main-body {
         overflow: hidden;
     }
