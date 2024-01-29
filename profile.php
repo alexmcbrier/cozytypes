@@ -179,7 +179,7 @@ if (isset($_SESSION["user_id"])) {
     </div>
     <div id="mainContent">
         <?php include "./nav.php" ?>
-        <div id="middle">
+        <div id="middle" style = "width: 100%">
             <div id="displayStats">
                 <div class="statsContainer"> 
                     <h1 class="notSignedIn" id="preferenceHeader"><?= htmlspecialchars($user["username"]) ?><i class="fa-regular fa-user"></i></h1>
