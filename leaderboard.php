@@ -127,14 +127,24 @@ $mysqli = require __DIR__ . "/config.php";
                     $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'words' AND testTime = 100 ORDER BY wpm DESC LIMIT 5";
                     $result = $mysqli->query($query);
                     $rows = $result->fetch_all(MYSQLI_ASSOC);            
+                    // Ensure there are at least 5 rows, adding empty rows if necessary
+                    while (count($rows) < 5) {
+                        $rows[] = ['id' => null, 'wpm' => null]; // Add an empty row
+                    }
+
                     foreach ($rows as $row) {
-                        //now to get the username from the id
-                        $query = "SELECT * FROM user WHERE id = {$row['id']}";
-                        $result = $mysqli->query($query);
-                        $user = $result->fetch_assoc();
-                        $wpm = ($row['wpm'] !== null) ? $row['wpm'] . ' WPM' : '---';
-                        echo '<div class = "results">' . $user['username'] . ' | ' . $wpm . '</div>';
+                        // Now to get the username from the id
+                        $username = '---';
+                        if ($row['id'] !== null) {
+                            $query = "SELECT * FROM user WHERE id = {$row['id']}";
+                            $result = $mysqli->query($query);
+                            $user = $result->fetch_assoc();
+                            $username = ($user !== null) ? $user['username'] : '---';
                         }
+
+                        $wpm = ($row['wpm'] !== null) ? $row['wpm'] . ' WPM' : '---';
+                        echo '<div class="results">' . $username . ' | ' . $wpm . '</div>';
+                    }
                     ?>
                 </div>
             </div>
