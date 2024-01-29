@@ -643,6 +643,9 @@ include "themes.scss"; //file contains all fonts
         transition: color .25s;
         user-select: none;
     }
+    .leaderboardText {
+        background-color: var(--rowBackground)
+    }
     .statsItem {
         user-select: none;
         color: var(--currentWord);
