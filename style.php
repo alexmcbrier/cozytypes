@@ -153,6 +153,7 @@ include "themes.scss"; //file contains all fonts
     .main-body {
     height: 50%;
     width: 50%;
+    }
   }
     .main-body {
         overflow: hidden;
