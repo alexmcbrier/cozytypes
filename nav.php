@@ -12,6 +12,7 @@ if (isset($_SESSION["user_id"])) {
     </a>
     <a class = "navIcon" href="https://cozytypes.com" ><i class="fa-solid fa-house"></i></a>
     <a class = "navIcon" href="/preferences"><i class="fa-solid fa-gear"></i></a>
+    <a class = "navIcon" href="/leaderboard"><i class="fa-solid fa-crown"></i></a>
     <a class = "navIcon" href="/about"><i class="fa-solid fa-info"></i></a>
     <a href="/signup" id = "showUsername">
         <i class="fa-regular fa-user"></i>

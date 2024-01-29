@@ -11,7 +11,7 @@ $mysqli = require __DIR__ . "/config.php";
     <div id="mainContent">
         <?php include "./nav.php" ?>
         <div id="middle">
-            <div id = "showSignIn" style = "font-weight: bold; padding:0rem 2rem;" >Leaderboard<i class="fa-solid fa-medal"></i></div>
+            <div id = "showSignIn" style = "font-weight: bold; padding:0rem 2rem;" >Leaderboard<i class="fa-solid fa-crown"></i></div>
             <div id = "displayStats">
                 <div class = "statsContainer">
                     <div id = "preferenceHeader" class = "notSignedIn">15 seconds </div>
