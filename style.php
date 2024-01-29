@@ -149,6 +149,13 @@ include "themes.scss"; //file contains all fonts
         margin: 0;
         font-family: var(--fontFamily);
     }
+    @media only screen and (max-width: 600px) {
+    html, body {
+        height: 100%;
+        margin: 0; /* Remove default margin */
+        padding: 0; /* Remove default padding */
+        /* Additional styles for mobile devices */
+    }
     .main-body {
         overflow: hidden;
     }

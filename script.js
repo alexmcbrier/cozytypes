@@ -578,17 +578,6 @@ function loadPreferences() {
     setPreference("blur", blur);
     setPreference("mode", mode);
 }
-// Set the initial scale on page load
-function setInitialScale() {
-    var viewportMeta = document.querySelector('meta[name="viewport"]');
-    if (viewportMeta) {
-      // Set the initial scale to 0.5 for screens with a maximum width of 600px (adjust as needed)
-      viewportMeta.setAttribute('content', 'width=device-width, initial-scale=0.5');
-    }
-  }
-
-  // Run the function on page load
-window.onload = setInitialScale;
 loadPreferences();
 document.body.onLoad = refresh();
 document.body.onresize = function() { zoomwait() };
