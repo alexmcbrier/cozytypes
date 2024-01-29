@@ -59,7 +59,7 @@ $mysqli = require __DIR__ . "/config.php";
                     ?>
                 </div>
                 <div class = "statsContainer">
-                    <div id = "preferenceHeader" class = "notSignedIn">  60 seconds  </div>
+                    <div id = "preferenceHeader" class = "notSignedIn">  120 seconds  </div>
                     <?php
                     $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'time' AND testTime = 120 ORDER BY wpm DESC LIMIT 5";
                     $result = $mysqli->query($query);
@@ -77,7 +77,7 @@ $mysqli = require __DIR__ . "/config.php";
 
             <div id = "displayStats">
                 <div class = "statsContainer">
-                    <div id = "preferenceHeader" class = "notSignedIn">15 seconds </div>
+                    <div id = "preferenceHeader" class = "notSignedIn">10 words </div>
                     <?php
                     $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'words' AND testTime = 10 ORDER BY wpm DESC LIMIT 5";
                     $result = $mysqli->query($query);
@@ -92,7 +92,7 @@ $mysqli = require __DIR__ . "/config.php";
                     ?>
                 </div>
                 <div class = "statsContainer">
-                    <div id = "preferenceHeader" class = "notSignedIn">  30 seconds  </div>
+                    <div id = "preferenceHeader" class = "notSignedIn">  25 words  </div>
                     <?php
                     $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'words' AND testTime = 25 ORDER BY wpm DESC LIMIT 5";
                     $result = $mysqli->query($query);
@@ -107,7 +107,7 @@ $mysqli = require __DIR__ . "/config.php";
                     ?>
                 </div>
                 <div class = "statsContainer">
-                    <div id = "preferenceHeader" class = "notSignedIn">  60 seconds  </div>
+                    <div id = "preferenceHeader" class = "notSignedIn">  50 words  </div>
                     <?php
                     $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'words' AND testTime = 50 ORDER BY wpm DESC LIMIT 5";
                     $result = $mysqli->query($query);
@@ -122,7 +122,7 @@ $mysqli = require __DIR__ . "/config.php";
                     ?>
                 </div>
                 <div class = "statsContainer">
-                    <div id = "preferenceHeader" class = "notSignedIn">  60 seconds  </div>
+                    <div id = "preferenceHeader" class = "notSignedIn">  100 seconds  </div>
                     <?php
                     $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'words' AND testTime = 100 ORDER BY wpm DESC LIMIT 5";
                     $result = $mysqli->query($query);
@@ -132,6 +132,7 @@ $mysqli = require __DIR__ . "/config.php";
                         $query = "SELECT * FROM user WHERE id = {$row['id']}";
                         $result = $mysqli->query($query);
                         $user = $result->fetch_assoc();
+                        $wpm = ($row['wpm'] !== null) ? $row['wpm'] . ' WPM' : '---';
                         echo '<div class = "results">' . $user['username'] . ' | ' . $row['wpm'] . ' WPM</div>';
                         }
                     ?>
