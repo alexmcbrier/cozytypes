@@ -13,6 +13,7 @@ $mysqli = require __DIR__ . "/config.php";
         <div id="middle">
         <div id = "displayStats">
             <div class = "statsContainer">
+                <div id = "preferenceHeader" class = "notSignedIn">15 seconds </div>
                 <?php
                 $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'time' AND testTime = 15 ORDER BY wpm DESC LIMIT 5";
                 $result = $mysqli->query($query);
@@ -27,6 +28,7 @@ $mysqli = require __DIR__ . "/config.php";
                 ?>
             </div>
             <div class = "statsContainer">
+                <div id = "preferenceHeader" class = "notSignedIn">  30 seconds  </div>
                 <?php
                 $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'time' AND testTime = 30 ORDER BY wpm DESC LIMIT 5";
                 $result = $mysqli->query($query);
@@ -41,6 +43,7 @@ $mysqli = require __DIR__ . "/config.php";
                 ?>
             </div>
             <div class = "statsContainer">
+                <div id = "preferenceHeader" class = "notSignedIn">  60 seconds  </div>
                 <?php
                 $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'time' AND testTime = 60 ORDER BY wpm DESC LIMIT 5";
                 $result = $mysqli->query($query);

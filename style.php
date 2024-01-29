@@ -644,6 +644,7 @@ include "themes.scss"; //file contains all fonts
         user-select: none;
     }
     .leaderboardText {
+        padding: 1rem;
     }
     .statsItem {
         user-select: none;
