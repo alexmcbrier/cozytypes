@@ -10,9 +10,9 @@ $mysqli = require __DIR__ . "/config.php";
 <body class="main-body">
     <div id="mainContent">
         <?php include "./nav.php" ?>
-        <div id="middle" style = "width: 80%">
+        <div id="middle" style = "width: 100%">
             <div id = "showSignIn" style = "font-weight: bold; padding:0rem 2rem;" >Leaderboard<i class="fa-solid fa-crown"></i></div>
-            <div class = "results">must have an account to be on the leaderboard</div>
+            <div class = "results" style = "padding: 0 1rem">must have an account to be on the leaderboard</div>
             <div id = "displayStats">
                 <div class = "statsContainer">
                     <div id = "preferenceHeader" class = "notSignedIn">15 seconds </div>
