@@ -36,7 +36,7 @@ $mysqli = require __DIR__ . "/config.php";
                         }
 
                         $wpm = ($row['wpm'] !== null) ? $row['wpm']: '---';
-                        echo '<div class="results">' . $count . '.   ' . $username . ' | ' . $wpm . '</div>';
+                        echo '<div class="results">' . $count . '. ' . $username . ' | ' . $wpm . '</div>';
                         $count++;
                     }
                     ?>
