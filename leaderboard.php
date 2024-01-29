@@ -22,7 +22,7 @@ $mysqli = require __DIR__ . "/config.php";
                     $query = "SELECT * FROM user WHERE id = {$row['id']}";
                     $result = $mysqli->query($query);
                     $user = $result->fetch_assoc();
-                    echo '<div>' . $user['username'] . ' = ' . $row['wpm'] . ' WPM</div>';
+                    echo '<div class = "leaderboardText">' . $user['username'] . ' = ' . $row['wpm'] . ' WPM</div>';
                     }
                 ?>
             </div>
@@ -36,7 +36,7 @@ $mysqli = require __DIR__ . "/config.php";
                     $query = "SELECT * FROM user WHERE id = {$row['id']}";
                     $result = $mysqli->query($query);
                     $user = $result->fetch_assoc();
-                    echo '<div>' . $user['username'] . ' = ' . $row['wpm'] . ' WPM</div>';
+                    echo '<div class = "leaderboardText">' . $user['username'] . ' = ' . $row['wpm'] . ' WPM</div>';
                     }
                 ?>
             </div>
@@ -50,7 +50,7 @@ $mysqli = require __DIR__ . "/config.php";
                     $query = "SELECT * FROM user WHERE id = {$row['id']}";
                     $result = $mysqli->query($query);
                     $user = $result->fetch_assoc();
-                    echo '<div>' . $user['username'] . ' = ' . $row['wpm'] . ' WPM</div>';
+                    echo '<div class = "leaderboardText">' . $user['username'] . ' = ' . $row['wpm'] . ' WPM</div>';
                     }
                 ?>
             </div>
