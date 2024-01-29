@@ -13,17 +13,17 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
 <body class="main-body">
     <div id="mainContent">
         <?php include "./nav.php" ?>
-        <div id="middle" style = "width: 50%">
-            <div id = "showSignIn">Leaderboard</div>
-            <?php
-            foreach ($rows as $row) {
-                //now to get the username from the id
-                $query = "SELECT * FROM user WHERE id = {$row['id']}";
-                $result = $mysqli->query($query);
-                $user = $result->fetch_assoc();
-                echo "<div class = "leaderboardText">{{$user['username']}     {$row['wpm']} WPM</div>";
-                }
-            ?>
+        <div id="middle">
+        <?php
+        foreach ($rows as $row) {
+            //now to get the username from the id
+            $query = "SELECT * FROM user WHERE id = {$row['id']}";
+            $result = $mysqli->query($query);
+            $user = $result->fetch_assoc();
+            
+            echo "<li>{{$user['username']} = {$row['wpm']} WPM</li>";
+            }
+        ?>
         </div>
         <?php include "./footer.php" ?>
     </div>
