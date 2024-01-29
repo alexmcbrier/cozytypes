@@ -34,7 +34,7 @@ $mysqli = require __DIR__ . "/config.php";
                             $username = ($user !== null) ? $user['username'] : '---';
                         }
 
-                        $wpm = ($row['wpm'] !== null) ? $row['wpm'] . ' wpm' : '---';
+                        $wpm = ($row['wpm'] !== null) ? $row['wpm']: '---';
                         echo '<div class="results">' . $username . ' | ' . $wpm . '</div>';
                     }
                     ?>
@@ -60,7 +60,7 @@ $mysqli = require __DIR__ . "/config.php";
                             $username = ($user !== null) ? $user['username'] : '---';
                         }
 
-                        $wpm = ($row['wpm'] !== null) ? $row['wpm'] . ' wpm' : '---';
+                        $wpm = ($row['wpm'] !== null) ? $row['wpm']: '---';
                         echo '<div class="results">' . $username . ' | ' . $wpm . '</div>';
                     }
                     ?>
@@ -86,7 +86,7 @@ $mysqli = require __DIR__ . "/config.php";
                             $username = ($user !== null) ? $user['username'] : '---';
                         }
 
-                        $wpm = ($row['wpm'] !== null) ? $row['wpm'] . ' wpm' : '---';
+                        $wpm = ($row['wpm'] !== null) ? $row['wpm']: '---';
                         echo '<div class="results">' . $username . ' | ' . $wpm . '</div>';
                     }
                     ?>
@@ -112,7 +112,7 @@ $mysqli = require __DIR__ . "/config.php";
                             $username = ($user !== null) ? $user['username'] : '---';
                         }
 
-                        $wpm = ($row['wpm'] !== null) ? $row['wpm'] . ' wpm' : '---';
+                        $wpm = ($row['wpm'] !== null) ? $row['wpm']: '---';
                         echo '<div class="results">' . $username . ' | ' . $wpm . '</div>';
                     }
                     ?>
@@ -141,7 +141,7 @@ $mysqli = require __DIR__ . "/config.php";
                             $username = ($user !== null) ? $user['username'] : '---';
                         }
 
-                        $wpm = ($row['wpm'] !== null) ? $row['wpm'] . ' wpm' : '---';
+                        $wpm = ($row['wpm'] !== null) ? $row['wpm']: '---';
                         echo '<div class="results">' . $username . ' | ' . $wpm . '</div>';
                     }
                     ?>
@@ -167,7 +167,7 @@ $mysqli = require __DIR__ . "/config.php";
                             $username = ($user !== null) ? $user['username'] : '---';
                         }
 
-                        $wpm = ($row['wpm'] !== null) ? $row['wpm'] . ' wpm' : '---';
+                        $wpm = ($row['wpm'] !== null) ? $row['wpm']: '---';
                         echo '<div class="results">' . $username . ' | ' . $wpm . '</div>';
                     }
                     ?>
@@ -193,7 +193,7 @@ $mysqli = require __DIR__ . "/config.php";
                             $username = ($user !== null) ? $user['username'] : '---';
                         }
 
-                        $wpm = ($row['wpm'] !== null) ? $row['wpm'] . ' wpm' : '---';
+                        $wpm = ($row['wpm'] !== null) ? $row['wpm']: '---';
                         echo '<div class="results">' . $username . ' | ' . $wpm . '</div>';
                     }
                     ?>
@@ -219,7 +219,7 @@ $mysqli = require __DIR__ . "/config.php";
                             $username = ($user !== null) ? $user['username'] : '---';
                         }
 
-                        $wpm = ($row['wpm'] !== null) ? $row['wpm'] . ' wpm' : '---';
+                        $wpm = ($row['wpm'] !== null) ? $row['wpm']: '---';
                         echo '<div class="results">' . $username . ' | ' . $wpm . '</div>';
                     }
                     ?>
