@@ -413,7 +413,7 @@ include "themes.scss"; //file contains all fonts
         text-decoration: none;
         margin: 1rem;
         align-content: center;
-        padding: 2rem;
+        padding: 1rem;
     }
     #textInput {
         resize: none;
@@ -1184,9 +1184,9 @@ include "themes.scss"; //file contains all fonts
     .results
     {   
         color: var(--row);
-        font-size: 1.5rem;
         margin-left: 1rem;
         margin-top: 2rem;
+        font-size: .75rem;
     }
     #loginButton1 {
         background-color: var(--testText);
@@ -1310,8 +1310,8 @@ include "themes.scss"; //file contains all fonts
     #displayStats {
         display: flex;
         background-color: var(--rowBackground);
-        border-radius: 2rem;
-        margin: 2rem;
+        border-radius: 1.5rem;
+        margin: 1rem;
         display: flex;
     }
 
