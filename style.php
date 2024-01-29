@@ -414,6 +414,7 @@ include "themes.scss"; //file contains all fonts
         margin: 1rem;
         align-content: center;
         padding: 1rem;
+        flex: 1;
     }
     #textInput {
         resize: none;
