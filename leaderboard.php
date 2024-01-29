@@ -21,7 +21,7 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
             $result = $mysqli->query($query);
             $user = $result->fetch_assoc();
             
-            echo "<li>{{$user['username']} = {$row['wpm']} WPM</li>";
+            echo "<div>{{$user['username']} = {$row['wpm']} WPM</div>";
             }
         ?>
         </div>
