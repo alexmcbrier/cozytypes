@@ -134,7 +134,7 @@ $mysqli = require __DIR__ . "/config.php";
 
                     foreach ($rows as $row) {
                         // Now to get the username from the id
-                        $username = '---';
+                        $username = 'xxx';
                         if ($row['id'] !== null) {
                             $query = "SELECT * FROM user WHERE id = {$row['id']}";
                             $result = $mysqli->query($query);
