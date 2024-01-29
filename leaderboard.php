@@ -26,20 +26,6 @@ $mysqli = require __DIR__ . "/config.php";
                     }
                 ?>
             </div>
-            <div id = "statsContainer">
-                <?php foreach ($rows as $row) {
-                    //get top 5 from 30s
-                    $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'time' AND testTime = 15 ORDER BY wpm DESC LIMIT 5";
-                    $result = $mysqli->query($query);
-                    $rows = $result->fetch_all(MYSQLI_ASSOC);
-                    //now to get the username from the id
-                    $query = "SELECT * FROM user WHERE id = {$row['id']}";
-                    $result = $mysqli->query($query);
-                    $user = $result->fetch_assoc();
-                    echo '<div class="leaderboardText">' . $user['username'] . ' = ' . $row['wpm'] . ' WPM</div>';
-                    }
-                ?>
-            </div>
         </div>
         </div>
         <?php include "./footer.php" ?>
