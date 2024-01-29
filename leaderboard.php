@@ -36,7 +36,7 @@ $mysqli = require __DIR__ . "/config.php";
                         }
 
                         $wpm = ($row['wpm'] !== null) ? $row['wpm']: '---';
-                        echo '<div class="results">' . $count . '. ' . $username . ' | ' . $wpm . '</div>';
+                        echo '<div class="results">' . $count . '.   ' . $username . ' | ' . $wpm . '</div>';
                         $count++;
                     }
                     ?>
@@ -51,7 +51,7 @@ $mysqli = require __DIR__ . "/config.php";
                     while (count($rows) < 5) {
                         $rows[] = ['id' => null, 'wpm' => null]; // Add an empty row
                     }
-
+                    $count = 1;
                     foreach ($rows as $row) {
                         // Now to get the username from the id
                         $username = 'xxx';
@@ -63,7 +63,8 @@ $mysqli = require __DIR__ . "/config.php";
                         }
 
                         $wpm = ($row['wpm'] !== null) ? $row['wpm']: '---';
-                        echo '<div class="results">' . $username . ' | ' . $wpm . '</div>';
+                        echo '<div class="results">' . $count . '. ' . $username . ' | ' . $wpm . '</div>';
+                        $count++;
                     }
                     ?>
                 </div>
