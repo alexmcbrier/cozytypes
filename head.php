@@ -16,7 +16,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="images\panda.ico" />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=.5">
     <meta name="description" content="A simple typing website. Test yourself in different modes, change theme, change difficulty, track your progress and improve your typing speed."/>
     <meta name="keywords" content="practice typing, improve typing speed, typing test, cozytypes, learn to type faster, minimalistic typing"/>
     <meta name="author" content="alexmcbrier">
