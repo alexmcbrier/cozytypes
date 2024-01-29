@@ -24,7 +24,8 @@ $mysqli = require __DIR__ . "/config.php";
                         $query = "SELECT * FROM user WHERE id = {$row['id']}";
                         $result = $mysqli->query($query);
                         $user = $result->fetch_assoc();
-                        echo '<div class = "results">' . $user['username'] . ' | ' . $row['wpm'] . ' WPM</div>';
+                        $wpm = ($row['wpm'] !== null) ? $row['wpm'] . ' WPM' : '---';
+                        echo '<div class = "results">' . $user['username'] . ' | ' . $wpm . '</div>';
                         }
                     ?>
                 </div>
@@ -39,7 +40,8 @@ $mysqli = require __DIR__ . "/config.php";
                         $query = "SELECT * FROM user WHERE id = {$row['id']}";
                         $result = $mysqli->query($query);
                         $user = $result->fetch_assoc();
-                        echo '<div class = "results">' . $user['username'] . ' | ' . $row['wpm'] . ' WPM</div>';
+                        $wpm = ($row['wpm'] !== null) ? $row['wpm'] . ' WPM' : '---';
+                        echo '<div class = "results">' . $user['username'] . ' | ' . $wpm . '</div>';
                         }
                     ?>
                 </div>
@@ -54,7 +56,8 @@ $mysqli = require __DIR__ . "/config.php";
                         $query = "SELECT * FROM user WHERE id = {$row['id']}";
                         $result = $mysqli->query($query);
                         $user = $result->fetch_assoc();
-                        echo '<div class = "results">' . $user['username'] . ' | ' . $row['wpm'] . ' WPM</div>';
+                        $wpm = ($row['wpm'] !== null) ? $row['wpm'] . ' WPM' : '---';
+                        echo '<div class = "results">' . $user['username'] . ' | ' . $wpm . '</div>';
                         }
                     ?>
                 </div>
@@ -69,7 +72,8 @@ $mysqli = require __DIR__ . "/config.php";
                         $query = "SELECT * FROM user WHERE id = {$row['id']}";
                         $result = $mysqli->query($query);
                         $user = $result->fetch_assoc();
-                        echo '<div class = "results">' . $user['username'] . ' | ' . $row['wpm'] . ' WPM</div>';
+                        $wpm = ($row['wpm'] !== null) ? $row['wpm'] . ' WPM' : '---';
+                        echo '<div class = "results">' . $user['username'] . ' | ' . $wpm . '</div>';
                         }
                     ?>
                 </div>
@@ -87,7 +91,8 @@ $mysqli = require __DIR__ . "/config.php";
                         $query = "SELECT * FROM user WHERE id = {$row['id']}";
                         $result = $mysqli->query($query);
                         $user = $result->fetch_assoc();
-                        echo '<div class = "results">' . $user['username'] . ' | ' . $row['wpm'] . ' WPM</div>';
+                        $wpm = ($row['wpm'] !== null) ? $row['wpm'] . ' WPM' : '---';
+                        echo '<div class = "results">' . $user['username'] . ' | ' . $wpm . '</div>';
                         }
                     ?>
                 </div>
@@ -102,7 +107,8 @@ $mysqli = require __DIR__ . "/config.php";
                         $query = "SELECT * FROM user WHERE id = {$row['id']}";
                         $result = $mysqli->query($query);
                         $user = $result->fetch_assoc();
-                        echo '<div class = "results">' . $user['username'] . ' | ' . $row['wpm'] . ' WPM</div>';
+                        $wpm = ($row['wpm'] !== null) ? $row['wpm'] . ' WPM' : '---';
+                        echo '<div class = "results">' . $user['username'] . ' | ' . $wpm . '</div>';
                         }
                     ?>
                 </div>
@@ -117,7 +123,8 @@ $mysqli = require __DIR__ . "/config.php";
                         $query = "SELECT * FROM user WHERE id = {$row['id']}";
                         $result = $mysqli->query($query);
                         $user = $result->fetch_assoc();
-                        echo '<div class = "results">' . $user['username'] . ' | ' . $row['wpm'] . ' WPM</div>';
+                        $wpm = ($row['wpm'] !== null) ? $row['wpm'] . ' WPM' : '---';
+                        echo '<div class = "results">' . $user['username'] . ' | ' . $wpm . '</div>';
                         }
                     ?>
                 </div>
@@ -133,7 +140,7 @@ $mysqli = require __DIR__ . "/config.php";
                         $result = $mysqli->query($query);
                         $user = $result->fetch_assoc();
                         $wpm = ($row['wpm'] !== null) ? $row['wpm'] . ' WPM' : '---';
-                        echo '<div class = "results">' . $user['username'] . ' | ' . $row['wpm'] . ' WPM</div>';
+                        echo '<div class = "results">' . $user['username'] . ' | ' . $wpm . '</div>';
                         }
                     ?>
                 </div>
