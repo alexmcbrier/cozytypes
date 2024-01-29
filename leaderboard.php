@@ -12,7 +12,7 @@ $mysqli = require __DIR__ . "/config.php";
         <?php include "./nav.php" ?>
         <div id="middle">
         <div id = "displayStats">
-            <div id = "statsContainer">
+            <div class = "statsContainer">
                 <?php
                 $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'time' AND testTime = 15 ORDER BY wpm DESC LIMIT 5";
                 $result = $mysqli->query($query);
@@ -26,7 +26,7 @@ $mysqli = require __DIR__ . "/config.php";
                     }
                 ?>
             </div>
-            <div id = "statsContainer">
+            <div class = "statsContainer">
                 <?php
                 $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'time' AND testTime = 30 ORDER BY wpm DESC LIMIT 5";
                 $result = $mysqli->query($query);
@@ -40,7 +40,7 @@ $mysqli = require __DIR__ . "/config.php";
                     }
                 ?>
             </div>
-            <div id = "statsContainer">
+            <div class = "statsContainer">
                 <?php
                 $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'time' AND testTime = 60 ORDER BY wpm DESC LIMIT 5";
                 $result = $mysqli->query($query);
