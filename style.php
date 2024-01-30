@@ -147,7 +147,6 @@ include "themes.scss"; //file contains all fonts
         width: 100%;
         margin: 0;
         font-family: var(--fontFamily);
-        transition: color .25s ease;
     }
     .main-body {
         overflow: hidden;
@@ -355,6 +354,7 @@ include "themes.scss"; //file contains all fonts
     /* Remove one of the margin properties */
     margin: 1rem;
     align-content: center;
+    transition: color .25s ease;
 }
 .aboutContainer {
     user-select: none;
@@ -1307,6 +1307,7 @@ include "themes.scss"; //file contains all fonts
     {
         display: flex;
         flex-direction: column;
+        transition: color .25s ease;
     }
     #displayStats {
         display: flex;
