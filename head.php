@@ -26,7 +26,7 @@
     <!-- Open Graph meta tag for URL -->
     <meta property="og:url" content="https://cozytypes.com"/>
 
-    <title>cozytypes | Practice and Improve Typing </title>
+    <title>cozytypes</title>
     <script defer type="text/javascript" src="script.js"></script>
     <link href="https://cozytypes.com/" rel="canonical" />
     <link rel="stylesheet" href="style.php">
