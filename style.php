@@ -358,6 +358,10 @@ include "themes.scss"; //file contains all fonts
     /* Remove one of the margin properties */
     margin: 1rem;
     align-content: center;
+    transition-delay: 0s;
+    transition-duration: 0.25s;
+    transition-property: color, background; /* Add 'background' here */
+    transition-timing-function: ease;
 }
 .aboutContainer {
     user-select: none;
