@@ -7,7 +7,6 @@ session_start();
 <?php include "./head2.php" ?>
 
 <body>
-    <div id="notifications"></div>
     <form id="mainContent" method="POST" action="preferences.php">
         <?php include "./nav.php" ?>
         <div class="preferences">
