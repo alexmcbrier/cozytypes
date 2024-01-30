@@ -9,7 +9,7 @@ session_start();
 <body>
 
     <div id="notifications"></div>
-    <form id="mainContent" method="POST" action="preferences.php">
+    <form id="mainContent" method="POST" action="preferences">
         <?php include "./nav.php" ?>
         <div class="preferences">
             <div id="sizesContainer" class="rowContainer">
