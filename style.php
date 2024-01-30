@@ -72,7 +72,7 @@ include "themes.scss"; //file contains all fonts
     }
     ::-webkit-scrollbar {
         width: 1.5em;
-        height: 1em;
+        height: .5em;
         background: linear-gradient(to top, rgba(255, 0, 0, 0), 93%, var(--backgroundGradient));
     }
      /*
