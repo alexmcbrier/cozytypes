@@ -147,6 +147,10 @@ include "themes.scss"; //file contains all fonts
         width: 100%;
         margin: 0;
         font-family: var(--fontFamily);
+        transition-delay: 0s;
+        transition-duration: 0.25s;
+        transition-property: color, background; /* Add 'background' here */
+        transition-timing-function: ease;
     }
     .main-body {
         overflow: hidden;
@@ -1306,10 +1310,6 @@ include "themes.scss"; //file contains all fonts
     {
         display: flex;
         flex-direction: column;
-        transition-delay: 0s;
-        transition-duration: 0.25s;
-        transition-property: color, background; /* Add 'background' here */
-        transition-timing-function: ease;
     }
     #displayStats {
         display: flex;
