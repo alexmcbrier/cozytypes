@@ -177,7 +177,7 @@ if (isset($_SESSION["user_id"])) {
     <div id="sidebar">
         <i style="cursor: pointer" onclick="openSidebar()" id = "sidebarIcon" class="fa-solid fa-chevron-left"></i>
     </div>
-    <div id="mainContent">
+    <form id="mainContent" method="POST" action="preferences.php">
         <?php include "./nav.php" ?>
         <div id="middle" style = "width: 100%">
             <div id="displayStats">
@@ -250,7 +250,7 @@ if (isset($_SESSION["user_id"])) {
             <a id = "showRestart" class="notSignedIn" href="logout.php" style = "font-weight: bold; padding:0rem 2rem;">logout<i class="fa-solid fa-right-from-bracket"></i></a>
         </div>
         <?php include "./footer.php" ?>
-    </div>
+    </form>
 </body>
 
 </html>
