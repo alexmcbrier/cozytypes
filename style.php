@@ -121,12 +121,7 @@ include "themes.scss"; //file contains all fonts
     border-style: solid;
     border-color: var(--row) transparent transparent transparent;
     }
-* {
-    transition-delay: 0s;
-    transition-duration: 0.25s;
-    transition-property: color, background; /* Add 'background' here */
-    transition-timing-function: ease;
-}
+
 .tooltip:hover .tooltiptext {
     visibility: visible;
     animation: fadeIn 1s  ease, slideUp 1s ease;
@@ -359,10 +354,6 @@ include "themes.scss"; //file contains all fonts
     /* Remove one of the margin properties */
     margin: 1rem;
     align-content: center;
-    transition-delay: 0s;
-    transition-duration: 0.25s;
-    transition-property: color;
-    transition-timing-function: ease;
 }
 .aboutContainer {
     user-select: none;
@@ -1317,7 +1308,7 @@ include "themes.scss"; //file contains all fonts
         flex-direction: column;
         transition-delay: 0s;
         transition-duration: 0.25s;
-        transition-property: color;
+        transition-property: color, background; /* Add 'background' here */
         transition-timing-function: ease;
     }
     #displayStats {
