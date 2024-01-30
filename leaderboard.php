@@ -8,7 +8,7 @@ $mysqli = require __DIR__ . "/config.php";
 <?php include "./head2.php" ?>
 
 <body class="main-body">
-    <form id="mainContent" method="POST" action="preferences.php">
+    <form id="mainContent" method="POST" action="preferences">
         <?php include "./nav.php" ?>
         <div id="middle" style = "width: 100%">
             <div id = "showSignIn" style = "font-weight: bold; padding:0rem 2rem;" >Leaderboard<i class="fa-solid fa-crown"></i></div>
