@@ -147,6 +147,7 @@ include "themes.scss"; //file contains all fonts
         width: 100%;
         margin: 0;
         font-family: var(--fontFamily);
+        transition: color .25s ease;
     }
     .main-body {
         overflow: hidden;
