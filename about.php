@@ -11,19 +11,19 @@ session_start();
         <?php include "./nav.php" ?>
         <div class="preferences">
             <div id="sizesContainer" class="aboutContainer">
-                <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0; padding-bottom: 2rem;" >about us</h1>
+                <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0;" >about us</h1>
                     <h2 class="aboutDescription">
                     cozytypes.com is a simple typing website for keyboard enthusiasts. test your typing abilities in different modes, track your 
                     progress, and improve your overall typing speed. Features include typing stats and history for users with accounts, configurations 
                     including theme, font style, typing caret, line count, and more. Designed as a simplistic approach to typing and alternative to other websites,
                     this website is designed to be relaxing and calming as you practice your skills. 
-                <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0; padding-bottom: 2rem;" >difficulty</h1>
+                <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0; padding-top: 2rem;" >difficulty</h1>
                     <h2 class="aboutDescription">
                     The site offers two difficulties. 
                     easy mode - which has a word set of the 100 most common words in the english language, intended for beginners.
                     hard mode - which has a word set of 1000 words from the english language, which are intended to be a bit more difficult and longer in length.
                     </h2>
-                <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0; padding-bottom: 2rem;" >stats and progress</h1>
+                <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0; padding-top: 2rem;" >stats and progress</h1>
                     <h2 class="aboutDescription">
                     After the typing test ends, users will be able to see their accuracy, wpm, and mode for the completed test. Users who have signed up for an account 
                     have the ability to track these results and all previous history, being able to see there best scores in each mode and category. Additionally, Users
@@ -31,17 +31,17 @@ session_start();
                     wpm - the total number of characters from each word divided by 5 in relation to a one minute typing test.
                     accuracy - the percentage of correct characters in comparison to total characters during the test.
                     </h2>
-                <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0; padding-bottom: 2rem;" >feature request</h1>
+                <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0; padding-top: 2rem;" >feature request</h1>
                     <h2 class="aboutDescription">
                     If you have any questions, concerns, or ideas about adding a feature please either contact us by email, or submit an
                     issue to us on github.
                     </h2>
-                <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0; padding-bottom: 2rem;" >developers</h1>
+                <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0; padding-top: 2rem;" >developers</h1>
                     <h2 class="aboutDescription">
                     Created by Alex McBrier, a student at Boston University, the purpose of this website is to help beginners to experts sharpen there skills.
                     Thank you to Kaffee as well for your collaboration and support on this project. I am excited to bring this game to you and anyone else who may enjoy it. Thank you for your support.
                     </h2>
-                <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0; padding-bottom: 2rem;" >contact us</h1>
+                <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0; padding-top: 2rem;" >contact us</h1>
                     <h2 class="aboutDescription">
                         Contact us via email: <a class = "aboutLink" href="mailto:alexmcbrier@gmail.com">alexmcbrier@gmail.com</a>
                     </h2>   
