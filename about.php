@@ -43,7 +43,7 @@ session_start();
                     </h2>
                 <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0; padding-bottom: 2rem;" >contact us</h1>
                     <h2 class="aboutDescription">
-                        Contact us via email: <a href="mailto:alexmcbrier@gmail.com">alexmcbrier@gmail.com</a>
+                        Contact us via email: <a class = "aboutLink" href="mailto:alexmcbrier@gmail.com">alexmcbrier@gmail.com</a>
                     </h2>   
             </div>
         </div>
