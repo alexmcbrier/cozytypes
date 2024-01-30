@@ -85,7 +85,7 @@ include "themes.scss"; //file contains all fonts
     ::-webkit-scrollbar-thumb {
         background: var(--backgroundDark);
         border-radius: 80vw;
-        height: 30%;
+        max-height: 1rem;
     }
 
     ::-webkit-scrollbar-thumb:hover {
