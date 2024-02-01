@@ -6,7 +6,9 @@ $mysqli = require __DIR__ . "/config.php";
 <!DOCTYPE html>
 <html>
 <?php include "./head2.php" ?>
-
+<head>
+<title>leaderboard | cozytypes</title>
+</head>
 <body class="main-body">
     <form id="mainContent" method="POST" action="preferences">
         <?php include "./nav.php" ?>
