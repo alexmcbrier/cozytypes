@@ -20,10 +20,6 @@
     <meta name="description" content="A simple typing website. Test yourself in different modes, change theme, change difficulty, track your progress and improve your typing speed."/>
     <meta name="keywords" content="practice typing, improve typing speed, typing test, cozytypes, learn to type faster, minimalistic typing"/>
     <meta name="author" content="alexmcbrier">
-    <meta property="og:title" content="cozytypes"/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:description" content="A simple typing website. Test yourself in different modes, change theme, change difficulty, track your progress and improve your typing speed."/>
-    <!-- Open Graph meta tag for URL -->
     <script defer type="text/javascript" src="script.js"></script>
     <link rel="stylesheet" href="style.php">
     <link rel="preconnect" href="https://fonts.googleapis.com">
