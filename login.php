@@ -49,7 +49,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 ?>
 <!DOCTYPE html>
 <html>
-    <?php include "./head2.php" ?>
+    <?php include "./head2.php" ?><head>
+    <title>login | cozytypes</title>
+    </head>
     <body class="main-body">
         <div id="mainContent">
             <?php include "./nav.php" ?>

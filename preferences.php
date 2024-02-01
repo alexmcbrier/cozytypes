@@ -5,7 +5,9 @@ session_start();
 <html>
 
 <?php include "./head2.php" ?>
-
+<head>
+<title>preferences | cozytypes</title>
+</head>
 <body>
 
     <div id="notifications"></div>

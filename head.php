@@ -24,11 +24,7 @@
     <meta property="og:type" content="website"/>
     <meta property="og:description" content="A simple typing website. Test yourself in different modes, change theme, change difficulty, track your progress and improve your typing speed."/>
     <!-- Open Graph meta tag for URL -->
-    <meta property="og:url" content="https://cozytypes.com"/>
-
-    <title>cozytypes</title>
     <script defer type="text/javascript" src="script.js"></script>
-    <link href="https://cozytypes.com/" rel="canonical" />
     <link rel="stylesheet" href="style.php">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

@@ -20,14 +20,7 @@
     <meta name="description" content="A simple and customisable typing website. Test yourself in different modes, track your progress and improve your typing speed."/>
     <meta name="keywords" content="typing test, typing speed test, typing-test, cozytypes, words per minute, minimalistic typing"/>
     <meta name="author" content="alexmcbrier">
-    <meta property="og:title" content="cozytypes"/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:description" content="A simple typing website. Test yourself in different modes, change theme, change difficulty, track your progress and improve your typing speed."/>
-    <!-- Open Graph meta tag for URL -->
-    <meta property="og:url" content="https://cozytypes.com"/>
-    <title>cozytypes</title>
     <script defer type="text/javascript" src="script2.js"></script>
-    <link href="https://cozytypes.com/" rel="canonical" />
     <link rel="stylesheet" href="style.php">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

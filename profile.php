@@ -172,7 +172,9 @@ if (isset($_SESSION["user_id"])) {
 <!DOCTYPE html>
 <html>
 <?php include "./head2.php" ?>
-
+<head>
+<title>profile | cozytypes</title>
+</head>
 <body class="main-body">
     <div id="sidebar">
         <i style="cursor: pointer" onclick="openSidebar()" id = "sidebarIcon" class="fa-solid fa-chevron-left"></i>

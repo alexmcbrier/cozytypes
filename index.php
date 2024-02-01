@@ -60,7 +60,9 @@ if (isset($_GET["finish"]))
 <!DOCTYPE html>
 <html lang="en">
 <?php include "./head.php" ?>
-
+<head>
+<title>cozytypes</title>
+</head>
 <body class="main-body">
     <?php if (!isset($_GET["finish"])) { ?> <!-- only show if taking test, not complete -->
         <div id="cursor"></div>

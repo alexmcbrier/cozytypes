@@ -5,7 +5,9 @@ session_start();
 <html>
 
 <?php include "./head2.php" ?>
-
+<head>
+<title>about | cozytypes</title>
+</head>
 <body>
     <form id="mainContent" method="POST" action="preferences.php">
         <?php include "./nav.php" ?>
