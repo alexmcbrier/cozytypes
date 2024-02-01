@@ -18,12 +18,4 @@ if (isset($_SESSION["user_id"])) {
         <i class="fa-regular fa-user"></i>
         <div><?= htmlspecialchars($user["username"]) ?></div>
     </a>
-    <script>
-  function navigateWithoutRefresh(event) {
-    event.preventDefault(); // Prevents the default behavior of the anchor element
-    // Your code to navigate to the preferences page without a full page refresh
-    // For example, you can use AJAX to load content dynamically
-    // or manipulate the DOM to show/hide content as needed.
-  }
-</script>
 </nav>
