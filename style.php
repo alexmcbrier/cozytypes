@@ -8,7 +8,6 @@ include "themes.scss"; //file contains all fonts
         font-family: "comfortaa";
         src: url("./Fonts/comfortaa.ttf");
     }
-
     @font-face {
         font-family: 'lexendDeca';
         src: url('./Fonts/LexendDeca.ttf');
@@ -52,6 +51,22 @@ include "themes.scss"; //file contains all fonts
     @font-face {
         font-family: 'titilliumWeb';
         src: url('./Fonts/ibmPlexSans.ttf');
+    }
+    @font-face {
+        font-family: 'monteserrat';
+        src: url('./Fonts/monteserrat.ttf');
+    }
+    @font-face {
+        font-family: 'robotoMono';
+        src: url('./Fonts/robotoMono.ttf');
+    }
+    @font-face {
+        font-family: 'karla';
+        src: url('./Fonts/karla.ttf');
+    }
+    @font-face {
+        font-family: 'josefinSans';
+        src: url('./Fonts/josefinSans.ttf');
     }
     /*scrollbar*/
     :root

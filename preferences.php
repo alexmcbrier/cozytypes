@@ -37,6 +37,10 @@ session_start();
                 <a class="preference" style="font-family: 'Titillium Web', sans-serif;" onclick="setPreference('fontFamily', 'titilliumWeb'), addNotification('font family','titillium Web');">titillium Web</a>
                 <a class="preference" style="font-family: 'Lora', serif;" onclick="setPreference('fontFamily', 'lora'), addNotification('font family','lora');">lora</a>
                 <a class="preference" style="font-family: 'Merriweather', serif;" onclick="setPreference('fontFamily', 'merriweather'), addNotification('font family','merriweather');">merriweather</a>
+                <a class="preference" style="font-family: 'robotoMono', serif;" onclick="setPreference('fontFamily', 'robotoMono'), addNotification('font family','robotoMono');">roboto mono</a>
+                <a class="preference" style="font-family: 'montserrat', serif;" onclick="setPreference('fontFamily', 'montserrat'), addNotification('font family','montserrat');">montserrat</a>
+                <a class="preference" style="font-family: 'karla', serif;" onclick="setPreference('fontFamily', 'karla'), addNotification('font family','karla');">karla</a>
+                <a class="preference" style="font-family: 'josefinSans', serif;" onclick="setPreference('fontFamily', 'josefinSans'), addNotification('font family','josefinSans');">josefinSans</a>
             </div>
             <div id="themesContainer" class="rowContainer">
                 <h1 id="preferenceHeader">color theme <i class="fa-solid fa-palette"></i></h1>
