@@ -559,7 +559,7 @@ function loadPreferences() {
     //2. set preference to local storage
     let theme = localStorage.getItem("theme") || "light";
     let fontSize = localStorage.getItem("fontSize") || "3";
-    let fontFamily = localStorage.getItem("fontFamily") || "lexendDeca";
+    let fontFamily = localStorage.getItem("fontFamily") || "lora";
     let lineCount = localStorage.getItem("lineCount") || "3";
     let caret = localStorage.getItem("caret") || "caret";
     let typingMode = localStorage.getItem("typingMode") || "time";

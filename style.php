@@ -235,7 +235,7 @@ include "themes.scss"; //file contains all fonts
         transition: color .25s ease;
         color: var(--testText);
         padding: 1rem;
-        /* font-family: lexendDeca; */
+        font-family: lora;
     }
     .navIcon, #showUsername
     {
