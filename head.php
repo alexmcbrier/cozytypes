@@ -34,4 +34,5 @@
         }
     </script>
     <script src="https://kit.fontawesome.com/c76282caa4.js" crossorigin="anonymous"></script> 
+    <meta name="google-adsense-account" content="ca-pub-9923722164132738">
 </head>
