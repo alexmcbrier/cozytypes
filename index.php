@@ -85,32 +85,6 @@ crossorigin="anonymous"></script>
             document.getElementById('middle').style.filter = 'none';
             document.getElementById('footer').style.filter = 'none';
         }
-        function setRandomTheme() {
-            var themes = [
-                'light',
-                'theme-9009',
-                'blueberryLight',
-                'mizu',
-                'botanical',
-                'amethyst',
-                'creamsicle',
-                'strawberry',
-                'striker',
-                'alpine',
-                'theme-8008',
-                'blueberry',
-                'bliss',
-                'olivia',
-                'dracula',
-                'dark'
-            ];
-
-            // Pick a random theme from the array
-            var randomTheme = themes[Math.floor(Math.random() * themes.length)];
-
-            // Call setTheme function with the randomly chosen theme
-            setTheme(currentTheme, randomTheme);
-        }
         window.addEventListener('load', function() {
             setTimeout(function() {
             // Page is loaded, fade out the loading animation
@@ -118,7 +92,7 @@ crossorigin="anonymous"></script>
             newQuote();
             zoomwait();
             }, 100); // Wait for one tenth of second (100 milliseconds)
-            setRandomTheme();
+            setTheme(currentTheme, 'mizu');
         });
         
     </script>
