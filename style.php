@@ -317,7 +317,7 @@ include "themes.scss"; //file contains all fonts
     .linkDivider
     {
         color: var(--row);
-        padding: 0 .5rem;
+        padding: 1rem;
     }
     .box {
         z-index: 0;
