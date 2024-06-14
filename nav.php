@@ -5,7 +5,6 @@ if (isset($_SESSION["user_id"])) {
     $result = $mysqli->query($sql);
     $user = $result->fetch_assoc();
 } ?>
-<script src="loadPage.js"></script>
 <nav> 
     <a id = "logo" href="https://cozytypes.com" style="text-decoration: none;">
         <h1>cozytypes</h1>
