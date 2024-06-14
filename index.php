@@ -92,7 +92,6 @@ crossorigin="anonymous"></script>
             newQuote();
             zoomwait();
             }, 100); // Wait for one tenth of second (100 milliseconds)
-            setTheme(currentTheme, 'mizu');
         });
         
     </script>
