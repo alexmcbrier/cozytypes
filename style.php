@@ -34,7 +34,7 @@ include "themes.scss"; //file contains all fonts
     }
 
     @font-face {
-        font-family: 'lora';
+        font-family: var(--fontFamily);
         src: url('./Fonts/lora.ttf');
     }
 
