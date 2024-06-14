@@ -93,6 +93,7 @@ crossorigin="anonymous"></script>
             zoomwait();
             }, 100); // Wait for one tenth of second (100 milliseconds)
         });
+        setTheme(currentTheme, 'alpine');
     </script>
         <!-- Display if test not complete -->
         <div id="middle" class = "blur">
