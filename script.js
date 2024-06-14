@@ -25,7 +25,9 @@ window.addEventListener('keydown', function (event) { //restart test if tab key
     event.preventDefault();
 
     // restart typing test
+    setTheme(currentTheme, 'mizu')
     restart();
+
   }
 });
 if (getStorageItem("typingMode") == "words")
