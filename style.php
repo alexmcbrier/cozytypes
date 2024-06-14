@@ -532,7 +532,7 @@ include "themes.scss"; //file contains all fonts
     #cursor {
         width: var(--caretWidth);
         background-color: var(--correct);
-        opacity: var(--caretOpacity);
+        opacity: 0;
         border-radius: 1.5rem;
         position: absolute;
         transition: left 0.125s ease;
