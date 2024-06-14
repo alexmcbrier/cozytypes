@@ -28,12 +28,12 @@ if (isset($_COOKIE["fontFamily"])) {
         </a>
 
         <div class = "linkDivider">/</div>
-        <a class = "footerLinks tooltip" href="/cookiePolicy">cookies</span>
+        <a class = "footerLinks tooltip" href="/cookiePolicy.html">cookies</span>
             <i class="fa-solid fa-cookie-bite"></i>
         </a>
 
         <div class = "linkDivider">/</div>
-        <a class = "footerLinks tooltip" href="/privacyPolicy">privacy</span>
+        <a class = "footerLinks tooltip" href="/privacyPolicy.html">privacy</span>
             <i class="fa-solid fa-lock"></i>
         </a>
     </div>
