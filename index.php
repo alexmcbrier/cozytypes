@@ -62,6 +62,8 @@ if (isset($_GET["finish"]))
 <?php include "./head.php" ?>
 <head>
 <title>cozytypes</title>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9923722164132738"
+crossorigin="anonymous"></script>
 </head>
 <body class="main-body">
     <?php if (!isset($_GET["finish"])) { ?> <!-- only show if taking test, not complete -->

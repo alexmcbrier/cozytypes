@@ -8,6 +8,8 @@ $mysqli = require __DIR__ . "/config.php";
 <?php include "./head2.php" ?>
 <head>
 <title>leaderboard | cozytypes</title>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9923722164132738"
+     crossorigin="anonymous"></script>
 </head>
 <body class="main-body">
     <form id="mainContent" method="POST" action="preferences">

@@ -174,6 +174,8 @@ if (isset($_SESSION["user_id"])) {
 <?php include "./head2.php" ?>
 <head>
 <title>profile | cozytypes</title>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9923722164132738"
+     crossorigin="anonymous"></script>
 </head>
 <body class="main-body">
     <div id="sidebar">

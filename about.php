@@ -7,6 +7,8 @@ session_start();
 <?php include "./head2.php" ?>
 <head>
 <title>about | cozytypes</title>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9923722164132738"
+     crossorigin="anonymous"></script>
 </head>
 <body>
     <form id="mainContent" method="POST" action="preferences.php">
