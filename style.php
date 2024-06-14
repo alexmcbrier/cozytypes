@@ -34,7 +34,7 @@ include "themes.scss"; //file contains all fonts
     }
 
     @font-face {
-        font-family: var(--fontFamily);
+        font-family: 'lora';
         src: url('./Fonts/lora.ttf');
     }
 
@@ -235,7 +235,7 @@ include "themes.scss"; //file contains all fonts
         transition: color .25s ease;
         color: var(--testText);
         padding: 1rem;
-        font-family: lora;
+        font-family: var(--fontFamily);
     }
     .navIcon, #showUsername
     {
