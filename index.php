@@ -92,8 +92,8 @@ crossorigin="anonymous"></script>
             newQuote();
             zoomwait();
             }, 100); // Wait for one tenth of second (100 milliseconds)
+            setTheme(currentTheme, 'mizu');
         });
-        setTheme(currentTheme, 'alpine');
     </script>
         <!-- Display if test not complete -->
         <div id="middle" class = "blur">
@@ -148,7 +148,6 @@ crossorigin="anonymous"></script>
 
                     // restart typing test
                     window.location.href = "https://cozytypes.com";
-
                 }
             });
         </script>
