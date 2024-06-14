@@ -73,23 +73,6 @@ if (isset($_GET["finish"]))
     <i class="fa-solid fa-circle-notch" id="loadingIcon"></i>
     <div id="mainContent">
         <?php include "./nav.php" ?>
-        <script src = "script.js" type="text/javascript">
-        function fadeOut(id)
-        {
-            document.getElementById(id).style.opacity = 0;
-            document.getElementById(id).style.display = 'none';
-            document.getElementById('middle').style.opacity = '100%';
-            document.getElementById('footer').style.opacity = '100%';
-            document.getElementById('middle').style.filter = 'none';
-            document.getElementById('footer').style.filter = 'none';
-        }
-        window.addEventListener('load', function() {
-            // Page is loaded, fade out the loading animation
-            fadeOut('loadingIcon');
-            newQuote();
-            zoomwait();
-        });
-    </script>
         <!-- Display if test not complete -->
         <div id="middle" class = "blur">
         <?php if (!isset($_GET["finish"])) { ?>
