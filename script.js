@@ -25,7 +25,6 @@ window.addEventListener('keydown', function (event) { //restart test if tab key
     event.preventDefault();
 
     // restart typing test
-    setTheme(currentTheme, 'mizu')
     restart();
 
   }
@@ -211,6 +210,7 @@ function restart() {
     typingMode.classList.remove('fadeOut');
     hotkey.classList.remove('fadeOut');
     refresh();
+    setTheme(currentTheme, 'alpine')
 }
 function randomQuote() {
     displayText.innerText = ''// removing previous sentence if applicable

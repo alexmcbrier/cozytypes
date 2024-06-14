@@ -146,7 +146,6 @@ crossorigin="anonymous"></script>
                     event.preventDefault();
 
                     // restart typing test
-                    setTheme(currentTheme, 'mizu')
                     window.location.href = "https://cozytypes.com";
 
                 }
