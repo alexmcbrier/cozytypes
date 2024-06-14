@@ -82,7 +82,6 @@ crossorigin="anonymous"></script>
             document.getElementById(id).style.display = 'none';
             document.getElementById('middle').style.opacity = '100%';
             document.getElementById('footer').style.opacity = '100%';
-            document.getElementById('cursor').style.opacity = '100%';
             document.getElementById('middle').style.filter = 'none';
             document.getElementById('footer').style.filter = 'none';
         }
