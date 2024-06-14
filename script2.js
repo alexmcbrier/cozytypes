@@ -536,14 +536,14 @@ function loadPreferences() {
     //2. set preference to local storage
     let theme = localStorage.getItem("theme") || "light";
     let fontSize = localStorage.getItem("fontSize") || "3";
-    let fontFamily = localStorage.getItem("fontFamily") || "lexendDeca";
+    let fontFamily = localStorage.getItem("fontFamily") || "lora";
     let lineCount = localStorage.getItem("lineCount") || "3";
     let caret = localStorage.getItem("caret") || "caret";
     let typingMode = localStorage.getItem("typingMode") || "time";
     let words = localStorage.getItem("words") || 10;
-    let time = localStorage.getItem("time") || 30;
+    let time = localStorage.getItem("time") || 15;
     let blur = localStorage.getItem("blur") || "off";
-    let mode = localStorage.getItem("mode") || "easy";
+    let mode = localStorage.getItem("mode") || "hard";
     setTheme("default", theme); 
     setPreference("fontSize", fontSize); 
     setPreference("fontFamily", fontFamily); 
