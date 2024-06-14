@@ -73,6 +73,23 @@ if (isset($_GET["finish"]))
     <i class="fa-solid fa-circle-notch" id="loadingIcon"></i>
     <div id="mainContent">
         <?php include "./nav.php" ?>
+        <script type="text/javascript">
+        function fadeOut(id)
+        {
+            document.getElementById(id).style.opacity = 0;
+            document.getElementById(id).style.display = 'none';
+            document.getElementById('middle').style.opacity = '100%';
+            document.getElementById('footer').style.opacity = '100%';
+            document.getElementById('middle').style.filter = 'none';
+            document.getElementById('footer').style.filter = 'none';
+        }
+        window.addEventListener('load', function() {
+            // Page is loaded, fade out the loading animation
+            fadeOut('loadingIcon');
+            newQuote();
+            zoomwait();
+        });
+    </script>
         <!-- Display if test not complete -->
         <div id="middle" class = "blur">
         <?php if (!isset($_GET["finish"])) { ?>
@@ -117,7 +134,18 @@ if (isset($_GET["finish"]))
         </div>
         <?php } else if (isset($_GET["finish"])) { ?>
         <!-- Display if test IS complete -->
-       
+        <script type="text/javascript">
+            window.addEventListener('keydown', function (event) {
+                // Check if the pressed key is the 'Tab' key (key code 9)
+                if (event.key === 'Tab' || event.keyCode === 9) {
+                    // Prevent the default tab key behavior
+                    event.preventDefault();
+
+                    // restart typing test
+                    window.location.href = "https://cozytypes.com";
+                }
+            });
+        </script>
         <div id="displayStats" style = "background-color: var(--background); margin: 1rem 0rem">
             <div class="statsContainer" style = "background-color: var(--rowBackground);">
                 <h1 class="notSignedIn" id="preferenceHeader">Words Per Minute<i class="fa-solid fa-clock-rotate-left"></i></h1>
