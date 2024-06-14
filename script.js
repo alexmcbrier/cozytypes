@@ -581,22 +581,3 @@ function loadPreferences() {
 loadPreferences();
 document.body.onLoad = refresh();
 document.body.onresize = function() { zoomwait() };
-
-function fadeOut(id) {
-    document.getElementById(id).style.opacity = 0;
-    document.getElementById(id).style.display = 'none';
-    document.getElementById('middle').style.opacity = '100%';
-    document.getElementById('footer').style.opacity = '100%';
-    document.getElementById('middle').style.filter = 'none';
-    document.getElementById('footer').style.filter = 'none';
-}
-
-// Check if the script is included in index.html
-if (window.location.pathname === '/index.html' || window.location.pathname === '/') {
-    window.addEventListener('load', function() {
-        // Page is loaded, fade out the loading animation
-        fadeOut('loadingIcon');
-        newQuote();
-        zoomwait();
-    });
-}
