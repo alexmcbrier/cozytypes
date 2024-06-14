@@ -84,10 +84,12 @@ if (isset($_GET["finish"]))
             document.getElementById('footer').style.filter = 'none';
         }
         window.addEventListener('load', function() {
+            setTimeout(function() {
             // Page is loaded, fade out the loading animation
             fadeOut('loadingIcon');
             newQuote();
             zoomwait();
+            }, 500); // Wait for one second (1000 milliseconds)
         });
     </script>
         <!-- Display if test not complete -->
