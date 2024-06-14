@@ -151,15 +151,15 @@ crossorigin="anonymous"></script>
             });
         </script>
         <div id="displayStats" style = "background-color: var(--background); margin: 1rem 0rem">
-            <div class="statsContainer" style = "background-color: var(--rowBackground);">
+            <div class="statsContainer" style = "background-color: var(--rowBackground); padding; 3rem">
                 <h1 class="notSignedIn" id="preferenceHeader">Words Per Minute<i class="fa-solid fa-clock-rotate-left"></i></h1>
                 <a class="results"><?= $_GET["wpm"] ?></a>
             </div>
-            <div class="statsContainer" style = "background-color: var(--rowBackground);">
+            <div class="statsContainer" style = "background-color: var(--rowBackground); padding; 3rem">
                 <h1 class="notSignedIn" id="preferenceHeader">Accuracy<i class="fa-solid fa-crosshairs"></i></h1>
                 <a class="results"><?= $_GET["accuracy"] ?>%</a>
             </div>
-            <div class="statsContainer" style = "background-color: var(--rowBackground);">
+            <div class="statsContainer" style = "background-color: var(--rowBackground); padding; 3rem">
                 <h1 class="notSignedIn" id="preferenceHeader"><?= $_GET["mode"] ?><i class="fa-regular fa-hourglass-half"></i></h1>
                 <a class="results"><?= $_GET["testTime"] ?></a>
             </div>
