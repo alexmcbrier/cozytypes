@@ -26,7 +26,6 @@ window.addEventListener('keydown', function (event) { //restart test if tab key
 
     // restart typing test
     restart();
-    setTheme(currentTheme, 'amethyst');
   }
 });
 if (getStorageItem("typingMode") == "words")
