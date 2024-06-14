@@ -25,6 +25,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Courier+Prime&family=IBM+Plex+Sans&family=Lexend+Deca&family=Lora&family=Merriweather&family=Nunito&family=PT+Serif&family=Raleway&family=Source+Code+Pro&family=Titillium+Web&display=swap" rel="stylesheet">
+    <!--
     <script defer type="text/javascript">
         var uri = window.location.toString();
         if (uri.indexOf("?") > 0) {
@@ -32,7 +33,6 @@
             window.history.replaceState({}, document.title, clean_uri);
         }
     </script>
-    <!--
     <script src="https://kit.fontawesome.com/c76282caa4.js" crossorigin="anonymous"></script> 
     <meta name="google-adsense-account" content="ca-pub-9923722164132738">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9923722164132738"
