@@ -73,7 +73,7 @@ if (isset($_GET["finish"]))
     <i class="fa-solid fa-circle-notch" id="loadingIcon"></i>
     <div id="mainContent">
         <?php include "./nav.php" ?>
-        <script type="text/javascript">
+        <script src = "script.js" type="text/javascript">
         function fadeOut(id)
         {
             document.getElementById(id).style.opacity = 0;
