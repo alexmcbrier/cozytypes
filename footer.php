@@ -16,13 +16,25 @@ if (isset($_COOKIE["fontFamily"])) {
         <a class = "footerLinks tooltip" href="https://github.com/alexmcbrier/cozytypes">github</span>
             <i class="fa-solid fa-code fa-sm"></i>
         </a>
+
         <div class = "linkDivider">/</div>
         <a class = "footerLinks tooltip" href="/preferences">theme</span>
             <i class="fa-solid fa-palette fa-sm"></i>
         </a>
+
         <div class = "linkDivider">/</div>
         <a class = "footerLinks tooltip" href="/preferences">font</span>
             <i class="fa-solid fa-font fa-sm"></i>
+        </a>
+
+        <div class = "linkDivider">/</div>
+        <a class = "footerLinks tooltip" href="/cookiePolicy">cookies</span>
+            <i class="fa-solid fa-cookie-bite"></i>
+        </a>
+
+        <div class = "linkDivider">/</div>
+        <a class = "footerLinks tooltip" href="/privacyPolicy">privacy</span>
+            <i class="fa-solid fa-lock"></i>
         </a>
     </div>
 </div>
