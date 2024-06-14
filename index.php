@@ -89,7 +89,7 @@ if (isset($_GET["finish"]))
             fadeOut('loadingIcon');
             newQuote();
             zoomwait();
-            }, 500); // Wait for one second (1000 milliseconds)
+            }, 300); // Wait for one second (1000 milliseconds)
         });
     </script>
         <!-- Display if test not complete -->
