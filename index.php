@@ -91,7 +91,7 @@ crossorigin="anonymous"></script>
             fadeOut('loadingIcon');
             newQuote();
             zoomwait();
-            }, 300); // Wait for one second (1000 milliseconds)
+            }, 100); // Wait for one tenth of second (100 milliseconds)
         });
     </script>
         <!-- Display if test not complete -->
