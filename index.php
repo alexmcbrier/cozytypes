@@ -117,18 +117,7 @@ if (isset($_GET["finish"]))
         </div>
         <?php } else if (isset($_GET["finish"])) { ?>
         <!-- Display if test IS complete -->
-        <script type="text/javascript">
-            window.addEventListener('keydown', function (event) {
-                // Check if the pressed key is the 'Tab' key (key code 9)
-                if (event.key === 'Tab' || event.keyCode === 9) {
-                    // Prevent the default tab key behavior
-                    event.preventDefault();
-
-                    // restart typing test
-                    window.location.href = "https://cozytypes.com";
-                }
-            });
-        </script>
+       
         <div id="displayStats" style = "background-color: var(--background); margin: 1rem 0rem">
             <div class="statsContainer" style = "background-color: var(--rowBackground);">
                 <h1 class="notSignedIn" id="preferenceHeader">Words Per Minute<i class="fa-solid fa-clock-rotate-left"></i></h1>
