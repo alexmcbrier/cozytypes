@@ -165,8 +165,14 @@ crossorigin="anonymous"></script>
                 <a class="results"><?= $_GET["testTime"] ?></a>
             </div>
         </div>
-        <a id = "showRestart" href="https://cozytypes.com/">play again<i class="fa-solid fa-backward"></i></a>
-        <a id = "showSignIn" href="signup"><span id = "saveProgress">login</span> to save progress<i class="fa-solid fa-medal"></i></a>
+
+            <a id="showRestart" href="https://cozytypes.com/">play again<i class="fa-solid fa-backward"></i></a>
+            <?php if (isset($_SESSION["user_id"])) { ?>
+                <a id="showSignIn" href="signup"><span id="saveProgress">login</span> to save progress<i class="fa-solid fa-medal"></i></a>
+            <?php } else { ?>
+                <a id="showRestart" href="signup/">view progress<i class="fa-solid fa-medal"></i></a>
+            <?php } ?>
+
         </div>
         <?php } ?>
         <?php include "./footer.php"?>
