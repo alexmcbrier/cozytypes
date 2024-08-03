@@ -226,14 +226,16 @@ function randomQuote() {
     else {
         sentenceLength = getStorageItem("words");
     }
-    sentence[0] = wordList[Math.floor(Math.random() * wordList.length)]
+    sentence[0] = wordList[Math.floor(Math.random() * wordList.length)];
     for (let i = 1; i < sentenceLength; i++) {
-        randomWord = wordList[Math.floor(Math.random() * wordList.length)]
-        while (randomWord == sentence[i - 1]) {
-            randomWord = wordList[Math.floor(Math.random() * wordList.length)]
-        }
-        sentence[i] = randomWord
+        let previousWord = sentence[i - 1];
+        let filteredWordList = wordList.filter(word => word !== previousWord);
+        let randomWord = filteredWordList[Math.floor(Math.random() * filteredWordList.length)];
+        sentence[i] = randomWord;
     }
+
+
+    
 }
 function wordsPerMinute(testDuration) {
     if (getStorageItem("typingMode") == "time") {
