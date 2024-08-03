@@ -1351,5 +1351,7 @@ include "themes.scss"; //file contains all fonts
 
     .invisible {
         opacity: 0;
+        transition: all 1s ease;
+        filter: blur(10px)
     }
 </style>
