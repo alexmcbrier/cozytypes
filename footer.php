@@ -8,7 +8,7 @@ if (isset($_COOKIE["fontFamily"])) {
 }
 ?>
 
-<div id="footer" class = "blur">
+<div id="footer" class = "invisible">
     <h2 id ="hotkey">
         <div><kbd>Tab</kbd> to restart</div>
     </h2>

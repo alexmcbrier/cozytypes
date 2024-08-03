@@ -1348,4 +1348,8 @@ include "themes.scss"; //file contains all fonts
         color: var(--testText);
         background-color: var(--background);;  
     }
+
+    .invisible {
+        opacity: 0;
+    }
 </style>
