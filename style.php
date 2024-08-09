@@ -1354,15 +1354,4 @@ include "themes.scss"; //file contains all fonts
         transition: all 1s ease;
         filter: blur(10px)
     }
-    .hoverText {
-    opacity: 0;
-    white-space: nowrap;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.navIcon:hover .hoverText {
-    opacity: 1;
-    transform: translateX(0);
-}
 </style>
