@@ -1355,17 +1355,14 @@ include "themes.scss"; //file contains all fonts
         filter: blur(10px)
     }
     .hoverText {
-    position: absolute;
-    left: 40px;
     opacity: 0;
     white-space: nowrap;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    transform: translateX(-20px);
-    pointer-events: none; /* Prevent hover text from interfering with icon interaction */
-    }
+    transform: translateX(-100%);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
 
-    .navIcon:hover .hoverText {
-        opacity: 1;
-        transform: translateX(0);
-    }
+.navIcon:hover .hoverText {
+    opacity: 1;
+    transform: translateX(0);
+}
 </style>
