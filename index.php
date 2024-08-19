@@ -61,7 +61,7 @@ if (isset($_GET["finish"]))
 <html lang="en">
 <?php include "./head.php" ?>
 <head>
-<title>cozytypes</title>
+<title>cozytypes | minimalistic typing test</title>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9923722164132738"
 crossorigin="anonymous"></script>
 </head>
