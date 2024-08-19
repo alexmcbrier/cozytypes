@@ -239,10 +239,16 @@ include "themes.scss"; //file contains all fonts
     }
     .navIcon, #showUsername
     {
-        transition: color .25s ease;
+        transition: color .25s ease, padding .25s ease, font-size .25s ease;
         color: var(--testText);
     }
-    .navIcon:hover , #showUsername:hover {
+    .navIcon:hover {
+        color: var(--currentWord);
+        padding: calc(initialPadding * 1.25);
+        font-size: calc(initialSize * 1.25);
+    }
+    
+    #showUsername:hover {
         color: var(--currentWord);
     }
     .word {
