@@ -244,8 +244,8 @@ include "themes.scss"; //file contains all fonts
     }
     .navIcon:hover {
         color: var(--currentWord);
-        padding: 2rem;
-        font-size: 4rem;
+        padding: 0 2rem;
+        font-size: 10rem;
     }
     
     #showUsername:hover {
