@@ -1,8 +1,9 @@
 <?php
 
-$host = "localhost";
-$dbname = "u885077784_cozytypes";
-$username = "u885077784_alexmcbrier";
-$password = "AMcB0807";
+$host = getenv('DB_HOST');
+$dbname = getenv('DB_NAME');
+$username = getenv('DB_USER');
+$password = getenv('DB_PASSWORD');
+
 $mysqli = new mysqli(hostname: $host, username: $username, password: $password, database: $dbname);
 return $mysqli;
