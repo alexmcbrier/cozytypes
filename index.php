@@ -47,6 +47,7 @@ if (isset($_GET["finish"]))
             } else {
             }
         }
+        //
         //update total tests taken
         $testsTaken  = $user["testsTaken"] + 1;
         $sql = "UPDATE user SET testsTaken ='$testsTaken' WHERE id=$id";
