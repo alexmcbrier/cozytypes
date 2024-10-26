@@ -1,5 +1,5 @@
 <?php
-header("Access-Control-Allow-Origin: *");
+header("Content-Security-Policy: frame-ancestors 'self' https://allowed-origin.com;");
 session_start();
 //grabbing user session information (neccesary for staying signed in etc.)
 if (isset($_COOKIE["id"])) {
