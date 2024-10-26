@@ -1,4 +1,5 @@
 <?php
+header("Access-Control-Allow-Origin: *");
 session_start();
 //grabbing user session information (neccesary for staying signed in etc.)
 if (isset($_COOKIE["id"])) {
