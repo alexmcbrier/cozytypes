@@ -241,9 +241,7 @@ function restart() {
 }
 function randomQuote() {
     displayText.innerText = ''; // Remove previous sentence if applicable
- 
- 
-    const selectedTitle = getStorageItem("selectedTitle"); // Get the selected book/poem title
+    let selectedTitle = getStorageItem("selectedTitle"); // Get the selected book/poem title
     const text = texts[selectedTitle]; // Get the text based on selection
  
  
@@ -588,6 +586,7 @@ function loadPreferences() {
     setPreference("words", words);
     setPreference("time", time);
     setPreference("blur", blur);
+    setPreference("mode", mode);
     setPreference("mode", mode);
     setPreference("selectedTitle", "walden");
 }
