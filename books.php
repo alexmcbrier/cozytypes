@@ -123,12 +123,15 @@ crossorigin="anonymous"></script>
             <textarea id="textInput" spellcheck="false" autofocus></textarea>
             <div id="wordsWrapper"></div>
         </div>
-        <div class="testRow">
-            <div id ="resetBox" class = "testItem"><i id="restartTest"class="fa-solid fa-rotate" onclick="restart()"></i></div>
+        <div>
+            <div class="testRow">
+                <div id="completionDisplay" class = "testItem" >completion: 0%</div>
+            </div> 
+            <div class="testRow">
+                <div id="wpmDisplay" class = "testItem" >0 wpm</div>
+            </div>
         </div>
-        <div class="testRow">
-            <div id="wpmDisplay" class = "testItem" >0 wpm</div>
-        </div>
+        
         </div>
         <?php } else if (isset($_GET["finish"])) { ?>
         <!-- Display if test IS complete -->

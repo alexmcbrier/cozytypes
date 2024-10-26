@@ -3,13 +3,13 @@ const displayText = document.getElementById('wordsWrapper')
 const displayInput = document.getElementById('textInput') // Input Box
 //const displayTimer = document.getElementById('time') // Time Display
 const displayWPM = document.getElementById('wpmDisplay') // wpm Display
+const displayCompletion = document.getElementById('completionDisplay') // wpm Display
 const mainContent = document.getElementById('mainContent') // wpm Display
 const footer = document.getElementById("footer")
 const typingMode = document.getElementById("typingmode")
 const hotkey  = document.getElementById("hotkey")
 var timerStatus = false; // Turns on when user begins typing...
 var check = null;
-var sentenceLength = 50;
 var sentence = []
 var words = []
 var currentWordNum = 0;
@@ -18,6 +18,9 @@ var duration = 0;
 var wpm = 0;
 var count = 0
 var lastWord = 0;
+
+let totalWords = displayText?.querySelectorAll('.word').length; // Assuming each word has a class 'word'
+let completedWords = 0; // Track completed words
 
 const texts = {};
 
@@ -230,7 +233,8 @@ function restart() {
     clearInterval(check);
     currentWordNum = 0;
     timerStatus = false;
-    displayWPM.innerHTML = '0 wpm';
+    displayCompletion.innerHTML = '0 wpm';
+    displayWPM.innerHTML = 'completion: 0%';
     //displayTimer.innerText = getTime(getStorageItem("time"));
     displayInput.focus();
     displayInput.value = "";
@@ -254,10 +258,6 @@ function randomQuote() {
     }
  }
 
-
- 
-
-
 function wordsPerMinute(testDuration) {
     const timeIn = testDuration
     const correctText = displayText?.querySelectorAll('.correct').length
@@ -275,7 +275,7 @@ async function newQuote() {
     }
     displayInput.addEventListener('input', () => { startTimer() }) //starts the timer on input
     randomQuote() //creates a new random quote (Values stored inside sentence Array)
-    for (let i = 0; i < sentenceLength; i++) {
+    for (let i = 0; i < sentence.length; i++) {
         const word = document.createElement('div')
         if (i == 0) //first Word
         {
@@ -300,6 +300,8 @@ function startTimer() {
         footer.classList.add('fadeOut');
         typingMode.classList.add('fadeOut');
         hotkey.classList.add('fadeOut');
+
+        const allLetters = document.querySelectorAll('letter').length;
         document.getElementById('cursor').style.animation = "none";
         startTime = new Date()
         check = setInterval(function () {
@@ -307,6 +309,12 @@ function startTimer() {
             duration = Math.floor(0 + (new Date() - startTime) / 1000) //1 second intervals
             //displayTimer.innerText = getTime(duration)
             displayWPM.innerText = wordsPerMinute(duration) + " WPM"
+            const typedLetters = document.querySelectorAll('letter[class]').length  //typed have class
+
+
+            // Calculate completion percentage based on letters
+            const completionPercentage = (typedLetters / allLetters) * 100;
+            displayCompletion.innerText = `Completion: ${Math.round(completionPercentage)}%`;
         }, 1000)
         timerStatus = true;
     }
@@ -556,7 +564,7 @@ function loadPreferences() {
     let time = localStorage.getItem("time") || 15;
     let blur = localStorage.getItem("blur") || "off";
     let mode = localStorage.getItem("mode") || "hard";
-    let title = localStorage.getItem("selectedTitle") || "harryPotter";
+    let title = localStorage.getItem("selectedTitle") || "walden";
     setTheme("default", theme); 
     setPreference("fontSize", fontSize); 
     setPreference("fontFamily", fontFamily); 

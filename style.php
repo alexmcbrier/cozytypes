@@ -459,6 +459,9 @@ include "themes.scss"; //file contains all fonts
         font-size: calc(var(--fontSize) * .6rem);
         
     }
+    #completionDisplay {
+        font-size: calc(var(--fontSize) * .6rem);
+    }
     .currentSetting
     {
         background-color: var(--background);
