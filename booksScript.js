@@ -233,8 +233,8 @@ function restart() {
     clearInterval(check);
     currentWordNum = 0;
     timerStatus = false;
-    displayCompletion.innerHTML = 'completion: 0%';
-    displayWPM.innerHTML = '0 wpm';
+    displayCompletion.innerHTML = '0 wpm';
+    displayWPM.innerHTML = 'completion: 0%';
     //displayTimer.innerText = getTime(getStorageItem("time"));
     displayInput.focus();
     displayInput.value = "";
@@ -301,20 +301,21 @@ function startTimer() {
         typingMode.classList.add('fadeOut');
         hotkey.classList.add('fadeOut');
 
-        const allLetters = document.querySelectorAll('letter').length;
+        const allLetters = document.querySelectorAll('letter');
+        let totalLetters = 0;
+        totalLetters = allLetters.length;
         document.getElementById('cursor').style.animation = "none";
         startTime = new Date()
         check = setInterval(function () {
 
             duration = Math.floor(0 + (new Date() - startTime) / 1000) //1 second intervals
             //displayTimer.innerText = getTime(duration)
-            displayWPM.innerText = wordsPerMinute(duration) + " wpm"
+            displayWPM.innerText = wordsPerMinute(duration) + " WPM"
             const typedLetters = document.querySelectorAll('letter[class]').length  //typed have class
 
 
             // Calculate completion percentage based on letters
-            const completionPercentage = (typedLetters / allLetters) * 100;
-            console.log(completionPercentage);
+            const completionPercentage = (typedLetters / totalLetters) * 100;
             displayCompletion.innerText = `Completion: ${Math.round(completionPercentage)}%`;
         }, 1000)
         timerStatus = true;
