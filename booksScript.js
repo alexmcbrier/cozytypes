@@ -314,6 +314,7 @@ function startTimer() {
 
             // Calculate completion percentage based on letters
             const completionPercentage = (typedLetters / allLetters) * 100;
+            console.log(completionPercentage);
             displayCompletion.innerText = `Completion: ${Math.round(completionPercentage)}%`;
         }, 1000)
         timerStatus = true;
