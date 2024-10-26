@@ -233,8 +233,8 @@ function restart() {
     clearInterval(check);
     currentWordNum = 0;
     timerStatus = false;
-    displayCompletion.innerHTML = '0 wpm';
-    displayWPM.innerHTML = 'completion: 0%';
+    displayCompletion.innerHTML = 'completion: 0%';
+    displayWPM.innerHTML = '0 wpm';
     //displayTimer.innerText = getTime(getStorageItem("time"));
     displayInput.focus();
     displayInput.value = "";
