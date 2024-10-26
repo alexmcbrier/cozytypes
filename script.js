@@ -575,6 +575,7 @@ function loadPreferences() {
     let time = localStorage.getItem("time") || 15;
     let blur = localStorage.getItem("blur") || "off";
     let mode = localStorage.getItem("mode") || "hard";
+    let title = localStorage.getItem("selectedTitle") || "walden";
     setTheme("default", theme); 
     setPreference("fontSize", fontSize); 
     setPreference("fontFamily", fontFamily); 
@@ -585,6 +586,7 @@ function loadPreferences() {
     setPreference("time", time);
     setPreference("blur", blur);
     setPreference("mode", mode);
+    setPreference("selectedTitle", title);
 }
 loadPreferences();
 document.body.onLoad = refresh();

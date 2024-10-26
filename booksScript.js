@@ -241,7 +241,7 @@ function restart() {
 }
 function randomQuote() {
     displayText.innerText = ''; // Remove previous sentence if applicable
-    let selectedTitle = getStorageItem("selectedTitle"); // Get the selected book/poem title
+    let selectedTitle = localStorage.getItem("selectedTitle"); // Get the selected book/poem title
     const text = texts[selectedTitle]; // Get the text based on selection
  
  
@@ -253,27 +253,6 @@ function randomQuote() {
         sentence[i] = words[i]; // Fill sentence with words from the text
     }
  }
- 
- function randomQuote() {
-   displayText.innerText = ''; // Remove previous sentence if applicable
-
-
-   const selectedTitle = getStorageItem("selectedTitle"); // Get the selected book/poem title
-   const text = texts[selectedTitle]; // Get the text based on selection
-
-
-   if (!text) {
-       //text not found can do something
-   }
-
-
-   const words = text.split(/\s+/); // Split the text into words
-
-
-   for (let i = 0; i < words.length; i++) {
-       sentence[i] = words[i]; // Fill sentence with words from the text
-   }
-}
 
 
  
