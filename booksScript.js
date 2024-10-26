@@ -589,6 +589,7 @@ function loadPreferences() {
     setPreference("time", time);
     setPreference("blur", blur);
     setPreference("mode", mode);
+    setPreference("selectedTitle", "walden");
 }
 loadPreferences();
 document.body.onLoad = refresh();
