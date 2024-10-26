@@ -308,7 +308,7 @@ function startTimer() {
 
             duration = Math.floor(0 + (new Date() - startTime) / 1000) //1 second intervals
             //displayTimer.innerText = getTime(duration)
-            displayWPM.innerText = wordsPerMinute(duration) + " WPM"
+            displayWPM.innerText = wordsPerMinute(duration) + " wpm"
             const typedLetters = document.querySelectorAll('letter[class]').length  //typed have class
 
 

@@ -295,7 +295,7 @@ function startTimer() {
 
                 duration = Math.floor(0 + (new Date() - startTime) / 1000) //1 second intervals
                 displayTimer.innerText = getTime(duration)
-                displayWPM.innerText = wordsPerMinute(duration) + " WPM"
+                displayWPM.innerText = wordsPerMinute(duration) + " wpm"
             }, 1000)
         }
         else
@@ -304,7 +304,7 @@ function startTimer() {
                 let testTime = parseInt(getStorageItem("time"));
                 duration = Math.floor(testTime + 1 - (new Date() - startTime) / 1000) //1 second intervals
                 displayTimer.innerText = getTime(duration)
-                displayWPM.innerText = wordsPerMinute(duration) + " WPM"
+                displayWPM.innerText = wordsPerMinute(duration) + " wpm"
                 if (duration <= 0) {
                     endTest()
                 }
