@@ -566,7 +566,7 @@ function loadPreferences() {
     let time = localStorage.getItem("time") || 15;
     let blur = localStorage.getItem("blur") || "off";
     let mode = localStorage.getItem("mode") || "hard";
-    let title = localStorage.getItem("selectedTitle") || "walden";
+    let title = localStorage.getItem("selectedTitle") || "theRoadNotTaken";
     setTheme("default", theme); 
     setPreference("fontSize", fontSize); 
     setPreference("fontFamily", fontFamily); 
