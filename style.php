@@ -1209,6 +1209,12 @@ include "themes.scss"; //file contains all fonts
         transition: all .2s ease-in-out;
         font-family: var(--fontFamily);
     }
+    .profileValues {
+        color: var(--row);
+        margin-left: 1rem;
+        margin-top: 1rem;
+        font-size: 1.25rem;
+    }
     .results
     {   
         color: var(--row);
