@@ -621,6 +621,7 @@ include "themes.scss"; //file contains all fonts
         font-size: 1rem;
         padding: 0 1rem;
         color: var(--row);
+        line-height: 1rem;
     }
     .aboutDescription {
         font-size: 1.5rem;
@@ -1313,7 +1314,7 @@ include "themes.scss"; //file contains all fonts
     padding: 3rem 5.6rem;
     margin-left: .5rem;
     transition: 1s;
-    line-height: 10px;
+    line-height: 1rem;
     text-decoration: none;
     transition: transform .5s ease;
     margin-top: 1rem;
@@ -1349,8 +1350,44 @@ include "themes.scss"; //file contains all fonts
     .color-theme
     {
         color: var(--testText);
-        background-color: var(--background);;  
+        background-color: var(--background);
+        flex: 1 1 calc(10%);
     }
+    @media (max-width: 768px) {
+    .color-theme {
+        flex: 1 1 calc(20%); /* 4 items per row on medium screens */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .color-theme {
+            flex: 1 1 calc(100%); /* 1 item per row on very small screens */
+        }
+    }
+    .theme-row-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; /* Ensure space is evenly distributed */
+        margin: 0 -10px; /* Adjust margin for spacing */
+        user-select: none;
+        color: var(--currentWord);
+        background-color: var(--rowBackground);
+        font-size: 1rem;
+        border-radius: 1.5rem;
+        padding: 1rem;
+        margin-left: .5rem;
+        line-height: 10px;
+        vertical-align: top;
+        text-decoration: none;
+        /* Remove one of the margin properties */
+        margin: 1rem;
+        align-content: center;
+        transition-delay: 0s;
+        transition-duration: 0.25s;
+        transition-property: color, background; /* Add 'background' here */
+        transition-timing-function: ease;
+    }
+    
 
     .invisible {
         opacity: 0;
