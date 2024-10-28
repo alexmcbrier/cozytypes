@@ -437,6 +437,8 @@ include "themes.scss"; //file contains all fonts
         align-content: center;
         padding: 1rem;
         flex: 1;
+        display: flex;
+        flex-direction: column;
     }
     #textInput {
         resize: none;
@@ -1213,7 +1215,7 @@ include "themes.scss"; //file contains all fonts
         color: var(--row);
         margin-left: 1rem;
         margin-top: 1rem;
-        font-size: 1.25rem;
+        font-size: 5rem;
     }
     #loginButton1 {
         background-color: var(--testText);
