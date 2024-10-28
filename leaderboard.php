@@ -11,7 +11,7 @@ $mysqli = require __DIR__ . "/config.php";
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9923722164132738"
      crossorigin="anonymous"></script>
 </head>
-<body class="main-body">
+<body>
     <form id="mainContent" method="POST" action="preferences">
         <?php include "./nav.php" ?>
         <div id="middle" style = "width: 100%">
