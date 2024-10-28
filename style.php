@@ -922,7 +922,6 @@ include "themes.scss"; //file contains all fonts
     font-size: 1.75rem;
     margin-left: 1rem;
     margin-top: 0;
-    margin-bottom: 0rem;
     user-select: none;
     line-height: 2rem;
     display: flex;
@@ -1216,6 +1215,7 @@ include "themes.scss"; //file contains all fonts
         margin-left: 1rem;
         margin-top: 1rem;
         font-size: 5rem;
+        padding: 1rem;
     }
     #loginButton1 {
         background-color: var(--testText);
