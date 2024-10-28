@@ -19,7 +19,7 @@ $mysqli = require __DIR__ . "/config.php";
             <div class = "profileValues" style = "padding: 0 1rem">must have an account to be on the leaderboard</div>
             <div class = "profileValues" style = "padding: 0 1rem">All Time</div>
             <div id = "displayStats">
-                <div class = "statsContainer">
+                <div class = "statsContainer" class="rowContainer">
                     <div id = "preferenceHeader" class = "notSignedIn">15 seconds </div>
                     <?php
                     $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'time' AND testTime = 15 ORDER BY wpm DESC LIMIT 5";
