@@ -18,8 +18,8 @@ $mysqli = require __DIR__ . "/config.php";
             <div id = "showSignIn" style = "font-weight: bold; padding:0rem 2rem;" >Leaderboard<i class="fa-solid fa-crown"></i></div>
             <div class = "profileValues" style = "padding: 0 1rem">must have an account to be on the leaderboard</div>
             <div class = "profileValues" style = "padding: 0 1rem">All Time</div>
-            <div id = "displayStats">
-                <div class = "statsContainer" class="rowContainer">
+            <div id = "displayStats"  class="rowContainer">
+                <div class = "statsContainer">
                     <div id = "preferenceHeader" class = "notSignedIn">15 seconds </div>
                     <?php
                     $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'time' AND testTime = 15 ORDER BY wpm DESC LIMIT 5";
