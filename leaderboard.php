@@ -438,7 +438,7 @@ $mysqli = require __DIR__ . "/config.php";
                 <div class = "statsContainer">
                     <div id = "preferenceHeader" class = "notSignedIn">100 words  </div>
                     <?php
-                    $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'words' AND testTime = 100 AND created_at >= DATE_SUB(CURDATE(), INTERVAL 7 DAY) ORDER BY wpm DESC LIMIT 5";
+                    $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'words' AND testTime = 100 ORDER BY wpm DESC LIMIT 5";
                     $result = $mysqli->query($query);
                     $rows = $result->fetch_all(MYSQLI_ASSOC);            
                     // Ensure there are at least 5 rows, adding empty rows if necessary
