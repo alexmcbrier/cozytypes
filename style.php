@@ -270,10 +270,10 @@ include "themes.scss"; //file contains all fonts
         color: white;
         background-color: var(--row);
         /* background-color:#191919;                      Background color */
-        font-size: .75rem;
+        font-size: 1rem;
         border-radius: 1rem;
         display: inline-block;
-        padding: 1rem 1.1rem;
+        padding: 1.3rem;
         margin-left: .5rem;
         transition: transform .5s ease;
         line-height: 10px;
