@@ -408,6 +408,9 @@ include "themes.scss"; //file contains all fonts
         text-decoration: none;
         color: var(--testText);
         display: flex;
+        display: flex;
+        align-items: center; /* Vertically centers the content */
+        justify-content: center; /* Horizontally centers the content */
     }
     #showUsername:hover {
         color: var(--currentWord);
