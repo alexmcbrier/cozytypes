@@ -14,7 +14,7 @@ if (isset($_COOKIE["fontFamily"])) {
     </h2>
     <div id = "footerDiv">
         <a class = "footerLinks tooltip" href="https://github.com/alexmcbrier/cozytypes">github</span>
-            <i class="fa-brands fa-github-alt"></i>
+            <i class="fa-brands fa-github"></i>
         </a>
 
         <div class = "linkDivider">/</div>
