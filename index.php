@@ -73,7 +73,7 @@ crossorigin="anonymous"></script>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JMV592" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <i class="fa-solid fa-circle-notch" id="loadingIcon"></i>
+    <i class="fa-solid fa-spinner" id="loadingIcon"></i>
     <div id="mainContent">
         <?php include "./nav.php" ?>
         <script type="text/javascript">
