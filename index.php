@@ -152,7 +152,7 @@ crossorigin="anonymous"></script>
                 }
             });
         </script>
-        <img src="images/panda2.png" alt="Panda" style="display: block; margin: 0 auto; width: 100px; height: 100px;">
+        <img src="images/panda2.png" alt="Panda" style="display: block; margin: 0 auto; width: 100px; height: 100px; margin-right: 80%">
         <div id="displayStats" style = "background-color: var(--background); margin: 0; padding: 0 0 1rem">
             <div class="statsContainer" style = "background-color: var(--rowBackground); padding: 2.5rem; margin: 0 1rem">
                 <h1 class="notSignedIn" id="preferenceHeader">Words Per Minute<i class="fa-solid fa-clock-rotate-left"></i></h1>
