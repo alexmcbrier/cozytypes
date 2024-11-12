@@ -153,6 +153,7 @@ crossorigin="anonymous"></script>
             });
         </script>
         <div id="displayStats" style = "background-color: var(--background); margin: 1rem 0rem">
+            <img src="images/panda2.png" alt="Panda" style="display: block; margin: 0 auto; width: 100px; height: auto;">
             <div class="statsContainer" style = "background-color: var(--rowBackground); padding: 2.5rem">
                 <h1 class="notSignedIn" id="preferenceHeader">Words Per Minute<i class="fa-solid fa-clock-rotate-left"></i></h1>
                 <a class="results"><?= $_GET["wpm"] ?></a>
