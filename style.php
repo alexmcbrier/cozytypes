@@ -508,7 +508,7 @@ include "themes.scss"; //file contains all fonts
     }
 
     #typingmode {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
         color: var(--row);
         display: flex;
         user-select: none;
@@ -623,7 +623,7 @@ include "themes.scss"; //file contains all fonts
     }
     .description
     {
-        font-size: 1rem;
+        font-size: 1.3rem;
         padding: 0 1rem;
         color: var(--row);
         line-height: 1rem;
