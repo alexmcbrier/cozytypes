@@ -239,7 +239,7 @@ function wordsPerMinute(testDuration) {
     else {
         const timeIn = testDuration
         const correctText = displayText?.querySelectorAll('.correct').length
-        const wpm = Math.round(correctText / 5 / timeIn * 60)
+        const wpm = Math.round(correctText / 4 / timeIn * 60)
         return wpm
     }
 }
