@@ -271,7 +271,7 @@ include "themes.scss"; //file contains all fonts
         background-color: var(--row);
         /* background-color:#191919;                      Background color */
         font-size: 1rem;
-        border-radius: 1rem;
+        border-radius: 1.3rem;
         display: inline-block;
         padding: 1.3rem;
         margin-left: .5rem;
