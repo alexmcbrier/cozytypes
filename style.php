@@ -283,6 +283,7 @@ include "themes.scss"; //file contains all fonts
         line-height: 10px;
         margin-top: .5rem;
         text-align: center;
+        min-width: 5rem;
     }
     
     #footer
