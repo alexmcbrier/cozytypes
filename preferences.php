@@ -28,7 +28,7 @@ session_start();
             <div id="fontsContainer" class="rowContainer">
                 <h1 class="notSignedIn" id="preferenceHeader">font <i class="fa-solid fa-font"></i></h1>
                 <h1 class="description">Choose from various styles to change the font family across the site.</h1>
-                <div class="theme-row-container">
+                <div class="themesContainer">
                     <a class="color-theme" style="font-family: 'LexendDeca', serif;" onclick="setPreference('fontFamily', 'lexenddeca'), addNotification('font family','lexend deca');">lexend deca</a>
                     <a class="color-theme" style="font-family: Arial;" onclick="setPreference('fontFamily', 'arial'), addNotification('font family','arial');">arial</a>
                     <a class="color-theme" style="font-family: 'IBM Plex Sans', sans-serif;" onclick="setPreference('fontFamily', 'ibmplexsans'), addNotification('font family','IBM Plex Sans');">IBM Plex Sans</a>
