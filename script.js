@@ -574,7 +574,7 @@ function loadPreferences() {
     let words = localStorage.getItem("words") || 10;
     let time = localStorage.getItem("time") || 15;
     let blur = localStorage.getItem("blur") || "off";
-    let mode = localStorage.getItem("mode") || "hard";
+    let mode = localStorage.getItem("mode") || "easy";
     let title = localStorage.getItem("selectedTitle") || "harryPotter";
     setTheme("default", theme); 
     setPreference("fontSize", fontSize); 
