@@ -369,7 +369,7 @@ function moveCursor()
     cursor.style.left = rect.x + "px";
     cursor.style.width = rect.width + "px";
     cursor.style.marginTop = (localStorage.getItem("fontSize") * 1.25) + "rem";
-    cursor.style.height = (localStorage.getItem("fontSize") / 5) + "rem";
+    cursor.style.height = (localStorage.getItem("fontSize") / 6) + "rem";
     cursor.style.animation = "none";
   }
   else if(getStorageItem('caret') == "caret")
