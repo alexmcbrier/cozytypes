@@ -369,7 +369,7 @@ function moveCursor()
     cursor.style.left = rect.x + "px";
     cursor.style.width = rect.width + "px";
     cursor.style.marginTop = (localStorage.getItem("fontSize") * 1.25) + "rem";
-    cursor.style.height = (localStorage.getItem("fontSize") / 6) + "rem";
+    cursor.style.height = (localStorage.getItem("fontSize") / 4) + "rem";
     cursor.style.animation = "none";
   }
   else if(getStorageItem('caret') == "caret")
@@ -568,7 +568,7 @@ function loadPreferences() {
     let theme = localStorage.getItem("theme") || "light";
     let fontSize = localStorage.getItem("fontSize") || "3";
     let fontFamily = localStorage.getItem("fontFamily") || "lora";
-    let lineCount = localStorage.getItem("lineCount") || "3";
+    let lineCount = localStorage.getItem("lineCount") || "2";
     let caret = localStorage.getItem("caret") || "caret";
     let typingMode = localStorage.getItem("typingMode") || "time";
     let words = localStorage.getItem("words") || 10;
