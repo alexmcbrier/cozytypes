@@ -459,7 +459,6 @@ function setCursorVisibility() {
     document.getElementById('cursor').style.visibility = 'visible';
 }
 function zoomwait() {
-    moveCursorWithY();
     document.getElementById('cursor').style.visibility = 'hidden';
     try {
         document.getElementsByClassName('box')[0].remove(); //if has blur box
@@ -467,6 +466,10 @@ function zoomwait() {
     } catch (err) {
         setTimeout(() => { moveCursorWithY(), setCursorVisibility(); }, 500);
     }
+    displayText.style.marginTop = 0;
+    setTimeout (() => {
+        moveCursorWithY();
+    }  , 1000);
 }
 function findItem(name, parentId) {
     const children = document.getElementById(parentId).children // wpm Display
