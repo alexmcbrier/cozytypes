@@ -432,13 +432,11 @@ function moveCursor()
   }
 }
 function moveCursorWithY() {
-  setTimeout(() => {
-    moveCursor();
-    const cursor = document.getElementById('cursor') 
-    const placement = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
-    const rect = placement.getBoundingClientRect();
-    cursor.style.top = rect.y + "px";
-  }, 1000);
+  moveCursor();
+  const cursor = document.getElementById('cursor') 
+  const placement = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
+  const rect = placement.getBoundingClientRect();
+  cursor.style.top = rect.y + "px";
 }
 function setBlur() {
     if (getStorageItem("lineCount") > 1 && getStorageItem("blur") == "on") {
