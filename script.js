@@ -462,9 +462,9 @@ function zoomwait() {
     document.getElementById('cursor').style.visibility = 'hidden';
     try {
         document.getElementsByClassName('box')[0].remove(); //if has blur box
-        setTimeout(() => { moveCursorWithY(), setBlur(), setCursorVisibility(); }, 1000);
+        setTimeout(() => { moveCursorWithY(), setBlur(), setCursorVisibility(); }, 650);
     } catch (err) {
-        setTimeout(() => { moveCursorWithY(), setCursorVisibility(); }, 1000);
+        setTimeout(() => { moveCursorWithY(), setCursorVisibility(); }, 650);
     }
 }
 function findItem(name, parentId) {
