@@ -247,7 +247,7 @@ include "themes.scss"; //file contains all fonts
     }
     .word {
         display: inline-block;
-        padding-right: calc(var(--fontSize) * .2rem);
+        padding-right: calc(var(--fontSize) * .4rem);
         /* line spacing */
     } 
     .row {
@@ -603,13 +603,13 @@ include "themes.scss"; //file contains all fonts
     .current-word {
         /* color: var(--currentWord); */
         display: inline-block;
-        padding-right: calc(var(--fontSize) * .2rem);
+        padding-right: calc(var(--fontSize) * .4rem);
     }
 
     .incorrect-word {
         color: var(--incorrect);
         display: inline-block;
-        padding: 0rem calc(var(--fontSize) * .2rem);
+        padding: 0rem calc(var(--fontSize) * .4rem);
     }
 
     #listOfStats {
