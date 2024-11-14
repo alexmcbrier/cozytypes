@@ -433,10 +433,12 @@ function moveCursor()
 }
 function moveCursorWithY() {
   moveCursor();
-  const cursor = document.getElementById('cursor') 
-  const placement = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
-  const rect = placement.getBoundingClientRect();
-  cursor.style.top = rect.y + "px";
+  setTimeout(() => {
+    const cursor = document.getElementById('cursor') 
+    const placement = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
+    const rect = placement.getBoundingClientRect();
+    cursor.style.top = rect.y + "px";
+  }, 500);
 }
 function setBlur() {
     if (getStorageItem("lineCount") > 1 && getStorageItem("blur") == "on") {
