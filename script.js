@@ -524,7 +524,6 @@ function refresh() {
         updateModes();
         moveCursorWithY();
         setCursorVisibility();
-        hotkey.style.visibility = "visible";
     }
 }
 function setTheme(oldTheme, newTheme) {
