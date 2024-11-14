@@ -199,6 +199,7 @@ function keystroke() {
     }
 }
 function restart() {
+    displayText.style.marginTop = 0; //reset the box for the text (since it moves up for each new line)
     clearInterval(check);
     currentWordNum = 0;
     timerStatus = false;
