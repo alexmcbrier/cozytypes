@@ -548,6 +548,7 @@ include "themes.scss"; //file contains all fonts
         height: var(--caretHeight);
         margin-top: var(--caretTop);
         animation: blink 1.5s infinite 1s;
+        visibility: hidden;
     }
     @keyframes blink {
         0%,

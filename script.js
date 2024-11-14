@@ -458,8 +458,12 @@ function setBlur() {
 function setCursorVisibility() {
     document.getElementById('cursor').style.visibility = 'visible';
 }
-function zoomwait() {
+
+function setCursorInvisibility() {
     document.getElementById('cursor').style.visibility = 'hidden';
+}
+function zoomwait() {
+    setCursorInvisibility();
     try {
         document.getElementsByClassName('box')[0].remove(); //if has blur box
         setTimeout(() => { moveCursorWithY(), setBlur(), setCursorVisibility(); }, 650);
@@ -519,6 +523,7 @@ function refresh() {
         setBlur();
         updateModes();
         moveCursorWithY();
+        setCursorVisibility();
         hotkey.style.visibility = "visible";
     }
 }
