@@ -22,15 +22,7 @@ $mysqli = require __DIR__ . "/config.php";
                 <div class = "statsContainer">
                     <div id = "preferenceHeader" class = "notSignedIn">15 seconds </div>
                     <?php
-
-                    $query = "SELECT * FROM typingtest 
-                    WHERE id IS NOT NULL 
-                      AND mode = 'time' 
-                      AND testTime = 15 
-                      AND wpm < 250 
-                    ORDER BY wpm DESC 
-                    LIMIT 5";
-
+                    $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'time' AND wpm < 250 AND testTime = 15 ORDER BY wpm DESC LIMIT 5";
                     $result = $mysqli->query($query);
                     $rows = $result->fetch_all(MYSQLI_ASSOC);            
                     // Ensure there are at least 5 rows, adding empty rows if necessary
@@ -57,15 +49,7 @@ $mysqli = require __DIR__ . "/config.php";
                 <div class = "statsContainer">
                     <div id = "preferenceHeader" class = "notSignedIn">30 seconds  </div>
                     <?php
-
-                    $query = "SELECT * FROM typingtest 
-                    WHERE id IS NOT NULL 
-                      AND mode = 'time' 
-                      AND testTime = 30 
-                      AND wpm < 250 
-                    ORDER BY wpm DESC 
-                    LIMIT 5";
-
+                    $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'time' AND wpm < 250 AND testTime = 30 ORDER BY wpm DESC LIMIT 5";
                     $result = $mysqli->query($query);
                     $rows = $result->fetch_all(MYSQLI_ASSOC);            
                     // Ensure there are at least 5 rows, adding empty rows if necessary
@@ -92,13 +76,7 @@ $mysqli = require __DIR__ . "/config.php";
                 <div class = "statsContainer">
                     <div id = "preferenceHeader" class = "notSignedIn">60 seconds  </div>
                     <?php
-                    $query = "SELECT * FROM typingtest 
-                    WHERE id IS NOT NULL 
-                      AND mode = 'time' 
-                      AND testTime = 60 
-                      AND wpm < 250 
-                    ORDER BY wpm DESC 
-                    LIMIT 5";
+                    $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'time' AND wpm < 250 AND testTime = 60 ORDER BY wpm DESC LIMIT 5";
                     $result = $mysqli->query($query);
                     $rows = $result->fetch_all(MYSQLI_ASSOC);            
                     // Ensure there are at least 5 rows, adding empty rows if necessary
@@ -125,13 +103,7 @@ $mysqli = require __DIR__ . "/config.php";
                 <div class = "statsContainer">
                     <div id = "preferenceHeader" class = "notSignedIn">120 seconds  </div>
                     <?php
-                    $query = "SELECT * FROM typingtest 
-                    WHERE id IS NOT NULL 
-                      AND mode = 'time' 
-                      AND testTime = 120 
-                      AND wpm < 250 
-                    ORDER BY wpm DESC 
-                    LIMIT 5";
+                    $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'time' AND wpm < 250 AND testTime = 120 ORDER BY wpm DESC LIMIT 5";
                     $result = $mysqli->query($query);
                     $rows = $result->fetch_all(MYSQLI_ASSOC);            
                     // Ensure there are at least 5 rows, adding empty rows if necessary
@@ -161,14 +133,7 @@ $mysqli = require __DIR__ . "/config.php";
                 <div class = "statsContainer">
                     <div id = "preferenceHeader" class = "notSignedIn">10 words </div>
                     <?php
-
-                    $query = "SELECT * FROM typingtest 
-                    WHERE id IS NOT NULL 
-                      AND mode = 'words' 
-                      AND testTime = 10 
-                      AND wpm < 250 
-                    ORDER BY wpm DESC 
-                    LIMIT 5";
+                    $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'words' AND wpm < 250 AND testTime = 10 ORDER BY wpm DESC LIMIT 5";
                     $result = $mysqli->query($query);
                     $rows = $result->fetch_all(MYSQLI_ASSOC);            
                     // Ensure there are at least 5 rows, adding empty rows if necessary
@@ -195,13 +160,7 @@ $mysqli = require __DIR__ . "/config.php";
                 <div class = "statsContainer">
                     <div id = "preferenceHeader" class = "notSignedIn">25 words  </div>
                     <?php
-                    $query = "SELECT * FROM typingtest 
-                    WHERE id IS NOT NULL 
-                      AND mode = 'words' 
-                      AND testTime = 25 
-                      AND wpm < 250 
-                    ORDER BY wpm DESC 
-                    LIMIT 5";
+                    $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'words' AND wpm < 250 AND testTime = 25 ORDER BY wpm DESC LIMIT 5";
                     $result = $mysqli->query($query);
                     $rows = $result->fetch_all(MYSQLI_ASSOC);            
                     // Ensure there are at least 5 rows, adding empty rows if necessary
@@ -228,13 +187,7 @@ $mysqli = require __DIR__ . "/config.php";
                 <div class = "statsContainer">
                     <div id = "preferenceHeader" class = "notSignedIn">50 words  </div>
                     <?php
-                    $query = "SELECT * FROM typingtest 
-                    WHERE id IS NOT NULL 
-                      AND mode = 'words' 
-                      AND testTime = 50 
-                      AND wpm < 250 
-                    ORDER BY wpm DESC 
-                    LIMIT 5";
+                    $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'words' AND wpm < 250 AND testTime = 50 ORDER BY wpm DESC LIMIT 5";
                     $result = $mysqli->query($query);
                     $rows = $result->fetch_all(MYSQLI_ASSOC);            
                     // Ensure there are at least 5 rows, adding empty rows if necessary
@@ -261,13 +214,7 @@ $mysqli = require __DIR__ . "/config.php";
                 <div class = "statsContainer">
                     <div id = "preferenceHeader" class = "notSignedIn">100 words  </div>
                     <?php
-                    $query = "SELECT * FROM typingtest 
-                    WHERE id IS NOT NULL 
-                      AND mode = 'words' 
-                      AND testTime = 100 
-                      AND wpm < 250 
-                    ORDER BY wpm DESC 
-                    LIMIT 5";
+                    $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'words' AND wpm < 250 AND testTime = 100 ORDER BY wpm DESC LIMIT 5";
                     $result = $mysqli->query($query);
                     $rows = $result->fetch_all(MYSQLI_ASSOC);            
                     // Ensure there are at least 5 rows, adding empty rows if necessary
@@ -299,7 +246,7 @@ $mysqli = require __DIR__ . "/config.php";
                 <div class = "statsContainer">
                     <div id = "preferenceHeader" class = "notSignedIn">15 seconds </div>
                     <?php
-                    $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'time' AND testTime = 15 AND date >= DATE_SUB(NOW(), INTERVAL 7 DAY) ORDER BY wpm DESC LIMIT 5";
+                    $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'time' AND wpm < 250 AND testTime = 15 AND date >= DATE_SUB(NOW(), INTERVAL 7 DAY) ORDER BY wpm DESC LIMIT 5";
                     $result = $mysqli->query($query);
                     $rows = $result->fetch_all(MYSQLI_ASSOC);            
                     // Ensure there are at least 5 rows, adding empty rows if necessary
@@ -326,7 +273,7 @@ $mysqli = require __DIR__ . "/config.php";
                 <div class = "statsContainer">
                     <div id = "preferenceHeader" class = "notSignedIn">30 seconds  </div>
                     <?php
-                    $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'time' AND testTime = 30 AND date >= DATE_SUB(NOW(), INTERVAL 7 DAY) ORDER BY wpm DESC LIMIT 5";
+                    $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'time' AND wpm < 250 AND testTime = 30 AND date >= DATE_SUB(NOW(), INTERVAL 7 DAY) ORDER BY wpm DESC LIMIT 5";
                     $result = $mysqli->query($query);
                     $rows = $result->fetch_all(MYSQLI_ASSOC);            
                     // Ensure there are at least 5 rows, adding empty rows if necessary
@@ -353,7 +300,7 @@ $mysqli = require __DIR__ . "/config.php";
                 <div class = "statsContainer">
                     <div id = "preferenceHeader" class = "notSignedIn">60 seconds  </div>
                     <?php
-                    $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'time' AND testTime = 60 AND date >= DATE_SUB(NOW(), INTERVAL 7 DAY) ORDER BY wpm DESC LIMIT 5";
+                    $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'time' AND wpm < 250 AND testTime = 60 AND date >= DATE_SUB(NOW(), INTERVAL 7 DAY) ORDER BY wpm DESC LIMIT 5";
                     $result = $mysqli->query($query);
                     $rows = $result->fetch_all(MYSQLI_ASSOC);            
                     // Ensure there are at least 5 rows, adding empty rows if necessary
@@ -380,7 +327,7 @@ $mysqli = require __DIR__ . "/config.php";
                 <div class = "statsContainer">
                     <div id = "preferenceHeader" class = "notSignedIn">120 seconds  </div>
                     <?php
-                    $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'time' AND testTime = 120 AND date >= DATE_SUB(NOW(), INTERVAL 7 DAY) ORDER BY wpm DESC LIMIT 5";
+                    $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'time' AND wpm < 250 AND testTime = 120 AND date >= DATE_SUB(NOW(), INTERVAL 7 DAY) ORDER BY wpm DESC LIMIT 5";
                     $result = $mysqli->query($query);
                     $rows = $result->fetch_all(MYSQLI_ASSOC);            
                     // Ensure there are at least 5 rows, adding empty rows if necessary
@@ -410,7 +357,7 @@ $mysqli = require __DIR__ . "/config.php";
                 <div class = "statsContainer">
                     <div id = "preferenceHeader" class = "notSignedIn">10 words </div>
                     <?php
-                    $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'words' AND testTime = 10 AND date >= DATE_SUB(NOW(), INTERVAL 7 DAY) ORDER BY wpm DESC LIMIT 5";
+                    $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'words' AND wpm < 250 AND testTime = 10 AND date >= DATE_SUB(NOW(), INTERVAL 7 DAY) ORDER BY wpm DESC LIMIT 5";
                     $result = $mysqli->query($query);
                     $rows = $result->fetch_all(MYSQLI_ASSOC);            
                     // Ensure there are at least 5 rows, adding empty rows if necessary
@@ -437,7 +384,7 @@ $mysqli = require __DIR__ . "/config.php";
                 <div class = "statsContainer">
                     <div id = "preferenceHeader" class = "notSignedIn">25 words  </div>
                     <?php
-                    $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'words' AND testTime = 25 AND date >= DATE_SUB(NOW(), INTERVAL 7 DAY) ORDER BY wpm DESC LIMIT 5";
+                    $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'words' AND wpm < 250 AND testTime = 25 AND date >= DATE_SUB(NOW(), INTERVAL 7 DAY) ORDER BY wpm DESC LIMIT 5";
                     $result = $mysqli->query($query);
                     $rows = $result->fetch_all(MYSQLI_ASSOC);            
                     // Ensure there are at least 5 rows, adding empty rows if necessary
@@ -464,7 +411,7 @@ $mysqli = require __DIR__ . "/config.php";
                 <div class = "statsContainer">
                     <div id = "preferenceHeader" class = "notSignedIn">50 words  </div>
                     <?php
-                    $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'words' AND testTime = 50 AND date >= DATE_SUB(NOW(), INTERVAL 7 DAY) ORDER BY wpm DESC LIMIT 5";
+                    $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'words' AND wpm < 250 AND testTime = 50 AND date >= DATE_SUB(NOW(), INTERVAL 7 DAY) ORDER BY wpm DESC LIMIT 5";
                     $result = $mysqli->query($query);
                     $rows = $result->fetch_all(MYSQLI_ASSOC);            
                     // Ensure there are at least 5 rows, adding empty rows if necessary
@@ -491,7 +438,7 @@ $mysqli = require __DIR__ . "/config.php";
                 <div class = "statsContainer">
                     <div id = "preferenceHeader" class = "notSignedIn">100 words  </div>
                     <?php
-                    $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'words' AND testTime = 100 AND date >= DATE_SUB(NOW(), INTERVAL 7 DAY) ORDER BY wpm DESC LIMIT 5";
+                    $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'words' AND wpm < 250 AND testTime = 100 AND date >= DATE_SUB(NOW(), INTERVAL 7 DAY) ORDER BY wpm DESC LIMIT 5";
                     $result = $mysqli->query($query);
                     $rows = $result->fetch_all(MYSQLI_ASSOC);            
                     // Ensure there are at least 5 rows, adding empty rows if necessary
