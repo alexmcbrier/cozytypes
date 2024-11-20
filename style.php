@@ -219,7 +219,6 @@ include "themes.scss"; //file contains all fonts
     }
     #logo 
     {
-        font-weight: bold;
         user-select: none;
         display: inline;
         padding-right: 1rem;
