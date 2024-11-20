@@ -944,7 +944,8 @@ include "themes.scss"; //file contains all fonts
     #loginHeader {
         color: var(--currentWord);
         user-select: none;
-        font-size: 2.5rem
+        font-size: 2.5rem;
+        font-weight: normal;
     }
     @keyframes slide {
         from {
