@@ -125,6 +125,9 @@ include "themes.scss"; //file contains all fonts
     min-width: 8rem;
     }
 
+#title {
+    font-size: 2.75rem;
+}
 .tooltip .tooltiptext::after {
     content: "";
     position: absolute;

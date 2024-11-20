@@ -7,7 +7,7 @@ if (isset($_SESSION["user_id"])) {
 } ?>
 <nav> 
     <a id = "logo" href="https://cozytypes.com" style="text-decoration: none;">
-        <h1>cozytypes</h1>
+        <p id = "title">cozytypes</p>
     </a>
     <a class = "navIcon" href="https://cozytypes.com" ><i class="fa-solid fa-house"></i></a>
     <a class = "navIcon" href="/preferences"><i class="fa-solid fa-gear"></i></a>
