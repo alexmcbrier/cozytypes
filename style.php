@@ -1165,7 +1165,6 @@ include "themes.scss"; //file contains all fonts
     .notificationH
     {
         font-size: 2rem;
-        font-weight: bold;
     }
     .notificationD
     {
@@ -1211,7 +1210,6 @@ include "themes.scss"; //file contains all fonts
         width: 100%;
         color: var(--currentWord);
         font-size: 1rem;
-        font-weight: bold;
         cursor: pointer;
         transition: all .2s ease-in-out;
         font-family: var(--fontFamily);
