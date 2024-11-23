@@ -1,170 +1,200 @@
 .theme-8008 {
-    --background: #333a45;
-    --backgroundDark: #2f343d;
-    --testText: #939eae;
-    --currentWord: rgb(255, 255, 255);
-    --correct: #f44c7f;
-    --row: #f44c7f;
-    --rowBackground: #2a2f36;
-    --incorrect: #828aff;
-  }
-  .theme-9009 {
-    --background: #EEEBE2;
-    --backgroundDark: #d5d0c1;
-    --testText: #99947F;
-    --currentWord: #FFFFFF;
-    --correct: #080909;
-    --row: #99947F;
-    --rowBackground: #c5beaa;
-    --incorrect: #C87E74;
-  }
-  .amethyst {
-    --background: #e2caea;
-    --backgroundDark: #cfb5d8;
-    --testText: #480c51;
-    --currentWord: rgb(255, 255, 255);
-    --correct: #9774aa;
-    --row: #ac8ebc;
-    --rowBackground: #8c6a9e;
-    --incorrect: #ab395f;
-  }
-  .bliss {
-    --background: #262727;
-    --backgroundDark: #212222;
-    --testText: rgb(102, 89, 87);;
-    --currentWord: #fff;
-    --row: #343231;
-    --rowBackground: #161616;
-    --correct: #f0d3c9;
-    --incorrect: #bd4141;
-  }
-  .blueberry {
-    --background: #1B2334;
-    --backgroundDark: #171d2b;
-    --testText: #5C7DA5;
-    --currentWord: #D7DCDA;
-    --row: rgb(54, 64, 94);
-    --correct: #ADD7FF;
-    --rowBackground: #111a2b;
-    --incorrect: #962F7E;
-  }
-  .blueberryLight {
-    --background: #dae0f5;
-    --backgroundDark: #c4cae2;
-    --testText: #506477;
-    --currentWord: #fff;
-    --row: rgb(113, 139, 195);
-    --correct: #92a4be;
-    --rowBackground: rgb(156, 179, 231);
-    --incorrect: #962F7E;
-  }
-  .botanical {
-    --background: #7b9c98;
-    --backgroundDark: #495755;
-    --testText: #495755;
-    --currentWord: #FFFFFF;
-    --row: #495755;
-    --rowBackground: #678884;
-    --correct: #dde7e8;
-    --incorrect: #F6C9B4;
-  }
-  .creamsicle {
-    --background: #FF9869;
-    --backgroundDark: #e9875a;
-    --testText: #FF661F;
-    --currentWord: #FFFFFF;
-    --row: #ffceb7;
-    --rowBackground: #ffad88;
-    --correct: #b64d1c;
-    --incorrect: #c93c37;
-  }
-  .dark {
-    --background: #010203;
-    --backgroundDark: #000000;
-    --testText: #5E676E;
-    --currentWord: #ffffff;
-    --row: #383E42;
-    --rowBackground: #131517;
-    --correct: #383E42;
-    --incorrect: #B3344B;
-  }
-  .light {
-    --background: #eeeeee;
-    --backgroundDark: #d5cdcd;
-    --testText: #B2B2B2;
-    --currentWord: #404040;
-    --correct: #463e3e;
-    --row: #b6b4b4;
-    --rowBackground: #d1d0d0;
-    --incorrect: #be6969;
-  }
-  .dracula {
-    --background: #00021b;
-    --backgroundDark: #000113;
-    --testText: #4413e5;
-    --currentWord: #ffffff;
-    --row: #4413e5;
-    --rowBackground: #0d0f35;
-    --correct: #a29bff;
-    --incorrect: rgb(151, 60, 255);
-  }
-  .mizu {
-    --background: #afcbdd;
-    --backgroundDark: #9fbbcc;
-    --testText: #85a5bb;
-    --currentWord: #f6fafc;
-    --row: #93aec0;
-    --rowBackground: #718b9d;
-    --correct: #7693a7;
-    --incorrect: #ba8591;
-  }
-  .olivia {
-    --background: #1e1e1e;
-    --backgroundDark: #161616;
-    --testText: #d4d4d4;
-    --currentWord: #ffffff;
-    --correct: #ce9178;
-    --row: #49423e;
-    --rowBackground: #2a2828;
-    --incorrect: #474747;
-  }
-  .sakura {
-    --background: #FEC8CD;
-    --backgroundDark: #FEC8CD;
-    --testText: #ba5d62;
-    --currentWord: #ffffff;
-    --correct: #db999c;
-    --row: #e6aaad;
-    --rowBackground: #cf999c;
-    --incorrect: #964348;
-  }
-  .striker {
-    --background: #124883;
-    --backgroundDark: #114175;
-    --testText: #0f2d4e;
-    --currentWord: #D7DCDA;
-    --correct: #6a9fd8;
-    --row: #1b3a5c;
-    --rowBackground: #0d2238;
-    --incorrect: #f89787;
-  }
-  .strawberry {
-    --background: #f37f83;
-    --backgroundDark: #d46f73;
-    --testText: #e53c58;
-    --currentWord: #FFFFFF;
-    --row: #873d3e;
-    --rowBackground: #bb5a5d;
-    --correct: #cd5468;
-    --incorrect: #bab4f6;
-  }
-  .alpine {
-    --background: #6c687f;
-    --backgroundDark: #5c5870;
-    --testText: #9994b8;
-    --currentWord: #fff;
-    --row: #87839e;
-    --rowBackground: #565267;
-    --correct: rgb(227, 180, 246);
-    --incorrect: rgb(225, 152, 188);
-  }
+  --background: #333a45;
+  --backgroundDark: #2f343d;
+  --testText: #939eae;
+  --currentWord: rgb(255, 255, 255);
+  --correct: #f44c7f;
+  --row: #f44c7f;
+  --rowBackground: #2a2f36;
+  --incorrect: #828aff;
+}
+.theme-9009 {
+  --background: #EEEBE2;
+  --backgroundDark: #d5d0c1;
+  --testText: #99947F;
+  --currentWord: #FFFFFF;
+  --correct: #080909;
+  --row: #99947F;
+  --rowBackground: #c5beaa;
+  --incorrect: #C87E74;
+}
+.amethyst {
+  --background: #e2caea;
+  --backgroundDark: #cfb5d8;
+  --testText: #480c51;
+  --currentWord: rgb(255, 255, 255);
+  --correct: #9774aa;
+  --row: #ac8ebc;
+  --rowBackground: #8c6a9e;
+  --incorrect: #ab395f;
+}
+.bliss {
+  --background: #262727;
+  --backgroundDark: #212222;
+  --testText: rgb(102, 89, 87);;
+  --currentWord: #fff;
+  --row: #343231;
+  --rowBackground: #161616;
+  --correct: #f0d3c9;
+  --incorrect: #bd4141;
+}
+.blueberry {
+  --background: #1B2334;
+  --backgroundDark: #171d2b;
+  --testText: #5C7DA5;
+  --currentWord: #D7DCDA;
+  --row: rgb(54, 64, 94);
+  --correct: #ADD7FF;
+  --rowBackground: #111a2b;
+  --incorrect: #962F7E;
+}
+.blueberryLight {
+  --background: #dae0f5;
+  --backgroundDark: #c4cae2;
+  --testText: #506477;
+  --currentWord: #fff;
+  --row: rgb(113, 139, 195);
+  --correct: #92a4be;
+  --rowBackground: rgb(156, 179, 231);
+  --incorrect: #962F7E;
+}
+.botanical {
+  --background: #7b9c98;
+  --backgroundDark: #495755;
+  --testText: #495755;
+  --currentWord: #FFFFFF;
+  --row: #495755;
+  --rowBackground: #678884;
+  --correct: #dde7e8;
+  --incorrect: #F6C9B4;
+}
+.creamsicle {
+  --background: #FF9869;
+  --backgroundDark: #e9875a;
+  --testText: #FF661F;
+  --currentWord: #FFFFFF;
+  --row: #ffceb7;
+  --rowBackground: #ffad88;
+  --correct: #b64d1c;
+  --incorrect: #c93c37;
+}
+.dark {
+  --background: #010203;
+  --backgroundDark: #000000;
+  --testText: #5E676E;
+  --currentWord: #ffffff;
+  --row: #383E42;
+  --rowBackground: #131517;
+  --correct: #383E42;
+  --incorrect: #B3344B;
+}
+.light {
+  --background: #eeeeee;
+  --backgroundDark: #d5cdcd;
+  --testText: #B2B2B2;
+  --currentWord: #404040;
+  --correct: #463e3e;
+  --row: #b6b4b4;
+  --rowBackground: #d1d0d0;
+  --incorrect: #be6969;
+}
+.dracula {
+  --background: #00021b;
+  --backgroundDark: #000113;
+  --testText: #4413e5;
+  --currentWord: #ffffff;
+  --row: #4413e5;
+  --rowBackground: #0d0f35;
+  --correct: #a29bff;
+  --incorrect: rgb(151, 60, 255);
+}
+.mizu {
+  --background: #afcbdd;
+  --backgroundDark: #9fbbcc;
+  --testText: #85a5bb;
+  --currentWord: #f6fafc;
+  --row: #93aec0;
+  --rowBackground: #718b9d;
+  --correct: #7693a7;
+  --incorrect: #ba8591;
+}
+.olivia {
+  --background: #1e1e1e;
+  --backgroundDark: #161616;
+  --testText: #d4d4d4;
+  --currentWord: #ffffff;
+  --correct: #ce9178;
+  --row: #49423e;
+  --rowBackground: #2a2828;
+  --incorrect: #474747;
+}
+.sakura {
+  --background: #FEC8CD;
+  --backgroundDark: #FEC8CD;
+  --testText: #ba5d62;
+  --currentWord: #ffffff;
+  --correct: #db999c;
+  --row: #e6aaad;
+  --rowBackground: #cf999c;
+  --incorrect: #964348;
+}
+.striker {
+  --background: #124883;
+  --backgroundDark: #114175;
+  --testText: #0f2d4e;
+  --currentWord: #D7DCDA;
+  --correct: #6a9fd8;
+  --row: #1b3a5c;
+  --rowBackground: #0d2238;
+  --incorrect: #f89787;
+}
+.strawberry {
+  --background: #f37f83;
+  --backgroundDark: #d46f73;
+  --testText: #e53c58;
+  --currentWord: #FFFFFF;
+  --row: #873d3e;
+  --rowBackground: #bb5a5d;
+  --correct: #cd5468;
+  --incorrect: #bab4f6;
+}
+.alpine {
+  --background: #6c687f;
+  --backgroundDark: #5c5870;
+  --testText: #9994b8;
+  --currentWord: #fff;
+  --row: #87839e;
+  --rowBackground: #565267;
+  --correct: rgb(227, 180, 246);
+  --incorrect: rgb(225, 152, 188);
+}
+.darling {
+  --background: #fec8cd;
+  --backgroundDark: #f2babd;
+  --testText: #ffffff;
+  --currentWord: #a30000;
+  --row: #f6cbcf;
+  --rowBackground: #e3a5ab;
+  --correct: #e2a0a6;
+  --incorrect: #2e7dde;
+}
+.godspeed {
+  --background: #eae4cf;
+  --backgroundDark: #eae4cf;
+  --testText: #8d8d8d;
+  --currentWord: #9abbcd;
+  --row: #d7d2c1;
+  --rowBackground: #c1bcab;
+  --correct: #4d4d4d;
+  --incorrect: #dc3545;
+}
+.nord {
+  --background: #242933;
+  --backgroundDark: #1e222b;
+  --testText: #89919e;
+  --currentWord: #88c0d0;
+  --row: #2e3440;
+  --rowBackground: #1f252e;
+  --correct: #dcdfe4;
+  --incorrect: #eb8791;
+}

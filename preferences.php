@@ -51,9 +51,11 @@ session_start();
                 <div class="theme-row-container">
                     <a class = "color-theme light" onclick="setTheme(currentTheme, 'light')">light</a>
                     <a class = "color-theme theme-9009" onclick="setTheme(currentTheme, 'theme-9009')">9009</a>
+                    <a class = "color-theme godspeed" onclick="setTheme(currentTheme, 'godspeed')">godspeed</a>
                     <a class = "color-theme blueberryLight" onclick="setTheme(currentTheme, 'blueberryLight')">blueberry light</a>
                     <a class = "color-theme mizu" onclick="setTheme(currentTheme, 'mizu')">mizu</a>
                     <a class = "color-theme botanical" onclick="setTheme(currentTheme, 'botanical')">botanical</a>
+                    <a class = "color-theme darling" onclick="setTheme(currentTheme, 'darling')">darling</a>
                     <a class = "color-theme amethyst" onclick="setTheme(currentTheme, 'amethyst')">amethyst</a>
                     <a class = "color-theme creamsicle" onclick="setTheme(currentTheme, 'creamsicle')">creamsicle</a>
                     <a class = "color-theme strawberry" onclick="setTheme(currentTheme, 'strawberry')">strawberry</a>
@@ -61,6 +63,7 @@ session_start();
                     <a class = "color-theme alpine" onclick="setTheme(currentTheme, 'alpine')">alpine</a>
                     <a class = "color-theme theme-8008" onclick="setTheme(currentTheme, 'theme-8008')">8008</a>
                     <a class = "color-theme blueberry" onclick="setTheme(currentTheme, 'blueberry')">blueberry dark</a>
+                    <a class = "color-theme nord" onclick="setTheme(currentTheme, 'nord')">nord</a>
                     <a class = "color-theme bliss" onclick="setTheme(currentTheme, 'bliss')">bliss</a>
                     <a class = "color-theme olivia" onclick="setTheme(currentTheme, 'olivia')">olivia</a>
                     <a class = "color-theme dracula" onclick="setTheme(currentTheme, 'dracula')">dracula</a>

@@ -252,6 +252,9 @@ include "themes.scss"; //file contains all fonts
         padding-right: calc(var(--fontSize) * .4rem);
         /* line spacing */
     } 
+    h1 {
+        font-weight: normal;
+    }
     .row {
         user-select: none;
         color: var(--currentWord);
@@ -629,7 +632,8 @@ include "themes.scss"; //file contains all fonts
     {
         font-size: 1.3rem;
         padding: 0 1rem;
-        color: var(--row);
+        color: rgb(255, 255, 255);
+        opacity: 85%;
         line-height: 1rem;
     }
     .aboutDescription {
@@ -935,6 +939,7 @@ include "themes.scss"; //file contains all fonts
     white-space: nowrap;
     align-items: center;
     white-space: pre;
+    font-weight: bold;
 }
 
     .preferences a:hover {
