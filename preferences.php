@@ -57,7 +57,6 @@ session_start();
                     <a class = "color-theme botanical" onclick="setTheme(currentTheme, 'botanical')">botanical</a>
                     <a class = "color-theme darling" onclick="setTheme(currentTheme, 'darling')">darling</a>
                     <a class = "color-theme amethyst" onclick="setTheme(currentTheme, 'amethyst')">amethyst</a>
-                    <a class = "color-theme creamsicle" onclick="setTheme(currentTheme, 'creamsicle')">creamsicle</a>
                     <a class = "color-theme strawberry" onclick="setTheme(currentTheme, 'strawberry')">strawberry</a>
                     <a class = "color-theme striker" onclick="setTheme(currentTheme, 'striker')">striker</a>
                     <a class = "color-theme alpine" onclick="setTheme(currentTheme, 'alpine')">alpine</a>
