@@ -17,7 +17,7 @@ session_start();
         <?php include "./nav.php" ?>
         <div class="preferences">
             <div id="sizesContainer" class="rowContainer">
-                <h1 class="notSignedIn" id="preferenceHeader">size <i class="fa-solid fa-text-height"></i> </h1>
+                <h1 class="notSignedIn" id="preferenceHeader">font size</h1> 
                 <h1 class="description">Change the size of the words in the test.</h1>
                 <a class="preference" onclick="setPreference('fontSize', 1), addNotification('font size','1');">1</a>
                 <a class="preference" onclick="setPreference('fontSize', 2), addNotification('font size','2');">2</a>
@@ -26,7 +26,7 @@ session_start();
                 <a class="preference" onclick="setPreference('fontSize', 5), addNotification('font size','5');">5</a>
             </div>
             <div id="fontsContainer" class="rowContainer">
-                <h1 class="notSignedIn" id="preferenceHeader">font <i class="fa-solid fa-font"></i></h1>
+                <h1 class="notSignedIn" id="preferenceHeader">font family</h1>
                 <h1 class="description">Choose from various styles to change the font family across the site.</h1>
                 <a class="preference" style="font-family: 'LexendDeca', serif;" onclick="setPreference('fontFamily', 'lexenddeca'), addNotification('font family','lexend deca');">lexend deca</a>
                 <a class="preference" style="font-family: Arial;" onclick="setPreference('fontFamily', 'arial'), addNotification('font family','arial');">arial</a>
@@ -46,7 +46,7 @@ session_start();
             </div>
             <div id="themesContainer" class="theme-row-container">
                 <div>
-                    <h1 id="preferenceHeader">color theme <i class="fa-solid fa-palette"></i></h1>
+                    <h1 id="preferenceHeader">color theme</h1>
                 </div>
                 <div class="theme-row-container">
                     <a class = "color-theme light" onclick="setTheme(currentTheme, 'light')">light</a>
@@ -70,7 +70,7 @@ session_start();
                 </div>
             </div>
             <div id="caretsContainer" class="rowContainer">
-                <h1 class="notSignedIn" id="preferenceHeader">pace caret <i class="fa-solid fa-arrow-pointer"></i></h1>
+                <h1 class="notSignedIn" id="preferenceHeader">pace caret </h1> 
                 <h1 class="description">When enabled, the caret will move along the page as you type. Change the style for different typing experiences.</h1>
                 <a class="preference" onclick="setPreference('caret', 'none'), addNotification('caret style','none');">none</a>
                 <a class="preference" onclick="setPreference('caret', 'caret'), addNotification('caret style','classic');">caret</a>
@@ -79,7 +79,7 @@ session_start();
                 <a class="preference" onclick="setPreference('caret', 'highlightWord'), addNotification('caret style','highlight');">highlight word</a>
             </div>
             <div id="linesContainer" class="rowContainer">
-                <h1 class="notSignedIn" id="preferenceHeader">lines <i class="fa-solid fa-align-left"></i></h1>
+                <h1 class="notSignedIn" id="preferenceHeader">lines </h1>
                 <h1 class="description">Show a different number of lines on the screen; More lines on the page will allow to see you what is coming next.</h1>
                 <a class="preference" onclick="setPreference('lineCount', 2), addNotification('line count','2');">2</a>
                 <a class="preference" onclick="setPreference('lineCount', 3), addNotification('line count','3');">3</a>

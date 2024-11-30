@@ -242,7 +242,11 @@ include "themes.scss"; //file contains all fonts
     .navIcon, #showUsername
     {
         transition: color .25s ease;
+        text-decoration: none;
+        font-size: 2rem;
+        padding: 1rem;
         color: var(--testText);
+        
     }
     .navIcon:hover , #showUsername:hover {
         color: var(--currentWord);
@@ -323,7 +327,7 @@ include "themes.scss"; //file contains all fonts
     .linkDivider
     {
         color: var(--row);
-        padding: 1rem;
+        padding: 1.2rem;
     }
     .box {
         z-index: 0;
@@ -346,7 +350,8 @@ include "themes.scss"; //file contains all fonts
     }
     #wpmDisplay
     {
-        min-width: calc(var(--fontSize) * 2.25rem);;
+        min-width: calc(var(--fontSize) * 2.25rem);
+        font-size: 4rem;
     }
     #wpmDisplay, #time
     {
@@ -932,7 +937,6 @@ include "themes.scss"; //file contains all fonts
     color: rgb(255, 255, 255);
     font-size: 1.75rem;
     margin-left: 1rem;
-    margin-top: 0;
     user-select: none;
     line-height: 2rem;
     display: flex;
