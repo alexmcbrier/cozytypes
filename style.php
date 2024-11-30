@@ -186,8 +186,6 @@ include "themes.scss"; //file contains all fonts
     {
         font-size: 1rem;
         color: var(--currentWord);
-        background-color: var(--row);
-        padding: .4rem 1rem;
         border-radius: .75rem;
     }
     li {
