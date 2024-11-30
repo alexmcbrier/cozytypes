@@ -350,6 +350,7 @@ include "themes.scss"; //file contains all fonts
     {
         min-width: calc(var(--fontSize) * 2.25rem);
         font-size: 4rem;
+        padding: 0;
     }
     #wpmDisplay, #time
     {
