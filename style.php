@@ -471,7 +471,7 @@ include "themes.scss"; //file contains all fonts
         border: none;
         cursor: pointer;
         transition: transform .25s ease-in-out;
-        font-size: calc(var(--fontSize) * .6rem);
+        font-size: calc(var(--fontSize) * .5rem);
         
     }
     #completionDisplay {
