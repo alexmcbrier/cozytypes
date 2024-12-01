@@ -1226,7 +1226,7 @@ include "themes.scss"; //file contains all fonts
         color: var(--row);
         margin-left: 1rem;
         margin-top: 1rem;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         line-height: 1.25rem;
     }
     .results
@@ -1234,7 +1234,7 @@ include "themes.scss"; //file contains all fonts
         color: var(--row);
         margin-left: 1rem;
         margin-top: 1rem;
-        font-size: 5rem;
+        font-size: 4rem;
         padding: 1rem;
     }
     #loginButton1 {
