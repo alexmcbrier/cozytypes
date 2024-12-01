@@ -568,6 +568,7 @@ function loadPreferences() {
     //1. Try to read from local storage, otherwise set to default
     //2. set preference to local storage
     let theme = localStorage.getItem("theme") || "light";
+    setTheme("default", theme); 
     let fontSize = localStorage.getItem("fontSize") || "3";
     let fontFamily = localStorage.getItem("fontFamily") || "lora";
     let lineCount = localStorage.getItem("lineCount") || "2";
@@ -578,7 +579,7 @@ function loadPreferences() {
     let blur = localStorage.getItem("blur") || "off";
     let mode = localStorage.getItem("mode") || "easy";
     let title = localStorage.getItem("selectedTitle") || "harryPotter";
-    setTheme("default", theme); 
+
     setPreference("fontSize", fontSize); 
     setPreference("fontFamily", fontFamily); 
     setPreference("lineCount", lineCount); 
