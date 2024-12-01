@@ -224,7 +224,7 @@ include "themes.scss"; //file contains all fonts
         font-size: 1.75rem;
         vertical-align: middle;
         text-decoration: none;
-        margin-bottom: .5rem;
+        margin-bottom: .25rem;
     }
     nav {
         width: 100%;
