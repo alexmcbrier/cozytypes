@@ -7,6 +7,7 @@ const mainContent = document.getElementById('mainContent') // wpm Display
 const footer = document.getElementById("footer")
 const typingMode = document.getElementById("typingmode")
 const hotkey  = document.getElementById("hotkey")
+const navbar  = document.querySelector("nav")
 var timerStatus = false; // Turns on when user begins typing...
 var check = null;
 var sentenceLength = 50;
@@ -288,6 +289,7 @@ function startTimer() {
         footer.classList.add('fadeOut');
         typingMode.classList.add('fadeOut');
         hotkey.classList.add('fadeOut');
+        navbar.classList.add('fadeOut');
         document.getElementById('cursor').style.animation = "none";
         startTime = new Date()
         if (getStorageItem("typingMode") == "words")
