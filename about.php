@@ -18,7 +18,8 @@ session_start();
                 <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0;" >about us</h1>
                     <h2 class="aboutDescription">
                     cozytypes.com is a simple typing website for keyboard enthusiasts. test your typing abilities in different modes, track your 
-                    progress, and improve your overall typing speed. Features include typing stats and history for users with accounts, configurations 
+                    progress, and improve your overall typing speed. This website draws inspiration from Monkeytype.com, and I want to express my 
+                    gratitude to its creators for providing such a great example in the typing community. Features include typing stats and history for users with accounts, configurations 
                     including theme, font style, typing caret, line count, and more. Designed as a simplistic approach to typing and alternative to other websites,
                     this website is designed to be relaxing and calming as you practice your skills. 
                 <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0; padding-top: 2rem;" >difficulty</h1>
