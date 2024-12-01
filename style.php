@@ -126,7 +126,7 @@ include "themes.scss"; //file contains all fonts
     }
 
 #title {
-    font-size: 2.75rem;
+    font-size: 2.25rem;
 }
 .tooltip .tooltiptext::after {
     content: "";
