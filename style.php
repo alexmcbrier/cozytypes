@@ -242,7 +242,6 @@ include "themes.scss"; //file contains all fonts
         transition: color .25s ease;
         text-decoration: none;
         font-size: 2rem;
-        padding: 1rem;
         color: var(--testText);
         
     }
