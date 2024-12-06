@@ -415,7 +415,7 @@ include "themes.scss"; //file contains all fonts
     {
         font-size: 2rem;
         text-decoration: none;
-        color: var(--testText);
+        color: var(--row);
         display: flex;
         display: flex;
         align-items: center; /* Vertically centers the content */
