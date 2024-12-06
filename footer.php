@@ -17,22 +17,22 @@ if (isset($_COOKIE["fontFamily"])) {
             <!--  <i class="fa-brands fa-github"></i> -->
         </a>
 
-        <div class = "linkDivider">/</div>
+        <div class = "linkDivider"> </div>
         <a class = "footerLinks tooltip" href="/preferences">theme</span>
              <!-- <i class="fa-solid fa-palette fa-sm"></i> -->
         </a>
 
-        <div class = "linkDivider">/</div>
+        <div class = "linkDivider"> </div>
         <a class = "footerLinks tooltip" href="/preferences">font</span>
              <!-- <i class="fa-solid fa-font fa-sm"></i> -->
         </a>
 
-        <div class = "linkDivider">/</div>
+        <div class = "linkDivider"> </div>
         <a class = "footerLinks tooltip" href="/cookiePolicy.html">cookies</span>
              <!-- <i class="fa-solid fa-cookie-bite"></i> -->
         </a>
 
-        <div class = "linkDivider">/</div>
+        <div class = "linkDivider"> </div>
         <a class = "footerLinks tooltip" href="/privacyPolicy.html">privacy</span>
              <!--  <i class="fa-solid fa-lock"></i> -->
         </a>
