@@ -9,15 +9,13 @@ if (isset($_SESSION["user_id"])) {
     <a id = "logo" href="https://cozytypes.com" style="text-decoration: none;">
         <p id = "title">cozytypes</p>
     </a>
-    <div id = "navNoLogo">
-        <a class = "navIcon" href="https://cozytypes.com" ><i class="fa-solid fa-house"></i></a>
-        <a class = "navIcon" href="/preferences"><i class="fa-solid fa-gear"></i></a>
-        <a class = "navIcon" href="/leaderboard"><i class="fa-solid fa-crown"></i></a>
-        <a class = "navIcon" href="/about"><i class="fa-solid fa-info"></i></a>
-        <!--<a class = "navIcon" href="/books"><i class="fa-solid fa-book"></i></a> -->
-        <a href="/signup" id = "showUsername">
-            <i class="fa-regular fa-user"></i>
-            <div><?= htmlspecialchars($user["username"]) ?></div>
-        </a>
-    </div>
+    <a class = "navIcon" href="https://cozytypes.com" ><i class="fa-solid fa-house"></i></a>
+    <a class = "navIcon" href="/preferences"><i class="fa-solid fa-gear"></i></a>
+    <a class = "navIcon" href="/leaderboard"><i class="fa-solid fa-crown"></i></a>
+    <a class = "navIcon" href="/about"><i class="fa-solid fa-info"></i></a>
+    <!--<a class = "navIcon" href="/books"><i class="fa-solid fa-book"></i></a> -->
+    <a href="/signup" id = "showUsername">
+        <i class="fa-regular fa-user"></i>
+        <div><?= htmlspecialchars($user["username"]) ?></div>
+    </a>
 </nav>
