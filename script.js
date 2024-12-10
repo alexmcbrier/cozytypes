@@ -570,7 +570,7 @@ function loadPreferences() {
     let theme = localStorage.getItem("theme") || "light";
     setTheme("default", theme); 
     let fontSize = localStorage.getItem("fontSize") || "3";
-    let fontFamily = localStorage.getItem("fontFamily") || "lora";
+    let fontFamily = localStorage.getItem("fontFamily") || "nunito";
     let lineCount = localStorage.getItem("lineCount") || "2";
     let caret = localStorage.getItem("caret") || "caret";
     let typingMode = localStorage.getItem("typingMode") || "time";
