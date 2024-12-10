@@ -250,7 +250,7 @@ include "themes.scss"; //file contains all fonts
     }
     .word {
         display: inline-block;
-        padding-right: calc(var(--fontSize) * .5rem);
+        padding-right: calc(var(--fontSize) * .45rem);
         /* line spacing */
     } 
     h1 {
@@ -612,13 +612,13 @@ include "themes.scss"; //file contains all fonts
     .current-word {
         /* color: var(--currentWord); */
         display: inline-block;
-        padding-right: calc(var(--fontSize) * .5rem);
+        padding-right: calc(var(--fontSize) * .45rem);
     }
 
     .incorrect-word {
         color: var(--incorrect);
         display: inline-block;
-        padding: 0rem calc(var(--fontSize) * .5rem);
+        padding: 0rem calc(var(--fontSize) * .45rem);
     }
 
     #listOfStats {
