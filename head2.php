@@ -36,7 +36,7 @@
         document.documentElement.classList.add(theme);
         const root = document.documentElement;
         root.style.setProperty("--fontSize", localStorage.getItem("fontSize") || "3");
-        root.style.setProperty("--fontFamily", localStorage.getItem("fontFamily") || "nunito");
+        root.style.setProperty("--fontFamily", localStorage.getItem("fontFamily") || "lora");
         root.style.setProperty("--lineCount", localStorage.getItem("lineCount") || "2");
         root.style.setProperty("--caret", localStorage.getItem("caret") || "caret");
         root.style.setProperty("--typingMode", localStorage.getItem("typingMode") || "time");
