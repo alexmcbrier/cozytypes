@@ -159,8 +159,13 @@ crossorigin="anonymous"></script>
                 </a>
             </h1>
             <a href="https://www.melgeek.com/?ref=keyboards">
-                <img src="images/hands_holding_keyboard.png" alt="MelGeek Mechanical Keyboard" style="width: 100%; max-width: 400px; border-radius: 8px;">
+                <img src="images/hands_holding_keyboard.png" alt="MelGeek Mechanical Keyboard" style="width: 100%; max-width: 800px; border-radius: 8px;">
             </a>
+            <div>
+                <a href="https://www.melgeek.com/products/melgeek-mojo84-plastic-original-see-through-custom-programmable-mechanical-keyboard?ref=keyboards" rel="sponsored" target="_blank"><img src="https://creatives.goaffpro.com/7020938/1705488850363.jpg" alt="MelGeek MOJO84 Plastic Transparent, Custom&Programmable Mechanical Keyboard" /></a>
+                <p>MelGeek MOJO84 Plastic Transparent, Custom&Programmable Mechanical Keyboard</p>
+                <a href="https://www.melgeek.com/products/melgeek-mojo84-plastic-original-see-through-custom-programmable-mechanical-keyboard?ref=keyboards" rel="sponsored" target="_blank">https://www.melgeek.com/products/melgeek-mojo84-plastic-original-see-through-custom-programmable-mechanical-keyboard?ref=keyboards</a>
+            </div>
         </div>
         <div id="displayStats" style = "background-color: var(--background); margin: 1rem 0rem">
             <div class="statsContainer" style = "background-color: var(--rowBackground); padding: 2.5rem">
