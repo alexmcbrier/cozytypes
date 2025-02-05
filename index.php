@@ -152,7 +152,7 @@ crossorigin="anonymous"></script>
                 }
             });
         </script>
-        <div id="keyboardPromo" style="display: flex; align-items: center; background-color: var(--rowBackground); padding: 1.5rem; margin: 1rem; border-radius: 8px; gap: 1.5rem; flex-wrap: wrap;">
+        <div id="keyboardPromo" style="display: flex; align-items: center; background-color: var(--rowBackground); padding: 1.5rem; margin: 1rem; gap: 1.5rem; flex-wrap: wrap;">
             <!-- Text Section -->
             <div style="flex: 1; min-width: 250px; text-align: left;">
                 <h1 class="notSignedIn" id="preferenceHeader" style = "white-space: normal">
