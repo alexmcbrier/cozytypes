@@ -1235,8 +1235,8 @@ include "themes.scss"; //file contains all fonts
     {   
         color: var(--row);
         margin-left: 1rem;
-        margin-top: 1rem;
         font-size: 3rem;
+        margin-bottom: 1rem;
     }
     #loginButton1 {
         background-color: var(--testText);
