@@ -155,13 +155,17 @@ crossorigin="anonymous"></script>
         <div id="keyboardPromo" style="display: flex; align-items: center; background-color: var(--rowBackground); padding: 1.5rem; margin: 1rem; gap: 1.5rem; flex-wrap: wrap;">
             <!-- Text Section -->
             <div style="flex: 1; min-width: 250px; text-align: left;">
-                <h1 class="notSignedIn" id="preferenceHeader" style = "white-space: normal">
+                <h1 class="notSignedIn" id="preferenceHeader" style="white-space: normal;">
                     <a href="https://www.melgeek.com/?ref=keyboards" style="text-decoration: none; color: var(--textColor);">
                         Typing, But Better
                     </a>
-                    <div>Whether you're a beginner or an enthusiast, MelGeek has everything you need to create the ultimate typing experience. Choose from fully assembled keyboards or build your own with hot-swappable switches, premium keycaps, and vibrant designs.</div>
                 </h1>
+                <div>
+                    Whether you're a beginner or an enthusiast, MelGeek has everything you need to create the ultimate typing experience. 
+                    Choose from fully assembled keyboards or build your own with hot-swappable switches, premium keycaps, and vibrant designs.
+                </div>
             </div>
+
 
             <!-- Image Section -->
             <div style="flex: 1; min-width: 250px;">
