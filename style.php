@@ -933,7 +933,7 @@ include "themes.scss"; //file contains all fonts
 
     #preferenceHeader {
     color: rgb(255, 255, 255);
-    font-size: 1.75rem;
+    font-size: 2rem;
     margin-left: 1rem;
     user-select: none;
     line-height: 2rem;
@@ -941,7 +941,6 @@ include "themes.scss"; //file contains all fonts
     white-space: nowrap;
     align-items: center;
     white-space: pre;
-    font-weight: bold;
 }
 
     .preferences a:hover {

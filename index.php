@@ -160,7 +160,7 @@ crossorigin="anonymous"></script>
                         Build your own keyboard
                     </a>
                 </h1>
-                <div style = "font-size: 1.5rem; color: var(--row);">
+                <div style = "font-size: 1.5rem; color: var(--row); padding: 1rem 2rem;">
                 Whether you're a beginner or an enthusiast, 
                 <a href="https://www.melgeek.com/?ref=cozytypes" style="text-decoration: none; color: var(--background);">
                     MelGeek
