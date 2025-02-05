@@ -162,7 +162,7 @@ crossorigin="anonymous"></script>
                 </h1>
                 <div style = "font-size: 1.5rem; color: var(--backgroundDark);">
                 Whether you're a beginner or an enthusiast, 
-                <a href="https://www.melgeek.com/?ref=keyboards" style="text-decoration: none; color: var(--textColor);">
+                <a href="https://www.melgeek.com/?ref=keyboards" style="text-decoration: none; color: var(--incorrect);">
                     MelGeek
                 </a> 
                 has everything you need to create the ultimate typing experience. 
