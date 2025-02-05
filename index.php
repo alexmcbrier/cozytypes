@@ -160,7 +160,7 @@ crossorigin="anonymous"></script>
                         Typing, But Better
                     </a>
                 </h1>
-                <div>
+                <div style = "font-size: 1.5rem; color" var(--backgroundDark);">
                     Whether you're a beginner or an enthusiast, MelGeek has everything you need to create the ultimate typing experience. 
                     Choose from fully assembled keyboards or build your own with hot-swappable switches, premium keycaps, and vibrant designs.
                 </div>
