@@ -157,7 +157,7 @@ crossorigin="anonymous"></script>
             <div style="flex: 1; min-width: 250px; text-align: left;">
                 <h1 class="notSignedIn" id="preferenceHeader" style="white-space: normal;">
                     <a href="https://www.melgeek.com/?ref=keyboards" style="text-decoration: none; color: var(--textColor); font-style: italic;">
-                        Typing, But Better
+                        Build your own keyboard
                     </a>
                 </h1>
                 <div style = "font-size: 1.5rem; color: var(--row);">
