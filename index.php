@@ -156,13 +156,17 @@ crossorigin="anonymous"></script>
             <!-- Text Section -->
             <div style="flex: 1; min-width: 250px; text-align: left;">
                 <h1 class="notSignedIn" id="preferenceHeader" style="white-space: normal;">
-                    <a href="https://www.melgeek.com/?ref=keyboards" style="text-decoration: none; color: var(--textColor);">
+                    <a href="https://www.melgeek.com/?ref=keyboards" style="text-decoration: none; color: var(--textColor); font-style: italic;">
                         Typing, But Better
                     </a>
                 </h1>
                 <div style = "font-size: 1.5rem; color: var(--backgroundDark);">
-                    Whether you're a beginner or an enthusiast, MelGeek has everything you need to create the ultimate typing experience. 
-                    Choose from fully assembled keyboards or build your own with hot-swappable switches, premium keycaps, and vibrant designs.
+                Whether you're a beginner or an enthusiast, 
+                <a href="https://www.melgeek.com/?ref=keyboards" style="text-decoration: none; color: var(--textColor);">
+                    MelGeek
+                </a> 
+                has everything you need to create the ultimate typing experience. 
+                Choose from fully assembled keyboards or build your own with hot-swappable switches, premium keycaps, and vibrant designs.
                 </div>
             </div>
 
