@@ -160,9 +160,9 @@ crossorigin="anonymous"></script>
                         Typing, But Better
                     </a>
                 </h1>
-                <div style = "font-size: 1.5rem; color: var(--backgroundDark);">
+                <div style = "font-size: 1.5rem; color: var(--row);">
                 Whether you're a beginner or an enthusiast, 
-                <a href="https://www.melgeek.com/?ref=keyboards" style="text-decoration: none; color: var(--incorrect);">
+                <a href="https://www.melgeek.com/?ref=keyboards" style="text-decoration: none; color: var(--background);">
                     MelGeek
                 </a> 
                 has everything you need to create the ultimate typing experience. 
