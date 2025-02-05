@@ -1162,10 +1162,12 @@ include "themes.scss"; //file contains all fonts
     }
     #keyboardPromo {
         border-radius: 1.5rem
-        transition: filter 0.3s ease; /* Smooth transition */
     }
-    #keyboardPromo:hover {
-        filter: blur(5px); /* Adjust the blur level as needed */
+    #affiliateImage {
+        transition: filter 1s ease; /* Smooth transition */
+    }
+    #affiliateImage:hover {
+        filter: blur(3px); /* Adjust the blur level as needed */
     }
     #notifications
     {
