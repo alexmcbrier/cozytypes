@@ -1164,10 +1164,10 @@ include "themes.scss"; //file contains all fonts
         border-radius: 1.5rem
     }
     .affiliateImage {
-        transition: filter 1s ease; /* Smooth transition */
+        transition: filter .6s ease; /* Smooth transition */
     }
     .affiliateImage:hover {
-        filter: blur(3px); /* Adjust the blur level as needed */
+        filter: blur(2.5px); /* Adjust the blur level as needed */
     }
     #notifications
     {
