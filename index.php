@@ -156,13 +156,13 @@ crossorigin="anonymous"></script>
             <!-- Text Section -->
             <div style="flex: 1; min-width: 250px; text-align: left;">
                 <h1 class="notSignedIn" id="preferenceHeader" style="white-space: normal;">
-                    <a href="https://www.melgeek.com/?ref=keyboards" style="text-decoration: none; color: var(--textColor);">
+                    <a href="https://www.melgeek.com/?ref=cozytypes" style="text-decoration: none; color: var(--textColor);">
                         Build your own keyboard
                     </a>
                 </h1>
                 <div style = "font-size: 1.5rem; color: var(--row);">
                 Whether you're a beginner or an enthusiast, 
-                <a href="https://www.melgeek.com/?ref=keyboards" style="text-decoration: none; color: var(--background);">
+                <a href="https://www.melgeek.com/?ref=cozytypes" style="text-decoration: none; color: var(--background);">
                     MelGeek
                 </a> 
                 has everything you need to create the ultimate typing experience. 
@@ -173,7 +173,7 @@ crossorigin="anonymous"></script>
 
             <!-- Image Section -->
             <div style="flex: 1; min-width: 250px;">
-                <a href="https://www.melgeek.com/?ref=keyboards">
+                <a href="https://www.melgeek.com/?ref=cozytypes">
                     <img id = "keyboardPromo" src="images/hands_holding_keyboard.png" alt="MelGeek Mechanical Keyboard" style="width: 100%; max-width: 400px; border-radius: 8px;">
                 </a>
             </div>
