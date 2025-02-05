@@ -165,7 +165,7 @@ crossorigin="anonymous"></script>
             <!-- Image Section -->
             <div style="flex: 1; min-width: 250px;">
                 <a href="https://www.melgeek.com/?ref=keyboards">
-                    <img src="images/orange_keyb.jpg" alt="MelGeek Mechanical Keyboard" style="width: 100%; max-width: 400px; border-radius: 8px;">
+                    <img id = "keyboardPromo" src="images/orange_keyb.jpg" alt="MelGeek Mechanical Keyboard" style="width: 100%; max-width: 400px; border-radius: 8px;">
                 </a>
             </div>
 
