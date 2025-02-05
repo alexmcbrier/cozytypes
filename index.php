@@ -152,7 +152,7 @@ crossorigin="anonymous"></script>
                 }
             });
         </script>
-        <div id="keyboardPromo" style="text-align: center; background-color: var(--rowBackground); padding: 1.5rem; margin-bottom: 1rem; border-radius: 8px;">
+        <div id="keyboardPromo" style="text-align: center; background-color: var(--rowBackground); padding: 1.5rem; margin: 1rem; border-radius: 8px;">
             <h1 class="notSignedIn" id="preferenceHeader">
                 <a href="https://www.melgeek.com/?ref=keyboards" style="text-decoration: none; color: var(--textColor);">
                     Build Your Dream Keyboard
