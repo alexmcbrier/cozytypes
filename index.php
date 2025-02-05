@@ -152,6 +152,25 @@ crossorigin="anonymous"></script>
                 }
             });
         </script>
+        <div id="keyboardPromo" style="display: flex; align-items: center; background-color: var(--rowBackground); padding: 1.5rem; margin: 1rem; border-radius: 8px; gap: 1.5rem; flex-wrap: wrap;">
+            <!-- Text Section -->
+            <div style="flex: 1; min-width: 250px; text-align: left;">
+                <h1 class="notSignedIn" id="preferenceHeader">
+                    <a href="https://www.melgeek.com/?ref=keyboards" style="text-decoration: none; color: var(--textColor);">
+                        Build Your Dream Keyboard
+                    </a>
+                </h1>
+            </div>
+
+            <!-- Image Section -->
+            <div style="flex: 1; min-width: 250px;">
+                <a href="https://www.melgeek.com/?ref=keyboards">
+                    <img src="images/orange_keyb.jpg" alt="MelGeek Mechanical Keyboard" style="width: 100%; max-width: 400px; border-radius: 8px;">
+                </a>
+            </div>
+
+        </div>
+
         <div id="displayStats" style = "background-color: var(--background); margin: 1rem 0rem">
             <div class="statsContainer" style = "background-color: var(--rowBackground); padding: 2.5rem">
                 <h1 class="notSignedIn" id="preferenceHeader">Words Per Minute<i class="fa-solid fa-clock-rotate-left"></i></h1>
