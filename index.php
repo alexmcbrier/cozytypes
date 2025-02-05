@@ -162,9 +162,7 @@ crossorigin="anonymous"></script>
                 </h1>
                 <div style = "font-size: 1.25rem; color: var(--row); padding: 0rem 2rem;">
                 Whether you're a beginner or an enthusiast, 
-                <a href="https://www.melgeek.com/?ref=cozytypes" style="text-decoration: none; color: var(--background);">
-                    MelGeek
-                </a> 
+                <a href="https://www.melgeek.com/?ref=cozytypes" style="text-decoration: underline; color: var(--background);">MelGeek</a> 
                 has everything you need to create the ultimate typing experience. 
                 Choose from fully assembled keyboards or build your own with hot-swappable switches, premium keycaps, and vibrant designs.
                 </div>
