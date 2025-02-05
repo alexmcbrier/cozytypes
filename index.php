@@ -157,15 +157,15 @@ crossorigin="anonymous"></script>
             <div style="flex: 1; min-width: 250px; text-align: left;">
                 <h1 class="notSignedIn" id="preferenceHeader" style="white-space: normal;">
                     <a href="https://www.melgeek.com/?ref=cozytypes" style="text-decoration: none; color: var(--textColor);">
-                        Build your own keyboard
+                    Shop Keyboards and Accessories
                     </a>
                 </h1>
                 <div style = "font-size: 1.6rem; color: var(--row); padding: 0rem 2rem;">
-                Whether you're a beginner or an enthusiast, 
+               Upgrade your typing experience with high-quality keyboards, customizable switches, and premium keycaps. Whether you prefer a fully assembled keyboard or want to build your own,
                 <a href="https://www.melgeek.com/?ref=cozytypes" style="text-decoration: none; color: var(--background);">MelGeek</a> 
-                has everything you need to create the ultimate typing experience. 
-                Choose from fully assembled keyboards or build your own with hot-swappable switches, premium keycaps, and vibrant designs.
+                has everything you need.
                 </div>
+                <a class="preference" onclick="setPreference('fontSize', 5), addNotification('font size','5');">5</a>
             </div>
 
 
