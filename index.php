@@ -153,11 +153,11 @@ crossorigin="anonymous"></script>
             });
         </script>
         <div id="keyboardPromo" style="text-align: center; background-color: var(--rowBackground); padding: 1.5rem; margin-bottom: 1rem; border-radius: 8px;">
-            <h2>
+            <h1 class="notSignedIn" id="preferenceHeader">
                 <a href="https://www.melgeek.com/?ref=keyboards" style="text-decoration: none; color: var(--textColor);">
                     Build Your Dream Keyboard
                 </a>
-            </h2>
+            </h1>
         </div>
         <div id="displayStats" style = "background-color: var(--background); margin: 1rem 0rem">
             <div class="statsContainer" style = "background-color: var(--rowBackground); padding: 2.5rem">
