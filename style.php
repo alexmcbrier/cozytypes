@@ -1163,10 +1163,10 @@ include "themes.scss"; //file contains all fonts
     #keyboardPromo {
         border-radius: 1.5rem
     }
-    #affiliateImage {
+    .affiliateImage {
         transition: filter 1s ease; /* Smooth transition */
     }
-    #affiliateImage:hover {
+    .affiliateImage:hover {
         filter: blur(3px); /* Adjust the blur level as needed */
     }
     #notifications
