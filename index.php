@@ -174,7 +174,7 @@ crossorigin="anonymous"></script>
             <!-- Image Section -->
             <div style="flex: 1; min-width: 250px;">
                 <a href="https://www.melgeek.com/?ref=cozytypes">
-                    <img id = "keyboardPromo" src="images/hands_holding_keyboard.png" alt="MelGeek Mechanical Keyboard" style="width: 100%; max-width: 400px; border-radius: 8px;">
+                    <img id = "keyboardPromo" src="images/hands_holding_keyboard.png" alt="MelGeek Mechanical Keyboard" style="width: 100%; border-radius: 1rem;">
                 </a>
             </div>
 
