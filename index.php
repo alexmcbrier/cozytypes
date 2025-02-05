@@ -159,7 +159,7 @@ crossorigin="anonymous"></script>
                 </a>
             </h1>
             <a href="https://www.melgeek.com/?ref=keyboards">
-                <img src="images/orange_keyb.png" alt="MelGeek Mechanical Keyboard" style="width: 100%; max-width: 800px; border-radius: 8px;">
+                <img src="images/orange_keyb.jpg" alt="MelGeek Mechanical Keyboard" style="width: 100%; max-width: 800px; border-radius: 8px;">
             </a>
         </div>
         <div id="displayStats" style = "background-color: var(--background); margin: 1rem 0rem">
