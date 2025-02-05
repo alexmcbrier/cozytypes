@@ -165,7 +165,7 @@ crossorigin="anonymous"></script>
                 <a href="https://www.melgeek.com/?ref=cozytypes" style="text-decoration: none; color: var(--background);">MelGeek</a> 
                 has everything you need.
                 </div>
-                <a class="preference" onclick="setPreference('fontSize', 5), addNotification('font size','5');">5</a>
+                <a class="preference" href="https://www.melgeek.com/?ref=cozytypes">Shop Now</a>
             </div>
 
 
