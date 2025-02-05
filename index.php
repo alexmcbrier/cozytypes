@@ -156,7 +156,7 @@ crossorigin="anonymous"></script>
             <!-- Text Section -->
             <div style="flex: 1; min-width: 250px; text-align: left;">
                 <h1 class="notSignedIn" id="preferenceHeader" style="white-space: normal;">
-                    <a href="https://www.melgeek.com/?ref=keyboards" style="text-decoration: none; color: var(--textColor); font-style: italic;">
+                    <a href="https://www.melgeek.com/?ref=keyboards" style="text-decoration: none; color: var(--textColor);">
                         Build your own keyboard
                     </a>
                 </h1>
