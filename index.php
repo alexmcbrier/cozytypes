@@ -152,6 +152,13 @@ crossorigin="anonymous"></script>
                 }
             });
         </script>
+        <div id="keyboardPromo" style="text-align: center; background-color: var(--rowBackground); padding: 1.5rem; margin-bottom: 1rem; border-radius: 8px;">
+            <h2>
+                <a href="https://www.melgeek.com/?ref=keyboards" style="text-decoration: none; color: var(--textColor);">
+                    Build Your Dream Keyboard
+                </a>
+            </h2>
+        </div>
         <div id="displayStats" style = "background-color: var(--background); margin: 1rem 0rem">
             <div class="statsContainer" style = "background-color: var(--rowBackground); padding: 2.5rem">
                 <h1 class="notSignedIn" id="preferenceHeader">Words Per Minute<i class="fa-solid fa-clock-rotate-left"></i></h1>
