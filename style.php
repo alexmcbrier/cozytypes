@@ -1172,9 +1172,6 @@ include "themes.scss"; //file contains all fonts
     .affiliateImage {
         transition: filter .6s ease; /* Smooth transition */
     }
-    .affiliateImage:hover {
-        filter: blur(2.5px); /* Adjust the blur level as needed */
-    }
     #notifications
     {
         position: fixed;
