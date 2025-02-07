@@ -171,7 +171,7 @@ crossorigin="anonymous"></script>
 
             <!-- Image -->
             <div style="flex: 1; min-width: 250px;">
-                <a id = "affiliateProductLink" href="https://www.melgeek.com/?ref=cozytypes">
+                <a id="affiliateProductLink" href="https://www.melgeek.com/?ref=cozytypes">
                     <img id="affiliateImage" class="keyboardPromo" src="" alt="MelGeek Mechanical Keyboard" style="width: 100%; border-radius: 1rem;">
                 </a>
             </div>
