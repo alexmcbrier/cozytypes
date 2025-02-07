@@ -677,7 +677,9 @@ include "themes.scss"; //file contains all fonts
     }
     #saveProgress:hover {
         color: var(--currentWord);
-        transition: background-color .25s;
+    }
+    #shopnow {
+        transition: background-color .4s;
     }
     #shopnow:hover {
         background-color: var(--currentWord);
