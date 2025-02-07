@@ -182,16 +182,7 @@ crossorigin="anonymous"></script>
                     { filename: "made86purple.png", url: "https://www.melgeek.com/products/made68-pro?ref=cozytypes&variant=45914841383166" },
                     { filename: "made86white1.png", url: "https://www.melgeek.com/products/made68-ultra-aluminum-case-magnetic-keyboard?ref=cozytypes&variant=45917788340478" },
                     { filename: "made86white2.png", url: "https://www.melgeek.com/products/made68-ultra-aluminum-case-magnetic-keyboard?ref=cozytypes&variant=45917788340478" },
-                    { filename: "airbar", url: "https://www.melgeek.com/products/airbar-purple-wrist-rest?ref=cozytypes" },
-                    { filename: "cablepurple", url: "https://www.melgeek.com/products/melgeek-themed-cable?ref=cozytypes" },
-                    { filename: "case", url: "https://www.melgeek.com/products/anodized-aluminium-case?ref=cozytypes" },
-                    { filename: "fishingkeycap", url: "" },
-                    { filename: "holypanda", url: "" },
-                    { filename: "horsemankeycap", url: "" },
-                    { filename: "lightkit", url: "" },
-                    { filename: "pcb", url: "" },
-                    { filename: "salmonkeycap", url: "" },
-                    { filename: "salonkeycap", url: "" }
+                    
                 ];
 
                 // Randomly pick an image object
