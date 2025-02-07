@@ -12,7 +12,6 @@ if (isset($_COOKIE["id"])) {
 }
 if (isset($_GET["finish"]))
 {
-    include "./footer.php"
     $wpm = $_GET["wpm"];
     $accuracy = $_GET["accuracy"];
     $mode = $_GET["mode"];
@@ -99,7 +98,7 @@ crossorigin="anonymous"></script>
     </script>
         <!-- Display if test not complete -->
         <div id="middle" class = "blur">
-        <?php if (!isset($_GET["finish"])) { include "./footer.php"?>
+        <?php if (!isset($_GET["finish"])) { ?>
             <div id="typingmode">
             <div class="modeStack">
                 <div>time</div>
