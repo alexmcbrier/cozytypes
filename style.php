@@ -1166,9 +1166,6 @@ include "themes.scss"; //file contains all fonts
             }
         }
     }
-    .keyboardPromo {
-        border-radius: 1.5rem
-    }
     #affiliateImage {
         opacity: 0;
         transition: filter .6s ease; /* Smooth transition */
