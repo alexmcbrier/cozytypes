@@ -178,10 +178,10 @@ crossorigin="anonymous"></script>
             <script type="text/javascript">
                 // List of image filenames
                 const images = [
-                    { filename: "oliviaKeyboard.png", url: "https://Olivia.com" },
-                    { filename: "carbonKeyboard.png", url: "https://Carbon.com" },
-                    { filename: "whiteKeyboard.png", url: "https://White.com" },
-                    { filename: "blueKeyboard.png", url: "https://Blue.com" }
+                    { filename: "made86pink.png", url: "https://www.melgeek.com/products/made68-pro?ref=cozytypes&variant=45914841415934" }, 
+                    { filename: "made86purple.png", url: "https://www.melgeek.com/products/made68-pro?ref=cozytypes&variant=45914841383166" },
+                    { filename: "made86white1.png", url: "https://www.melgeek.com/products/made68-ultra-aluminum-case-magnetic-keyboard?ref=cozytypes&variant=45917788340478" },
+                    { filename: "made86white2.png", url: "https://www.melgeek.com/products/made68-ultra-aluminum-case-magnetic-keyboard?ref=cozytypes&variant=45917788340478" }
                 ];
 
                 // Randomly pick an image object
