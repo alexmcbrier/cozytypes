@@ -188,8 +188,8 @@ crossorigin="anonymous"></script>
                 const randomImage = images[Math.floor(Math.random() * images.length)];
 
                 // Update the image source and link
-                document.getElementById("keyboardPromo").src = `images/melgeek/${randomImage.filename}`;
-                document.getElementById("keyboardLink").href = randomImage.url;
+                document.getElementById("affiliateImage").src = `images/melgeek/${randomImage.filename}`;
+                document.getElementById("affiliateImage").href = randomImage.url;
             </script>
 
         </div>
