@@ -178,10 +178,10 @@ crossorigin="anonymous"></script>
             <script type="text/javascript">
                 // List of image filenames
                 const images = [
-                    { filename: "made86pink.png", url: "https://www.melgeek.com/products/made68-pro?ref=cozytypes&variant=45914841415934" }, 
-                    { filename: "made86purple.png", url: "https://www.melgeek.com/products/made68-pro?ref=cozytypes&variant=45914841383166" },
-                    { filename: "made86white1.png", url: "https://www.melgeek.com/products/made68-ultra-aluminum-case-magnetic-keyboard?ref=cozytypes&variant=45917788340478" },
-                    { filename: "made86white2.png", url: "https://www.melgeek.com/products/made68-ultra-aluminum-case-magnetic-keyboard?ref=cozytypes&variant=45917788340478" },
+                    { filename: "made86pink", url: "https://www.melgeek.com/products/made68-pro?ref=cozytypes&variant=45914841415934" }, 
+                    { filename: "made86purple", url: "https://www.melgeek.com/products/made68-pro?ref=cozytypes&variant=45914841383166" },
+                    { filename: "made86white1", url: "https://www.melgeek.com/products/made68-ultra-aluminum-case-magnetic-keyboard?ref=cozytypes&variant=45917788340478" },
+                    { filename: "made86white2", url: "https://www.melgeek.com/products/made68-ultra-aluminum-case-magnetic-keyboard?ref=cozytypes&variant=45917788340478" },
                     { filename: "airbar", url: "https://www.melgeek.com/products/airbar-purple-wrist-rest?ref=cozytypes" },
                     { filename: "cablepurple", url: "https://www.melgeek.com/products/melgeek-themed-cable?ref=cozytypes" },
                     { filename: "case", url: "https://www.melgeek.com/products/anodized-aluminium-case?ref=cozytypes" },
@@ -197,7 +197,7 @@ crossorigin="anonymous"></script>
                 const randomImage = images[Math.floor(Math.random() * images.length)];
 
                 // Update the image source and link
-                document.getElementById("affiliateImage").src = `images/melgeek/${randomImage.filename}`;
+                document.getElementById("affiliateImage").src = `images/melgeek/${randomImage.filename}.png`;
                 document.getElementById("affiliateProductLink").href = randomImage.url;
             </script>
 
