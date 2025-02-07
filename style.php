@@ -679,7 +679,7 @@ include "themes.scss"; //file contains all fonts
         color: var(--currentWord);
     }
     #shopnow:hover {
-        color: var(--currentWord);
+        background-color: var(--currentWord);
     }
     #showSignIn {
         color: var(--row);
