@@ -170,7 +170,37 @@ crossorigin="anonymous"></script>
 
 
             <!-- Image -->
-            <iframe src="https://www.melgeek.com/products/anodized-aluminium-case?ref=cozytypes" width="800" height="600"></iframe>
+            <div style="flex: 1; min-width: 250px;">
+                <a id="affiliateProductLink" href="https://www.melgeek.com/?ref=cozytypes">
+                    <img id="affiliateImage" class="keyboardPromo" src="" alt="MelGeek Mechanical Keyboard" style="width: 100%; border-radius: 1rem;">
+                </a>
+            </div>
+            <script type="text/javascript">
+                // List of image filenames
+                const images = [
+                    { filename: "made86pink.png", url: "https://www.melgeek.com/products/made68-pro?ref=cozytypes&variant=45914841415934" }, 
+                    { filename: "made86purple.png", url: "https://www.melgeek.com/products/made68-pro?ref=cozytypes&variant=45914841383166" },
+                    { filename: "made86white1.png", url: "https://www.melgeek.com/products/made68-ultra-aluminum-case-magnetic-keyboard?ref=cozytypes&variant=45917788340478" },
+                    { filename: "made86white2.png", url: "https://www.melgeek.com/products/made68-ultra-aluminum-case-magnetic-keyboard?ref=cozytypes&variant=45917788340478" },
+                    { filename: "airbar", url: "https://www.melgeek.com/products/airbar-purple-wrist-rest?ref=cozytypes" },
+                    { filename: "cablepurple", url: "https://www.melgeek.com/products/melgeek-themed-cable?ref=cozytypes" },
+                    { filename: "case", url: "https://www.melgeek.com/products/anodized-aluminium-case?ref=cozytypes" },
+                    { filename: "fishingkeycap", url: "https://www.melgeek.com/products/mg-fishing-full-set?ref=cozytypes" },
+                    { filename: "holypanda", url: "https://www.melgeek.com/products/holy-panda?ref=cozytypes" },
+                    { filename: "horsemankeycap", url: "https://www.melgeek.com/products/melgeek-mcr-horseman-abs-doubleshot-keycap-set-for-mechanical-keyboard?ref=cozytypes" },
+                    { filename: "lightkit", url: "https://www.melgeek.com/products/made68-accessories-set?ref=cozytypes" },
+                    { filename: "pcb", url: "https://www.melgeek.com/products/melgeek-mj61-mj63-mj64-hotswappable-rgb-pcba?ref=cozytypes" },
+                    { filename: "salmonkeycap", url: "https://www.melgeek.com/products/mg-salmon-full-set?ref=cozytypes" },
+                    { filename: "salonkeycap", url: "https://www.melgeek.com/products/mg-salon-full-set?ref=cozytypes" }
+                ];
+
+                // Randomly pick an image object
+                const randomImage = images[Math.floor(Math.random() * images.length)];
+
+                // Update the image source and link
+                document.getElementById("affiliateImage").src = `images/melgeek/${randomImage.filename}`;
+                document.getElementById("affiliateProductLink").href = randomImage.url;
+            </script>
 
         </div>
 
