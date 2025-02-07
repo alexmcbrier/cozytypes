@@ -181,7 +181,7 @@ crossorigin="anonymous"></script>
                     "oliviaKeyboard.png"
                 ];
                 const randomImage = images[Math.floor(Math.random() * images.length)];
-                document.getElementById("keyboardPromo").src = `images/melgeek/${randomImage}`;
+                document.getElementById("keyboardPromo").src = `images/melgeek/oliviaKeyboard.png`;
             </script>
 
         </div>
