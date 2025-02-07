@@ -165,7 +165,7 @@ crossorigin="anonymous"></script>
                 <a href="https://www.melgeek.com/?ref=cozytypes" style="text-decoration: none; color: var(--background);">MelGeek</a> 
                 has everything you need.
                 </div>
-                <a class="preference" style = "width: 90%" href="https://www.melgeek.com/?ref=cozytypes">Shop Now</a>
+                <a id = "shopnow" class="preference" style = "width: 90%" href="https://www.melgeek.com/?ref=cozytypes">Shop Now</a>
             </div>
 
 

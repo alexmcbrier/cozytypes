@@ -678,6 +678,9 @@ include "themes.scss"; //file contains all fonts
     #saveProgress:hover {
         color: var(--currentWord);
     }
+    #shopnow:hover {
+        color: var(--currentWord);
+    }
     #showSignIn {
         color: var(--row);
         text-decoration: none;
