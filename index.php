@@ -170,9 +170,7 @@ crossorigin="anonymous"></script>
 
 
             <!-- Image -->
-            <a href="https://www.melgeek.com/products/anodized-aluminium-case?ref=cozytypes" target="_blank">
-                <img src="images/melgeek/anodized-aluminium-case.png" alt="Anodized Aluminium Case" width="300">
-            </a>
+            <iframe src="https://www.melgeek.com/products/anodized-aluminium-case?ref=cozytypes" width="800" height="600"></iframe>
 
         </div>
 
