@@ -172,9 +172,17 @@ crossorigin="anonymous"></script>
             <!-- Image -->
             <div style="flex: 1; min-width: 250px;">
                 <a href="https://www.melgeek.com/?ref=cozytypes">
-                    <img class = "affiliateImage" id = "keyboardPromo" src="images/oliviaKeyboard.png" alt="MelGeek Mechanical Keyboard" style="width: 100%; border-radius: 1rem;">
+                    <img class="affiliateImage" id="keyboardPromo" src="" alt="MelGeek Mechanical Keyboard" style="width: 100%; border-radius: 1rem;">
                 </a>
             </div>
+            <script>
+                // List of image filenames
+                const images = [
+                    "oliviaKeyboard.png"
+                ];
+                const randomImage = images[Math.floor(Math.random() * images.length)];
+                document.getElementById("keyboardPromo").src = `images/melgeek/${randomImage}`;
+            </script>
 
         </div>
 
