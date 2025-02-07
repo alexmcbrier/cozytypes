@@ -178,14 +178,18 @@ crossorigin="anonymous"></script>
             <script type="text/javascript">
                 // List of image filenames
                 const images = [
-                    "oliviaKeyboard.png": "https://Olivia.com"
+                    { filename: "oliviaKeyboard.png", url: "https://Olivia.com" },
+                    { filename: "carbonKeyboard.png", url: "https://Carbon.com" },
+                    { filename: "whiteKeyboard.png", url: "https://White.com" },
+                    { filename: "blueKeyboard.png", url: "https://Blue.com" }
                 ];
-                const imageKeys = Object.keys(images);
-                const randomImage = imageKeys[Math.floor(Math.random() * imageKeys.length)];
-                const imgElement = document.getElementById("affiliateImage");
-                imgElement.src = `images/melgeek/${randomImage}`;
-                const linkElement = document.getElementById("affiliateLink");
-                linkElement.href = images[randomImage];
+
+                // Randomly pick an image object
+                const randomImage = images[Math.floor(Math.random() * images.length)];
+
+                // Update the image source and link
+                document.getElementById("keyboardPromo").src = `images/melgeek/${randomImage.filename}`;
+                document.getElementById("keyboardLink").href = randomImage.url;
             </script>
 
         </div>
