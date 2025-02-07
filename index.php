@@ -170,28 +170,9 @@ crossorigin="anonymous"></script>
 
 
             <!-- Image -->
-            <div style="flex: 1; min-width: 250px;">
-                <a id="affiliateProductLink" href="https://www.melgeek.com/?ref=cozytypes">
-                    <img id="affiliateImage" class="keyboardPromo" src="" alt="MelGeek Mechanical Keyboard" style="width: 100%; border-radius: 1rem;">
-                </a>
-            </div>
-            <script type="text/javascript">
-                // List of image filenames
-                const images = [
-                    { filename: "made86pink.png", url: "https://www.melgeek.com/products/made68-pro?ref=cozytypes&variant=45914841415934" }, 
-                    { filename: "made86purple.png", url: "https://www.melgeek.com/products/made68-pro?ref=cozytypes&variant=45914841383166" },
-                    { filename: "made86white1.png", url: "https://www.melgeek.com/products/made68-ultra-aluminum-case-magnetic-keyboard?ref=cozytypes&variant=45917788340478" },
-                    { filename: "made86white2.png", url: "https://www.melgeek.com/products/made68-ultra-aluminum-case-magnetic-keyboard?ref=cozytypes&variant=45917788340478" },
-                    
-                ];
-
-                // Randomly pick an image object
-                const randomImage = images[Math.floor(Math.random() * images.length)];
-
-                // Update the image source and link
-                document.getElementById("affiliateImage").src = `images/melgeek/${randomImage.filename}`;
-                document.getElementById("affiliateProductLink").href = randomImage.url;
-            </script>
+            <a href="https://www.melgeek.com/products/anodized-aluminium-case?ref=cozytypes" target="_blank">
+                <img src="images/melgeek/anodized-aluminium-case.png" alt="Anodized Aluminium Case" width="300">
+            </a>
 
         </div>
 
