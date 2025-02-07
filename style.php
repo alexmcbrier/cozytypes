@@ -1170,7 +1170,10 @@ include "themes.scss"; //file contains all fonts
         border-radius: 1.5rem
     }
     #affiliateImage {
+        opacity: 0;
         transition: filter .6s ease; /* Smooth transition */
+        transition: opacity 0.5s ease-in-out;
+        
     }
     #notifications
     {

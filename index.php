@@ -196,9 +196,19 @@ crossorigin="anonymous"></script>
                 // Randomly pick an image object
                 const randomImage = images[Math.floor(Math.random() * images.length)];
 
-                // Update the image source and link
-                document.getElementById("affiliateImage").src = `images/melgeek/${randomImage.filename}.png`;
-                document.getElementById("affiliateProductLink").href = randomImage.url;
+                const img = new Image();
+                img.src = `images/melgeek/${randomImage.filename}.png`;
+                
+                // Once the image loads, update the DOM and fade it in
+                img.onload = function() {
+                    const affiliateImage = document.getElementById("affiliateImage");
+                    const affiliateProductLink = document.getElementById("affiliateProductLink");
+                    
+                    affiliateImage.src = img.src;
+                    affiliateProductLink.href = randomImage.url;
+                    
+                    // Fade in the image
+                    affiliateImage.style.opacity = "1";
             </script>
 
         </div>
