@@ -193,7 +193,6 @@ crossorigin="anonymous"></script>
                     { filename: "salmonkeycap", url: "https://www.melgeek.com/products/mg-salmon-full-set?ref=cozytypes" },
                     { filename: "salonkeycap", url: "https://www.melgeek.com/products/mg-salon-full-set?ref=cozytypes" }
                 ];
-
                 // Randomly pick an image object
                 const randomImage = images[Math.floor(Math.random() * images.length)];
 
