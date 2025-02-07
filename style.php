@@ -1166,10 +1166,10 @@ include "themes.scss"; //file contains all fonts
             }
         }
     }
-    #keyboardPromo {
+    .keyboardPromo {
         border-radius: 1.5rem
     }
-    .affiliateImage {
+    #affiliateImage {
         transition: filter .6s ease; /* Smooth transition */
     }
     #notifications

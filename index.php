@@ -152,7 +152,7 @@ crossorigin="anonymous"></script>
                 }
             });
         </script>
-        <div id="keyboardPromo" style="display: flex; align-items: center; background-color: var(--rowBackground); padding: 1.5rem; margin: 1rem; gap: 1.5rem; flex-wrap: wrap;">
+        <div class="keyboardPromo" style="display: flex; align-items: center; background-color: var(--rowBackground); padding: 1.5rem; margin: 1rem; gap: 1.5rem; flex-wrap: wrap;">
             <!-- Text Section -->
             <div style="flex: 1; min-width: 250px; text-align: left;">
                 <h1 class="notSignedIn" id="preferenceHeader" style="white-space: normal;">
@@ -172,7 +172,7 @@ crossorigin="anonymous"></script>
             <!-- Image -->
             <div style="flex: 1; min-width: 250px;">
                 <a href="https://www.melgeek.com/?ref=cozytypes">
-                    <img class="affiliateImage" id="keyboardPromo" src="" alt="MelGeek Mechanical Keyboard" style="width: 100%; border-radius: 1rem;">
+                    <img id="affiliateImage" class="keyboardPromo" src="" alt="MelGeek Mechanical Keyboard" style="width: 100%; border-radius: 1rem;">
                 </a>
             </div>
             <script type="text/javascript">
@@ -181,7 +181,7 @@ crossorigin="anonymous"></script>
                     "oliviaKeyboard.png"
                 ];
                 const randomImage = images[Math.floor(Math.random() * images.length)];
-                document.getElementById("keyboardPromo").src = `images/melgeek/oliviaKeyboard.png`;
+                document.getElementById("affiliateImage").src = `images/melgeek/oliviaKeyboard.png`;
             </script>
 
         </div>
