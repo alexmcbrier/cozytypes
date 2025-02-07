@@ -178,10 +178,14 @@ crossorigin="anonymous"></script>
             <script type="text/javascript">
                 // List of image filenames
                 const images = [
-                    "oliviaKeyboard.png"
+                    "oliviaKeyboard.png": "https://Olivia.com"
                 ];
-                const randomImage = images[Math.floor(Math.random() * images.length)];
-                document.getElementById("affiliateImage").src = `images/melgeek/${randomImage}`;
+                const imageKeys = Object.keys(images);
+                const randomImage = imageKeys[Math.floor(Math.random() * imageKeys.length)];
+                const imgElement = document.getElementById("affiliateImage");
+                imgElement.src = `images/melgeek/${randomImage}`;
+                const linkElement = document.getElementById("affiliateLink");
+                linkElement.href = images[randomImage];
             </script>
 
         </div>
