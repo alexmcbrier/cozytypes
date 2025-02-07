@@ -189,7 +189,6 @@ crossorigin="anonymous"></script>
                     { filename: "holypanda", url: "https://www.melgeek.com/products/holy-panda?ref=cozytypes" },
                     { filename: "horsemankeycap", url: "https://www.melgeek.com/products/melgeek-mcr-horseman-abs-doubleshot-keycap-set-for-mechanical-keyboard?ref=cozytypes" },
                     { filename: "lightkit", url: "https://www.melgeek.com/products/made68-accessories-set?ref=cozytypes" },
-                    { filename: "pcb", url: "https://www.melgeek.com/products/melgeek-mj61-mj63-mj64-hotswappable-rgb-pcba?ref=cozytypes" },
                     { filename: "salonkeycap", url: "https://www.melgeek.com/products/mg-salon-full-set?ref=cozytypes" }
                 ];
                 // Randomly pick an image object
