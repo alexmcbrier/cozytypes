@@ -209,6 +209,7 @@ crossorigin="anonymous"></script>
                     
                     // Fade in the image
                     affiliateImage.style.opacity = "1";
+                }
             </script>
 
         </div>
