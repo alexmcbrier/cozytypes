@@ -175,7 +175,7 @@ crossorigin="anonymous"></script>
                     <img class="affiliateImage" id="keyboardPromo" src="" alt="MelGeek Mechanical Keyboard" style="width: 100%; border-radius: 1rem;">
                 </a>
             </div>
-            <script>
+            <script type="text/javascript">
                 // List of image filenames
                 const images = [
                     "oliviaKeyboard.png"
