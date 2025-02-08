@@ -644,6 +644,7 @@ include "themes.scss"; //file contains all fonts
         padding: 4 2rem;
         color: var(--row);
         line-height: 2rem;
+        font-weight: normal;
     }
     input {
         display: flex;
