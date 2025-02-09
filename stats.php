@@ -10,35 +10,57 @@ if (!isset($_SESSION["user_id"])) {
 $mysqli = require __DIR__ . "/config.php";
 $userId = $_SESSION["user_id"];
 
-// Get total typing tests completed by the user
-$sql = "SELECT COUNT(*) AS total_tests, AVG(wpm) AS avg_wpm, AVG(accuracy) AS avg_accuracy FROM typingtest WHERE id = ?";
-$stmt = $mysqli->prepare($sql);
-$stmt->bind_param("i", $userId);
-if ($stmt->execute()) {
-    $result = $stmt->get_result();
-    $userStats = $result->fetch_assoc();
-} else {
-    die("Error fetching user stats: " . $stmt->error);
+// Fetch user info (date created, etc.)
+$query = "SELECT * FROM user WHERE id = {$_SESSION["user_id"]}";
+$result = $mysqli->query($query);
+$user = $result->fetch_assoc();
+$dateCreated = new DateTime($user["dateCreated"]);
+$formattedDate = $dateCreated->format('F j, Y');
+
+// Fetch 15s typing stats
+$query15s = "SELECT * FROM typingtest WHERE id = {$_SESSION["user_id"]} AND mode = 'time' AND testTime = 15";
+$result15s = $mysqli->query($query15s);
+$rows15s = $result15s->fetch_all(MYSQLI_ASSOC);
+$count15s = 0;
+$maxWpm15s = 0;
+$accuracyForMaxWpm15s = 0;
+foreach ($rows15s as $row) {
+    if ($row['wpm'] > $maxWpm15s) {
+        $maxWpm15s = $row['wpm'];
+        $accuracyForMaxWpm15s = $row['accuracy'];
+    }
+    $count15s++;
 }
 
-// Get the stats for the past month (last 30 days) along with the number of distinct users typing on each day
-$sqlDaily = "SELECT 
-    DATE(FROM_UNIXTIME(testTime)) AS date, 
-    COUNT(*) AS daily_tests, 
-    AVG(wpm) AS daily_avg_wpm, 
-    AVG(accuracy) AS daily_avg_accuracy, 
-    COUNT(DISTINCT id) AS daily_users
-FROM typingtest 
-WHERE testTime >= UNIX_TIMESTAMP(NOW() - INTERVAL 30 DAY) 
-GROUP BY DATE(FROM_UNIXTIME(testTime)) 
-ORDER BY DATE(FROM_UNIXTIME(testTime)) DESC;
-";
-$stmt = $mysqli->prepare($sqlDaily);
-if ($stmt->execute()) {
-    $dailyResults = $stmt->get_result();
-} else {
-    die("Error fetching daily stats: " . $stmt->error);
+// Fetch 30s typing stats
+$query30s = "SELECT * FROM typingtest WHERE id = {$_SESSION["user_id"]} AND mode = 'time' AND testTime = 30";
+$result30s = $mysqli->query($query30s);
+$rows30s = $result30s->fetch_all(MYSQLI_ASSOC);
+$count30s = 0;
+$maxWpm30s = 0;
+$accuracyForMaxWpm30s = 0;
+foreach ($rows30s as $row) {
+    if ($row['wpm'] > $maxWpm30s) {
+        $maxWpm30s = $row['wpm'];
+        $accuracyForMaxWpm30s = $row['accuracy'];
+    }
+    $count30s++;
 }
+
+// Fetch daily stats for the last 30 days
+$sqlDaily = "SELECT 
+        DATE(FROM_UNIXTIME(testTime)) AS date, 
+        COUNT(*) AS daily_tests, 
+        AVG(wpm) AS daily_avg_wpm, 
+        AVG(accuracy) AS daily_avg_accuracy, 
+        COUNT(DISTINCT id) AS daily_users
+    FROM typingtest 
+    WHERE testTime >= UNIX_TIMESTAMP(NOW() - INTERVAL 30 DAY) 
+    GROUP BY DATE(FROM_UNIXTIME(testTime)) 
+    ORDER BY DATE(FROM_UNIXTIME(testTime)) DESC";
+
+$resultDaily = $mysqli->query($sqlDaily);
+$dailyResults = $resultDaily->fetch_all(MYSQLI_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -81,11 +103,11 @@ if ($stmt->execute()) {
 
     <!-- User stats summary -->
     <h2>Overall Stats</h2>
-    <p>Total Typing Tests: <?= isset($userStats['total_tests']) ? $userStats['total_tests'] : 'N/A' ?></p>
-    <p>Average WPM: <?= isset($userStats['avg_wpm']) ? number_format($userStats['avg_wpm'], 2) : 'N/A' ?></p>
-    <p>Average Accuracy: <?= isset($userStats['avg_accuracy']) ? number_format($userStats['avg_accuracy'], 2) . "%" : 'N/A' ?></p>
+    <p>Date Created: <?= $formattedDate ?></p>
+    <p>Total 15s Tests: <?= $count15s ?>, Max WPM: <?= $maxWpm15s ?>, Accuracy: <?= $accuracyForMaxWpm15s ?>%</p>
+    <p>Total 30s Tests: <?= $count30s ?>, Max WPM: <?= $maxWpm30s ?>, Accuracy: <?= $accuracyForMaxWpm30s ?>%</p>
 
-    <!-- Daily stats table for the past month -->
+    <!-- Daily stats table for the past 30 days -->
     <h2>Daily Stats (Past 30 Days)</h2>
     <table>
         <thead>
@@ -98,23 +120,15 @@ if ($stmt->execute()) {
             </tr>
         </thead>
         <tbody>
-            <?php
-            if ($dailyResults->num_rows > 0) {
-                while ($daily = $dailyResults->fetch_assoc()) {
-                    ?>
-                    <tr>
-                        <td><?= htmlspecialchars($daily['date']) ?></td>
-                        <td><?= $daily['daily_tests'] ?></td>
-                        <td><?= number_format($daily['daily_avg_wpm'], 2) ?></td>
-                        <td><?= number_format($daily['daily_avg_accuracy'], 2) ?>%</td>
-                        <td><?= $daily['daily_users'] ?></td>
-                    </tr>
-                    <?php
-                }
-            } else {
-                echo "<tr><td colspan='5'>No data available for the past 30 days.</td></tr>";
-            }
-            ?>
+            <?php foreach ($dailyResults as $daily) { ?>
+                <tr>
+                    <td><?= htmlspecialchars($daily['date']) ?></td>
+                    <td><?= $daily['daily_tests'] ?></td>
+                    <td><?= number_format($daily['daily_avg_wpm'], 2) ?></td>
+                    <td><?= number_format($daily['daily_avg_accuracy'], 2) ?>%</td>
+                    <td><?= $daily['daily_users'] ?></td>
+                </tr>
+            <?php } ?>
         </tbody>
     </table>
 </body>
