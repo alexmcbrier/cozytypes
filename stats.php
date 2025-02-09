@@ -14,9 +14,12 @@ $userId = $_SESSION["user_id"];
 $sql = "SELECT COUNT(*) AS total_tests, AVG(wpm) AS avg_wpm, AVG(accuracy) AS avg_accuracy FROM typingtest WHERE id = ?";
 $stmt = $mysqli->prepare($sql);
 $stmt->bind_param("i", $userId);
-$stmt->execute();
-$result = $stmt->get_result();
-$userStats = $result->fetch_assoc();
+if ($stmt->execute()) {
+    $result = $stmt->get_result();
+    $userStats = $result->fetch_assoc();
+} else {
+    die("Error fetching user stats: " . $stmt->error);
+}
 
 // Get the stats for the past month (last 30 days) along with the number of distinct users typing on each day
 $sqlDaily = "SELECT 
@@ -31,8 +34,11 @@ $sqlDaily = "SELECT
     ORDER BY DATE(testTime) DESC
 ";
 $stmt = $mysqli->prepare($sqlDaily);
-$stmt->execute();
-$dailyResults = $stmt->get_result();
+if ($stmt->execute()) {
+    $dailyResults = $stmt->get_result();
+} else {
+    die("Error fetching daily stats: " . $stmt->error);
+}
 ?>
 
 <!DOCTYPE html>
@@ -75,9 +81,9 @@ $dailyResults = $stmt->get_result();
 
     <!-- User stats summary -->
     <h2>Overall Stats</h2>
-    <p>Total Typing Tests: <?= $userStats['total_tests'] ?></p>
-    <p>Average WPM: <?= number_format($userStats['avg_wpm'], 2) ?></p>
-    <p>Average Accuracy: <?= number_format($userStats['avg_accuracy'], 2) ?>%</p>
+    <p>Total Typing Tests: <?= isset($userStats['total_tests']) ? $userStats['total_tests'] : 'N/A' ?></p>
+    <p>Average WPM: <?= isset($userStats['avg_wpm']) ? number_format($userStats['avg_wpm'], 2) : 'N/A' ?></p>
+    <p>Average Accuracy: <?= isset($userStats['avg_accuracy']) ? number_format($userStats['avg_accuracy'], 2) . "%" : 'N/A' ?></p>
 
     <!-- Daily stats table for the past month -->
     <h2>Daily Stats (Past 30 Days)</h2>
@@ -92,15 +98,23 @@ $dailyResults = $stmt->get_result();
             </tr>
         </thead>
         <tbody>
-            <?php while ($daily = $dailyResults->fetch_assoc()) { ?>
-                <tr>
-                    <td><?= htmlspecialchars($daily['date']) ?></td>
-                    <td><?= $daily['daily_tests'] ?></td>
-                    <td><?= number_format($daily['daily_avg_wpm'], 2) ?></td>
-                    <td><?= number_format($daily['daily_avg_accuracy'], 2) ?>%</td>
-                    <td><?= $daily['daily_users'] ?></td>
-                </tr>
-            <?php } ?>
+            <?php
+            if ($dailyResults->num_rows > 0) {
+                while ($daily = $dailyResults->fetch_assoc()) {
+                    ?>
+                    <tr>
+                        <td><?= htmlspecialchars($daily['date']) ?></td>
+                        <td><?= $daily['daily_tests'] ?></td>
+                        <td><?= number_format($daily['daily_avg_wpm'], 2) ?></td>
+                        <td><?= number_format($daily['daily_avg_accuracy'], 2) ?>%</td>
+                        <td><?= $daily['daily_users'] ?></td>
+                    </tr>
+                    <?php
+                }
+            } else {
+                echo "<tr><td colspan='5'>No data available for the past 30 days.</td></tr>";
+            }
+            ?>
         </tbody>
     </table>
 </body>
