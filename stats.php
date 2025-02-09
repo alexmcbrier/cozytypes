@@ -17,20 +17,37 @@ $user = $result->fetch_assoc();
 $dateCreated = new DateTime($user["dateCreated"]);
 $formattedDate = $dateCreated->format('F j, Y');
 
-// Fetch daily stats for the last 7 days
-$sqlDaily = "SELECT 
-                DATE(FROM_UNIXTIME(testTime)) AS date,
-                COUNT(*) AS total_tests, 
-                COUNT(DISTINCT CASE WHEN id IS NOT NULL THEN id END) AS distinct_users
-            FROM typingtest 
-            WHERE testTime >= UNIX_TIMESTAMP(NOW() - INTERVAL 7 DAY) 
-                AND mode = 'time' 
-                AND wpm < 250
-            GROUP BY DATE(FROM_UNIXTIME(testTime)) 
-            ORDER BY DATE(FROM_UNIXTIME(testTime)) DESC";
+// Fetch daily stats for the last 7 days with improved SQL query
+$sqlDaily = "
+    SELECT 
+        DATE(testTime) AS date, 
+        COUNT(*) AS total_tests, 
+        COUNT(DISTINCT CASE WHEN id IS NOT NULL THEN id END) AS distinct_users
+    FROM typingtest 
+    WHERE testTime >= NOW() - INTERVAL 7 DAY
+    AND mode = 'time'
+    AND wpm < 250
+    GROUP BY DATE(testTime)
+    ORDER BY DATE(testTime) DESC
+";
+
+// Debug: output the SQL query to check if it's correct
+echo "SQL Query: $sqlDaily<br>";
 
 $resultDaily = $mysqli->query($sqlDaily);
+
+if (!$resultDaily) {
+    echo "Query failed: " . $mysqli->error;
+    exit();
+}
+
 $dailyResults = $resultDaily->fetch_all(MYSQLI_ASSOC);
+
+// Check if we have results
+if (empty($dailyResults)) {
+    echo "No results found for the last 7 days.";
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
