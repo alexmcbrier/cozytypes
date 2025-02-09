@@ -23,15 +23,15 @@ if ($stmt->execute()) {
 
 // Get the stats for the past month (last 30 days) along with the number of distinct users typing on each day
 $sqlDaily = "SELECT 
-        DATE(testTime) AS date, 
-        COUNT(*) AS daily_tests, 
-        AVG(wpm) AS daily_avg_wpm, 
-        AVG(accuracy) AS daily_avg_accuracy, 
-        COUNT(DISTINCT id) AS daily_users
-    FROM typingtest 
-    WHERE testTime >= NOW() - INTERVAL 30 DAY 
-    GROUP BY DATE(testTime) 
-    ORDER BY DATE(testTime) DESC
+    DATE(FROM_UNIXTIME(testTime)) AS date, 
+    COUNT(*) AS daily_tests, 
+    AVG(wpm) AS daily_avg_wpm, 
+    AVG(accuracy) AS daily_avg_accuracy, 
+    COUNT(DISTINCT id) AS daily_users
+FROM typingtest 
+WHERE testTime >= UNIX_TIMESTAMP(NOW() - INTERVAL 30 DAY) 
+GROUP BY DATE(FROM_UNIXTIME(testTime)) 
+ORDER BY DATE(FROM_UNIXTIME(testTime)) DESC;
 ";
 $stmt = $mysqli->prepare($sqlDaily);
 if ($stmt->execute()) {
