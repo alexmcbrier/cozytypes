@@ -18,8 +18,7 @@ $dateCreated = new DateTime($user["dateCreated"]);
 $formattedDate = $dateCreated->format('F j, Y');
 
 // Fetch daily stats for the last 7 days with improved SQL query
-$sqlDaily = "
-    SELECT 
+$sqlDaily = "SELECT 
         DATE(testTime) AS date, 
         COUNT(*) AS total_tests, 
         COUNT(DISTINCT CASE WHEN id IS NOT NULL THEN id END) AS distinct_users
