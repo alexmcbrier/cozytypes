@@ -10,35 +10,30 @@ if (!isset($_SESSION["user_id"])) {
 $mysqli = require __DIR__ . "/config.php";
 $userId = $_SESSION["user_id"];
 
-// Fetch user data
-$sql = "SELECT * FROM user WHERE id = ?";
+// Get total typing tests completed by the user
+$sql = "SELECT COUNT(*) AS total_tests, AVG(wpm) AS avg_wpm, AVG(accuracy) AS avg_accuracy FROM typingtest WHERE id = ?";
 $stmt = $mysqli->prepare($sql);
 $stmt->bind_param("i", $userId);
 $stmt->execute();
 $result = $stmt->get_result();
-$user = $result->fetch_assoc();
+$userStats = $result->fetch_assoc();
 
-$font = htmlspecialchars($user["fontSize"]);
-$theme = htmlspecialchars($user["theme"]);
-$wpmPR = htmlspecialchars($user["wpm"]);
-$totalTests = htmlspecialchars($user["testsTaken"]);
-$dateCreated = new DateTime($user["dateCreated"]);
-$formattedDate = $dateCreated->format('F j, Y');
-
-// Query to get daily stats (number of tests per day)
-$sqlDaily = "SELECT DATE(testTime) AS date, COUNT(*) AS daily_tests FROM typingtest WHERE id = ? GROUP BY DATE(testTime) ORDER BY DATE(testTime) DESC";
+// Get the stats for the past month (last 30 days) along with the number of distinct users typing on each day
+$sqlDaily = "
+    SELECT 
+        DATE(testTime) AS date, 
+        COUNT(*) AS daily_tests, 
+        AVG(wpm) AS daily_avg_wpm, 
+        AVG(accuracy) AS daily_avg_accuracy, 
+        COUNT(DISTINCT id) AS daily_users
+    FROM typingtest 
+    WHERE testTime >= NOW() - INTERVAL 30 DAY 
+    GROUP BY DATE(testTime) 
+    ORDER BY DATE(testTime) DESC
+";
 $stmt = $mysqli->prepare($sqlDaily);
-$stmt->bind_param("i", $userId);
 $stmt->execute();
 $dailyResults = $stmt->get_result();
-
-// Prepare data for the graph (Date and Tests Taken)
-$dates = [];
-$testsTakenPerDay = [];
-while ($daily = $dailyResults->fetch_assoc()) {
-    $dates[] = $daily['date'];
-    $testsTakenPerDay[] = $daily['daily_tests'];
-}
 ?>
 
 <!DOCTYPE html>
@@ -46,9 +41,7 @@ while ($daily = $dailyResults->fetch_assoc()) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Typing Stats</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>User Stats</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -76,28 +69,27 @@ while ($daily = $dailyResults->fetch_assoc()) {
         h1 {
             color: #333;
         }
-        .chart-container {
-            width: 100%;
-            max-width: 800px;
-            margin: auto;
-        }
     </style>
 </head>
 <body>
     <h1>Your Typing Stats</h1>
 
-    <!-- User Info -->
-    <p><strong>User since:</strong> <?= $formattedDate ?></p>
-    <p><strong>Total Typing Tests: </strong><?= $totalTests ?></p>
-    <p><strong>Average WPM: </strong><?= number_format($wpmPR, 2) ?></p>
+    <!-- User stats summary -->
+    <h2>Overall Stats</h2>
+    <p>Total Typing Tests: <?= $userStats['total_tests'] ?></p>
+    <p>Average WPM: <?= number_format($userStats['avg_wpm'], 2) ?></p>
+    <p>Average Accuracy: <?= number_format($userStats['avg_accuracy'], 2) ?>%</p>
 
-    <!-- Daily Stats Table -->
-    <h2>Daily Stats</h2>
+    <!-- Daily stats table for the past month -->
+    <h2>Daily Stats (Past 30 Days)</h2>
     <table>
         <thead>
             <tr>
                 <th>Date</th>
                 <th>Tests Taken</th>
+                <th>Average WPM</th>
+                <th>Average Accuracy</th>
+                <th>Users Typed</th>
             </tr>
         </thead>
         <tbody>
@@ -105,52 +97,12 @@ while ($daily = $dailyResults->fetch_assoc()) {
                 <tr>
                     <td><?= htmlspecialchars($daily['date']) ?></td>
                     <td><?= $daily['daily_tests'] ?></td>
+                    <td><?= number_format($daily['daily_avg_wpm'], 2) ?></td>
+                    <td><?= number_format($daily['daily_avg_accuracy'], 2) ?>%</td>
+                    <td><?= $daily['daily_users'] ?></td>
                 </tr>
             <?php } ?>
         </tbody>
     </table>
-
-    <!-- Graph: Number of Typing Tests per Day -->
-    <div class="chart-container">
-        <canvas id="testsChart"></canvas>
-    </div>
-
-    <script>
-        // Data for the graph
-        const dates = <?php echo json_encode($dates); ?>;
-        const testsTakenPerDay = <?php echo json_encode($testsTakenPerDay); ?>;
-
-        // Create the chart
-        const ctx = document.getElementById('testsChart').getContext('2d');
-        const testsChart = new Chart(ctx, {
-            type: 'line', // Choose 'line' or 'bar' for the chart type
-            data: {
-                labels: dates,
-                datasets: [{
-                    label: 'Tests Taken Per Day',
-                    data: testsTakenPerDay,
-                    borderColor: 'rgba(75, 192, 192, 1)',
-                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                    fill: true, // Filling under the line
-                    tension: 0.4, // Smoothing the line
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: {
-                        position: 'top',
-                    },
-                    tooltip: {
-                        callbacks: {
-                            label: function(tooltipItem) {
-                                return tooltipItem.raw + ' tests';
-                            }
-                        }
-                    }
-                }
-            }
-        });
-    </script>
 </body>
 </html>
