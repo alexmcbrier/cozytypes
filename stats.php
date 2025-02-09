@@ -19,8 +19,7 @@ $result = $stmt->get_result();
 $userStats = $result->fetch_assoc();
 
 // Get the stats for the past month (last 30 days) along with the number of distinct users typing on each day
-$sqlDaily = "
-    SELECT 
+$sqlDaily = "SELECT 
         DATE(testTime) AS date, 
         COUNT(*) AS daily_tests, 
         AVG(wpm) AS daily_avg_wpm, 
