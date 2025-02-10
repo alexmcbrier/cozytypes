@@ -13,10 +13,11 @@ if (isset($_COOKIE["fontFamily"])) {
         <div><kbd>Tab</kbd> to restart</div>
     </h2>
     <div id = "footerDiv">
+        <!-- 
         <a class = "footerLinks tooltip" href="https://github.com/alexmcbrier/cozytypes">github</span>
-            <!--  <i class="fa-brands fa-github"></i> -->
+             <i class="fa-brands fa-github"></i>
         </a>
-
+        -->
         <div class = "linkDivider"> </div>
         <a class = "footerLinks tooltip" href="/preferences">theme</span>
              <!-- <i class="fa-solid fa-palette fa-sm"></i> -->
