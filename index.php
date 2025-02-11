@@ -180,8 +180,9 @@ crossorigin="anonymous"></script>
                     { filename: "airbar", url: "https://www.melgeek.com/products/airbar-purple-wrist-rest?ref=cozytypes" },
                     { filename: "cablepurple", url: "https://www.melgeek.com/products/melgeek-themed-cable?ref=cozytypes" },
                     { filename: "case", url: "https://www.melgeek.com/products/anodized-aluminium-case?ref=cozytypes" },
-                    { filename: "salonkeycap", url: "https://www.melgeek.com/products/mg-salon-full-set?ref=cozytypes" },
                     { filename: "made86air", url: "https://www.melgeek.com/?ref=cozytypes" },
+                    { filename: "made86air", url: "https://www.melgeek.com/?ref=cozytypes" },
+                    { filename: "made86smoke", url: "https://www.melgeek.com/?ref=cozytypes" },
                     { filename: "made86smoke", url: "https://www.melgeek.com/?ref=cozytypes" }
                 ];
                 // Randomly pick an image object
