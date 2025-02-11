@@ -177,17 +177,9 @@ crossorigin="anonymous"></script>
             <script type="text/javascript">
                 // List of image filenames
                 const images = [
-                    { filename: "made86pink", url: "https://www.melgeek.com/products/made68-pro?ref=cozytypes&variant=45914841415934" }, 
-                    { filename: "made86purple", url: "https://www.melgeek.com/products/made68-pro?ref=cozytypes&variant=45914841383166" },
-                    { filename: "made86white1", url: "https://www.melgeek.com/products/made68-ultra-aluminum-case-magnetic-keyboard?ref=cozytypes&variant=45917788340478" },
-                    { filename: "made86white2", url: "https://www.melgeek.com/products/made68-ultra-aluminum-case-magnetic-keyboard?ref=cozytypes&variant=45917788340478" },
                     { filename: "airbar", url: "https://www.melgeek.com/products/airbar-purple-wrist-rest?ref=cozytypes" },
                     { filename: "cablepurple", url: "https://www.melgeek.com/products/melgeek-themed-cable?ref=cozytypes" },
                     { filename: "case", url: "https://www.melgeek.com/products/anodized-aluminium-case?ref=cozytypes" },
-                    { filename: "fishingkeycap", url: "https://www.melgeek.com/products/mg-fishing-full-set?ref=cozytypes" },
-                    { filename: "holypanda", url: "https://www.melgeek.com/products/holy-panda?ref=cozytypes" },
-                    { filename: "horsemankeycap", url: "https://www.melgeek.com/products/melgeek-mcr-horseman-abs-doubleshot-keycap-set-for-mechanical-keyboard?ref=cozytypes" },
-                    { filename: "lightkit", url: "https://www.melgeek.com/products/made68-accessories-set?ref=cozytypes" },
                     { filename: "salonkeycap", url: "https://www.melgeek.com/products/mg-salon-full-set?ref=cozytypes" },
                     { filename: "made86air", url: "https://www.melgeek.com/?ref=cozytypes" },
                     { filename: "made86smoke", url: "https://www.melgeek.com/?ref=cozytypes" }
