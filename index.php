@@ -161,9 +161,7 @@ crossorigin="anonymous"></script>
                     </a>
                 </h1>
                 <div style = "font-size: 1.6rem; color: var(--row); padding: 0rem 2rem;">
-               Upgrade your typing experience with high-quality keyboards, customizable switches, and premium keycaps. Whether you prefer a fully assembled keyboard or want to build your own,
-                <a href="https://www.melgeek.com/?ref=cozytypes" style="text-decoration: none; color: var(--background);">MelGeek</a> 
-                has everything you need.
+                    Upgrade your setup with MelGeek. Use code COZYTYPES for 8% off keyboards, switches, and keycaps.
                 </div>
                 <a id = "shopnow" class="preference" style = "width: 90%" href="https://www.melgeek.com/?ref=cozytypes">Shop Now</a>
             </div>
