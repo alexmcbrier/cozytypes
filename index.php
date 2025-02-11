@@ -161,8 +161,8 @@ crossorigin="anonymous"></script>
                     </a>
                 </h1>
                 
-                <div style = "font-size: 1.6rem; color: var(--row); padding: 0rem 2rem;">
-                    Upgrade your setup with MelGeek. Use code COZYTYPES for <span style = "color: var(--currentword)">8% off</span> keyboards, switches, and keycaps.
+                <div style = "font-size: 2rem; color: var(--row); padding: 0rem 2rem;">
+                    Upgrade your setup with MelGeek. <span style = "color: var(--currentword)">8% off</span>Use code COZYTYPES for  keyboards, switches, and keycaps.
                 </div>
                 <a id = "shopnow" class="preference" style = "width: 90%" href="https://www.melgeek.com/?ref=cozytypes">Shop Now</a>
             </div>
