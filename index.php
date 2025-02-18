@@ -152,8 +152,8 @@ crossorigin="anonymous"></script>
                 }
             });
         </script>
+        <!-- 
         <div class="keyboardPromo" style="display: flex; align-items: center; background-color: var(--rowBackground); padding: 1.5rem; margin: 1rem; gap: 1.5rem; flex-wrap: wrap;">
-            <!-- Text Section -->
             <div style="flex: 1; min-width: 250px; text-align: left;">
                 <h1 class="notSignedIn" id="preferenceHeader" style="white-space: normal;">
                     <a href="https://www.melgeek.com/?ref=cozytypes" style="text-decoration: none; color: var(--textColor);">
@@ -167,8 +167,6 @@ crossorigin="anonymous"></script>
                 <a id = "shopnow" class="preference" style = "width: 90%" href="https://www.melgeek.com/?ref=cozytypes">Shop Now</a>
             </div>
 
-
-            <!-- Image -->
             <div style="flex: 1; min-width: 250px;">
                 <a id="affiliateProductLink" href="https://www.melgeek.com/?ref=cozytypes">
                     <img id="affiliateImage" class="keyboardPromo" src="" alt="MelGeek Mechanical Keyboard" style="width: 100%; border-radius: 1rem;">
@@ -205,7 +203,7 @@ crossorigin="anonymous"></script>
             </script>
 
         </div>
-
+        -->
         <div id="displayStats" style = "background-color: var(--background); margin: 1rem 0rem">
             <div class="statsContainer" style = "background-color: var(--rowBackground);">
                 <h1 class="notSignedIn" id="preferenceHeader">Words Per Minute<i class="fa-solid fa-clock-rotate-left"></i></h1>
