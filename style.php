@@ -315,7 +315,7 @@ include "themes.scss"; //file contains all fonts
         user-select: none;
         display: flex;
         justify-content: center;
-        transition: all .25s ease;
+        transition: color .25s ease;
         align-items: center;
     }
     .footerLinks:hover {
