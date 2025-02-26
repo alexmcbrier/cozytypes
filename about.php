@@ -46,10 +46,6 @@ session_start();
                     Created by Alex McBrier, with the purpose of this website is to help beginners to experts sharpen there skills.
                     Thank you to Kaffee as well for your collaboration and support on this project. I am excited to bring this game to you and anyone else who may enjoy it. Thank you for your support.
                     </h2>
-                <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0; padding-top: 2rem;" >contact us</h1>
-                    <h2 class="aboutDescription">
-                        Contact us via email: <a class = "aboutLink" href="mailto:alexmcbrier@gmail.com">alexmcbrier@gmail.com</a>
-                    </h2>   
             </div>
         </div>
         <?php include "./footer.php" ?>
