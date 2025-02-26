@@ -408,7 +408,7 @@ include "themes.scss"; //file contains all fonts
         text-decoration: none;
         font-size: 2rem;
         padding: 0rem 1rem;
-        transition: color .25s;
+        transition: color .25s ease;
         user-select: none;
     }
     #showUsername
@@ -683,7 +683,7 @@ include "themes.scss"; //file contains all fonts
         text-decoration: none;
         font-size: 2rem;
         padding: 0rem 1rem;
-        transition: color .25s;
+        transition: color .25s ease;
         user-select: none;
     }
     #showSignIn:hover {
