@@ -37,6 +37,9 @@ if (isset($_COOKIE["fontFamily"])) {
         <a class = "footerLinks tooltip" href="/privacyPolicy.html">privacy</span>
              <!--  <i class="fa-solid fa-lock"></i> -->
         </a>
+        <div class = "linkDivider"> </div>
+        <a class = "footerLinks tooltip" href="https://www.melgeek.com/?ref=cozytypes">keyboards</span>
+        </a>
     </div>
 </div>
 
