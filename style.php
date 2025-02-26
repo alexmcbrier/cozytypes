@@ -618,7 +618,7 @@ include "themes.scss"; //file contains all fonts
     .incorrect-word {
         color: var(--incorrect);
         display: inline-block;
-        padding: 0rem calc(var(--fontSize) * .45rem);
+        padding: 0rem calc(var(--fontSize) * .45rem) 0rem 0rem;
     }
 
     #listOfStats {
