@@ -11,8 +11,8 @@ if (isset($_SESSION["user_id"])) {
     </a>
     <a class = "navIcon" href="https://cozytypes.com" ><i class="fa-solid fa-house"></i></a>
     <a class = "navIcon" href="/preferences"><i class="fa-solid fa-gear"></i></a>
-    <a class = "navIcon" href="/leaderboard"><i class="fa-solid fa-crown"></i></a>
     <a class = "navIcon" href="/about"><i class="fa-solid fa-info"></i></a>
+    <a class = "navIcon" href="/leaderboard"><i class="fa-solid fa-crown"></i></a>
     <a class = "navIcon" href="https://www.melgeek.com/?ref=cozytypes"><i class="fa-solid fa-cart-shopping"></i></a>
 
 
