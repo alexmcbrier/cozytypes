@@ -672,13 +672,6 @@ include "themes.scss"; //file contains all fonts
         transition: background-color 5000s ease-in-out 0s;
         -webkit-text-fill-color: var(--currentWord) !important;
     }
-    #saveProgress {
-        text-decoration: underline;
-        transition: color .25s;
-    }
-    #saveProgress:hover {
-        color: var(--currentWord);
-    }
     #shopnow {
         transition: background-color .4s;
     }
@@ -692,6 +685,9 @@ include "themes.scss"; //file contains all fonts
         padding: 0rem 1rem;
         transition: color .25s;
         user-select: none;
+    }
+    #showSignIn:hover {
+        color: var(--currentWord);
     }
     .statsItem {
         user-select: none;

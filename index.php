@@ -223,7 +223,7 @@ crossorigin="anonymous"></script>
             <?php if (isset($_SESSION["user_id"])) { ?>
                 <a id="showRestart" href="signup">view progress<i class="fa-solid fa-medal"></i></a>
             <?php } else { ?>
-                <a id="showSignIn" href="signup"><span id="saveProgress">login</span> to save progress<i class="fa-solid fa-medal"></i></a>
+                <a id="showSignIn" href="signup"><span id="saveProgress">login to save progress<i class="fa-solid fa-medal"></i></a>
             <?php } ?>
 
         </div>
