@@ -122,6 +122,7 @@ crossorigin="anonymous"></script>
                 <div>difficulty</div>
                 <div id = "modesContainer" style="display: flex">
                     <div class="typingModes" onclick="setPreference('mode', 'easy'); restart()">easy</div>
+                    <div class="typingModes" onclick="setPreference('mode', 'medium'); restart()">medium</div>
                     <div class="typingModes" onclick="setPreference('mode', 'hard'); restart()">hard</div>
                 </div>
             </div>
