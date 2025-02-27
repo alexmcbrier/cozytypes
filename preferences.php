@@ -4,7 +4,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 
-<?php include "./head2.php" ?>
+<?php include "./head.php" ?>
 <head>
 <title>preferences | cozytypes</title>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9923722164132738"
