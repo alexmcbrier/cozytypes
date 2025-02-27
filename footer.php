@@ -6,15 +6,12 @@ if (isset($_COOKIE["theme"])) {
 if (isset($_COOKIE["fontFamily"])) {
     $font = $_COOKIE["fontFamily"];
 }
-$isHomePage = basename($_SERVER['PHP_SELF']) == 'index.php';
 ?>
 
 <div id="footer" class = "invisible">
-    <?php if ($isHomePage): ?>
-        <h2 id="hotkey">
-            <div><kbd>Tab</kbd> to restart</div>
-        </h2>
-    <?php endif; ?>
+    <h2 id ="hotkey">
+        <div><kbd>Tab</kbd> to restart</div>
+    </h2>
     <div id = "footerDiv">
         <!-- 
         <a class = "footerLinks tooltip" href="https://github.com/alexmcbrier/cozytypes">github</span>
