@@ -72,7 +72,6 @@ session_start();
             <div id="caretsContainer" class="rowContainer">
                 <h1 class="notSignedIn" id="preferenceHeader">pace caret </h1> 
                 <h1 class="description">When enabled, the caret will move along the page as you type. Change the style for different typing experiences.</h1>
-                <a class="preference" onclick="setPreference('caret', 'none'), addNotification('caret style','none');">none</a>
                 <a class="preference" onclick="setPreference('caret', 'caret'), addNotification('caret style','classic');">caret</a>
                 <a class="preference" onclick="setPreference('caret', 'underlineLetter'), addNotification('caret style','underline letter');">underline letter</a>
                 <a class="preference" onclick="setPreference('caret', 'underlineWord'), addNotification('caret style','underline word');">underline word</a>
