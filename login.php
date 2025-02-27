@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 ?>
 <!DOCTYPE html>
 <html>
-    <?php include "./head2.php" ?><head>
+    <?php include "./head.php" ?><head>
     <title>login | cozytypes</title>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9923722164132738"
      crossorigin="anonymous"></script>
