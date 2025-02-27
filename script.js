@@ -593,5 +593,7 @@ function loadPreferences() {
     
 }
 loadPreferences();
-document.body.onLoad = refresh();
-document.body.onresize = function() { zoomwait() };
+if (window.location.pathname === "/") {
+    document.body.onLoad = refresh();
+    document.body.onresize = function() { zoomwait() };
+}
