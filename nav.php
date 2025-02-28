@@ -12,7 +12,7 @@ if (isset($_SESSION["user_id"])) {
     <a class = "navIcon" href="https://cozytypes.com" ><i class="fa-solid fa-house"></i></a>
     <a class = "navIcon" href="/preferences"><i class="fa-solid fa-gear"></i></a>
     <a class = "navIcon" href="/leaderboard"><i class="fa-solid fa-crown"></i></a>
-    <a class = "navIcon" href="https://www.melgeek.com/?ref=cozytypes"><i class="fa-solid fa-cart-shopping"></i></a>
+    <a class = "navIcon" href="https://kbdcraft.store?source_type=sales_plugin_af&slt=sales_plugin_af&referral_code=2UZEGET8XD2L"><i class="fa-solid fa-cart-shopping"></i></a>
     <a class = "navIcon" href="/about"><i class="fa-solid fa-info"></i></a>
     <!--<a class = "navIcon" href="/books"><i class="fa-solid fa-book"></i></a> -->
     <a href="/signup" id = "showUsername">
