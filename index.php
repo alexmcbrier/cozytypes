@@ -127,7 +127,7 @@ crossorigin="anonymous"></script>
             </div>
         </div>
         <div id="time" class = "testItem" ></div>
-        <div id="testText">
+        <div id="testText" class = "box">
             <textarea id="textInput" spellcheck="false" autofocus></textarea>
             <div id="wordsWrapper"></div>
         </div>
