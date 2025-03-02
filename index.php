@@ -127,9 +127,9 @@ crossorigin="anonymous"></script>
             </div>
         </div>
         <div id="time" class = "testItem" ></div>
-        <div id="testText" class = "box">
+        <div id="testText">
             <textarea id="textInput" spellcheck="false" autofocus></textarea>
-            <div id="wordsWrapper"></div>
+            <div id="wordsWrapper"  class = "box"></div>
         </div>
         <div class="testRow">
             <div id ="resetBox" class = "testItem"><i id="restartTest"class="fa-solid fa-rotate" onclick="restart()"></i></div>
