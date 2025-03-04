@@ -331,11 +331,10 @@ function startTimer() {
             }, 1000)
         }
         timerStatus = true;
-    }
-    else {
         if (localStorage.getItem("ambience") != "none") //start of test play music if have it
-        playmusic(localStorage.getItem("ambience"));
+            playmusic(localStorage.getItem("ambience"));
     }
+    
 }
 function getTime(time) {
     var minutes = Math.floor(time / 60);
