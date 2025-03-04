@@ -78,14 +78,6 @@ session_start();
                 <a data-value="jellyblack" class="preference" onclick="setPreference('keyboardswitch', 'jellyblack'), addNotification('switch sound','akko jelly black');">akko jelly black</a>
                 <a data-value="boxjade" class="preference" onclick="setPreference('keyboardswitch', 'boxjade'), addNotification('switch sound','kalih box jade');">kailh box jade</a>
             </div>
-            <div id="ambienceContainer" class="rowContainer">
-                <h1 class="notSignedIn" id="preferenceHeader">ambience</h1> 
-                <h1 class="description">Add description here.</h1>
-                <a data-value="none" class="preference" onclick="setPreference('ambience', 'none'), addNotification('ambience','none');">none</a>
-                <a data-value="cafe" class="preference" onclick="setPreference('ambience', 'cafe'), addNotification('ambience','cafe');">cafe</a>
-                <a data-value="library" class="preference" onclick="setPreference('ambience', 'library'), addNotification('ambience','library');">library</a>
-                <a data-value="rainyday" class="preference" onclick="setPreference('ambience', 'rainyday'), addNotification('ambience','rainy day');">rainy day</a>
-            </div>
             <div id="caretsContainer" class="rowContainer">
                 <h1 class="notSignedIn" id="preferenceHeader">pace caret </h1> 
                 <h1 class="description">When enabled, the caret will move along the page as you type. Change the style for different typing experiences.</h1>

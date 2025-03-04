@@ -8,7 +8,6 @@ const footer = document.getElementById("footer")
 const typingMode = document.getElementById("typingmode")
 const hotkey  = document.getElementById("hotkey")
 var timerStatus = false; // Turns on when user begins typing...
-var musicplaying = false; // Turns on when typing
 var check = null;
 var sentenceLength = 50;
 var sentence = []
@@ -212,12 +211,6 @@ function switchClick(switchtype) { // a function that when given a switch type s
     audio.play();
     console.log(switchtype + " clicked");
 }
-function playmusic(choice) {
-    let audiofile = "sounds/ambiance/"+ choice + ".mp3"
-    let audio = new Audio(audiofile);
-    audio.play();
-    console.log(choice + " played");
-}
 function restart() {
     displayText.style.marginTop = 0; //reset the box for the text (since it moves up for each new line)
     clearInterval(check);
@@ -306,11 +299,6 @@ async function newQuote() {
 }
 function startTimer() {
     if (timerStatus == false) {
-        if (musicplaying == false) {
-            if (localStorage.getItem("ambience") != "none") 
-                playmusic(localStorage.getItem("ambience"));
-                musicplaying = true
-        }
         displayWPM.style.opacity = "100%";
         footer.classList.add('fadeOut');
         typingMode.classList.add('fadeOut');
@@ -613,7 +601,6 @@ function loadPreferences() {
     let blur = localStorage.getItem("blur") || "off";
     let mode = localStorage.getItem("mode") || "easy";
     let keyboardswitch = localStorage.getItem("keyboardswitch") || "none";
-    let ambience = localStorage.getItem("ambience") || "none";
 
     setPreference("fontSize", fontSize); 
     setPreference("fontFamily", fontFamily); 
@@ -625,7 +612,6 @@ function loadPreferences() {
     setPreference("blur", blur);
     setPreference("mode", mode);
     setPreference("keyboardswitch", keyboardswitch);
-    setPreference("ambience", ambience);
 
     if (window.location.pathname.endsWith("/preferences")) {
         highlightPrefernces();
@@ -645,12 +631,10 @@ function highlightPrefernces() {
     let mode = localStorage.getItem("mode") || "easy";
     let title = localStorage.getItem("selectedTitle") || "harryPotter";
     let keyboardswitch = localStorage.getItem("keyboardswitch") || "none";
-    let ambience = localStorage.getItem("ambience") || "none";
     
     let sizesContainer = document.getElementById("sizesContainer");
     let fontsContainer = document.getElementById("fontsContainer");
     let switchesContainer = document.getElementById("switchesContainer");
-    let ambienceContainer = document.getElementById("ambienceContainer");
     let caretsContainer = document.getElementById("caretsContainer");
     let linesContainer = document.getElementById("linesContainer");
 
