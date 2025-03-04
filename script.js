@@ -8,6 +8,7 @@ const footer = document.getElementById("footer")
 const typingMode = document.getElementById("typingmode")
 const hotkey  = document.getElementById("hotkey")
 var timerStatus = false; // Turns on when user begins typing...
+var musicplaying = false; // Turns on when typing
 var check = null;
 var sentenceLength = 50;
 var sentence = []
@@ -18,6 +19,7 @@ var duration = 0;
 var wpm = 0;
 var count = 0
 var lastWord = 0;
+
 window.addEventListener('keydown', function (event) { //restart test if tab key
   // Check if the pressed key is the 'Tab' key (key code 9)
   if (event.key === 'Tab' || event.keyCode === 9) {
@@ -92,6 +94,12 @@ function keystroke() {
     let chars = word.querySelectorAll('letter')
     let inputChars = displayInput?.value.split('');
     let wordChars = word.innerText.split('');
+    if (musicplaying == false) {
+        if (localStorage.getItem("ambience") != "none") 
+            playmusic(localStorage.getItem("ambience"));
+            musicplaying = true
+    }
+    
     for (let i = 0; i < chars.length; i++) //need to remove previous when user deletes
     {
         chars[i].classList.remove("correct")
@@ -331,8 +339,6 @@ function startTimer() {
             }, 1000)
         }
         timerStatus = true;
-        if (localStorage.getItem("ambience") != "none") //start of test play music if have it
-            playmusic(localStorage.getItem("ambience"));
     }
     
 }
