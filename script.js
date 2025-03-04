@@ -602,19 +602,18 @@ function loadPreferences() {
     
 }
 function highlightPrefernces() {
-    let theme = localStorage.getItem("theme") || "light";
-    let fontSize = localStorage.getItem("fontSize") || "3";
-    let fontFamily = localStorage.getItem("fontFamily") || "LexendDeca";
-    let lineCount = localStorage.getItem("lineCount") || "3";
-    let caret = localStorage.getItem("caret") || "caret";
-    let typingMode = localStorage.getItem("typingMode") || "time";
-    let words = localStorage.getItem("words") || 10;
-    let time = localStorage.getItem("time") || 15;
-    let blur = localStorage.getItem("blur") || "off";
-    let mode = localStorage.getItem("mode") || "easy";
-    let title = localStorage.getItem("selectedTitle") || "harryPotter";
-    let keyboardswitch = localStorage.getItem("keyboardswitch") || "none";
-    let ambience = localStorage.getItem("ambience") || "none";
+    let theme = localStorage.getItem("theme");
+    let fontSize = localStorage.getItem("fontSize");
+    let fontFamily = localStorage.getItem("fontFamily");
+    let lineCount = localStorage.getItem("lineCount");
+    let caret = localStorage.getItem("caret");
+    let typingMode = localStorage.getItem("typingMode");
+    let words = localStorage.getItem("words");
+    let time = localStorage.getItem("time");
+    let blur = localStorage.getItem("blur");
+    let mode = localStorage.getItem("mode");
+    let keyboardswitch = localStorage.getItem("keyboardswitch");
+    let ambience = localStorage.getItem("ambience");
     let preferences = document.querySelectorAll(".preference");
 
     preferences.forEach(pref => {
