@@ -72,6 +72,7 @@ session_start();
             <div id="switchsContainer" class="rowContainer">
                 <h1 class="notSignedIn" id="preferenceHeader">keyboard switch sounds</h1> 
                 <h1 class="description">Add description here.</h1>
+                <a class="preference" onclick="setPreference('caret', 'caret'), addNotification('caret style','classic');">none</a>
                 <a class="preference" onclick="setPreference('caret', 'caret'), addNotification('caret style','classic');">novelkey creams</a>
                 <a class="preference" onclick="setPreference('caret', 'underlineLetter'), addNotification('caret style','underline letter');">holy pandas</a>
                 <a class="preference" onclick="setPreference('caret', 'underlineWord'), addNotification('caret style','underline word');">akko jelly black</a>
@@ -79,6 +80,7 @@ session_start();
             <div id="caretsContainer" class="rowContainer">
                 <h1 class="notSignedIn" id="preferenceHeader">ambience</h1> 
                 <h1 class="description">Add description here.</h1>
+                <a class="preference" onclick="setPreference('caret', 'caret'), addNotification('caret style','classic');">none</a>
                 <a class="preference" onclick="setPreference('caret', 'caret'), addNotification('caret style','classic');">cafe</a>
                 <a class="preference" onclick="setPreference('caret', 'underlineLetter'), addNotification('caret style','underline letter');">library</a>
                 <a class="preference" onclick="setPreference('caret', 'underlineWord'), addNotification('caret style','underline word');">rainy day</a>
