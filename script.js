@@ -596,6 +596,34 @@ function loadPreferences() {
     setPreference("selectedTitle", title);
     
 }
+function highlightPrefernces() {
+    let theme = localStorage.getItem("theme") || "light";
+    let fontSize = localStorage.getItem("fontSize") || "3";
+    let fontFamily = localStorage.getItem("fontFamily") || "LexendDeca";
+    let lineCount = localStorage.getItem("lineCount") || "3";
+    let caret = localStorage.getItem("caret") || "caret";
+    let typingMode = localStorage.getItem("typingMode") || "time";
+    let words = localStorage.getItem("words") || 10;
+    let time = localStorage.getItem("time") || 15;
+    let blur = localStorage.getItem("blur") || "off";
+    let mode = localStorage.getItem("mode") || "easy";
+    let title = localStorage.getItem("selectedTitle") || "harryPotter";
+    let keyboardswitch = localStorage.getItem("keyboardswitch") || "none";
+    let ambience = localStorage.getItem("ambience") || "none";
+
+    let preferences = document.querySelectorAll(".preference");
+
+    preferences.forEach(pref => {
+        let prefValue = pref.innerText.toLowerCase(); // Get the text of the preference
+        console.log(prefValue);
+        // Check if the preference matches the stored value
+        if (prefValue === theme || prefValue === fontSize || prefValue === fontFamily || prefValue === lineCount || prefValue === caret || prefValue === typingMode || prefValue === words.toString() || prefValue === time.toString() || prefValue === blur || prefValue === mode || prefValue === title || prefValue === keyboardswitch || prefValue === ambience) {
+            // Change the color to red if they match
+            pref.style.color = "red";
+        }
+    });
+
+}
 loadPreferences();
 if (window.location.pathname === "/") {
     document.body.onLoad = refresh();
@@ -608,4 +636,5 @@ if (window.location.pathname === "/") {
 }
 if (window.location.pathname.endsWith("/preferences")) {
     console.log("hi")
+    highlightPrefernces();
 }
