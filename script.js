@@ -86,6 +86,8 @@ function findDistanceBetween(words)
 displayInput?.addEventListener('input', keystroke)
 function keystroke() {
     moveCursor();
+    if (localStorage.getItem("keyboardswitch") != "none")
+        switchClick(localStorage.getItem("keyboardswitch"));
     let word = document.getElementsByClassName('current-word')[0] //Only want 1 value in class list
     let chars = word.querySelectorAll('letter')
     let inputChars = displayInput?.value.split('');
@@ -198,6 +200,18 @@ function keystroke() {
             endTest()
         }
     }
+}
+function switchClick(switchtype) { // a function that when given a switch type say novel key cream, produces random sound of nk cream clicking.
+    var switches = [];
+    if (switchtype == "nkcreams") {
+        switches = ["sounds/switches/novelkey_cream/click1.mp3", "sounds/switches/novelkey_cream/click2.mp3", "sounds/switches/novelkey_cream/click3.mp3", "sounds/switches/novelkey_cream/click4.mp3", "sounds/switches/novelkey_cream/click5.mp3"];
+    }
+    let randomIndex = Math.floor(Math.random() * switches.length);
+    let randomFile =  fileArray[randomIndex];
+    let audio = new Audio(randomFile);
+    audio.play();
+        
+
 }
 function restart() {
     displayText.style.marginTop = 0; //reset the box for the text (since it moves up for each new line)
