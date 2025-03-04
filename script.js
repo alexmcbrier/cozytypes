@@ -156,16 +156,16 @@ function keystroke() {
             placement.parentElement.children
         ).indexOf(placement);
         const lastWordIndex = currentWordIndex - 1;
-        if (lastWordIndex >= 0) //cannot be negative
-        {
-            const distance = findDistanceBetween(words); //distance between the lines
+        if (lastWordIndex >= 0) { // Make sure it's not negative
+            const distance = findDistanceBetween(words); // Distance between lines
             const currentWord = placement.getBoundingClientRect().y;
             const firstWord = document.getElementsByClassName('word')[0].getBoundingClientRect().y;
-            const lineCount = getStorageItem("lineCount")
+            const lineCount = getStorageItem("lineCount");
             const lineNumber = Math.floor((currentWord - firstWord) / distance); // Calculate the line number
-            if (lineNumber === lineCount - 2) {
-                // Shift the text after each line
-                displayText.style.marginTop = (distance * (lineNumber - 1)) - (currentWord - firstWord) + "px";
+            if (lineNumber === lineCount - 2) { // Check if it's the second-to-last line
+                // Adjust the margin-top to shift text down after each line
+                const marginTopValue = (distance * (lineNumber - 1)) - (currentWord - firstWord);
+                displayText.style.marginTop = marginTopValue + "px";
             }
         }
         //moving the cursor
