@@ -532,9 +532,6 @@ function setTheme(oldTheme, newTheme) {
     setTimeout(() => body.classList.remove(oldTheme), 0); // ensuring new styles are applied before removing the old theme
     currentTheme = newTheme;
     localStorage.setItem("theme", newTheme);
-    if (window.location.pathname.endsWith("/preferences")) {
-        highlightPrefernces();
-    }
 }
 function setPreference(type, newPreference)
     {
@@ -633,7 +630,7 @@ function highlightPrefernces() {
         
         let preferences = container.querySelectorAll(".preference");
         let highlightColor = getComputedStyle(document.documentElement).getPropertyValue("--background");
-        let textcolor = getComputedStyle(document.documentElement).getPropertyValue("--currentWord");
+        let defaultColor = getComputedStyle(document.documentElement).getPropertyValue("--row");
         preferences.forEach(pref => {
             let prefValue = pref.getAttribute("data-value");
 
