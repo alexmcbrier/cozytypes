@@ -640,6 +640,7 @@ function highlightPrefernces() {
             }
             else {
                 pref.style.backgroundColor = defaultColor;
+                pref.style.color = "white";
             }
         });
     }
