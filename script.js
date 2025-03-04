@@ -616,7 +616,9 @@ function highlightPrefernces() {
     let mode = localStorage.getItem("mode");
     let keyboardswitch = localStorage.getItem("keyboardswitch");
     let ambience = localStorage.getItem("ambience");
-    let preferences = document.querySelectorAll(".preference");
+
+    let sizesContainer = document.getElementById("sizesContainer");
+    let preferences = sizesContainer.querySelectorAll(".preference");
 
     preferences.forEach(pref => {
         let prefValue = pref.innerText.toLowerCase(); // Get the text of the preference
