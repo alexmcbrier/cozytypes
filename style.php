@@ -351,7 +351,7 @@ include "themes.scss"; //file contains all fonts
         font-size: 4rem;
         padding: 0;
         opacity: 0;
-        transition: opacity 0.175s ease;
+        transition: opacity 0.25s ease;
 
     }
     #wpmDisplay, #time
