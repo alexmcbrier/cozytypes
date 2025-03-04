@@ -88,6 +88,8 @@ function keystroke() {
     moveCursor();
     if (localStorage.getItem("keyboardswitch") != "none")
         switchClick(localStorage.getItem("keyboardswitch"));
+    if (localStorage.getItem("ambience") != "none")
+        playmusic(localStorage.getItem("ambience"));
     let word = document.getElementsByClassName('current-word')[0] //Only want 1 value in class list
     let chars = word.querySelectorAll('letter')
     let inputChars = displayInput?.value.split('');
@@ -207,9 +209,13 @@ function switchClick(switchtype) { // a function that when given a switch type s
     let randomFile =  switches[randomIndex];
     let audio = new Audio(randomFile);
     audio.play();
-    console.log(switchtype + " played")
-        
-
+    console.log(switchtype + " clicked");
+}
+function playmusic(choice) {
+    let audiofile = "sounds/ambiance/"+ choice + ".mp3"
+    let audio = new Audio(audiofile);
+    audio.play();
+    console.log(choice + " played");
 }
 function restart() {
     displayText.style.marginTop = 0; //reset the box for the text (since it moves up for each new line)
