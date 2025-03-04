@@ -666,7 +666,6 @@ function highlightPrefernces() {
     highlightMatchingPreferences(fontsContainer, fontFamily);
     highlightMatchingPreferences(themesContainer, theme);
     highlightMatchingPreferences(switchesContainer, keyboardswitch);
-    highlightMatchingPreferences(ambienceContainer, ambience); 
     highlightMatchingPreferences(caretsContainer, caret); 
     highlightMatchingPreferences(linesContainer, lineCount);
 
