@@ -168,7 +168,7 @@ function keystroke() {
             }
         }
         //moving the cursor
-        moveCursorWithY(); //moving cursor with y because new line
+        //moveCursorWithY(); //moving cursor with y because new line
     }
     //remove extras
     if (inputChars.length > chars.length - 1) //extra characters
