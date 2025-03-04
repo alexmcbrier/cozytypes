@@ -158,6 +158,7 @@ function keystroke() {
        const lastWordIndex = currentWordIndex - 1;
        if (lastWordIndex >= 0) //cannot be negative
        {
+           console.log("skip")
            const distance = findDistanceBetween(words); //distance between the lines
            const currentWord = placement.getBoundingClientRect().y;
            const firstWord = document.getElementsByClassName('word')[0].getBoundingClientRect().y;
