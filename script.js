@@ -635,46 +635,6 @@ function highlightPrefernces() {
             pref.style.color = "blue";
         }
     });
-
-    let fontPreferences = fontsContainer.querySelectorAll(".preference");
-    fontPreferences.forEach(pref => {
-        let prefValue = pref.innerText.toLowerCase();
-        if (prefValue === fontFamily) {
-            pref.style.color = "red";
-        } else {
-            pref.style.color = "blue";
-        }
-    });
-
-    let themePreferences = themesContainer.querySelectorAll(".preference");
-    themePreferences.forEach(pref => {
-        let prefValue = pref.innerText.toLowerCase();
-        if (prefValue === theme) {
-            pref.style.color = "red";
-        } else {
-            pref.style.color = "blue";
-        }
-    });
-
-    let switchPreferences = switchesContainer.querySelectorAll(".preference");
-    switchPreferences.forEach(pref => {
-        let prefValue = pref.innerText.toLowerCase();
-        if (prefValue === keyboardswitch) {
-            pref.style.color = "red";
-        } else {
-            pref.style.color = "blue";
-        }
-    });
-
-    let linePreferences = linesContainer.querySelectorAll(".preference");
-    linePreferences.forEach(pref => {
-        let prefValue = pref.innerText.toLowerCase();
-        if (prefValue === lineCount) {
-            pref.style.color = "red";
-        } else {
-            pref.style.color = "blue";
-        }
-    });
 }
 loadPreferences();
 if (window.location.pathname === "/") {
