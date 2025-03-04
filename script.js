@@ -528,8 +528,9 @@ function refresh() {
 }
 function setTheme(oldTheme, newTheme) {
     const body = document.getElementsByTagName("body")[0];
+    body.classList.remove(oldTheme);
     body.classList.add(newTheme);
-    setTimeout(() => body.classList.remove(oldTheme), 0); // ensuring new styles are applied before removing the old theme
+     // ensuring new styles are applied before removing the old theme
     currentTheme = newTheme;
     localStorage.setItem("theme", newTheme);
     if (window.location.pathname.endsWith("/preferences")) {
