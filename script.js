@@ -618,10 +618,10 @@ function highlightPrefernces() {
     let ambience = localStorage.getItem("ambience");
 
     let sizesContainer = document.getElementById("sizesContainer");
-    let fontsContainer = document.getElementById("sizesContainer");
-    let themesContainer = document.getElementById("sizesContainer");
-    let switchesContainer = document.getElementById("sizesContainer");
-    let linesContainer = document.getElementById("sizesContainer");
+    let fontsContainer = document.getElementById("fontsContainer");
+    let themesContainer = document.getElementById("themesContainer");
+    let switchesContainer = document.getElementById("switchesContainer");
+    let linesContainer = document.getElementById("linesContainer");
 
 
     let sizePreferences = sizesContainer.querySelectorAll(".preference");
@@ -632,6 +632,46 @@ function highlightPrefernces() {
             pref.style.color = "red";
         }
         else {
+            pref.style.color = "blue";
+        }
+    });
+
+    let fontPreferences = fontsContainer.querySelectorAll(".preference");
+    fontPreferences.forEach(pref => {
+        let prefValue = pref.innerText.toLowerCase();
+        if (prefValue === fontFamily) {
+            pref.style.color = "red";
+        } else {
+            pref.style.color = "blue";
+        }
+    });
+
+    let themePreferences = themesContainer.querySelectorAll(".preference");
+    themePreferences.forEach(pref => {
+        let prefValue = pref.innerText.toLowerCase();
+        if (prefValue === theme) {
+            pref.style.color = "red";
+        } else {
+            pref.style.color = "blue";
+        }
+    });
+
+    let switchPreferences = switchesContainer.querySelectorAll(".preference");
+    switchPreferences.forEach(pref => {
+        let prefValue = pref.innerText.toLowerCase();
+        if (prefValue === keyboardswitch) {
+            pref.style.color = "red";
+        } else {
+            pref.style.color = "blue";
+        }
+    });
+
+    let linePreferences = linesContainer.querySelectorAll(".preference");
+    linePreferences.forEach(pref => {
+        let prefValue = pref.innerText.toLowerCase();
+        if (prefValue === lineCount) {
+            pref.style.color = "red";
+        } else {
             pref.style.color = "blue";
         }
     });
