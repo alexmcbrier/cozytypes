@@ -607,5 +607,5 @@ if (window.location.pathname === "/") {
     });
 }
 if (window.location.pathname === "/preferences.php") {
-    console.log("dog")
+    setTheme("default", "dark"); 
 }
