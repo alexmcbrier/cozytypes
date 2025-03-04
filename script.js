@@ -629,7 +629,7 @@ function highlightPrefernces() {
         if (!container) return;
         
         let preferences = container.querySelectorAll(".preference");
-        let highlightColor = getComputedStyle(document.documentElement).getPropertyValue("--background");
+        let highlightColor = getComputedStyle(document.documentElement).getPropertyValue("--incorrect");
         let defaultColor = getComputedStyle(document.documentElement).getPropertyValue("--row");
         preferences.forEach(pref => {
             let prefValue = pref.getAttribute("data-value");
