@@ -202,16 +202,12 @@ function keystroke() {
     }
 }
 function switchClick(switchtype) { // a function that when given a switch type say novel key cream, produces random sound of nk cream clicking.
-    var switches = [];
-    if (switchtype == "nkcreams") {
-        switches = ["sounds/switches/novelkey_cream/click1.mp3", "sounds/switches/novelkey_cream/click2.mp3", "sounds/switches/novelkey_cream/click3.mp3", "sounds/switches/novelkey_cream/click4.mp3", "sounds/switches/novelkey_cream/click5.mp3"];
-        console.log("nkcream")
-    }
+    switches = ["sounds/switches/" + switchtype + "/click1.mp3", "sounds/switches/" + switchtype + "/click2.mp3", "sounds/switches/" + switchtype + "/click3.mp3", "sounds/switches/" + switchtype + "/click4.mp3", "sounds/switches/" + switchtype + "/click5.mp3"];
     let randomIndex = Math.floor(Math.random() * switches.length);
     let randomFile =  switches[randomIndex];
     let audio = new Audio(randomFile);
     audio.play();
-    console.log("played")
+    console.log(switchtype + " " + randomfile + " played")
         
 
 }
