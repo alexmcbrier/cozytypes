@@ -208,7 +208,7 @@ function switchClick(switchtype) { // a function that when given a switch type s
         console.log("nkcream")
     }
     let randomIndex = Math.floor(Math.random() * switches.length);
-    let randomFile =  fileArray[randomIndex];
+    let randomFile =  switches[randomIndex];
     let audio = new Audio(randomFile);
     audio.play();
     console.log("played")
