@@ -350,6 +350,9 @@ include "themes.scss"; //file contains all fonts
         min-width: calc(var(--fontSize) * 2.25rem);
         font-size: 4rem;
         padding: 0;
+        opacity: 0;
+        transition: opacity 0.175s ease;
+
     }
     #wpmDisplay, #time
     {
@@ -483,6 +486,7 @@ include "themes.scss"; //file contains all fonts
     #wordsWrapper {
         /* transition: .25s all; */
         line-height: calc(var(--fontSize) * 1.5rem);
+        
     }
 
     #testText {
@@ -507,6 +511,9 @@ include "themes.scss"; //file contains all fonts
     }
     .fadeOut {
         animation: fadeOut .45s  ease forwards, fadeColor .45s ease forwards;
+    }
+    .fadeIn {
+        animation: fadeIn .45s  ease forwards
     }
     .testRow * {
         user-select: none;

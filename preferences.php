@@ -83,7 +83,6 @@ session_start();
                 <a class="preference" onclick="setPreference('lineCount', 2), addNotification('line count','2');">2</a>
                 <a class="preference" onclick="setPreference('lineCount', 3), addNotification('line count','3');">3</a>
                 <a class="preference" onclick="setPreference('lineCount', 4), addNotification('line count','4');">4</a>
-                <a class="preference" onclick="setPreference('lineCount', 5), addNotification('line count','5');">5</a>
             </div>
         </div>
     </form>
