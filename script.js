@@ -165,6 +165,7 @@ function keystroke() {
            const lineCount = getStorageItem("lineCount")
            if (distance * (lineCount - 1) <= (currentWord - firstWord)) //return the one before last
            {
+               console.log("dog")
                displayText.style.marginTop = (distance * (lineCount - 2)) - (currentWord - firstWord) + "px";
            }
        }
