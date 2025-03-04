@@ -161,7 +161,6 @@ function keystroke() {
            const distance = findDistanceBetween(words); //distance between the lines
            const currentWord = placement.getBoundingClientRect().y;
            const previousWord = placement.parentElement.children[lastWordIndex].getBoundingClientRect().y;
-           console.log("current " + currentWord + "prev" + previousWord)
            const firstWord = document.getElementsByClassName('word')[0].getBoundingClientRect().y;
            const lineCount = getStorageItem("lineCount")
            if (currentWord > previousWord) //difference in y
@@ -448,7 +447,6 @@ function setBlur() {
         let lines = getCookie("lineCount");
         let height = window.getComputedStyle(document.getElementById('testText')).getPropertyValue("height").replace("px", "") //remove px
         let boxHeight = (height / lines * (lines - 1))
-        console.log(boxHeight)
         const blurBox = document.createElement('div')
         blurBox.style.height = boxHeight + "px"
         blurBox.style.width = window.getComputedStyle(document.getElementById('testText')).getPropertyValue("width")
@@ -608,6 +606,6 @@ if (window.location.pathname === "/") {
         }
     });
 }
-if (window.location.pathname === "/preferences") {
+if (window.location.pathname === "/preferences.php") {
     console.log("dog")
 }
