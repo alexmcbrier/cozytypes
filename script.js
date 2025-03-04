@@ -158,14 +158,14 @@ function keystroke() {
        const lastWordIndex = currentWordIndex - 1;
        if (lastWordIndex >= 0) //cannot be negative
        {
-           console.log("skip")
            const distance = findDistanceBetween(words); //distance between the lines
            const currentWord = placement.getBoundingClientRect().y;
+           const previousWord = placement.parentElement.children[lastWordIndex].getBoundingClientRect().y;
+           console.log("current " + currentWord + "prev" + previousWord)
            const firstWord = document.getElementsByClassName('word')[0].getBoundingClientRect().y;
            const lineCount = getStorageItem("lineCount")
-           if (distance * (lineCount - 1) < (currentWord - firstWord)) //return the one before last
+           if (distance * (lineCount - 1) <= (currentWord - firstWord)) //return the one before last
            {
-               console.log("dog")
                displayText.style.marginTop = (distance * (lineCount - 2)) - (currentWord - firstWord) + "px";
            }
        }
