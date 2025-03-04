@@ -606,6 +606,6 @@ if (window.location.pathname === "/") {
         }
     });
 }
-if (window.location.pathname === "/preferences.php") {
-    setTheme("default", "dark"); 
+if (window.location.pathname.endsWith("/preferences")) {
+    console.log("hi")
 }
