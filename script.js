@@ -618,8 +618,14 @@ function highlightPrefernces() {
     let ambience = localStorage.getItem("ambience");
 
     let sizesContainer = document.getElementById("sizesContainer");
-    let preferences = sizesContainer.querySelectorAll(".preference");
-    preferences.forEach(pref => {
+    let fontsContainer = document.getElementById("sizesContainer");
+    let themesContainer = document.getElementById("sizesContainer");
+    let switchesContainer = document.getElementById("sizesContainer");
+    let linesContainer = document.getElementById("sizesContainer");
+
+
+    let sizePreferences = sizesContainer.querySelectorAll(".preference");
+    sizePreferences.forEach(pref => {
         let prefValue = pref.innerText.toLowerCase(); 
         console.log(prefValue);
         if (prefValue === fontSize) {
@@ -630,6 +636,45 @@ function highlightPrefernces() {
         }
     });
 
+    let fontPreferences = fontsContainer.querySelectorAll(".preference");
+    fontPreferences.forEach(pref => {
+        let prefValue = pref.innerText.toLowerCase();
+        if (prefValue === fontFamily) {
+            pref.style.color = "red";
+        } else {
+            pref.style.color = "blue";
+        }
+    });
+
+    let themePreferences = themesContainer.querySelectorAll(".preference");
+    themePreferences.forEach(pref => {
+        let prefValue = pref.innerText.toLowerCase();
+        if (prefValue === theme) {
+            pref.style.color = "red";
+        } else {
+            pref.style.color = "blue";
+        }
+    });
+
+    let switchPreferences = switchesContainer.querySelectorAll(".preference");
+    switchPreferences.forEach(pref => {
+        let prefValue = pref.innerText.toLowerCase();
+        if (prefValue === keyboardswitch) {
+            pref.style.color = "red";
+        } else {
+            pref.style.color = "blue";
+        }
+    });
+
+    let linePreferences = linesContainer.querySelectorAll(".preference");
+    linePreferences.forEach(pref => {
+        let prefValue = pref.innerText.toLowerCase();
+        if (prefValue === lineCount) {
+            pref.style.color = "red";
+        } else {
+            pref.style.color = "blue";
+        }
+    });
 }
 loadPreferences();
 if (window.location.pathname === "/") {
