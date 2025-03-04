@@ -204,7 +204,6 @@ function restart() {
     clearInterval(check);
     currentWordNum = 0;
     timerStatus = false;
-    displayWPM.innerHTML = '0 wpm';
     displayTimer.innerText = getTime(getStorageItem("time"));
     displayInput.focus();
     displayInput.value = "";
@@ -213,6 +212,7 @@ function restart() {
     hotkey.classList.remove('fadeOut');
     displayWPM.style.opacity = "0%";
     refresh();
+    displayWPM.innerHTML = '0 wpm';
 }
 function randomQuote() {
     displayText.innerText = ''// removing previous sentence if applicable
