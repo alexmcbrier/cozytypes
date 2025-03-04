@@ -596,4 +596,9 @@ loadPreferences();
 if (window.location.pathname === "/") {
     document.body.onLoad = refresh();
     document.body.onresize = function() { zoomwait() };
+    document.addEventListener("click", function (event) {
+        if (event.target !== displayInput) {
+            displayInput.focus();
+        }
+    });
 }
