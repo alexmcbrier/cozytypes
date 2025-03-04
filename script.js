@@ -532,7 +532,7 @@ function setTheme(oldTheme, newTheme) {
     setTimeout(() => body.classList.remove(oldTheme), 0); // ensuring new styles are applied before removing the old theme
     currentTheme = newTheme;
     localStorage.setItem("theme", newTheme);
-    function highlightPrefernces() {
+    highlightPrefernces();
 }
 function setPreference(type, newPreference)
     {
