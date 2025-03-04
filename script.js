@@ -210,6 +210,7 @@ function restart() {
     footer.classList.remove('fadeOut');
     typingMode.classList.remove('fadeOut');
     hotkey.classList.remove('fadeOut');
+    displayWPM.style.opacity = "0%";
     refresh();
 }
 function randomQuote() {
