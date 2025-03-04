@@ -29,7 +29,7 @@ session_start();
                 <h1 class="notSignedIn" id="preferenceHeader">font family</h1>
                 <h1 class="description">Choose from various styles to change the font family across the site.</h1>
                 <a data-value="Nunito" class="preference" style="font-family: 'Nunito', sans-serif;" onclick="setPreference('fontFamily', 'Nunito'), addNotification('font family','Nunito');">Nunito</a>
-                <a data-value="lexenddeca" class="preference" style="font-family: 'LexendDeca', serif;" onclick="setPreference('fontFamily', 'lexenddeca'), addNotification('font family','lexend deca');">lexend deca</a>
+                <a data-value="LexendDeca" class="preference" style="font-family: 'LexendDeca', serif;" onclick="setPreference('fontFamily', 'LexendDeca'), addNotification('font family','lexend deca');">lexend deca</a>
                 <a data-value="arial" class="preference" style="font-family: Arial;" onclick="setPreference('fontFamily', 'arial'), addNotification('font family','arial');">arial</a>
                 <a data-value="ibmplexsans" class="preference" style="font-family: 'IBM Plex Sans', sans-serif;" onclick="setPreference('fontFamily', 'ibmplexsans'), addNotification('font family','IBM Plex Sans');">IBM Plex Sans</a>
                 <a data-value="comfortaa" class="preference" style="font-family: 'Comfortaa', cursive;" onclick="setPreference('fontFamily', 'comfortaa'), addNotification('font family','comfortaa');">comfortaa</a>
@@ -99,7 +99,7 @@ session_start();
                 <h1 class="description">Show a different number of lines on the screen; More lines on the page will allow to see you what is coming next.</h1>
                 <a data-value="2" class="preference" onclick="setPreference('lineCount', 2), addNotification('line count','2');">2</a>
                 <a data-value="3" class="preference" onclick="setPreference('lineCount', 3), addNotification('line count','3');">3</a>
-                <a data-value="" class="4" onclick="setPreference('lineCount', 4), addNotification('line count','4');">4</a>
+                <a data-value="4" class="preference" onclick="setPreference('lineCount', 4), addNotification('line count','4');">4</a>
             </div>
         </div>
     </form>

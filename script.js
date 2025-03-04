@@ -606,7 +606,7 @@ function loadPreferences() {
 function highlightPrefernces() {
     let theme = localStorage.getItem("theme") || "light";
     let fontSize = localStorage.getItem("fontSize") || "3";
-    let fontFamily = localStorage.getItem("fontFamily") || "LexendDeca";
+    let fontFamily = localStorage.getItem("fontFamily") || "lexenddeca";
     let lineCount = localStorage.getItem("lineCount") || "3";
     let caret = localStorage.getItem("caret") || "caret";
     let typingMode = localStorage.getItem("typingMode") || "time";
@@ -617,7 +617,7 @@ function highlightPrefernces() {
     let title = localStorage.getItem("selectedTitle") || "harryPotter";
     let keyboardswitch = localStorage.getItem("keyboardswitch") || "none";
     let ambience = localStorage.getItem("ambience") || "none";
-    
+
     let sizesContainer = document.getElementById("sizesContainer");
     let fontsContainer = document.getElementById("fontsContainer");
     let switchesContainer = document.getElementById("switchesContainer");
