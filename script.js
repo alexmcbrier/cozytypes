@@ -639,12 +639,13 @@ function highlightPrefernces() {
 
         let highlightColor = themeStyles.getPropertyValue("--background").trim();
         let defaultColor = themeStyles.getPropertyValue("--row").trim();
+        let textColor = themeStyles.getPropertyValue("--currentWord").trim();
         preferences.forEach(pref => {
             let prefValue = pref.getAttribute("data-value");
 
             if (prefValue === localStorageValue) {
                 pref.style.backgroundColor = highlightColor;
-                pref.style.color = "black"; 
+                pref.style.color = textColor;
             }
             else {
                 pref.style.backgroundColor = defaultColor;
