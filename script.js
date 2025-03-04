@@ -624,68 +624,29 @@ function highlightPrefernces() {
     let caretsContainer = document.getElementById("caretsContainer");
     let linesContainer = document.getElementById("linesContainer");
 
+    function highlightMatchingPreferences(container, localStorageValue) {
+        if (!container) return;
+        
+        let preferences = container.querySelectorAll(".preference");
 
-    let sizePreferences = sizesContainer.querySelectorAll(".preference");
-    sizePreferences.forEach(pref => {
-        let prefValue = pref.innerText.toLowerCase(); 
-        console.log(prefValue);
-        if (prefValue === fontSize) {
-            pref.style.color = "red";
-        }
-        else {
-            pref.style.color = "blue";
-        }
-    });
+        preferences.forEach(pref => {
+            let prefValue = pref.getAttribute("data-value");
 
-    let fontPreferences = fontsContainer.querySelectorAll(".preference");
-    fontPreferences.forEach(pref => {
-        let prefValue = pref.innerText.toLowerCase();
-        if (prefValue === fontFamily) {
-            pref.style.color = "red";
-        } else {
-            pref.style.color = "blue";
-        }
-    });
+            if (prefValue === localStorageValue) {
+                pref.style.color = "red";
+            } else {
+                pref.style.color = "blue";
+            }
+        });
+    }
+    highlightMatchingPreferences(sizesContainer, fontSize);
+    highlightMatchingPreferences(fontsContainer, fontFamily);
+    highlightMatchingPreferences(themesContainer, theme);
+    highlightMatchingPreferences(switchesContainer, keyboardswitch);
+    highlightMatchingPreferences(ambienceContainer, ambience); 
+    highlightMatchingPreferences(caretsContainer, caret); 
+    highlightMatchingPreferences(linesContainer, lineCount);
 
-    let switchPreferences = switchesContainer.querySelectorAll(".preference");
-    switchPreferences.forEach(pref => {
-        let prefValue = pref.innerText.toLowerCase();
-        if (prefValue === keyboardswitch) {
-            pref.style.color = "red";
-        } else {
-            pref.style.color = "blue";
-        }
-    });
-
-    let ambiencePreferences = ambienceContainer.querySelectorAll(".preference");
-    ambiencePreferences.forEach(pref => {
-        let prefValue = pref.innerText.toLowerCase();
-        if (prefValue === keyboardswitch) {
-            pref.style.color = "red";
-        } else {
-            pref.style.color = "blue";
-        }
-    });
-
-    let caretPreferences = caretsContainer.querySelectorAll(".preference");
-    caretPreferences.forEach(pref => {
-        let prefValue = pref.innerText.toLowerCase();
-        if (prefValue === keyboardswitch) {
-            pref.style.color = "red";
-        } else {
-            pref.style.color = "blue";
-        }
-    });
-
-    let linePreferences = linesContainer.querySelectorAll(".preference");
-    linePreferences.forEach(pref => {
-        let prefValue = pref.innerText.toLowerCase();
-        if (prefValue === lineCount) {
-            pref.style.color = "red";
-        } else {
-            pref.style.color = "blue";
-        }
-    });
 }
 loadPreferences();
 if (window.location.pathname === "/") {
