@@ -351,7 +351,7 @@ include "themes.scss"; //file contains all fonts
         font-size: 4rem;
         padding: 0;
         opacity: 0;
-        transition: opacity 0.2s ease;
+        transition: opacity 0.175s ease;
 
     }
     #wpmDisplay, #time
@@ -486,6 +486,7 @@ include "themes.scss"; //file contains all fonts
     #wordsWrapper {
         /* transition: .25s all; */
         line-height: calc(var(--fontSize) * 1.5rem);
+        transition: margin-top 0.2s ease-in-out;
     }
 
     #testText {

@@ -150,7 +150,7 @@ function keystroke() {
         //CHECKING TO SEE IF ON NEXT LINE (should probably make a function)
         currentWordNum++;
         words[currentWordNum].className = 'current-word';
-        //restart animatioin
+        //restart animation
         const placement = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
         const currentWordIndex = Array.from(
             placement.parentElement.children
@@ -168,7 +168,7 @@ function keystroke() {
             }
         }
         //moving the cursor
-        moveCursorWithY();
+        moveCursorWithY(); //moving cursor with y because new line
     }
     //remove extras
     if (inputChars.length > chars.length - 1) //extra characters
