@@ -538,7 +538,9 @@ function setPreference(type, newPreference)
         const root = document.querySelector(':root');
         root.style.setProperty("--" + type, newPreference);
         localStorage.setItem(type, newPreference);
-        highlightPrefernces();
+        if (window.location.pathname.endsWith("/preferences")) {
+            highlightPrefernces();
+        }
     }
 function addNotification(header, description)
 {
@@ -614,9 +616,7 @@ function highlightPrefernces() {
     let mode = localStorage.getItem("mode");
     let keyboardswitch = localStorage.getItem("keyboardswitch");
     let ambience = localStorage.getItem("ambience");
-    
-    let sizesContainer = document.getElementById("sizesContainer");
-    let preferences = sizesContainer.querySelectorAll(".preference");
+    let preferences = document.querySelectorAll(".preference");
 
     preferences.forEach(pref => {
         let prefValue = pref.innerText.toLowerCase(); // Get the text of the preference
