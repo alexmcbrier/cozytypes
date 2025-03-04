@@ -303,8 +303,6 @@ async function newQuote() {
 }
 function startTimer() {
     if (timerStatus == false) {
-        if (localStorage.getItem("ambience") != "none") //start of test play music if have it
-            playmusic(localStorage.getItem("ambience"));
         displayWPM.style.opacity = "100%";
         footer.classList.add('fadeOut');
         typingMode.classList.add('fadeOut');
@@ -333,6 +331,10 @@ function startTimer() {
             }, 1000)
         }
         timerStatus = true;
+    }
+    else {
+        if (localStorage.getItem("ambience") != "none") //start of test play music if have it
+        playmusic(localStorage.getItem("ambience"));
     }
 }
 function getTime(time) {
