@@ -135,7 +135,7 @@ crossorigin="anonymous"></script>
             <div id ="resetBox" class = "testItem"><i id="restartTest"class="fa-solid fa-rotate" onclick="restart()"></i></div>
         </div>
         <div class="testRow">
-            <div id="wpmDisplay" class = "testItem" >0 wpm</div>
+            <div id="wpmDisplay" class = "testItem" ></div>
         </div>
         </div>
         <?php } else if (isset($_GET["finish"])) { ?>
