@@ -614,19 +614,20 @@ function highlightPrefernces() {
     let mode = localStorage.getItem("mode");
     let keyboardswitch = localStorage.getItem("keyboardswitch");
     let ambience = localStorage.getItem("ambience");
+    let preferences = document.querySelectorAll(".preference");
 
-    let sizesContainer = document.getElementById("sizesContainer");
-    let preferences = sizesContainer.querySelectorAll(".preference");
-    
     preferences.forEach(pref => {
-        let prefValue = pref.innerText.toLowerCase();
+        let prefValue = pref.innerText.toLowerCase(); // Get the text of the preference
         console.log(prefValue);
+        // Check if the preference matches the stored value
         if (prefValue === theme || prefValue === fontSize || prefValue === fontFamily || prefValue === lineCount || prefValue === caret || prefValue === typingMode || prefValue === words.toString() || prefValue === time.toString() || prefValue === blur || prefValue === mode || prefValue === title || prefValue === keyboardswitch || prefValue === ambience) {
+            // Change the color to red if they match
             pref.style.color = "red";
         }
         else {
-            pref.style.color = "blue";
+            pref.style.color = "red";
         }
+            
     });
 
 }
