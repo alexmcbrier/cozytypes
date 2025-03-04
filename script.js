@@ -620,6 +620,16 @@ function highlightPrefernces() {
     let sizesContainer = document.getElementById("sizesContainer");
     let preferences = sizesContainer.querySelectorAll(".preference");
 
+    if (!sizesContainer) {
+        console.log("sizesContainer not found");
+    }
+
+    console.log(preferences);
+    if (preferences.length === 0) {
+        console.error("No preferences found inside sizesContainer");
+
+    }
+
     preferences.forEach(pref => {
         let prefValue = pref.innerText.toLowerCase(); // Get the text of the preference
         console.log(prefValue);
