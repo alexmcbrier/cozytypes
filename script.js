@@ -606,7 +606,7 @@ function loadPreferences() {
 function highlightPrefernces() {
     let theme = localStorage.getItem("theme") || "light";
     let fontSize = localStorage.getItem("fontSize") || "3";
-    let fontFamily = localStorage.getItem("fontFamily") || "lexenddeca";
+    let fontFamily = localStorage.getItem("fontFamily") || "LexendDeca";
     let lineCount = localStorage.getItem("lineCount") || "3";
     let caret = localStorage.getItem("caret") || "caret";
     let typingMode = localStorage.getItem("typingMode") || "time";
@@ -617,7 +617,7 @@ function highlightPrefernces() {
     let title = localStorage.getItem("selectedTitle") || "harryPotter";
     let keyboardswitch = localStorage.getItem("keyboardswitch") || "none";
     let ambience = localStorage.getItem("ambience") || "none";
-
+    
     let sizesContainer = document.getElementById("sizesContainer");
     let fontsContainer = document.getElementById("fontsContainer");
     let switchesContainer = document.getElementById("switchesContainer");
@@ -629,14 +629,12 @@ function highlightPrefernces() {
         if (!container) return;
         
         let preferences = container.querySelectorAll(".preference");
-
+        let incorrectColor = getComputedStyle(document.documentElement).getPropertyValue("--incorrect");
         preferences.forEach(pref => {
             let prefValue = pref.getAttribute("data-value");
 
             if (prefValue === localStorageValue) {
-                pref.style.color = "red";
-            } else {
-                pref.style.color = "blue";
+                pref.style.backgroundColor = incorrectColor;
             }
         });
     }
