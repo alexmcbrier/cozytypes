@@ -162,6 +162,7 @@ function keystroke() {
             const currentWord = placement.getBoundingClientRect().y;
             const firstWord = document.getElementsByClassName('word')[0].getBoundingClientRect().y;
             const lineCount = getStorageItem("lineCount")
+            const lineNumber = Math.floor((currentWord - firstWord) / distance); // Calculate the line number
             if (lineNumber > 0) { // Check if it's not the first line
                 // Shift the text after each line
                 displayText.style.marginTop = (distance * (lineNumber - 1)) - (currentWord - firstWord) + "px";
