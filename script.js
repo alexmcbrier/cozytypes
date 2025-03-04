@@ -285,6 +285,7 @@ async function newQuote() {
 }
 function startTimer() {
     if (timerStatus == false) {
+        displayWPM.classList.add('fadeIn');
         footer.classList.add('fadeOut');
         typingMode.classList.add('fadeOut');
         hotkey.classList.add('fadeOut');
