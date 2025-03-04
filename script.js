@@ -624,6 +624,10 @@ function highlightPrefernces() {
             // Change the color to red if they match
             pref.style.color = "red";
         }
+        else {
+            pref.style.color = "blue";
+        }
+            
     });
 
 }
