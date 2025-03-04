@@ -6,10 +6,10 @@ if (isset($_SESSION["user_id"])) {
     $user = $result->fetch_assoc();
 } ?>
 <nav> 
-    <a id = "logo" href="https://cozytypes.com" style="text-decoration: none;">
+    <a id = "logo" href="/" style="text-decoration: none;">
         <p id = "title">cozytypes</p>
     </a>
-    <a class = "navIcon" href="https://cozytypes.com" ><i class="fa-solid fa-house"></i></a>
+    <a class = "navIcon" href="/" ><i class="fa-solid fa-house"></i></a>
     <a class = "navIcon" href="/preferences"><i class="fa-solid fa-gear"></i></a>
     <a class = "navIcon" href="/leaderboard"><i class="fa-solid fa-crown"></i></a>
     <a class = "navIcon" href="https://kbdcraft.store?source_type=sales_plugin_af&slt=sales_plugin_af&referral_code=2UZEGET8XD2L"><i class="fa-solid fa-cart-shopping"></i></a>
