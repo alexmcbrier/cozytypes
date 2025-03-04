@@ -620,6 +620,8 @@ function highlightPrefernces() {
     let sizesContainer = document.getElementById("sizesContainer");
     let fontsContainer = document.getElementById("fontsContainer");
     let switchesContainer = document.getElementById("switchesContainer");
+    let ambienceContainer = document.getElementById("ambienceContainer");
+    let caretsContainer = document.getElementById("caretsContainer");
     let linesContainer = document.getElementById("linesContainer");
 
 
@@ -647,6 +649,26 @@ function highlightPrefernces() {
 
     let switchPreferences = switchesContainer.querySelectorAll(".preference");
     switchPreferences.forEach(pref => {
+        let prefValue = pref.innerText.toLowerCase();
+        if (prefValue === keyboardswitch) {
+            pref.style.color = "red";
+        } else {
+            pref.style.color = "blue";
+        }
+    });
+
+    let ambiencePreferences = ambienceContainer.querySelectorAll(".preference");
+    ambiencePreferences.forEach(pref => {
+        let prefValue = pref.innerText.toLowerCase();
+        if (prefValue === keyboardswitch) {
+            pref.style.color = "red";
+        } else {
+            pref.style.color = "blue";
+        }
+    });
+
+    let caretPreferences = caretsContainer.querySelectorAll(".preference");
+    caretPreferences.forEach(pref => {
         let prefValue = pref.innerText.toLowerCase();
         if (prefValue === keyboardswitch) {
             pref.style.color = "red";

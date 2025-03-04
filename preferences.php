@@ -78,13 +78,21 @@ session_start();
                 <a class="preference" onclick="setPreference('keyboardswitch', 'jellyblack'), addNotification('switch sound','akko jelly black');">akko jelly black</a>
                 <a class="preference" onclick="setPreference('keyboardswitch', 'boxjade'), addNotification('switch sound','kalih box jade');">kailh box jade</a>
             </div>
-            <div id="caretsContainer" class="rowContainer">
+            <div id="ambienceContainer" class="rowContainer">
                 <h1 class="notSignedIn" id="preferenceHeader">ambience</h1> 
                 <h1 class="description">Add description here.</h1>
                 <a class="preference" onclick="setPreference('ambience', 'none'), addNotification('ambience','none');">none</a>
                 <a class="preference" onclick="setPreference('ambience', 'cafe'), addNotification('ambience','cafe');">cafe</a>
                 <a class="preference" onclick="setPreference('ambience', 'library'), addNotification('ambience','library');">library</a>
                 <a class="preference" onclick="setPreference('ambience', 'rainyday'), addNotification('ambience','rainy day');">rainy day</a>
+            </div>
+            <div id="caretsContainer" class="rowContainer">
+                <h1 class="notSignedIn" id="preferenceHeader">pace caret </h1> 
+                <h1 class="description">When enabled, the caret will move along the page as you type. Change the style for different typing experiences.</h1>
+                <a class="preference" onclick="setPreference('caret', 'caret'), addNotification('caret style','classic');">caret</a>
+                <a class="preference" onclick="setPreference('caret', 'underlineLetter'), addNotification('caret style','underline letter');">underline letter</a>
+                <a class="preference" onclick="setPreference('caret', 'underlineWord'), addNotification('caret style','underline word');">underline word</a>
+                <a class="preference" onclick="setPreference('caret', 'highlightWord'), addNotification('caret style','highlight');">highlight word</a>
             </div>
             <div id="linesContainer" class="rowContainer">
                 <h1 class="notSignedIn" id="preferenceHeader">lines </h1>
