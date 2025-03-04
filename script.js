@@ -629,12 +629,12 @@ function highlightPrefernces() {
         if (!container) return;
         
         let preferences = container.querySelectorAll(".preference");
-        let incorrectColor = getComputedStyle(document.documentElement).getPropertyValue("--incorrect");
+        let color = getComputedStyle(document.documentElement).getPropertyValue("--background");
         preferences.forEach(pref => {
             let prefValue = pref.getAttribute("data-value");
 
             if (prefValue === localStorageValue) {
-                pref.style.backgroundColor = incorrectColor;
+                pref.style.backgroundColor = color;
             }
         });
     }
