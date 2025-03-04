@@ -162,9 +162,9 @@ function keystroke() {
             const currentWord = placement.getBoundingClientRect().y;
             const firstWord = document.getElementsByClassName('word')[0].getBoundingClientRect().y;
             const lineCount = getStorageItem("lineCount")
-            if (distance * (lineCount - 1) <= (currentWord - firstWord)) //return the one before last
-            {
-                displayText.style.marginTop = (distance * (lineCount - 2)) - (currentWord - firstWord) + "px";
+            if (lineNumber > 0) { // Check if it's not the first line
+                // Shift the text after each line
+                displayText.style.marginTop = (distance * (lineNumber - 1)) - (currentWord - firstWord) + "px";
             }
         }
         //moving the cursor
