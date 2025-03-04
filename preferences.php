@@ -72,8 +72,8 @@ session_start();
             <div id="switchsContainer" class="rowContainer">
                 <h1 class="notSignedIn" id="preferenceHeader">keyboard switch sounds</h1> 
                 <h1 class="description">Add description here.</h1>
-                <a class="preference" onclick="setPreference('keyboardswitch', 'none'), addNotification('keyboard switch sound','none');">none</a>
-                <a class="preference" onclick="setPreference('keyboardswitch', 'nkcreams'), addNotification('keyboard switch sound','novelkey creams');">novelkey creams</a>
+                <a class="preference" onclick="setPreference('keyboardswitch', 'none'), addNotification('switch sound','none');">none</a>
+                <a class="preference" onclick="setPreference('keyboardswitch', 'nkcreams'), addNotification('keyboard sound','novelkey creams');">novelkey creams</a>
                 <a class="preference" onclick="setPreference('keyboardswitch', 'holypandas'), addNotification('keyboard switch sound','holy pandas');">holy pandas</a>
                 <a class="preference" onclick="setPreference('keyboardswitch', 'jellyblack'), addNotification('keyboard switch sound','akko jelly black');">akko jelly black</a>
                 <a class="preference" onclick="setPreference('keyboardswitch', 'boxjade'), addNotification('keyboard switch sound','kalih box jade');">kailh box jade</a>
