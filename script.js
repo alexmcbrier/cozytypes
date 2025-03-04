@@ -632,8 +632,12 @@ function highlightPrefernces() {
         if (!container) return;
         
         let preferences = container.querySelectorAll(".preference");
-        let highlightColor = getComputedStyle(document.documentElement).getPropertyValue("--background");
-        let defaultColor = getComputedStyle(document.documentElement).getPropertyValue("--row");
+        
+        let themeClass = document.body.classList[0]; // Get the first class, which is the theme name
+        let themeStyles = getComputedStyle(document.querySelector(`.${themeClass}`)); // Get styles for the theme
+
+        let highlightColor = themeStyles.getPropertyValue("--background").trim();
+        let defaultColor = themeStyles.getPropertyValue("--row").trim();
         preferences.forEach(pref => {
             let prefValue = pref.getAttribute("data-value");
 
