@@ -538,7 +538,8 @@ function setPreference(type, newPreference)
         const root = document.querySelector(':root');
         root.style.setProperty("--" + type, newPreference);
         localStorage.setItem(type, newPreference);
-}
+        highlightPrefernces();
+    }
 function addNotification(header, description)
 {
     var parent = document.getElementById('notifications');
