@@ -69,13 +69,19 @@ session_start();
                     <a class = "color-theme dark" onclick="setTheme(currentTheme, 'dark')">dark</a>
                 </div>
             </div>
+            <div id="switchsContainer" class="rowContainer">
+                <h1 class="notSignedIn" id="preferenceHeader">keyboard switch sounds</h1> 
+                <h1 class="description">Add description here.</h1>
+                <a class="preference" onclick="setPreference('caret', 'caret'), addNotification('caret style','classic');">novelkey creams</a>
+                <a class="preference" onclick="setPreference('caret', 'underlineLetter'), addNotification('caret style','underline letter');">holy pandas</a>
+                <a class="preference" onclick="setPreference('caret', 'underlineWord'), addNotification('caret style','underline word');">akko jelly black</a>
+            </div>
             <div id="caretsContainer" class="rowContainer">
-                <h1 class="notSignedIn" id="preferenceHeader">pace caret </h1> 
-                <h1 class="description">When enabled, the caret will move along the page as you type. Change the style for different typing experiences.</h1>
-                <a class="preference" onclick="setPreference('caret', 'caret'), addNotification('caret style','classic');">caret</a>
-                <a class="preference" onclick="setPreference('caret', 'underlineLetter'), addNotification('caret style','underline letter');">underline letter</a>
-                <a class="preference" onclick="setPreference('caret', 'underlineWord'), addNotification('caret style','underline word');">underline word</a>
-                <a class="preference" onclick="setPreference('caret', 'highlightWord'), addNotification('caret style','highlight');">highlight word</a>
+                <h1 class="notSignedIn" id="preferenceHeader">ambience</h1> 
+                <h1 class="description">Add description here.</h1>
+                <a class="preference" onclick="setPreference('caret', 'caret'), addNotification('caret style','classic');">cafe</a>
+                <a class="preference" onclick="setPreference('caret', 'underlineLetter'), addNotification('caret style','underline letter');">library</a>
+                <a class="preference" onclick="setPreference('caret', 'underlineWord'), addNotification('caret style','underline word');">rainy day</a>
             </div>
             <div id="linesContainer" class="rowContainer">
                 <h1 class="notSignedIn" id="preferenceHeader">lines </h1>
