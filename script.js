@@ -636,6 +636,7 @@ function highlightPrefernces() {
 
             if (prefValue === localStorageValue) {
                 pref.style.backgroundColor = highlightColor;
+                pref.style.backgroundColor = black;
             }
             else {
                 pref.style.backgroundColor = defaultColor;
