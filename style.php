@@ -351,17 +351,8 @@ include "themes.scss"; //file contains all fonts
         font-size: 4rem;
         padding: 0;
         opacity: 0;
-        animation: fadeIn 0.25s ease forwards;
-    }
+        transition: opacity 0.25s ease;
 
-    /* Define the fade-in animation */
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
     }
     #wpmDisplay, #time
     {
