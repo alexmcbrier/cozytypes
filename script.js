@@ -163,25 +163,11 @@ function keystroke() {
            const currentWord = placement.getBoundingClientRect().y;
            const firstWord = document.getElementsByClassName('word')[0].getBoundingClientRect().y;
            const lineCount = getStorageItem("lineCount")
-           if (lineCount === 2) {
-            // When there are 2 lines, shift when reaching the second line
-                if (currentWord - firstWord >= distance) {
-                    console.log("Shifting margin for lineCount = 2");
-                    displayText.style.marginTop = (distance * (lineCount - 1)) - (currentWord - firstWord) + "px";
-                }
-            } else if (lineCount === 3) {
-                // When there are 3 lines, shift when reaching the second-to-last line
-                if (currentWord - firstWord >= (distance * (lineCount - 2))) {
-                    console.log("Shifting margin for lineCount = 3");
-                    displayText.style.marginTop = (distance * (lineCount - 2)) - (currentWord - firstWord) + "px";
-                }
-            } else if (lineCount === 4) {
-                // When there are 4 lines, shift when reaching the second-to-last line
-                if (currentWord - firstWord >= (distance * (lineCount - 2))) {
-                    console.log("Shifting margin for lineCount = 4");
-                    displayText.style.marginTop = (distance * (lineCount - 2)) - (currentWord - firstWord) + "px";
-                }
-            }
+           if (distance * (lineCount - 1) < (currentWord - firstWord)) //return the one before last
+           {
+               console.log("dog")
+               displayText.style.marginTop = (distance * (lineCount - 2)) - (currentWord - firstWord) + "px";
+           }
        }
        //moving the cursor
        moveCursorWithY();
