@@ -532,6 +532,7 @@ function setTheme(oldTheme, newTheme) {
     setTimeout(() => body.classList.remove(oldTheme), 0); // ensuring new styles are applied before removing the old theme
     currentTheme = newTheme;
     localStorage.setItem("theme", newTheme);
+    function highlightPrefernces() {
 }
 function setPreference(type, newPreference)
     {
@@ -601,7 +602,6 @@ function loadPreferences() {
     if (window.location.pathname.endsWith("/preferences")) {
         highlightPrefernces();
     }
-    
 }
 function highlightPrefernces() {
     let theme = localStorage.getItem("theme") || "light";
@@ -609,12 +609,6 @@ function highlightPrefernces() {
     let fontFamily = localStorage.getItem("fontFamily") || "LexendDeca";
     let lineCount = localStorage.getItem("lineCount") || "3";
     let caret = localStorage.getItem("caret") || "caret";
-    let typingMode = localStorage.getItem("typingMode") || "time";
-    let words = localStorage.getItem("words") || 10;
-    let time = localStorage.getItem("time") || 15;
-    let blur = localStorage.getItem("blur") || "off";
-    let mode = localStorage.getItem("mode") || "easy";
-    let title = localStorage.getItem("selectedTitle") || "harryPotter";
     let keyboardswitch = localStorage.getItem("keyboardswitch") || "none";
     let ambience = localStorage.getItem("ambience") || "none";
     
@@ -630,13 +624,13 @@ function highlightPrefernces() {
         
         let preferences = container.querySelectorAll(".preference");
         let highlightColor = getComputedStyle(document.documentElement).getPropertyValue("--background");
-        let defaultColor = getComputedStyle(document.documentElement).getPropertyValue("--row");
+        let textcolor = getComputedStyle(document.documentElement).getPropertyValue("--currentWord");
         preferences.forEach(pref => {
             let prefValue = pref.getAttribute("data-value");
 
             if (prefValue === localStorageValue) {
                 pref.style.backgroundColor = highlightColor;
-                pref.style.color = "black";
+                pref.style.color = textcolor;
             }
             else {
                 pref.style.backgroundColor = defaultColor;
@@ -651,7 +645,6 @@ function highlightPrefernces() {
     highlightMatchingPreferences(ambienceContainer, ambience); 
     highlightMatchingPreferences(caretsContainer, caret); 
     highlightMatchingPreferences(linesContainer, lineCount);
-
 }
 loadPreferences();
 if (window.location.pathname === "/") {
