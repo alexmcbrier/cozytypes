@@ -207,7 +207,7 @@ function switchClick(switchtype) { // a function that when given a switch type s
     let randomFile =  switches[randomIndex];
     let audio = new Audio(randomFile);
     audio.play();
-    console.log(switchtype + " " + randomfile + " played")
+    console.log(switchtype + " played")
         
 
 }
