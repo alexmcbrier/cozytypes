@@ -599,7 +599,6 @@ function loadPreferences() {
     let time = localStorage.getItem("time") || 15;
     let blur = localStorage.getItem("blur") || "off";
     let mode = localStorage.getItem("mode") || "easy";
-    let title = localStorage.getItem("selectedTitle") || "harryPotter";
     let keyboardswitch = localStorage.getItem("keyboardswitch") || "none";
     let ambience = localStorage.getItem("ambience") || "none";
 
@@ -612,7 +611,8 @@ function loadPreferences() {
     setPreference("time", time);
     setPreference("blur", blur);
     setPreference("mode", mode);
-    setPreference("selectedTitle", title);
+    setPreference("keyboardswitch", keyboardswitch);
+    setPreference("ambience", ambience);
 
     if (window.location.pathname.endsWith("/preferences")) {
         highlightPrefernces();
