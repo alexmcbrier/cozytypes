@@ -147,29 +147,28 @@ function keystroke() {
                 wrongWord(words, chars)
             }
         }
-        //CHECKING TO SEE IF ON NEXT LINE (should probably make a function)
-        currentWordNum++;
-        words[currentWordNum].className = 'current-word';
-        //restart animation
-        const placement = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
-        const currentWordIndex = Array.from(
-            placement.parentElement.children
-        ).indexOf(placement);
-        const lastWordIndex = currentWordIndex - 1;
-        if (lastWordIndex >= 0) { // Make sure it's not negative
-            const distance = findDistanceBetween(words); // Distance between lines
-            const currentWord = placement.getBoundingClientRect().y;
-            const firstWord = document.getElementsByClassName('word')[0].getBoundingClientRect().y;
-            const lineCount = getStorageItem("lineCount");
-            const lineNumber = Math.floor((currentWord - firstWord) / distance); // Calculate the line number
-            if (lineNumber === lineCount - 2) { // Check if it's the second-to-last line
-                // Adjust the margin-top to shift text down after each line
-                const marginTopValue = (distance * (lineNumber - 1)) - (currentWord - firstWord);
-                displayText.style.marginTop = marginTopValue + "px";
-            }
-        }
-        //moving the cursor
-        moveCursorWithY(); //moving cursor with y because new line
+       //CHECKING TO SEE IF ON NEXT LINE (should probably make a function)
+       currentWordNum++;
+       words[currentWordNum].className = 'current-word';
+       //restart animatioin
+       const placement = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
+       const currentWordIndex = Array.from(
+           placement.parentElement.children
+       ).indexOf(placement);
+       const lastWordIndex = currentWordIndex - 1;
+       if (lastWordIndex >= 0) //cannot be negative
+       {
+           const distance = findDistanceBetween(words); //distance between the lines
+           const currentWord = placement.getBoundingClientRect().y;
+           const firstWord = document.getElementsByClassName('word')[0].getBoundingClientRect().y;
+           const lineCount = getStorageItem("lineCount")
+           if (distance * (lineCount - 1) <= (currentWord - firstWord)) //return the one before last
+           {
+               displayText.style.marginTop = (distance * (lineCount - 2)) - (currentWord - firstWord) + "px";
+           }
+       }
+       //moving the cursor
+       moveCursorWithY();
     }
     //remove extras
     if (inputChars.length > chars.length - 1) //extra characters
