@@ -594,6 +594,10 @@ function loadPreferences() {
     setPreference("blur", blur);
     setPreference("mode", mode);
     setPreference("selectedTitle", title);
+
+    if (window.location.pathname.endsWith("/preferences")) {
+        highlightPrefernces();
+    }
     
 }
 function highlightPrefernces() {
@@ -610,7 +614,6 @@ function highlightPrefernces() {
     let title = localStorage.getItem("selectedTitle") || "harryPotter";
     let keyboardswitch = localStorage.getItem("keyboardswitch") || "none";
     let ambience = localStorage.getItem("ambience") || "none";
-
     let preferences = document.querySelectorAll(".preference");
 
     preferences.forEach(pref => {
@@ -633,8 +636,4 @@ if (window.location.pathname === "/") {
             displayInput.focus();
         }
     });
-}
-if (window.location.pathname.endsWith("/preferences")) {
-    console.log("hi")
-    highlightPrefernces();
 }
