@@ -205,11 +205,13 @@ function switchClick(switchtype) { // a function that when given a switch type s
     var switches = [];
     if (switchtype == "nkcreams") {
         switches = ["sounds/switches/novelkey_cream/click1.mp3", "sounds/switches/novelkey_cream/click2.mp3", "sounds/switches/novelkey_cream/click3.mp3", "sounds/switches/novelkey_cream/click4.mp3", "sounds/switches/novelkey_cream/click5.mp3"];
+        console.log("nkcream")
     }
     let randomIndex = Math.floor(Math.random() * switches.length);
     let randomFile =  fileArray[randomIndex];
     let audio = new Audio(randomFile);
     audio.play();
+    console.log("played")
         
 
 }
