@@ -86,9 +86,9 @@ function findDistanceBetween(words)
 }
 displayInput?.addEventListener('input', keystroke)
 function keystroke() {
-    moveCursor();
     if (localStorage.getItem("keyboardswitch") != "none")
         switchClick(localStorage.getItem("keyboardswitch"));
+    moveCursor();
     let word = document.getElementsByClassName('current-word')[0] //Only want 1 value in class list
     let chars = word.querySelectorAll('letter')
     let inputChars = displayInput?.value.split('');
