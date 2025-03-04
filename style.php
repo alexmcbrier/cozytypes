@@ -509,6 +509,9 @@ include "themes.scss"; //file contains all fonts
     .fadeOut {
         animation: fadeOut .45s  ease forwards, fadeColor .45s ease forwards;
     }
+    .fadeIn {
+        animation: fadeIn .45s  ease forwards
+    }
     .testRow * {
         user-select: none;
         color: var(--currentWord);
