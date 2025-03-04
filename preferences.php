@@ -72,18 +72,19 @@ session_start();
             <div id="switchsContainer" class="rowContainer">
                 <h1 class="notSignedIn" id="preferenceHeader">keyboard switch sounds</h1> 
                 <h1 class="description">Add description here.</h1>
-                <a class="preference" onclick="setPreference('caret', 'caret'), addNotification('caret style','classic');">none</a>
-                <a class="preference" onclick="setPreference('caret', 'caret'), addNotification('caret style','classic');">novelkey creams</a>
-                <a class="preference" onclick="setPreference('caret', 'underlineLetter'), addNotification('caret style','underline letter');">holy pandas</a>
-                <a class="preference" onclick="setPreference('caret', 'underlineWord'), addNotification('caret style','underline word');">akko jelly black</a>
+                <a class="preference" onclick="setPreference('keyboardswitch', 'none'), addNotification('keyboard switch sound','none');">none</a>
+                <a class="preference" onclick="setPreference('keyboardswitch', 'nkcreams'), addNotification('keyboard switch sound','novelkey creams');">novelkey creams</a>
+                <a class="preference" onclick="setPreference('keyboardswitch', 'holypandas'), addNotification('keyboard switch sound','holy pandas');">holy pandas</a>
+                <a class="preference" onclick="setPreference('keyboardswitch', 'jellyblack'), addNotification('keyboard switch sound','akko jelly black');">akko jelly black</a>
+                <a class="preference" onclick="setPreference('keyboardswitch', 'boxjade'), addNotification('keyboard switch sound','kalih box jade');">kailh box jade</a>
             </div>
             <div id="caretsContainer" class="rowContainer">
                 <h1 class="notSignedIn" id="preferenceHeader">ambience</h1> 
                 <h1 class="description">Add description here.</h1>
-                <a class="preference" onclick="setPreference('caret', 'caret'), addNotification('caret style','classic');">none</a>
-                <a class="preference" onclick="setPreference('caret', 'caret'), addNotification('caret style','classic');">cafe</a>
-                <a class="preference" onclick="setPreference('caret', 'underlineLetter'), addNotification('caret style','underline letter');">library</a>
-                <a class="preference" onclick="setPreference('caret', 'underlineWord'), addNotification('caret style','underline word');">rainy day</a>
+                <a class="preference" onclick="setPreference('ambience', 'none'), addNotification('ambience','none');">none</a>
+                <a class="preference" onclick="setPreference('ambience', 'cafe'), addNotification('ambience','cafe');">cafe</a>
+                <a class="preference" onclick="setPreference('ambience', 'library'), addNotification('ambience','library');">library</a>
+                <a class="preference" onclick="setPreference('ambience', 'rainyday'), addNotification('ambience','rainy day');">rainy day</a>
             </div>
             <div id="linesContainer" class="rowContainer">
                 <h1 class="notSignedIn" id="preferenceHeader">lines </h1>

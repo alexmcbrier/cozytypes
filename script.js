@@ -583,6 +583,8 @@ function loadPreferences() {
     let blur = localStorage.getItem("blur") || "off";
     let mode = localStorage.getItem("mode") || "easy";
     let title = localStorage.getItem("selectedTitle") || "harryPotter";
+    let keyboardswitch = localStorage.getItem("keyboardswitch") || "none";
+    let ambience = localStorage.getItem("ambience") || "none";
 
     setPreference("fontSize", fontSize); 
     setPreference("fontFamily", fontFamily); 
