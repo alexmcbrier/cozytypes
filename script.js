@@ -88,8 +88,6 @@ function keystroke() {
     moveCursor();
     if (localStorage.getItem("keyboardswitch") != "none")
         switchClick(localStorage.getItem("keyboardswitch"));
-    if (localStorage.getItem("ambience") != "none")
-        playmusic(localStorage.getItem("ambience"));
     let word = document.getElementsByClassName('current-word')[0] //Only want 1 value in class list
     let chars = word.querySelectorAll('letter')
     let inputChars = displayInput?.value.split('');
@@ -302,6 +300,8 @@ async function newQuote() {
     }
     count = displayText?.getElementsByClassName('word').length + displayText?.getElementsByClassName('incorrect-word').length; //not including current word
     lastWord = displayText?.getElementsByClassName('word')[count - 1]//Only want 1 value in class list
+    if (localStorage.getItem("ambience") != "none") //start of test play music if have it
+        playmusic(localStorage.getItem("ambience"));
 }
 function startTimer() {
     if (timerStatus == false) {
