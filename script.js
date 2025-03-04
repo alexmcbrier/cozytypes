@@ -94,11 +94,6 @@ function keystroke() {
     let chars = word.querySelectorAll('letter')
     let inputChars = displayInput?.value.split('');
     let wordChars = word.innerText.split('');
-    if (musicplaying == false) {
-        if (localStorage.getItem("ambience") != "none") 
-            playmusic(localStorage.getItem("ambience"));
-            musicplaying = true
-    }
     
     for (let i = 0; i < chars.length; i++) //need to remove previous when user deletes
     {
@@ -311,6 +306,11 @@ async function newQuote() {
 }
 function startTimer() {
     if (timerStatus == false) {
+        if (musicplaying == false) {
+            if (localStorage.getItem("ambience") != "none") 
+                playmusic(localStorage.getItem("ambience"));
+                musicplaying = true
+        }
         displayWPM.style.opacity = "100%";
         footer.classList.add('fadeOut');
         typingMode.classList.add('fadeOut');
