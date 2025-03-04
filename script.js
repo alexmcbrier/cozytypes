@@ -164,7 +164,7 @@ function keystroke() {
            console.log("current " + currentWord + "prev" + previousWord)
            const firstWord = document.getElementsByClassName('word')[0].getBoundingClientRect().y;
            const lineCount = getStorageItem("lineCount")
-           if (distance * (lineCount - 1) <= (currentWord - firstWord)) //return the one before last
+           if (currentWord > previousWord) //difference in y
            {
                displayText.style.marginTop = (distance * (lineCount - 2)) - (currentWord - firstWord) + "px";
            }
