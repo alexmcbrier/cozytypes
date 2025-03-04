@@ -532,7 +532,10 @@ function setTheme(oldTheme, newTheme) {
     setTimeout(() => body.classList.remove(oldTheme), 0); // ensuring new styles are applied before removing the old theme
     currentTheme = newTheme;
     localStorage.setItem("theme", newTheme);
-    highlightPrefernces();
+    if (window.location.pathname.endsWith("/preferences")) {
+        highlightPrefernces();
+    }
+    
 }
 function setPreference(type, newPreference)
     {
@@ -602,6 +605,7 @@ function loadPreferences() {
     if (window.location.pathname.endsWith("/preferences")) {
         highlightPrefernces();
     }
+    
 }
 function highlightPrefernces() {
     let theme = localStorage.getItem("theme") || "light";
@@ -609,6 +613,7 @@ function highlightPrefernces() {
     let fontFamily = localStorage.getItem("fontFamily") || "LexendDeca";
     let lineCount = localStorage.getItem("lineCount") || "3";
     let caret = localStorage.getItem("caret") || "caret";
+
     let keyboardswitch = localStorage.getItem("keyboardswitch") || "none";
     let ambience = localStorage.getItem("ambience") || "none";
     
@@ -645,6 +650,7 @@ function highlightPrefernces() {
     highlightMatchingPreferences(ambienceContainer, ambience); 
     highlightMatchingPreferences(caretsContainer, caret); 
     highlightMatchingPreferences(linesContainer, lineCount);
+
 }
 loadPreferences();
 if (window.location.pathname === "/") {
