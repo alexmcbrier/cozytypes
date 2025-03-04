@@ -69,7 +69,7 @@ session_start();
                     <a class = "color-theme dark" onclick="setTheme(currentTheme, 'dark')">dark</a>
                 </div>
             </div>
-            <div id="switchsContainer" class="rowContainer">
+            <div id="switchesContainer" class="rowContainer">
                 <h1 class="notSignedIn" id="preferenceHeader">keyboard switch sounds</h1> 
                 <h1 class="description">Add description here.</h1>
                 <a class="preference" onclick="setPreference('keyboardswitch', 'none'), addNotification('switch sound','none');">none</a>

@@ -619,7 +619,6 @@ function highlightPrefernces() {
 
     let sizesContainer = document.getElementById("sizesContainer");
     let fontsContainer = document.getElementById("fontsContainer");
-    let themesContainer = document.getElementById("themesContainer");
     let switchesContainer = document.getElementById("switchesContainer");
     let linesContainer = document.getElementById("linesContainer");
 
@@ -640,16 +639,6 @@ function highlightPrefernces() {
     fontPreferences.forEach(pref => {
         let prefValue = pref.innerText.toLowerCase();
         if (prefValue === fontFamily) {
-            pref.style.color = "red";
-        } else {
-            pref.style.color = "blue";
-        }
-    });
-
-    let themePreferences = themesContainer.querySelectorAll(".preference");
-    themePreferences.forEach(pref => {
-        let prefValue = pref.innerText.toLowerCase();
-        if (prefValue === theme) {
             pref.style.color = "red";
         } else {
             pref.style.color = "blue";
