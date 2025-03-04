@@ -629,12 +629,16 @@ function highlightPrefernces() {
         if (!container) return;
         
         let preferences = container.querySelectorAll(".preference");
-        let color = getComputedStyle(document.documentElement).getPropertyValue("--background");
+        let highlightColor = getComputedStyle(document.documentElement).getPropertyValue("--background");
+        let defaultColor = getComputedStyle(document.documentElement).getPropertyValue("--row");
         preferences.forEach(pref => {
             let prefValue = pref.getAttribute("data-value");
 
             if (prefValue === localStorageValue) {
-                pref.style.backgroundColor = color;
+                pref.style.backgroundColor = highlightColor;
+            }
+            else {
+                pref.style.backgroundColor = defaultColor;
             }
         });
     }
