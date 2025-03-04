@@ -203,13 +203,19 @@ function keystroke() {
         }
     }
 }
+let currentAudio = null;
 function switchClick(switchtype) { // a function that when given a switch type say novel key cream, produces random sound of nk cream clicking.
     switches = ["sounds/switches/" + switchtype + "/click1.aac", "sounds/switches/" + switchtype + "/click2.aac", "sounds/switches/" + switchtype + "/click3.aac"];
     let randomIndex = Math.floor(Math.random() * switches.length);
     let randomFile =  switches[randomIndex];
-    let audio = new Audio(randomFile);
-    audio.play();
-    console.log(switchtype + " clicked");
+    if (currentAudio && !currentAudio.paused) {
+        currentAudio.pause(); // Stop the previous sound
+        currentAudio.currentTime = 0; // Reset to the start
+    }
+
+    // Create a new audio instance for the new sound
+    currentAudio = new Audio(randomFile);
+    currentAudio.play(); // Play the new sound
 }
 function restart() {
     displayText.style.marginTop = 0; //reset the box for the text (since it moves up for each new line)
