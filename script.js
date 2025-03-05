@@ -133,7 +133,7 @@ function keystroke() {
     if (inputChars[inputChars.length - 1] == " ") //Checking for space bar on the last entered character ALSO runs a check to see if the word was spelled right or not
     {
         if (localStorage.getItem("keyboardswitch") != "none") //click sound space
-            switchClickSpacebar
+            switchClickSpacebar(localStorage.getItem("keyboardswitch"));
         displayInput.value = ""; //reset the typing input box
         words[currentWordNum].className = 'word'; //start out thinking the word is right
         if (inputChars.length < chars.length + 1) //word is too short
