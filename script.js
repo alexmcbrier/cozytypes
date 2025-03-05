@@ -86,8 +86,6 @@ function findDistanceBetween(words)
 }
 displayInput?.addEventListener('input', keystroke)
 function keystroke() {
-    if (localStorage.getItem("keyboardswitch") != "none")
-        switchClick(localStorage.getItem("keyboardswitch"));
     moveCursor();
     let word = document.getElementsByClassName('current-word')[0] //Only want 1 value in class list
     let chars = word.querySelectorAll('letter')
@@ -132,9 +130,10 @@ function keystroke() {
     //index is which word they are on as well
     //what this does is look for a seperation in the top px.
     //if the current word is lower than the last word than they need to shift down (:
-
     if (inputChars[inputChars.length - 1] == " ") //Checking for space bar on the last entered character ALSO runs a check to see if the word was spelled right or not
     {
+        if (localStorage.getItem("keyboardswitch") != "none") //click sound space
+            switchClickSpacebar
         displayInput.value = ""; //reset the typing input box
         words[currentWordNum].className = 'word'; //start out thinking the word is right
         if (inputChars.length < chars.length + 1) //word is too short
@@ -175,6 +174,10 @@ function keystroke() {
        //moving the cursor
        moveCursorWithY();
     }
+    else {
+        if (localStorage.getItem("keyboardswitch") != "none") //click sound regular
+            switchClick(localStorage.getItem("keyboardswitch"));
+    }
     //remove extras
     if (inputChars.length > chars.length - 1) //extra characters
     {
@@ -204,7 +207,15 @@ function keystroke() {
     }
 }
 function switchClick(switchtype) { // a function that when given a switch type say novel key cream, produces random sound of nk cream clicking.
-    switches = ["sounds/switches/" + switchtype + "/click1.wav", "sounds/switches/" + switchtype + "/click2.wav", "sounds/switches/" + switchtype + "/click3.wav", "sounds/switches/" + switchtype + "/click4.wav", "sounds/switches/" + switchtype + "/click5.wav", "sounds/switches/" + switchtype + "/click6.wav"];
+    switches = ["sounds/switches/" + switchtype + "/click1.wav", "sounds/switches/" + switchtype + "/click2.wav", "sounds/switches/" + switchtype + "/click3.wav", "sounds/switches/" + switchtype + "/click4.wav"];
+    let randomIndex = Math.floor(Math.random() * switches.length);
+    let randomFile =  switches[randomIndex];
+    let audio = new Audio(randomFile);
+    audio.play();
+    //make space bar have more thock
+}
+function switchClickSpacebar(switchtype) {
+    switches = ["sounds/switches/" + switchtype + "/space1.wav", "sounds/switches/" + switchtype + "/space2.wav"];
     let randomIndex = Math.floor(Math.random() * switches.length);
     let randomFile =  switches[randomIndex];
     let audio = new Audio(randomFile);
