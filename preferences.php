@@ -28,6 +28,7 @@ session_start();
             <div id="fontsContainer" class="rowContainer">
                 <h1 class="notSignedIn" id="preferenceHeader">font family</h1>
                 <h1 class="description">Choose from various styles to change the font family across the site.</h1>
+                <a data-value="lora" class="preference" style="font-family: 'Lora', serif;" onclick="setPreference('fontFamily', 'lora'), addNotification('font family','lora');">lora</a>
                 <a data-value="LexendDeca" class="preference" style="font-family: 'LexendDeca', serif;" onclick="setPreference('fontFamily', 'LexendDeca'), addNotification('font family','lexend deca');">lexend deca</a>
                 <a data-value="Nunito" class="preference" style="font-family: 'Nunito', sans-serif;" onclick="setPreference('fontFamily', 'Nunito'), addNotification('font family','Nunito');">Nunito</a>
                 <a data-value="arial" class="preference" style="font-family: Arial;" onclick="setPreference('fontFamily', 'arial'), addNotification('font family','arial');">arial</a>
@@ -37,7 +38,6 @@ session_start();
                 <a data-value="sourceCodePro" class="preference" style="font-family: 'Source Code Pro', monospace;" onclick="setPreference('fontFamily', 'sourceCodePro'), addNotification('font family','source code pro');">source code pro</a>
                 <a data-value="raleway" class="preference" style="font-family: 'Raleway', sans-serif;" onclick="setPreference('fontFamily', 'raleway'), addNotification('font family','raleway');">raleway</a>
                 <a data-value="titilliumWeb" class="preference" style="font-family: 'Titillium Web', sans-serif;" onclick="setPreference('fontFamily', 'titilliumWeb'), addNotification('font family','titillium Web');">titillium Web</a>
-                <a data-value="lora" class="preference" style="font-family: 'Lora', serif;" onclick="setPreference('fontFamily', 'lora'), addNotification('font family','lora');">lora</a>
                 <a data-value="merriweather" class="preference" style="font-family: 'Merriweather', serif;" onclick="setPreference('fontFamily', 'merriweather'), addNotification('font family','merriweather');">merriweather</a>
                 <a data-value="robotoMono" class="preference" style="font-family: 'robotoMono', serif;" onclick="setPreference('fontFamily', 'robotoMono'), addNotification('font family','robotoMono');">roboto mono</a>
                 <a data-value="montserrat" class="preference" style="font-family: 'montserrat', serif;" onclick="setPreference('fontFamily', 'montserrat'), addNotification('font family','montserrat');">montserrat</a>
