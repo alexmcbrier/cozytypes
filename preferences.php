@@ -75,8 +75,6 @@ session_start();
                 <a data-value="none" class="preference" onclick="setPreference('keyboardswitch', 'none'), addNotification('switch sound','none');">none</a>
                 <a data-value="nkcreams" class="preference" onclick="setPreference('keyboardswitch', 'nkcreams'), addNotification('switch sound','novelkey creams');">novelkey creams</a>
                 <a data-value="holypandas" class="preference" onclick="setPreference('keyboardswitch', 'holypandas'), addNotification('switch sound','holy pandas');">holy pandas</a>
-                <a data-value="jellyblack" class="preference" onclick="setPreference('keyboardswitch', 'jellyblack'), addNotification('switch sound','akko jelly black');">akko jelly black</a>
-                <a data-value="boxjade" class="preference" onclick="setPreference('keyboardswitch', 'boxjade'), addNotification('switch sound','kalih box jade');">kailh box jade</a>
             </div>
             <div id="caretsContainer" class="rowContainer">
                 <h1 class="notSignedIn" id="preferenceHeader">pace caret </h1> 
