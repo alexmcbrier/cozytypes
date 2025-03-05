@@ -611,7 +611,7 @@ function loadPreferences() {
     let time = localStorage.getItem("time") || 15;
     let blur = localStorage.getItem("blur") || "off";
     let mode = localStorage.getItem("mode") || "easy";
-    let keyboardswitch = localStorage.getItem("keyboardswitch") || "none";
+    let keyboardswitch = localStorage.getItem("keyboardswitch") || "nkcreams";
 
     setPreference("fontSize", fontSize); 
     setPreference("fontFamily", fontFamily); 
@@ -640,8 +640,7 @@ function highlightPrefernces() {
     let time = localStorage.getItem("time") || 15;
     let blur = localStorage.getItem("blur") || "off";
     let mode = localStorage.getItem("mode") || "easy";
-    let title = localStorage.getItem("selectedTitle") || "harryPotter";
-    let keyboardswitch = localStorage.getItem("keyboardswitch") || "none";
+    let keyboardswitch = localStorage.getItem("keyboardswitch") || "nkcreams";
     
     let sizesContainer = document.getElementById("sizesContainer");
     let fontsContainer = document.getElementById("fontsContainer");
