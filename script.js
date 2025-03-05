@@ -18,6 +18,7 @@ var duration = 0;
 var wpm = 0;
 var count = 0
 var lastWord = 0;
+
 window.addEventListener('keydown', function (event) { //restart test if tab key
   // Check if the pressed key is the 'Tab' key (key code 9)
   if (event.key === 'Tab' || event.keyCode === 9) {
@@ -90,6 +91,7 @@ function keystroke() {
     let chars = word.querySelectorAll('letter')
     let inputChars = displayInput?.value.split('');
     let wordChars = word.innerText.split('');
+    
     for (let i = 0; i < chars.length; i++) //need to remove previous when user deletes
     {
         chars[i].classList.remove("correct")
@@ -128,9 +130,10 @@ function keystroke() {
     //index is which word they are on as well
     //what this does is look for a seperation in the top px.
     //if the current word is lower than the last word than they need to shift down (:
-
     if (inputChars[inputChars.length - 1] == " ") //Checking for space bar on the last entered character ALSO runs a check to see if the word was spelled right or not
     {
+        if (localStorage.getItem("keyboardswitch") != "none") //click sound space
+            switchClickSpacebar(localStorage.getItem("keyboardswitch"));
         displayInput.value = ""; //reset the typing input box
         words[currentWordNum].className = 'word'; //start out thinking the word is right
         if (inputChars.length < chars.length + 1) //word is too short
@@ -161,7 +164,6 @@ function keystroke() {
            const distance = findDistanceBetween(words); //distance between the lines
            const currentWord = placement.getBoundingClientRect().y;
            const previousWord = placement.parentElement.children[lastWordIndex].getBoundingClientRect().y;
-           console.log("current " + currentWord + "prev" + previousWord)
            const firstWord = document.getElementsByClassName('word')[0].getBoundingClientRect().y;
            const lineCount = getStorageItem("lineCount")
            if (currentWord > previousWord) //difference in y
@@ -171,6 +173,10 @@ function keystroke() {
        }
        //moving the cursor
        moveCursorWithY();
+    }
+    else {
+        if (localStorage.getItem("keyboardswitch") != "none") //click sound regular
+            switchClick(localStorage.getItem("keyboardswitch"));
     }
     //remove extras
     if (inputChars.length > chars.length - 1) //extra characters
@@ -199,6 +205,22 @@ function keystroke() {
             endTest()
         }
     }
+}
+function switchClick(switchtype) { // a function that when given a switch type say novel key cream, produces random sound of nk cream clicking.
+    switches = ["sounds/switches/" + switchtype + "/click1.wav", "sounds/switches/" + switchtype + "/click2.wav", "sounds/switches/" + switchtype + "/click3.wav", "sounds/switches/" + switchtype + "/click4.wav"];
+    let randomIndex = Math.floor(Math.random() * switches.length);
+    let randomFile =  switches[randomIndex];
+    let audio = new Audio(randomFile);
+    audio.play();
+    //make space bar have more thock
+}
+function switchClickSpacebar(switchtype) {
+    switches = ["sounds/switches/" + switchtype + "/space1.wav", "sounds/switches/" + switchtype + "/space2.wav"];
+    let randomIndex = Math.floor(Math.random() * switches.length);
+    let randomFile =  switches[randomIndex];
+    let audio = new Audio(randomFile);
+    audio.play();
+    //make space bar have more thock
 }
 function restart() {
     displayText.style.marginTop = 0; //reset the box for the text (since it moves up for each new line)
@@ -317,6 +339,7 @@ function startTimer() {
         }
         timerStatus = true;
     }
+    
 }
 function getTime(time) {
     var minutes = Math.floor(time / 60);
@@ -448,7 +471,6 @@ function setBlur() {
         let lines = getCookie("lineCount");
         let height = window.getComputedStyle(document.getElementById('testText')).getPropertyValue("height").replace("px", "") //remove px
         let boxHeight = (height / lines * (lines - 1))
-        console.log(boxHeight)
         const blurBox = document.createElement('div')
         blurBox.style.height = boxHeight + "px"
         blurBox.style.width = window.getComputedStyle(document.getElementById('testText')).getPropertyValue("width")
@@ -530,17 +552,24 @@ function refresh() {
 }
 function setTheme(oldTheme, newTheme) {
     const body = document.getElementsByTagName("body")[0];
+    body.classList.remove(oldTheme);
     body.classList.add(newTheme);
-    setTimeout(() => body.classList.remove(oldTheme), 0); // ensuring new styles are applied before removing the old theme
+     // ensuring new styles are applied before removing the old theme
     currentTheme = newTheme;
     localStorage.setItem("theme", newTheme);
+    if (window.location.pathname.endsWith("/preferences")) {
+        highlightPrefernces();
+    }
 }
 function setPreference(type, newPreference)
     {
         const root = document.querySelector(':root');
         root.style.setProperty("--" + type, newPreference);
         localStorage.setItem(type, newPreference);
-}
+        if (window.location.pathname.endsWith("/preferences")) {
+            highlightPrefernces();
+        }
+    }
 function addNotification(header, description)
 {
     var parent = document.getElementById('notifications');
@@ -582,7 +611,7 @@ function loadPreferences() {
     let time = localStorage.getItem("time") || 15;
     let blur = localStorage.getItem("blur") || "off";
     let mode = localStorage.getItem("mode") || "easy";
-    let title = localStorage.getItem("selectedTitle") || "harryPotter";
+    let keyboardswitch = localStorage.getItem("keyboardswitch") || "none";
 
     setPreference("fontSize", fontSize); 
     setPreference("fontFamily", fontFamily); 
@@ -593,8 +622,64 @@ function loadPreferences() {
     setPreference("time", time);
     setPreference("blur", blur);
     setPreference("mode", mode);
-    setPreference("selectedTitle", title);
+    setPreference("keyboardswitch", keyboardswitch);
+
+    if (window.location.pathname.endsWith("/preferences")) {
+        highlightPrefernces();
+    }
     
+}
+function highlightPrefernces() {
+    let theme = localStorage.getItem("theme") || "light";
+    let fontSize = localStorage.getItem("fontSize") || "3";
+    let fontFamily = localStorage.getItem("fontFamily") || "LexendDeca";
+    let lineCount = localStorage.getItem("lineCount") || "3";
+    let caret = localStorage.getItem("caret") || "caret";
+    let typingMode = localStorage.getItem("typingMode") || "time";
+    let words = localStorage.getItem("words") || 10;
+    let time = localStorage.getItem("time") || 15;
+    let blur = localStorage.getItem("blur") || "off";
+    let mode = localStorage.getItem("mode") || "easy";
+    let title = localStorage.getItem("selectedTitle") || "harryPotter";
+    let keyboardswitch = localStorage.getItem("keyboardswitch") || "none";
+    
+    let sizesContainer = document.getElementById("sizesContainer");
+    let fontsContainer = document.getElementById("fontsContainer");
+    let switchesContainer = document.getElementById("switchesContainer");
+    let caretsContainer = document.getElementById("caretsContainer");
+    let linesContainer = document.getElementById("linesContainer");
+
+    function highlightMatchingPreferences(container, localStorageValue) {
+        if (!container) return;
+        
+        let preferences = container.querySelectorAll(".preference");
+        
+        let themeClass = document.body.classList[0]; // Get the first class, which is the theme name
+        let themeStyles = getComputedStyle(document.querySelector(`.${themeClass}`)); // Get styles for the theme
+
+        let highlightColor = themeStyles.getPropertyValue("--background").trim();
+        let defaultColor = themeStyles.getPropertyValue("--row").trim();
+        let textColor = themeStyles.getPropertyValue("--currentWord").trim();
+        preferences.forEach(pref => {
+            let prefValue = pref.getAttribute("data-value");
+
+            if (prefValue === localStorageValue) {
+                pref.style.backgroundColor = highlightColor;
+                pref.style.color = textColor;
+            }
+            else {
+                pref.style.backgroundColor = defaultColor;
+                pref.style.color = "white";
+            }
+        });
+    }
+    highlightMatchingPreferences(sizesContainer, fontSize);
+    highlightMatchingPreferences(fontsContainer, fontFamily);
+    highlightMatchingPreferences(themesContainer, theme);
+    highlightMatchingPreferences(switchesContainer, keyboardswitch);
+    highlightMatchingPreferences(caretsContainer, caret); 
+    highlightMatchingPreferences(linesContainer, lineCount);
+
 }
 loadPreferences();
 if (window.location.pathname === "/") {
