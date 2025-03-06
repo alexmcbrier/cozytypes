@@ -17,7 +17,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A minimal typing website offering a calming, cozy ambiance. Practice in different modes, customize your theme, choose from a variety of keyboard switch sounds, track progress, enhance your typing skills."/>
+    <meta name="description" content="A minimal typing website offering a calming, cozy ambiance. Practice in different modes, customize your theme, choose from a variety of keyboard switch sounds, track progress, and enhance your typing skills."/>
     <meta name="keywords" content="practice typing, improve typing speed, typing test, cozytypes, learn to type faster, minimalistic typing, cute, typing practice, fun typing test, simple typing test, boost typing speed"/>
     <meta name="author" content="alexmcbrier">
     <script defer type="text/javascript" src="script.js"></script>
