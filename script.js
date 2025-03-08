@@ -169,10 +169,12 @@ function keystroke() {
            if (currentWord > previousWord) //difference in y
            {
                displayText.style.marginTop = (distance * (lineCount - 2)) - (currentWord - firstWord) + "px";
+               moveCursor(); //line switch with animation
+           }
+           else {
+            moveCursorWithY(); //line switch no animation move
            }
        }
-       //moving the cursor
-       moveCursor();
     }
     else {
         if (localStorage.getItem("keyboardswitch") != "none") //click sound regular
