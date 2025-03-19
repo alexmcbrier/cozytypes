@@ -172,7 +172,7 @@ function keystroke() {
            }
        }
        //moving the cursor
-       moveCursorWithY();
+       //moveCursorWithY();
     }
     else {
         if (localStorage.getItem("keyboardswitch") != "none") //click sound regular
