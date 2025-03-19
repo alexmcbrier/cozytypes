@@ -70,7 +70,7 @@ session_start();
                 </div>
             </div>
             <div id="switchesContainer" class="rowContainer">
-                <h1 class="notSignedIn" id="preferenceHeader">keyboard switch sounds<i class="fa-solid fa-volume-high"></i></h1>
+                <h1 class="notSignedIn" id="preferenceHeader">keyboard switch sounds<i class="fa-solid fa-volume-low"></i></h1>
                 <h1 class="description">choose from these switches, each offering a unique sound profile.</h1>
                 <a data-value="none" class="preference click" onclick="setPreference('keyboardswitch', 'none'), addNotification('switch sound','none');">none</a>
                 <a data-value="holypandas" class="preference click" onclick="setPreference('keyboardswitch', 'holypandas'), addNotification('switch sound','holy pandas');">holy pandas</a>
