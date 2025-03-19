@@ -112,7 +112,7 @@ crossorigin="anonymous"></script>
             <div class="modeStack">
                 <div>words</div>
                 <div id = "wordsContainer" style="display: flex">
-                    <div class="typingModes" onclick="setPreference('typingMode', 'words'); setPreference('words', 10); restart();">10</div>
+                    <div class="typingModes click" onclick="setPreference('typingMode', 'words'); setPreference('words', 10); restart();">10</div>
                     <div class="typingModes" onclick="setPreference('typingMode', 'words'); setPreference('words', 25); restart();">25</div>
                     <div class="typingModes" onclick="setPreference('typingMode', 'words'); setPreference('words', 50); restart();">50</div>
                     <div class="typingModes" onclick="setPreference('typingMode', 'words'); setPreference('words', 100); restart();">100</div>
