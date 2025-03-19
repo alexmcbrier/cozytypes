@@ -103,26 +103,26 @@ crossorigin="anonymous"></script>
             <div class="modeStack">
                 <div>time</div>
                 <div id = "timesContainer" style="display: flex">
-                    <div class="typingModes" onclick="setPreference('typingMode', 'time'); setPreference('time', 15); restart();">15</div>
-                    <div class="typingModes" onclick="setPreference('typingMode', 'time'); setPreference('time', 30); restart();">30</div>
-                    <div class="typingModes" onclick="setPreference('typingMode', 'time'); setPreference('time', 60); restart();">60</div>
-                    <div class="typingModes" onclick="setPreference('typingMode', 'time'); setPreference('time', 120); restart();">120</div>
+                    <div class="typingModes click" onclick="setPreference('typingMode', 'time'); setPreference('time', 15); restart();">15</div>
+                    <div class="typingModes click" onclick="setPreference('typingMode', 'time'); setPreference('time', 30); restart();">30</div>
+                    <div class="typingModes click" onclick="setPreference('typingMode', 'time'); setPreference('time', 60); restart();">60</div>
+                    <div class="typingModes click" onclick="setPreference('typingMode', 'time'); setPreference('time', 120); restart();">120</div>
                 </div>
             </div>
             <div class="modeStack">
                 <div>words</div>
                 <div id = "wordsContainer" style="display: flex">
                     <div class="typingModes click" onclick="setPreference('typingMode', 'words'); setPreference('words', 10); restart();">10</div>
-                    <div class="typingModes" onclick="setPreference('typingMode', 'words'); setPreference('words', 25); restart();">25</div>
-                    <div class="typingModes" onclick="setPreference('typingMode', 'words'); setPreference('words', 50); restart();">50</div>
-                    <div class="typingModes" onclick="setPreference('typingMode', 'words'); setPreference('words', 100); restart();">100</div>
+                    <div class="typingModes click" onclick="setPreference('typingMode', 'words'); setPreference('words', 25); restart();">25</div>
+                    <div class="typingModes click" onclick="setPreference('typingMode', 'words'); setPreference('words', 50); restart();">50</div>
+                    <div class="typingModes click" onclick="setPreference('typingMode', 'words'); setPreference('words', 100); restart();">100</div>
                 </div>
             </div>
             <div class="modeStack">
                 <div>difficulty</div>
                 <div id = "modesContainer" style="display: flex">
-                    <div class="typingModes" onclick="setPreference('mode', 'easy'); restart()">easy</div>
-                    <div class="typingModes" onclick="setPreference('mode', 'hard'); restart()">hard</div>
+                    <div class="typingModes click" onclick="setPreference('mode', 'easy'); restart()">easy</div>
+                    <div class="typingModes click" onclick="setPreference('mode', 'hard'); restart()">hard</div>
                 </div>
             </div>
         </div>
