@@ -18,7 +18,6 @@ var duration = 0;
 var wpm = 0;
 var count = 0
 var lastWord = 0;
-
 window.addEventListener('keydown', function (event) { //restart test if tab key
   // Check if the pressed key is the 'Tab' key (key code 9)
   if (event.key === 'Tab' || event.keyCode === 9) {
@@ -84,6 +83,11 @@ function findDistanceBetween(words)
         }
     }
 }
+document.querySelectorAll(".click").forEach(element => {
+    element.addEventListener("click", function(event) {
+        switchClick();
+    });
+});
 displayInput?.addEventListener('input', keystroke)
 function keystroke() {
     moveCursor();
@@ -133,7 +137,7 @@ function keystroke() {
     if (inputChars[inputChars.length - 1] == " ") //Checking for space bar on the last entered character ALSO runs a check to see if the word was spelled right or not
     {
         if (localStorage.getItem("keyboardswitch") != "none") //click sound space
-            switchClickSpacebar(localStorage.getItem("keyboardswitch"));
+            switchClickSpacebar();
         displayInput.value = ""; //reset the typing input box
         words[currentWordNum].className = 'word'; //start out thinking the word is right
         if (inputChars.length < chars.length + 1) //word is too short
@@ -175,8 +179,7 @@ function keystroke() {
        moveCursorWithY();
     }
     else {
-        if (localStorage.getItem("keyboardswitch") != "none") //click sound regular
-            switchClick(localStorage.getItem("keyboardswitch"));
+        switchClick();
     }
     //remove extras
     if (inputChars.length > chars.length - 1) //extra characters
@@ -206,21 +209,26 @@ function keystroke() {
         }
     }
 }
-function switchClick(switchtype) { // a function that when given a switch type say novel key cream, produces random sound of nk cream clicking.
-    switches = ["sounds/switches/" + switchtype + "/click1.wav", "sounds/switches/" + switchtype + "/click2.wav", "sounds/switches/" + switchtype + "/click3.wav", "sounds/switches/" + switchtype + "/click4.wav"];
-    let randomIndex = Math.floor(Math.random() * switches.length);
-    let randomFile =  switches[randomIndex];
-    let audio = new Audio(randomFile);
-    audio.play();
-    //make space bar have more thock
+function switchClick() { // a function that when given a switch type say novel key cream, produces random sound of nk cream clicking.
+    if (localStorage.getItem("keyboardswitch") != "none") {
+        switchtype =localStorage.getItem("keyboardswitch");
+        switches = ["sounds/switches/" + switchtype + "/click1.wav", "sounds/switches/" + switchtype + "/click2.wav", "sounds/switches/" + switchtype + "/click3.wav", "sounds/switches/" + switchtype + "/click4.wav"];
+        let randomIndex = Math.floor(Math.random() * switches.length);
+        let randomFile =  switches[randomIndex];
+        let audio = new Audio(randomFile);
+        audio.play();
+    }
 }
-function switchClickSpacebar(switchtype) {
-    switches = ["sounds/switches/" + switchtype + "/space1.wav", "sounds/switches/" + switchtype + "/space2.wav"];
-    let randomIndex = Math.floor(Math.random() * switches.length);
-    let randomFile =  switches[randomIndex];
-    let audio = new Audio(randomFile);
-    audio.play();
-    //make space bar have more thock
+function switchClickSpacebar() {
+    //space bar has more thock
+    if (localStorage.getItem("keyboardswitch") != "none") {
+        switchtype =localStorage.getItem("keyboardswitch");
+        switches = ["sounds/switches/" + switchtype + "/space1.wav", "sounds/switches/" + switchtype + "/space2.wav"];
+        let randomIndex = Math.floor(Math.random() * switches.length);
+        let randomFile =  switches[randomIndex];
+        let audio = new Audio(randomFile);
+        audio.play();
+    }
 }
 function restart() {
     displayText.style.marginTop = 0; //reset the box for the text (since it moves up for each new line)
@@ -611,7 +619,7 @@ function loadPreferences() {
     let time = localStorage.getItem("time") || 15;
     let blur = localStorage.getItem("blur") || "off";
     let mode = localStorage.getItem("mode") || "easy";
-    let keyboardswitch = localStorage.getItem("keyboardswitch") || "nkcreams";
+    let keyboardswitch = localStorage.getItem("keyboardswitch") || "holypandas";
 
     setPreference("fontSize", fontSize); 
     setPreference("fontFamily", fontFamily); 
@@ -640,7 +648,7 @@ function highlightPrefernces() {
     let time = localStorage.getItem("time") || 15;
     let blur = localStorage.getItem("blur") || "off";
     let mode = localStorage.getItem("mode") || "easy";
-    let keyboardswitch = localStorage.getItem("keyboardswitch") || "nkcreams";
+    let keyboardswitch = localStorage.getItem("keyboardswitch") || "holypandas";
     
     let sizesContainer = document.getElementById("sizesContainer");
     let fontsContainer = document.getElementById("fontsContainer");
