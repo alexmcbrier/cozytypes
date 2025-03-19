@@ -170,9 +170,12 @@ function keystroke() {
            {
                displayText.style.marginTop = (distance * (lineCount - 2)) - (currentWord - firstWord) + "px";
            }
+           else {
+                //moving the cursor when text doesnt move but new line
+                moveCursorWithY();
+           }
        }
-       //moving the cursor
-       //moveCursorWithY();
+
     }
     else {
         if (localStorage.getItem("keyboardswitch") != "none") //click sound regular
