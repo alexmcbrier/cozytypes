@@ -18,7 +18,7 @@ var duration = 0;
 var wpm = 0;
 var count = 0
 var lastWord = 0;
-import { Howl } from 'howler';
+import { Howl } from 'https://cdn.jsdelivr.net/npm/howler@2.2.4/dist/howler.min.js';
 window.addEventListener('keydown', function (event) { //restart test if tab key
   // Check if the pressed key is the 'Tab' key (key code 9)
   if (event.key === 'Tab' || event.keyCode === 9) {
