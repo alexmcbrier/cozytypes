@@ -81,7 +81,7 @@ session_start();
                 <h1 class="description">When enabled, the caret will move along the page as you type. Change the style for different typing experiences.</h1>
                 <a data-value="caret" class="preference click" onclick="setPreference('caret', 'caret'), addNotification('caret style','classic');">caret</a>
                 <a data-value="underlineLetter" class="preference click" onclick="setPreference('caret', 'underlineLetter'), addNotification('caret style','underline letter');">underline letter</a>
-                <a data-value="underlineWord" class="preferenc clicke" onclick="setPreference('caret', 'underlineWord'), addNotification('caret style','underline word');">underline word</a>
+                <a data-value="underlineWord" class="preference click" onclick="setPreference('caret', 'underlineWord'), addNotification('caret style','underline word');">underline word</a>
                 <a data-value="highlightWord" class="preference click" onclick="setPreference('caret', 'highlightWord'), addNotification('caret style','highlight');">highlight word</a>
             </div>
             <div id="linesContainer" class="rowContainer">
