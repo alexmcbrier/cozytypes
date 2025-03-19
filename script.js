@@ -86,7 +86,7 @@ function findDistanceBetween(words)
 }
 document.querySelectorAll(".click").forEach(element => {
     element.addEventListener("click", function(event) {
-        switchClickSpacebar();
+        switchClick();
     });
 });
 displayInput?.addEventListener('input', keystroke)
