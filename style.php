@@ -485,7 +485,6 @@ include "themes.scss"; //file contains all fonts
     }
     #wordsWrapper {
         line-height: calc(var(--fontSize) * 1.5rem);
-        transition: all .25s ease;
     }
 
     #testText {
