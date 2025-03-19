@@ -18,7 +18,7 @@ var duration = 0;
 var wpm = 0;
 var count = 0
 var lastWord = 0;
-
+import { Howl } from 'howler';
 window.addEventListener('keydown', function (event) { //restart test if tab key
   // Check if the pressed key is the 'Tab' key (key code 9)
   if (event.key === 'Tab' || event.keyCode === 9) {
@@ -214,10 +214,9 @@ function switchClick() { // a function that when given a switch type say novel k
     if (localStorage.getItem("keyboardswitch") != "none") {
         switchtype =localStorage.getItem("keyboardswitch");
         switches = ["sounds/switches/" + switchtype + "/click1.wav", "sounds/switches/" + switchtype + "/click2.wav", "sounds/switches/" + switchtype + "/click3.wav", "sounds/switches/" + switchtype + "/click4.wav"];
-        let randomIndex = Math.floor(Math.random() * switches.length);
-        let randomFile =  switches[randomIndex];
-        let audio = new Audio(randomFile);
-        audio.play();
+        const clicks = switchSounds.map(src => new Howl({ src, volume: 1.0 }));
+        const randomIndex = Math.floor(Math.random() * clicks.length);
+        clicks[randomIndex].play();
     }
 }
 function switchClickSpacebar() {

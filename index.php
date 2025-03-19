@@ -132,7 +132,7 @@ crossorigin="anonymous"></script>
             <div id="wordsWrapper"></div>
         </div>
         <div class="testRow">
-            <div id ="resetBox" class = "testItem"><i id="restartTest"class="fa-solid fa-rotate" onclick="restart()"></i></div>
+            <div id ="resetBox" class = "testItem click"><i id="restartTest"class="fa-solid fa-rotate" onclick="restart()"></i></div>
         </div>
         <div class="testRow">
             <div id="wpmDisplay" class = "testItem" >0 wpm</div>
