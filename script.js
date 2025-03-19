@@ -169,13 +169,11 @@ function keystroke() {
            if (currentWord > previousWord) //difference in y
            {
                displayText.style.marginTop = (distance * (lineCount - 2)) - (currentWord - firstWord) + "px";
-           }
-           else {
-                //moving the cursor when text doesnt move but new line
-                moveCursorWithY();
+               console.log((distance * (lineCount - 2)) - (currentWord - firstWord));
            }
        }
-
+       //moving the cursor
+       moveCursorWithY();
     }
     else {
         if (localStorage.getItem("keyboardswitch") != "none") //click sound regular
