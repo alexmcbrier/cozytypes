@@ -20,7 +20,7 @@
     <meta name="description" content="A minimal typing website offering a calming, cozy ambiance. Practice in different modes, customize your theme, choose from a variety of keyboard switch sounds, track progress, and enhance your typing skills."/>
     <meta name="keywords" content="practice typing, improve typing speed, typing test, cozytypes, learn to type faster, minimalistic typing, cute, typing practice, fun typing test, simple typing test, boost typing speed"/>
     <meta name="author" content="alexmcbrier">
-    <script defer type="module" src="script.js"></script>
+    <script defer type="text/javascript" src="script.js"></script>
     <link rel="stylesheet" href="style.php">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
