@@ -169,7 +169,7 @@ function keystroke() {
            if (currentWord > previousWord) //difference in y
            {
                displayText.style.marginTop = (distance * (lineCount - 2)) - (currentWord - firstWord) + "px";
-               if (displayText.style.marginTop > 0)
+               if (displayText.style.marginTop == 0)
                     //moving the cursor
                     moveCursorWithY();
            }
