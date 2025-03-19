@@ -26,7 +26,7 @@ session_start();
                 <a data-value="5" class="preference click" onclick="setPreference('fontSize', 5), addNotification('font size','5');">5</a>
             </div>
             <div id="fontsContainer" class="rowContainer">
-                <h1 class="notSignedIn" id="preferenceHeader">font family</h1><i class="fa-solid fa-font"></i>
+                <h1 class="notSignedIn" id="preferenceHeader">font family<i class="fa-solid fa-font"></i></h1>
                 <h1 class="description">Choose from various styles to change the font family across the site.</h1>
                 <a data-value="lora" class="preference click" style="font-family: 'Lora', serif;" onclick="setPreference('fontFamily', 'lora'), addNotification('font family','lora');">lora</a>
                 <a data-value="LexendDeca" class="preference click" style="font-family: 'LexendDeca', serif;" onclick="setPreference('fontFamily', 'LexendDeca'), addNotification('font family','lexend deca');">lexend deca</a>
@@ -46,7 +46,7 @@ session_start();
             </div>
             <div id="themesContainer" class="theme-row-container">
                 <div>
-                    <h1 id="preferenceHeader">color theme</h1><i class="fa-solid fa-palette"></i>
+                    <h1 id="preferenceHeader">color theme<i class="fa-solid fa-palette"></i></h1>
                 </div>
                 <div class="theme-row-container">
                     <a class = "color-theme click light " onclick="setTheme(currentTheme, 'light')">light</a>
@@ -70,14 +70,14 @@ session_start();
                 </div>
             </div>
             <div id="switchesContainer" class="rowContainer">
-                <h1 class="notSignedIn" id="preferenceHeader">keyboard switch sounds</h1><i class="fa-solid fa-volume-high"></i>
+                <h1 class="notSignedIn" id="preferenceHeader">keyboard switch sounds<i class="fa-solid fa-volume-high"></i></h1>
                 <h1 class="description">choose from these switches, each offering a unique sound profile.</h1>
                 <a data-value="none" class="preference click" onclick="setPreference('keyboardswitch', 'none'), addNotification('switch sound','none');">none</a>
                 <a data-value="holypandas" class="preference click" onclick="setPreference('keyboardswitch', 'holypandas'), addNotification('switch sound','holy pandas');">holy pandas</a>
                 <a data-value="nkcreams" class="preference click" onclick="setPreference('keyboardswitch', 'nkcreams'), addNotification('switch sound','novelkey creams');">novelkey creams</a>
             </div>
             <div id="caretsContainer" class="rowContainer">
-                <h1 class="notSignedIn" id="preferenceHeader">pace caret </h1></i><i class="fa-solid fa-i-cursor"></i>
+                <h1 class="notSignedIn" id="preferenceHeader">pace caret <i class="fa-solid fa-i-cursor"></i></h1>
                 <h1 class="description">When enabled, the caret will move along the page as you type. Change the style for different typing experiences.</h1>
                 <a data-value="caret" class="preference click" onclick="setPreference('caret', 'caret'), addNotification('caret style','classic');">caret</a>
                 <a data-value="underlineLetter" class="preference click" onclick="setPreference('caret', 'underlineLetter'), addNotification('caret style','underline letter');">underline letter</a>
@@ -85,7 +85,7 @@ session_start();
                 <a data-value="highlightWord" class="preference click" onclick="setPreference('caret', 'highlightWord'), addNotification('caret style','highlight');">highlight word</a>
             </div>
             <div id="linesContainer" class="rowContainer">
-                <h1 class="notSignedIn" id="preferenceHeader">lines </h1><i class="fa-solid fa-align-left"></i>
+                <h1 class="notSignedIn" id="preferenceHeader">lines <i class="fa-solid fa-align-left"></i></h1>
                 <h1 class="description">Show a different number of lines on the screen; More lines on the page will allow to see you what is coming next.</h1>
                 <a data-value="2" class="preference click" onclick="setPreference('lineCount', 2), addNotification('line count','2');">2</a>
                 <a data-value="3" class="preference click" onclick="setPreference('lineCount', 3), addNotification('line count','3');">3</a>
