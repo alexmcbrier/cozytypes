@@ -23,6 +23,9 @@ session_start();
                     including theme, font style, typing caret, line count, and more. Designed as a simplistic approach to typing and alternative to other websites,
                     this website is designed to be relaxing and calming as you practice your skills. 
             </div>
+        </div>
+
+        <div id = "displayStats">
             <div class = "statsContainer">
                 <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0; padding-top: 2rem;" >difficulty</h1>
                     <h2 class="aboutDescription">
@@ -31,6 +34,9 @@ session_start();
                     hard mode - which has a word set of 1000 words from the english language, which are intended to be a bit more difficult and longer in length.
                     </h2>
             </div>
+        </div>
+
+        <div id = "displayStats">
             <div class = "statsContainer">
                 <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0; padding-top: 2rem;" >stats and progress</h1>
                     <h2 class="aboutDescription">
@@ -41,6 +47,9 @@ session_start();
                     accuracy - the percentage of correct characters in comparison to total characters during the test.
                     </h2>
             </div>
+        </div>
+
+        <div id = "displayStats">
             <div class = "statsContainer">
                 <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0; padding-top: 2rem;" >feature request</h1>
                     <h2 class="aboutDescription">
@@ -48,6 +57,9 @@ session_start();
                     issue to us on github.
                     </h2>
             </div>
+        </div>
+
+        <div id = "displayStats">
             <div class = "statsContainer">
                 <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0; padding-top: 2rem;" >developers</h1>
                     <h2 class="aboutDescription">
