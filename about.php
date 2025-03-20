@@ -11,7 +11,7 @@ session_start();
      crossorigin="anonymous"></script>
 </head>
 <body>
-    <form id="mainContent" method="POST" action="preferences.php">
+    <form id="mainContent">
         <?php include "./nav.php" ?>
         <div id = "displayStats">
             <div class = "statsContainer">
