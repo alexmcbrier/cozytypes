@@ -15,7 +15,7 @@ session_start();
         <?php include "./nav.php" ?>
         <div id = "displayStats">
             <div class = "statsContainer">
-                <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0;" >about us</h1>
+                <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0; line-height: 0">about us</h1>
                     <h2 class="aboutDescription">
                     cozytypes.com is a simple typing website for keyboard enthusiasts. test your typing abilities in different modes, track your 
                     progress, and improve your overall typing speed. This website draws inspiration from Monkeytype.com, and I want to express my 
@@ -38,7 +38,7 @@ session_start();
 
         <div id = "displayStats">
             <div class = "statsContainer">
-                <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0; padding-top: 2rem;" >stats and progress</h1>
+                <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0; line-height: 0; padding-top: 2rem;" >stats and progress</h1>
                     <h2 class="aboutDescription">
                     After the typing test ends, users will be able to see their accuracy, wpm, and mode for the completed test. Users who have signed up for an account 
                     have the ability to track these results and all previous history, being able to see there best scores in each mode and category. Additionally, Users
@@ -51,7 +51,7 @@ session_start();
 
         <div id = "displayStats">
             <div class = "statsContainer">
-                <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0; padding-top: 2rem;" >feature request</h1>
+                <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0; line-height: 0; padding-top: 2rem;" >feature request</h1>
                     <h2 class="aboutDescription">
                     If you have any questions, concerns, or ideas about adding a feature please either contact us by email, or submit an
                     issue to us on github.
@@ -61,7 +61,7 @@ session_start();
 
         <div id = "displayStats">
             <div class = "statsContainer">
-                <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0; padding-top: 2rem;" >developers</h1>
+                <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0; line-height: 0; padding-top: 2rem;" >developers</h1>
                     <h2 class="aboutDescription">
                     Created by Alex McBrier, with the purpose of helping both beginners and experts improve there typing skills.
                     Thank you to Kaffee as well for your collaboration and support on this project. I am excited to bring this game to you and anyone else who may enjoy it. Thank you for your support.
