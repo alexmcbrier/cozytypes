@@ -27,7 +27,7 @@ session_start();
 
         <div id = "displayStats">
             <div class = "statsContainer">
-                <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0;" >difficulty</h1>
+                <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0; line-height: 0" >difficulty</h1>
                     <h2 class="aboutDescription">
                     The site offers two difficulties. 
                     easy mode - which has a word set of the 100 most common words in the english language, intended for beginners.
