@@ -13,8 +13,8 @@ session_start();
 <body>
     <form id="mainContent" method="POST" action="preferences.php">
         <?php include "./nav.php" ?>
-        <div class="preferences">
-            <div id="sizesContainer" class="aboutContainer">
+        <div id = "displayStats">
+            <div class = "statsContainer">
                 <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0;" >about us</h1>
                     <h2 class="aboutDescription">
                     cozytypes.com is a simple typing website for keyboard enthusiasts. test your typing abilities in different modes, track your 
@@ -22,12 +22,22 @@ session_start();
                     gratitude to its creators for providing such a great example in the typing community. Features include typing stats and history for users with accounts, configurations 
                     including theme, font style, typing caret, line count, and more. Designed as a simplistic approach to typing and alternative to other websites,
                     this website is designed to be relaxing and calming as you practice your skills. 
+            </div>
+        </div>
+
+        <div id = "displayStats">
+            <div class = "statsContainer">
                 <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0; padding-top: 2rem;" >difficulty</h1>
                     <h2 class="aboutDescription">
                     The site offers two difficulties. 
                     easy mode - which has a word set of the 100 most common words in the english language, intended for beginners.
                     hard mode - which has a word set of 1000 words from the english language, which are intended to be a bit more difficult and longer in length.
                     </h2>
+            </div>
+        </div>
+
+        <div id = "displayStats">
+            <div class = "statsContainer">
                 <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0; padding-top: 2rem;" >stats and progress</h1>
                     <h2 class="aboutDescription">
                     After the typing test ends, users will be able to see their accuracy, wpm, and mode for the completed test. Users who have signed up for an account 
@@ -36,11 +46,21 @@ session_start();
                     wpm - the total number of characters from each word divided by 5 in relation to a one minute typing test.
                     accuracy - the percentage of correct characters in comparison to total characters during the test.
                     </h2>
+            </div>
+        </div>
+
+        <div id = "displayStats">
+            <div class = "statsContainer">
                 <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0; padding-top: 2rem;" >feature request</h1>
                     <h2 class="aboutDescription">
                     If you have any questions, concerns, or ideas about adding a feature please either contact us by email, or submit an
                     issue to us on github.
                     </h2>
+            </div>
+        </div>
+
+        <div id = "displayStats">
+            <div class = "statsContainer">
                 <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0; padding-top: 2rem;" >developers</h1>
                     <h2 class="aboutDescription">
                     Created by Alex McBrier, with the purpose of helping both beginners and experts improve there typing skills.

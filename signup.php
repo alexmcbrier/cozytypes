@@ -67,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div id="mainContent">
             <?php include "./nav.php" ?>
             <form id="middle" method ="post" style = "width: 50%; margin: auto;">
-                <h1 id = "loginHeader">sign up</h1>
+                <h1 id = "loginHeader">sign up, keep typing</h1>
                 <?php if ($is_invalid) : ?>
                     <div id="invalid">Invalid Credentials</div>
                 <?php endif; ?>
