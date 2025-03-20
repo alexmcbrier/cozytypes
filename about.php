@@ -11,7 +11,7 @@ session_start();
      crossorigin="anonymous"></script>
 </head>
 <body>
-    <form id="mainContent">
+    <form id="mainContent" style = "gap: 0">
         <?php include "./nav.php" ?>
         <div id = "displayStats">
             <div class = "statsContainer">
