@@ -17,7 +17,7 @@ session_start();
         <?php include "./nav.php" ?>
         <div class="preferences">
             <div id="sizesContainer" class="rowContainer">
-                <h1 class="notSignedIn" id="preferenceHeader" style = "line-height: 0">font size<i class="fa-solid fa-text-height"></h1></i>
+                <h1 class="notSignedIn" id="preferenceHeader" style="line-height: 0">font size<i class="fa-solid fa-text-height"></h1></i>
                 <h1 class="description">Change the size of the words in the test.</h1>
                 <a data-value="1" class="preference click" onclick="setPreference('fontSize', 1), addNotification('font size','1');">1</a>
                 <a data-value="2" class="preference click" onclick="setPreference('fontSize', 2), addNotification('font size','2');">2</a>
@@ -26,7 +26,7 @@ session_start();
                 <a data-value="5" class="preference click" onclick="setPreference('fontSize', 5), addNotification('font size','5');">5</a>
             </div>
             <div id="fontsContainer" class="rowContainer">
-                <h1 class="notSignedIn" id="preferenceHeader" style = "line-height: 0">font family<i class="fa-solid fa-font"></i></h1>
+                <h1 class="notSignedIn" id="preferenceHeader" style="line-height: 0">font family<i class="fa-solid fa-font"></i></h1>
                 <h1 class="description">Choose from various styles to change the font family across the site.</h1>
                 <a data-value="lora" class="preference click" style="font-family: 'Lora', serif;" onclick="setPreference('fontFamily', 'lora'), addNotification('font family','lora');">lora</a>
                 <a data-value="LexendDeca" class="preference click" style="font-family: 'LexendDeca', serif;" onclick="setPreference('fontFamily', 'LexendDeca'), addNotification('font family','lexend deca');">lexend deca</a>
