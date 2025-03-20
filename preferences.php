@@ -13,7 +13,7 @@ session_start();
 <body>
 
     <div id="notifications"></div>
-    <form id="mainContent" method="POST" action="preferences">
+    <form id="mainContent" method="POST" action="preferences" style = "gap: 0">
         <?php include "./nav.php" ?>
         <div class="preferences">
             <div id="sizesContainer" class="rowContainer">
