@@ -60,7 +60,12 @@ if (isset($_GET["finish"]))
 
 <!DOCTYPE html>
 <html lang="en">
-<?php include "./head.php" ?>
+<?php 
+    include "./head.php" 
+    if ($_SERVER['HTTP_HOST'] == 'dev.cozytypes.com' || $_SERVER['HTTP_HOST'] == 'cozytypes.com/?ref=dev_resources') {
+        echo '<meta name="robots" content="noindex, nofollow">';
+    }
+  ?>
 <head>
 <title>cozytypes | a minimal typing test</title>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9923722164132738"
