@@ -15,16 +15,24 @@ session_start();
         <?php include "./nav.php" ?>
         <div id="displayStats" style = "background-color: var(--background); margin: 1rem 0rem">
             <div class="statsContainer" style = "background-color: var(--rowBackground);">
-                <h1 class="notSignedIn" id="preferenceHeader">Words Per Minute<i class="fa-solid fa-clock-rotate-left"></i></h1>
+                <h1 class="notSignedIn" id="preferenceHeader">keyboards<i class="fa-regular fa-keyboard"></i></h1>
                 <a class="results">hello</a>
             </div>
             <div class="statsContainer" style = "background-color: var(--rowBackground);">
-                <h1 class="notSignedIn" id="preferenceHeader">Accuracy<i class="fa-solid fa-crosshairs"></i></h1>
-                <a class="results">hello 2</a>
+                <h1 class="notSignedIn" id="preferenceHeader">keycaps<i class="fa-regular fa-keyboard"></i></h1>
+                <a class="results">hello</a>
             </div>
             <div class="statsContainer" style = "background-color: var(--rowBackground);">
-                <h1 class="notSignedIn" id="preferenceHeader"><?= $_GET["mode"] ?><i class="fa-regular fa-hourglass-half"></i></h1>
-                <a class="results">hello 3</a>
+                <h1 class="notSignedIn" id="preferenceHeader">switches<i class="fa-regular fa-keyboard"></i></h1>
+                <a class="results">hello</a>
+            </div>
+            <div class="statsContainer" style = "background-color: var(--rowBackground);">
+                <h1 class="notSignedIn" id="preferenceHeader">accesories<i class="fa-regular fa-keyboard"></i></h1>
+                <a class="results">hello</a>
+            </div>
+            <div class="statsContainer" style = "background-color: var(--rowBackground);">
+                <h1 class="notSignedIn" id="preferenceHeader">diy & customization<i class="fa-regular fa-keyboard"></i></h1>
+                <a class="results">hello</a>
             </div>
         </div>
         <?php include "./footer.php" ?>
