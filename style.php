@@ -1422,6 +1422,10 @@ include "themes.scss"; //file contains all fonts
         background-color: #1c1b1d;
 
     }
+    .catalogImages {
+        width: 20px;
+        height: 20px;
+    }
     .color-theme
     {
         color: var(--testText);
