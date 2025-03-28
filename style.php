@@ -1425,14 +1425,13 @@ include "themes.scss"; //file contains all fonts
     .catalogImages {
         border-radius: .75rem;
         padding: 0 .25rem;
-        width: 20%;
+        width: 12rem;
         object-fit: cover;
     }
     .catalogItem {
         display: flex;
         align-items: flex-start;
         width: 100%;
-        border: 1px solid #ccc;
         padding: 10px;
         font-size: 1.3rem;
         line-height: 1.3rem;
