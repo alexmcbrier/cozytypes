@@ -17,7 +17,7 @@ session_start();
         <div class = "profileValues" style = "padding: 0 1rem">some links help support the site, but all picks are based on what the typing community reccomends.</div>
         
         <div class="preferences">
-            <div id="themesContainer" class="theme-row-container">
+            <div class="catalogContainer">
                 <div>
                     <h1 id="preferenceHeader">keyboards<i class="fa-solid fa-keyboard"></i></h1>
                 </div>
