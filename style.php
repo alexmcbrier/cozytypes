@@ -1432,12 +1432,11 @@ include "themes.scss"; //file contains all fonts
         display: flex;
         align-items: flex-start;
         width: 100%;
-        max-width: 600px;
         border: 1px solid #ccc;
         padding: 10px;
         font-size: 1.3rem;
+        line-height: 1.3rem;
         color: rgb(255, 255, 255);
-        background-color: var(--rowBackground);
     }
     .catalogDetails {
         width: 80%;
