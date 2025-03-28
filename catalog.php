@@ -37,6 +37,7 @@ session_start();
                             </div>
                         </div>
                     </div>
+                    <div class = "catalogItemTitles">holy pandas</div>
                     <div class="catalogItem">
                         <img class = "catalogImages" src="images/catalog/switches/holypanda.png">
                         <div class="catalogDetails">
@@ -50,6 +51,7 @@ session_start();
                             </div>
                         </div>
                     </div>
+                    <div class = "catalogItemTitles">otemu browns</div>
                     <div class="catalogItem">
                         <img class = "catalogImages" src="images/catalog/switches/otemu_brown.png">
                         <div class="catalogDetails">
@@ -63,6 +65,7 @@ session_start();
                             </div>
                         </div>
                     </div>
+                    <div class = "catalogItemTitles">kailh box jades</div>
                     <div class="catalogItem">
                         <img class = "catalogImages" src="images/catalog/switches/boxjade.png">
                         <div class="catalogDetails">
@@ -76,6 +79,7 @@ session_start();
                             </div>
                         </div>
                     </div>
+                    <div class = "catalogItemTitles">gatreon oil kings</div>
                     <div class="catalogItem">
                         <img class = "catalogImages" src="images/catalog/switches/gatreon_oilking.png">   
                         <div class="catalogDetails">
