@@ -23,7 +23,9 @@ session_start();
                     <h1 class="description">Find keycap sets to match your vibe, from minimalist monochrome to bold, colorful artisan designs.</h1>
                 </div>
                 <div class="theme-row-container" style = "display: block">
+                    <div>novelkey creams</div>
                     <div class="catalogItem">
+                        <div class="catalograting">switch type: clicky</div>
                         <img class="catalogImages" src="images/catalog/switches/novelkey_cream.jpeg">
                         <div class="catalogDetails">
                             <div class="topRow">
