@@ -33,7 +33,7 @@ session_start();
                     <h1 id="preferenceHeader">keycaps<i class="fa-solid fa-square-h"></i></h1>
                     <h1 class="description">Find keycap sets to match your vibe, from minimalist monochrome to bold, colorful artisan designs.</h1>
                 </div>
-                <div class="theme-row-container">
+                <div class="theme-row-container" style = "display: block">
                     <img class = "catalogImages" src="images/catalog/switches/novelkey_cream.jpeg">
                     <img class = "catalogImages" src="images/catalog/switches/novelkey_cream.jpeg">
                     <img class = "catalogImages" src="images/catalog/switches/novelkey_cream.jpeg">
@@ -44,7 +44,7 @@ session_start();
                         <h1 id="preferenceHeader">switches<i class="fa-solid fa-inbox"></i></h1>
                         <h1 class="description">Find keycap sets to match your vibe, from minimalist monochrome to bold, colorful artisan designs.</h1>
                     </div>
-                    <div class="theme-row-container">
+                    <div class="theme-row-container" style = "display: block">
                         <img class = "catalogImages" src="images/catalog/switches/novelkey_cream.jpeg">
                         <img class = "catalogImages" src="images/catalog/switches/novelkey_cream.jpeg">
                         <img class = "catalogImages" src="images/catalog/switches/novelkey_cream.jpeg">
@@ -55,7 +55,7 @@ session_start();
                     <h1 id="preferenceHeader">accesories<i class="fa-solid fa-wand-magic-sparkles"></i></h1>
                     <h1 class="description">Find keycap sets to match your vibe, from minimalist monochrome to bold, colorful artisan designs.</h1>
                 </div>
-                <div class="theme-row-container">
+                <div class="theme-row-container" style = "display: block">
                     <img class = "catalogImages" src="images/catalog/switches/novelkey_cream.jpeg">
                     <img class = "catalogImages" src="images/catalog/switches/novelkey_cream.jpeg">
                     <img class = "catalogImages" src="images/catalog/switches/novelkey_cream.jpeg">
@@ -66,7 +66,7 @@ session_start();
                     <h1 id="preferenceHeader">diy & customization<i class="fa-solid fa-pen"></i></h1>
                     <h1 class="description">Find keycap sets to match your vibe, from minimalist monochrome to bold, colorful artisan designs.</h1>
                 </div>
-                <div class="theme-row-container">
+                <div class="theme-row-container" style = "display: block">
                     <img class = "catalogImages" src="images/catalog/switches/novelkey_cream.jpeg">
                     <img class = "catalogImages" src="images/catalog/switches/novelkey_cream.jpeg">
                     <img class = "catalogImages" src="images/catalog/switches/novelkey_cream.jpeg">
