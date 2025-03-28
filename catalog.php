@@ -16,6 +16,29 @@ session_start();
         <div id = "showSignIn" style = "padding:0rem 2rem;" >Typing Enthusiast Catalog<i class="fa-solid fa-book"></i></div>
         <div class = "profileValues" style = "padding: 0 1rem">some links help support the site, but all picks are based on what the typing community reccomends.</div>
         
+
+        <div class="preferences">
+            <div class="catalogContainer">
+                <div>
+                    <h1 id="preferenceHeader">novelkey creams<i class="fa-solid fa-inbox"></i></h1>
+                    <h1 class="description">sdfsdf sdfksdf sdflkjsdlfkj sdflksdflsjf</h1>
+                </div>
+                <div class="catalogItem" >
+                    <img class="catalogImages" src="images/catalog/switches/novelkey_cream.jpeg">
+                    <div class="catalogDetails">
+                        <div class="topRow">
+                            <div class="catalograting">switch type: linear</div>
+                            <div>rating: <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star-half-stroke"></i><i class="fa-regular fa-star"></i></div>
+                        </div>
+                        <div class="bottomRow">
+                            <div>description: a renowned switch known for its quite creamy sound.</div>
+                            <div>sound test demo by taeha types: <a href="https://www.youtube.com/watch?v=P6gW18XE6EM" target="_blank">Watch</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="preferences">
             <div class="catalogContainer">
                 <div>
