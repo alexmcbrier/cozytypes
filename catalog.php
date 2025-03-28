@@ -13,6 +13,8 @@ session_start();
 <body>
     <form id="mainContent" method="POST" action="preferences.php">
         <?php include "./nav.php" ?>
+        <div id = "showSignIn" style = "padding:0rem 2rem;" >Catalog<i class="fa-solid fa-crown"></i></div>
+        <div class = "profileValues" style = "padding: 0 1rem">must have an account to be on the leaderboard</div>
         <div>
             <div class="statsContainer" style = "background-color: var(--rowBackground);">
                 <h1 class="notSignedIn" id="preferenceHeader">keyboards<i class="fa-solid fa-keyboard"></i></h1>
