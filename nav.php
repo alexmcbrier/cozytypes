@@ -14,7 +14,6 @@ if (isset($_SESSION["user_id"])) {
     <a class = "navIcon" href="/leaderboard"><i class="fa-solid fa-crown"></i></a>
     <a class = "navIcon" href="/about"><i class="fa-solid fa-info"></i></a>
     <a class = "navIcon" href="/catalog"><i class="fa-solid fa-cart-shopping"></i></a>
-    <a class = "navIcon" href="https://imissmycafe.com" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-mug-hot"></i></a>
     <a href="/signup" id = "showUsername">
         <i class="fa-regular fa-user"></i>
         <div><?= htmlspecialchars($user["username"]) ?></div>
