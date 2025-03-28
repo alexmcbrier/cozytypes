@@ -46,28 +46,25 @@ session_start();
                         <a class = "color-theme click theme-9009" onclick="setTheme(currentTheme, 'theme-9009')">9009</a>
                         <a class = "color-theme click godspeed" onclick="setTheme(currentTheme, 'godspeed')">godspeed</a>
                     </div>
+            </div>
+            <div id="themesContainer" class="theme-row-container">
+                <div>
+                    <h1 id="preferenceHeader">accesories<i class="fa-solid fa-wand-magic-sparkles"></i></h1>
+                </div>
+                <div class="theme-row-container">
+                    <a class = "color-theme click light " onclick="setTheme(currentTheme, 'light')">light</a>
+                    <a class = "color-theme click theme-9009" onclick="setTheme(currentTheme, 'theme-9009')">9009</a>
+                    <a class = "color-theme click godspeed" onclick="setTheme(currentTheme, 'godspeed')">godspeed</a>
                 </div>
             </div>
             <div id="themesContainer" class="theme-row-container">
-                    <div>
-                        <h1 id="preferenceHeader">accesories<i class="fa-solid fa-wand-magic-sparkles"></i></h1>
-                    </div>
-                    <div class="theme-row-container">
-                        <a class = "color-theme click light " onclick="setTheme(currentTheme, 'light')">light</a>
-                        <a class = "color-theme click theme-9009" onclick="setTheme(currentTheme, 'theme-9009')">9009</a>
-                        <a class = "color-theme click godspeed" onclick="setTheme(currentTheme, 'godspeed')">godspeed</a>
-                    </div>
+                <div>
+                    <h1 id="preferenceHeader">diy & customization<i class="fa-solid fa-pen"></i></h1>
                 </div>
-            </div>
-            <div id="themesContainer" class="theme-row-container">
-                    <div>
-                        <h1 id="preferenceHeader">diy & customization<i class="fa-solid fa-pen"></i></h1>
-                    </div>
-                    <div class="theme-row-container">
-                        <a class = "color-theme click light " onclick="setTheme(currentTheme, 'light')">light</a>
-                        <a class = "color-theme click theme-9009" onclick="setTheme(currentTheme, 'theme-9009')">9009</a>
-                        <a class = "color-theme click godspeed" onclick="setTheme(currentTheme, 'godspeed')">godspeed</a>
-                    </div>
+                <div class="theme-row-container">
+                    <a class = "color-theme click light " onclick="setTheme(currentTheme, 'light')">light</a>
+                    <a class = "color-theme click theme-9009" onclick="setTheme(currentTheme, 'theme-9009')">9009</a>
+                    <a class = "color-theme click godspeed" onclick="setTheme(currentTheme, 'godspeed')">godspeed</a>
                 </div>
             </div>
         </div>
