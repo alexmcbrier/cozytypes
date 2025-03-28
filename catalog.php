@@ -13,13 +13,14 @@ session_start();
 <body>
     <form id="mainContent" method="POST" action="preferences.php">
         <?php include "./nav.php" ?>
-        <div id = "showSignIn" style = "padding:0rem 2rem;" >Catalog<i class="fa-solid fa-crown"></i></div>
+        <div id = "showSignIn" style = "padding:0rem 2rem;" >Catalog<i class="fa-solid fa-book"></i></div>
         <div class = "profileValues" style = "padding: 0 1rem">some links help support the site, but all picks are based on what the typing community reccomends.</div>
         
         <div class="preferences">
             <div class="catalogContainer">
                 <div>
                     <h1 id="preferenceHeader">keyboards<i class="fa-solid fa-keyboard"></i></h1>
+                    <h1 class="description">Discover mechanical keyboards suited for every style—whether you're a speed typist, gamer, or just looking for the perfect aesthetic.</h1>
                 </div>
                 <div class="theme-row-container">
                     <a class = "color-theme click light " onclick="setTheme(currentTheme, 'light')">light</a>
@@ -30,6 +31,7 @@ session_start();
             <div class="catalogContainer">
                 <div>
                     <h1 id="preferenceHeader">keycaps<i class="fa-solid fa-square-h"></i></h1>
+                    <h1 class="description">Find keycap sets to match your vibe, from minimalist monochrome to bold, colorful artisan designs.</h1>
                 </div>
                 <div class="theme-row-container">
                     <a class = "color-theme click light " onclick="setTheme(currentTheme, 'light')">light</a>
@@ -40,6 +42,7 @@ session_start();
             <div class="catalogContainer">
                     <div>
                         <h1 id="preferenceHeader">switches<i class="fa-solid fa-inbox"></i></h1>
+                        <h1 class="description">Find keycap sets to match your vibe, from minimalist monochrome to bold, colorful artisan designs.</h1>
                     </div>
                     <div class="theme-row-container">
                         <a class = "color-theme click light " onclick="setTheme(currentTheme, 'light')">light</a>
@@ -50,6 +53,7 @@ session_start();
             <div class="catalogContainer">
                 <div>
                     <h1 id="preferenceHeader">accesories<i class="fa-solid fa-wand-magic-sparkles"></i></h1>
+                    <h1 class="description">Find keycap sets to match your vibe, from minimalist monochrome to bold, colorful artisan designs.</h1>
                 </div>
                 <div class="theme-row-container">
                     <a class = "color-theme click light " onclick="setTheme(currentTheme, 'light')">light</a>
@@ -60,6 +64,7 @@ session_start();
             <div class="catalogContainer">
                 <div>
                     <h1 id="preferenceHeader">diy & customization<i class="fa-solid fa-pen"></i></h1>
+                    <h1 class="description">Find keycap sets to match your vibe, from minimalist monochrome to bold, colorful artisan designs.</h1>
                 </div>
                 <div class="theme-row-container">
                     <a class = "color-theme click light " onclick="setTheme(currentTheme, 'light')">light</a>
