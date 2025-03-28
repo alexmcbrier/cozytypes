@@ -24,7 +24,7 @@ session_start();
                 </div>
                 <div class="theme-row-container" style = "display: block">
                     <div class = "catalogItemTitles">novelkey creams</div>
-                    <div class="catalogItem">
+                    <div class="catalogItem" style="padding: 0px 0px 0px 15px;">
                         <img class="catalogImages" src="images/catalog/switches/novelkey_cream.jpeg">
                         <div class="catalogDetails">
                             <div class="topRow">
