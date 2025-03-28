@@ -46,8 +46,10 @@ session_start();
                     </div>
                     <div class="theme-row-container" style = "display: block">
                         <img class = "catalogImages" src="images/catalog/switches/novelkey_cream.jpeg">
-                        <img class = "catalogImages" src="images/catalog/switches/novelkey_cream.jpeg">
-                        <img class = "catalogImages" src="images/catalog/switches/novelkey_cream.jpeg">
+                        <img class = "catalogImages" src="images/catalog/switches/holypanda.png">
+                        <img class = "catalogImages" src="images/catalog/switches/otemu_brown.png">
+                        <img class = "catalogImages" src="images/catalog/switches/boxjade.png">
+                        <img class = "catalogImages" src="images/catalog/switches/gatreon_oilking.jpeg">
                     </div>
             </div>
             <div class="catalogContainer">

@@ -1423,7 +1423,7 @@ include "themes.scss"; //file contains all fonts
 
     }
     .catalogImages {
-        width: 12rem;
+        height: 12rem;
         border-radius: .75rem;
         padding: 0 .25rem;
         
