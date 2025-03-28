@@ -1437,6 +1437,10 @@ include "themes.scss"; //file contains all fonts
         line-height: 1.3rem;
         color: rgb(255, 255, 255);
     }
+    .catalogItemTitles {
+        font-size: 4rem;
+        line-height: 4rem;
+    }
     .catalogDetails {
         width: 80%;
         display: flex;
