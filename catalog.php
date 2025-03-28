@@ -36,35 +36,58 @@ session_start();
                             </div>
                         </div>
                     </div>
-                    <div class = "catalogItem">
+                    <div class="catalogItem">
                         <img class = "catalogImages" src="images/catalog/switches/holypanda.png">
-                        <div>switch type: tactile</div>
-                        <div>description: a renowned switch known for its quite creamy sound.</div>
-                        <div>rating: <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star-half-stroke"></i><i class="fa-regular fa-star"></i></div>
-                        <div>sound test demo by taeha types: https://www.youtube.com/watch?v=P6gW18XE6EM</div>
-                    </div> 
-                    <div class = "catalogItem">
+                        <div class="catalogDetails">
+                            <div class="topRow">
+                                <div class="catalograting">switch type: tactile</div>
+                                <div>description: a renowned switch known for its quite creamy sound.</div>
+                            </div>
+                            <div class="bottomRow">
+                                <div>rating: <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star-half-stroke"></i><i class="fa-regular fa-star"></i></div>
+                                <div>sound test demo by taeha types: <a href="https://www.youtube.com/watch?v=P6gW18XE6EM" target="_blank">Watch</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalogItem">
                         <img class = "catalogImages" src="images/catalog/switches/otemu_brown.png">
-                        <div>switch type: tactile</div>
-                        <div>description: a renowned switch known for its quite creamy sound.</div>
-                        <div>rating: <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star-half-stroke"></i><i class="fa-regular fa-star"></i></div>
-                        <div>sound test demo by taeha types: https://www.youtube.com/watch?v=P6gW18XE6EM</div>
-                        
-                    </div> 
-                    <div class = "catalogItem">
+                        <div class="catalogDetails">
+                            <div class="topRow">
+                                <div class="catalograting">switch type: tactile</div>
+                                <div>description: a renowned switch known for its quite creamy sound.</div>
+                            </div>
+                            <div class="bottomRow">
+                                <div>rating: <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star-half-stroke"></i><i class="fa-regular fa-star"></i></div>
+                                <div>sound test demo by taeha types: <a href="https://www.youtube.com/watch?v=P6gW18XE6EM" target="_blank">Watch</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalogItem">
                         <img class = "catalogImages" src="images/catalog/switches/boxjade.png">
-                        <div>switch type: clicky</div>
-                        <div>description: a renowned switch known for its quite creamy sound.</div>
-                        <div>rating: <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star-half-stroke"></i><i class="fa-regular fa-star"></i></div>
-                        <div>sound test demo by taeha types: https://www.youtube.com/watch?v=P6gW18XE6EM</div>
-                    </div> 
-                    <div class = "catalogItem">
+                        <div class="catalogDetails">
+                            <div class="topRow">
+                                <div class="catalograting">switch type: clicky</div>
+                                <div>description: a renowned switch known for its quite creamy sound.</div>
+                            </div>
+                            <div class="bottomRow">
+                                <div>rating: <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star-half-stroke"></i><i class="fa-regular fa-star"></i></div>
+                                <div>sound test demo by taeha types: <a href="https://www.youtube.com/watch?v=P6gW18XE6EM" target="_blank">Watch</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalogItem">
                         <img class = "catalogImages" src="images/catalog/switches/gatreon_oilking.png">   
-                        <div>switch type: linear</div>
-                        <div>description: a renowned switch known for its quite creamy sound.</div>
-                        <div>rating: <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star-half-stroke"></i><i class="fa-regular fa-star"></i></div>
-                        <div>sound test demo by taeha types: https://www.youtube.com/watch?v=P6gW18XE6EM</div>
-                    </div>  
+                        <div class="catalogDetails">
+                            <div class="topRow">
+                                <div class="catalograting">switch type: linear</div>
+                                <div>description: a renowned switch known for its quite creamy sound.</div>
+                            </div>
+                            <div class="bottomRow">
+                                <div>rating: <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star-half-stroke"></i><i class="fa-regular fa-star"></i></div>
+                                <div>sound test demo by taeha types: <a href="https://www.youtube.com/watch?v=P6gW18XE6EM" target="_blank">Watch</a></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="catalogContainer">
