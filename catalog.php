@@ -13,7 +13,7 @@ session_start();
 <body>
     <form id="mainContent" method="POST" action="preferences.php">
         <?php include "./nav.php" ?>
-        <div id = "showSignIn" style = "padding:0rem 2rem;" >Typing Enthusiast's Catalog<i class="fa-solid fa-book"></i></div>
+        <div id = "showSignIn" style = "padding:0rem 2rem;" >Typing Enthusiast Catalog<i class="fa-solid fa-book"></i></div>
         <div class = "profileValues" style = "padding: 0 1rem">some links help support the site, but all picks are based on what the typing community reccomends.</div>
         
         <div class="preferences">
@@ -23,9 +23,9 @@ session_start();
                     <h1 class="description">Discover mechanical keyboards suited for every style—whether you're a speed typist, gamer, or just looking for the perfect aesthetic.</h1>
                 </div>
                 <div class="theme-row-container">
-                    <a class = "color-theme click light " onclick="setTheme(currentTheme, 'light')">light</a>
-                    <a class = "color-theme click theme-9009" onclick="setTheme(currentTheme, 'theme-9009')">9009</a>
-                    <a class = "color-theme click godspeed" onclick="setTheme(currentTheme, 'godspeed')">godspeed</a>
+                    <img src="images/catalog/switches/novelkey_cream.jpeg">
+                    <img src="images/catalog/switches/novelkey_cream.jpeg">
+                    <img src="images/catalog/switches/novelkey_cream.jpeg">
                 </div>
             </div>
             <div class="catalogContainer">
