@@ -23,8 +23,8 @@ session_start();
                     <h1 class="description">Find keycap sets to match your vibe, from minimalist monochrome to bold, colorful artisan designs.</h1>
                 </div>
                 <div class="theme-row-container" style = "display: block">
-                    <div class = "catalogItemTitles">novelkey creams</div>
-                    <div class="catalogItem" style="padding: 0px 0px 0px 15px;">
+                    <div class = "catalogItemTitles" style="padding: 0px 0px 0px 15px;">novelkey creams</div>
+                    <div class="catalogItem" >
                         <img class="catalogImages" src="images/catalog/switches/novelkey_cream.jpeg">
                         <div class="catalogDetails">
                             <div class="topRow">
