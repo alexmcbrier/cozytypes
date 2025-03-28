@@ -23,9 +23,9 @@ session_start();
                     <h1 class="description">Discover mechanical keyboards suited for every style—whether you're a speed typist, gamer, or just looking for the perfect aesthetic.</h1>
                 </div>
                 <div class="theme-row-container">
-                    <img src="images/catalog/switches/novelkey_cream.jpeg">
-                    <img src="images/catalog/switches/novelkey_cream.jpeg">
-                    <img src="images/catalog/switches/novelkey_cream.jpeg">
+                    <img class = "catalogImages" src="images/catalog/switches/novelkey_cream.jpeg">
+                    <img class = "catalogImages" src="images/catalog/switches/novelkey_cream.jpeg">
+                    <img class = "catalogImages" src="images/catalog/switches/novelkey_cream.jpeg">
                 </div>
             </div>
             <div class="catalogContainer">
