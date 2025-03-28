@@ -1435,6 +1435,9 @@ include "themes.scss"; //file contains all fonts
         max-width: 600px;
         border: 1px solid #ccc;
         padding: 10px;
+        font-size: 1.3rem;
+        color: rgb(255, 255, 255);
+        background-color: var(--rowBackground);
     }
     .catalogDetails {
         width: 80%;
