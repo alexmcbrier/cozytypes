@@ -1432,7 +1432,7 @@ include "themes.scss"; //file contains all fonts
         display: flex;
         align-items: flex-start;
         width: 100%;
-        padding: 10px;
+        padding: 50px 0px 0px 15px;
         font-size: 1.3rem;
         line-height: 1.3rem;
         color: rgb(255, 255, 255);
