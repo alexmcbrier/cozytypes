@@ -1428,6 +1428,9 @@ include "themes.scss"; //file contains all fonts
         padding: 0 .25rem;
         
     }
+    .catalogItem {
+        display: flex;
+    }
     .color-theme
     {
         color: var(--testText);
