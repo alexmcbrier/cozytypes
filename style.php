@@ -1423,8 +1423,9 @@ include "themes.scss"; //file contains all fonts
 
     }
     .catalogImages {
-        width: 20px;
-        height: 20px;
+        width: 12rem;
+        border-radius: .75rem;
+        
     }
     .color-theme
     {

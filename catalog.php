@@ -22,7 +22,7 @@ session_start();
                     <h1 id="preferenceHeader">keyboards<i class="fa-solid fa-keyboard"></i></h1>
                     <h1 class="description">Discover mechanical keyboards suited for every style—whether you're a speed typist, gamer, or just looking for the perfect aesthetic.</h1>
                 </div>
-                <div class="theme-row-container">
+                <div class="theme-row-container" style = "display: block">
                     <img class = "catalogImages" src="images/catalog/switches/novelkey_cream.jpeg">
                     <img class = "catalogImages" src="images/catalog/switches/novelkey_cream.jpeg">
                     <img class = "catalogImages" src="images/catalog/switches/novelkey_cream.jpeg">
@@ -34,9 +34,9 @@ session_start();
                     <h1 class="description">Find keycap sets to match your vibe, from minimalist monochrome to bold, colorful artisan designs.</h1>
                 </div>
                 <div class="theme-row-container">
-                    <a class = "color-theme click light " onclick="setTheme(currentTheme, 'light')">light</a>
-                    <a class = "color-theme click theme-9009" onclick="setTheme(currentTheme, 'theme-9009')">9009</a>
-                    <a class = "color-theme click godspeed" onclick="setTheme(currentTheme, 'godspeed')">godspeed</a>
+                    <img class = "catalogImages" src="images/catalog/switches/novelkey_cream.jpeg">
+                    <img class = "catalogImages" src="images/catalog/switches/novelkey_cream.jpeg">
+                    <img class = "catalogImages" src="images/catalog/switches/novelkey_cream.jpeg">
                 </div>
             </div>
             <div class="catalogContainer">
@@ -45,9 +45,9 @@ session_start();
                         <h1 class="description">Find keycap sets to match your vibe, from minimalist monochrome to bold, colorful artisan designs.</h1>
                     </div>
                     <div class="theme-row-container">
-                        <a class = "color-theme click light " onclick="setTheme(currentTheme, 'light')">light</a>
-                        <a class = "color-theme click theme-9009" onclick="setTheme(currentTheme, 'theme-9009')">9009</a>
-                        <a class = "color-theme click godspeed" onclick="setTheme(currentTheme, 'godspeed')">godspeed</a>
+                        <img class = "catalogImages" src="images/catalog/switches/novelkey_cream.jpeg">
+                        <img class = "catalogImages" src="images/catalog/switches/novelkey_cream.jpeg">
+                        <img class = "catalogImages" src="images/catalog/switches/novelkey_cream.jpeg">
                     </div>
             </div>
             <div class="catalogContainer">
@@ -56,9 +56,9 @@ session_start();
                     <h1 class="description">Find keycap sets to match your vibe, from minimalist monochrome to bold, colorful artisan designs.</h1>
                 </div>
                 <div class="theme-row-container">
-                    <a class = "color-theme click light " onclick="setTheme(currentTheme, 'light')">light</a>
-                    <a class = "color-theme click theme-9009" onclick="setTheme(currentTheme, 'theme-9009')">9009</a>
-                    <a class = "color-theme click godspeed" onclick="setTheme(currentTheme, 'godspeed')">godspeed</a>
+                    <img class = "catalogImages" src="images/catalog/switches/novelkey_cream.jpeg">
+                    <img class = "catalogImages" src="images/catalog/switches/novelkey_cream.jpeg">
+                    <img class = "catalogImages" src="images/catalog/switches/novelkey_cream.jpeg">
                 </div>
             </div>
             <div class="catalogContainer">
@@ -67,9 +67,9 @@ session_start();
                     <h1 class="description">Find keycap sets to match your vibe, from minimalist monochrome to bold, colorful artisan designs.</h1>
                 </div>
                 <div class="theme-row-container">
-                    <a class = "color-theme click light " onclick="setTheme(currentTheme, 'light')">light</a>
-                    <a class = "color-theme click theme-9009" onclick="setTheme(currentTheme, 'theme-9009')">9009</a>
-                    <a class = "color-theme click godspeed" onclick="setTheme(currentTheme, 'godspeed')">godspeed</a>
+                    <img class = "catalogImages" src="images/catalog/switches/novelkey_cream.jpeg">
+                    <img class = "catalogImages" src="images/catalog/switches/novelkey_cream.jpeg">
+                    <img class = "catalogImages" src="images/catalog/switches/novelkey_cream.jpeg">
                 </div>
             </div>
         </div>
