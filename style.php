@@ -1423,13 +1423,30 @@ include "themes.scss"; //file contains all fonts
 
     }
     .catalogImages {
-        height: 12rem;
         border-radius: .75rem;
         padding: 0 .25rem;
-        
+        width: 20%;
+        object-fit: cover;
     }
     .catalogItem {
         display: flex;
+        align-items: flex-start;
+        width: 100%;
+        max-width: 600px;
+        border: 1px solid #ccc;
+        padding: 10px;
+    }
+    .catalogDetails {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+    .topRow, .bottomRow {
+        display: flex;
+        justify-content: space-between;
+    }
+    .topRow div, .bottomRow div {
+        width: 48%;
     }
     .color-theme
     {

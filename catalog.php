@@ -23,13 +23,19 @@ session_start();
                     <h1 class="description">Find keycap sets to match your vibe, from minimalist monochrome to bold, colorful artisan designs.</h1>
                 </div>
                 <div class="theme-row-container" style = "display: block">
-                    <div class = "catalogItem">
-                        <img class = "catalogImages" src="images/catalog/switches/novelkey_cream.jpeg">
-                        <div>switch type: linear</div>
-                        <div>description: a renowned switch known for its quite creamy sound.</div>
-                        <div>rating: <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star-half-stroke"></i><i class="fa-regular fa-star"></i></div>
-                        <div>sound test demo by taeha types: https://www.youtube.com/watch?v=P6gW18XE6EM</div>
-                    </div> 
+                    <div class="catalogItem">
+                        <img class="catalogImages" src="images/catalog/switches/novelkey_cream.jpeg">
+                        <div class="catalogDetails">
+                            <div class="topRow">
+                                <div class="catalograting">switch type: linear</div>
+                                <div>description: a renowned switch known for its quite creamy sound.</div>
+                            </div>
+                            <div class="bottomRow">
+                                <div>rating: <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star-half-stroke"></i><i class="fa-regular fa-star"></i></div>
+                                <div>sound test demo by taeha types: <a href="https://www.youtube.com/watch?v=P6gW18XE6EM" target="_blank">Watch</a></div>
+                            </div>
+                        </div>
+                    </div>
                     <div class = "catalogItem">
                         <img class = "catalogImages" src="images/catalog/switches/holypanda.png">
                         <div>switch type: tactile</div>
