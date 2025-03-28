@@ -49,7 +49,7 @@ session_start();
                         <img class = "catalogImages" src="images/catalog/switches/holypanda.png">
                         <img class = "catalogImages" src="images/catalog/switches/otemu_brown.png">
                         <img class = "catalogImages" src="images/catalog/switches/boxjade.png">
-                        <img class = "catalogImages" src="images/catalog/switches/gatreon_oilking.jpeg">
+                        <img class = "catalogImages" src="images/catalog/switches/gatreon_oilking.png">
                     </div>
             </div>
             <div class="catalogContainer">
