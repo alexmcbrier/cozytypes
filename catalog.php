@@ -19,22 +19,25 @@ session_start();
                 <a class="results">hello</a>
             </div>
             <div class="statsContainer" style = "background-color: var(--rowBackground);">
-                <h1 class="notSignedIn" id="preferenceHeader">keycaps<i class="fa-regular fa-keyboard"></i></h1>
+                <h1 class="notSignedIn" id="preferenceHeader">keycaps<i class="fa-solid fa-square-h"></i></h1>
                 <a class="results">hello</a>
             </div>
             <div class="statsContainer" style = "background-color: var(--rowBackground);">
-                <h1 class="notSignedIn" id="preferenceHeader">switches<i class="fa-regular fa-keyboard"></i></h1>
+                <h1 class="notSignedIn" id="preferenceHeader">switches<<i class="fa-solid fa-box"></i></h1>
                 <a class="results">hello</a>
             </div>
-            <div class="statsContainer" style = "background-color: var(--rowBackground);">
-                <h1 class="notSignedIn" id="preferenceHeader">accesories<i class="fa-regular fa-keyboard"></i></h1>
-                <a class="results">hello</a>
-            </div>
-            <div class="statsContainer" style = "background-color: var(--rowBackground);">
-                <h1 class="notSignedIn" id="preferenceHeader">diy & customization<i class="fa-regular fa-keyboard"></i></h1>
-                <a class="results">hello</a>
-            </div>
+            
         </div>
+        <div id="displayStats" style = "background-color: var(--background); margin: 1rem 0rem">
+            <div class="statsContainer" style = "background-color: var(--rowBackground);">
+                <h1 class="notSignedIn" id="preferenceHeader">accesories<<i class="fa-solid fa-wand-magic-sparkles"></i></h1>
+                <a class="results">hello</a>
+            </div>
+            <div class="statsContainer" style = "background-color: var(--rowBackground);">
+                <h1 class="notSignedIn" id="preferenceHeader">diy & customization<i class="fa-solid fa-wrench"></i></h1>
+                <a class="results">hello</a>
+            </div>
+        </div>  
         <?php include "./footer.php" ?>
     </form>
 </body>
