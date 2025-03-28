@@ -11,33 +11,36 @@ session_start();
      crossorigin="anonymous"></script>
 </head>
 <body>
-    <form id="mainContent" method="POST" action="preferences.php">
-        <?php include "./nav.php" ?>
-        <div>
-            <div class="statsContainer" style = "background-color: var(--rowBackground);">
-                <h1 class="notSignedIn" id="preferenceHeader">keyboards<i class="fa-solid fa-keyboard"></i></h1>
-                <a class="results">hello</a>
-            </div>
-            <div class="statsContainer" style = "background-color: var(--rowBackground);">
-                <h1 class="notSignedIn" id="preferenceHeader">keycaps<i class="fa-solid fa-square-h"></i></h1>
-                <a class="results">hello</a>
-            </div>
-            <div class="statsContainer" style = "background-color: var(--rowBackground);">
-                <h1 class="notSignedIn" id="preferenceHeader">switches<i class="fa-solid fa-inbox"></i></h1>
-                <a class="results">hello</a>
-            </div>
-            <div class="statsContainer" style = "background-color: var(--rowBackground);">
-                <h1 class="notSignedIn" id="preferenceHeader">accesories<i class="fa-solid fa-wand-magic-sparkles"></i></h1>
-                <a class="results">hello</a>
-            </div>
-            <div class="statsContainer" style = "background-color: var(--rowBackground);">
-                <h1 class="notSignedIn" id="preferenceHeader">diy & customization<i class="fa-solid fa-pen"></i></h1>
-                <a class="results">hello</a>
-            </div>
-        </div> 
-        <?php include "./footer.php" ?>
-    </form>
-</body>
+    <main id="mainContent">
+        <header class="catalogHeader">
+            <h1>CozyTypes Catalog</h1>
+            <p>Explore our selection of keyboards, keycaps, switches, and more.</p>
+        </header>
 
+        <section class="catalogGrid">
+            <div class="catalogItem">
+                <h2>Keyboards <i class="fa-solid fa-keyboard"></i></h2>
+                <p>hello</p>
+            </div>
+            <div class="catalogItem">
+                <h2>Keycaps <i class="fa-solid fa-square-h"></i></h2>
+                <p>hello</p>
+            </div>
+            <div class="catalogItem">
+                <h2>Switches <i class="fa-solid fa-inbox"></i></h2>
+                <p>hello</p>
+            </div>
+            <div class="catalogItem">
+                <h2>Accessories <i class="fa-solid fa-wand-magic-sparkles"></i></h2>
+                <p>hello</p>
+            </div>
+            <div class="catalogItem">
+                <h2>DIY & Customization <i class="fa-solid fa-pen"></i></h2>
+                <p>hello</p>
+            </div>
+        </section>
+        </main>
+    </body>
+    <?php include "./footer.php"; ?>
 </html>
 
