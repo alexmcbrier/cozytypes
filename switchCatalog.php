@@ -51,7 +51,7 @@ session_start();
                         <div><span style="font-weight: bold;">Mount: </span> PCB</div>
                     </div>
                     <div>
-                        <iframe width="400" height="250" src="https://www.youtube.com/embed/P6gW18XE6EM" 
+                        <iframe width="400" height="250" src="https://youtu.be/5PseHc6UpFM?si=cA8dmeV651WD_2uz" 
                                 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
                                 clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                         </iframe>
@@ -74,30 +74,7 @@ session_start();
                         <div><span style="font-weight: bold;">Mount: </span> PCB</div>
                     </div>
                     <div>
-                        <iframe width="400" height="250" src="https://www.youtube.com/embed/P6gW18XE6EM" 
-                                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
-                                clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="preferences">
-            <div class="catalogContainer">
-                <div>
-                    <h1 id="preferenceHeader">outemu browns</h1>
-                    <h1 class="description">Outemu Brown switches are a budget-friendly alternative to Cherry MX Browns, offering a medium tactile bump with a 45g actuation force. They provide a light tactile response without being too aggressive, making them a great choice for typists and gamers alike. Compared to other tactile switches, they feel slightly scratchier, but they are still a solid entry-level option for those new to mechanical keyboards.</h1>
-                </div>
-                <div class="catalogItem" >
-                    <div class="catalogDetails">
-                        <div><span style="font-weight: bold;">Rating: </span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star-half-stroke"></i><i class="fa-regular fa-star"></i></div>
-                        <div class="catalograting"><span style="font-weight: bold;">Type: </span> linear</div>
-                        <div><span style="font-weight: bold;">Travel Distance: </span> 2mm Actuation, 4mm Bottom</div>
-                        <div><span style="font-weight: bold;">Force: </span> 55g Operating, 70g Bottom</div>
-                        <div><span style="font-weight: bold;">Mount: </span> PCB</div>
-                    </div>
-                    <div>
-                        <iframe width="400" height="250" src="https://www.youtube.com/embed/P6gW18XE6EM" 
+                        <iframe width="400" height="250" src="https://youtu.be/COrEByOHkx4?si=mAX-bpM2Zx1fhsBh" 
                                 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
                                 clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                         </iframe>
@@ -120,7 +97,7 @@ session_start();
                         <div><span style="font-weight: bold;">Mount: </span> PCB</div>
                     </div>
                     <div>
-                        <iframe width="400" height="250" src="https://www.youtube.com/embed/P6gW18XE6EM" 
+                        <iframe width="400" height="250" src="https://youtu.be/JBp145_dAhA?si=A2GjoCE9eTtMUWFB" 
                                 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
                                 clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                         </iframe>
@@ -214,7 +191,7 @@ session_start();
                             </div>
                         </div>
                     </div>
-                    <div class = "catalogItemTitles">gatreon oil kings</div>
+                    <div class = "catalogItemTitles">gateron oil king</div>
                     <div class="catalogItem">
                         <img class = "catalogImages" src="images/catalog/switches/gatreon_oilking.png">   
                         <div class="catalogDetails">
@@ -224,7 +201,7 @@ session_start();
                             </div>
                             <div class="bottomRow">
                                 <div>rating: <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star-half-stroke"></i><i class="fa-regular fa-star"></i></div>
-                                <div>sound test demo by taeha types: <a href="https://www.youtube.com/watch?v=P6gW18XE6EM" target="_blank">Watch</a></div>
+                                <div>sound test demo by taeha types: <a href="https://youtu.be/-A_M_hvjVNY?si=M7VPp6oXw6r6b5ce" target="_blank">Watch</a></div>
                             </div>
                         </div>
                     </div>
