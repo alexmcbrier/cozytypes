@@ -13,7 +13,7 @@ session_start();
 <body>
     <form id="mainContent" method="POST" action="preferences.php">
         <?php include "./nav.php" ?>
-        <div id = "showSignIn" style = "padding:0rem 2rem;" >Mechanical Keyboard Shopping Catalog<i class="fa-solid fa-book"></i></div>
+        <div id = "showSignIn" style = "padding:0rem 2rem;" > Keyboard Build Catalog<i class="fa-solid fa-book"></i></div>
         <div class = "profileValues" style = "padding: 0 1rem">some links help support the site, but all picks are based on what the typing community reccomends.</div>
         <div>
             <div class="statsContainer" style = "background-color: var(--rowBackground);">
