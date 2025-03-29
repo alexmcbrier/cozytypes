@@ -28,8 +28,7 @@ session_start();
                         <div>rating: <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star-half-stroke"></i><i class="fa-regular fa-star"></i></div>
                         <div>actuation force: 55g</div>
                     </div>
-                    <div>
-                        <div>Sound test demo by Taeha Types:</div>
+                    <div style = "border-radius: 3rem">
                         <iframe width="400" height="250" src="https://www.youtube.com/embed/P6gW18XE6EM" 
                                 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
                                 clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>

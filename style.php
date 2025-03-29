@@ -1436,6 +1436,7 @@ include "themes.scss"; //file contains all fonts
         font-size: 1.3rem;
         line-height: 1.3rem;
         color: rgb(255, 255, 255);
+        align-items: center;
     }
     .catalogItemTitles {
         font-size: 2rem;
