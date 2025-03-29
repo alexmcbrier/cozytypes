@@ -680,7 +680,7 @@ include "themes.scss"; //file contains all fonts
         padding: 0 1rem;
         color: rgb(255, 255, 255);
         opacity: 85%;
-        line-height: 1.6rem;
+        line-height: 2rem;
     }
     .aboutDescription {
         font-size: 1.5rem;
@@ -1452,6 +1452,7 @@ include "themes.scss"; //file contains all fonts
         flex-direction: column;
         font-size: 1.5rem;
         line-height: 3rem;
+        padding: 0 2rem 0 0;
     }
     .topRow, .bottomRow {
         display: flex;
