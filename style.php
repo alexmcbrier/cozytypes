@@ -1436,7 +1436,6 @@ include "themes.scss"; //file contains all fonts
         font-size: 1.3rem;
         line-height: 1.3rem;
         color: rgb(255, 255, 255);
-        align-items: center;
     }
     .catalogItemTitles {
         font-size: 2rem;
@@ -1445,7 +1444,6 @@ include "themes.scss"; //file contains all fonts
         padding: 50px 0px 0px 15px;
     }
     .catalogDetails {
-        width: 80%;
         display: flex;
         flex-direction: column;
     }
