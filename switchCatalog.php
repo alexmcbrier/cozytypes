@@ -24,21 +24,16 @@ session_start();
                 <div class="catalogItem" >
                     <img class="catalogImages" src="images/catalog/switches/novelkey_cream.jpeg">
                     <div class="catalogDetails">
-                        <div class="topRow">
-                            <div class="catalograting">switch type: linear</div>
-                            <div>rating: <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star-half-stroke"></i><i class="fa-regular fa-star"></i></div>
-                        </div>
-                        <div class="bottomRow">
-                            <div>actuation force: 55g</div>
-                            <div>
-                                <div>Sound test demo by Taeha Types:</div>
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/P6gW18XE6EM" 
-                                        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
-                                        clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                                </iframe>
-                            </div>
-                            
-                        </div>
+                        <div class="catalograting">switch type: linear</div>
+                        <div>rating: <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star-half-stroke"></i><i class="fa-regular fa-star"></i></div>
+                        <div>actuation force: 55g</div>
+                    </div>
+                    <div>
+                        <div>Sound test demo by Taeha Types:</div>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/P6gW18XE6EM" 
+                                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+                                clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                        </iframe>
                     </div>
                 </div>
             </div>
