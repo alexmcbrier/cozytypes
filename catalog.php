@@ -15,7 +15,9 @@ session_start();
         <?php include "./nav.php" ?>
         <div>
             <div class="statsContainer" style = "background-color: var(--rowBackground);">
-                <a class="notSignedIn" href = "/switchCatalog" id="preferenceHeader">keyboards<i class="fa-solid fa-keyboard"></i></a>
+                <h1>
+                    <a class="notSignedIn" href = "/switchCatalog" id="preferenceHeader">keyboards<i class="fa-solid fa-keyboard"></i></a>
+                </h1>
             </div>
             <div class="statsContainer" style = "background-color: var(--rowBackground);">
                 <a class="notSignedIn" href = "/switchCatalog" id="preferenceHeader">keycaps<i class="fa-solid fa-square-h"></i></a>
