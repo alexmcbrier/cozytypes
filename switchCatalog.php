@@ -19,7 +19,6 @@ session_start();
             <div class="catalogContainer">
                 <div>
                     <h1 id="preferenceHeader">novelkey creams<i class="fa-solid fa-inbox"></i></h1>
-                    <h1 class="description">sdfsdf sdfksdf sdflkjsdlfkj sdflksdflsjf</h1>
                 </div>
                 <div class="catalogItem" >
                     <img class="catalogImages" src="images/catalog/switches/novelkey_cream.jpeg">
@@ -29,7 +28,7 @@ session_start();
                             <div>rating: <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star-half-stroke"></i><i class="fa-regular fa-star"></i></div>
                         </div>
                         <div class="bottomRow">
-                            <div>description: a renowned switch known for its quite creamy sound.</div>
+                            <div>description: aNovelKeys Cream switches feature a full POM (polyoxymethylene) housing and stem, designed to self-lubricate over time. They have a 55g actuation force and a smooth, scratch-free keystroke once broken in. Due to the POM construction, these switches produce a deep, creamy sound. While they start off feeling slightly scratchy, regular use enhances their smoothness, making them a favorite among linear switch lovers.</div>
                             <div>sound test demo by taeha types: <a href="https://www.youtube.com/watch?v=P6gW18XE6EM" target="_blank">Watch</a></div>
                         </div>
                     </div>
