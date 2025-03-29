@@ -20,16 +20,24 @@ session_start();
                 </h1>
             </div>
             <div class="statsContainer" style = "background-color: var(--rowBackground);">
-                <a class="notSignedIn" href = "/switchCatalog" id="preferenceHeader">keycaps<i class="fa-solid fa-square-h"></i></a>
+                <h1>
+                    <a class="notSignedIn" href = "/switchCatalog" id="preferenceHeader">keycaps<i class="fa-solid fa-square-h"></i></a>
+                </h1>
             </div>
             <div class="statsContainer" style = "background-color: var(--rowBackground);">
-                <a class="notSignedIn" href = "/switchCatalog" id="preferenceHeader">switches<i class="fa-solid fa-inbox"></i></a>
+                <h1>
+                    <a class="notSignedIn" href = "/switchCatalog" id="preferenceHeader">switches<i class="fa-solid fa-inbox"></i></a>
+                </h1>
             </div>
             <div class="statsContainer" style = "background-color: var(--rowBackground);">
-                <a class="notSignedIn" href = "/switchCatalog" id="preferenceHeader">accesories<i class="fa-solid fa-wand-magic-sparkles"></i></a>
+                <h1>
+                    <a class="notSignedIn" href = "/switchCatalog" id="preferenceHeader">accesories<i class="fa-solid fa-wand-magic-sparkles"></i></a>
+                </h1>
             </div>
             <div class="statsContainer" style = "background-color: var(--rowBackground);">
-                <a class="notSignedIn" href = "/switchCatalog" id="preferenceHeader">diy & customization<i class="fa-solid fa-pen"></i></a>
+                <h1>
+                    <a class="notSignedIn" href = "/switchCatalog" id="preferenceHeader">diy & customization<i class="fa-solid fa-pen"></i></a>
+                </h1>
             </div>
         </div>  
         <?php include "./footer.php" ?>
