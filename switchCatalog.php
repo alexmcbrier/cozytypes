@@ -13,7 +13,6 @@ session_start();
 <body>
     <form id="mainContent" method="POST" action="preferences.php">
         <?php include "./nav.php" ?>
-        <div id = "showSignIn" style = "padding:0rem 2rem;" >Keyboard Switches<i class="fa-solid fa-inbox"></i></div>
         <div class="preferences">
             <div class="catalogContainer">
                 <div>
