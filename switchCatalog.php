@@ -30,7 +30,7 @@ session_start();
                     </div>
                     <div>
                         <div>Sound test demo by Taeha Types:</div>
-                        <iframe class = "catalogVideoEmbed"width="500" height="300" src="https://www.youtube.com/embed/P6gW18XE6EM" 
+                        <iframe class = "catalogVideoEmbed"width="400" height="280" src="https://www.youtube.com/embed/P6gW18XE6EM" 
                                 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
                                 clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                         </iframe>
