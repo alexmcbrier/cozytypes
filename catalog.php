@@ -16,7 +16,7 @@ session_start();
         <div>
             <div class="statsContainer" style = "background-color: var(--rowBackground);">
                 <h1 class="notSignedIn" id="preferenceHeader">keyboards<i class="fa-solid fa-keyboard"></i></h1>
-                <a class="results" href = "/catalog/switches" >hello</a>
+                <a class="results" href = "/signup" >hello</a>
             </div>
             <div class="statsContainer" style = "background-color: var(--rowBackground);">
                 <h1 class="notSignedIn" id="preferenceHeader">keycaps<i class="fa-solid fa-square-h"></i></h1>
