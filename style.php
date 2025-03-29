@@ -1216,6 +1216,9 @@ include "themes.scss"; //file contains all fonts
         transition: opacity 0.5s ease-in-out;
         
     }
+    .notSignedIn {
+        text-decoration: none;
+    }
     #notifications
     {
         position: fixed;
