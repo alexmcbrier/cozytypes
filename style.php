@@ -680,7 +680,7 @@ include "themes.scss"; //file contains all fonts
         padding: 0 1rem;
         color: rgb(255, 255, 255);
         opacity: 85%;
-        line-height: 1rem;
+        line-height: 1.6rem;
     }
     .aboutDescription {
         font-size: 1.5rem;
