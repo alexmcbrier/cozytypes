@@ -15,24 +15,19 @@ session_start();
         <?php include "./nav.php" ?>
         <div>
             <div class="statsContainer" style = "background-color: var(--rowBackground);">
-                <h1 class="notSignedIn" id="preferenceHeader">keyboards<i class="fa-solid fa-keyboard"></i></h1>
-                <a class="results" href = "/switchCatalog" >hello</a>
+                <h1 class="notSignedIn" href = "/switchCatalog" id="preferenceHeader">keyboards<i class="fa-solid fa-keyboard"></i></h1>
             </div>
             <div class="statsContainer" style = "background-color: var(--rowBackground);">
-                <h1 class="notSignedIn" id="preferenceHeader">keycaps<i class="fa-solid fa-square-h"></i></h1>
-                <a class="results">hello</a>
+                <h1 class="notSignedIn" href = "/switchCatalog" id="preferenceHeader">keycaps<i class="fa-solid fa-square-h"></i></h1>
             </div>
             <div class="statsContainer" style = "background-color: var(--rowBackground);">
-                <h1 class="notSignedIn" id="preferenceHeader">switches<i class="fa-solid fa-inbox"></i></h1>
-                <a class="results">hello</a>
+                <h1 class="notSignedIn" href = "/switchCatalog" id="preferenceHeader">switches<i class="fa-solid fa-inbox"></i></h1>
             </div>
             <div class="statsContainer" style = "background-color: var(--rowBackground);">
-                <h1 class="notSignedIn" id="preferenceHeader">accesories<i class="fa-solid fa-wand-magic-sparkles"></i></h1>
-                <a class="results">hello</a>
+                <h1 class="notSignedIn" href = "/switchCatalog" id="preferenceHeader">accesories<i class="fa-solid fa-wand-magic-sparkles"></i></h1>
             </div>
             <div class="statsContainer" style = "background-color: var(--rowBackground);">
-                <h1 class="notSignedIn" id="preferenceHeader">diy & customization<i class="fa-solid fa-pen"></i></h1>
-                <a class="results">hello</a>
+                <h1 class="notSignedIn" href = "/switchCatalog" id="preferenceHeader">diy & customization<i class="fa-solid fa-pen"></i></h1>
             </div>
         </div>  
         <?php include "./footer.php" ?>
