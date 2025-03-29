@@ -23,11 +23,11 @@ session_start();
                 </div>
                 <div class="catalogItem" >
                     <div class="catalogDetails">
-                        <div>rating: <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star-half-stroke"></i><i class="fa-regular fa-star"></i></div>
-                        <div class="catalograting">switch type: linear</div>
-                        <div>Travel Distance: 2mm Actuation, 4mm Bottom</div>
-                        <div>Force: 55g Operating, 70g Bottom</div>
-                        <div>Mount: PCB</div>
+                        <div><span style="font-weight: bold;">Rating: </span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star-half-stroke"></i><i class="fa-regular fa-star"></i></div>
+                        <div class="catalograting"><span style="font-weight: bold;">Type: </span> linear</div>
+                        <div><span style="font-weight: bold;">Travel Distance: </span> 2mm Actuation, 4mm Bottom</div>
+                        <div><span style="font-weight: bold;">Force: </span> 55g Operating, 70g Bottom</div>
+                        <div><span style="font-weight: bold;">Mount: </span> PCB</div>
                     </div>
                     <div>
                         <iframe width="400" height="250" src="https://www.youtube.com/embed/P6gW18XE6EM" 
