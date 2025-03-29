@@ -22,10 +22,9 @@ session_start();
                     <h1 class="description">description: NovelKeys Cream switches feature a full POM (polyoxymethylene) housing and stem, designed to self-lubricate over time. They have a 55g actuation force and a smooth, scratch-free keystroke once broken in. Due to the POM construction, these switches produce a deep, creamy sound that enthusiasts appreciate. While they start off feeling slightly scratchy, regular use enhances their smoothness, making them a favorite among linear switch lovers.</h1>
                 </div>
                 <div class="catalogItem" >
-                    <img class="catalogImages" src="images/catalog/switches/novelkey_cream.jpeg">
                     <div class="catalogDetails">
-                        <div class="catalograting">switch type: linear</div>
                         <div>rating: <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star-half-stroke"></i><i class="fa-regular fa-star"></i></div>
+                        <div class="catalograting">switch type: linear</div>
                         <div>actuation force: 55g</div>
                     </div>
                     <div>
