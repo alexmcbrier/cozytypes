@@ -675,7 +675,7 @@ include "themes.scss"; //file contains all fonts
         width: 100%;
     }
     .catalogVideoEmbed {
-        width="373" height="210" 
+        width="500" height="285" 
     }
     .description
     {
