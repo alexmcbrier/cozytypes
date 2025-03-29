@@ -28,7 +28,7 @@ session_start();
                         <div><span style="font-weight: bold;">Mount: </span> PCB</div>
                     </div>
                     <div>
-                        <iframe width="400" height="250" src="https://www.youtube.com/embed/P6gW18XE6EM" 
+                        <iframe width="400" height="225" src="https://www.youtube.com/embed/P6gW18XE6EM" 
                                 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
                                 clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                         </iframe>
@@ -51,7 +51,7 @@ session_start();
                         <div><span style="font-weight: bold;">Mount: </span> PCB</div>
                     </div>
                     <div>
-                        <iframe width="400" height="250" src="https://www.youtube.com/embed/5PseHc6UpFM" 
+                        <iframe width="400" height="225" src="https://www.youtube.com/embed/5PseHc6UpFM" 
                                 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
                                 clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                         </iframe>
@@ -74,7 +74,7 @@ session_start();
                         <div><span style="font-weight: bold;">Mount: </span> PCB</div>
                     </div>
                     <div>
-                        <iframe width="400" height="250" src="https://www.youtube.com/embed/COrEByOHkx4" 
+                        <iframe width="400" height="225" src="https://www.youtube.com/embed/COrEByOHkx4" 
                                 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
                                 clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                         </iframe>
@@ -97,7 +97,7 @@ session_start();
                         <div><span style="font-weight: bold;">Mount: </span> PCB</div>
                     </div>
                     <div>
-                        <iframe width="400" height="250" src="https://www.youtube.com/embed/JBp145_dAhA" 
+                        <iframe width="400" height="225" src="https://www.youtube.com/embed/JBp145_dAhA" 
                                 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
                                 clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                         </iframe>
@@ -120,7 +120,7 @@ session_start();
                         <div><span style="font-weight: bold;">Mount: </span> PCB</div>
                     </div>
                     <div>
-                        <iframe width="400" height="250" src="https://www.youtube.com/embed/P6gW18XE6EM" 
+                        <iframe width="400" height="225" src="https://www.youtube.com/embed/P6gW18XE6EM" 
                                 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
                                 clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                         </iframe>
