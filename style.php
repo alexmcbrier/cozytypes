@@ -674,9 +674,6 @@ include "themes.scss"; //file contains all fonts
         line-height: 2.3rem;
         width: 100%;
     }
-    .catalogVideoEmbed {
-        width="500" height="285" 
-    }
     .description
     {
         font-size: 1.3rem;
