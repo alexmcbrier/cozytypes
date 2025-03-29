@@ -25,11 +25,11 @@ session_start();
                     <img class="catalogImages" src="images/catalog/switches/novelkey_cream.jpeg">
                     <div class="catalogDetails">
                         <div class="topRow">
-                            <div class="catalograting">switch type - linear</div>
+                            <div class="catalograting">switch type: linear</div>
                             <div>rating: <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star-half-stroke"></i><i class="fa-regular fa-star"></i></div>
                         </div>
                         <div class="bottomRow">
-                            <div>actuation force - 55g</div>
+                            <div>actuation force: 55g</div>
                             <div>sound test demo by taeha types: <a href="https://www.youtube.com/watch?v=P6gW18XE6EM" target="_blank">Watch</a></div>
                         </div>
                     </div>
@@ -40,14 +40,14 @@ session_start();
             <div class="catalogContainer">
                 <div>
                     <h1 id="preferenceHeader">holy pandas</h1>
-                    <h1 class="description">sdfsdf sdfksdf sdflkjsdlfkj sdflksdflsjf</h1>
+                    <h1 class="description">Holy Pandas are one of the most revered tactile switches in the mechanical keyboard community. They feature a 67g actuation force and a sharp tactile bump right at the start of the keystroke, giving a highly responsive typing feel. Created by combining Halo True stems with Invyr Panda housings, they produce a snappy, resonant "thock" sound. These are perfect for those who love a distinct and satisfying tactile response.</h1>
                 </div>
                 <div class="catalogItem">
                     <img class = "catalogImages" src="images/catalog/switches/holypanda.png">
                     <div class="catalogDetails">
                         <div class="topRow">
                             <div class="catalograting">switch type: tactile</div>
-                            <div>description: a renowned switch known for its quite creamy sound.</div>
+                            <div>actuation force: 67g</div>
                         </div>
                         <div class="bottomRow">
                             <div>rating: <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star-half-stroke"></i><i class="fa-regular fa-star"></i></div>
@@ -61,14 +61,14 @@ session_start();
             <div class="catalogContainer">
                 <div>
                     <h1 id="preferenceHeader">otemu browns</h1>
-                    <h1 class="description">sdfsdf sdfksdf sdflkjsdlfkj sdflksdflsjf</h1>
+                    <h1 class="description">Outemu Brown switches are a budget-friendly alternative to Cherry MX Browns, offering a medium tactile bump with a 45g actuation force. They provide a light tactile response without being too aggressive, making them a great choice for typists and gamers alike. Compared to other tactile switches, they feel slightly scratchier, but they are still a solid entry-level option for those new to mechanical keyboards.</h1>
                 </div>
                 <div class="catalogItem">
                     <img class = "catalogImages" src="images/catalog/switches/otemu_brown.png">
                     <div class="catalogDetails">
                         <div class="topRow">
                             <div class="catalograting">switch type: tactile</div>
-                            <div>description: a renowned switch known for its quite creamy sound.</div>
+                            <div>actuation force: 45g</div>
                         </div>
                         <div class="bottomRow">
                             <div>rating: <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star-half-stroke"></i><i class="fa-regular fa-star"></i></div>
@@ -82,14 +82,14 @@ session_start();
             <div class="catalogContainer">
                 <div>
                     <h1 id="preferenceHeader">kailh box jades</h1>
-                    <h1 class="description">sdfsdf sdfksdf sdflkjsdlfkj sdflksdflsjf</h1>
+                    <h1 class="description">Kailh Box Jades are ultra-clicky switches with a 50g actuation force and a tactile bump that feels crisp and pronounced. These switches are known for their high-pitched, loud click that is sharper than standard Cherry MX Blues, making them ideal for those who love an audible and responsive typing experience. The Box design prevents dust and debris from affecting performance, ensuring long-lasting reliability.</h1>
                 </div>
                 <div class="catalogItem">
                     <img class = "catalogImages" src="images/catalog/switches/boxjade.png">
                     <div class="catalogDetails">
                         <div class="topRow">
                             <div class="catalograting">switch type: clicky</div>
-                            <div>description: a renowned switch known for its quite creamy sound.</div>
+                            <div>actuation force: 50g</div>
                         </div>
                         <div class="bottomRow">
                             <div>rating: <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star-half-stroke"></i><i class="fa-regular fa-star"></i></div>
@@ -103,14 +103,14 @@ session_start();
             <div class="catalogContainer">
                 <div>
                     <h1 id="preferenceHeader">gatreon oil kings</h1>
-                    <h1 class="description">sdfsdf sdfksdf sdflkjsdlfkj sdflksdflsjf</h1>
+                    <h1 class="description">Gateron Oil Kings are premium linear switches featuring a black nylon bottom housing, PA66 top housing, and a POM stem, resulting in an extremely smooth keystroke. With a 55g actuation force and a factory pre-lubed design, they provide a deep, muted "thock" sound that many typists enjoy. They are an excellent choice for those who want a buttery-smooth typing experience without additional modifications.</h1>
                 </div>
                 <div class="catalogItem">
                     <img class = "catalogImages" src="images/catalog/switches/gatreon_oilking.png">   
                     <div class="catalogDetails">
                         <div class="topRow">
                             <div class="catalograting">switch type: linear</div>
-                            <div>description: a renowned switch known for its quite creamy sound.</div>
+                            <div>actuation force: 55g</div>
                         </div>
                         <div class="bottomRow">
                             <div>rating: <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star-half-stroke"></i><i class="fa-regular fa-star"></i></div>
