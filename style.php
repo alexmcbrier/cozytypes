@@ -1446,6 +1446,8 @@ include "themes.scss"; //file contains all fonts
     .catalogDetails {
         display: flex;
         flex-direction: column;
+        font-size: 1.5rem;
+        line-height: 3rem;
     }
     .topRow, .bottomRow {
         display: flex;
