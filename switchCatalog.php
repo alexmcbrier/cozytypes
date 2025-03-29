@@ -14,7 +14,6 @@ session_start();
     <form id="mainContent" method="POST" action="preferences.php">
         <?php include "./nav.php" ?>
         <div id = "showSignIn" style = "padding:0rem 2rem;" >Keyboard Switches<i class="fa-solid fa-inbox"></i></div>
-        <h1 class="description">Find various keyboard switches from linear and smooth, loud and tactile, to deep and thocky</h1>
         <div class="preferences">
             <div class="catalogContainer">
                 <div>
