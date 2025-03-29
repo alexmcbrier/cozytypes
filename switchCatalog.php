@@ -30,7 +30,14 @@ session_start();
                         </div>
                         <div class="bottomRow">
                             <div>actuation force: 55g</div>
-                            <div>sound test demo by taeha types: <a href="https://www.youtube.com/watch?v=P6gW18XE6EM" target="_blank">Watch</a></div>
+                            <div>
+                                <div>Sound test demo by Taeha Types:</div>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/P6gW18XE6EM" 
+                                        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+                                        clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                                </iframe>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
