@@ -42,9 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     mainContent.style.opacity = "0";
                     setTimeout(() => {
                         mainContent.replaceWith(newContent);
-                        newContent.style.opacity = "0"; // Start hidden
-                        newContent.style.transition = "opacity 0.3s ease-in";
-                        newContent.style.opacity = "1"; // Fade in new content
                         loadPreferences();
                         if (window.location.pathname === "/preferences" || window.location.pathname === "/about" || window.location.pathname === "/leaderoard") {
                             // Apply styles to allow scrolling on preferences page
@@ -60,7 +57,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     }, 300); // Wait for fade-out before replacing
                 
                     history.pushState(null, "", url); // Update URL
-                    newContent.style.transition = "none";
                 }
             })
             .catch(error => console.error("Page load failed:", error));
