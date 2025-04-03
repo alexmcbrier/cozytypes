@@ -34,10 +34,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.log("Fetched HTML:", html);
                 let parser = new DOMParser();
                 let doc = parser.parseFromString(html, "text/html");
-                let newContent = doc.querySelector("#mainContent"); // Adjust selector to match your site's structure
+                let newContent = doc.querySelector("#switchContent"); // Adjust selector to match your site's structure
                 
                 if (newContent) {
-                    let mainContent = document.querySelector("#mainContent");
+                    let mainContent = document.querySelector("#switchContent");
                 
                     // Fade out old content
                     mainContent.style.opacity = "0";
