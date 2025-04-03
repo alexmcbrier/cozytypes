@@ -754,3 +754,14 @@ const observer = new MutationObserver(() => {
 
 // Observe changes in the body or a specific container
 observer.observe(document.body, { childList: true, subtree: true });
+
+
+if (window.location.pathname === "/") {
+    document.body.onLoad = refresh();
+    document.body.onresize = function() { zoomwait() };
+    document.addEventListener("click", function (event) {
+        if (event.target !== displayInput) {
+            displayInput.focus();
+        }
+    });
+}
