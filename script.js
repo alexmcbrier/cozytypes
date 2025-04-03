@@ -38,26 +38,20 @@ document.addEventListener("DOMContentLoaded", function () {
                 
                 if (newContent) {
                     let mainContent = document.querySelector("#switchContent");
-                    let nav = document.querySelector("nav"); // Select the nav to exclude it from fading
                 
-                    // Apply fade-out only to main content (not nav)
+                    // Fade out old content
                     mainContent.style.opacity = "0";
                 
                     setTimeout(() => {
-                        let newMainContent = newContent.cloneNode(true); // Clone to prevent unwanted modifications
-                        let newNav = newContent.querySelector("nav"); // Extract new nav from fetched content
-                
-                        
-                        
-                        mainContent.replaceWith(newMainContent);
-                        newMainContent.style.opacity = "0"; // Start hidden
+                        mainContent.replaceWith(newContent);
+                        newContent.style.opacity = "0"; // Start hidden
                 
                         setTimeout(() => {
-                            newMainContent.style.transition = "opacity 0.3s ease-in-out";
-                            newMainContent.style.opacity = "1"; // Fade in new content
-                        }, 10);
+                            newContent.style.transition = "opacity 0.3s ease-in-out";
+                            newContent.style.opacity = "1"; // Fade in new content
+                        }, 10); // Short delay to apply styles after replacing
                     }, 300); // Wait for fade-out before replacing
-                    
+                
                     history.pushState(null, "", url); // Update URL
                 }
                 else {
