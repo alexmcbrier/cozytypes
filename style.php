@@ -275,7 +275,7 @@ include "themes.scss"; //file contains all fonts
         user-select: none;
         display: flex;
         align-items: center;
-        transition: color .25s ease;
+        transition: none;
         color: var(--testText);
         padding: 1rem;
         font-family: var(--fontFamily);
