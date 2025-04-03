@@ -243,6 +243,8 @@ include "themes.scss"; //file contains all fonts
     }
 
     #mainContent {
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out;
         transition: all .5s ease-in-out 0s;
         width: 80%;
         margin: auto;
@@ -252,6 +254,9 @@ include "themes.scss"; //file contains all fonts
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+    }
+    .hidden {
+        opacity: 0;
     }
     #logo 
     {

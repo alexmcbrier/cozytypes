@@ -38,8 +38,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 
                 if (newContent) {
                     console.log("new content")
-                    document.querySelector("#mainContent").replaceWith(newContent);
-                    history.pushState(null, "", url); // Update URL
+                    mainContent.classList.add("hidden"); // Start fade-out
+                    setTimeout(() => {
+                        mainContent.replaceWith(newContent); // Replace content
+                        newContent.classList.remove("hidden"); // Fade-in effect
+                    }, 300); // Matches CSS transition duration
                 }
                 else {
                     console.log("no new content")
