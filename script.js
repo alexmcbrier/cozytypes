@@ -38,13 +38,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 
                 if (newContent) {
                     let mainContent = document.querySelector("#switchContent");
-                
-                    // Fade out old content
+                    mainContent.style.transition = "none"; 
                     mainContent.style.opacity = "0";
+                    // Fade out old content
                     setTimeout(() => {
                         mainContent.replaceWith(newContent);
                         newContent.style.opacity = "0"; // Start hidden
-                        newContent.style.transition = "opacity 0.4s ease-in";
+                        newContent.style.transition = "opacity 0.3s ease-in";
                         newContent.style.opacity = "1"; // Fade in new content
                     }, 300); // Wait for fade-out before replacing
                 
