@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         newContent.style.opacity = "0"; // Start hidden
                         newContent.style.transition = "opacity 0.3s ease-in";
                         newContent.style.opacity = "1"; // Fade in new content
+                        loadPreferences();
                     }, 300); // Wait for fade-out before replacing
                 
                     history.pushState(null, "", url); // Update URL
@@ -70,9 +71,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 let parser = new DOMParser();
                 let doc = parser.parseFromString(html, "text/html");
                 let newContent = doc.querySelector("#main-content"); // Adjust selector
+                loadPreferences();
                 
                 if (newContent) {
                     document.querySelector("#main-content").replaceWith(newContent);
+                    loadPreferences();
                 }
             })
             .catch(error => console.error("Navigation error:", error));
