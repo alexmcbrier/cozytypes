@@ -66,18 +66,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <body class="main-body">
         <div id="mainContent">
             <?php include "./nav.php" ?>
-            <form id="middle" method ="post" style = "width: 50%; margin: auto;">
-                <h1 id = "loginHeader">sign up</h1>
-                <?php if ($is_invalid) : ?>
-                    <div id="invalid">Invalid Credentials</div>
-                <?php endif; ?>
-                <input type="text" autocomplete = "off" placeholder="username" id="username" name = "username">
-                <input type="text" autocomplete = "off" placeholder="email" id="email"  name = "email">
-                <input type="text" autocomplete = "off" placeholder="password" id="password" name = "password">
-                <button class = "loginBtn" id = "loginButton1" type="submit" value="submit" name="register">Create account</button>
-                <div id = "signInText">Already have an account? <a id = "signInLink" href="login"> Login</a></div>
-            </form>  
-            <?php include "./footer.php" ?>
+                <div id="switchContent">
+                    <form id="middle" method ="post" style = "width: 50%; margin: auto;">
+                        <h1 id = "loginHeader">sign up</h1>
+                        <?php if ($is_invalid) : ?>
+                            <div id="invalid">Invalid Credentials</div>
+                        <?php endif; ?>
+                        <input type="text" autocomplete = "off" placeholder="username" id="username" name = "username">
+                        <input type="text" autocomplete = "off" placeholder="email" id="email"  name = "email">
+                        <input type="text" autocomplete = "off" placeholder="password" id="password" name = "password">
+                        <button class = "loginBtn" id = "loginButton1" type="submit" value="submit" name="register">Create account</button>
+                        <div id = "signInText">Already have an account? <a id = "signInLink" href="login"> Login</a></div>
+                    </form>  
+                <?php include "./footer.php" ?>
+            </div>
         </div>
     </body>
 </html>

@@ -57,19 +57,21 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <body class="main-body">
         <div id="mainContent">
             <?php include "./nav.php" ?>
-            <form id="middle" method ="post" style = "width: 50%; margin: auto;">
-                <h1 id="loginHeader">hello there, welcome back</h1>
-                <?php if ($is_invalid) : ?>
-                    <div id="invalid">Invalid login</div>
-                <?php endif; ?>
-                <input type="text" placeholder="email" name="email" id="email" value="<?= htmlspecialchars($_POST["email"] ?? "") ?>">
-                <input type="text" placeholder="password" name="password" id="password" style="-webkit-text-security: disc;">
-                <div style="display: flex; gap: 1rem">
-                    <button class="loginBtn" id="loginButton1" type="submit" value="submit">Login</button>
-                    <a class="loginBtn" id="loginButton2" href="signup">Sign Up</a>
-                </div>
-            </form>
-            <?php include "./footer.php" ?>
+            <div id="switchContent">
+                <form id="middle" method ="post" style = "width: 50%; margin: auto;">
+                    <h1 id="loginHeader">hello there, welcome back</h1>
+                    <?php if ($is_invalid) : ?>
+                        <div id="invalid">Invalid login</div>
+                    <?php endif; ?>
+                    <input type="text" placeholder="email" name="email" id="email" value="<?= htmlspecialchars($_POST["email"] ?? "") ?>">
+                    <input type="text" placeholder="password" name="password" id="password" style="-webkit-text-security: disc;">
+                    <div style="display: flex; gap: 1rem">
+                        <button class="loginBtn" id="loginButton1" type="submit" value="submit">Login</button>
+                        <a class="loginBtn" id="loginButton2" href="signup">Sign Up</a>
+                    </div>
+                </form>
+                <?php include "./footer.php" ?>
+            </div>
         </div>
     </body>
 </html>

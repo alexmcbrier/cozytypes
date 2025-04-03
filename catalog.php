@@ -13,6 +13,7 @@ session_start();
 <body>
     <form id="mainContent" method="POST" action="preferences.php">
         <?php include "./nav.php" ?>
+        <div id="switchContent">
         <div>
             <div class="statsContainer" style = "background-color: var(--rowBackground);">
                 <h1>
@@ -41,6 +42,7 @@ session_start();
             </div>
         </div>  
         <?php include "./footer.php" ?>
+        </div>
     </form>
 </body>
 
