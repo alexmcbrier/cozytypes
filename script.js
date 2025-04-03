@@ -43,6 +43,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     mainContent.style.opacity = "0";
                     setTimeout(() => {
                         mainContent.replaceWith(newContent);
+                        newContent.style.opacity = "0"; // Start hidden
+                        newContent.style.opacity = "1"; // Fade in new content
                     }, 300); // Wait for fade-out before replacing
                 
                     history.pushState(null, "", url); // Update URL
