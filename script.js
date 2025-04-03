@@ -34,22 +34,30 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.log("Fetched HTML:", html);
                 let parser = new DOMParser();
                 let doc = parser.parseFromString(html, "text/html");
-                let newContent = doc.querySelector("switchContent"); // Adjust selector to match your site's structure
+                let newContent = doc.querySelector("#mainContent"); // Adjust selector to match your site's structure
                 
                 if (newContent) {
-                    let mainContent = document.querySelector("#switchContent");
+                    let mainContent = document.querySelector("#mainContent");
+                    let nav = document.querySelector("nav"); // Select the nav to exclude it from fading
                 
-                    // Fade out old content
+                    // Apply fade-out only to main content (not nav)
                     mainContent.style.opacity = "0";
                 
                     setTimeout(() => {
-                        mainContent.replaceWith(newContent);
-                        newContent.style.opacity = "0"; // Start hidden
+                        let newMainContent = newContent.cloneNode(true); // Clone to prevent unwanted modifications
+                        let newNav = newContent.querySelector("nav"); // Extract new nav from fetched content
+                
+                        if (newNav) {
+                            nav.replaceWith(newNav); // Replace nav without fading effect
+                        }
+                
+                        mainContent.replaceWith(newMainContent);
+                        newMainContent.style.opacity = "0"; // Start hidden
                 
                         setTimeout(() => {
-                            newContent.style.transition = "opacity 0.3s ease-in-out";
-                            newContent.style.opacity = "1"; // Fade in new content
-                        }, 10); // Short delay to apply styles after replacing
+                            newMainContent.style.transition = "opacity 0.3s ease-in-out";
+                            newMainContent.style.opacity = "1"; // Fade in new content
+                        }, 10);
                     }, 300); // Wait for fade-out before replacing
                 
                     history.pushState(null, "", url); // Update URL

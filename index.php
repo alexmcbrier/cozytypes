@@ -76,160 +76,158 @@ crossorigin="anonymous"></script>
     <i class="fa-solid fa-circle-notch" id="loadingIcon"></i>
     <div id="mainContent">
         <?php include "./nav.php" ?>
-        <div id = "switchContent">
-            <script type="text/javascript">
-            function fadeOut(id)
-            {
-                document.getElementById(id).style.opacity = 0;
-                document.getElementById(id).style.display = 'none';
-                document.getElementById('middle').style.opacity = '100%';
-                document.getElementById('footer').style.opacity = '100%';
-                document.getElementById('middle').style.filter = 'none';
-                document.getElementById('footer').style.filter = 'none';
-            }
-            window.addEventListener('load', function() {
-                setTimeout(function() {
-                // Page is loaded, fade out the loading animation
-                fadeOut('loadingIcon');
-                newQuote();
-                zoomwait();
-                }, 100); // Wait for one tenth of second (100 milliseconds)
-            });
-            
-        </script>
-            <!-- Display if test not complete -->
-            <div id="middle" class = "blur">
-            <?php if (!isset($_GET["finish"])) { ?>
-                <div id="typingmode">
-                <div class="modeStack">
-                    <div>time</div>
-                    <div id = "timesContainer" style="display: flex">
-                        <div class="typingModes click" onclick="setPreference('typingMode', 'time'); setPreference('time', 15); restart();">15</div>
-                        <div class="typingModes click" onclick="setPreference('typingMode', 'time'); setPreference('time', 30); restart();">30</div>
-                        <div class="typingModes click" onclick="setPreference('typingMode', 'time'); setPreference('time', 60); restart();">60</div>
-                        <div class="typingModes click" onclick="setPreference('typingMode', 'time'); setPreference('time', 120); restart();">120</div>
-                    </div>
-                </div>
-                <div class="modeStack">
-                    <div>words</div>
-                    <div id = "wordsContainer" style="display: flex">
-                        <div class="typingModes click" onclick="setPreference('typingMode', 'words'); setPreference('words', 10); restart();">10</div>
-                        <div class="typingModes click" onclick="setPreference('typingMode', 'words'); setPreference('words', 25); restart();">25</div>
-                        <div class="typingModes click" onclick="setPreference('typingMode', 'words'); setPreference('words', 50); restart();">50</div>
-                        <div class="typingModes click" onclick="setPreference('typingMode', 'words'); setPreference('words', 100); restart();">100</div>
-                    </div>
-                </div>
-                <div class="modeStack">
-                    <div>difficulty</div>
-                    <div id = "modesContainer" style="display: flex">
-                        <div class="typingModes click" onclick="setPreference('mode', 'easy'); restart()">easy</div>
-                        <div class="typingModes click" onclick="setPreference('mode', 'hard'); restart()">hard</div>
-                    </div>
+        <script type="text/javascript">
+        function fadeOut(id)
+        {
+            document.getElementById(id).style.opacity = 0;
+            document.getElementById(id).style.display = 'none';
+            document.getElementById('middle').style.opacity = '100%';
+            document.getElementById('footer').style.opacity = '100%';
+            document.getElementById('middle').style.filter = 'none';
+            document.getElementById('footer').style.filter = 'none';
+        }
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+            // Page is loaded, fade out the loading animation
+            fadeOut('loadingIcon');
+            newQuote();
+            zoomwait();
+            }, 100); // Wait for one tenth of second (100 milliseconds)
+        });
+        
+    </script>
+        <!-- Display if test not complete -->
+        <div id="middle" class = "blur">
+        <?php if (!isset($_GET["finish"])) { ?>
+            <div id="typingmode">
+            <div class="modeStack">
+                <div>time</div>
+                <div id = "timesContainer" style="display: flex">
+                    <div class="typingModes click" onclick="setPreference('typingMode', 'time'); setPreference('time', 15); restart();">15</div>
+                    <div class="typingModes click" onclick="setPreference('typingMode', 'time'); setPreference('time', 30); restart();">30</div>
+                    <div class="typingModes click" onclick="setPreference('typingMode', 'time'); setPreference('time', 60); restart();">60</div>
+                    <div class="typingModes click" onclick="setPreference('typingMode', 'time'); setPreference('time', 120); restart();">120</div>
                 </div>
             </div>
-            <div id="time" class = "testItem" ></div>
-            <div id="testText">
-                <textarea id="textInput" spellcheck="false" autofocus></textarea>
-                <div id="wordsWrapper"></div>
-            </div>
-            <div class="testRow">
-                <div id ="resetBox" class = "testItem"><i id="restartTest"class="fa-solid fa-rotate" onclick="restart()"></i></div>
-            </div>
-            <div class="testRow">
-                <div id="wpmDisplay" class = "testItem" >0 wpm</div>
-            </div>
-            </div>
-            <?php } else if (isset($_GET["finish"])) { ?>
-            <!-- Display if test IS complete -->
-            <script type="text/javascript">
-                window.addEventListener('keydown', function (event) {
-                    // Check if the pressed key is the 'Tab' key (key code 9)
-                    if (event.key === 'Tab' || event.keyCode === 9) {
-                        // Prevent the default tab key behavior
-                        event.preventDefault();
-
-                        // restart typing test
-                        window.location.href = "https://cozytypes.com";
-                    }
-                });
-            </script>
-            <!-- 
-            <div class="keyboardPromo" style="display: flex; align-items: center; background-color: var(--rowBackground); padding: 1.5rem; margin: 1rem; gap: 1.5rem; flex-wrap: wrap;">
-                <div style="flex: 1; min-width: 250px; text-align: left;">
-                    <h1 class="notSignedIn" id="preferenceHeader" style="white-space: normal;">
-                        <a href="https://www.melgeek.com/?ref=cozytypes" style="text-decoration: none; color: var(--textColor);">
-                        Shop Keyboards and Accessories
-                        </a>
-                    </h1>
-                    
-                    <div style = "font-size: 2rem; color: var(--row); padding: 0rem 2rem;">
-                        Use code COZYTYPES for 8% off keyboards, switches, and keycaps at MelGeek.
-                    </div>
-                    <a id = "shopnow" class="preference" style = "width: 90%" href="https://www.melgeek.com/?ref=cozytypes">Shop Now</a>
-                </div>
-
-                <div style="flex: 1; min-width: 250px;">
-                    <a id="affiliateProductLink" href="https://www.melgeek.com/?ref=cozytypes">
-                        <img id="affiliateImage" class="keyboardPromo" src="" alt="MelGeek Mechanical Keyboard" style="width: 100%; border-radius: 1rem;">
-                    </a>
-                </div>
-                <script type="text/javascript">
-                    // List of image filenames
-                    const images = [
-                        { filename: "airbar", url: "https://www.melgeek.com/products/airbar-purple-wrist-rest?ref=cozytypes" },
-                        { filename: "cablepurple", url: "https://www.melgeek.com/products/melgeek-themed-cable?ref=cozytypes" },
-                        { filename: "case", url: "https://www.melgeek.com/products/anodized-aluminium-case?ref=cozytypes" },
-                        { filename: "made86air", url: "https://www.melgeek.com/?ref=cozytypes" },
-                        { filename: "made86air", url: "https://www.melgeek.com/?ref=cozytypes" },
-                        { filename: "made86smoke", url: "https://www.melgeek.com/?ref=cozytypes" },
-                        { filename: "made86smoke", url: "https://www.melgeek.com/?ref=cozytypes" }
-                    ];
-                    // Randomly pick an image object
-                    const randomImage = images[Math.floor(Math.random() * images.length)];
-
-                    const img = new Image();
-                    img.src = `images/melgeek/${randomImage.filename}.png`;
-                    
-                    // Once the image loads, update the DOM and fade it in
-                    img.onload = function() {
-                        const affiliateImage = document.getElementById("affiliateImage");
-                        const affiliateProductLink = document.getElementById("affiliateProductLink");
-                        
-                        affiliateImage.src = img.src;
-                        affiliateProductLink.href = randomImage.url;
-                        
-                        // Fade in the image
-                        affiliateImage.style.opacity = "1";
-                    }
-                </script>
-
-            </div>
-            -->
-            <div id="displayStats" style = "background-color: var(--background); margin: 1rem 0rem">
-                <div class="statsContainer" style = "background-color: var(--rowBackground);">
-                    <h1 class="notSignedIn" id="preferenceHeader">Words Per Minute<i class="fa-solid fa-clock-rotate-left"></i></h1>
-                    <a class="results"><?= $_GET["wpm"] ?></a>
-                </div>
-                <div class="statsContainer" style = "background-color: var(--rowBackground);">
-                    <h1 class="notSignedIn" id="preferenceHeader">Accuracy<i class="fa-solid fa-crosshairs"></i></h1>
-                    <a class="results"><?= $_GET["accuracy"] ?>%</a>
-                </div>
-                <div class="statsContainer" style = "background-color: var(--rowBackground);">
-                    <h1 class="notSignedIn" id="preferenceHeader"><?= $_GET["mode"] ?><i class="fa-regular fa-hourglass-half"></i></h1>
-                    <a class="results"><?= $_GET["testTime"] ?></a>
+            <div class="modeStack">
+                <div>words</div>
+                <div id = "wordsContainer" style="display: flex">
+                    <div class="typingModes click" onclick="setPreference('typingMode', 'words'); setPreference('words', 10); restart();">10</div>
+                    <div class="typingModes click" onclick="setPreference('typingMode', 'words'); setPreference('words', 25); restart();">25</div>
+                    <div class="typingModes click" onclick="setPreference('typingMode', 'words'); setPreference('words', 50); restart();">50</div>
+                    <div class="typingModes click" onclick="setPreference('typingMode', 'words'); setPreference('words', 100); restart();">100</div>
                 </div>
             </div>
-
-                <a id="showRestart" href="https://cozytypes.com/">play again<i class="fa-solid fa-backward"></i></a>
-                <?php if (isset($_SESSION["user_id"])) { ?>
-                    <a id="showRestart" href="signup">view progress<i class="fa-solid fa-medal"></i></a>
-                <?php } else { ?>
-                    <a id="showSignIn" href="signup"><span id="saveProgress">login to save progress<i class="fa-solid fa-medal"></i></a>
-                <?php } ?>
-
+            <div class="modeStack">
+                <div>difficulty</div>
+                <div id = "modesContainer" style="display: flex">
+                    <div class="typingModes click" onclick="setPreference('mode', 'easy'); restart()">easy</div>
+                    <div class="typingModes click" onclick="setPreference('mode', 'hard'); restart()">hard</div>
+                </div>
             </div>
-            <?php } ?>
         </div>
+        <div id="time" class = "testItem" ></div>
+        <div id="testText">
+            <textarea id="textInput" spellcheck="false" autofocus></textarea>
+            <div id="wordsWrapper"></div>
+        </div>
+        <div class="testRow">
+            <div id ="resetBox" class = "testItem"><i id="restartTest"class="fa-solid fa-rotate" onclick="restart()"></i></div>
+        </div>
+        <div class="testRow">
+            <div id="wpmDisplay" class = "testItem" >0 wpm</div>
+        </div>
+        </div>
+        <?php } else if (isset($_GET["finish"])) { ?>
+        <!-- Display if test IS complete -->
+        <script type="text/javascript">
+            window.addEventListener('keydown', function (event) {
+                // Check if the pressed key is the 'Tab' key (key code 9)
+                if (event.key === 'Tab' || event.keyCode === 9) {
+                    // Prevent the default tab key behavior
+                    event.preventDefault();
+
+                    // restart typing test
+                    window.location.href = "https://cozytypes.com";
+                }
+            });
+        </script>
+        <!-- 
+        <div class="keyboardPromo" style="display: flex; align-items: center; background-color: var(--rowBackground); padding: 1.5rem; margin: 1rem; gap: 1.5rem; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 250px; text-align: left;">
+                <h1 class="notSignedIn" id="preferenceHeader" style="white-space: normal;">
+                    <a href="https://www.melgeek.com/?ref=cozytypes" style="text-decoration: none; color: var(--textColor);">
+                    Shop Keyboards and Accessories
+                    </a>
+                </h1>
+                
+                <div style = "font-size: 2rem; color: var(--row); padding: 0rem 2rem;">
+                    Use code COZYTYPES for 8% off keyboards, switches, and keycaps at MelGeek.
+                </div>
+                <a id = "shopnow" class="preference" style = "width: 90%" href="https://www.melgeek.com/?ref=cozytypes">Shop Now</a>
+            </div>
+
+            <div style="flex: 1; min-width: 250px;">
+                <a id="affiliateProductLink" href="https://www.melgeek.com/?ref=cozytypes">
+                    <img id="affiliateImage" class="keyboardPromo" src="" alt="MelGeek Mechanical Keyboard" style="width: 100%; border-radius: 1rem;">
+                </a>
+            </div>
+            <script type="text/javascript">
+                // List of image filenames
+                const images = [
+                    { filename: "airbar", url: "https://www.melgeek.com/products/airbar-purple-wrist-rest?ref=cozytypes" },
+                    { filename: "cablepurple", url: "https://www.melgeek.com/products/melgeek-themed-cable?ref=cozytypes" },
+                    { filename: "case", url: "https://www.melgeek.com/products/anodized-aluminium-case?ref=cozytypes" },
+                    { filename: "made86air", url: "https://www.melgeek.com/?ref=cozytypes" },
+                    { filename: "made86air", url: "https://www.melgeek.com/?ref=cozytypes" },
+                    { filename: "made86smoke", url: "https://www.melgeek.com/?ref=cozytypes" },
+                    { filename: "made86smoke", url: "https://www.melgeek.com/?ref=cozytypes" }
+                ];
+                // Randomly pick an image object
+                const randomImage = images[Math.floor(Math.random() * images.length)];
+
+                const img = new Image();
+                img.src = `images/melgeek/${randomImage.filename}.png`;
+                
+                // Once the image loads, update the DOM and fade it in
+                img.onload = function() {
+                    const affiliateImage = document.getElementById("affiliateImage");
+                    const affiliateProductLink = document.getElementById("affiliateProductLink");
+                    
+                    affiliateImage.src = img.src;
+                    affiliateProductLink.href = randomImage.url;
+                    
+                    // Fade in the image
+                    affiliateImage.style.opacity = "1";
+                }
+            </script>
+
+        </div>
+        -->
+        <div id="displayStats" style = "background-color: var(--background); margin: 1rem 0rem">
+            <div class="statsContainer" style = "background-color: var(--rowBackground);">
+                <h1 class="notSignedIn" id="preferenceHeader">Words Per Minute<i class="fa-solid fa-clock-rotate-left"></i></h1>
+                <a class="results"><?= $_GET["wpm"] ?></a>
+            </div>
+            <div class="statsContainer" style = "background-color: var(--rowBackground);">
+                <h1 class="notSignedIn" id="preferenceHeader">Accuracy<i class="fa-solid fa-crosshairs"></i></h1>
+                <a class="results"><?= $_GET["accuracy"] ?>%</a>
+            </div>
+            <div class="statsContainer" style = "background-color: var(--rowBackground);">
+                <h1 class="notSignedIn" id="preferenceHeader"><?= $_GET["mode"] ?><i class="fa-regular fa-hourglass-half"></i></h1>
+                <a class="results"><?= $_GET["testTime"] ?></a>
+            </div>
+        </div>
+
+            <a id="showRestart" href="https://cozytypes.com/">play again<i class="fa-solid fa-backward"></i></a>
+            <?php if (isset($_SESSION["user_id"])) { ?>
+                <a id="showRestart" href="signup">view progress<i class="fa-solid fa-medal"></i></a>
+            <?php } else { ?>
+                <a id="showSignIn" href="signup"><span id="saveProgress">login to save progress<i class="fa-solid fa-medal"></i></a>
+            <?php } ?>
+
+        </div>
+        <?php } ?>
         <?php include "./footer.php"?>
     </div>
 </body>
