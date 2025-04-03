@@ -21,18 +21,6 @@ var lastWord = 0;
 
 //seamless transitions
 document.addEventListener("DOMContentLoaded", function () {
-    if (window.location.pathname === "/preferences") {
-        // Apply styles to allow scrolling on preferences page
-        console.log("s")
-        document.documentElement.style.overflowY = "auto";
-        document.body.style.overflowY = "auto";
-        document.getElementById("mainContent").style.overflowY = "auto";
-    } else {
-        // Remove overflow styles for other pages
-        document.documentElement.style.overflowY = "hidden";
-        document.body.style.overflowY = "hidden";
-        document.getElementById("mainContent").style.overflowY = "hidden";
-    }
     document.body.addEventListener("click", function (event) {
         let link = event.target.closest("a");
         if (!link || link.target === "_blank" || link.rel === "external") return; // Ignore external links
@@ -58,6 +46,18 @@ document.addEventListener("DOMContentLoaded", function () {
                         newContent.style.transition = "opacity 0.3s ease-in";
                         newContent.style.opacity = "1"; // Fade in new content
                         loadPreferences();
+                        if (window.location.pathname === "/preferences") {
+                            // Apply styles to allow scrolling on preferences page
+                            console.log("s")
+                            document.documentElement.style.overflowY = "auto";
+                            document.body.style.overflowY = "auto";
+                            document.getElementById("mainContent").style.overflowY = "auto";
+                        } else {
+                            // Remove overflow styles for other pages
+                            document.documentElement.style.overflowY = "hidden";
+                            document.body.style.overflowY = "hidden";
+                            document.getElementById("mainContent").style.overflowY = "hidden";
+                        }
                     }, 300); // Wait for fade-out before replacing
                 
                     history.pushState(null, "", url); // Update URL
