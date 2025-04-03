@@ -47,10 +47,8 @@ document.addEventListener("DOMContentLoaded", function () {
                         let newMainContent = newContent.cloneNode(true); // Clone to prevent unwanted modifications
                         let newNav = newContent.querySelector("nav"); // Extract new nav from fetched content
                 
-                        if (newNav) {
-                            nav.replaceWith(newNav); // Replace nav without fading effect
-                        }
-                
+                        
+                        
                         mainContent.replaceWith(newMainContent);
                         newMainContent.style.opacity = "0"; // Start hidden
                 
@@ -58,8 +56,12 @@ document.addEventListener("DOMContentLoaded", function () {
                             newMainContent.style.transition = "opacity 0.3s ease-in-out";
                             newMainContent.style.opacity = "1"; // Fade in new content
                         }, 10);
+                        
+                        if (newNav) {
+                            nav.replaceWith(newNav); // Replace nav without fading effect
+                        }
                     }, 300); // Wait for fade-out before replacing
-                
+                    
                     history.pushState(null, "", url); // Update URL
                 }
                 else {
