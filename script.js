@@ -28,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault(); // Stop default navigation
         let url = link.href;
         console.log(url)
-        loadPreferences();
         fetch(url, { method: "GET", headers: { "X-Requested-With": "XMLHttpRequest" } })
             .then(response => response.text())
             .then(html => {
@@ -37,7 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 let doc = parser.parseFromString(html, "text/html");
                 let newContent = doc.querySelector("#switchContent"); // Adjust selector to match your site's structure
                 console.log(newContent)
-                loadPreferences();
                 if (newContent) {
                     let mainContent = document.querySelector("#switchContent");
                 
@@ -48,19 +46,15 @@ document.addEventListener("DOMContentLoaded", function () {
                         newContent.style.opacity = "0"; // Start hidden
                         newContent.style.transition = "opacity 0.3s ease-in";
                         newContent.style.opacity = "1"; // Fade in new content
-                        loadPreferences();
                     }, 300); // Wait for fade-out before replacing
                 
                     history.pushState(null, "", url); // Update URL
-                    loadPreferences();
                 }
                 else {
                     console.log("no new content")
-                    loadPreferences();
                 }
             })
             .catch(error => console.error("Page load failed:", error));
-            loadPreferences();
     });
 
     // Handle back/forward navigation
@@ -71,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 let parser = new DOMParser();
                 let doc = parser.parseFromString(html, "text/html");
                 let newContent = doc.querySelector("#main-content"); // Adjust selector
-                loadPreferences();
+                
                 
                 if (newContent) {
                     document.querySelector("#main-content").replaceWith(newContent);
