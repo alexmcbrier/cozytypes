@@ -13,7 +13,7 @@ session_start();
 <body>
 
     <div id="notifications"></div>
-    <form id="mainContent" method="POST" action="preferences" style = "gap: 0">
+    <div style = "gap: 0">
         <?php include "./nav.php" ?>
         <div id="switchContent">
             <div class="preferences">
@@ -94,7 +94,6 @@ session_start();
                 </div>
             </div>
         </div>
-        </div>
-    </form>
+    </div>
 </body>
 </html>
