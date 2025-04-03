@@ -64,9 +64,6 @@ document.addEventListener("DOMContentLoaded", function () {
             .catch(error => console.error("Navigation error:", error));
     });
 });
-
-
-
 window.addEventListener('keydown', function (event) { //restart test if tab key
   // Check if the pressed key is the 'Tab' key (key code 9)
   if (event.key === 'Tab' || event.keyCode === 9) {
@@ -760,6 +757,7 @@ function reloadScripts() {
     newScript.onload = () => console.log("Script reloaded.");
     
     document.body.appendChild(newScript);
+    loadPreferences();
 }
 
 // Run this when switching back to index.html
