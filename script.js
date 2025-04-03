@@ -52,15 +52,12 @@ document.addEventListener("DOMContentLoaded", function () {
                     }, 300); // Wait for fade-out before replacing
                 
                     history.pushState(null, "", url); // Update URL
-                    loadPreferences();
                 }
                 else {
                     console.log("no new content")
-                    loadPreferences();
                 }
             })
             .catch(error => console.error("Page load failed:", error));
-            loadPreferences();
     });
 
     // Handle back/forward navigation
