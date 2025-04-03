@@ -46,8 +46,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     if (newContent) {
                         // Replace old content with new content
                         mainContent.replaceWith(newContent);
-                        // Reload or re-execute JavaScript
-                        loadPageScripts(newContent); // Custom function to handle script reloading
+
+                        // Reload or re-execute JavaScript (even if outside mainContent)
+                        loadPageScripts(); // Custom function to handle script reloading
 
                         // Update URL in the browser's history
                         history.pushState(null, "", url);
@@ -76,21 +77,30 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (newContent) {
                     let mainContent = document.querySelector("#mainContent");
                     mainContent.replaceWith(newContent);
-                    loadPageScripts(newContent);
+                    loadPageScripts(); // Reload JavaScript after content update
                 }
             })
             .catch(error => console.error("Navigation error:", error));
     });
 });
 
-// Custom function to reload JavaScript for new content
-function loadPageScripts(newContent) {
-    // Find all script tags in the new content
-    let scripts = newContent.querySelectorAll("script");
+// Custom function to reload JavaScript for scripts outside of mainContent
+function loadPageScripts() {
+    // Find all external script tags
+    let scripts = document.querySelectorAll("script[src]");
     scripts.forEach(script => {
         let newScript = document.createElement("script");
-        newScript.src = script.src; // Or use script.innerHTML for inline scripts
-        document.body.appendChild(newScript);
+        newScript.src = script.src; // Reload the script by adding a new tag
+        newScript.onload = function () {
+            console.log(`Script loaded: ${newScript.src}`);
+        };
+        document.body.appendChild(newScript); // Re-insert the script into the body
+    });
+
+    // Optionally, re-run inline scripts if any (if you have inline JavaScript in the document)
+    let inlineScripts = document.querySelectorAll("script:not([src])");
+    inlineScripts.forEach(script => {
+        eval(script.innerText); // Run inline scripts manually
     });
 }
 
