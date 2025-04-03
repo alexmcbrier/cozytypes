@@ -74,8 +74,8 @@ crossorigin="anonymous"></script>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JMV592" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <i class="fa-solid fa-circle-notch" id="loadingIcon"></i>
+    <?php include "./nav.php" ?>
     <div id="mainContent">
-        <?php include "./nav.php" ?>
         <script type="text/javascript">
         function fadeOut(id)
         {

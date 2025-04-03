@@ -13,8 +13,8 @@ session_start();
 <body>
 
     <div id="notifications"></div>
+    <?php include "./nav.php" ?>
     <form id="mainContent" method="POST" action="preferences" style = "gap: 0">
-        <?php include "./nav.php" ?>
         <div class="preferences">
             <div id="sizesContainer" class="rowContainer">
                 <h1 class="notSignedIn" id="preferenceHeader">font size<i class="fa-solid fa-text-height"></h1></i>
