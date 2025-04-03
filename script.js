@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.addEventListener("click", function (event) {
         let link = event.target.closest("a");
         if (!link || link.target === "_blank" || link.rel === "external") return; // Ignore external links
-
+    
         event.preventDefault(); // Stop default navigation
         let url = link.href;
         console.log(url)
@@ -53,6 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 else {
                     console.log("no new content")
                 }
+                loadPreferences();
             })
             .catch(error => console.error("Page load failed:", error));
     });
