@@ -53,9 +53,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 else {
                     console.log("no new content")
                 }
-                loadPreferences();
             })
             .catch(error => console.error("Page load failed:", error));
+            loadPreferences();
     });
 
     // Handle back/forward navigation
