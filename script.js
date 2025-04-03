@@ -21,48 +21,41 @@ var lastWord = 0;
 
 //seamless transitions
 document.addEventListener("DOMContentLoaded", function () {
-    // Handle link clicks for AJAX navigation
     document.body.addEventListener("click", function (event) {
         let link = event.target.closest("a");
-        if (!link || link.target === "_blank" || link.rel === "external") return;
-
-        event.preventDefault(); // Prevent normal navigation
+        if (!link || link.target === "_blank" || link.rel === "external") return; // Ignore external links
+    
+        event.preventDefault(); // Stop default navigation
         let url = link.href;
-
-        // Begin the transition for smooth page change
-        let mainContent = document.querySelector("#mainContent");
-        mainContent.style.transition = "opacity 0.3s ease-out";
-        mainContent.style.opacity = "0"; // Fade out the old content
-
-        // Fetch new content and replace it after the fade-out
-        setTimeout(() => {
-            fetch(url, { method: "GET", headers: { "X-Requested-With": "XMLHttpRequest" } })
-                .then(response => response.text())
-                .then(html => {
-                    let parser = new DOMParser();
-                    let doc = parser.parseFromString(html, "text/html");
-                    let newContent = doc.querySelector("#mainContent");
-
-                    if (newContent) {
-                        // Replace old content with new content
+        console.log(url)
+        fetch(url, { method: "GET", headers: { "X-Requested-With": "XMLHttpRequest" } })
+            .then(response => response.text())
+            .then(html => {
+                console.log("Fetched HTML:", html);
+                let parser = new DOMParser();
+                let doc = parser.parseFromString(html, "text/html");
+                let newContent = doc.querySelector("#switchContent"); // Adjust selector to match your site's structure
+                
+                if (newContent) {
+                    let mainContent = document.querySelector("#switchContent");
+                
+                    // Fade out old content
+                    mainContent.style.opacity = "0";
+                    setTimeout(() => {
                         mainContent.replaceWith(newContent);
-
-                        // Reload or re-execute JavaScript (even if outside mainContent)
-                        reloadHeadScripts(); // Custom function to handle reloading head scripts
-
-                        // Update URL in the browser's history
-                        history.pushState(null, "", url);
-
-                        // Fade in the new content
-                        newContent.style.opacity = "0";
-                        setTimeout(() => {
-                            newContent.style.transition = "opacity 0.3s ease-in";
-                            newContent.style.opacity = "1";
-                        }, 10); // Allow time for the styles to be applied before the fade-in
-                    }
-                })
-                .catch(error => console.error("Page load failed:", error));
-        }, 300); // Delay replacement to allow fade-out effect
+                        newContent.style.opacity = "0"; // Start hidden
+                        newContent.style.transition = "opacity 0.3s ease-in";
+                        newContent.style.opacity = "1"; // Fade in new content
+                    }, 300); // Wait for fade-out before replacing
+                
+                    history.pushState(null, "", url); // Update URL
+                }
+                else {
+                    console.log("no new content")
+                }
+            })
+            .catch(error => console.error("Page load failed:", error));
+            loadPreferences();
     });
 
     // Handle back/forward navigation
@@ -72,45 +65,15 @@ document.addEventListener("DOMContentLoaded", function () {
             .then(html => {
                 let parser = new DOMParser();
                 let doc = parser.parseFromString(html, "text/html");
-                let newContent = doc.querySelector("#mainContent");
-
+                let newContent = doc.querySelector("#main-content"); // Adjust selector
+                
                 if (newContent) {
-                    let mainContent = document.querySelector("#mainContent");
-                    mainContent.replaceWith(newContent);
-                    reloadHeadScripts(); // Reload JavaScript after content update
+                    document.querySelector("#main-content").replaceWith(newContent);
                 }
             })
             .catch(error => console.error("Navigation error:", error));
     });
 });
-
-// Custom function to reload the head scripts (e.g., Google Tag, analytics, etc.)
-function reloadHeadScripts() {
-    // Find the old script tags in the head and remove them
-    let oldScripts = document.querySelectorAll("script[src]");
-    oldScripts.forEach(script => script.remove());
-
-    // Reload the Google tag script and other external scripts
-    let gtagScript = document.createElement("script");
-    gtagScript.async = true;
-    gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=TAG_ID";
-    document.head.appendChild(gtagScript);
-
-    // Add the inline script for Google Analytics again
-    let gtagInlineScript = document.createElement("script");
-    gtagInlineScript.innerHTML = `
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        };
-        gtag('js', new Date());
-        gtag('config', 'G-9W2ZHHJ7P5');
-    `;
-    document.head.appendChild(gtagInlineScript);
-
-    // You can add more head scripts here as needed
-}
-
 
 
 
