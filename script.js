@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault(); // Stop default navigation
         let url = link.href;
         console.log(url)
+        loadPreferences();
         fetch(url, { method: "GET", headers: { "X-Requested-With": "XMLHttpRequest" } })
             .then(response => response.text())
             .then(html => {
@@ -36,6 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 let doc = parser.parseFromString(html, "text/html");
                 let newContent = doc.querySelector("#switchContent"); // Adjust selector to match your site's structure
                 console.log(newContent)
+                loadPreferences();
                 if (newContent) {
                     let mainContent = document.querySelector("#switchContent");
                 
@@ -49,9 +51,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     }, 300); // Wait for fade-out before replacing
                 
                     history.pushState(null, "", url); // Update URL
+                    loadPreferences();
                 }
                 else {
                     console.log("no new content")
+                    loadPreferences();
                 }
             })
             .catch(error => console.error("Page load failed:", error));
