@@ -39,10 +39,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (newContent) {
                     console.log("new content")
                     mainContent.classList.add("hidden"); // Start fade-out
-                    setTimeout(() => {
-                        mainContent.replaceWith(newContent); // Replace content
-                        newContent.classList.remove("hidden"); // Fade-in effect
-                    }, 300); // Matches CSS transition duration
+                    mainContent.replaceWith(newContent); // Replace content
+                    newContent.classList.remove("hidden"); // Fade-in effect
                 }
                 else {
                     console.log("no new content")
