@@ -252,10 +252,6 @@ include "themes.scss"; //file contains all fonts
         flex-direction: column;
         justify-content: space-between;
     }
-    #switchContent {
-        opacity: 1;
-        transition: all 2s ease-in-out;
-    }
     .hidden {
         opacity: 0;
     }
