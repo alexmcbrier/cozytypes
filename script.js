@@ -738,12 +738,19 @@ function highlightPrefernces() {
 
 }
 loadPreferences();
-if (window.location.pathname === "/") {
-    document.body.onLoad = refresh();
-    document.body.onresize = function() { zoomwait() };
-    document.addEventListener("click", function (event) {
-        if (event.target !== displayInput) {
-            displayInput.focus();
-        }
-    });
-}
+
+const observer = new MutationObserver(() => {
+    if (window.location.pathname === "/") {
+        refresh();
+        window.onresize = () => zoomwait();
+        
+        document.addEventListener("click", function (event) {
+            if (event.target !== displayInput) {
+                displayInput.focus();
+            }
+        });
+    }
+});
+
+// Observe changes in the body or a specific container
+observer.observe(document.body, { childList: true, subtree: true });
