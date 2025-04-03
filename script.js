@@ -38,9 +38,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 
                 if (newContent) {
                     let mainContent = document.querySelector("#switchContent");
-                    mainContent.style.transition = "none"; 
-                    mainContent.style.opacity = "0";
+                
                     // Fade out old content
+                    mainContent.style.opacity = "0";
                     setTimeout(() => {
                         mainContent.replaceWith(newContent);
                         newContent.style.opacity = "0"; // Start hidden
