@@ -64,6 +64,9 @@ document.addEventListener("DOMContentLoaded", function () {
             .catch(error => console.error("Navigation error:", error));
     });
 });
+
+
+
 window.addEventListener('keydown', function (event) { //restart test if tab key
   // Check if the pressed key is the 'Tab' key (key code 9)
   if (event.key === 'Tab' || event.keyCode === 9) {
@@ -744,23 +747,4 @@ if (window.location.pathname === "/") {
             displayInput.focus();
         }
     });
-}
-function reloadScripts() {
-    const scriptSrc = "script.js"; // Adjust if necessary
-
-    // Find and remove the old script
-    document.querySelectorAll(`script[src="${scriptSrc}"]`).forEach(script => script.remove());
-
-    // Create a new script element
-    const newScript = document.createElement("script");
-    newScript.src = scriptSrc;
-    newScript.onload = () => console.log("Script reloaded.");
-    
-    document.body.appendChild(newScript);
-    loadPreferences();
-}
-
-// Run this when switching back to index.html
-if (window.location.pathname === "/") {
-    reloadScripts();
 }
