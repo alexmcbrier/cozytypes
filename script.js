@@ -639,7 +639,7 @@ function setPreference(type, newPreference)
         localStorage.setItem(type, newPreference);
         
         if (window.location.pathname.endsWith("/preferences")) {
-            highlightPrefernces();
+            
         }
     }
 function addNotification(header, description)
