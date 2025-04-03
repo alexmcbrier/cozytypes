@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 let parser = new DOMParser();
                 let doc = parser.parseFromString(html, "text/html");
                 let newContent = doc.querySelector("#switchContent"); // Adjust selector to match your site's structure
-                
+                console.log(newContent)
                 if (newContent) {
                     let mainContent = document.querySelector("#switchContent");
                 
