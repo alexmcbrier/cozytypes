@@ -45,6 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         newContent.style.opacity = "0"; // Start hidden
                         newContent.style.transition = "opacity 0.3s ease-in";
                         newContent.style.opacity = "1"; // Fade in new content
+                        newContent.style.transition = "none";
                         loadPreferences();
                         if (window.location.pathname === "/preferences" || window.location.pathname === "/about" || window.location.pathname === "/leaderoard") {
                             // Apply styles to allow scrolling on preferences page
@@ -640,6 +641,7 @@ function setPreference(type, newPreference)
         const root = document.querySelector(':root');
         root.style.setProperty("--" + type, newPreference);
         localStorage.setItem(type, newPreference);
+        
         if (window.location.pathname.endsWith("/preferences")) {
             highlightPrefernces();
         }
