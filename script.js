@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         mainContent.replaceWith(newContent);
 
                         // Reload or re-execute JavaScript (even if outside mainContent)
-                        loadPageScripts(); // Custom function to handle script reloading
+                        reloadHeadScripts(); // Custom function to handle reloading head scripts
 
                         // Update URL in the browser's history
                         history.pushState(null, "", url);
@@ -77,32 +77,40 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (newContent) {
                     let mainContent = document.querySelector("#mainContent");
                     mainContent.replaceWith(newContent);
-                    loadPageScripts(); // Reload JavaScript after content update
+                    reloadHeadScripts(); // Reload JavaScript after content update
                 }
             })
             .catch(error => console.error("Navigation error:", error));
     });
 });
 
-// Custom function to reload JavaScript for scripts outside of mainContent
-function loadPageScripts() {
-    // Find all external script tags
-    let scripts = document.querySelectorAll("script[src]");
-    scripts.forEach(script => {
-        let newScript = document.createElement("script");
-        newScript.src = script.src; // Reload the script by adding a new tag
-        newScript.onload = function () {
-            console.log(`Script loaded: ${newScript.src}`);
-        };
-        document.body.appendChild(newScript); // Re-insert the script into the body
-    });
+// Custom function to reload the head scripts (e.g., Google Tag, analytics, etc.)
+function reloadHeadScripts() {
+    // Find the old script tags in the head and remove them
+    let oldScripts = document.querySelectorAll("script[src]");
+    oldScripts.forEach(script => script.remove());
 
-    // Optionally, re-run inline scripts if any (if you have inline JavaScript in the document)
-    let inlineScripts = document.querySelectorAll("script:not([src])");
-    inlineScripts.forEach(script => {
-        eval(script.innerText); // Run inline scripts manually
-    });
+    // Reload the Google tag script and other external scripts
+    let gtagScript = document.createElement("script");
+    gtagScript.async = true;
+    gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=TAG_ID";
+    document.head.appendChild(gtagScript);
+
+    // Add the inline script for Google Analytics again
+    let gtagInlineScript = document.createElement("script");
+    gtagInlineScript.innerHTML = `
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        };
+        gtag('js', new Date());
+        gtag('config', 'G-9W2ZHHJ7P5');
+    `;
+    document.head.appendChild(gtagInlineScript);
+
+    // You can add more head scripts here as needed
 }
+
 
 
 
