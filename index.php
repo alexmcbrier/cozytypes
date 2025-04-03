@@ -75,8 +75,8 @@ crossorigin="anonymous"></script>
     <!-- End Google Tag Manager (noscript) -->
     <i class="fa-solid fa-circle-notch" id="loadingIcon"></i>
     <div id="mainContent">
+        <?php include "./nav.php" ?>
         <div id="switchContent">
-            <?php include "./nav.php" ?>
             <script type="text/javascript">
             function fadeOut(id)
             {

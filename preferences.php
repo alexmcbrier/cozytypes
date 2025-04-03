@@ -14,8 +14,8 @@ session_start();
 
     <div id="notifications"></div>
     <form id="mainContent" method="POST" action="preferences" style = "gap: 0">
+        <?php include "./nav.php" ?>
         <div id="switchContent">
-            <?php include "./nav.php" ?>
             <div class="preferences">
                 <div id="sizesContainer" class="rowContainer">
                     <h1 class="notSignedIn" id="preferenceHeader">font size<i class="fa-solid fa-text-height"></h1></i>
