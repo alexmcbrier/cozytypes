@@ -23,6 +23,7 @@ var lastWord = 0;
 document.addEventListener("DOMContentLoaded", function () {
     if (window.location.pathname === "/preferences") {
         // Apply styles to allow scrolling on preferences page
+        console.log("s")
         document.documentElement.style.overflowY = "auto";
         document.body.style.overflowY = "auto";
         document.getElementById("mainContent").style.overflowY = "auto";
@@ -38,16 +39,13 @@ document.addEventListener("DOMContentLoaded", function () {
     
         event.preventDefault(); // Stop default navigation
         let url = link.href;
-        console.log(url)
         loadPreferences();
         fetch(url, { method: "GET", headers: { "X-Requested-With": "XMLHttpRequest" } })
             .then(response => response.text())
             .then(html => {
-                console.log("Fetched HTML:", html);
                 let parser = new DOMParser();
                 let doc = parser.parseFromString(html, "text/html");
                 let newContent = doc.querySelector("#switchContent"); // Adjust selector to match your site's structure
-                console.log(newContent)
                 loadPreferences();
                 if (newContent) {
                     let mainContent = document.querySelector("#switchContent");
@@ -63,9 +61,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     }, 300); // Wait for fade-out before replacing
                 
                     history.pushState(null, "", url); // Update URL
-                }
-                else {
-                    console.log("no new content")
                 }
             })
             .catch(error => console.error("Page load failed:", error));
