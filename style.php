@@ -244,8 +244,8 @@ include "themes.scss"; //file contains all fonts
 
     #mainContent {
         opacity: 1;
-        transition: opacity 0.3s ease-in-out;
         transition: all .5s ease-in-out 0s;
+        transition: opacity 2s ease-in-out;
         width: 80%;
         margin: auto;
         display: grid;
