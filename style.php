@@ -243,7 +243,6 @@ include "themes.scss"; //file contains all fonts
     }
 
     #mainContent {
-        transition: all .5s ease-in-out 0s;
         width: 80%;
         margin: auto;
         display: grid;
@@ -255,7 +254,7 @@ include "themes.scss"; //file contains all fonts
     }
     #switchContent {
         opacity: 1;
-        transition: opacity 2s ease-in-out;
+        transition: all 2s ease-in-out;
     }
     .hidden {
         opacity: 0;
