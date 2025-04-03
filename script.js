@@ -18,6 +18,50 @@ var duration = 0;
 var wpm = 0;
 var count = 0
 var lastWord = 0;
+
+//seamless transitions
+document.addEventListener("DOMContentLoaded", function () {
+    document.body.addEventListener("click", function (event) {
+        let link = event.target.closest("a");
+        if (!link || link.target === "_blank" || link.rel === "external") return; // Ignore external links
+
+        event.preventDefault(); // Stop default navigation
+        let url = link.href;
+
+        fetch(url, { method: "GET", headers: { "X-Requested-With": "XMLHttpRequest" } })
+            .then(response => response.text())
+            .then(html => {
+                let parser = new DOMParser();
+                let doc = parser.parseFromString(html, "text/html");
+                let newContent = doc.querySelector("#main-content"); // Adjust selector to match your site's structure
+                
+                if (newContent) {
+                    document.querySelector("#main-content").replaceWith(newContent);
+                    history.pushState(null, "", url); // Update URL
+                }
+            })
+            .catch(error => console.error("Page load failed:", error));
+    });
+
+    // Handle back/forward navigation
+    window.addEventListener("popstate", function () {
+        fetch(location.href, { method: "GET", headers: { "X-Requested-With": "XMLHttpRequest" } })
+            .then(response => response.text())
+            .then(html => {
+                let parser = new DOMParser();
+                let doc = parser.parseFromString(html, "text/html");
+                let newContent = doc.querySelector("#main-content"); // Adjust selector
+                
+                if (newContent) {
+                    document.querySelector("#main-content").replaceWith(newContent);
+                }
+            })
+            .catch(error => console.error("Navigation error:", error));
+    });
+});
+
+
+
 window.addEventListener('keydown', function (event) { //restart test if tab key
   // Check if the pressed key is the 'Tab' key (key code 9)
   if (event.key === 'Tab' || event.keyCode === 9) {
