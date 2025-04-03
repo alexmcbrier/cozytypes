@@ -46,9 +46,8 @@ document.addEventListener("DOMContentLoaded", function () {
                         newContent.style.transition = "opacity 0.3s ease-in";
                         newContent.style.opacity = "1"; // Fade in new content
                         loadPreferences();
-                        if (window.location.pathname === "/preferences") {
+                        if (window.location.pathname === "/preferences" || window.location.pathname === "/about" || window.location.pathname === "/leaderoard") {
                             // Apply styles to allow scrolling on preferences page
-                            console.log("s")
                             document.documentElement.style.overflowY = "auto";
                             document.body.style.overflowY = "auto";
                             document.getElementById("mainContent").style.overflowY = "auto";
