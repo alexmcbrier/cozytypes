@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 
                 if (newContent) {
                     console.log("new content")
-                    document.querySelector("#main-content").replaceWith(newContent);
+                    document.querySelector("#mainContent").replaceWith(newContent);
                     history.pushState(null, "", url); // Update URL
                 }
                 else {
