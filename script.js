@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     setTimeout(() => {
                         mainContent.replaceWith(newContent);
                         newContent.style.opacity = "0"; // Start hidden
-                        newContent.style.transition = "opacity 0.1s ease-in-out";
+                        newContent.style.transition = "opacity 0.4s ease-in";
                         newContent.style.opacity = "1"; // Fade in new content
                     }, 300); // Wait for fade-out before replacing
                 
