@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (newContent) {
                     document.querySelector("#main-content").replaceWith(newContent);
                     history.pushState(null, "", url); // Update URL
+                    console.log("new content")
                 }
             })
             .catch(error => console.error("Page load failed:", error));
