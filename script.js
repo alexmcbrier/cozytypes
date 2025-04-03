@@ -739,23 +739,6 @@ function highlightPrefernces() {
 }
 loadPreferences();
 
-const observer = new MutationObserver(() => {
-    if (window.location.pathname === "/") {
-        refresh();
-        window.onresize = () => zoomwait();
-        
-        document.addEventListener("click", function (event) {
-            if (event.target !== displayInput) {
-                displayInput.focus();
-            }
-        });
-    }
-});
-
-// Observe changes in the body or a specific container
-observer.observe(document.body, { childList: true, subtree: true });
-
-
 if (window.location.pathname === "/") {
     document.body.onLoad = refresh();
     document.body.onresize = function() { zoomwait() };
@@ -764,4 +747,22 @@ if (window.location.pathname === "/") {
             displayInput.focus();
         }
     });
+}
+function reloadScripts() {
+    const scriptSrc = "script.js"; // Adjust if necessary
+
+    // Find and remove the old script
+    document.querySelectorAll(`script[src="${scriptSrc}"]`).forEach(script => script.remove());
+
+    // Create a new script element
+    const newScript = document.createElement("script");
+    newScript.src = scriptSrc;
+    newScript.onload = () => console.log("Script reloaded.");
+    
+    document.body.appendChild(newScript);
+}
+
+// Run this when switching back to index.html
+if (window.location.pathname === "/") {
+    reloadScripts();
 }
