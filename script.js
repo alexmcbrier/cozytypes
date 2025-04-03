@@ -27,18 +27,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
         event.preventDefault(); // Stop default navigation
         let url = link.href;
-
+        console.log(url)
         fetch(url, { method: "GET", headers: { "X-Requested-With": "XMLHttpRequest" } })
             .then(response => response.text())
             .then(html => {
+                console.log("Fetched HTML:", html);
                 let parser = new DOMParser();
                 let doc = parser.parseFromString(html, "text/html");
-                let newContent = doc.querySelector("#main-content"); // Adjust selector to match your site's structure
+                let newContent = doc.querySelector("#mainContent"); // Adjust selector to match your site's structure
                 
                 if (newContent) {
+                    console.log("new content")
                     document.querySelector("#main-content").replaceWith(newContent);
                     history.pushState(null, "", url); // Update URL
-                    console.log("new content")
+                }
+                else {
+                    console.log("no new content")
                 }
             })
             .catch(error => console.error("Page load failed:", error));
