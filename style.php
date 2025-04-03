@@ -254,8 +254,7 @@ include "themes.scss"; //file contains all fonts
         justify-content: space-between;
     }
     #switchContent {
-        opacity: 1;
-        transition: all 2s ease-in-out;
+        transition: all .5s ease-in-out 0s;
     }
     .hidden {
         opacity: 0;
