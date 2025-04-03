@@ -21,6 +21,17 @@ var lastWord = 0;
 
 //seamless transitions
 document.addEventListener("DOMContentLoaded", function () {
+    if (window.location.pathname === "/preferences") {
+        // Apply styles to allow scrolling on preferences page
+        document.documentElement.style.overflowY = "auto";
+        document.body.style.overflowY = "auto";
+        document.getElementById("mainContent").style.overflowY = "auto";
+    } else {
+        // Remove overflow styles for other pages
+        document.documentElement.style.overflowY = "hidden";
+        document.body.style.overflowY = "hidden";
+        document.getElementById("mainContent").style.overflowY = "hidden";
+    }
     document.body.addEventListener("click", function (event) {
         let link = event.target.closest("a");
         if (!link || link.target === "_blank" || link.rel === "external") return; // Ignore external links

@@ -858,13 +858,7 @@ button {
     overflow: hidden;
     visibility: hidden; /* hide for now */
 }
-html, body {
-    overflow-y: auto; /* Make sure vertical scrolling is allowed */
-}
 
-#mainContent {
-    overflow-y: auto; /* Enable scrolling on the main content */
-}
 .hideSidebar {
     animation: sidebarClose2 1s forwards;
 }
