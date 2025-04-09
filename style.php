@@ -206,7 +206,7 @@ include "themes.scss"; //file contains all fonts
 
     #mainContent {
         transition: all .5s ease-in-out 0s;
-        width: 80%;
+        width: 85%;
         margin: auto;
         display: grid;
         gap: .8rem;
