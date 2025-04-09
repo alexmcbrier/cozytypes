@@ -15,7 +15,7 @@ session_start();
         <?php include "./nav.php" ?>
         <div id = "displayStats">
             <div class = "statsContainer">
-                <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0; line-height: 0">about us</h1>
+                <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0; line-height: 0">about</h1>
                     <h2 class="aboutDescription">
                     cozytypes.com is a simple typing website for keyboard enthusiasts. test your typing abilities in different modes, track your 
                     progress, and improve your overall typing speed. This website draws inspiration from Monkeytype.com, and I want to express my 
