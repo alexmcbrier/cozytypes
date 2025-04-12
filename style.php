@@ -969,7 +969,7 @@ include "themes.scss"; //file contains all fonts
     align-items: center;
     white-space: pre;
 }
-    .leaderboardheader {
+    #leaderboardheader {
         color: rgb(255, 255, 255);
         font-size: 1.2rem;
         margin-left: 1rem;
