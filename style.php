@@ -88,7 +88,7 @@ include "themes.scss"; //file contains all fonts
         --caret: 'caret';
         --caretTop: calc(var(--fontSize) * .25rem);
         --caretHeight: calc(var(--fontSize) * 1rem);
-        --caretWidth: calc(var(--fontSize) * .1rem);
+        --caretWidth: calc(var(--fontSize) * .15rem);
         --caretOpacity: 100%;
         --lineCount: 3;
         --typingMode: 'words';
@@ -565,7 +565,7 @@ include "themes.scss"; //file contains all fonts
         width: var(--caretWidth);
         background-color: var(--correct);
         opacity: var(--caretOpacity);
-        border-radius: 1.5rem;
+        border-radius: 0;
         position: absolute;
         transition: left 0.125s ease;
         height: var(--caretHeight);
