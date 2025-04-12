@@ -198,7 +198,7 @@ function keystroke() {
         }
         moveCursor();
     }
-    var currentWord = displayText?.getElementsByClassName('current-word')[0];
+    var currentWord = displayText?.getElefmentsByClassName('current-word')[0];
     if (currentWord == lastWord && inputChars[inputChars.length - 1] != " ") //dont include space
     {
         var last = currentWord.querySelectorAll('letter')

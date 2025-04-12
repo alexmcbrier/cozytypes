@@ -208,6 +208,28 @@
   --correct: #dcdfe4;
   --incorrect: #eb8791;
 }
+.lvl1 {
+  box-shadow:
+    4px 0 orange,
+    -4px 0 orange,
+    0 -4px orange,
+    0 4px orange,
+    4px 0 0 2px orange,
+    -4px 0 0 2px orange,
+    0 -4px 0 2px orange,
+    0 4px 0 2px orange,
+    5px 0 red,
+    -5px 0 red,
+    0 -5px red,
+    0 5px red,
+    0 0 0 3px red,
+    0 2px 0 2px red,
+    0 -2px 0 2px red,
+    2px 0 0 2px red,
+    -2px 0 0 2px red;
+  margin: 5px auto;
+}
+
 .lvl2 {
   box-shadow:
     4px 0 blue,
@@ -221,3 +243,17 @@
     0 0 0 4px white;
   margin: 2px auto;
 }
+.lvl3 {
+  box-shadow:
+    3px 0 red,
+    -3px 0 red,
+    0 -3px red,
+    0 3px red,
+    2px 0 white,
+    -2px 0 white,
+    0 -2px white,
+    0 2px white,
+    0 0 0 3px white;
+  margin: 3px auto;
+}
+
