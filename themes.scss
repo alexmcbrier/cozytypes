@@ -301,24 +301,24 @@
   text-align: center;
   min-width: 5rem;
   box-shadow:
-    3px 0 var(--rowBackground), 
-    -3px 0 var(--rowBackground),
-    0 -3px var(--rowBackground),
-    0 3px var(--rowBackground),
-    6px 0 var(--rowBackground),
-    -6px 0 var(--rowBackground),
-    0 -6px var(--rowBackground),
-    0 6px var(--rowBackground),
-    0 0 0 var(--rowBackground),
+    3px 0 var(--row), 
+    -3px 0 var(--row),
+    0 -3px var(--row),
+    0 3px var(--row),
+    6px 0 var(--row),
+    -6px 0 var(--row),
+    0 -6px var(--row),
+    0 6px var(--row),
+    0 0 0 var(--row),
 
-    9px 0 var(--rowBackground), 
-    -9px 0 var(--rowBackground), 
-    0 9px var(--rowBackground),
-    0 -9px var(--rowBackground),
-    0 -3px 0 3px var(--rowBackground),
-    0 3px 0 3px var(--rowBackground),
-    3px 0 0 3px var(--rowBackground),
-    -3px 0 0 3px var(--rowBackground);
+    9px 0 var(--row), 
+    -9px 0 var(--row), 
+    0 9px var(--row),
+    0 -9px var(--row),
+    0 -3px 0 3px var(--row),
+    0 3px 0 3px var(--row),
+    3px 0 0 3px var(--row),
+    -3px 0 0 3px var(--row);
   margin: 9px auto;
 }
 
