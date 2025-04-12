@@ -301,25 +301,16 @@
   text-align: center;
   min-width: 5rem;
   box-shadow:
-    3px 0 var(--row), 
-    -3px 0 var(--row),
-    0 -3px var(--row),
-    0 3px var(--row),
-    6px 0 var(--row),
-    -6px 0 var(--row),
-    0 -6px var(--row),
-    0 6px var(--row),
-    0 0 0 var(--row),
-
-    9px 0 var(--row), 
-    -9px 0 var(--row), 
-    0 9px var(--row),
-    0 -9px var(--row),
-    0 -3px 0 3px var(--row),
-    0 3px 0 3px var(--row),
-    3px 0 0 3px var(--row),
-    -3px 0 0 3px var(--row);
-  margin: 9px;
+  8px 0 blue, 
+  -8px 0 blue, 
+  0 -8px blue, 
+  0 8px blue,
+  16px 0 red, 
+  -16px 0 red, 
+  0 -16px red, 
+  0 16px red,
+  0 0 0 8px red;
+  margin: 16px ;
 }
 
 .lvl3 {
