@@ -16,14 +16,14 @@ session_start();
     <form id="mainContent" method="POST" action="preferences" style = "gap: 0">
         <?php include "./nav.php" ?>
         <div class="preferences">
-            <div id="sizesContainer" class="rowContainer lvl3">
+            <div id="sizesContainer" class="rowContainer lvl1">
                 <h1 class="notSignedIn" id="preferenceHeader">font size<i class="fa-solid fa-text-height"></h1></i>
                 <h1 class="description">Change the size of the words in the test.</h1>
                 <a data-value="2" class="preference click" onclick="setPreference('fontSize', 2), addNotification('font size','small');">small</a>
                 <a data-value="3"class="preference click" onclick="setPreference('fontSize', 3), addNotification('font size','medium');">medium</a>
                 <a data-value="4"class="preference click" onclick="setPreference('fontSize', 4), addNotification('font size','large');">large</a>
             </div>
-            <div id="switchesContainer" class="rowContainer lvl3">
+            <div id="switchesContainer" class="rowContainer lvl2">
                 <h1 class="notSignedIn" id="preferenceHeader">keyboard switch sounds<i class="fa-solid fa-volume-low"></i></h1>
                 <h1 class="description">choose from these switches, each offering a unique sound profile.</h1>
                 <a data-value="none" class="preference click" onclick="setPreference('keyboardswitch', 'none'), addNotification('switch sound','none');">none</a>
@@ -55,7 +55,7 @@ session_start();
                     <a class = "color-theme click dark" onclick="setTheme(currentTheme, 'dark')">dark</a>
                 </div>
             </div>
-            <div id="caretsContainer" class="rowContainer lvl3">
+            <div id="caretsContainer" class="rowContainer lvl4">
                 <h1 class="notSignedIn" id="preferenceHeader">pace caret <i class="fa-solid fa-i-cursor"></i></h1>
                 <h1 class="description">When enabled, the caret will move along the page as you type. Change the style for different typing experiences.</h1>
                 <a data-value="caret" class="preference click" onclick="setPreference('caret', 'caret'), addNotification('caret style','classic');">caret</a>
