@@ -260,6 +260,7 @@
   transition-duration: 0.25s;
   transition-property: color, background; /* Add 'background' here */
   transition-timing-function: ease;
+
   box-shadow:
     3px 0 var(--rowBackground), 
     -3px 0 var(--rowBackground),
@@ -281,6 +282,44 @@
     -3px 0 0 3px var(--rowBackground);
   margin: 9px auto;
   background-color: var(--rowBackground);
+}
+.preference {
+  cursor: pointer;
+  color: white;
+  background-color: var(--row);
+  /* background-color:#191919;                      Background color */
+  font-size: 1rem;
+  display: inline-block;
+  padding: 1.3rem;
+  transition: transform .5s ease;
+  line-height: 10px;
+  vertical-align: top;
+  text-decoration: none;
+  align-items: center;
+  line-height: 10px;
+  margin-top: .5rem;
+  text-align: center;
+  min-width: 5rem;
+  box-shadow:
+    3px 0 var(--rowBackground), 
+    -3px 0 var(--rowBackground),
+    0 -3px var(--rowBackground),
+    0 3px var(--rowBackground),
+    6px 0 var(--rowBackground),
+    -6px 0 var(--rowBackground),
+    0 -6px var(--rowBackground),
+    0 6px var(--rowBackground),
+    0 0 0 var(--rowBackground),
+
+    9px 0 var(--rowBackground), 
+    -9px 0 var(--rowBackground), 
+    0 9px var(--rowBackground),
+    0 -9px var(--rowBackground),
+    0 -3px 0 3px var(--rowBackground),
+    0 3px 0 3px var(--rowBackground),
+    3px 0 0 3px var(--rowBackground),
+    -3px 0 0 3px var(--rowBackground);
+  margin: 9px auto;
 }
 
 .lvl3 {

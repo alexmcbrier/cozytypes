@@ -293,25 +293,6 @@ include "themes.scss"; //file contains all fonts
         transition: .5s;
     }
 
-    .preference {
-        cursor: pointer;
-        color: white;
-        background-color: var(--row);
-        /* background-color:#191919;                      Background color */
-        font-size: 1rem;
-        border-radius: 1rem;
-        display: inline-block;
-        padding: 1.3rem;
-        transition: transform .5s ease;
-        line-height: 10px;
-        vertical-align: top;
-        text-decoration: none;
-        align-items: center;
-        line-height: 10px;
-        margin-top: .5rem;
-        text-align: center;
-        min-width: 5rem;
-    }
     
     #footer
     {
