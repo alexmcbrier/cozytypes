@@ -469,7 +469,6 @@ include "themes.scss"; //file contains all fonts
         line-height: 10px;
         vertical-align: top;
         text-decoration: none;
-        margin: 1rem;
         align-content: center;
         padding: 1rem;
         flex: 1;
@@ -659,10 +658,10 @@ include "themes.scss"; //file contains all fonts
     }
     .description
     {
-        font-size: 1.3rem;
+        font-size: 1rem;
         padding: 0 1rem;
         color: var(--row);
-        line-height: 1.5rem;
+        line-height: 1.6rem;
     }
     .aboutDescription {
         font-size: 1.5rem;
@@ -970,7 +969,17 @@ include "themes.scss"; //file contains all fonts
     align-items: center;
     white-space: pre;
 }
-
+    .leaderboardheader {
+        color: rgb(255, 255, 255);
+        font-size: 1.2rem;
+        margin-left: 1rem;
+        user-select: none;
+        line-height: 2rem;
+        display: flex;
+        white-space: nowrap;
+        align-items: center;
+        white-space: pre;
+    }
     .preferences a:hover {
         background-color: var(--incorrect);
     }
