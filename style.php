@@ -395,7 +395,6 @@ include "themes.scss"; //file contains all fonts
     .rowContainer {
     user-select: none;
     color: var(--currentWord);
-    background-color: var(--rowBackground);
     font-size: 1rem;
     padding: 1rem;
     margin-left: .5rem;

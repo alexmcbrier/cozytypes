@@ -265,6 +265,11 @@
     3px 0 0 3px var(--rowBackground),
     -3px 0 0 3px var(--rowBackground);
   margin: 9px auto;
+  background: var(--rowBackground);
+  transition-delay: 0s;
+  transition-duration: 0.25s;
+  transition-property: color, background; /* Add 'background' here */
+  transition-timing-function: ease;
 }
 
 .lvl4 {
