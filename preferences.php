@@ -19,9 +19,9 @@ session_start();
             <div id="sizesContainer" class="rowContainer lvl3">
                 <h1 class="notSignedIn" id="preferenceHeader">font size<i class="fa-solid fa-text-height"></h1></i>
                 <h1 class="description">Change the size of the words in the test.</h1>
-                <a data-value="2" class="preference click" onclick="setPreference('fontSize', 2), addNotification('font size','small');">small</a>
-                <a data-value="3"class="preference click" onclick="setPreference('fontSize', 3), addNotification('font size','medium');">medium</a>
-                <a data-value="4"class="preference click" onclick="setPreference('fontSize', 4), addNotification('font size','large');">large</a>
+                <a data-value="2" class="preference click lvl3" onclick="setPreference('fontSize', 2), addNotification('font size','small');">small</a>
+                <a data-value="3"class="preference click lvl3" onclick="setPreference('fontSize', 3), addNotification('font size','medium');">medium</a>
+                <a data-value="4"class="preference click lvl3" onclick="setPreference('fontSize', 4), addNotification('font size','large');">large</a>
             </div>
             <div id="switchesContainer" class="rowContainer lvl3">
                 <h1 class="notSignedIn" id="preferenceHeader">keyboard switch sounds<i class="fa-solid fa-volume-low"></i></h1>
