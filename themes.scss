@@ -256,14 +256,14 @@
     0 6px var(--rowBackground),
     0 0 0 var(--rowBackground),
 
-    9px 0 var(--backgroundDark), 
-    -9px 0 var(--backgroundDark), 
-    0 9px var(--rowBabackgroundDarkckground),
-    0 -9px var(--rowBbackgroundDarkackground),
-    0 -3px 0 3px var(--backgroundDark),
-    0 3px 0 3px var(--backgroundDark),
-    3px 0 0 3px var(--backgroundDark),
-    -3px 0 0 3px var(--backgroundDark);
+    9px 0 var(--rowBackground), 
+    -9px 0 var(--rowBackground), 
+    0 9px var(--rowBackground),
+    0 -9px var(--rowBackground),
+    0 -3px 0 3px var(--rowBackground),
+    0 3px 0 3px var(--rowBackground),
+    3px 0 0 3px var(--rowBackground),
+    -3px 0 0 3px var(--rowBackground);
   margin: 9px auto;
   background: var(--rowBackground);
 }
