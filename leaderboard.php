@@ -37,7 +37,7 @@ $mysqli = require __DIR__ . "/config.php";
                             $query = "SELECT * FROM user WHERE id = {$row['id']}";
                             $result = $mysqli->query($query);
                             $user = $result->fetch_assoc();
-                            $username = ($user !== null) ? $user['username'] : '---';
+                            $username = ($user !== null) ? substr($user['username'], 0, 13) : '---';
                         }
 
                         $wpm = ($row['wpm'] !== null) ? $row['wpm']: '---';
@@ -64,7 +64,7 @@ $mysqli = require __DIR__ . "/config.php";
                             $query = "SELECT * FROM user WHERE id = {$row['id']}";
                             $result = $mysqli->query($query);
                             $user = $result->fetch_assoc();
-                            $username = ($user !== null) ? $user['username'] : '---';
+                            $username = ($user !== null) ? substr($user['username'], 0, 13) : '---';
                         }
 
                         $wpm = ($row['wpm'] !== null) ? $row['wpm']: '---';
@@ -91,7 +91,7 @@ $mysqli = require __DIR__ . "/config.php";
                             $query = "SELECT * FROM user WHERE id = {$row['id']}";
                             $result = $mysqli->query($query);
                             $user = $result->fetch_assoc();
-                            $username = ($user !== null) ? $user['username'] : '---';
+                            $username = ($user !== null) ? substr($user['username'], 0, 13) : '---';
                         }
 
                         $wpm = ($row['wpm'] !== null) ? $row['wpm']: '---';
@@ -118,7 +118,7 @@ $mysqli = require __DIR__ . "/config.php";
                             $query = "SELECT * FROM user WHERE id = {$row['id']}";
                             $result = $mysqli->query($query);
                             $user = $result->fetch_assoc();
-                            $username = ($user !== null) ? $user['username'] : '---';
+                            $username = ($user !== null) ? substr($user['username'], 0, 13) : '---';
                         }
 
                         $wpm = ($row['wpm'] !== null) ? $row['wpm']: '---';
@@ -148,7 +148,7 @@ $mysqli = require __DIR__ . "/config.php";
                             $query = "SELECT * FROM user WHERE id = {$row['id']}";
                             $result = $mysqli->query($query);
                             $user = $result->fetch_assoc();
-                            $username = ($user !== null) ? $user['username'] : '---';
+                            $username = ($user !== null) ? substr($user['username'], 0, 13) : '---';
                         }
 
                         $wpm = ($row['wpm'] !== null) ? $row['wpm']: '---';
@@ -175,7 +175,7 @@ $mysqli = require __DIR__ . "/config.php";
                             $query = "SELECT * FROM user WHERE id = {$row['id']}";
                             $result = $mysqli->query($query);
                             $user = $result->fetch_assoc();
-                            $username = ($user !== null) ? $user['username'] : '---';
+                            $username = ($user !== null) ? substr($user['username'], 0, 13) : '---';
                         }
 
                         $wpm = ($row['wpm'] !== null) ? $row['wpm']: '---';
@@ -202,7 +202,7 @@ $mysqli = require __DIR__ . "/config.php";
                             $query = "SELECT * FROM user WHERE id = {$row['id']}";
                             $result = $mysqli->query($query);
                             $user = $result->fetch_assoc();
-                            $username = ($user !== null) ? $user['username'] : '---';
+                            $username = ($user !== null) ? substr($user['username'], 0, 13) : '---';
                         }
 
                         $wpm = ($row['wpm'] !== null) ? $row['wpm']: '---';
@@ -229,7 +229,8 @@ $mysqli = require __DIR__ . "/config.php";
                             $query = "SELECT * FROM user WHERE id = {$row['id']}";
                             $result = $mysqli->query($query);
                             $user = $result->fetch_assoc();
-                            $username = ($user !== null) ? $user['username'] : '---';
+                            $username = ($user !== null) ? substr($user['username'], 0, 13) : '---';
+
                         }
 
                         $wpm = ($row['wpm'] !== null) ? $row['wpm']: '---';
@@ -261,7 +262,7 @@ $mysqli = require __DIR__ . "/config.php";
                             $query = "SELECT * FROM user WHERE id = {$row['id']}";
                             $result = $mysqli->query($query);
                             $user = $result->fetch_assoc();
-                            $username = ($user !== null) ? $user['username'] : '---';
+                            $username = ($user !== null) ? substr($user['username'], 0, 13) : '---';
                         }
 
                         $wpm = ($row['wpm'] !== null) ? $row['wpm']: '---';
@@ -288,7 +289,7 @@ $mysqli = require __DIR__ . "/config.php";
                             $query = "SELECT * FROM user WHERE id = {$row['id']}";
                             $result = $mysqli->query($query);
                             $user = $result->fetch_assoc();
-                            $username = ($user !== null) ? $user['username'] : '---';
+                            $username = ($user !== null) ? substr($user['username'], 0, 13) : '---';
                         }
 
                         $wpm = ($row['wpm'] !== null) ? $row['wpm']: '---';
@@ -315,7 +316,7 @@ $mysqli = require __DIR__ . "/config.php";
                             $query = "SELECT * FROM user WHERE id = {$row['id']}";
                             $result = $mysqli->query($query);
                             $user = $result->fetch_assoc();
-                            $username = ($user !== null) ? $user['username'] : '---';
+                            $username = ($user !== null) ? substr($user['username'], 0, 13) : '---';
                         }
 
                         $wpm = ($row['wpm'] !== null) ? $row['wpm']: '---';
@@ -342,7 +343,7 @@ $mysqli = require __DIR__ . "/config.php";
                             $query = "SELECT * FROM user WHERE id = {$row['id']}";
                             $result = $mysqli->query($query);
                             $user = $result->fetch_assoc();
-                            $username = ($user !== null) ? $user['username'] : '---';
+                            $username = ($user !== null) ? substr($user['username'], 0, 13) : '---';
                         }
 
                         $wpm = ($row['wpm'] !== null) ? $row['wpm']: '---';
@@ -372,7 +373,7 @@ $mysqli = require __DIR__ . "/config.php";
                             $query = "SELECT * FROM user WHERE id = {$row['id']}";
                             $result = $mysqli->query($query);
                             $user = $result->fetch_assoc();
-                            $username = ($user !== null) ? $user['username'] : '---';
+                            $username = ($user !== null) ? substr($user['username'], 0, 13) : '---';
                         }
 
                         $wpm = ($row['wpm'] !== null) ? $row['wpm']: '---';
@@ -399,7 +400,7 @@ $mysqli = require __DIR__ . "/config.php";
                             $query = "SELECT * FROM user WHERE id = {$row['id']}";
                             $result = $mysqli->query($query);
                             $user = $result->fetch_assoc();
-                            $username = ($user !== null) ? $user['username'] : '---';
+                            $username = ($user !== null) ? substr($user['username'], 0, 13) : '---';
                         }
 
                         $wpm = ($row['wpm'] !== null) ? $row['wpm']: '---';
@@ -426,7 +427,7 @@ $mysqli = require __DIR__ . "/config.php";
                             $query = "SELECT * FROM user WHERE id = {$row['id']}";
                             $result = $mysqli->query($query);
                             $user = $result->fetch_assoc();
-                            $username = ($user !== null) ? $user['username'] : '---';
+                            $username = ($user !== null) ? substr($user['username'], 0, 13) : '---';
                         }
 
                         $wpm = ($row['wpm'] !== null) ? $row['wpm']: '---';
@@ -453,7 +454,7 @@ $mysqli = require __DIR__ . "/config.php";
                             $query = "SELECT * FROM user WHERE id = {$row['id']}";
                             $result = $mysqli->query($query);
                             $user = $result->fetch_assoc();
-                            $username = ($user !== null) ? $user['username'] : '---';
+                            $username = ($user !== null) ? substr($user['username'], 0, 13) : '---';
                         }
 
                         $wpm = ($row['wpm'] !== null) ? $row['wpm']: '---';
