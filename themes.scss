@@ -256,14 +256,14 @@
     0 6px var(--rowBackground),
     0 0 0 var(--rowBackground),
 
-    9px 0 darken(var(--rowBackground), 10%), 
-    -9px 0 darken(var(--rowBackground), 10%), 
-    0 9px darken(var(--rowBackground), 10%),
-    0 -9px darken(var(--rowBackground), 10%),
-    0 -3px 0 3px darken(var(--rowBackground), 10%),
-    0 3px 0 3px darken(var(--rowBackground), 10%),
-    3px 0 0 3px vdarken(var(--rowBackground), 10%),
-    -3px 0 0 3px darken(var(--rowBackground), 10%);
+    9px 0 var(--backgroundDark), 
+    -9px 0 var(--backgroundDark), 
+    0 9px var(--rowBabackgroundDarkckground),
+    0 -9px var(--rowBbackgroundDarkackground),
+    0 -3px 0 3px var(--backgroundDark),
+    0 3px 0 3px var(--backgroundDark),
+    3px 0 0 3px var(--backgroundDark),
+    -3px 0 0 3px var(--backgroundDark);
   margin: 9px auto;
   background: var(--rowBackground);
 }
