@@ -175,7 +175,7 @@ include "themes.scss"; //file contains all fonts
         background-color: var(--background);
         width: 100%;
         margin: 0;
-        font-family: var(--fontFamily);
+        font-family: 'PressStart', monospace;
         transition-delay: 0s;
         transition-duration: 0.25s;
         transition-property: color, background; /* Add 'background' here */
@@ -246,7 +246,7 @@ include "themes.scss"; //file contains all fonts
         transition: color .25s ease;
         color: var(--testText);
         padding: 1rem;
-        font-family: var(--fontFamily);
+        font-family: 'PressStart', monospace;
     }
     .navIcon, #showUsername
     {
@@ -672,7 +672,7 @@ include "themes.scss"; //file contains all fonts
         padding: 1rem;
         margin: 2.5rem 0;
         box-sizing: border-box;
-        font-family: var(--fontFamily);
+        font-family: 'PressStart', monospace;
         font-size: 1rem;
     }
 
@@ -1245,7 +1245,7 @@ include "themes.scss"; //file contains all fonts
         font-size: 1rem;
         cursor: pointer;
         transition: all .2s ease-in-out;
-        font-family: var(--fontFamily);
+        font-family: 'PressStart', monospace;
     }
     .profileValues {
         color: var(--row);
