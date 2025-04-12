@@ -16,7 +16,7 @@ session_start();
     <form id="mainContent" method="POST" action="preferences" style = "gap: 0">
         <?php include "./nav.php" ?>
         <div class="preferences">
-            <div id="sizesContainer" class="rowContainer">
+            <div id="sizesContainer" class="lvl2">
                 <h1 class="notSignedIn" id="preferenceHeader">font size<i class="fa-solid fa-text-height"></h1></i>
                 <h1 class="description">Change the size of the words in the test.</h1>
                 <a data-value="2" class="preference click" onclick="setPreference('fontSize', 2), addNotification('font size','small');">small</a>
