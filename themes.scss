@@ -246,23 +246,24 @@
 
 .lvl3 {
   box-shadow:
-    3px 0 white, 
-    -3px 0 white,
-    0 -3px white,
-    0 3px white,
-    6px 0 white,
-    -6px 0 white,
-    0 -6px white,
-    0 6px white, 
-    0 0 0 3px white,
-    9px 0 red, 
-    -9px 0 red, 
-    0 9px red,
-    0 -9px red,
-    0 -3px 0 3px red,
-    0 3px 0 3px red,
-    3px 0 0 3px red,
-    -3px 0 0 3px red;
+    3px 0 var(--rowBackground), 
+    -3px 0 var(--rowBackground),
+    0 -3px var(--rowBackground),
+    0 3px var(--rowBackground),
+    6px 0 var(--rowBackground),
+    -6px 0 var(--rowBackground),
+    0 -6px var(--rowBackground),
+    0 6px var(--rowBackground),
+    0 0 0 var(--rowBackground),
+
+    9px 0 var(--rowBackground), 
+    -9px 0 var(--rowBackground), 
+    0 9px var(--rowBackground),
+    0 -9px var(--rowBackground),
+    0 -3px 0 3px var(--rowBackground),
+    0 3px 0 3px var(--rowBackground),
+    3px 0 0 3px var(--rowBackground),
+    -3px 0 0 3px var(--rowBackground);
   margin: 9px auto;
 }
 
