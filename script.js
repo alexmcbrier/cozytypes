@@ -614,6 +614,7 @@ function loadPreferences() {
     let lineCount = localStorage.getItem("lineCount") || "3";
     let caret = localStorage.getItem("caret") || "caret";
     let typingMode = localStorage.getItem("typingMode") || "time";
+    let fontFamily = localStorage.getItem("fontFamily") || "pressStart";
     let words = localStorage.getItem("words") || 10;
     let time = localStorage.getItem("time") || 15;
     let blur = localStorage.getItem("blur") || "off";
@@ -642,6 +643,7 @@ function highlightPrefernces() {
     let lineCount = localStorage.getItem("lineCount") || "3";
     let caret = localStorage.getItem("caret") || "caret";
     let typingMode = localStorage.getItem("typingMode") || "time";
+    let fontFamily = localStorage.getItem("fontFamily") || "pressStart";
     let words = localStorage.getItem("words") || 10;
     let time = localStorage.getItem("time") || 15;
     let blur = localStorage.getItem("blur") || "off";

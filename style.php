@@ -82,7 +82,7 @@ include "themes.scss"; //file contains all fonts
     /*scrollbar*/
     :root
     {
-        --fontFamily: 'lexendDeca';
+        --fontFamily: 'pressStart';
         --fontSize: 2;
         --height: calc(1.5rem * var(--fontSize) * var(--lineCount));
         --caret: 'caret';
