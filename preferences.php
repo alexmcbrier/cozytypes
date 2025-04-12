@@ -19,33 +19,16 @@ session_start();
             <div id="sizesContainer" class="rowContainer">
                 <h1 class="notSignedIn" id="preferenceHeader">font size<i class="fa-solid fa-text-height"></h1></i>
                 <h1 class="description">Change the size of the words in the test.</h1>
-                <a data-value="1" class="preference click" onclick="setPreference('fontSize', 1), addNotification('font size','1');">1</a>
-                <a data-value="2" class="preference click" onclick="setPreference('fontSize', 2), addNotification('font size','2');">2</a>
-                <a data-value="3"class="preference click" onclick="setPreference('fontSize', 3), addNotification('font size','3');">3</a>
-                <a data-value="4"class="preference click" onclick="setPreference('fontSize', 4), addNotification('font size','4');">4</a>
-                <a data-value="5" class="preference click" onclick="setPreference('fontSize', 5), addNotification('font size','5');">5</a>
+                <a data-value="2" class="preference click" onclick="setPreference('fontSize', 2), addNotification('font size','2');">small</a>
+                <a data-value="3"class="preference click" onclick="setPreference('fontSize', 3), addNotification('font size','3');">medium</a>
+                <a data-value="4"class="preference click" onclick="setPreference('fontSize', 4), addNotification('font size','4');">large</a>
             </div>
-            <div id="fontsContainer" class="rowContainer">
-                <h1 class="notSignedIn" id="preferenceHeader">font family<i class="fa-solid fa-font"></i></h1>
-                <h1 class="description">Choose from various styles to change the font family across the site.</h1>
-                <a data-value="lora" class="preference click" style="font-family: 'Lora', serif;" onclick="setPreference('fontFamily', 'lora'), addNotification('font family','lora');">lora</a>
-                <a data-value="handjet" class="preference click" style="font-family: 'handjet', sans-serif;" onclick="setPreference('fontFamily', 'handjet'), addNotification('font family','handjet');">handjet</a>
-                <a data-value="pressStart" class="preference click" style="font-family: 'pressStart', system-ui;" onclick="setPreference('fontFamily', 'pressStart'), addNotification('font family','pressStart');">pressStart</a>
-                <a data-value="vt323" class="preference click" style="font-family: 'vt323', monospace;" onclick="setPreference('fontFamily', 'vt323'), addNotification('font family','vt323');">retro</a>
-                <a data-value="LexendDeca" class="preference click" style="font-family: 'LexendDeca', serif;" onclick="setPreference('fontFamily', 'LexendDeca'), addNotification('font family','lexend deca');">lexend deca</a>
-                <a data-value="Nunito" class="preference click" style="font-family: 'Nunito', sans-serif;" onclick="setPreference('fontFamily', 'Nunito'), addNotification('font family','Nunito');">Nunito</a>
-                <a data-value="arial" class="preference click" style="font-family: Arial;" onclick="setPreference('fontFamily', 'arial'), addNotification('font family','arial');">arial</a>
-                <a data-value="ibmplexsans" class="preference click" style="font-family: 'IBM Plex Sans', sans-serif;" onclick="setPreference('fontFamily', 'ibmplexsans'), addNotification('font family','IBM Plex Sans');">IBM Plex Sans</a>
-                <a data-value="comfortaa" class="preference click" style="font-family: 'Comfortaa', cursive;" onclick="setPreference('fontFamily', 'comfortaa'), addNotification('font family','comfortaa');">comfortaa</a>
-                <a data-value="courier" class="preference click" style="font-family: 'Courier Prime', monospace;" onclick="setPreference('fontFamily', 'courier'), addNotification('font family','courier');">courier</a>
-                <a data-value="sourceCodePro" class="preference click" style="font-family: 'Source Code Pro', monospace;" onclick="setPreference('fontFamily', 'sourceCodePro'), addNotification('font family','source code pro');">source code pro</a>
-                <a data-value="raleway" class="preference click" style="font-family: 'Raleway', sans-serif;" onclick="setPreference('fontFamily', 'raleway'), addNotification('font family','raleway');">raleway</a>
-                <a data-value="titilliumWeb" class="preference click" style="font-family: 'Titillium Web', sans-serif;" onclick="setPreference('fontFamily', 'titilliumWeb'), addNotification('font family','titillium Web');">titillium Web</a>
-                <a data-value="merriweather" class="preference click" style="font-family: 'Merriweather', serif;" onclick="setPreference('fontFamily', 'merriweather'), addNotification('font family','merriweather');">merriweather</a>
-                <a data-value="robotoMono" class="preference click" style="font-family: 'robotoMono', serif;" onclick="setPreference('fontFamily', 'robotoMono'), addNotification('font family','robotoMono');">roboto mono</a>
-                <a data-value="montserrat" class="preference click" style="font-family: 'montserrat', serif;" onclick="setPreference('fontFamily', 'montserrat'), addNotification('font family','montserrat');">montserrat</a>
-                <a data-value="karla" class="preference click" style="font-family: 'karla', serif;" onclick="setPreference('fontFamily', 'karla'), addNotification('font family','karla');">karla</a>
-                <a data-value="josefinSans" class="preference click" style="font-family: 'josefinSans', serif;" onclick="setPreference('fontFamily', 'josefinSans'), addNotification('font family','josefinSans');">josefinSans</a>
+            <div id="switchesContainer" class="rowContainer">
+                <h1 class="notSignedIn" id="preferenceHeader">keyboard switch sounds<i class="fa-solid fa-volume-low"></i></h1>
+                <h1 class="description">choose from these switches, each offering a unique sound profile.</h1>
+                <a data-value="none" class="preference click" onclick="setPreference('keyboardswitch', 'none'), addNotification('switch sound','none');">none</a>
+                <a data-value="holypandas" class="preference click" onclick="setPreference('keyboardswitch', 'holypandas'), addNotification('switch sound','holy pandas');">holy pandas</a>
+                <a data-value="nkcreams" class="preference click" onclick="setPreference('keyboardswitch', 'nkcreams'), addNotification('switch sound','novelkey creams');">novelkey creams</a>
             </div>
             <div id="themesContainer" class="theme-row-container">
                 <div>
@@ -71,13 +54,6 @@ session_start();
                     <a class = "color-theme click dracula" onclick="setTheme(currentTheme, 'dracula')">dracula</a>
                     <a class = "color-theme click dark" onclick="setTheme(currentTheme, 'dark')">dark</a>
                 </div>
-            </div>
-            <div id="switchesContainer" class="rowContainer">
-                <h1 class="notSignedIn" id="preferenceHeader">keyboard switch sounds<i class="fa-solid fa-volume-low"></i></h1>
-                <h1 class="description">choose from these switches, each offering a unique sound profile.</h1>
-                <a data-value="none" class="preference click" onclick="setPreference('keyboardswitch', 'none'), addNotification('switch sound','none');">none</a>
-                <a data-value="holypandas" class="preference click" onclick="setPreference('keyboardswitch', 'holypandas'), addNotification('switch sound','holy pandas');">holy pandas</a>
-                <a data-value="nkcreams" class="preference click" onclick="setPreference('keyboardswitch', 'nkcreams'), addNotification('switch sound','novelkey creams');">novelkey creams</a>
             </div>
             <div id="caretsContainer" class="rowContainer">
                 <h1 class="notSignedIn" id="preferenceHeader">pace caret <i class="fa-solid fa-i-cursor"></i></h1>
