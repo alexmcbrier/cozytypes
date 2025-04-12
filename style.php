@@ -1382,6 +1382,7 @@ include "themes.scss"; //file contains all fonts
     margin-left: .5rem;
     transition: 1s;
     line-height: 1rem;
+    height: 1rem;
     text-decoration: none;
     transition: transform .5s ease;
     margin-top: 1rem;
