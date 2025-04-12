@@ -260,6 +260,31 @@
   transition-duration: 0.25s;
   transition-property: color, background; /* Add 'background' here */
   transition-timing-function: ease;
+  background-color: var(--rowBackground);
+}
+
+.lvl3 {
+  box-shadow:
+    3px 0 var(--rowBackground), 
+    -3px 0 var(--rowBackground),
+    0 -3px var(--rowBackground),
+    0 3px var(--rowBackground),
+    6px 0 var(--rowBackground),
+    -6px 0 var(--rowBackground),
+    0 -6px var(--rowBackground),
+    0 6px var(--rowBackground),
+    0 0 0 var(--rowBackground),
+
+    9px 0 var(--rowBackground), 
+    -9px 0 var(--rowBackground), 
+    0 9px var(--rowBackground),
+    0 -9px var(--rowBackground),
+    0 -3px 0 3px var(--rowBackground),
+    0 3px 0 3px var(--rowBackground),
+    3px 0 0 3px var(--rowBackground),
+    -3px 0 0 3px var(--rowBackground);
+  margin: 9px auto;
+  background: var(--rowBackground);
 }
 .lvl4 {
   box-shadow:
