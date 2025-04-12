@@ -288,10 +288,9 @@ include "themes.scss"; //file contains all fonts
         background-color: var(--row);
         /* background-color:#191919;                      Background color */
         font-size: 1rem;
-        border-radius: 1.3rem;
+        border-radius: 1rem;
         display: inline-block;
         padding: 1.3rem;
-        margin-left: .5rem;
         transition: transform .5s ease;
         line-height: 10px;
         vertical-align: top;
@@ -651,9 +650,8 @@ include "themes.scss"; //file contains all fonts
     {
         font-size: 1.3rem;
         padding: 0 1rem;
-        color: rgb(255, 255, 255);
-        opacity: 85%;
-        line-height: 1rem;
+        color: var(--row);
+        line-height: 1.5rem;
     }
     .aboutDescription {
         font-size: 1.5rem;

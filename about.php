@@ -16,7 +16,7 @@ session_start();
         <div id = "displayStats">
             <div class = "statsContainer">
                 <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0; line-height: 0">about</h1>
-                    <h2 class="aboutDescription">
+                    <h2 class="description">
                     cozytypes.com is a simple typing website for keyboard enthusiasts. test your typing abilities in different modes, track your 
                     progress, and improve your overall typing speed. This website draws inspiration from Monkeytype.com, and I want to express my 
                     gratitude to its creators for providing such a great example in the typing community. Features include typing stats and history for users with accounts, configurations 
@@ -28,7 +28,7 @@ session_start();
         <div id = "displayStats">
             <div class = "statsContainer">
                 <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0; line-height: 0" >difficulty</h1>
-                    <h2 class="aboutDescription">
+                    <h2 class="description">
                     The site offers two difficulties. 
                     easy mode - which has a word set of the 100 most common words in the english language, intended for beginners.
                     hard mode - which has a word set of 1000 words from the english language, which are intended to be a bit more difficult and longer in length.
@@ -39,7 +39,7 @@ session_start();
         <div id = "displayStats">
             <div class = "statsContainer">
                 <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0; line-height: 0;" >stats and progress</h1>
-                    <h2 class="aboutDescription">
+                    <h2 class="description">
                     After the typing test ends, users will be able to see their accuracy, wpm, and mode for the completed test. Users who have signed up for an account 
                     have the ability to track these results and all previous history, being able to see there best scores in each mode and category. Additionally, Users
                     signed up for an account have an ability to compete against others on the leaderboard. 
@@ -52,7 +52,7 @@ session_start();
         <div id = "displayStats">
             <div class = "statsContainer">
                 <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0; line-height: 0;" >feature request</h1>
-                    <h2 class="aboutDescription">
+                    <h2 class="description">
                     If you have any questions, concerns, or ideas about adding a feature please either contact us by email, or submit an
                     issue to us on github.
                     </h2>
@@ -62,7 +62,7 @@ session_start();
         <div id = "displayStats">
             <div class = "statsContainer">
                 <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0; line-height: 0;" >developers</h1>
-                    <h2 class="aboutDescription">
+                    <h2 class="description">
                     Created by Alex McBrier, with the purpose of helping both beginners and experts improve there typing skills.
                     Thank you to Kaffee as well for your collaboration and support on this project. I am excited to bring this game to you and anyone else who may enjoy it. Thank you for your support.
                     </h2>
