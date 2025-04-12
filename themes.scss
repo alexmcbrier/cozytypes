@@ -260,27 +260,17 @@
   transition-duration: 0.25s;
   transition-property: color, background; /* Add 'background' here */
   transition-timing-function: ease;
-
   box-shadow:
-    3px 0 var(--rowBackground), 
-    -3px 0 var(--rowBackground),
-    0 -3px var(--rowBackground),
-    0 3px var(--rowBackground),
-    6px 0 var(--rowBackground),
-    -6px 0 var(--rowBackground),
-    0 -6px var(--rowBackground),
-    0 6px var(--rowBackground),
-    0 0 0 var(--rowBackground),
-
-    9px 0 var(--rowBackground), 
-    -9px 0 var(--rowBackground), 
-    0 9px var(--rowBackground),
-    0 -9px var(--rowBackground),
-    0 -3px 0 3px var(--rowBackground),
-    0 3px 0 3px var(--rowBackground),
-    3px 0 0 3px var(--rowBackground),
-    -3px 0 0 3px var(--rowBackground);
-  margin: 9px auto;
+    8px 0 blue, 
+    -8px 0 blue, 
+    0 -8px blue, 
+    0 8px blue,
+    16px 0 blue, 
+    -16px 0 red, 
+    0 -16px red, 
+    0 16px red,
+    0 0 0 8px red;
+  margin: 16px ;
   background-color: var(--rowBackground);
 }
 .preference {
@@ -301,16 +291,25 @@
   text-align: center;
   min-width: 5rem;
   box-shadow:
-  8px 0 darken(var(--rowBackground), 10%), 
-  -8px 0 darken(var(--rowBackground), 10%), 
-  0 -8px darken(var(--rowBackground), 10%), 
-  0 8px darken(var(--rowBackground), 10%),
-  16px 0 red, 
-  -16px 0 red, 
-  0 -16px red, 
-  0 16px red,
-  0 0 0 8px red;
-  margin: 16px ;
+    3px 0 red, 
+    -3px 0 red,
+    0 -3px red,
+    0 3px red,
+    6px 0 red,
+    -6px 0 red,
+    0 -6px red,
+    0 6px red,
+    0 0 0 red,
+
+    9px 0 blue, 
+    -9px 0 blue, 
+    0 9px blue,
+    0 -9px blue,
+    0 -3px 0 3px blue,
+    0 3px 0 3px blue,
+    3px 0 0 3px blue,
+    -3px 0 0 3px blue;
+  margin: 9px auto;
 }
 
 .lvl3 {
