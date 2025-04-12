@@ -266,12 +266,7 @@
     -3px 0 0 3px var(--rowBackground);
   margin: 9px auto;
   background: var(--rowBackground);
-  transition-delay: 0s;
-  transition-duration: 0.25s;
-  transition-property: color, background; /* Add 'background' here */
-  transition-timing-function: ease;
 }
-
 .lvl4 {
   box-shadow:
     4px 0 white,
@@ -318,4 +313,7 @@
     8px 0 0 8px black,
     -8px 0 0 8px black;
   margin: 5px auto;
+}
+.lvl1, .lvl2, .lvl3, .lvl4, .other {
+  transition: all 0.25s ease;
 }
