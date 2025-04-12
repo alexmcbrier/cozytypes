@@ -1462,5 +1462,20 @@ include "themes.scss"; //file contains all fonts
         transition: opacity 1s ease;
         filter: blur(10px)
     }
+    .lvl1 {
+    @include other( 4px, orange, white );
+    }
+    .lvl2 {
+    @include step2v2( 4px, blue, white );
+    }
+    .lvl3 {
+    @include step3v2( 3px, red, white );
+    }
+    .lvl4 {
+    @include step4( 5px, green, white );
+    }
+    .other {
+    @include step1( 6px, black );
+    }
 
 </style>
