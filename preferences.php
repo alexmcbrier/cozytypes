@@ -16,12 +16,12 @@ session_start();
     <form id="mainContent" method="POST" action="preferences" style = "gap: 0">
         <?php include "./nav.php" ?>
         <div class="preferences">
-            <div id="sizesContainer" class="rowContainer">
+            <div id="sizesContainer" class="lvl2">
                 <h1 class="notSignedIn" id="preferenceHeader">font size<i class="fa-solid fa-text-height"></h1></i>
                 <h1 class="description">Change the size of the words in the test.</h1>
-                <a data-value="2" class="preference click" onclick="setPreference('fontSize', 2), addNotification('font size','2');">small</a>
-                <a data-value="3"class="preference click" onclick="setPreference('fontSize', 3), addNotification('font size','3');">medium</a>
-                <a data-value="4"class="preference click" onclick="setPreference('fontSize', 4), addNotification('font size','4');">large</a>
+                <a data-value="2" class="preference click" onclick="setPreference('fontSize', 2), addNotification('font size','small');">small</a>
+                <a data-value="3"class="preference click" onclick="setPreference('fontSize', 3), addNotification('font size','medium');">medium</a>
+                <a data-value="4"class="preference click" onclick="setPreference('fontSize', 4), addNotification('font size','large');">large</a>
             </div>
             <div id="switchesContainer" class="rowContainer">
                 <h1 class="notSignedIn" id="preferenceHeader">keyboard switch sounds<i class="fa-solid fa-volume-low"></i></h1>
