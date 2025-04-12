@@ -12,7 +12,18 @@ include "themes.scss"; //file contains all fonts
         font-family: 'lexendDeca';
         src: url('./Fonts/LexendDeca.ttf');
     }
-
+    @font-face {
+        font-family: 'handjet';
+        src: url('./Fonts/handjet.ttf');
+    }
+    @font-face {
+        font-family: 'pressStart';
+        src: url('./Fonts/pressStart.ttf');
+    }
+    @font-face {
+        font-family: 'vt323';
+        src: url('./Fonts/vt323.ttf');
+    }
     @font-face {
         font-family: 'raleway';
         src: url('./Fonts/raleway.ttf');
