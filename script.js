@@ -393,7 +393,7 @@ function moveCursor()
     const placement = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
     const rect = placement.getBoundingClientRect();
     cursor.style.left = rect.x + "px";
-    cursor.style.width = rect.width + "px";
+    cursor.style.width = (rect.width * .89) + "px";
     cursor.style.animation = "none";
     cursor.style.opacity = "20%";
   }
@@ -403,7 +403,7 @@ function moveCursor()
     const placement = document.getElementsByClassName('current-word')[0]; //Only want 1 value in class list
     const rect = placement.getBoundingClientRect();
     cursor.style.left = rect.x + "px";
-    cursor.style.width = rect.width + "px";
+    cursor.style.width = (rect.width * .89) + "px";
     cursor.style.marginTop = (localStorage.getItem("fontSize") * 1.25) + "rem";
     cursor.style.height = (localStorage.getItem("fontSize") / 4) + "rem";
     cursor.style.animation = "none";

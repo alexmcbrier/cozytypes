@@ -136,6 +136,17 @@ include "themes.scss"; //file contains all fonts
     min-width: 8rem;
     }
 
+.retroBox {
+    margin: 2rem auto;
+    max-width: 40ch;
+    border: 8px solid var(--row);
+    color: #ffff;
+    padding: 2ch;
+    position: relative;
+    border-image: 
+    url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 0H8v4H4v4H0v8h4v4h4v4h8v-4h4v-4h4V8h-4V4h-4V0zm0 4v4h4v8h-4v4H8v-4H4V8h4V4h8z' fill='%230038FF'/%3E%3C/svg%3E")
+    8 stretch;
+}
 #title {
     font-size: 2.25rem;
 }
