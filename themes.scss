@@ -209,51 +209,107 @@
   --incorrect: #eb8791;
 }
 .lvl1 {
-  box-shadow:
-    4px 0 orange,
-    -4px 0 orange,
-    0 -4px orange,
-    0 4px orange,
-    4px 0 0 2px orange,
-    -4px 0 0 2px orange,
-    0 -4px 0 2px orange,
-    0 4px 0 2px orange,
-    5px 0 red,
-    -5px 0 red,
-    0 -5px red,
-    0 5px red,
-    0 0 0 3px red,
-    0 2px 0 2px red,
-    0 -2px 0 2px red,
-    2px 0 0 2px red,
-    -2px 0 0 2px red;
-  margin: 5px auto;
+  box-shadow: 
+    4px 0 white, 
+    -4px 0 white,
+    0 -4px white, 
+    0 4px white,
+    4px 0 0 2px white,
+    -4px 0 0 2px white,
+    0 -4px 0 2px white,
+    0 4px 0 2px white,
+    5px 0 orange, 
+    -5px 0 orange,
+    0 -5px orange, 
+    0 5px orange,
+    0 0 0 3px orange,
+    0 2px 0 2px orange,
+    0 -2px 0 2px orange,
+    2px 0 0 2px orange,
+    -2px 0 0 2px orange;
+  margin: 4px auto;
 }
 
 .lvl2 {
   box-shadow:
-    4px 0 blue,
-    -4px 0 blue,
-    0 -4px blue,
-    0 4px blue,
-    2px 0 white,
-    -2px 0 white,
-    0 -2px white,
-    0 2px white,
-    0 0 0 4px white;
-  margin: 2px auto;
-}
-.lvl3 {
-  box-shadow:
-    3px 0 red,
-    -3px 0 red,
-    0 -3px red,
-    0 3px red,
-    2px 0 white,
-    -2px 0 white,
-    0 -2px white,
-    0 2px white,
-    0 0 0 3px white;
-  margin: 3px auto;
+    4px 0 white,
+    -4px 0 white,
+    0 -4px white,
+    0 4px white,
+    8px 0 blue,
+    -8px 0 blue,
+    0 -8px blue,
+    0 8px blue,
+    0 0 0 4px blue;
+  margin: 8px auto;
 }
 
+.lvl3 {
+  box-shadow:
+    3px 0 white, 
+    -3px 0 white,
+    0 -3px white,
+    0 3px white,
+    6px 0 white,
+    -6px 0 white,
+    0 -6px white,
+    0 6px white, 
+    0 0 0 3px white,
+    9px 0 red, 
+    -9px 0 red, 
+    0 9px red,
+    0 -9px red,
+    0 -3px 0 3px red,
+    0 3px 0 3px red,
+    3px 0 0 3px red,
+    -3px 0 0 3px red;
+  margin: 9px auto;
+}
+
+.lvl4 {
+  box-shadow:
+    4px 0 white,
+    -4px 0 white,
+    0 -4px white,
+    0 4px white,
+    8px 0 white,
+    -8px 0 white,
+    0 -8px white,
+    0 8px white,
+    0 0 0 4px white,
+    12px 0 green,
+    -12px 0 green,
+    0 12px green,
+    0 -12px green,
+    0 -4px 0 4px green,
+    0 4px 0 4px green,
+    4px 0 0 4px green,
+    -4px 0 0 4px green,
+    16px 0 green, 
+    -16px 0 green, 
+    0 -16px green, 
+    0 16px green;
+  margin: 16px auto;
+}
+
+.other {
+  box-shadow:
+    24px 0 white, 
+    -24px 0 white, 
+    0 -24px white, 
+    0 24px white,
+    4px 0 0 8px white,
+    -4px 0 0 8px white,
+    0 -4px 0 8px white,
+    0 4px 0 8px white,
+    20px 0 black, 
+    -20px 0 black,
+    0 -20px black, 
+    0 20px black,
+    0 0 0 12px black,
+    0 8px 0 8px black,
+    0 -8px 0 8px black,
+    8px 0 0 8px black,
+    -8px 0 0 8px black;
+  margin: 5px auto;
+}
