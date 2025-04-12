@@ -608,7 +608,7 @@ function loadPreferences() {
     //for each preference
     //1. Try to read from local storage, otherwise set to default
     //2. set preference to local storage
-    let theme = localStorage.getItem("theme") || "light";
+    let theme = localStorage.getItem("theme") || "9009";
     setTheme("default", theme); 
     let fontSize = localStorage.getItem("fontSize") || "3";
     let lineCount = localStorage.getItem("lineCount") || "3";
@@ -638,7 +638,7 @@ function loadPreferences() {
     
 }
 function highlightPrefernces() {
-    let theme = localStorage.getItem("theme") || "light";
+    let theme = localStorage.getItem("theme") || "9009";
     let fontSize = localStorage.getItem("fontSize") || "3";
     let lineCount = localStorage.getItem("lineCount") || "3";
     let caret = localStorage.getItem("caret") || "caret";

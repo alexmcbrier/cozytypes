@@ -11,12 +11,22 @@
 .theme-9009 {
   --background: #EEEBE2;
   --backgroundDark: #d5d0c1;
-  --testText: #403b27;
+  --testText: #c5beab;
   --currentWord: #302c26;
-  --correct: #080909;
+  --correct: #463e3e;
   --row: #beb8a1;
   --rowBackground: #d6d1c4;
   --incorrect: #C87E74;
+}
+.light {
+  --background: #eeeeee;
+  --backgroundDark: #d5cdcd;
+  --testText: #B2B2B2;
+  --currentWord: #404040;
+  --correct: #463e3e;
+  --row: #b6b4b4;
+  --rowBackground: #d1d0d0;
+  --incorrect: #be6969;
 }
 .amethyst {
   --background: #e2caea;
