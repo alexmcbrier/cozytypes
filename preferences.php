@@ -29,6 +29,9 @@ session_start();
                 <h1 class="notSignedIn" id="preferenceHeader">font family<i class="fa-solid fa-font"></i></h1>
                 <h1 class="description">Choose from various styles to change the font family across the site.</h1>
                 <a data-value="lora" class="preference click" style="font-family: 'Lora', serif;" onclick="setPreference('fontFamily', 'lora'), addNotification('font family','lora');">lora</a>
+                <a data-value="handjet" class="preference click" style="font-family: 'handjet', sans-serif;" onclick="setPreference('fontFamily', 'handjet'), addNotification('font family','handjet');">handjet</a>
+                <a data-value="pressStart" class="preference click" style="font-family: 'pressStart', system-ui;" onclick="setPreference('fontFamily', 'pressStart'), addNotification('font family','pressStart');">pressStart</a>
+                <a data-value="vt323" class="preference click" style="font-family: 'vt323', monospace;" onclick="setPreference('fontFamily', 'vt323'), addNotification('font family','vt323');">retro</a>
                 <a data-value="LexendDeca" class="preference click" style="font-family: 'LexendDeca', serif;" onclick="setPreference('fontFamily', 'LexendDeca'), addNotification('font family','lexend deca');">lexend deca</a>
                 <a data-value="Nunito" class="preference click" style="font-family: 'Nunito', sans-serif;" onclick="setPreference('fontFamily', 'Nunito'), addNotification('font family','Nunito');">Nunito</a>
                 <a data-value="arial" class="preference click" style="font-family: Arial;" onclick="setPreference('fontFamily', 'arial'), addNotification('font family','arial');">arial</a>
