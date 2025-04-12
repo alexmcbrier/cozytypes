@@ -346,6 +346,7 @@
 }
 .lvl2 {
   @include step2v2( 4px, blue, white );
+  font-size: 3rem;
 }
 .lvl3 {
   @include step3v2( 3px, red, white );
