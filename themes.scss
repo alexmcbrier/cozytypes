@@ -244,28 +244,22 @@
   margin: 8px auto;
 }
 
-.lvl3 {
-  box-shadow:
-    3px 0 var(--rowBackground), 
-    -3px 0 var(--rowBackground),
-    0 -3px var(--rowBackground),
-    0 3px var(--rowBackground),
-    6px 0 var(--rowBackground),
-    -6px 0 var(--rowBackground),
-    0 -6px var(--rowBackground),
-    0 6px var(--rowBackground),
-    0 0 0 var(--rowBackground),
-
-    9px 0 var(--rowBackground), 
-    -9px 0 var(--rowBackground), 
-    0 9px var(--rowBackground),
-    0 -9px var(--rowBackground),
-    0 -3px 0 3px var(--rowBackground),
-    0 3px 0 3px var(--rowBackground),
-    3px 0 0 3px var(--rowBackground),
-    -3px 0 0 3px var(--rowBackground);
-  margin: 9px auto;
-  background: var(--rowBackground);
+.rowContainer {
+  user-select: none;
+  color: var(--currentWord);
+  font-size: 1rem;
+  padding: 1rem;
+  margin-left: .5rem;
+  line-height: 10px;
+  vertical-align: top;
+  text-decoration: none;
+  /* Remove one of the margin properties */
+  margin: 1rem;
+  align-content: center;
+  transition-delay: 0s;
+  transition-duration: 0.25s;
+  transition-property: color, background; /* Add 'background' here */
+  transition-timing-function: ease;
 }
 .lvl4 {
   box-shadow:
