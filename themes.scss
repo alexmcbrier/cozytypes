@@ -245,8 +245,16 @@
 }
 
 .lvl3 {
-  background-color: blue;
   box-shadow:
+    3px 0 white, 
+    -3px 0 white,
+    0 -3px white,
+    0 3px white,
+    6px 0 white,
+    -6px 0 white,
+    0 -6px white,
+    0 6px white, 
+    0 0 0 3px white,
     9px 0 red, 
     -9px 0 red, 
     0 9px red,
@@ -257,7 +265,6 @@
     -3px 0 0 3px red;
   margin: 9px auto;
 }
-
 
 .lvl4 {
   box-shadow:
