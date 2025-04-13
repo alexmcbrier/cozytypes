@@ -5,6 +5,7 @@ const displayTimer = document.getElementById('time') // Time Display
 const displayWPM = document.getElementById('wpmDisplay') // wpm Display
 const mainContent = document.getElementById('mainContent') // wpm Display
 const footer = document.getElementById("footer")
+const nav = document.getElementById("footer")
 const typingMode = document.getElementById("typingmode")
 const hotkey  = document.getElementById("hotkey")
 var timerStatus = false; // Turns on when user begins typing...
@@ -240,6 +241,7 @@ function restart() {
     displayInput.focus();
     displayInput.value = "";
     footer.classList.remove('fadeOut');
+    nav.classList.remove('fadeOut');
     typingMode.classList.remove('fadeOut');
     hotkey.classList.remove('fadeOut');
     displayWPM.style.opacity = "0%";
@@ -320,6 +322,7 @@ function startTimer() {
     if (timerStatus == false) {
         displayWPM.style.opacity = "100%";
         footer.classList.add('fadeOut');
+        nav.classList.add('fadeOut');
         typingMode.classList.add('fadeOut');
         hotkey.classList.add('fadeOut');
         document.getElementById('cursor').style.animation = "none";
