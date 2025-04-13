@@ -1,5 +1,4 @@
 <?php
-//if user already logged in then go to the profile page
 session_start();
 if (isset($_SESSION["user_id"])) {
     header("Location: profile");
@@ -24,8 +23,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $_SESSION["user_id"] = $user["id"];
         $_SESSION["email"] = $user["email"];
 
-        // Set a cookie (optional — not recommended for password_hash though)
-        setcookie("id", $user["id"], time() + (86400 * 30), "/", NULL); // or store a session token instead
+        // You can echo username *after* successful login if you want to
+        // echo $user["username"];
+
+        // Set cookie if needed
+        setcookie("id", $user["id"], time() + (86400 * 30), "/", NULL);
 
         header("Location: profile");
         exit;
@@ -33,7 +35,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $is_invalid = true;
     }
 }
-
 ?>
 <!DOCTYPE html>
 <html>
