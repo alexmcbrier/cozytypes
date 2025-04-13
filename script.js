@@ -672,7 +672,9 @@ function highlightPrefernces() {
 
             if (prefValue === localStorageValue) {
                 pref.classList.add("preferenceHighlight");
+                pref.classList.remove("preference");
             } else {
+                pref.classList.add("preference");
                 pref.classList.remove("preferenceHighlight");
             }
         });

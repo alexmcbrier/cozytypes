@@ -275,6 +275,19 @@
 .preferenceHighlight {
   background-color: var(--background);
   color: var(--currentWord);
+  cursor: pointer;
+  font-size: 1rem;
+  display: inline-block;
+  padding: 1.3rem;
+  transition: transform .5s ease;
+  line-height: 10px;
+  vertical-align: top;
+  text-decoration: none;
+  align-items: center;
+  line-height: 10px;
+  margin-top: .5rem;
+  text-align: center;
+  min-width: 5rem;
   box-shadow:
     3px 0 var(--background), 
     -3px 0 var(--background), 
