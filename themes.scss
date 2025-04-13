@@ -291,28 +291,24 @@
   text-align: center;
   min-width: 5rem;
   box-shadow:
-    4px 0 white,
-    -4px 0 white,
-    0 -4px white,
-    0 4px white,
-    8px 0 white,
-    -8px 0 white,
-    0 -8px white,
-    0 8px white,
-    0 0 0 4px white,
-    12px 0 green,
-    -12px 0 green,
-    0 12px green,
-    0 -12px green,
-    0 -4px 0 4px green,
-    0 4px 0 4px green,
-    4px 0 0 4px green,
-    -4px 0 0 4px green,
-    16px 0 green, 
-    -16px 0 green, 
-    0 -16px green, 
-    0 16px green;
-  margin: 16px auto;
+    24px 0 white, 
+    -24px 0 white, 
+    0 -24px white, 
+    0 24px white,
+    4px 0 0 8px white,
+    -4px 0 0 8px white,
+    0 -4px 0 8px white,
+    0 4px 0 8px white,
+    20px 0 black, 
+    -20px 0 black,
+    0 -20px black, 
+    0 20px black,
+    0 0 0 12px black,
+    0 8px 0 8px black,
+    0 -8px 0 8px black,
+    8px 0 0 8px black,
+    -8px 0 0 8px black;
+  margin: 5px auto;
 }
 
 .lvl3 {
