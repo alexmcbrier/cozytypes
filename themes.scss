@@ -228,6 +228,7 @@
     2px 0 0 2px orange,
     -2px 0 0 2px orange;
   margin: 4px auto;
+  transition: box-shadow 0.25s ease;
 }
 
 .lvl2 {
@@ -242,6 +243,7 @@
     0 8px blue,
     0 0 0 4px blue;
   margin: 8px auto;
+  transition: box-shadow 0.25s ease;
 }
 
 .rowContainer {
@@ -266,7 +268,8 @@
     0 16px var(--rowBackground),
     0 0 0 8px var(--rowBackground);
   background-color: var(--rowBackground);
-  margin: 1.5rem
+  margin: 1.5rem;
+  transition: box-shadow 0.25s ease;
 }
 .color-theme
 {
@@ -284,6 +287,7 @@
     0 0 0 8px var(--background);
     background-color: var(--background);
     flex: 1 1 calc(10%);
+    transition: box-shadow 0.25s ease;
 }
 .preference {
   cursor: pointer;
@@ -313,6 +317,7 @@
     0 6px var(--row),
     0 0px 6px 0 var(--row);
   margin: .4rem;
+  transition: box-shadow 0.25s ease;
 }
 
 .lvl3 {
@@ -337,6 +342,7 @@
     -3px 0 0 3px var(--rowBackground);
   margin: 9px auto;
   background: var(--rowBackground);
+  transition: box-shadow 0.25s ease;
 }
 .lvl4 {
   box-shadow:
@@ -362,6 +368,7 @@
     0 -16px green, 
     0 16px green;
   margin: 16px auto;
+  transition: box-shadow 0.25s ease;
 }
 
 .other {
@@ -384,4 +391,5 @@
     8px 0 0 8px black,
     -8px 0 0 8px black;
   margin: 5px auto;
+  transition: box-shadow 0.25s ease;
 }

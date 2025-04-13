@@ -189,7 +189,7 @@ include "themes.scss"; //file contains all fonts
         font-family: 'PressStart', monospace;
         transition-delay: 0s;
         transition-duration: 0.25s;
-        transition-property: color, box-shadow, background; /* Add 'background' here */
+        transition-property: color, background; /* Add 'background' here */
         transition-timing-function: ease;
     }
     .main-body {
