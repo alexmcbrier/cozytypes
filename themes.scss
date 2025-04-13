@@ -261,6 +261,10 @@
   transition-property: color, background; /* Add 'background' here */
   transition-timing-function: ease;
   box-shadow:
+    8px 0 var(--rowBackground), 
+    -8px 0 var(--rowBackground), 
+    0 -8px var(--rowBackground), 
+    0 8px var(--rowBackground),
     16px 0 color-mix(in srgb, var(--rowBackground) 85%, black), 
     -16px 0 color-mix(in srgb, var(--rowBackground) 85%, black), 
     0 -16px color-mix(in srgb, var(--rowBackground) 85%, black), 
@@ -287,24 +291,24 @@
   text-align: center;
   min-width: 5rem;
   box-shadow:
-    3px 0 red, 
-    -3px 0 red,
-    0 -3px red,
-    0 3px red,
-    6px 0 red,
-    -6px 0 red,
-    0 -6px red,
-    0 6px red,
-    0 0 0 red,
+    3px 0 var(--row), 
+    -3px 0 var(--row),
+    0 -3px var(--row),
+    0 3px var(--row),
+    6px 0 var(--row),
+    -6px 0 var(--row),
+    0 -6px var(--row),
+    0 6px var(--row),
+    0 0 0 var(--row),
 
-    9px 0 blue, 
-    -9px 0 blue, 
-    0 9px blue,
-    0 -9px blue,
-    0 -3px 0 3px blue,
-    0 3px 0 3px blue,
-    3px 0 0 3px blue,
-    -3px 0 0 3px blue;
+    9px 0 color-mix(in srgb, var(--row) 85%, black), 
+    -9px 0 blcolor-mix(in srgb, var(--row) 85%, black)ue, 
+    0 9px color-mix(in srgb, var(--row) 85%, black),
+    0 -9px color-mix(in srgb, var(--row) 85%, black),
+    0 -3px 0 3px color-mix(in srgb, var(--row) 85%, black),
+    0 3px 0 3px color-mix(in srgb, var(--row) 85%, black),
+    3px 0 0 3px color-mix(in srgb, var(--row) 85%, black),
+    -3px 0 0 3px color-mix(in srgb, var(--row) 85%, black);
   margin: 9px;
 }
 
