@@ -13,7 +13,7 @@ session_start();
 <body>
     <form id="mainContent" style = "gap: 0">
         <?php include "./nav.php" ?>
-        <div id = "displayStats">
+        <div id = "displayStats retroBox">
             <div class = "statsContainer">
                 <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0; line-height: 0">about</h1>
                     <h2 class="description">
@@ -25,7 +25,7 @@ session_start();
             </div>
         </div>
 
-        <div id = "displayStats">
+        <div id = "displayStats retroBox">
             <div class = "statsContainer">
                 <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0; line-height: 0" >difficulty</h1>
                     <h2 class="description">
@@ -36,7 +36,7 @@ session_start();
             </div>
         </div>
 
-        <div id = "displayStats">
+        <div id = "displayStats retroBox">
             <div class = "statsContainer">
                 <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0; line-height: 0;" >stats and progress</h1>
                     <h2 class="description">
@@ -49,7 +49,7 @@ session_start();
             </div>
         </div>
 
-        <div id = "displayStats">
+        <div id = "displayStats retroBox">
             <div class = "statsContainer">
                 <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0; line-height: 0;" >feature request</h1>
                     <h2 class="description">
@@ -59,7 +59,7 @@ session_start();
             </div>
         </div>
 
-        <div id = "displayStats">
+        <div id = "displayStats retroBox">
             <div class = "statsContainer">
                 <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0; line-height: 0;" >developers</h1>
                     <h2 class="description">

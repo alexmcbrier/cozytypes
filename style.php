@@ -421,6 +421,24 @@ include "themes.scss"; //file contains all fonts
         font-size: 0rem;
         padding: 0;
     }
+    .statsContainer
+    {
+        user-select: none;
+        color: var(--currentWord);
+        font-size: 1rem;
+        border-radius: 1.5rem;
+        padding: 1rem;
+        margin-left: .5rem;
+        transition: 1s;
+        line-height: 10px;
+        vertical-align: top;
+        text-decoration: none;
+        align-content: center;
+        padding: 1rem;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
     #textInput {
         resize: none;
         position: absolute;
@@ -1352,7 +1370,7 @@ include "themes.scss"; //file contains all fonts
         display: flex;
         background-color: var(--rowBackground);
         border-radius: 1.5rem;
-        margin: 1.5rem;
+        margin: 1rem;
         display: flex;
     }
 
