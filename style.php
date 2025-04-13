@@ -1337,7 +1337,10 @@ include "themes.scss"; //file contains all fonts
     cursor: pointer;
     
 }
-
+    #themesContainer a:hover,
+    .preferences a:hover {
+        background-color: var(--background);
+    }
     .preferences
     {
         display: flex;
