@@ -261,15 +261,15 @@
   transition-property: color, background; /* Add 'background' here */
   transition-timing-function: ease;
   box-shadow:
-    8px 0 color-mix(in srgb, var(--rowBackground) 85%, black), 
-    -8px 0 color-mix(in srgb, var(--rowBackground) 85%, black), 
-    0 -8px color-mix(in srgb, var(--rowBackground) 85%, black), 
-    0 8px color-mix(in srgb, var(--rowBackground) 85%, black),
-    16px 0 color-mix(in srgb, var(--rowBackground) 75%, black), 
-    -16px 0 color-mix(in srgb, var(--rowBackground) 75%, black), 
-    0 -16px color-mix(in srgb, var(--rowBackground) 75%, black), 
-    0 16px color-mix(in srgb, var(--rowBackground) 75%, black),
-    0 0 0 8px color-mix(in srgb, var(--rowBackground) 75%, black);
+    8px 0 color-mix(in srgb, var(--rowBackground) 90%, black), 
+    -8px 0 color-mix(in srgb, var(--rowBackground) 90%, black), 
+    0 -8px color-mix(in srgb, var(--rowBackground) 90%, black), 
+    0 8px color-mix(in srgb, var(--rowBackground) 90%, black),
+    16px 0 color-mix(in srgb, var(--rowBackground) 85%, black), 
+    -16px 0 color-mix(in srgb, var(--rowBackground) 85%, black), 
+    0 -16px color-mix(in srgb, var(--rowBackground) 85%, black), 
+    0 16px color-mix(in srgb, var(--rowBackground) 85%, black),
+    0 0 0 8px color-mix(in srgb, var(--rowBackground) 85%, black);
   margin: 16px auto;
   background-color: var(--rowBackground);
 }
