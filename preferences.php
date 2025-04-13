@@ -16,14 +16,14 @@ session_start();
     <form id="mainContent" method="POST" action="preferences" style = "gap: 0">
         <?php include "./nav.php" ?>
         <div class="preferences">
-            <div id="sizesContainer" class="rowContainer retroBox">
+            <div id="sizesContainer" class="rowContainer">
                 <h1 class="notSignedIn" id="preferenceHeader">font size<i class="fa-solid fa-text-height"></h1></i>
                 <h1 class="description">Change the size of the words in the test.</h1>
                 <a data-value="2" class="preference click" onclick="setPreference('fontSize', 2), addNotification('font size','small');">small</a>
                 <a data-value="3"class="preference click" onclick="setPreference('fontSize', 3), addNotification('font size','medium');">medium</a>
                 <a data-value="4"class="preference click" onclick="setPreference('fontSize', 4), addNotification('font size','large');">large</a>
             </div>
-            <div id="switchesContainer" class="rowContainer retroBox">
+            <div id="switchesContainer" class="rowContainer">
                 <h1 class="notSignedIn" id="preferenceHeader">keyboard switch sounds<i class="fa-solid fa-volume-low"></i></h1>
                 <h1 class="description">choose from these switches, each offering a unique sound profile.</h1>
                 <a data-value="none" class="preference click" onclick="setPreference('keyboardswitch', 'none'), addNotification('switch sound','none');">none</a>
@@ -55,7 +55,7 @@ session_start();
                     <a class = "color-theme click dark" onclick="setTheme(currentTheme, 'dark')">dark</a>
                 </div>
             </div>
-            <div id="caretsContainer" class="rowContainer retroBox">
+            <div id="caretsContainer" class="rowContainer">
                 <h1 class="notSignedIn" id="preferenceHeader">pace caret <i class="fa-solid fa-i-cursor"></i></h1>
                 <h1 class="description">When enabled, the caret will move along the page as you type. Change the style for different typing experiences.</h1>
                 <a data-value="caret" class="preference click" onclick="setPreference('caret', 'caret'), addNotification('caret style','classic');">caret</a>
@@ -63,7 +63,7 @@ session_start();
                 <a data-value="underlineWord" class="preference click" onclick="setPreference('caret', 'underlineWord'), addNotification('caret style','underline word');">underline word</a>
                 <a data-value="highlightWord" class="preference click" onclick="setPreference('caret', 'highlightWord'), addNotification('caret style','highlight');">highlight word</a>
             </div>
-            <div id="linesContainer" class="rowContainer retroBox">
+            <div id="linesContainer" class="rowContainer">
                 <h1 class="notSignedIn" id="preferenceHeader">lines <i class="fa-solid fa-align-left"></i></h1>
                 <h1 class="description">Show a different number of lines on the screen; More lines on the page will allow to see you what is coming next.</h1>
                 <a data-value="2" class="preference click" onclick="setPreference('lineCount', 2), addNotification('line count','2');">2</a>

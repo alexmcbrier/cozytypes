@@ -255,6 +255,18 @@
   text-decoration: none;
   /* Remove one of the margin properties */
   align-content: center;
+  box-shadow:
+    8px 0 var(--rowBackground), 
+    -8px 0 var(--rowBackground), 
+    0 -8px var(--rowBackground), 
+    0 8px var(--rowBackground),
+    16px 0 var(--rowBackground), 
+    -16px 0 var(--rowBackground), 
+    0 -16px var(--rowBackground), 
+    0 16px var(--rowBackground),
+    0 0 0 8px var(--rowBackground);
+  background-color: var(--rowBackground);
+  margin: 1.5rem
 }
 .color-theme
 {
@@ -303,17 +315,103 @@
   margin: .4rem;
 }
 
-.retroBox {
+.lvl3 {
   box-shadow:
-    8px 0 var(--rowBackground), 
-    -8px 0 var(--rowBackground), 
-    0 -8px var(--rowBackground), 
-    0 8px var(--rowBackground),
-    16px 0 var(--rowBackground), 
-    -16px 0 var(--rowBackground), 
-    0 -16px var(--rowBackground), 
-    0 16px var(--rowBackground),
-    0 0 0 8px var(--rowBackground);
-  background-color: var(--rowBackground);
-  margin: 1.5rem
+    3px 0 var(--rowBackground), 
+    -3px 0 var(--rowBackground),
+    0 -3px var(--rowBackground),
+    0 3px var(--rowBackground),
+    6px 0 var(--rowBackground),
+    -6px 0 var(--rowBackground),
+    0 -6px var(--rowBackground),
+    0 6px var(--rowBackground),
+    0 0 0 var(--rowBackground),
+
+    9px 0 var(--rowBackground), 
+    -9px 0 var(--rowBackground), 
+    0 9px var(--rowBackground),
+    0 -9px var(--rowBackground),
+    0 -3px 0 3px var(--rowBackground),
+    0 3px 0 3px var(--rowBackground),
+    3px 0 0 3px var(--rowBackground),
+    -3px 0 0 3px var(--rowBackground);
+  margin: 9px auto;
+  background: var(--rowBackground);
 }
+.lvl4 {
+  box-shadow:
+    4px 0 white,
+    -4px 0 white,
+    0 -4px white,
+    0 4px white,
+    8px 0 white,
+    -8px 0 white,
+    0 -8px white,
+    0 8px white,
+    0 0 0 4px white,
+    12px 0 green,
+    -12px 0 green,
+    0 12px green,
+    0 -12px green,
+    0 -4px 0 4px green,
+    0 4px 0 4px green,
+    4px 0 0 4px green,
+    -4px 0 0 4px green,
+    16px 0 green, 
+    -16px 0 green, 
+    0 -16px green, 
+    0 16px green;
+  margin: 16px auto;
+}
+
+.other {
+  box-shadow:
+    24px 0 white, 
+    -24px 0 white, 
+    0 -24px white, 
+    0 24px white,
+    4px 0 0 8px white,
+    -4px 0 0 8px white,
+    0 -4px 0 8px white,
+    0 4px 0 8px white,
+    20px 0 black, 
+    -20px 0 black,
+    0 -20px black, 
+    0 20px black,
+    0 0 0 12px black,
+    0 8px 0 8px black,
+    0 -8px 0 8px black,
+    8px 0 0 8px black,
+    -8px 0 0 8px black;
+  margin: 5px auto;
+}
+.statsContainer
+    {
+        user-select: none;
+        color: var(--currentWord);
+        font-size: 1rem;
+        border-radius: 0;
+        padding: 1rem;
+        margin-left: .5rem;
+        transition: 1s;
+        line-height: 10px;
+        vertical-align: top;
+        text-decoration: none;
+        align-content: center;
+        padding: 1rem;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        box-shadow:
+          8px 0 var(--rowBackground), 
+          -8px 0 var(--rowBackground), 
+          0 -8px var(--rowBackground), 
+          0 8px var(--rowBackground),
+          16px 0 var(--rowBackground), 
+          -16px 0 var(--rowBackground), 
+          0 -16px var(--rowBackground), 
+          0 16px var(--rowBackground),
+          0 0 0 8px var(--rowBackground);
+        background-color: var(--rowBackground);
+        margin: 1.5rem;
+    }
