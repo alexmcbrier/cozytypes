@@ -1328,7 +1328,7 @@ include "themes.scss"; //file contains all fonts
     line-height: 1rem;
     height: 1rem;
     text-decoration: none;
-    transition: transform .5s ease;
+    transition: transform .2s ease;
     margin-top: 1rem;
     text-align: center;
     /* Remove min-width */
@@ -1339,12 +1339,14 @@ include "themes.scss"; //file contains all fonts
 }
     #themesContainer a:hover,
     .preferences a:hover {
+        transform: scale(1.05, 1.05);
         background-color: var(--background);
     }
     .preferences
     {
         display: flex;
         flex-direction: column;
+        transition: transform .2s ease;
     }
 
     #theme-olivia {
