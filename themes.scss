@@ -291,11 +291,28 @@
   text-align: center;
   min-width: 5rem;
   box-shadow:
-    1px 0 var(--row),
-   -1px 0 var(--row),
-    0 -1px var(--row),
-    0 1px var(--row);
-  margin: 1px;
+    4px 0 white,
+    -4px 0 white,
+    0 -4px white,
+    0 4px white,
+    8px 0 white,
+    -8px 0 white,
+    0 -8px white,
+    0 8px white,
+    0 0 0 4px white,
+    12px 0 green,
+    -12px 0 green,
+    0 12px green,
+    0 -12px green,
+    0 -4px 0 4px green,
+    0 4px 0 4px green,
+    4px 0 0 4px green,
+    -4px 0 0 4px green,
+    16px 0 green, 
+    -16px 0 green, 
+    0 -16px green, 
+    0 16px green;
+  margin: 16px auto;
 }
 
 .lvl3 {
