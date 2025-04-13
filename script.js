@@ -669,13 +669,12 @@ function highlightPrefernces() {
         let textColor = themeStyles.getPropertyValue("--currentWord").trim();
         preferences.forEach(pref => {
             let prefValue = pref.getAttribute("data-value");
-
+            pref.classList.remove("preferenceHighlight");
             if (prefValue === localStorageValue) {
                 pref.classList.add("preferenceHighlight");
                 pref.classList.remove("preference");
             } else {
                 pref.classList.add("preference");
-                pref.classList.remove("preferenceHighlight");
             }
         });
     }
