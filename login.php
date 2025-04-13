@@ -53,9 +53,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <?php endif; ?>
                 <input type="text" placeholder="email" name="email" id="email" value="<?= htmlspecialchars($_POST["email"] ?? "") ?>">
                 <input type="text" placeholder="password" name="password" id="password" style="-webkit-text-security: disc;">
-                <div style="display: flex; gap: 3rem">
-                    <button class="loginBtn" id="loginButton1" type="submit" value="submit">Login</button>
-                    <a class="loginBtn" id="loginButton1" href="signup">Sign Up</a>
+                <button class="loginBtn" id="loginButton1" type="submit" value="submit">Login</button>
+                <div id = "signInText">Don't have an account? <a id = "signInLink" href="signup"> Sign up</a></div>
                 </div>
             </form>
             <?php include "./footer.php" ?>
