@@ -1202,18 +1202,6 @@ include "themes.scss"; //file contains all fonts
             padding: 0;
         }
     }
-    .loginBtn {
-        padding: 1.5rem;
-        box-sizing: border-box;
-        text-align: center;
-        border-radius: 999px;
-        width: 100%;
-        color: var(--currentWord);
-        font-size: 1rem;
-        cursor: pointer;
-        transition: all .2s ease-in-out;
-        font-family: 'PressStart', monospace;
-    }
     .profileValues {
         color: var(--row);
         margin-left: 1rem;
