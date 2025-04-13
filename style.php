@@ -1227,14 +1227,6 @@ include "themes.scss"; //file contains all fonts
         border: .3rem solid var(--row);
     }
 
-    #loginButton1:hover {
-        background-color: var(--incorrect);
-    }
-
-    #loginButton2:hover {
-        background-color: var(--row);
-    }
-
     #accountCreate {
         color: var(--currentWord);
         display: inline-block;
