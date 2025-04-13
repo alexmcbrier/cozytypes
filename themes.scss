@@ -262,14 +262,14 @@
   transition-timing-function: ease;
   box-shadow:
     8px 0 color-mix(in srgb, var(--rowBackground) 85%, black), 
-    -8px 0 blue, 
-    0 -8px blue, 
-    0 8px blue,
-    16px 0 red, 
-    -16px 0 red, 
-    0 -16px red, 
-    0 16px red,
-    0 0 0 8px red;
+    -8px 0 color-mix(in srgb, var(--rowBackground) 85%, black), 
+    0 -8px color-mix(in srgb, var(--rowBackground) 85%, black), 
+    0 8px color-mix(in srgb, var(--rowBackground) 85%, black),
+    16px 0 color-mix(in srgb, var(--rowBackground) 65%, black), 
+    -16px 0 recolor-mix(in srgb, var(--rowBackground) 65%, black)d, 
+    0 -16px color-mix(in srgb, var(--rowBackground) 65%, black), 
+    0 16px color-mix(in srgb, var(--rowBackground) 65%, black),
+    0 0 0 8px color-mix(in srgb, var(--rowBackground) 65%, black);
   margin: 16px auto;
   background-color: var(--rowBackground);
 }
