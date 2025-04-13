@@ -206,6 +206,7 @@ include "themes.scss"; //file contains all fonts
     }
     kbd
     {
+        font-family: 'PressStart', monospace;
         font-size: 1rem;
         color: var(--currentWord);
         border-radius: .75rem;
