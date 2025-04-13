@@ -401,7 +401,7 @@ include "themes.scss"; //file contains all fonts
     }
     #showUsername
     {
-        font-size: 2rem;
+        font-size: 1.25rem;
         text-decoration: none;
         color: var(--row);
         display: flex;
