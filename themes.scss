@@ -291,15 +291,15 @@
   text-align: center;
   min-width: 5rem;
   box-shadow:
+    2px 0 var(--row), 
+    -2px 0 var(--row), 
+    0 -2px var(--row), 
+    0 2px var(--row),
     4px 0 var(--row), 
     -4px 0 var(--row), 
     0 -4px var(--row), 
     0 4px var(--row),
-    8px 0 var(--row), 
-    -8px 0 var(--row), 
-    0 -8px var(--row), 
-    0 8px var(--row),
-    0 0 0 8px var(--row);
+    0 0px 4px 0 var(--row);
   margin: 8px auto;
 }
 
