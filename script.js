@@ -674,7 +674,9 @@ function highlightPrefernces() {
                 pref.classList.add("preferenceHighlight");
                 pref.classList.remove("preference");
             } else {
+                pref.classList.remove("preferenceHighlight");
                 pref.classList.add("preference");
+                pref.classList.remove("preferenceHighlight");
             }
         });
     }
