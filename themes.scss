@@ -302,13 +302,13 @@
     0 0 0 var(--row),
 
     9px 0 color-mix(in srgb, var(--row) 85%, black), 
-    -9px 0 blcolor-mix(in srgb, var(--row) 85%, black), 
-    0 9px color-mix(in srgb, var(--row) 85%, black),
-    0 -9px color-mix(in srgb, var(--row) 85%, black),
-    0 -3px 0 3px color-mix(in srgb, var(--row) 85%, black),
-    0 3px 0 3px color-mix(in srgb, var(--row) 85%, black),
-    3px 0 0 3px color-mix(in srgb, var(--row) 85%, black),
-    -3px 0 0 3px color-mix(in srgb, var(--row) 85%, black);
+    -9px 0 blue, 
+    0 9px blue,
+    0 -9px blue,
+    0 -3px 0 3px blue,
+    0 3px 0 3px blue,
+    3px 0 0 3px blue,
+    -3px 0 0 3px blue;
   margin: 9px;
 }
 
