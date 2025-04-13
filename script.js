@@ -673,10 +673,12 @@ function highlightPrefernces() {
             if (prefValue === localStorageValue) {
                 pref.style.backgroundColor = highlightColor;
                 pref.style.color = textColor;
+                pref.style.boxShadow = "3px 0 var(--background), -3px 0 var(--background), 0 -3px var(--background), 0 3px var(--background), 6px 0 var(--background), -6px 0 var(--background), 0 -6px var(--background), 0 6px var(--background), 0 0px 6px 0 var(--background)";
             }
             else {
                 pref.style.backgroundColor = defaultColor;
                 pref.style.color = "white";
+                pref.style.boxShadow = "3px 0 var(--row), -3px 0 var(--row), 0 -3px var(--row), 0 3px var(--row), 6px 0 var(--row), -6px 0 var(--row), 0 -6px var(--row), 0 6px var(--row), 0 0px 6px 0 var(--row)";
             }
         });
     }
