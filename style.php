@@ -317,7 +317,7 @@ include "themes.scss"; //file contains all fonts
         user-select: none;
         display: flex;
         justify-content: center;
-        transition: color .25s ease;
+        transition: color .2s ease;
         align-items: center;
     }
     .footerLinks:hover {
@@ -512,6 +512,7 @@ include "themes.scss"; //file contains all fonts
 
     .modeStack {
         margin-right: 2rem;
+        line-height: 2rem;
     }
     #testText::first-line {
         color: var(--currentWord);
