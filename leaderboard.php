@@ -15,7 +15,7 @@ $mysqli = require __DIR__ . "/config.php";
     <form id="mainContent" method="POST" action="preferences">
         <?php include "./nav.php" ?>
         <div id="middle" style = "width: 100%">
-        <div id = "showSignIn" style = "padding:0rem 2rem;" >Leaderboard<i class="fa-solid fa-crown"></i></div>
+        <div id = "showSignIn" style = "padding:0rem 2rem;" >Leaderboard</div>
             <div class = "profileValues" style = "padding: 0 1rem; margin-bottom: 2rem;">must have an account to be on the leaderboard</div>
             <div class = "results" style = "padding: 0 1rem">All Time</div>
             <div id = "displayStats" style= "margin: 3rem;">
