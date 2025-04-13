@@ -900,7 +900,6 @@ include "themes.scss"; //file contains all fonts
         width: 100%;
         line-height: 3rem;
         background-color: var(--incorrect);
-        border-radius: 1.5rem;
         text-align: center;
         box-sizing: border-box;
     }
