@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <input type="text" placeholder="password" name="password" id="password" style="-webkit-text-security: disc;">
                 <div style="display: flex; gap: 3rem">
                     <button class="loginBtn" id="loginButton1" type="submit" value="submit">Login</button>
-                    <a class="loginBtn" id="loginButton2" href="signup">Sign Up</a>
+                    <a class="loginBtn" id="loginButton1" href="signup">Sign Up</a>
                 </div>
             </form>
             <?php include "./footer.php" ?>
