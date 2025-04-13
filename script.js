@@ -671,9 +671,11 @@ function highlightPrefernces() {
             let prefValue = pref.getAttribute("data-value");
             pref.classList.remove("preferenceHighlight");
             if (prefValue === localStorageValue) {
+                pref.offsetHeight;
                 pref.classList.add("preferenceHighlight");
                 pref.classList.remove("preference");
             } else {
+                pref.offsetHeight;
                 pref.classList.remove("preferenceHighlight");
                 pref.classList.add("preference");
                 pref.classList.remove("preferenceHighlight");
