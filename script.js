@@ -671,12 +671,10 @@ function highlightPrefernces() {
             let prefValue = pref.getAttribute("data-value");
 
             if (prefValue === localStorageValue) {
-                pref.style.backgroundColor = highlightColor;
-                pref.style.color = textColor;
+                pref.classList.add("preferenceHighlight");
             }
             else {
-                pref.style.backgroundColor = defaultColor;
-                pref.style.color = "white";
+                pref.classList.remove("preferenceHighlight");
             }
         });
     }

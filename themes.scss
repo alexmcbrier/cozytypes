@@ -272,6 +272,21 @@
   background-color: var(--rowBackground);
   margin: 1.5rem
 }
+.preferenceHighlight {
+  background-color: var(--background);
+  color: var(--currentWord);
+  box-shadow:
+    3px 0 var(--background), 
+    -3px 0 var(--background), 
+    0 -3px var(--background), 
+    0 3px var(--background),
+    6px 0 var(--background), 
+    -6px 0 var(--background), 
+    0 -6px var(--background), 
+    0 6px var(--background),
+    0 0px 6px 0 var(--background);
+  margin: .4rem;
+}
 .preference {
   cursor: pointer;
   color: white;
@@ -299,7 +314,7 @@
     0 -6px var(--row), 
     0 6px var(--row),
     0 0px 6px 0 var(--row);
-  margin: 8px auto;
+  margin: .4rem;
 }
 
 .lvl3 {
