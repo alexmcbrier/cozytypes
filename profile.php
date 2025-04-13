@@ -186,15 +186,15 @@ if (isset($_SESSION["user_id"])) {
         <div id="middle" style = "width: 100%">
             <div id="displayStats">
                 <div class="statsContainer"> 
-                    <h1 class="notSignedIn" id="preferenceHeader"><?= htmlspecialchars($user["username"]) ?><i class="fa-regular fa-user"></i></h1>
+                    <h1 id="preferenceHeader"><?= htmlspecialchars($user["username"]) ?><i class="fa-regular fa-user"></i></h1>
                     <a class="profileValues">member since <?= $formattedDate ?></a>
                 </div>
                 <div class="statsContainer">
-                    <h1 class="notSignedIn" id="preferenceHeader">total tests completed<i class="fa-solid fa-chart-line"></i></h1>
+                    <h1 id="preferenceHeader">total tests completed<i class="fa-solid fa-chart-line"></i></h1>
                     <a class="profileValues"><?= $totalCount ?> tests</a>
                 </div>
                 <div class="statsContainer">
-                    <h1 class="notSignedIn" id="preferenceHeader">highest wpm<i class="fa-solid fa-crown"></i></h1>
+                    <h1 id="preferenceHeader">highest wpm<i class="fa-solid fa-crown"></i></h1>
                     <a class="profileValues"><?= $totalMaxWpm ?> wpm</a>
                 </div>
             </div>
