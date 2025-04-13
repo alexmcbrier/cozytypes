@@ -291,24 +291,25 @@
   text-align: center;
   min-width: 5rem;
   box-shadow:
-    24px 0 white, 
-    -24px 0 white, 
-    0 -24px white, 
-    0 24px white,
-    4px 0 0 8px white,
-    -4px 0 0 8px white,
-    0 -4px 0 8px white,
-    0 4px 0 8px white,
-    20px 0 black, 
-    -20px 0 black,
-    0 -20px black, 
-    0 20px black,
-    0 0 0 12px black,
-    0 8px 0 8px black,
-    0 -8px 0 8px black,
-    8px 0 0 8px black,
-    -8px 0 0 8px black;
-  margin: 5px auto;
+    3px 0 var(--rowBackground), 
+    -3px 0 var(--rowBackground),
+    0 -3px var(--rowBackground),
+    0 3px var(--rowBackground),
+    6px 0 var(--rowBackground),
+    -6px 0 var(--rowBackground),
+    0 -6px var(--rowBackground),
+    0 6px var(--rowBackground),
+    0 0 0 var(--rowBackground),
+
+    9px 0 var(--rowBackground), 
+    -9px 0 var(--rowBackground), 
+    0 9px var(--rowBackground),
+    0 -9px var(--rowBackground),
+    0 -3px 0 3px var(--rowBackground),
+    0 3px 0 3px var(--rowBackground),
+    3px 0 0 3px var(--rowBackground),
+    -3px 0 0 3px var(--rowBackground);
+  margin: 9px auto;
 }
 
 .lvl3 {
