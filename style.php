@@ -509,7 +509,8 @@ include "themes.scss"; //file contains all fonts
         color: var(--row);
         display: flex;
         user-select: none;
-        padding: 1rem .5rem;
+        padding: 2rem 0rem 2rem 0;
+        
     }
 
     .typingModes {
