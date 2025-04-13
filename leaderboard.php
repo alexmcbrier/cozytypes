@@ -18,7 +18,7 @@ $mysqli = require __DIR__ . "/config.php";
         <div id = "showSignIn" style = "padding:0rem 2rem;" >Leaderboard<i class="fa-solid fa-crown"></i></div>
             <div class = "profileValues" style = "padding: 0 1rem; margin-bottom: 2rem;">must have an account to be on the leaderboard</div>
             <div class = "results" style = "padding: 0 1rem">All Time</div>
-            <div id = "displayStats retroBox">
+            <div id = "displayStats">
                 <div class = "statsContainer">
                     <div id = "leaderboardheader" class = "notSignedIn">15 seconds </div>
                     <?php
@@ -129,7 +129,7 @@ $mysqli = require __DIR__ . "/config.php";
                 </div>
             </div>
 
-            <div id = "displayStats retroBox">
+            <div id = "displayStats">
                 <div class = "statsContainer">
                     <div id = "leaderboardheader" class = "notSignedIn">10 words </div>
                     <?php
@@ -243,7 +243,7 @@ $mysqli = require __DIR__ . "/config.php";
 
 
             <div class = "results" style = "padding: 0 1rem">This Week</div>
-            <div id = "displayStats retroBox">
+            <div id = "displayStats">
                 <div class = "statsContainer">
                     <div id = "leaderboardheader" class = "notSignedIn">15 seconds </div>
                     <?php
@@ -353,7 +353,7 @@ $mysqli = require __DIR__ . "/config.php";
                     ?>
                 </div>
             </div>
-            <div id = "displayStats retroBox">
+            <div id = "displayStats">
                 <div class = "statsContainer">
                     <div id = "leaderboardheader" class = "notSignedIn">10 words </div>
                     <?php
