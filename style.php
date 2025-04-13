@@ -373,22 +373,6 @@ include "themes.scss"; //file contains all fonts
         text-decoration: none;
         color: var(--correct);
     }
-    .rowContainer {
-    user-select: none;
-    color: var(--currentWord);
-    font-size: 1rem;
-    padding: 1rem;
-    margin-left: .5rem;
-    line-height: 10px;
-    vertical-align: top;
-    text-decoration: none;
-    /* Remove one of the margin properties */
-    margin: 1rem;
-    align-content: center;
-    transition-delay: 0s;
-    transition-duration: 0.25s;
-    transition-property: color, background; /* Add 'background' here */
-    transition-timing-function: ease;
 }
 .aboutContainer {
     user-select: none;
@@ -1354,6 +1338,7 @@ include "themes.scss"; //file contains all fonts
     }
     #themesContainer a {
     user-select: none;
+    border-radius: 2rem;
     display: inline-block;
     text-align: center;
     padding: 3rem 5.6rem;
