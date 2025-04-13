@@ -272,6 +272,23 @@
   background-color: var(--rowBackground);
   margin: 1.5rem
 }
+.color-theme
+{
+    color: var(--testText);
+    background-color: var(--background);
+    box-shadow:
+    8px 0 var(--background), 
+    -8px 0 var(--background), 
+    0 -8px var(--background), 
+    0 8px var(--background),
+    16px 0 var(--background), 
+    -16px 0 var(--background), 
+    0 -16px var(--background), 
+    0 16px var(--background),
+    0 0 0 8px var(--background);
+    background-color: var(--background);
+    flex: 1 1 calc(10%);
+}
 .preference {
   cursor: pointer;
   color: white;

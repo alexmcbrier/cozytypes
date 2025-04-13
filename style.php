@@ -1378,12 +1378,6 @@ include "themes.scss"; //file contains all fonts
         background-color: #1c1b1d;
 
     }
-    .color-theme
-    {
-        color: var(--testText);
-        background-color: var(--background);
-        flex: 1 1 calc(10%);
-    }
     @media (max-width: 768px) {
     .color-theme {
         flex: 1 1 calc(20%); /* 4 items per row on medium screens */
