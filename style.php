@@ -399,6 +399,13 @@ include "themes.scss"; //file contains all fonts
         transition: color .25s ease;
         user-select: none;
     }
+    #testStats {
+        display: flex;
+        background-color: var(--rowBackground);
+        display: flex;
+        margin: 1.5rem;
+    }
+    
     #showUsername
     {
         font-size: 1.25rem;
