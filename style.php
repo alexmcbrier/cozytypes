@@ -187,6 +187,10 @@ include "themes.scss"; //file contains all fonts
         width: 100%;
         margin: 0;
         font-family: 'PressStart', monospace;
+        transition-delay: 0s;
+        transition-duration: 0.15s;
+        transition-property: color, background; /* Add 'background' here */
+        transition-timing-function: ease;
     }
     .main-body {
         overflow: hidden;
@@ -223,6 +227,7 @@ include "themes.scss"; //file contains all fonts
     }
 
     #mainContent {
+        transition: all .5s ease-in-out 0s;
         width: 85%;
         margin: auto;
         display: grid;
@@ -249,12 +254,14 @@ include "themes.scss"; //file contains all fonts
         user-select: none;
         display: flex;
         align-items: center;
+        transition: color .25s ease;
         color: var(--testText);
         padding: 1rem;
         font-family: 'PressStart', monospace;
     }
     .navIcon, #showUsername
     {
+        transition: color .25s ease;
         text-decoration: none;
         font-size: 2rem;
         color: var(--row);
@@ -283,6 +290,7 @@ include "themes.scss"; //file contains all fonts
         margin-top: 1.5rem;
         vertical-align: top;
         min-height: 1rem;
+        transition: .5s;
     }
 
     
@@ -309,6 +317,7 @@ include "themes.scss"; //file contains all fonts
         user-select: none;
         display: flex;
         justify-content: center;
+        transition: color .25s ease;
         align-items: center;
     }
     .footerLinks:hover {
@@ -344,6 +353,7 @@ include "themes.scss"; //file contains all fonts
         font-size: 4rem;
         padding: 0;
         opacity: 0;
+        transition: opacity 0.25s ease;
 
     }
     #wpmDisplay, #time
@@ -385,6 +395,7 @@ include "themes.scss"; //file contains all fonts
         text-decoration: none;
         font-size: 2rem;
         padding: 0rem 1rem;
+        transition: color .25s ease;
         user-select: none;
     }
     #showUsername
@@ -1330,9 +1341,11 @@ include "themes.scss"; //file contains all fonts
     display: inline-block;
     text-align: center;
     padding: 3rem 5.6rem;
+    transition: 1s;
     line-height: 1rem;
     height: 1rem;
     text-decoration: none;
+    transition: transform .5s ease;
     margin-top: 1rem;
     text-align: center;
     /* Remove min-width */
@@ -1392,12 +1405,16 @@ include "themes.scss"; //file contains all fonts
         /* Remove one of the margin properties */
         margin: 1rem;
         align-content: center;
+        transition-delay: 0s;
+        transition-duration: 0.25s;
+        transition-property: color, background; /* Add 'background' here */
+        transition-timing-function: ease;
     }
     
 
     .invisible {
         opacity: 0;
-        transition: opacity .25s ease;
+        transition: opacity 1s ease;
         filter: blur(10px)
     }
     
