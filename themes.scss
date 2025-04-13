@@ -291,25 +291,16 @@
   text-align: center;
   min-width: 5rem;
   box-shadow:
-    3px 0 var(--rowBackground), 
-    -3px 0 var(--rowBackground),
-    0 -3px var(--rowBackground),
-    0 3px var(--rowBackground),
-    6px 0 var(--rowBackground),
-    -6px 0 var(--rowBackground),
-    0 -6px var(--rowBackground),
-    0 6px var(--rowBackground),
-    0 0 0 var(--rowBackground),
-
-    9px 0 var(--rowBackground), 
-    -9px 0 var(--rowBackground), 
-    0 9px var(--rowBackground),
-    0 -9px var(--rowBackground),
-    0 -3px 0 3px var(--rowBackground),
-    0 3px 0 3px var(--rowBackground),
-    3px 0 0 3px var(--rowBackground),
-    -3px 0 0 3px var(--rowBackground);
-  margin: 9px auto;
+    4px 0 var(--row), 
+    -4px 0 var(--row), 
+    0 -4px var(--row), 
+    0 4px var(--row),
+    8px 0 var(--row), 
+    -8px 0 var(--row), 
+    0 -8px var(--row), 
+    0 8px var(--row),
+    0 0 0 8px var(--row);
+  margin: 8px auto;
 }
 
 .lvl3 {
