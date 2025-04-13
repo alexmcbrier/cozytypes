@@ -1338,11 +1338,9 @@ include "themes.scss"; //file contains all fonts
     }
     #themesContainer a {
     user-select: none;
-    border-radius: 2rem;
     display: inline-block;
     text-align: center;
     padding: 3rem 5.6rem;
-    margin-left: .5rem;
     transition: 1s;
     line-height: 1rem;
     height: 1rem;
@@ -1352,6 +1350,7 @@ include "themes.scss"; //file contains all fonts
     text-align: center;
     /* Remove min-width */
     width: 10%;
+    margin: 2rem;
     cursor: pointer;
     
 }
