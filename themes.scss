@@ -414,3 +414,20 @@
         background-color: var(--rowBackground);
         margin: 1.5rem;
     }
+    #displayStats {
+      display: flex;
+      background-color: var(--rowBackground);
+      border-radius: 1.5rem;
+      margin: 1rem;
+      display: flex;
+      box-shadow:
+        8px 0 var(--rowBackground), 
+        -8px 0 var(--rowBackground), 
+        0 -8px var(--rowBackground), 
+        0 8px var(--rowBackground),
+        16px 0 var(--rowBackground), 
+        -16px 0 var(--rowBackground), 
+        0 -16px var(--rowBackground), 
+        0 16px var(--rowBackground),
+        0 0 0 8px var(--rowBackground);
+      }

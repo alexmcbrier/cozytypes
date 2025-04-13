@@ -1348,13 +1348,6 @@ include "themes.scss"; //file contains all fonts
         display: flex;
         flex-direction: column;
     }
-    #displayStats {
-        display: flex;
-        background-color: var(--rowBackground);
-        border-radius: 1.5rem;
-        margin: 1rem;
-        display: flex;
-    }
 
     #theme-olivia {
         color: #deaf9d;
