@@ -265,11 +265,11 @@
     -8px 0 var(--rowBackground), 
     0 -8px var(--rowBackground), 
     0 8px var(--rowBackground),
-    16px 0 color-mix(in srgb, var(--rowBackground) 85%, black), 
-    -16px 0 color-mix(in srgb, var(--rowBackground) 85%, black), 
-    0 -16px color-mix(in srgb, var(--rowBackground) 85%, black), 
-    0 16px color-mix(in srgb, var(--rowBackground) 85%, black),
-    0 0 0 8px color-mix(in srgb, var(--rowBackground) 85%, black);
+    16px 0 var(--rowBackground), 
+    -16px 0 var(--rowBackground), 
+    0 -16px var(--rowBackground), 
+    0 16px var(--rowBackground),
+    0 0 0 8px var(--rowBackground);
   margin: 16px auto;
   background-color: var(--rowBackground);
 }
@@ -301,14 +301,14 @@
     0 6px var(--row),
     0 0 0 var(--row),
 
-    9px 0 color-mix(in srgb, var(--row) 85%, black), 
-    -9px 0 color-mix(in srgb, var(--row) 85%, black), 
-    0 9px color-mix(in srgb, var(--row) 85%, black),
-    0 -9px color-mix(in srgb, var(--row) 85%, black),
-    0 -3px 0 3px color-mix(in srgb, var(--row) 85%, black),
-    0 3px 0 3px color-mix(in srgb, var(--row) 85%, black),
-    3px 0 0 3px color-mix(in srgb, var(--row) 85%, black),
-    -3px 0 0 3px color-mix(in srgb, var(--row) 85%, black);
+    9px 0 var(--row), 
+    -9px 0 var(--row), 
+    0 9px var(--row),
+    0 -9px var(--row),
+    0 -3px 0 3px var(--row),
+    0 3px 0 3px var(--row),
+    3px 0 0 3px var(--row),
+    -3px 0 0 3px var(--row);
   margin: 9px;
 }
 
