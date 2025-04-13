@@ -1346,7 +1346,6 @@ include "themes.scss"; //file contains all fonts
     {
         display: flex;
         flex-direction: column;
-        transition: transform .2s ease;
     }
 
     #theme-olivia {
