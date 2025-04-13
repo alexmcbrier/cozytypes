@@ -265,12 +265,12 @@
     -8px 0 blue, 
     0 -8px blue, 
     0 8px blue,
-    16px 0 blue, 
+    16px 0 red, 
     -16px 0 red, 
     0 -16px red, 
     0 16px red,
     0 0 0 8px red;
-  margin: 16px ;
+  margin: 16px auto;
   background-color: var(--rowBackground);
 }
 .preference {
@@ -309,7 +309,7 @@
     0 3px 0 3px blue,
     3px 0 0 3px blue,
     -3px 0 0 3px blue;
-  margin: 9px auto;
+  margin: 9px;
 }
 
 .lvl3 {
