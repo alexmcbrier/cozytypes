@@ -261,7 +261,7 @@
   transition-property: color, background; /* Add 'background' here */
   transition-timing-function: ease;
   box-shadow:
-    8px 0 blue, 
+    8px 0 color-mix(in srgb, var(--rowBackground) 85%, black), 
     -8px 0 blue, 
     0 -8px blue, 
     0 8px blue,
