@@ -1352,7 +1352,7 @@ include "themes.scss"; //file contains all fonts
         display: flex;
         background-color: var(--rowBackground);
         border-radius: 1.5rem;
-        margin: 1rem;
+        margin: 1.5rem;
         display: flex;
     }
 
