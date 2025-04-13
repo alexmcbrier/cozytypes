@@ -669,16 +669,14 @@ function highlightPrefernces() {
         let textColor = themeStyles.getPropertyValue("--currentWord").trim();
         preferences.forEach(pref => {
             let prefValue = pref.getAttribute("data-value");
-            pref.classList.remove("preferenceHighlight");
+
             if (prefValue === localStorageValue) {
-                pref.offsetHeight;
-                pref.classList.add("preferenceHighlight");
-                pref.classList.remove("preference");
-            } else {
-                pref.offsetHeight;
-                pref.classList.remove("preferenceHighlight");
-                pref.classList.add("preference");
-                pref.classList.remove("preferenceHighlight");
+                pref.style.backgroundColor = highlightColor;
+                pref.style.color = textColor;
+            }
+            else {
+                pref.style.backgroundColor = defaultColor;
+                pref.style.color = "white";
             }
         });
     }
