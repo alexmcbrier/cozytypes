@@ -189,7 +189,7 @@ include "themes.scss"; //file contains all fonts
         font-family: 'PressStart', monospace;
         transition-delay: 0s;
         transition-duration: 0.25s;
-        transition-property: color, background; /* Add 'background' here */
+        transition-property: color, box-shadow, background; /* Add 'background' here */
         transition-timing-function: ease;
     }
     .main-body {
@@ -1350,7 +1350,7 @@ include "themes.scss"; //file contains all fonts
     text-align: center;
     /* Remove min-width */
     width: 10%;
-    margin: 2rem;
+    margin: 1.5rem;
     cursor: pointer;
     
 }
