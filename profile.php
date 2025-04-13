@@ -184,7 +184,7 @@ if (isset($_SESSION["user_id"])) {
     <form id="mainContent" method="POST" action="preferences">
         <?php include "./nav.php" ?>
         <div id="middle" style = "width: 100%">
-            <div id="displayStats">
+            <div id="displayStats" style="padding: 1rem;">
                 <div> 
                     <h1 id="preferenceHeader"><?= htmlspecialchars($user["username"]) ?><i class="fa-regular fa-user"></i></h1>
                     <a class="profileValues">member since <?= $formattedDate ?></a>
