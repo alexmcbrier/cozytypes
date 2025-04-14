@@ -583,7 +583,7 @@ include "themes.scss"; //file contains all fonts
         transform: translate(-50%, -50%);
         width: 250px;
         height: 250px;
-        transition: opacity 0.25s ease;
+        transition: opacity 0.5s ease;
         fill: var(--currentWord);
         }
     @keyframes fillBar {
