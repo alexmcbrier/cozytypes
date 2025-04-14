@@ -581,6 +581,9 @@ include "themes.scss"; //file contains all fonts
         transform-origin: center;
         animation: spin 3s linear infinite;
         }
+    #spinner path {
+        fill: var(--currentWord);
+    }
 
     @keyframes spin {
     from {
