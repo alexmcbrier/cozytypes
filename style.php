@@ -564,7 +564,7 @@ include "themes.scss"; //file contains all fonts
         from {transform:rotate(0deg);}
         to {transform:rotate(360deg);}
     }
-    .spinner {
+    #spinner {
         z-index: 1;
         position: absolute;
         top: 50%;
