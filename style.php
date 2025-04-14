@@ -591,7 +591,7 @@ include "themes.scss"; //file contains all fonts
         transform: scaleX(0);
     }
     to {
-        transform: scaleX(2);
+        transform: scaleX(1.8);
     }
     }
 
