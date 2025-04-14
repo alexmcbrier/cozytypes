@@ -588,7 +588,7 @@ include "themes.scss"; //file contains all fonts
         }
     @keyframes fillBar {
     from {
-        transform: scaleX(.1);
+        transform: scaleX(.5);
     }
     to {
         transform: scaleX(1);
