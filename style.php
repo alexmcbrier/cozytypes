@@ -1213,7 +1213,7 @@ include "themes.scss"; //file contains all fonts
         color: var(--row);
         margin-left: 1rem;
         margin-top: .25rem;
-        font-size: .8rem;
+        font-size: .7rem;
         line-height: 1.25rem;
     }
     .results
