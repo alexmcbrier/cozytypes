@@ -97,10 +97,18 @@ crossorigin="anonymous"></script>
             document.getElementById('middle').style.filter = 'none';
             document.getElementById('footer').style.filter = 'none';
         }
+        function fadeOutClass(class) {
+            document.getElementById(class).style.opacity = 0;
+            document.getElementById(class).style.display = 'none';
+            document.getElementById('middle').style.opacity = '100%';
+            document.getElementById('footer').style.opacity = '100%';
+            document.getElementById('middle').style.filter = 'none';
+            document.getElementById('footer').style.filter = 'none';
+        }
         window.addEventListener('load', function() {
             setTimeout(function() {
             // Page is loaded, fade out the loading animation
-            fadeOut('loadingIcon');
+            fadeOutClass('spinner');
             newQuote();
             zoomwait();
             }, 100); // Wait for one tenth of second (100 milliseconds)
