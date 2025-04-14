@@ -439,7 +439,7 @@ include "themes.scss"; //file contains all fonts
     }
     #restartTest:hover {
 
-        transform: rotate(360deg);
+        transform: rotate(90deg);
     }
 
     #restartTest {
