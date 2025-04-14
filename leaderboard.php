@@ -130,7 +130,7 @@ $mysqli = require __DIR__ . "/config.php";
             </div>
 
             <div id = "displayStats" style= "margin: 3rem; padding 0;">
-                <div class = "statsContainer" style = "padding: 0">
+                <div class = "statsContainer" style = "padding: 0; margin: 0">
                     <div id = "leaderboardheader" class = "notSignedIn">10 words </div>
                     <?php
                     $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'words' AND wpm < 250 AND testTime = 10 ORDER BY wpm DESC LIMIT 5";
@@ -157,7 +157,7 @@ $mysqli = require __DIR__ . "/config.php";
                     }
                     ?>
                 </div>
-                <div class = "statsContainer" style = "padding: 0">
+                <div class = "statsContainer" style = "padding: 0; margin: 0">
                     <div id = "leaderboardheader" class = "notSignedIn">25 words  </div>
                     <?php
                     $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'words' AND wpm < 250 AND testTime = 25 ORDER BY wpm DESC LIMIT 5";
@@ -184,7 +184,7 @@ $mysqli = require __DIR__ . "/config.php";
                     }
                     ?>
                 </div>
-                <div class = "statsContainer" style = "padding: 0">
+                <div class = "statsContainer" style = "padding: 0; margin: 0">
                     <div id = "leaderboardheader" class = "notSignedIn">50 words  </div>
                     <?php
                     $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'words' AND wpm < 250 AND testTime = 50 ORDER BY wpm DESC LIMIT 5";
@@ -211,7 +211,7 @@ $mysqli = require __DIR__ . "/config.php";
                     }
                     ?>
                 </div>
-                <div class = "statsContainer" style = "padding: 0">
+                <div class = "statsContainer" style = "padding: 0; margin: 0">
                     <div id = "leaderboardheader" class = "notSignedIn">100 words  </div>
                     <?php
                     $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'words' AND wpm < 250 AND testTime = 100 ORDER BY wpm DESC LIMIT 5";
@@ -244,7 +244,7 @@ $mysqli = require __DIR__ . "/config.php";
 
             <div class = "results" style = "padding: 0 1rem">This Week</div>
             <div id = "displayStats" style= "margin: 3rem; padding 0;">
-                <div class = "statsContainer" style = "padding: 0">
+                <div class = "statsContainer" style = "padding: 0; margin: 0">
                     <div id = "leaderboardheader" class = "notSignedIn">15 seconds </div>
                     <?php
                     $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'time' AND wpm < 250 AND testTime = 15 AND date >= DATE_SUB(NOW(), INTERVAL 7 DAY) ORDER BY wpm DESC LIMIT 5";
@@ -271,7 +271,7 @@ $mysqli = require __DIR__ . "/config.php";
                     }
                     ?>
                 </div>
-                <div class = "statsContainer" style = "padding: 0">
+                <div class = "statsContainer" style = "padding: 0; margin: 0">
                     <div id = "leaderboardheader" class = "notSignedIn">30 seconds  </div>
                     <?php
                     $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'time' AND wpm < 250 AND testTime = 30 AND date >= DATE_SUB(NOW(), INTERVAL 7 DAY) ORDER BY wpm DESC LIMIT 5";
@@ -298,7 +298,7 @@ $mysqli = require __DIR__ . "/config.php";
                     }
                     ?>
                 </div>
-                <div class = "statsContainer" style = "padding: 0">
+                <div class = "statsContainer" style = "padding: 0; margin: 0">
                     <div id = "leaderboardheader" class = "notSignedIn">60 seconds  </div>
                     <?php
                     $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'time' AND wpm < 250 AND testTime = 60 AND date >= DATE_SUB(NOW(), INTERVAL 7 DAY) ORDER BY wpm DESC LIMIT 5";
@@ -325,7 +325,7 @@ $mysqli = require __DIR__ . "/config.php";
                     }
                     ?>
                 </div>
-                <div class = "statsContainer" style = "padding: 0">
+                <div class = "statsContainer" style = "padding: 0; margin: 0">
                     <div id = "leaderboardheader" class = "notSignedIn">120 seconds  </div>
                     <?php
                     $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'time' AND wpm < 250 AND testTime = 120 AND date >= DATE_SUB(NOW(), INTERVAL 7 DAY) ORDER BY wpm DESC LIMIT 5";
@@ -354,7 +354,7 @@ $mysqli = require __DIR__ . "/config.php";
                 </div>
             </div>
             <div id = "displayStats" style= "margin: 3rem; padding 0;"> 
-                <div class = "statsContainer" style = "padding: 0">
+                <div class = "statsContainer" style = "padding: 0; margin: 0">
                     <div id = "leaderboardheader" class = "notSignedIn">10 words </div>
                     <?php
                     $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'words' AND wpm < 250 AND testTime = 10 AND date >= DATE_SUB(NOW(), INTERVAL 7 DAY) ORDER BY wpm DESC LIMIT 5";
@@ -381,7 +381,7 @@ $mysqli = require __DIR__ . "/config.php";
                     }
                     ?>
                 </div>
-                <div class = "statsContainer" style = "padding: 0">
+                <div class = "statsContainer" style = "padding: 0; margin: 0">
                     <div id = "leaderboardheader" class = "notSignedIn">25 words  </div>
                     <?php
                     $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'words' AND wpm < 250 AND testTime = 25 AND date >= DATE_SUB(NOW(), INTERVAL 7 DAY) ORDER BY wpm DESC LIMIT 5";
@@ -408,7 +408,7 @@ $mysqli = require __DIR__ . "/config.php";
                     }
                     ?>
                 </div>
-                <div class = "statsContainer" style = "padding: 0">
+                <div class = "statsContainer" style = "padding: 0; margin: 0">
                     <div id = "leaderboardheader" class = "notSignedIn">50 words  </div>
                     <?php
                     $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'words' AND wpm < 250 AND testTime = 50 AND date >= DATE_SUB(NOW(), INTERVAL 7 DAY) ORDER BY wpm DESC LIMIT 5";
@@ -435,7 +435,7 @@ $mysqli = require __DIR__ . "/config.php";
                     }
                     ?>
                 </div>
-                <div class = "statsContainer" style = "padding: 0">
+                <div class = "statsContainer" style = "padding: 0; margin: 0">
                     <div id = "leaderboardheader" class = "notSignedIn">100 words  </div>
                     <?php
                     $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'words' AND wpm < 250 AND testTime = 100 AND date >= DATE_SUB(NOW(), INTERVAL 7 DAY) ORDER BY wpm DESC LIMIT 5";
