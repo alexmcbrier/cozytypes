@@ -591,7 +591,9 @@ include "themes.scss"; //file contains all fonts
     #loadingBar path {
         fill: var(--currentWord);
     }
-
+    .cls-1 {
+            fill: var(--correct);
+        }
     @keyframes spin {
     from {
         transform: rotate(0deg);

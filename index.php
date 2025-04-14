@@ -75,13 +75,6 @@ crossorigin="anonymous"></script>
     <!-- End Google Tag Manager (noscript) -->
     <?xml version="1.0" encoding="UTF-8"?>
     <svg id="loadingBar" data-name="Layer 3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 556.54 171.88">
-    <defs>
-        <style>
-        .cls-1 {
-            fill: #ff58a3;
-        }
-        </style>
-    </defs>
     <g>
         <g>
         <g>
