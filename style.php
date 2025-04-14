@@ -447,6 +447,17 @@ include "themes.scss"; //file contains all fonts
         cursor: pointer;
         transition: transform .25s ease-in-out;
         font-size: calc(var(--fontSize) * .5rem);
+        z-index: 1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 3rem;
+        width: 50px;
+        height: 50px;
+        margin-top: -3rem;
+        margin-left: -3rem;
+        color: var(--currentWord);
+        transition: opacity 0.25s ease;
         
     }
     #completionDisplay {

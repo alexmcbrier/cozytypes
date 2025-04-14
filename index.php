@@ -139,7 +139,7 @@ crossorigin="anonymous"></script>
         <div class="testRow">
             <?xml version="1.0" encoding="UTF-8"?>
             <div id ="resetBox" class = "testItem">
-                <svg id="spinner" onclick="restart()" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 881.37 743.63">
+                <svg id="restartTest" onclick="restart()" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 881.37 743.63">
                 <g id="j18Oua.tif">
                     <path d="M510.39,0v46.58h92.94v46.42h46.26v46.35h46.32v92.94h46.43v139.45h139.03v46.35h-45.89v46.67h-46.52v46.03h-46.2v46.55h-92.88v-45.95h-46.22v-46.21h-46.53v-46.94h-46.24v-46.36h138.42v-93.07h-45.81v-92.54h-46.31v-46.53h-92.88v-46.24h-185.7v45.73h-92.65v46.51h-46.56v93h-46.03v185.8h45.7v93h46.51v46.32h92.67v46.37h185.72v-45.62h139.04v92.22h-92.62v46.79H232.23v-46.73h-93.33v-46.6h-46.17v-46.35h-46.28v-92.86H0V232.54h46.65v-93.34h46.5v-46.31h46.23v-46.36h92.85V0h278.16Z"/>
                 </g>
