@@ -235,29 +235,29 @@ crossorigin="anonymous"></script>
     </svg>
     <div id="mainContent">
         <?php include "./nav.php" ?>
-        <script type="text/javascript">
-        function fadeOut(id)
-        {
-            document.getElementById(id).style.opacity = 0;
-            document.getElementById(id).style.display = 'none';
-            document.getElementById('middle').style.opacity = '100%';
-            document.getElementById('footer').style.opacity = '100%';
-            document.getElementById('middle').style.filter = 'none';
-            document.getElementById('footer').style.filter = 'none';
-        }
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-            // Page is loaded, fade out the loading animation
-            fadeOut('loadingBar');
-            newQuote();
-            zoomwait();
-            }, 1000); // Wait for one tenth of second (100 milliseconds)
-        });
-        
-    </script>
         <!-- Display if test not complete -->
         <div id="middle" class = "blur">
         <?php if (!isset($_GET["finish"])) { ?>
+            <script type="text/javascript">
+            function fadeOut(id)
+            {
+                document.getElementById(id).style.opacity = 0;
+                document.getElementById(id).style.display = 'none';
+                document.getElementById('middle').style.opacity = '100%';
+                document.getElementById('footer').style.opacity = '100%';
+                document.getElementById('middle').style.filter = 'none';
+                document.getElementById('footer').style.filter = 'none';
+            }
+            window.addEventListener('load', function() {
+                setTimeout(function() {
+                // Page is loaded, fade out the loading animation
+                fadeOut('loadingBar');
+                newQuote();
+                zoomwait();
+                }, 1000); // Wait for one tenth of second (100 milliseconds)
+            });
+            
+        </script>
             <div id="typingmode">
             <div class="modeStack">
                 <div>time</div>
@@ -307,6 +307,24 @@ crossorigin="anonymous"></script>
         <?php } else if (isset($_GET["finish"])) { ?>
         <!-- Display if test IS complete -->
         <script type="text/javascript">
+            function fadeOut(id)
+            {
+                document.getElementById(id).style.opacity = 0;
+                document.getElementById(id).style.display = 'none';
+                document.getElementById('middle').style.opacity = '100%';
+                document.getElementById('footer').style.opacity = '100%';
+                document.getElementById('middle').style.filter = 'none';
+                document.getElementById('footer').style.filter = 'none';
+            }
+            window.addEventListener('load', function() {
+                setTimeout(function() {
+                // Page is loaded, fade out the loading animation
+                fadeOut('loadingBar');
+                newQuote();
+                zoomwait();
+                }, 1000); // Wait for one tenth of second (100 milliseconds)
+            });
+            
             window.addEventListener('keydown', function (event) {
                 // Check if the pressed key is the 'Tab' key (key code 9)
                 if (event.key === 'Tab' || event.keyCode === 9) {
