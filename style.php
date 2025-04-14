@@ -583,7 +583,7 @@ include "themes.scss"; //file contains all fonts
         transform: translate(-50%, -50%);
         width: 250px;
         height: 250px;
-        transition: opacity .5s ease;
+        transition: opacity .75s ease;
         fill: var(--currentWord);
         }
     @keyframes fillBar {
@@ -591,7 +591,7 @@ include "themes.scss"; //file contains all fonts
         transform: scaleX(0);
     }
     to {
-        transform: scaleX(1.5);
+        transform: scaleX(1.25);
     }
     }
 
