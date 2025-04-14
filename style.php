@@ -453,11 +453,10 @@ include "themes.scss"; //file contains all fonts
         font-size: 3rem;
         width: 50px;
         height: 50px;
-        margin-top: -3rem;
-        margin-left: -3rem;
         color: var(--currentWord);
         transition: opacity 0.25s ease;
         fill: var(--currentWord);
+        transform-origin: center;
         
     }
     #completionDisplay {
