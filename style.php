@@ -437,7 +437,7 @@ include "themes.scss"; //file contains all fonts
     #textInput:focus {
         outline-width: 0;
     }
-    #restartTest:hover #rotateGroup {
+    #rotateGroup {
 
         transform: rotate(180deg);
     }
