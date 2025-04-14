@@ -100,7 +100,7 @@ crossorigin="anonymous"></script>
         window.addEventListener('load', function() {
             setTimeout(function() {
             // Page is loaded, fade out the loading animation
-            fadeOut('loadingIcon');
+            fadeOut('spinner');
             newQuote();
             zoomwait();
             }, 100); // Wait for one tenth of second (100 milliseconds)
