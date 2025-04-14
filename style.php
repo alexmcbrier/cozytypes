@@ -575,7 +575,7 @@ include "themes.scss"; //file contains all fonts
         from {transform:rotate(0deg);}
         to {transform:rotate(360deg);}
     }
-    #spinner {
+    #loadingBar {
         z-index: 1;
         position: absolute;
         top: 50%;
@@ -587,10 +587,6 @@ include "themes.scss"; //file contains all fonts
         margin-left: -3rem;
         color: var(--currentWord);
         transition: opacity 0.25s ease;
-
-        /* Make it spin around its center */
-        transform-origin: center;
-        animation: spin 3s linear infinite;
         }
     #spinner path {
         fill: var(--currentWord);
