@@ -370,7 +370,9 @@ function wrongWord(words, charecters) {
 function endTest() {
     document.getElementById('cursor').style.animation = "none";
     document.getElementById('cursor').style.opacity = "0%";
+    document.getElementById('loadingBar').style.opacity = "0%";
     wpmFinal = wordsPerMinute(duration)
+    l
     const correct = displayText?.querySelectorAll('.correct').length //correct characters
     const incorrect = displayText?.querySelectorAll('.incorrect').length //incorrect characters
     const total = correct + incorrect;
@@ -380,6 +382,7 @@ function endTest() {
 
     if (getStorageItem("typingMode") == "time")
     {
+
         window.location.href = "?finish=true&testTime=" + getStorageItem("time") + "&wpm=" + wpmFinal + "&accuracy=" + accuracy + "&mode=time&correctWords=" + correctWords + "&incorrectWords=" + incorrectWords
     }
     else if (getStorageItem("typingMode") == "words")

@@ -74,7 +74,9 @@ crossorigin="anonymous"></script>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JMV592" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <?php if (!isset($_GET["finish"])) { ?> <!-- only show if taking test, not complete -->
-        <?xml version="1.0" encoding="UTF-8"?>
+        <div id="cursor"></div>
+    <?php } ?>
+    <?xml version="1.0" encoding="UTF-8"?>
     <svg id="loadingBar" data-name="Layer 3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 556.54 171.88">
     <g>
         <g>
@@ -234,8 +236,6 @@ crossorigin="anonymous"></script>
         </g>
     </g>
     </svg>
-    <?php } ?>
-    
     <div id="mainContent">
         <?php include "./nav.php" ?>
         <script type="text/javascript">
@@ -251,9 +251,7 @@ crossorigin="anonymous"></script>
         window.addEventListener('load', function() {
             setTimeout(function() {
             // Page is loaded, fade out the loading animation
-            <?php if (!isset($_GET["finish"])) { ?>
-                fadeOut('loadingBar');
-            <?php } ?>
+            fadeOut('loadingBar');
             newQuote();
             zoomwait();
             }, 1000); // Wait for one tenth of second (100 milliseconds)
