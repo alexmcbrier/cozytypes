@@ -437,7 +437,7 @@ include "themes.scss"; //file contains all fonts
     #textInput:focus {
         outline-width: 0;
     }
-    #restartTest:hover {
+    #restartTest:hover #rotateGroup {
 
         transform: rotate(180deg);
     }
@@ -453,10 +453,11 @@ include "themes.scss"; //file contains all fonts
         width: 50px;
         height: 50px;
         color: var(--currentWord);
-        transition: opacity 0.25s ease, transform 0.2s ease-in-out;       
         fill: var(--currentWord);
+    }
+    #rotateGroup {
+        transition: opacity 0.25s ease, transform 0.2s ease-in-out;       
         transform-origin: center;
-        
     }
     #completionDisplay {
         font-size: calc(var(--fontSize) * .6rem);
