@@ -571,6 +571,8 @@ include "themes.scss"; //file contains all fonts
     top: 50%;
     left: 50%;
     font-size: 3rem;
+    width: 15px;
+    height: 15px;
     margin-top: -3rem;
     margin-left: -3rem;
     color: var(--currentWord);
