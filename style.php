@@ -583,12 +583,9 @@ include "themes.scss"; //file contains all fonts
         transform: translate(-50%, -50%);
         width: 250px;
         height: 250px;
-        color: var(--currentWord);
         transition: opacity 0.25s ease;
-        }
-    #loadingBar path {
         fill: var(--currentWord);
-    }
+        }
     @keyframes fillBar {
     from {
         transform: scaleX(0);
