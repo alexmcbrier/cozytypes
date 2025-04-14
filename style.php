@@ -564,20 +564,31 @@ include "themes.scss"; //file contains all fonts
         from {transform:rotate(0deg);}
         to {transform:rotate(360deg);}
     }
-    #loadingIcon
-    {
-    z-index: 1;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    font-size: 3rem;
-    width: 15px;
-    height: 15px;
-    margin-top: -3rem;
-    margin-left: -3rem;
-    color: var(--currentWord);
-    transition: opacity .25s ease;
-    animation: spin 3s infinite linear;
+    #loadingIcon {
+        z-index: 1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 3rem;
+        width: 100px;
+        height: 10px;
+        margin-top: -3rem;
+        margin-left: -3rem;
+        color: var(--currentWord);
+        transition: opacity 0.25s ease;
+
+        /* Make it spin around its center */
+        transform-origin: center;
+        animation: spin 3s linear infinite;
+        }
+
+    @keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
     }
     .correct {
         color: var(--correct);
