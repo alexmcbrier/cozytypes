@@ -439,13 +439,12 @@ include "themes.scss"; //file contains all fonts
     }
     #restartTest:hover {
 
-        transform: rotate(-90deg);
+        transform: rotate(90deg);
     }
 
     #restartTest {
         border: none;
         cursor: pointer;
-        transition: transform .25s ease-in-out;
         font-size: calc(var(--fontSize) * .5rem);
         z-index: 1;
         top: 50%;
@@ -454,7 +453,7 @@ include "themes.scss"; //file contains all fonts
         width: 50px;
         height: 50px;
         color: var(--currentWord);
-        transition: opacity 0.25s ease;
+        transition: opacity 0.25s ease transform .25s ease-in-out;        
         fill: var(--currentWord);
         transform-origin: center;
         
