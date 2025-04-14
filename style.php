@@ -581,8 +581,8 @@ include "themes.scss"; //file contains all fonts
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 150px;
-        height: 150px;
+        width: 250px;
+        height: 250px;
         color: var(--currentWord);
         transition: opacity 0.25s ease;
         }
@@ -601,7 +601,7 @@ include "themes.scss"; //file contains all fonts
     .cls-1 {
         transform-origin: left;
         fill: var(--correct);
-        animation: fillBar .5s ease-in-out forwards;
+        animation: fillBar .25s ease-in-out forwards;
     }
     @keyframes spin {
     from {
