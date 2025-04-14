@@ -583,7 +583,7 @@ include "themes.scss"; //file contains all fonts
         transform: translate(-50%, -50%);
         width: 250px;
         height: 250px;
-        transition: opacity 1.25s ease;
+        transition: opacity .25s ease;
         fill: var(--currentWord);
         }
     @keyframes fillBar {
@@ -591,14 +591,14 @@ include "themes.scss"; //file contains all fonts
         transform: scaleX(0);
     }
     to {
-        transform: scaleX(1.9);
+        transform: scaleX(1.7);
     }
     }
 
     .cls-1 {
         transform-origin: left;
         fill: var(--correct);
-        animation: fillBar .25s ease-in-out forwards;
+        animation: fillBar .75s ease-in-out forwards;
     }
     @keyframes spin {
     from {
