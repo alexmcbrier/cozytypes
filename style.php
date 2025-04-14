@@ -448,7 +448,6 @@ include "themes.scss"; //file contains all fonts
         transition: transform .25s ease-in-out;
         font-size: calc(var(--fontSize) * .5rem);
         z-index: 1;
-        position: absolute;
         top: 50%;
         left: 50%;
         font-size: 3rem;
@@ -458,6 +457,7 @@ include "themes.scss"; //file contains all fonts
         margin-left: -3rem;
         color: var(--currentWord);
         transition: opacity 0.25s ease;
+        fill: var(--currentWord);
         
     }
     #completionDisplay {
