@@ -570,10 +570,8 @@ include "themes.scss"; //file contains all fonts
         top: 50%;
         left: 50%;
         font-size: 3rem;
-        width: 200px;
-        height: 200px;
-        margin-top: -3rem;
-        margin-left: -3rem;
+        width: 50px;
+        height: 50px;
         color: var(--currentWord);
         transition: opacity 0.25s ease;
 
