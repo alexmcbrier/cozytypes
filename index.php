@@ -318,8 +318,6 @@ crossorigin="anonymous"></script>
             }
             window.addEventListener('load', function() {
                 setTimeout(function() {
-                // Page is loaded, fade out the loading animation
-                fadeOut('loadingBar');
                 newQuote();
                 zoomwait();
                 }, 1000); // Wait for one tenth of second (100 milliseconds)
