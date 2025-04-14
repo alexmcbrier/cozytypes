@@ -450,12 +450,12 @@ include "themes.scss"; //file contains all fonts
         top: 50%;
         left: 50%;
         font-size: 3rem;
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
         color: var(--currentWord);
         transition: opacity 0.25s ease, transform 0.15s ease-in-out;       
         fill: var(--currentWord);
-        transform-origin: 51px;
+        transform-origin: 47px;
     }
     #rotateGroup {
         
