@@ -588,7 +588,7 @@ include "themes.scss"; //file contains all fonts
         color: var(--currentWord);
         transition: opacity 0.25s ease;
         }
-    #spinner path {
+    #loadingBar path {
         fill: var(--currentWord);
     }
 
