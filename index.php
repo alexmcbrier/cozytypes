@@ -69,178 +69,170 @@ crossorigin="anonymous"></script>
 <body class="main-body">
     <?php if (!isset($_GET["finish"])) { ?> <!-- only show if taking test, not complete -->
         <div id="cursor"></div>
-        <?xml version="1.0" encoding="UTF-8"?>
-        <svg id="loadingBar" data-name="Layer 3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 556.54 171.88">
-        <g>
-            <g>
-            <g>
-                <rect x="296.64" width="7.88" height="7.88"/>
-                <rect x="288.76" width="7.88" height="7.88"/>
-                <rect x="304.51" width="7.88" height="7.88"/>
-                <rect x="296.64" y="7.88" width="7.88" height="7.88"/>
-                <rect x="296.64" y="15.75" width="7.88" height="7.88"/>
-                <rect x="296.64" y="23.63" width="7.88" height="7.88"/>
-                <rect x="296.64" y="31.51" width="7.88" height="7.88"/>
-                <rect x="296.64" y="39.38" width="7.88" height="7.88"/>
-                <rect x="296.64" y="47.26" width="7.88" height="7.88"/>
-                <rect x="304.51" y="47.26" width="7.88" height="7.88"/>
-                <rect x="288.76" y="47.26" width="7.88" height="7.88"/>
-            </g>
-            <g>
-                <rect x="146.38" width="7.88" height="7.88"/>
-                <rect x="154.25" width="7.88" height="7.88"/>
-                <rect x="162.13" width="7.88" height="7.88"/>
-                <rect x="170.01" y="7.88" width="7.88" height="7.88"/>
-                <rect x="138.5" y="7.88" width="7.88" height="7.88"/>
-                <rect x="170.01" y="15.75" width="7.88" height="7.88"/>
-                <rect x="138.5" y="15.75" width="7.88" height="7.88"/>
-                <rect x="170.01" y="23.63" width="7.88" height="7.88"/>
-                <rect x="138.5" y="23.63" width="7.88" height="7.88"/>
-                <rect x="170.01" y="31.51" width="7.88" height="7.88"/>
-                <rect x="138.5" y="31.51" width="7.88" height="7.88"/>
-                <rect x="170.01" y="39.38" width="7.88" height="7.88"/>
-                <rect x="138.5" y="39.38" width="7.88" height="7.88"/>
-                <rect x="146.38" y="47.26" width="7.88" height="7.88"/>
-                <rect x="154.25" y="47.26" width="7.88" height="7.88"/>
-                <rect x="162.13" y="47.26" width="7.88" height="7.88"/>
-            </g>
-            <g>
-                <rect x="88.42" width="7.88" height="7.88"/>
-                <rect x="88.42" y="7.88" width="7.88" height="7.88"/>
-                <rect x="88.42" y="15.75" width="7.88" height="7.88"/>
-                <rect x="88.42" y="23.63" width="7.88" height="7.88"/>
-                <rect x="88.42" y="31.51" width="7.88" height="7.88"/>
-                <rect x="88.42" y="39.38" width="7.88" height="7.88"/>
-                <rect x="96.3" y="47.26" width="7.88" height="7.88"/>
-                <rect x="104.17" y="47.26" width="7.88" height="7.88"/>
-                <rect x="112.05" y="47.26" width="7.88" height="7.88"/>
-                <rect x="119.93" y="47.26" width="7.88" height="7.88"/>
-            </g>
-            <g>
-                <rect x="196.46" width="7.88" height="7.88"/>
-                <rect x="204.34" width="7.88" height="7.88"/>
-                <rect x="212.22" width="7.88" height="7.88"/>
-                <rect x="220.09" y="7.88" width="7.88" height="7.88"/>
-                <rect x="188.59" y="7.88" width="7.88" height="7.88"/>
-                <rect x="220.09" y="15.75" width="7.88" height="7.88"/>
-                <rect x="188.59" y="15.75" width="7.88" height="7.88"/>
-                <rect x="196.46" y="23.63" width="7.88" height="7.88"/>
-                <rect x="204.34" y="23.63" width="7.88" height="7.88"/>
-                <rect x="212.22" y="23.63" width="7.88" height="7.88"/>
-                <rect x="220.09" y="23.63" width="7.88" height="7.88"/>
-                <rect x="188.59" y="23.63" width="7.88" height="7.88"/>
-                <rect x="220.09" y="31.51" width="7.88" height="7.88"/>
-                <rect x="188.59" y="31.51" width="7.88" height="7.88"/>
-                <rect x="220.09" y="39.38" width="7.88" height="7.88"/>
-                <rect x="188.59" y="39.38" width="7.88" height="7.88"/>
-                <rect x="220.09" y="47.26" width="7.88" height="7.88"/>
-                <rect x="188.59" y="47.26" width="7.88" height="7.88"/>
-            </g>
-            <g>
-                <rect x="246.55" width="7.88" height="7.88"/>
-                <rect x="238.67" width="7.88" height="7.88"/>
-                <rect x="254.43" width="7.88" height="7.88"/>
-                <rect x="262.3" width="7.88" height="7.88"/>
-                <rect x="270.18" y="7.88" width="7.88" height="7.88"/>
-                <rect x="238.67" y="7.88" width="7.88" height="7.88"/>
-                <rect x="270.18" y="15.75" width="7.88" height="7.88"/>
-                <rect x="238.67" y="15.75" width="7.88" height="7.88"/>
-                <rect x="270.18" y="23.63" width="7.88" height="7.88"/>
-                <rect x="238.67" y="23.63" width="7.88" height="7.88"/>
-                <rect x="270.18" y="31.51" width="7.88" height="7.88"/>
-                <rect x="238.67" y="31.51" width="7.88" height="7.88"/>
-                <rect x="270.18" y="39.38" width="7.88" height="7.88"/>
-                <rect x="238.67" y="39.38" width="7.88" height="7.88"/>
-                <rect x="246.55" y="47.26" width="7.88" height="7.88"/>
-                <rect x="238.67" y="47.26" width="7.88" height="7.88"/>
-                <rect x="254.43" y="47.26" width="7.88" height="7.88"/>
-                <rect x="262.3" y="47.26" width="7.88" height="7.88"/>
-            </g>
-            <g>
-                <rect x="381" width="7.88" height="7.88"/>
-                <rect x="388.87" width="7.88" height="7.88"/>
-                <rect x="396.75" width="7.88" height="7.88"/>
-                <rect x="404.63" y="7.88" width="7.88" height="7.88"/>
-                <rect x="373.12" y="7.88" width="7.88" height="7.88"/>
-                <rect x="373.12" y="15.75" width="7.88" height="7.88"/>
-                <rect x="373.12" y="23.63" width="7.88" height="7.88"/>
-                <rect x="396.75" y="31.51" width="7.88" height="7.88"/>
-                <rect x="404.63" y="31.51" width="7.88" height="7.88"/>
-                <rect x="373.12" y="31.51" width="7.88" height="7.88"/>
-                <rect x="404.63" y="39.38" width="7.88" height="7.88"/>
-                <rect x="373.12" y="39.38" width="7.88" height="7.88"/>
-                <rect x="381" y="47.26" width="7.88" height="7.88"/>
-                <rect x="388.87" y="47.26" width="7.88" height="7.88"/>
-                <rect x="396.75" y="47.26" width="7.88" height="7.88"/>
-            </g>
-            <g>
-                <rect x="354.58" width="7.88" height="7.88"/>
-                <rect x="323.07" width="7.88" height="7.88"/>
-                <rect x="354.58" y="7.88" width="7.88" height="7.88"/>
-                <rect x="323.07" y="7.88" width="7.88" height="7.88"/>
-                <rect x="330.95" y="15.75" width="7.88" height="7.88"/>
-                <rect x="354.58" y="15.75" width="7.88" height="7.88"/>
-                <rect x="323.07" y="15.75" width="7.88" height="7.88"/>
-                <rect x="338.83" y="23.63" width="7.88" height="7.88"/>
-                <rect x="354.58" y="23.63" width="7.88" height="7.88"/>
-                <rect x="323.07" y="23.63" width="7.88" height="7.88"/>
-                <rect x="346.7" y="31.51" width="7.88" height="7.88"/>
-                <rect x="354.58" y="31.51" width="7.88" height="7.88"/>
-                <rect x="323.07" y="31.51" width="7.88" height="7.88"/>
-                <rect x="354.58" y="39.38" width="7.88" height="7.88"/>
-                <rect x="323.07" y="39.38" width="7.88" height="7.88"/>
-                <rect x="354.58" y="47.26" width="7.88" height="7.88"/>
-                <rect x="323.07" y="47.26" width="7.88" height="7.88"/>
-            </g>
-            </g>
-            <g>
-            <rect x="423.16" y="47.26" width="7.88" height="7.88"/>
-            <rect x="441.7" y="47.26" width="7.88" height="7.88"/>
-            <rect x="460.24" y="47.26" width="7.88" height="7.88"/>
-            </g>
-        </g>
-        <g>
-            <polygon class="cls-1" points="278.27 101.92 278.27 154.22 25.46 154.22 25.46 146.43 17.67 146.43 17.67 109.72 25.46 109.72 25.46 101.92 278.27 101.92"/>
-            <g>
-            <g>
-                <rect x="7.88" y="92.14" width="7.88" height="7.88"/>
-                <rect x="15.75" y="84.26" width="7.88" height="7.88"/>
-                <rect y="100.01" width="7.88" height="7.88"/>
-            </g>
-            <g>
-                <rect x="7.88" y="156.13" width="7.88" height="7.88" transform="translate(-148.25 171.88) rotate(-90)"/>
-                <rect x="0" y="148.25" width="7.88" height="7.88" transform="translate(-148.25 156.13) rotate(-90)"/>
-                <rect x="15.75" y="164.01" width="7.88" height="7.88" transform="translate(-148.25 187.64) rotate(-90)"/>
-            </g>
-            <g>
-                <rect x="540.78" y="92.14" width="7.88" height="7.88" transform="translate(1089.45 192.15) rotate(180)"/>
-                <rect x="532.91" y="84.26" width="7.88" height="7.88" transform="translate(1073.69 176.4) rotate(180)"/>
-                <rect x="548.66" y="100.01" width="7.88" height="7.88" transform="translate(1105.2 207.9) rotate(180)"/>
-            </g>
-            <g>
-                <rect x="540.78" y="156.13" width="7.88" height="7.88" transform="translate(384.66 704.79) rotate(-90)"/>
-                <rect x="548.66" y="148.25" width="7.88" height="7.88" transform="translate(400.41 704.79) rotate(-90)"/>
-                <rect x="532.91" y="164.01" width="7.88" height="7.88" transform="translate(368.9 704.79) rotate(-90)"/>
-            </g>
-            <rect x="15.75" y="84.26" width="525.03" height="7.88"/>
-            <rect x="15.75" y="164.01" width="525.03" height="7.88"/>
-            <rect x="548.66" y="100.01" width="7.88" height="56.12"/>
-            <rect y="100.01" width="7.88" height="56.12"/>
-            </g>
-        </g>
-        </svg>
-        <script type="text/javascript">
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-            // Page is loaded, fade out the loading animation
-            fadeOut('loadingBar');
-            }, 1000); // Wait for one tenth of second (100 milliseconds)
-        });
-        </script>
     <?php } ?>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JMV592" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+    <?xml version="1.0" encoding="UTF-8"?>
+    <svg id="loadingBar" data-name="Layer 3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 556.54 171.88">
+    <g>
+        <g>
+        <g>
+            <rect x="296.64" width="7.88" height="7.88"/>
+            <rect x="288.76" width="7.88" height="7.88"/>
+            <rect x="304.51" width="7.88" height="7.88"/>
+            <rect x="296.64" y="7.88" width="7.88" height="7.88"/>
+            <rect x="296.64" y="15.75" width="7.88" height="7.88"/>
+            <rect x="296.64" y="23.63" width="7.88" height="7.88"/>
+            <rect x="296.64" y="31.51" width="7.88" height="7.88"/>
+            <rect x="296.64" y="39.38" width="7.88" height="7.88"/>
+            <rect x="296.64" y="47.26" width="7.88" height="7.88"/>
+            <rect x="304.51" y="47.26" width="7.88" height="7.88"/>
+            <rect x="288.76" y="47.26" width="7.88" height="7.88"/>
+        </g>
+        <g>
+            <rect x="146.38" width="7.88" height="7.88"/>
+            <rect x="154.25" width="7.88" height="7.88"/>
+            <rect x="162.13" width="7.88" height="7.88"/>
+            <rect x="170.01" y="7.88" width="7.88" height="7.88"/>
+            <rect x="138.5" y="7.88" width="7.88" height="7.88"/>
+            <rect x="170.01" y="15.75" width="7.88" height="7.88"/>
+            <rect x="138.5" y="15.75" width="7.88" height="7.88"/>
+            <rect x="170.01" y="23.63" width="7.88" height="7.88"/>
+            <rect x="138.5" y="23.63" width="7.88" height="7.88"/>
+            <rect x="170.01" y="31.51" width="7.88" height="7.88"/>
+            <rect x="138.5" y="31.51" width="7.88" height="7.88"/>
+            <rect x="170.01" y="39.38" width="7.88" height="7.88"/>
+            <rect x="138.5" y="39.38" width="7.88" height="7.88"/>
+            <rect x="146.38" y="47.26" width="7.88" height="7.88"/>
+            <rect x="154.25" y="47.26" width="7.88" height="7.88"/>
+            <rect x="162.13" y="47.26" width="7.88" height="7.88"/>
+        </g>
+        <g>
+            <rect x="88.42" width="7.88" height="7.88"/>
+            <rect x="88.42" y="7.88" width="7.88" height="7.88"/>
+            <rect x="88.42" y="15.75" width="7.88" height="7.88"/>
+            <rect x="88.42" y="23.63" width="7.88" height="7.88"/>
+            <rect x="88.42" y="31.51" width="7.88" height="7.88"/>
+            <rect x="88.42" y="39.38" width="7.88" height="7.88"/>
+            <rect x="96.3" y="47.26" width="7.88" height="7.88"/>
+            <rect x="104.17" y="47.26" width="7.88" height="7.88"/>
+            <rect x="112.05" y="47.26" width="7.88" height="7.88"/>
+            <rect x="119.93" y="47.26" width="7.88" height="7.88"/>
+        </g>
+        <g>
+            <rect x="196.46" width="7.88" height="7.88"/>
+            <rect x="204.34" width="7.88" height="7.88"/>
+            <rect x="212.22" width="7.88" height="7.88"/>
+            <rect x="220.09" y="7.88" width="7.88" height="7.88"/>
+            <rect x="188.59" y="7.88" width="7.88" height="7.88"/>
+            <rect x="220.09" y="15.75" width="7.88" height="7.88"/>
+            <rect x="188.59" y="15.75" width="7.88" height="7.88"/>
+            <rect x="196.46" y="23.63" width="7.88" height="7.88"/>
+            <rect x="204.34" y="23.63" width="7.88" height="7.88"/>
+            <rect x="212.22" y="23.63" width="7.88" height="7.88"/>
+            <rect x="220.09" y="23.63" width="7.88" height="7.88"/>
+            <rect x="188.59" y="23.63" width="7.88" height="7.88"/>
+            <rect x="220.09" y="31.51" width="7.88" height="7.88"/>
+            <rect x="188.59" y="31.51" width="7.88" height="7.88"/>
+            <rect x="220.09" y="39.38" width="7.88" height="7.88"/>
+            <rect x="188.59" y="39.38" width="7.88" height="7.88"/>
+            <rect x="220.09" y="47.26" width="7.88" height="7.88"/>
+            <rect x="188.59" y="47.26" width="7.88" height="7.88"/>
+        </g>
+        <g>
+            <rect x="246.55" width="7.88" height="7.88"/>
+            <rect x="238.67" width="7.88" height="7.88"/>
+            <rect x="254.43" width="7.88" height="7.88"/>
+            <rect x="262.3" width="7.88" height="7.88"/>
+            <rect x="270.18" y="7.88" width="7.88" height="7.88"/>
+            <rect x="238.67" y="7.88" width="7.88" height="7.88"/>
+            <rect x="270.18" y="15.75" width="7.88" height="7.88"/>
+            <rect x="238.67" y="15.75" width="7.88" height="7.88"/>
+            <rect x="270.18" y="23.63" width="7.88" height="7.88"/>
+            <rect x="238.67" y="23.63" width="7.88" height="7.88"/>
+            <rect x="270.18" y="31.51" width="7.88" height="7.88"/>
+            <rect x="238.67" y="31.51" width="7.88" height="7.88"/>
+            <rect x="270.18" y="39.38" width="7.88" height="7.88"/>
+            <rect x="238.67" y="39.38" width="7.88" height="7.88"/>
+            <rect x="246.55" y="47.26" width="7.88" height="7.88"/>
+            <rect x="238.67" y="47.26" width="7.88" height="7.88"/>
+            <rect x="254.43" y="47.26" width="7.88" height="7.88"/>
+            <rect x="262.3" y="47.26" width="7.88" height="7.88"/>
+        </g>
+        <g>
+            <rect x="381" width="7.88" height="7.88"/>
+            <rect x="388.87" width="7.88" height="7.88"/>
+            <rect x="396.75" width="7.88" height="7.88"/>
+            <rect x="404.63" y="7.88" width="7.88" height="7.88"/>
+            <rect x="373.12" y="7.88" width="7.88" height="7.88"/>
+            <rect x="373.12" y="15.75" width="7.88" height="7.88"/>
+            <rect x="373.12" y="23.63" width="7.88" height="7.88"/>
+            <rect x="396.75" y="31.51" width="7.88" height="7.88"/>
+            <rect x="404.63" y="31.51" width="7.88" height="7.88"/>
+            <rect x="373.12" y="31.51" width="7.88" height="7.88"/>
+            <rect x="404.63" y="39.38" width="7.88" height="7.88"/>
+            <rect x="373.12" y="39.38" width="7.88" height="7.88"/>
+            <rect x="381" y="47.26" width="7.88" height="7.88"/>
+            <rect x="388.87" y="47.26" width="7.88" height="7.88"/>
+            <rect x="396.75" y="47.26" width="7.88" height="7.88"/>
+        </g>
+        <g>
+            <rect x="354.58" width="7.88" height="7.88"/>
+            <rect x="323.07" width="7.88" height="7.88"/>
+            <rect x="354.58" y="7.88" width="7.88" height="7.88"/>
+            <rect x="323.07" y="7.88" width="7.88" height="7.88"/>
+            <rect x="330.95" y="15.75" width="7.88" height="7.88"/>
+            <rect x="354.58" y="15.75" width="7.88" height="7.88"/>
+            <rect x="323.07" y="15.75" width="7.88" height="7.88"/>
+            <rect x="338.83" y="23.63" width="7.88" height="7.88"/>
+            <rect x="354.58" y="23.63" width="7.88" height="7.88"/>
+            <rect x="323.07" y="23.63" width="7.88" height="7.88"/>
+            <rect x="346.7" y="31.51" width="7.88" height="7.88"/>
+            <rect x="354.58" y="31.51" width="7.88" height="7.88"/>
+            <rect x="323.07" y="31.51" width="7.88" height="7.88"/>
+            <rect x="354.58" y="39.38" width="7.88" height="7.88"/>
+            <rect x="323.07" y="39.38" width="7.88" height="7.88"/>
+            <rect x="354.58" y="47.26" width="7.88" height="7.88"/>
+            <rect x="323.07" y="47.26" width="7.88" height="7.88"/>
+        </g>
+        </g>
+        <g>
+        <rect x="423.16" y="47.26" width="7.88" height="7.88"/>
+        <rect x="441.7" y="47.26" width="7.88" height="7.88"/>
+        <rect x="460.24" y="47.26" width="7.88" height="7.88"/>
+        </g>
+    </g>
+    <g>
+        <polygon class="cls-1" points="278.27 101.92 278.27 154.22 25.46 154.22 25.46 146.43 17.67 146.43 17.67 109.72 25.46 109.72 25.46 101.92 278.27 101.92"/>
+        <g>
+        <g>
+            <rect x="7.88" y="92.14" width="7.88" height="7.88"/>
+            <rect x="15.75" y="84.26" width="7.88" height="7.88"/>
+            <rect y="100.01" width="7.88" height="7.88"/>
+        </g>
+        <g>
+            <rect x="7.88" y="156.13" width="7.88" height="7.88" transform="translate(-148.25 171.88) rotate(-90)"/>
+            <rect x="0" y="148.25" width="7.88" height="7.88" transform="translate(-148.25 156.13) rotate(-90)"/>
+            <rect x="15.75" y="164.01" width="7.88" height="7.88" transform="translate(-148.25 187.64) rotate(-90)"/>
+        </g>
+        <g>
+            <rect x="540.78" y="92.14" width="7.88" height="7.88" transform="translate(1089.45 192.15) rotate(180)"/>
+            <rect x="532.91" y="84.26" width="7.88" height="7.88" transform="translate(1073.69 176.4) rotate(180)"/>
+            <rect x="548.66" y="100.01" width="7.88" height="7.88" transform="translate(1105.2 207.9) rotate(180)"/>
+        </g>
+        <g>
+            <rect x="540.78" y="156.13" width="7.88" height="7.88" transform="translate(384.66 704.79) rotate(-90)"/>
+            <rect x="548.66" y="148.25" width="7.88" height="7.88" transform="translate(400.41 704.79) rotate(-90)"/>
+            <rect x="532.91" y="164.01" width="7.88" height="7.88" transform="translate(368.9 704.79) rotate(-90)"/>
+        </g>
+        <rect x="15.75" y="84.26" width="525.03" height="7.88"/>
+        <rect x="15.75" y="164.01" width="525.03" height="7.88"/>
+        <rect x="548.66" y="100.01" width="7.88" height="56.12"/>
+        <rect y="100.01" width="7.88" height="56.12"/>
+        </g>
+    </g>
+    </svg>
     <div id="mainContent">
         <?php include "./nav.php" ?>
         <script type="text/javascript">
@@ -256,6 +248,7 @@ crossorigin="anonymous"></script>
         window.addEventListener('load', function() {
             setTimeout(function() {
             // Page is loaded, fade out the loading animation
+            fadeOut('loadingBar');
             newQuote();
             zoomwait();
             }, 1000); // Wait for one tenth of second (100 milliseconds)
