@@ -583,8 +583,8 @@ include "themes.scss"; //file contains all fonts
         font-size: 3rem;
         width: 150px;
         height: 150px;
-        margin-top: -150px;
-        margin-left: -150px;
+        margin-top: -2rem;
+        margin-left: -2rem;
         color: var(--currentWord);
         transition: opacity 0.25s ease;
         }
