@@ -583,8 +583,6 @@ include "themes.scss"; //file contains all fonts
         font-size: 3rem;
         width: 150px;
         height: 150px;
-        margin-top: -3rem;
-        margin-left: -3rem;
         color: var(--currentWord);
         transition: opacity 0.25s ease;
         }
@@ -603,7 +601,7 @@ include "themes.scss"; //file contains all fonts
     .cls-1 {
         transform-origin: left;
         fill: var(--correct);
-        animation: fillBar 2s ease-in-out forwards;
+        animation: fillBar .5s ease-in-out forwards;
     }
     @keyframes spin {
     from {
