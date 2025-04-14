@@ -251,7 +251,7 @@ crossorigin="anonymous"></script>
             fadeOut('loadingBar');
             newQuote();
             zoomwait();
-            }, 250); // Wait for one tenth of second (100 milliseconds)
+            }, 450); // Wait for one tenth of second (100 milliseconds)
         });
         
     </script>

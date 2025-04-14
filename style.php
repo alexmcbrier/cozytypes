@@ -583,12 +583,12 @@ include "themes.scss"; //file contains all fonts
         transform: translate(-50%, -50%);
         width: 250px;
         height: 250px;
-        transition: opacity 0.5s ease;
+        transition: opacity 1s ease;
         fill: var(--currentWord);
         }
     @keyframes fillBar {
     from {
-        transform: scaleX(0);
+        transform: scaleX(.25);
     }
     to {
         transform: scaleX(1);
