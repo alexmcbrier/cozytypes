@@ -591,9 +591,20 @@ include "themes.scss"; //file contains all fonts
     #loadingBar path {
         fill: var(--currentWord);
     }
+    @keyframes fillBar {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+    }
+
     .cls-1 {
-            fill: var(--correct);
-        }
+        transform-origin: left;
+        fill: var(--correct);
+        animation: fillBar 2s ease-in-out forwards;
+    }
     @keyframes spin {
     from {
         transform: rotate(0deg);
