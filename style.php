@@ -580,11 +580,9 @@ include "themes.scss"; //file contains all fonts
         position: absolute;
         top: 50%;
         left: 50%;
-        font-size: 3rem;
+        transform: translate(-50%, -50%);
         width: 150px;
         height: 150px;
-        margin-top: -2rem;
-        margin-left: -2rem;
         color: var(--currentWord);
         transition: opacity 0.25s ease;
         }
