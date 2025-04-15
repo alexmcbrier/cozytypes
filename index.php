@@ -246,12 +246,21 @@ crossorigin="anonymous"></script>
             document.getElementById('footer').style.filter = 'none';
         }
         window.addEventListener('load', function() {
-            setTimeout(function() {
-            // Page is loaded, fade out the loading animation
-            fadeOut('loadingBar');
-            newQuote();
-            zoomwait();
-            }, 500); // Wait for one tenth of second (100 milliseconds)
+            <?php if (!isset($_GET["finish"])) { ?>
+                setTimeout(function() {
+                    // Page is loaded, fade out the loading animation
+                    fadeOut('loadingBar');
+                    newQuote();
+                    zoomwait();
+                }, 500); // Wait for one tenth of second (100 milliseconds)
+            <?php } else if (isset($_GET["finish"])) { ?>
+                setTimeout(function() {
+                    // Page is loaded, fade out the loading animation
+                    fadeOut('loadingBar');
+                    newQuote();
+                    zoomwait();
+                }, 100); // Wait for one tenth of second (100 milliseconds)
+            <?php } ?>
         });
         
     </script>

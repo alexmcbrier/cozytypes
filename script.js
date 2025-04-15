@@ -497,7 +497,6 @@ function setBlur() {
 function setCursorVisibility() {
     document.getElementById('cursor').style.visibility = 'visible';
 }
-
 function setCursorInvisibility() {
     document.getElementById('cursor').style.visibility = 'hidden';
 }
@@ -582,7 +581,7 @@ function setPreference(type, newPreference)
         if (window.location.pathname.endsWith("/preferences")) {
             highlightPrefernces();
         }
-    }
+}
 function addNotification(header, description)
 {
     var parent = document.getElementById('notifications');
