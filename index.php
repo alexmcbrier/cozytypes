@@ -259,7 +259,7 @@ crossorigin="anonymous"></script>
                     fadeOut('loadingBar');
                     newQuote();
                     zoomwait();
-                }, 50); // Wait for one tenth of second (100 milliseconds)
+                }, 100); // Wait for one tenth of second (100 milliseconds)
             <?php } ?>
         });
         
