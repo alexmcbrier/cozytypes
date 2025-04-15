@@ -254,9 +254,12 @@ crossorigin="anonymous"></script>
                     zoomwait();
                 }, 500); // Wait for one tenth of second (100 milliseconds)
             <?php } else if (isset($_GET["finish"])) { ?>
-                fadeOut('loadingBar');
-                newQuote();
-                zoomwait();
+                setTimeout(function() {
+                    // Page is loaded, fade out the loading animation
+                    fadeOut('loadingBar');
+                    newQuote();
+                    zoomwait();
+                }, 50); // Wait for one tenth of second (100 milliseconds)
             <?php } ?>
         });
         
