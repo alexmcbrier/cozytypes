@@ -447,14 +447,16 @@ h1 {
         fill: none;
         }
 
-      .st1 {
+    .st1 {
         transition: fill .25s ease;
         fill-rule: evenodd;
         fill: var(--row);
-      }
-      .st1:hover {
+    }
+#profileIcon:hover,
+    .st1 {
         fill: var(--currentWord);
-      }
+    }
+
 #profileIcon {
     transition: color .25s ease;
     text-decoration: none;
