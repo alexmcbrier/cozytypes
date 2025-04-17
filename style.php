@@ -704,6 +704,9 @@ input:-webkit-autofill {
     font-size: 1rem;
 
 }
+.stat {
+    margin: auto;
+}
 #profilePicture {
     width: 25%;
 }

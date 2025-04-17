@@ -182,40 +182,40 @@ if (isset($_SESSION["user_id"])) {
         <?php include "./nav.php" ?>
         <div id="middle" style = "width: 100%">
             <div id="displayStats" style="padding: 1rem;">
-                <div> 
+                <div class = "stat"> 
                     <h1 id="preferenceHeader"><?= htmlspecialchars($user["username"]) ?></h1>
                     <a class="profileValues">member since <?= $formattedDate ?></a>
                 </div>
-                <div>
-                    <h1 id="preferenceHeader">total tests completed</h1>
+                <div class = "stat">
+                    <h1 id="preferenceHeader">tests completed</h1>
                     <a class="profileValues"><?= $totalCount ?> tests</a>
                 </div>
-                <div>
+                <div class = "stat">
                     <h1 id="preferenceHeader">highest wpm</h1>
                     <a class="profileValues"><?= $totalMaxWpm ?> wpm</a>
                 </div>
             </div>
             <div id = "showSignIn" style = "padding:0rem 2rem;" >personal bests</div>
             <div id="displayStats" style= "margin: 1rem 1.5rem 3rem 1.5rem;">
-                <div>
+                <div class = "stat">
                     <div id = "preferenceHeader" class = "notSignedIn">15 seconds  </div>
                     <div class = "profileValues">wpm | <span style = "color: var(--testText)"><?= $maxWpm15s ?></span></div>
                     <div class = "profileValues">accuracy | <span style = "color: var(--testText)"><?= $accuracyForMaxWpm15s ?></span></div>
                     <div class = "profileValues">tests | <span style = "color: var(--testText)"><?= $count15s ?></span></div>
                 </div>
-                <div>
+                <div class = "stat">
                     <div id = "preferenceHeader" class = "notSignedIn">30 seconds  </div>
                     <div class = "profileValues">wpm | <span style = "color: var(--testText)"><?= $maxWpm30s ?></span></div>
                     <div class = "profileValues">accuracy | <span style = "color: var(--testText)"><?= $accuracyForMaxWpm30s ?></span></div>
                     <div class = "profileValues">tests | <span style = "color: var(--testText)"><?= $count30s ?></span></div>
                 </div>
-                <div>
+                <div class = "stat">
                     <div id = "preferenceHeader" class = "notSignedIn">60 seconds  </div>
                     <div class = "profileValues">wpm | <span style = "color: var(--testText)"><?= $maxWpm60s ?></span></div>
                     <div class = "profileValues">accuracy | <span style = "color: var(--testText)"><?= $accuracyForMaxWpm60s ?></span></div>
                     <div class = "profileValues">tests | <span style = "color: var(--testText)"><?= $count60s ?></span></div>
                 </div>
-                <div>
+                <div class = "stat">
                     <div id = "preferenceHeader" class = "notSignedIn">120 seconds </div>
                     <div class = "profileValues">wpm | <span style = "color: var(--testText)"><?= $maxWpm120s ?></span></div>
                     <div class = "profileValues">accuracy | <span style = "color: var(--testText)"><?= $accuracyForMaxWpm120s ?></span></div>
