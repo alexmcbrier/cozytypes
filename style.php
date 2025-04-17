@@ -597,7 +597,8 @@ to {
 }
 }
 .cls-1 {
-    transform-origin: left;
+    transform-origin: 0% 50%; 
+    transform-box: fill-box;
     fill: var(--correct);
     animation: fillBar .75s ease-in-out forwards;
 }
