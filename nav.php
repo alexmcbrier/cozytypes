@@ -13,7 +13,7 @@ if (isset($_SESSION["user_id"])) {
     <a class = "navIcon" href="/preferences">settings</a>
     <a class = "navIcon" href="/leaderboard">leaderboard</a>
     <a class = "navIcon" href="/about">about</a>
-    <a href="/signup" id="profileIconLink">
+    <a href="/signup" id="profileIcon">
         <svg id="profileIcon" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 2000 2000">
             <!-- Generator: Adobe Illustrator 29.4.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 152)  -->
             <rect class="st0" width="2000" height="2000"/>
