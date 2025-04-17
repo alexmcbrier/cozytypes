@@ -183,15 +183,15 @@ if (isset($_SESSION["user_id"])) {
         <div id="middle" style = "width: 100%">
             <div id="displayStats" style="padding: 1rem;">
                 <div> 
-                    <h1 id="preferenceHeader"><?= htmlspecialchars($user["username"]) ?><i class="fa-regular fa-user"></i></h1>
+                    <h1 id="preferenceHeader"><?= htmlspecialchars($user["username"]) ?></h1>
                     <a class="profileValues">member since <?= $formattedDate ?></a>
                 </div>
                 <div>
-                    <h1 id="preferenceHeader">total tests completed<i class="fa-solid fa-chart-line"></i></h1>
+                    <h1 id="preferenceHeader">total tests completed</h1>
                     <a class="profileValues"><?= $totalCount ?> tests</a>
                 </div>
                 <div>
-                    <h1 id="preferenceHeader">highest wpm<i class="fa-solid fa-crown"></i></h1>
+                    <h1 id="preferenceHeader">highest wpm</h1>
                     <a class="profileValues"><?= $totalMaxWpm ?> wpm</a>
                 </div>
             </div>
@@ -248,7 +248,7 @@ if (isset($_SESSION["user_id"])) {
                     <div class = "profileValues">tests | <span style = "color: var(--testText)"><?= $count100w ?></span></div>
                 </div>
             </div>
-            <a id = "showRestart" class="notSignedIn" href="logout.php" style = "padding:0rem 2rem;">logout<i class="fa-solid fa-right-from-bracket"></i></a>
+            <a id = "showRestart" class="notSignedIn" href="logout.php" style = "padding:0rem 2rem;">logout</a>
         </div>
         <?php include "./footer.php" ?>
     </form>

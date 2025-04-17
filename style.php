@@ -687,9 +687,6 @@ input:-webkit-autofill {
     transition: color .25s ease;
     user-select: none;
 }
-#showSignIn:hover {
-    color: var(--currentWord);
-}
 .statsItem {
     user-select: none;
     color: var(--currentWord);
