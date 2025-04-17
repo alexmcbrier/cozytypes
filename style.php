@@ -448,8 +448,12 @@ h1 {
         }
 
       .st1 {
+        transition: fill .25s ease;
         fill-rule: evenodd;
         fill: var(--row);
+      }
+      .st1:hover {
+        fill: var(--currentWord);
       }
 #profileIcon {
     transition: color .25s ease;
