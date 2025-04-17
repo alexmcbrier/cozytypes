@@ -178,9 +178,6 @@ if (isset($_SESSION["user_id"])) {
      crossorigin="anonymous"></script>
 </head>
 <body class="main-body">
-    <div id="sidebar">
-        <i style="cursor: pointer" onclick="openSidebar()" id = "sidebarIcon" class="fa-solid fa-chevron-left"></i>
-    </div>
     <form id="mainContent" method="POST" action="preferences">
         <?php include "./nav.php" ?>
         <div id="middle" style = "width: 100%">
