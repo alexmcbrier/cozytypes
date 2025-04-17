@@ -457,6 +457,10 @@ h1 {
     padding: 0 1rem;
     width: 75px;
     height: 75px;
+    text-decoration: none;
+    display: flex;
+    align-items: center; /* Vertically centers the content */
+    justify-content: center; /* Horizontally centers the content */
 }
 #completionDisplay {
     font-size: calc(var(--fontSize) * .6rem);
