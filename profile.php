@@ -223,25 +223,25 @@ if (isset($_SESSION["user_id"])) {
                 </div>
             </div>
             <div id="displayStats">
-                <div>
+                <div class = "stat">
                     <div id = "preferenceHeader" class = "notSignedIn">10 words    </div>
                     <div class = "profileValues">wpm | <span style = "color: var(--testText)"><?= $maxWpm10w ?></span></div>
                     <div class = "profileValues">accuracy | <span style = "color: var(--testText)"><?= $accuracyForMaxWpm10w ?></span></div>
                     <div class = "profileValues">tests | <span style = "color: var(--testText)"><?= $count10w ?></span></div>
                 </div>
-                <div>
+                <div class = "stat">
                     <div id = "preferenceHeader" class = "notSignedIn">25 words    </div>
                     <div class = "profileValues">wpm | <span style = "color: var(--testText)"><?= $maxWpm25w ?></span></div>
                     <div class = "profileValues">accuracy | <span style = "color: var(--testText)"><?= $accuracyForMaxWpm25w ?></span></div>
                     <div class = "profileValues">tests | <span style = "color: var(--testText)"><?= $count25w ?></span></div>
                 </div>
-                <div>
+                <div class = "stat">
                     <div id = "preferenceHeader" class = "notSignedIn">50 words    </div>
                     <div class = "profileValues">wpm | <span style = "color: var(--testText)"><?= $maxWpm50w ?></span></div>
                     <div class = "profileValues">accuracy | <span style = "color: var(--testText)"><?= $accuracyForMaxWpm50w ?></span></div>
                     <div class = "profileValues">tests | <span style = "color: var(--testText)"><?= $count50w ?></span></div>
                 </div>
-                <div>
+                <div class = "stat">
                     <div id = "preferenceHeader" class = "notSignedIn">100 words   </div>
                     <div class = "profileValues">wpm | <span style = "color: var(--testText)"><?= $maxWpm100w ?></span></div>
                     <div class = "profileValues">accuracy | <span style = "color: var(--testText)"><?= $accuracyForMaxWpm100w ?></span></div>
