@@ -266,7 +266,7 @@ nav {
     color: var(--row);
     
 }
-.navIcon:hover , #showUsername:hover {
+.navIcon:hover , #showUsername:hover, #profileIcon:hover {
     color: var(--currentWord);
 }
 .word {
@@ -455,8 +455,8 @@ h1 {
     text-decoration: none;
     font-size: 1.25rem;
     padding: 0 1rem;
-    width: 250px;
-    height: 250px;
+    width: 75px;
+    height: 75px;
 }
 #completionDisplay {
     font-size: calc(var(--fontSize) * .6rem);
