@@ -455,8 +455,8 @@ h1 {
     text-decoration: none;
     font-size: 1.25rem;
     padding: 0;
-    width: 75px;
-    height: 75px;
+    width: 65px;
+    height: 65px;
 }
 #profileIconLink {
     text-decoration: none;
