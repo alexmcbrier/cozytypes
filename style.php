@@ -454,7 +454,7 @@ h1 {
     transition: color .25s ease;
     text-decoration: none;
     font-size: 1.25rem;
-    padding: 0 1rem;
+    padding: 0;
     width: 75px;
     height: 75px;
 }
