@@ -464,11 +464,7 @@ h1 {
     align-items: center; /* Vertically centers the content */
     justify-content: center; /* Horizontally centers the content */
     transition: color .25s ease;
-    text-decoration: none;
-    font-size: 1.25rem;
-    padding: 0 1rem;
-    width: 75px;
-    height: 75px;
+    color: var(--row);
 }
 #completionDisplay {
     font-size: calc(var(--fontSize) * .6rem);
