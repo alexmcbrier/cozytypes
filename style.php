@@ -441,6 +441,23 @@ h1 {
     fill: var(--currentWord);
     transform-origin: 47px;
 }
+#profileIcon,
+    .st0 {
+        fill: none;
+        }
+
+      .st1 {
+        fill-rule: evenodd;
+        fill: var(--row);
+      }
+#profileIcon {
+    transition: color .25s ease;
+    text-decoration: none;
+    font-size: 1.25rem;
+    padding: 0 1rem;
+    width: 250px;
+    height: 250px;
+}
 #completionDisplay {
     font-size: calc(var(--fontSize) * .6rem);
 }
