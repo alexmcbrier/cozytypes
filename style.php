@@ -266,9 +266,8 @@ nav {
     color: var(--row);
     
 }
-.navIcon:hover , #showUsername:hover, #profileIcon:hover {
+.navIcon:hover , #showUsername:hover, {
     color: var(--currentWord);
-    fill: var(--currentWord);
 }
 .word {
     display: inline-block;
@@ -451,13 +450,16 @@ h1 {
         fill-rule: evenodd;
         fill: var(--row);
       }
+      .st1:hover {
+        fill: var(--currentWord);
+      }
 #profileIcon {
     transition: color .25s ease;
     text-decoration: none;
     font-size: 1.25rem;
     padding: 0;
-    width: 65px;
-    height: 65px;
+    width: 60px;
+    height: 60px;
 }
 #profileIconLink {
     text-decoration: none;
@@ -466,9 +468,6 @@ h1 {
     justify-content: center; /* Horizontally centers the content */
     transition: color .25s ease;
     color: var(--row);
-}
-#profileIconLink:hover {
-    fill: var(--currentWord);
 }
 #completionDisplay {
     font-size: calc(var(--fontSize) * .6rem);
