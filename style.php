@@ -467,6 +467,9 @@ h1 {
     transition: color .25s ease;
     color: var(--row);
 }
+#profileIconLink:hover {
+    fill: var(--currentWord);
+}
 #completionDisplay {
     font-size: calc(var(--fontSize) * .6rem);
 }
