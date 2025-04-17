@@ -268,6 +268,7 @@ nav {
 }
 .navIcon:hover , #showUsername:hover, #profileIcon:hover {
     color: var(--currentWord);
+    fill: var(--currentWord);
 }
 .word {
     display: inline-block;
