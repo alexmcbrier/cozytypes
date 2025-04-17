@@ -457,6 +457,8 @@ h1 {
     padding: 0 1rem;
     width: 75px;
     height: 75px;
+}
+#profileIconLink {
     text-decoration: none;
     display: flex;
     align-items: center; /* Vertically centers the content */
