@@ -4,6 +4,7 @@ if (isset($_SESSION["user_id"])) {
     $sql = "SELECT * FROM user WHERE id = {$_SESSION["user_id"]}";
     $result = $mysqli->query($sql);
     $user = $result->fetch_assoc();
+    echo $_SESSION["user_id"];
 } 
 else if (isset($_COOKIE["id"])) {
     $mysqli = require __DIR__ . "/config.php";
@@ -13,6 +14,7 @@ else if (isset($_COOKIE["id"])) {
     $result = $mysqli->query($sql);
     $user = $result->fetch_assoc();
     $_SESSION["user_id"] = $user["id"];
+    echo $_SESSION["user_id"];
 }?>
 
 <nav> 
