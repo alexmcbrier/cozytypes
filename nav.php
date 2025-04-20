@@ -1,24 +1,10 @@
 <?php
-session_start();
-//grabbing user session information (neccesary for staying signed in etc.)
-if (isset($_COOKIE["id"])) {
-    $mysqli = require __DIR__ . "/config.php";
-    $hash = $_COOKIE["id"];
-    //change to whatever
-    $sql = "SELECT id FROM user WHERE password_hash = '$hash'";
-    $result = $mysqli->query($sql);
-    $user = $result->fetch_assoc();
-    $_SESSION["user_id"] = $user["id"];
-}
-else if (isset($_SESSION["user_id"])) {
+if (isset($_SESSION["user_id"])) {
     $mysqli = require __DIR__ . "/config.php";
     $sql = "SELECT * FROM user WHERE id = {$_SESSION["user_id"]}";
     $result = $mysqli->query($sql);
     $user = $result->fetch_assoc();
-    echo $_SESSION["user_id"];
-} 
-?>
-
+} ?>
 <nav> 
     <a id = "logo" href="/" style="text-decoration: none;">
         <p id = "title">cozytypes</p>
