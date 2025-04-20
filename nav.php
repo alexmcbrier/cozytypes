@@ -4,7 +4,17 @@ if (isset($_SESSION["user_id"])) {
     $sql = "SELECT * FROM user WHERE id = {$_SESSION["user_id"]}";
     $result = $mysqli->query($sql);
     $user = $result->fetch_assoc();
-} ?>
+} 
+else if (isset($_COOKIE["id"])) {
+    $mysqli = require __DIR__ . "/config.php";
+    $hash = $_COOKIE["id"];
+    //change to whatever
+    $sql = "SELECT id FROM user WHERE password_hash = '$hash'";
+    $result = $mysqli->query($sql);
+    $user = $result->fetch_assoc();
+    $_SESSION["user_id"] = $user["id"];
+}?>
+
 <nav> 
     <a id = "logo" href="/" style="text-decoration: none;">
         <p id = "title">cozytypes</p>
