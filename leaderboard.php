@@ -138,13 +138,14 @@ $mysqli = require __DIR__ . "/config.php";
                     WHERE (id, wpm) IN (
                         SELECT id, MAX(wpm) 
                         FROM typingtest 
-                        WHERE mode = 'time' AND testTime = 15 AND wpm < 250 
+                        WHERE mode = 'words' AND testTime = 10 AND wpm < 250 
                         GROUP BY id
                     ) 
-                    AND mode = 'time' AND testTime = 15 
+                    AND mode = 'words' AND testTime = 10 
                     ORDER BY wpm DESC 
                     LIMIT 5
-                    ";
+                ";
+                
                     $result = $mysqli->query($query);
                     $rows = $result->fetch_all(MYSQLI_ASSOC);            
                     // Ensure there are at least 5 rows, adding empty rows if necessary
