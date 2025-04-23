@@ -1,15 +1,6 @@
 <?php
 session_start();
 //grabbing user session information (neccesary for staying signed in etc.)
-if (isset($_COOKIE["id"])) {
-    $mysqli = require __DIR__ . "/config.php";
-    $hash = $_COOKIE["id"];
-    //change to whatever
-    $sql = "SELECT id FROM user WHERE password_hash = '$hash'";
-    $result = $mysqli->query($sql);
-    $user = $result->fetch_assoc();
-    $_SESSION["user_id"] = $user["id"];
-}
 if (isset($_GET["finish"]))
 {
     $wpm = $_GET["wpm"];
