@@ -133,17 +133,7 @@ $mysqli = require __DIR__ . "/config.php";
                 <div class = "statsContainer" style = "padding: 0; margin: 0">
                     <div id = "leaderboardheader" class = "notSignedIn">10 words </div>
                     <?php
-                    $query = "SELECT * 
-                    FROM typingtest 
-                    WHERE id IN (
-                        SELECT MAX(id)
-                        FROM typingtest
-                        WHERE mode = 'time' AND wpm < 250 AND testTime = 15
-                        GROUP BY username
-                    )
-                    ORDER BY wpm DESC 
-                    LIMIT 5
-                    ";
+                    $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'words' AND wpm < 250 AND testTime = 10 ORDER BY wpm DESC LIMIT 5";
                     $result = $mysqli->query($query);
                     $rows = $result->fetch_all(MYSQLI_ASSOC);            
                     // Ensure there are at least 5 rows, adding empty rows if necessary
