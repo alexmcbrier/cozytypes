@@ -688,7 +688,7 @@ input:-webkit-autofill {
     color: var(--row);
     text-decoration: none;
     font-size: 2rem;
-    padding: 1;
+    padding: 1rem;
     transition: color .25s ease;
     user-select: none;
 }
