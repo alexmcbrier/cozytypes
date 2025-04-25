@@ -370,7 +370,7 @@ crossorigin="anonymous"></script>
 
         </div>
         -->
-        <div id="testStats" style = "background-color: none; margin: 1rem 0rem">
+        <div id="testStats">
             <div class="statsContainer" style = "background-color: var(--rowBackground); margin: 2rem;">
                 <h1 class="notSignedIn" id="preferenceHeader">Words Per Minute<i class="fa-solid fa-clock-rotate-left"></i></h1>
                 <a class="results"><?= $_GET["wpm"] ?></a>

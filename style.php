@@ -390,16 +390,13 @@ h1 {
 }
 #testStats {
     display: flex;
-    background-color: var(--rowBackground);
-    display: flex;
-    margin: 1.5rem;
+    margin: 1rem 0rem
 }
 #showUsername
 {
     font-size: 1.25rem;
     text-decoration: none;
     color: var(--row);
-    display: flex;
     display: flex;
     align-items: center; /* Vertically centers the content */
     justify-content: center; /* Horizontally centers the content */
