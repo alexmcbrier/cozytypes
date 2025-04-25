@@ -54,54 +54,14 @@ function leaderboardValues($mysqli, $query, $limit = 5) {
                     <div id = "leaderboardheader" class = "notSignedIn">30 seconds  </div>
                     <?php
                     $query = "SELECT id, MAX(wpm) AS best_wpm FROM typingtest WHERE id IS NOT NULL AND mode = 'time' AND wpm < 250 AND testTime = 30 GROUP BY id ORDER BY best_wpm DESC, id ASC LIMIT 5;";
-                    $result = $mysqli->query($query);
-                    $rows = $result->fetch_all(MYSQLI_ASSOC);            
-                    // Ensure there are at least 5 rows, adding empty rows if necessary
-                    while (count($rows) < 5) {
-                        $rows[] = ['id' => null, 'best_wpm' => null]; // Use 'best_wpm' here
-                    }
-                    $count = 1;
-                    foreach ($rows as $row) {
-                        $username = 'xxx';
-                        if ($row['id'] !== null) {
-                            $userId = (int)$row['id']; // sanitize
-                            $userQuery = "SELECT username FROM user WHERE id = $userId";
-                            $userResult = $mysqli->query($userQuery);
-                            $user = $userResult->fetch_assoc();
-                            $username = ($user !== null) ? substr($user['username'], 0, 13) : '---';
-                        }
-                    
-                        $wpm = ($row['best_wpm'] !== null) ? $row['best_wpm'] : '---';
-                        echo '<div class="profileValues">' . $count . '. ' . htmlspecialchars($username) . ' | ' . $wpm . '</div>';
-                        $count++;
-                    }
+                    leaderboardValues($mysqli, $query);
                     ?>
                 </div>
                 <div class = "statsContainer" style = "padding: 0">
                     <div id = "leaderboardheader" class = "notSignedIn">60 seconds  </div>
                     <?php
-                    $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'time' AND wpm < 250 AND testTime = 60 ORDER BY wpm DESC LIMIT 5";
-                    $result = $mysqli->query($query);
-                    $rows = $result->fetch_all(MYSQLI_ASSOC);            
-                    // Ensure there are at least 5 rows, adding empty rows if necessary
-                    while (count($rows) < 5) {
-                        $rows[] = ['id' => null, 'wpm' => null]; // Add an empty row
-                    }
-                    $count = 1;
-                    foreach ($rows as $row) {
-                        // Now to get the username from the id
-                        $username = 'xxx';
-                        if ($row['id'] !== null) {
-                            $query = "SELECT * FROM user WHERE id = {$row['id']}";
-                            $result = $mysqli->query($query);
-                            $user = $result->fetch_assoc();
-                            $username = ($user !== null) ? substr($user['username'], 0, 13) : '---';
-                        }
-
-                        $wpm = ($row['wpm'] !== null) ? $row['wpm']: '---';
-                        echo '<div class="profileValues">' . $count . '. ' . $username . ' | ' . $wpm . '</div>';
-                        $count++;
-                    }
+                    $query = "SELECT id, MAX(wpm) AS best_wpm FROM typingtest WHERE id IS NOT NULL AND mode = 'time' AND wpm < 250 AND testTime = 60 GROUP BY id ORDER BY best_wpm DESC, id ASC LIMIT 5;";
+                    leaderboardValues($mysqli, $query);
                     ?>
                 </div>
                 <div class = "statsContainer" style = "padding: 0">
@@ -137,110 +97,29 @@ function leaderboardValues($mysqli, $query, $limit = 5) {
                 <div class = "statsContainer" style = "padding: 0; margin: 0">
                     <div id = "leaderboardheader" class = "notSignedIn">10 words </div>
                     <?php
-                    $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'words' AND wpm < 250 AND testTime = 10 ORDER BY wpm DESC LIMIT 5";
-                    $result = $mysqli->query($query);
-                    $rows = $result->fetch_all(MYSQLI_ASSOC);            
-                    // Ensure there are at least 5 rows, adding empty rows if necessary
-                    while (count($rows) < 5) {
-                        $rows[] = ['id' => null, 'wpm' => null]; // Add an empty row
-                    }
-                    $count = 1;
-                    foreach ($rows as $row) {
-                        // Now to get the username from the id
-                        $username = 'xxx';
-                        if ($row['id'] !== null) {
-                            $query = "SELECT * FROM user WHERE id = {$row['id']}";
-                            $result = $mysqli->query($query);
-                            $user = $result->fetch_assoc();
-                            $username = ($user !== null) ? substr($user['username'], 0, 13) : '---';
-                        }
-
-                        $wpm = ($row['wpm'] !== null) ? $row['wpm']: '---';
-                        echo '<div class="profileValues">' . $count . '. ' . $username . ' | ' . $wpm . '</div>';
-                        $count++;
-                    }
+                    $query = "SELECT id, MAX(wpm) AS best_wpm FROM typingtest WHERE id IS NOT NULL AND mode = 'words' AND wpm < 250 AND testTime = 10 GROUP BY id ORDER BY best_wpm DESC, id ASC LIMIT 5;";
+                    leaderboardValues($mysqli, $query);
                     ?>
                 </div>
                 <div class = "statsContainer" style = "padding: 0; margin: 0">
                     <div id = "leaderboardheader" class = "notSignedIn">25 words  </div>
                     <?php
-                    $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'words' AND wpm < 250 AND testTime = 25 ORDER BY wpm DESC LIMIT 5";
-                    $result = $mysqli->query($query);
-                    $rows = $result->fetch_all(MYSQLI_ASSOC);            
-                    // Ensure there are at least 5 rows, adding empty rows if necessary
-                    while (count($rows) < 5) {
-                        $rows[] = ['id' => null, 'wpm' => null]; // Add an empty row
-                    }
-                    $count = 1;
-                    foreach ($rows as $row) {
-                        // Now to get the username from the id
-                        $username = 'xxx';
-                        if ($row['id'] !== null) {
-                            $query = "SELECT * FROM user WHERE id = {$row['id']}";
-                            $result = $mysqli->query($query);
-                            $user = $result->fetch_assoc();
-                            $username = ($user !== null) ? substr($user['username'], 0, 13) : '---';
-                        }
-
-                        $wpm = ($row['wpm'] !== null) ? $row['wpm']: '---';
-                        echo '<div class="profileValues">' . $count . '. ' . $username . ' | ' . $wpm . '</div>';
-                        $count++;
-                    }
+                    $query = "SELECT id, MAX(wpm) AS best_wpm FROM typingtest WHERE id IS NOT NULL AND mode = 'words' AND wpm < 250 AND testTime = 25 GROUP BY id ORDER BY best_wpm DESC, id ASC LIMIT 5;";
+                    leaderboardValues($mysqli, $query);
                     ?>
                 </div>
                 <div class = "statsContainer" style = "padding: 0; margin: 0">
                     <div id = "leaderboardheader" class = "notSignedIn">50 words  </div>
                     <?php
-                    $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'words' AND wpm < 250 AND testTime = 50 ORDER BY wpm DESC LIMIT 5";
-                    $result = $mysqli->query($query);
-                    $rows = $result->fetch_all(MYSQLI_ASSOC);            
-                    // Ensure there are at least 5 rows, adding empty rows if necessary
-                    while (count($rows) < 5) {
-                        $rows[] = ['id' => null, 'wpm' => null]; // Add an empty row
-                    }
-                    $count = 1;
-                    foreach ($rows as $row) {
-                        // Now to get the username from the id
-                        $username = 'xxx';
-                        if ($row['id'] !== null) {
-                            $query = "SELECT * FROM user WHERE id = {$row['id']}";
-                            $result = $mysqli->query($query);
-                            $user = $result->fetch_assoc();
-                            $username = ($user !== null) ? substr($user['username'], 0, 13) : '---';
-                        }
-
-                        $wpm = ($row['wpm'] !== null) ? $row['wpm']: '---';
-                        echo '<div class="profileValues">' . $count . '. ' . $username . ' | ' . $wpm . '</div>';
-                        $count++;
-                    }
+                    $query = "SELECT id, MAX(wpm) AS best_wpm FROM typingtest WHERE id IS NOT NULL AND mode = 'words' AND wpm < 250 AND testTime = 50 GROUP BY id ORDER BY best_wpm DESC, id ASC LIMIT 5;";
+                    leaderboardValues($mysqli, $query);
                     ?>
                 </div>
                 <div class = "statsContainer" style = "padding: 0; margin: 0">
                     <div id = "leaderboardheader" class = "notSignedIn">100 words  </div>
                     <?php
-                    $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'words' AND wpm < 250 AND testTime = 100 ORDER BY wpm DESC LIMIT 5";
-                    $result = $mysqli->query($query);
-                    $rows = $result->fetch_all(MYSQLI_ASSOC);            
-                    // Ensure there are at least 5 rows, adding empty rows if necessary
-                    while (count($rows) < 5) {
-                        $rows[] = ['id' => null, 'wpm' => null]; // Add an empty row
-                    }
-                    $count = 1;
-                    foreach ($rows as $row) {
-                        // Now to get the username from the id
-                        $username = 'xxx';
-                        if ($row['id'] !== null) {
-                            $query = "SELECT * FROM user WHERE id = {$row['id']}";
-                            $result = $mysqli->query($query);
-                            $user = $result->fetch_assoc();
-                            $username = ($user !== null) ? substr($user['username'], 0, 13) : '---';
-
-                        }
-
-                        $wpm = ($row['wpm'] !== null) ? $row['wpm']: '---';
-                        echo '<div class="profileValues">' . $count . '. ' . $username . ' | ' . $wpm . '</div>';
-                        $count++;
-                    }
+                    $query = "SELECT id, MAX(wpm) AS best_wpm FROM typingtest WHERE id IS NOT NULL AND mode = 'words' AND wpm < 250 AND testTime = 100 GROUP BY id ORDER BY best_wpm DESC, id ASC LIMIT 5;";
+                    leaderboardValues($mysqli, $query);
                     ?>
                 </div>
             </div>
@@ -251,28 +130,8 @@ function leaderboardValues($mysqli, $query, $limit = 5) {
                 <div class = "statsContainer" style = "padding: 0; margin: 0">
                     <div id = "leaderboardheader" class = "notSignedIn">15 seconds </div>
                     <?php
-                    $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'time' AND wpm < 250 AND testTime = 15 AND date >= DATE_SUB(NOW(), INTERVAL 7 DAY) ORDER BY wpm DESC LIMIT 5";
-                    $result = $mysqli->query($query);
-                    $rows = $result->fetch_all(MYSQLI_ASSOC);            
-                    // Ensure there are at least 5 rows, adding empty rows if necessary
-                    while (count($rows) < 5) {
-                        $rows[] = ['id' => null, 'wpm' => null]; // Add an empty row
-                    }
-                    $count = 1;
-                    foreach ($rows as $row) {
-                        // Now to get the username from the id
-                        $username = 'xxx';
-                        if ($row['id'] !== null) {
-                            $query = "SELECT * FROM user WHERE id = {$row['id']}";
-                            $result = $mysqli->query($query);
-                            $user = $result->fetch_assoc();
-                            $username = ($user !== null) ? substr($user['username'], 0, 13) : '---';
-                        }
-
-                        $wpm = ($row['wpm'] !== null) ? $row['wpm']: '---';
-                        echo '<div class="profileValues">' . $count . '. ' . $username . ' | ' . $wpm . '</div>';
-                        $count++;
-                    }
+                    $query = "SELECT id, MAX(wpm) AS best_wpm FROM typingtest WHERE id IS NOT NULL AND mode = 'time' AND wpm < 250 AND testTime = 15 AND date >= DATE_SUB(NOW(), INTERVAL 7 DAY) GROUP BY id ORDER BY best_wpm DESC, id ASC LIMIT 5;";
+                    leaderboardValues($mysqli, $query);
                     ?>
                 </div>
                 <div class = "statsContainer" style = "padding: 0; margin: 0">
