@@ -389,7 +389,7 @@ crossorigin="anonymous"></script>
             <?php if (isset($_SESSION["user_id"])) { ?>
                 <a id="showRestart" href="signup">view progress</a>
             <?php } else { ?>
-                <a id="showSignIn" href="signup"><span id="saveProgress">login to save progress</a>
+                <a id="showRestart" href="signup"><span id="saveProgress">login to save progress</a>
             <?php } ?>
 
         </div>
