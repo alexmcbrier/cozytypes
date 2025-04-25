@@ -385,9 +385,9 @@ crossorigin="anonymous"></script>
             </div>
         </div>
 
-            <a id="showRestart" href="https://cozytypes.com/">play again<i class="fa-solid fa-backward"></i></a>
+            <a id="showRestart" href="https://cozytypes.com/">play again</a>
             <?php if (isset($_SESSION["user_id"])) { ?>
-                <a id="showRestart" href="signup">view progress<i class="fa-solid fa-medal"></i></a>
+                <a id="showRestart" href="signup">view progress</a>
             <?php } else { ?>
                 <a id="showSignIn" href="signup"><span id="saveProgress">login to save progress<i class="fa-solid fa-medal"></i></a>
             <?php } ?>
