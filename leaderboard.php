@@ -22,26 +22,33 @@ $mysqli = require __DIR__ . "/config.php";
                 <div class = "statsContainer" style = "padding: 0">
                     <div id = "leaderboardheader" class = "notSignedIn">15 seconds </div>
                     <?php
-                    $query = "SELECT * FROM typingtest WHERE id IS NOT NULL AND mode = 'time' AND wpm < 250 AND testTime = 15 ORDER BY wpm DESC LIMIT 5";
+                    $query = "SELECT id, MAX(wpm) AS best_wpm
+                    FROM typingtest
+                    WHERE id IS NOT NULL AND mode = 'time' AND wpm < 250 AND testTime = 15
+                    GROUP BY id
+                    ORDER BY best_wpm DESC
+                    LIMIT 5;";
                     $result = $mysqli->query($query);
                     $rows = $result->fetch_all(MYSQLI_ASSOC);            
+                    
                     // Ensure there are at least 5 rows, adding empty rows if necessary
                     while (count($rows) < 5) {
-                        $rows[] = ['id' => null, 'wpm' => null]; // Add an empty row
+                        $rows[] = ['id' => null, 'best_wpm' => null]; // Use 'best_wpm' here
                     }
+                    
                     $count = 1;
                     foreach ($rows as $row) {
-                        // Now to get the username from the id
                         $username = 'xxx';
                         if ($row['id'] !== null) {
-                            $query = "SELECT * FROM user WHERE id = {$row['id']}";
-                            $result = $mysqli->query($query);
-                            $user = $result->fetch_assoc();
+                            $userId = (int)$row['id']; // sanitize
+                            $userQuery = "SELECT username FROM user WHERE id = $userId";
+                            $userResult = $mysqli->query($userQuery);
+                            $user = $userResult->fetch_assoc();
                             $username = ($user !== null) ? substr($user['username'], 0, 13) : '---';
                         }
-
-                        $wpm = ($row['wpm'] !== null) ? $row['wpm']: '---';
-                        echo '<div class="profileValues">' . $count . '. ' . $username . ' | ' . $wpm . '</div>';
+                    
+                        $wpm = ($row['best_wpm'] !== null) ? $row['best_wpm'] : '---';
+                        echo '<div class="profileValues">' . $count . '. ' . htmlspecialchars($username) . ' | ' . $wpm . '</div>';
                         $count++;
                     }
                     ?>
