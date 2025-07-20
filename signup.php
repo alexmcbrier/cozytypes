@@ -10,8 +10,6 @@ $is_invalid = false;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["username"])) { //if name empty
         $is_invalid = true;
-        $errorMessage = "Username can only contain letters and numbers (no spaces or symbols).";
-}
     }
     else if (empty($_POST["password"])) { //if passowrd empty
         $is_invalid = true;
