@@ -37,8 +37,10 @@ if (isset($_COOKIE["fontFamily"])) {
         <a class = "footerLinks tooltip" href="/privacyPolicy.html">privacy</span>
              <!--  <i class="fa-solid fa-lock"></i> -->
         </a>
+
         <div class = "linkDivider"> </div>
-        <a class = "footerLinks tooltip" href="https://kbdcraft.store?source_type=sales_plugin_af&slt=sales_plugin_af&referral_code=2UZEGET8XD2L">keyboards</span>
+        <a class = "footerLinks tooltip" href="/about">about</span>
+             <!-- <i class="fa-solid fa-font fa-sm"></i> -->
         </a>
     </div>
 </div>
