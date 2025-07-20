@@ -561,6 +561,23 @@ h1 {
     transition: all 1s ease;
     filter: blur(10px)
 }
+.leaderboardContainer
+{
+    user-select: none;
+    font-size: 1rem;
+    border-radius: 0;
+    padding: 1rem;
+    margin-left: .5rem;
+    line-height: 10px;
+    vertical-align: top;
+    text-decoration: none;
+    align-content: center;
+    padding: 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
 @-moz-keyframes spin {
 from { -moz-transform: rotate(0deg); }
 to { -moz-transform: rotate(360deg); }
