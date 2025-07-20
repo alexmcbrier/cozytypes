@@ -26,9 +26,9 @@ session_start();
             <div id="switchesContainer" class="rowContainer">
                 <h1 class="notSignedIn" id="preferenceHeader">keyboard switch sounds</h1>
                 <h1 class="description">choose from these switches, each offering a unique sound profile.</h1>
-                <a data-value="none" class="preference click" onclick="setPreference('keyboardswitch', 'none'), addNotification('switch sound','none');">none</a>
-                <a data-value="holypandas" class="preference click" onclick="setPreference('keyboardswitch', 'holypandas'), addNotification('switch sound','holy pandas');">holy pandas</a>
-                <a data-value="nkcreams" class="preference click" onclick="setPreference('keyboardswitch', 'nkcreams'), addNotification('switch sound','novelkey creams');">novelkey creams</a>
+                <a data-value="none" class="preference click" onclick="loadSwitchSounds('none'), setPreference('keyboardswitch', 'none'), addNotification('switch sound','none');">none</a>
+                <a data-value="holypandas" class="preference click" onclick="loadSwitchSounds('holypandas'), setPreference('keyboardswitch', 'holypandas'), addNotification('switch sound','holy pandas');">holy pandas</a>
+                <a data-value="nkcreams" class="preference click" onclick="loadSwitchSounds('nkcreams'),setPreference('keyboardswitch', 'nkcreams'), addNotification('switch sound','novelkey creams');">novelkey creams</a>
             </div>
             <div id="themesContainer" class="theme-row-container lvl3">
                 <div>

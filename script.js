@@ -210,6 +210,46 @@ function keystroke() {
         }
     }
 }
+
+let preloadedSounds = {}; // will store sounds like: { "nk_cream": { click: [...], space: [...] } }
+
+function loadSwitchSounds(switchtype) {
+    if (switchtype != "none") {
+        preloadedSounds[switchtype] = {
+            click: [],
+            space: []
+        };
+        for (let i = 1; i <= 4; i++) {
+            let audio = new Audio(`sounds/switches/${switchtype}/click${i}.wav`);
+            audio.preload = "auto";
+            preloadedSounds[switchtype].click.push(audio);
+        }
+        for (let i = 1; i <= 2; i++) {
+            let audio = new Audio(`sounds/switches/${switchtype}/space${i}.wav`);
+            audio.preload = "auto";
+            preloadedSounds[switchtype].space.push(audio);
+        }
+    }
+}
+function switchClick() {
+    let switchtype = localStorage.getItem("keyboardswitch");
+    if (switchtype != "none" && preloadedSounds[switchtype]) {
+        let clicks = preloadedSounds[switchtype].click;
+        let randomIndex = Math.floor(Math.random() * clicks.length);
+        let audio = clicks[randomIndex].cloneNode(true); // clone for fast repeated clicks
+        audio.play();
+    }
+}
+function switchClickSpacebar() {
+    let switchtype = localStorage.getItem("keyboardswitch");
+    if (switchtype != "none" && preloadedSounds[switchtype]) {
+        let spaces = preloadedSounds[switchtype].space;
+        let randomIndex = Math.floor(Math.random() * spaces.length);
+        let audio = spaces[randomIndex].cloneNode(true);
+        audio.play();
+    }
+}
+/*
 function switchClick() { // a function that when given a switch type say novel key cream, produces random sound of nk cream clicking.
     if (localStorage.getItem("keyboardswitch") != "none") {
         switchtype =localStorage.getItem("keyboardswitch");
@@ -231,6 +271,8 @@ function switchClickSpacebar() {
         audio.play();
     }
 }
+*/
+
 function restart() {
     displayText.style.marginTop = 0; //reset the box for the text (since it moves up for each new line)
     clearInterval(check);
