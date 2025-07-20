@@ -195,7 +195,7 @@ if (isset($_SESSION["user_id"])) {
                     <a class="profileValues"><?= $totalMaxWpm ?> wpm</a>
                 </div>
             </div>
-            <div id = "showSignIn" style = "padding:0rem 2rem;" >personal bests</div>
+            <div id = "showSignIn" style = "padding:1rem;" >personal bests</div>
             <div id="displayStats" style= "margin: 1rem 1.5rem 3rem 1.5rem;">
                 <div class = "stat">
                     <div id = "preferenceHeader" class = "notSignedIn">15 seconds  </div>
