@@ -81,7 +81,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <form id="middle" method ="post" style = "width: 50%; margin: auto;">
                 <h1 id = "loginHeader">sign up, keep typing</h1>
                 <?php if ($is_invalid) : ?>
-                    <div id="invalid"><?phphtmlspecialchars($errorMessage)?></div>
+                    <div id="invalid"><?= htmlspecialchars($errorMessage) ?></div>
                 <?php endif; ?>
                 <input type="text" autocomplete = "off" placeholder="username" id="username" name = "username">
                 <input type="text" autocomplete = "off" placeholder="email" id="email"  name = "email">
