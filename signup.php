@@ -11,7 +11,7 @@ $errorMessage = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["username"]) || empty($_POST["password"]) || empty($_POST["email"])) { //if name empty
         $is_invalid = true;
-        $errorMessage = "user, password, and email may not be empty";
+        $errorMessage = "all fields must be entered";
     }
     else if  (strlen($_POST["password"]) < 5) { //at least 5 characters
         $is_invalid = true;
