@@ -7,9 +7,11 @@ if (isset($_SESSION["user_id"])) {
     exit;
 }
 $is_invalid = false;
+$errorMessage = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["username"])) { //if name empty
         $is_invalid = true;
+        $errorMessage = "user and password cannot be empty";
     }
     else if (empty($_POST["password"])) { //if passowrd empty
         $is_invalid = true;
