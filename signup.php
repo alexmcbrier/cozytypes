@@ -9,13 +9,9 @@ if (isset($_SESSION["user_id"])) {
 $is_invalid = false;
 $errorMessage = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (empty($_POST["username"])) { //if name empty
+    if (empty($_POST["username"]) || empty($_POST["password"]) || empty($_POST["email"])) { //if name empty
         $is_invalid = true;
-        $errorMessage = "user and password cannot be empty";
-    }
-    else if (empty($_POST["password"])) { //if passowrd empty
-        $is_invalid = true;
-        $errorMessage = "user and password cannot be empty";
+        $errorMessage = "user, password, and email may not be empty";
     }
     else if  (strlen($_POST["password"]) < 5) { //at least 5 characters
         $is_invalid = true;
@@ -29,6 +25,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $is_invalid = true;
         $errorMessage = "username cannot contain spaces or symbols";
     }
+    if (!$is_invalid) {
+        $mysqli = require __DIR__ . "/config.php";
+        //check if username exists
+        $sql = "SELECT id FROM user WHERE username = ?";
+        $stmt = $mysqli->prepare($sql);
+        $stmt->bind_param("s", $_POST["username"]);
+        $stmt->execute();
+        $stmt->store_result();
+        if ($stmt->num_rows > 0) {
+            $is_invalid = true;
+            $errorMessage = "username already exists";
+        }
+        //check if email exists
+        $sql = "SELECT id FROM user WHERE email = ?";
+        $stmt = $mysqli->prepare($sql);
+        $stmt->bind_param("s", $_POST["email"]);
+        $stmt->execute();
+        $stmt->store_result();
+        if ($stmt->num_rows > 0) {
+            $is_invalid = true;
+            $errorMessage = "email already in use";
+        }
+    }
+    
     if (!$is_invalid)
     {
         //Credentials are accurate, create a password hash (encrypt)
