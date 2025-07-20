@@ -14,7 +14,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     else if (empty($_POST["password"])) { //if passowrd empty
         $is_invalid = true;
     }
-    else if  (strlen($_POST["password"]) < 8) { //at least 8 characters
+    else if  (strlen($_POST["password"]) < 5) { //at least 5 characters
+        $is_invalid = true;
+    }
+    else if  (strlen($_POST["password"]) > 15) { //less than 15 characters
+        $is_invalid = true;
+    }
+    else if (!preg_match('/^[a-zA-Z0-9]+$/', $_POST["username"])) {
         $is_invalid = true;
     }
     if (!$is_invalid)
