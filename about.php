@@ -48,17 +48,6 @@ session_start();
                     </h2>
             </div>
         </div>
-
-        <div id = "displayStats">
-            <div class = "statsContainer">
-                <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0; line-height: 0;" >feature request</h1>
-                    <h2 class="description">
-                    If you have any questions, concerns, or ideas about adding a feature please either contact us by email, or submit an
-                    issue to us on github.
-                    </h2>
-            </div>
-        </div>
-
         <div id = "displayStats">
             <div class = "statsContainer">
                 <h1 class="notSignedIn" id="preferenceHeader" style="margin-left: 0; line-height: 0;" >developers</h1>
