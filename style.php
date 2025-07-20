@@ -1086,7 +1086,7 @@ button {
     padding: 3rem 5.6rem;
     transition: 1s;
     line-height: 1.25rem;
-    height: 1rem;
+    height: 1.2rem;
     text-decoration: none;
     transition: transform .2s ease;
     margin-top: 1rem;
