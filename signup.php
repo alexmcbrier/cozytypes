@@ -7,15 +7,27 @@ if (isset($_SESSION["user_id"])) {
     exit;
 }
 $is_invalid = false;
+$errorMessage = "invalid credentials"
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["username"])) { //if name empty
         $is_invalid = true;
+        $errorMessage = "username ans password cannot be blank"
     }
     else if (empty($_POST["password"])) { //if passowrd empty
         $is_invalid = true;
+        $errorMessage = "username ans password cannot be blank"
     }
-    else if  (strlen($_POST["password"]) < 8) { //at least 8 characters
+    else if  (strlen($_POST["password"]) < 5) { //at least 5 characters
         $is_invalid = true;
+        $errorMessage = "password must be at least 5 characters"
+    }
+    else if  (strlen($_POST["password"]) > 15) { //less than 15 characters
+        $is_invalid = true;
+        $errorMessage = "password must be less than 15 characters"
+    }
+    else if (!preg_match('/^[a-zA-Z0-9]+$/', $_POST["username"])) {
+        $is_invalid = true;
+        $errorMessage = "username can only contain letters and numbers.";
     }
     if (!$is_invalid)
     {
@@ -69,7 +81,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <form id="middle" method ="post" style = "width: 50%; margin: auto;">
                 <h1 id = "loginHeader">sign up, keep typing</h1>
                 <?php if ($is_invalid) : ?>
-                    <div id="invalid">Invalid Credentials</div>
+                    <div id="invalid"><?=htmlspecialchars($errorMessage)?></div>
                 <?php endif; ?>
                 <input type="text" autocomplete = "off" placeholder="username" id="username" name = "username">
                 <input type="text" autocomplete = "off" placeholder="email" id="email"  name = "email">
