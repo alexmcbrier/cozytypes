@@ -213,7 +213,6 @@ kbd
 }
 li {
     font-size: 2.25rem;
-    font-weight: bold;
     color: var(--currentWord);
     user-select: none;
     display: inline;
@@ -275,9 +274,6 @@ nav {
     padding-right: calc(var(--fontSize) * .75rem);
     /* line spacing */
 } 
-h1 {
-    font-weight: normal;
-}
 .row {
     user-select: none;
     color: var(--currentWord);
@@ -648,7 +644,6 @@ to {
     padding: 4 2rem;
     color: var(--row);
     line-height: 2rem;
-    font-weight: normal;
 }
 input {
     display: flex;
@@ -788,7 +783,6 @@ button {
     color: var(--currentWord);
     user-select: none;
     font-size: 2.5rem;
-    font-weight: normal;
 }
 @keyframes slide {
     from {
