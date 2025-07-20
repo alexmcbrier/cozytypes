@@ -25,10 +25,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $is_invalid = true;
         $errorMessage = "password must be less than 15 characters"
     }
-    else if (!preg_match('/^[a-zA-Z0-9]+$/', $_POST["username"])) {
-        $is_invalid = true;
-        $errorMessage = "username can only contain letters and numbers.";
-    }
     if (!$is_invalid)
     {
         //Credentials are accurate, create a password hash (encrypt)
