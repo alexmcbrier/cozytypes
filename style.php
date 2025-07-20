@@ -1085,7 +1085,7 @@ button {
     text-align: center;
     padding: 3rem 5.6rem;
     transition: 1s;
-    line-height: 1rem;
+    line-height: 1.25rem;
     height: 1rem;
     text-decoration: none;
     transition: transform .2s ease;
