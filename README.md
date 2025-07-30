@@ -1,15 +1,64 @@
 # cozytypes
- [cozytypes.com](https://www.cozytypes.com) is a simple and asthetic typing website for keyboard enthusiasts. Users can modify themes, fonts, and difficulty. 
- 
+> **cozytypes.com** is a retro-inspired typing test website that features theme and settings customization, adjustable difficulty, account creation, and a minimal interface.
 
-<p align="center">
-  <img src="https://github.com/alexmcbrier/cozytypes/assets/58454148/172a7c7c-a051-4dc1-9bbe-ec95af63e8f5" />
-</p>
 
-## themes
-users can select different themes by scrolling to the bottom of the preferences page. In addition to the provided themes, users can create their own.
 
-available themes:
+### Table of Contents
+
+- [general info](#account)
+- [settings](#settings)
+- [account](#account)
+- [leaderboard](#leaderboard)
+
+<br />
+
+# general info
+
+the typing test on **cozytypes** is designed for simplicity, accuracy, and personal customization. designed to be smooth and accurate, with subtle animations and sound.
+
+### typing test
+- when you load the site, a randomized word list is displayed based on your selected difficulty (`easy` or `hard`).
+- you begin typing on your first keystroke and the timer starts.
+- as you type, mistakes are highlighted.
+- tests last until the full word list is completed or until the time runs out.
+
+### test results
+once the test is complete, your results are displayed immediately, showing:
+- `WPM` Words Per Minute — calculated using the standard formula based on correct words typed
+- `Accuracy` percentage of correctly typed characters over total typed
+- `mode` words or time depending on choice from the test
+
+
+If you're logged in, your scores will be saved to your profile and. You can view stats like:
+- `best WPM`
+- `total tests completed`
+
+### typing modes
+Currently, cozytypes supports the following test modes:
+- `words` Type through a randomly selected list of words (difficulty based)
+- `time` Type for 30s, 60s, or 120s from a randomly selected list of words (difficulty based)
+
+## difficulty
+- `easy`(selects from a list of 100 simple words)
+- `hard` (selects from a list of 1,000 difficult words)
+
+<br />
+
+# settings
+
+### font size
+by changing the font size you are changing the size of the typing test text, however other text for the application will remain the original size.
+- `small`
+- `medium`
+- `large`
+
+### keyboard switch sound
+- `none`
+- `holy pandas` (a thocky tactile switch)
+- `novel key creams` (a smooth linear switch)
+
+### themes
+users can select different themes by clicking on the settings page and choosing an available theme. 
 - `light` 
 - `9009` (GMK 9009)
 - `godspeed` (GMK Godspeed)
@@ -28,31 +77,32 @@ available themes:
 - `olivia` (GMK Olivia)
 - `dracula` (GMK Dracula)
 - `dark`
-  
-## fonts
-available fonts:
-- `arial`
-- `lexend deca`
-- `IBM Plex Sans`
-- `comfortaa`
-- `courier`
-- `nutino`
-- `source code pro`
-- `raleway`
-- `titillium web`
-- `lora`
-- `merriweather`
-- `monsterrat`
-- `karla`
-- `josefinSans`
-## caret
+
+### caret
 the default caret is a blinking cursor, however, users have the option of underlining the letter, word, or highlighting the word.
-## blur
-users can blur the following lines of text to further challenge themselves.
-## difficulty
-- `easy`(selects from a list of 100 simple words)
-- `hard` (selects from a list of 1,000 difficult words)
-## track progress
-by creating an account, you have access to metrics such as tests completed, best typing speeds, along with many others.
-## leaderboard
-the leadeboard showcases users with the highest all time wpm, as well as weekly records for each category. users must have an account to be on the leaderboard.
+
+<br />
+
+# account
+### sign up for an account
+users must provide an email, username, and password to create an account. the following conditions must be met:
+- all fields (email, username, and password) must be filled in
+- password must be at least 5 characters
+- password must be less than 15 characters
+- username must contain only letters and numbers (no spaces or symbols)
+- username must be unique
+- email must be unique
+
+If cookies are enabled you should not have to sign in each time you reload your browser, as needed credentials are hashed and stored using cookies. If you need to login to an existing account click "login" on the sign up page.
+
+### account dashboard
+by creating an account, you have access to metrics such as tests completed, best typing speeds, along with others.
+
+<br />
+
+# leaderboard
+for each of the leaderboards, users must have created an account and be logged in to be able to qualify for the leaderboard.
+### all time
+this leadeboard showcases users with the highest all time wpm for each of the categories.
+### weekly
+this leadeboard showcases users with the highest weekly wpm for each of the different categories.
