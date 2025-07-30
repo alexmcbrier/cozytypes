@@ -17,30 +17,25 @@
 the typing test on **cozytypes** is designed for simplicity, accuracy, and personal customization. designed to be smooth and accurate, with subtle animations and sound.
 
 ### typing test
-- when you load the site, a randomized word list is displayed based on your selected difficulty (`easy` or `hard`).
-- you begin typing on your first keystroke and the timer starts.
-- as you type, mistakes are highlighted.
-- tests last until the full word list is completed or until the time runs out.
+- when you load the site, a randomized word list is displayed based on your selected difficulty and selected mode.
+- your test begins on your first keystroke and the timer will start.
+- as you type, mistakes are highlighted in a color based on the theme.
+- tests last until the full word list is completed or until the time runs out, which will then prompt the test result page.
 
-### test results
-once the test is complete, your results are displayed immediately, showing:
-- `WPM` Words Per Minute — calculated using the standard formula based on correct words typed
-- `Accuracy` percentage of correctly typed characters over total typed
-- `mode` words or time depending on choice from the test
-
-
-If you're logged in, your scores will be saved to your profile and. You can view stats like:
-- `best WPM`
-- `total tests completed`
+## difficulty
+- `easy`(selects from a list of 100 simple words)
+- `hard` (selects from a list of 1,000 difficult words)
 
 ### typing modes
 Currently, cozytypes supports the following test modes:
 - `words` Type through a randomly selected list of words (difficulty based)
 - `time` Type for 30s, 60s, or 120s from a randomly selected list of words (difficulty based)
 
-## difficulty
-- `easy`(selects from a list of 100 simple words)
-- `hard` (selects from a list of 1,000 difficult words)
+### test results
+once the test is complete, your results are displayed immediately. If you're logged in, your scores will be saved to your profile.
+- `WPM` Words Per Minute — calculated using the standard formula based on correct words typed
+- `Accuracy` percentage of correctly typed characters over total typed
+- `mode` words or time depending on choice from the test
 
 <br />
 
