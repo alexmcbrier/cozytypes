@@ -436,7 +436,7 @@ h1 {
     color: var(--currentWord);
     transition: opacity 0.25s ease, transform 0.15s ease-in-out;       
     fill: var(--currentWord);
-    transform-origin: 47px;
+    transform-origin: center;
 }
 #profileIcon,
     .st0 {
