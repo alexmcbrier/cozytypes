@@ -24,9 +24,8 @@ $errorMessage = "";
         $is_invalid = true;
         $errorMessage = "username cannot contain spaces or symbols";
     }
-    else if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $badwords = require __DIR__ . '/badwords.php';
-        foreach ($badwords as $word) {
+    $badwords = require __DIR__ . '/badwords.php';
+    foreach ($badwords as $word) {
         if (stripos($usernameLower, $word) !== false) {
             $is_invalid = true;
             $errorMessage = "username contains inappropriate language";
