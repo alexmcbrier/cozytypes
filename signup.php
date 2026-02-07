@@ -8,6 +8,8 @@ if (isset($_SESSION["user_id"])) {
 }
 $is_invalid = false;
 $errorMessage = "";
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (empty($_POST["username"]) || empty($_POST["password"]) || empty($_POST["email"])) { //if name empty
         $is_invalid = true;
         $errorMessage = "all fields must be entered";
@@ -93,6 +95,7 @@ $errorMessage = "";
             die($mysqli->error . " " . $mysqli->errno);
         }
     }
+}
 }
 ?>
 <!DOCTYPE html>
