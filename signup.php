@@ -8,7 +8,6 @@ if (isset($_SESSION["user_id"])) {
 }
 $is_invalid = false;
 $errorMessage = "";
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["username"]) || empty($_POST["password"]) || empty($_POST["email"])) { //if name empty
         $is_invalid = true;
         $errorMessage = "all fields must be entered";
@@ -24,6 +23,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     else if (!preg_match('/^[a-zA-Z0-9]+$/', $_POST["username"])) {
         $is_invalid = true;
         $errorMessage = "username cannot contain spaces or symbols";
+    }
+    else if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $badwords = require __DIR__ . '/badwords.php';
+        foreach ($badwords as $word) {
+        if (stripos($usernameLower, $word) !== false) {
+            $is_invalid = true;
+            $errorMessage = "username contains inappropriate language";
+            break;
+        }
     }
     if (!$is_invalid) {
         $mysqli = require __DIR__ . "/config.php";
